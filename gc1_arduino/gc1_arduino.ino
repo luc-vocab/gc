@@ -19,8 +19,6 @@ char logFileName_c[40];
 // sd card pin
 const int chipSelect = 3;    
 
-// int numGrindsInARow = 0;
-
 const int numReadings = 10;
 int lastReadings[numReadings];
 
@@ -53,6 +51,7 @@ void setup() {
   // initialize serial communication at 9600 bits per second:
   if (useSerial) {
     Serial.begin(9600);
+   
   };
  
  initialize_readings_array();
@@ -77,11 +76,13 @@ void setup() {
    while(true) {
      File entry = root.openNextFile();
      if (! entry) {
-       // no more files
-       //Serial.println("**nomorefiles**");
        break;
      }
+     entry.close();
      numFiles++; 
+  
+    log_free_ram();
+     
    }
 
    logFileName = logFileName + String(numFiles) + ".txt";
@@ -95,20 +96,10 @@ void setup() {
      Serial.println("]");
    }
    
-  // set analog reference
-  //analogReference(EXTERNAL);
-
    start_program_beep(); 
+
 }
 
-void valid_beep() {
-  tone(soundPin,200);
-  delay(200);
-  tone(soundPin,400);
-  delay(200);
-  noTone(soundPin);  
-  delay(500);
-}
 
 void error_beep() {
   tone(soundPin,600);
@@ -142,27 +133,34 @@ void start_program_beep() {
   
 }
 
+void warning_grind() {
+  for(int i = 0; i < 3; i++) {  
+    tone(soundPin,400);
+    delay(100);
+    noTone(soundPin);
+    delay(25);
+  }
+}
+
 void alert_grind() {
   tone(soundPin,600);
   delay(5000);  
   noTone(soundPin);   
-  // numGrindsInARow = 0;
-  
 }
 
 
 void alert_reset_step() {
   tone(soundPin,200);
-  delay(100);
+  delay(50);
   tone(soundPin,400);
-  delay(100);
+  delay(50);
   noTone(soundPin);   
-  delay(200);
+  delay(50);
 }
 
 void alert_reset_loop_iteration() {
   tone(soundPin,600);
-  delay(500);  
+  delay(100);  
   noTone(soundPin);   
 }
 
@@ -195,6 +193,13 @@ void wait_for_reset(){
   
 }
 
+void log_free_ram() {
+  if (useSerial) {
+    Serial.print("free ram: ");
+    Serial.println(freeRam()); 
+  }
+}
+
 int freeRam () {
   extern int __heap_start, *__brkval; 
   int v; 
@@ -202,9 +207,13 @@ int freeRam () {
 }
 
 
+void trigger_grind_alarm(){
+  alert_grind();
+  wait_for_reset();
+  initialize_readings_array();
+}
+
 void loop() {
-  
-  // wait_for_reset();
   
   controlButtonState = digitalRead(controlPin);
   sensorValue = analogRead(A0);
@@ -227,31 +236,24 @@ void loop() {
     Serial.println(freeRam());
   }
   
+  int warningState = 0;
+
+  if( sensorValue > 60 ) {
+    warning_grind();
+    warningState = 1;
+  }
 
   if (average > 56) {
-    alert_grind();
-    wait_for_reset();
-    initialize_readings_array();
+    trigger_grind_alarm();
+    warningState = 2;
   }
+ 
   
-  /*
-  if (sensorValue > 100 ) {
-    // grind value
-    numGrindsInARow += 1;
-  } else {
-    numGrindsInARow = 0;
+  if (controlButtonState == HIGH) {
+   tone(soundPin,600);
+   delay(50);  
+   noTone(soundPin);   
   }
-  
-  if (numGrindsInARow >= 5 ) {
-    alert_grind();
-  }
-  */
-  
- if (controlButtonState == HIGH) {
-  tone(soundPin,600);
-  delay(50);  
-  noTone(soundPin);   
- }
   
   if (useSerial) {
     Serial.print("attempting to open file: ");
@@ -261,7 +263,7 @@ void loop() {
   File dataFile = SD.open(logFileName_c, FILE_WRITE);
 
   // if the file is available, write to it:
-  String dataString = String(millis()) + "," + String(sensorValue) + "," + String(average) + ",";
+  String dataString = String(millis()) + "," + String(sensorValue) + "," + String(average) + "," + String(warningState) + ",";
   if (dataFile) {
     dataFile.println(dataString);
     dataFile.close();
