@@ -189,33 +189,6 @@
 <text x="-2.54" y="-2.54" size="1.27" layer="21">+9v</text>
 <text x="2.54" y="-2.54" size="1.27" layer="21">-</text>
 </package>
-<package name="TRIMPOT_3006">
-<wire x1="0" y1="0" x2="5.08" y2="0" width="0.127" layer="21"/>
-<wire x1="5.08" y1="0" x2="5.08" y2="-19.05" width="0.127" layer="21"/>
-<wire x1="5.08" y1="-19.05" x2="0" y2="-19.05" width="0.127" layer="21"/>
-<wire x1="0" y1="-19.05" x2="0" y2="0" width="0.127" layer="21"/>
-<pad name="3" x="3.81" y="-15.24" drill="0.8"/>
-<pad name="1" x="3.81" y="-2.54" drill="0.8"/>
-<pad name="2" x="1.27" y="-10.16" drill="0.8"/>
-</package>
-<package name="STEREOJACK_35RAPC2BHN2">
-<wire x1="-7.62" y1="6.35" x2="7.62" y2="6.35" width="0.127" layer="21"/>
-<wire x1="7.62" y1="6.35" x2="7.62" y2="-6.35" width="0.127" layer="21"/>
-<wire x1="7.62" y1="-6.35" x2="-7.62" y2="-6.35" width="0.127" layer="21"/>
-<wire x1="-7.62" y1="-6.35" x2="-7.62" y2="6.35" width="0.127" layer="21"/>
-<hole x="3.81" y="0" drill="1.2"/>
-<pad name="LEFT" x="3.81" y="-5.08" drill="1.5"/>
-<pad name="UNUSED1" x="3.81" y="-2.54" drill="1.5"/>
-<pad name="UNUSED2" x="3.81" y="2.54" drill="1.5"/>
-<pad name="RIGHT" x="3.81" y="5.08" drill="1.5"/>
-<pad name="GROUND" x="-1.27" y="0" drill="1.5"/>
-<hole x="-1.27" y="5.08" drill="1.2"/>
-<hole x="-1.27" y="-5.08" drill="1.2"/>
-<hole x="-3.81" y="5.08" drill="1.2"/>
-<hole x="-3.81" y="-5.08" drill="1.2"/>
-<text x="-6.858" y="1.778" size="1.27" layer="21" rot="R270">jack</text>
-<text x="0.762" y="5.334" size="1.27" layer="21" rot="R270">3.5mm JACK</text>
-</package>
 <package name="SWITCH_SS12SDH2">
 <pad name="1" x="2.54" y="-2.54" drill="0.8"/>
 <pad name="2" x="2.54" y="-5.08" drill="0.8"/>
@@ -230,6 +203,35 @@
 <wire x1="5.08" y1="-3.81" x2="7.62" y2="-3.81" width="0.127" layer="21"/>
 <wire x1="7.62" y1="-3.81" x2="7.62" y2="-6.35" width="0.127" layer="21"/>
 <wire x1="7.62" y1="-6.35" x2="5.08" y2="-6.35" width="0.127" layer="21"/>
+</package>
+<package name="35RAPC4BVN4">
+<wire x1="-1.27" y1="3.81" x2="-1.27" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-2.54" x2="-1.27" y2="-5.08" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-5.08" x2="12.7" y2="-5.08" width="0.127" layer="21"/>
+<wire x1="12.7" y1="-5.08" x2="12.7" y2="3.81" width="0.127" layer="21"/>
+<wire x1="12.7" y1="3.81" x2="-1.27" y2="3.81" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="3.81" x2="-5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="3.81" x2="-5.08" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-2.54" x2="-1.27" y2="-2.54" width="0.127" layer="21"/>
+<pad name="1" x="0" y="0" drill="2"/>
+<pad name="2" x="2.4638" y="1.9812" drill="2"/>
+<pad name="4" x="8.0518" y="1.9812" drill="2"/>
+<text x="1.27" y="-3.81" size="1.27" layer="21">3.5MM JACK</text>
+</package>
+<package name="66WR1KLF">
+<pad name="2" x="0" y="0" drill="0.8"/>
+<pad name="1" x="2.54" y="0" drill="0.8"/>
+<pad name="3" x="-2.54" y="0" drill="0.8"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-2.54" x2="5.08" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="2.54" width="0.127" layer="21"/>
+<wire x1="5.08" y1="2.54" x2="-5.08" y2="2.54" width="0.127" layer="21"/>
+<text x="-2.54" y="-1.905" size="1.27" layer="21">&gt;name</text>
+</package>
+<package name="10K_RESISTOR">
+<pad name="1" x="0" y="0" drill="0.8"/>
+<pad name="2" x="12.7" y="0" drill="0.8"/>
+<text x="3.175" y="-0.635" size="1.27" layer="21">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -315,29 +317,6 @@
 <pin name="+9V" x="2.54" y="5.08" visible="pin" length="middle"/>
 <pin name="-" x="2.54" y="0" visible="pin" length="middle"/>
 </symbol>
-<symbol name="TRIMPOT_3006">
-<wire x1="0" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
-<wire x1="5.08" y1="0" x2="5.08" y2="-19.05" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-19.05" x2="0" y2="-19.05" width="0.254" layer="94"/>
-<wire x1="0" y1="-19.05" x2="0" y2="0" width="0.254" layer="94"/>
-<pin name="1" x="-5.08" y="-2.54" length="middle"/>
-<pin name="2" x="-5.08" y="-7.62" length="middle"/>
-<pin name="3" x="-5.08" y="-12.7" length="middle"/>
-<text x="7.62" y="-11.43" size="1.27" layer="94">resistor 
-2 and 3</text>
-</symbol>
-<symbol name="STEREOJACK_35RAPC2BHN2">
-<wire x1="-7.62" y1="6.35" x2="7.62" y2="6.35" width="0.254" layer="94"/>
-<wire x1="7.62" y1="6.35" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
-<text x="-3.302" y="-9.652" size="1.27" layer="94">&gt;NAME</text>
-<pin name="LEFT" x="-12.7" y="3.81" visible="pin" length="middle"/>
-<pin name="RIGHT" x="-12.7" y="1.27" visible="pin" length="middle"/>
-<pin name="GROUND" x="-12.7" y="-1.27" visible="pin" length="middle"/>
-<pin name="UNUSED1" x="-12.7" y="-3.81" visible="pin" length="middle"/>
-<pin name="UNUSED2" x="-12.7" y="-6.35" visible="pin" length="middle"/>
-<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="6.35" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
-</symbol>
 <symbol name="SWITCH_SS12SDH2">
 <wire x1="0" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
 <wire x1="5.08" y1="0" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
@@ -346,6 +325,34 @@
 <pin name="1" x="-5.08" y="-2.54" visible="pin" length="middle"/>
 <pin name="2" x="-5.08" y="-5.08" visible="pin" length="middle"/>
 <pin name="3" x="-5.08" y="-7.62" visible="pin" length="middle"/>
+</symbol>
+<symbol name="35RAPC2BVN4">
+<wire x1="-5.08" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<text x="0.254" y="-3.302" size="1.27" layer="94">&gt;name</text>
+<pin name="1" x="-10.16" y="5.08" visible="pin" length="middle"/>
+<pin name="2" x="-10.16" y="0" visible="pin" length="middle"/>
+<pin name="4" x="-10.16" y="-5.08" visible="pin" length="middle"/>
+</symbol>
+<symbol name="66WR1KLF">
+<wire x1="0" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<pin name="1" x="-5.08" y="2.54" visible="pin" length="middle"/>
+<pin name="2" x="-5.08" y="0" visible="pin" length="middle"/>
+<pin name="3" x="-5.08" y="-2.54" visible="pin" length="middle"/>
+</symbol>
+<symbol name="10K_RESISTOR">
+<wire x1="0" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="2.54" width="0.254" layer="94"/>
+<pin name="1" x="-5.08" y="0" visible="pin" length="middle"/>
+<pin name="2" x="-5.08" y="-2.54" visible="pin" length="middle"/>
+<text x="8.382" y="-2.286" size="1.27" layer="94">&gt;name</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -474,42 +481,6 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="TRIMPOT_3006">
-<gates>
-<gate name="G$1" symbol="TRIMPOT_3006" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TRIMPOT_3006">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="STEREOJACK_35RAPC2BHN2">
-<gates>
-<gate name="G$1" symbol="STEREOJACK_35RAPC2BHN2" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="STEREOJACK_35RAPC2BHN2">
-<connects>
-<connect gate="G$1" pin="GROUND" pad="GROUND"/>
-<connect gate="G$1" pin="LEFT" pad="LEFT"/>
-<connect gate="G$1" pin="RIGHT" pad="RIGHT"/>
-<connect gate="G$1" pin="UNUSED1" pad="UNUSED1"/>
-<connect gate="G$1" pin="UNUSED2" pad="UNUSED2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="SWITCH_SS12SDH2">
 <gates>
 <gate name="G$1" symbol="SWITCH_SS12SDH2" x="0" y="0"/>
@@ -527,6 +498,56 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="35RAPC2BVN4">
+<gates>
+<gate name="G$1" symbol="35RAPC2BVN4" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="35RAPC4BVN4">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="66WR1KLF">
+<gates>
+<gate name="G$1" symbol="66WR1KLF" x="-5.08" y="0"/>
+</gates>
+<devices>
+<device name="" package="66WR1KLF">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="10K_RESISTOR">
+<gates>
+<gate name="G$1" symbol="10K_RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="10K_RESISTOR">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -535,7 +556,7 @@
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.6096" drill="0">
 </class>
 </classes>
 <parts>
@@ -545,9 +566,10 @@
 <part name="U$4" library="gc1_parts" deviceset="SWITCH_SS22SDH2" device=""/>
 <part name="U$5" library="gc1_parts" deviceset="9V_CONNECTOR" device=""/>
 <part name="U$6" library="gc1_parts" deviceset="9V_CONNECTOR" device=""/>
-<part name="U$7" library="gc1_parts" deviceset="TRIMPOT_3006" device=""/>
-<part name="U$8" library="gc1_parts" deviceset="STEREOJACK_35RAPC2BHN2" device=""/>
 <part name="U$9" library="gc1_parts" deviceset="SWITCH_SS12SDH2" device=""/>
+<part name="3.5MMJACK" library="gc1_parts" deviceset="35RAPC2BVN4" device=""/>
+<part name="TRIMMER" library="gc1_parts" deviceset="66WR1KLF" device=""/>
+<part name="10K_RESISTOR" library="gc1_parts" deviceset="10K_RESISTOR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -560,9 +582,10 @@
 <instance part="U$4" gate="G$1" x="55.88" y="-45.72"/>
 <instance part="U$5" gate="G$1" x="97.79" y="-43.18"/>
 <instance part="U$6" gate="G$1" x="97.79" y="-55.88"/>
-<instance part="U$7" gate="G$1" x="63.5" y="-67.31"/>
-<instance part="U$8" gate="G$1" x="101.6" y="-72.39"/>
 <instance part="U$9" gate="G$1" x="29.21" y="-82.55"/>
+<instance part="3.5MMJACK" gate="G$1" x="101.6" y="-76.2"/>
+<instance part="TRIMMER" gate="G$1" x="58.42" y="-78.74"/>
+<instance part="10K_RESISTOR" gate="G$1" x="48.26" y="-99.06"/>
 </instances>
 <busses>
 </busses>
@@ -579,9 +602,9 @@
 <label x="93.472" y="-22.098" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$9" gate="G$1" pin="3"/>
-<wire x1="24.13" y1="-90.17" x2="22.86" y2="-90.17" width="0.1524" layer="91"/>
-<label x="10.16" y="-90.678" size="1.27" layer="95"/>
+<pinref part="10K_RESISTOR" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="-99.06" x2="40.64" y2="-99.06" width="0.1524" layer="91"/>
+<label x="27.686" y="-99.568" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -616,14 +639,14 @@
 <label x="93.98" y="-51.308" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$8" gate="G$1" pin="GROUND"/>
-<wire x1="88.9" y1="-73.66" x2="87.63" y2="-73.66" width="0.1524" layer="91"/>
-<label x="82.804" y="-74.422" size="1.27" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$9" gate="G$1" pin="1"/>
 <wire x1="24.13" y1="-85.09" x2="22.86" y2="-85.09" width="0.1524" layer="91"/>
 <label x="18.542" y="-85.598" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="3.5MMJACK" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="-71.12" x2="88.9" y2="-71.12" width="0.1524" layer="91"/>
+<label x="79.502" y="-70.866" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="MICROSD_CS" class="0">
@@ -746,26 +769,26 @@
 <label x="-6.604" y="-22.098" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$7" gate="G$1" pin="2"/>
-<wire x1="58.42" y1="-74.93" x2="57.15" y2="-74.93" width="0.1524" layer="91"/>
-<label x="46.99" y="-75.692" size="1.27" layer="95"/>
+<pinref part="TRIMMER" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="-78.74" x2="50.8" y2="-78.74" width="0.1524" layer="91"/>
+<label x="43.942" y="-78.232" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="AUDIO_SIGNAL" class="0">
 <segment>
-<pinref part="U$7" gate="G$1" pin="3"/>
-<wire x1="58.42" y1="-80.01" x2="57.15" y2="-80.01" width="0.1524" layer="91"/>
-<label x="44.45" y="-80.518" size="1.27" layer="95"/>
+<pinref part="3.5MMJACK" gate="G$1" pin="2"/>
+<wire x1="91.44" y1="-76.2" x2="88.9" y2="-76.2" width="0.1524" layer="91"/>
+<label x="79.756" y="-75.184" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$8" gate="G$1" pin="LEFT"/>
-<wire x1="88.9" y1="-68.58" x2="87.63" y2="-68.58" width="0.1524" layer="91"/>
-<label x="74.676" y="-69.342" size="1.27" layer="95"/>
+<pinref part="TRIMMER" gate="G$1" pin="3"/>
+<wire x1="53.34" y1="-81.28" x2="50.8" y2="-81.28" width="0.1524" layer="91"/>
+<label x="44.704" y="-83.566" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$8" gate="G$1" pin="RIGHT"/>
-<wire x1="88.9" y1="-71.12" x2="87.63" y2="-71.12" width="0.1524" layer="91"/>
-<label x="74.676" y="-71.628" size="1.27" layer="95"/>
+<pinref part="3.5MMJACK" gate="G$1" pin="4"/>
+<wire x1="91.44" y1="-81.28" x2="88.9" y2="-81.28" width="0.1524" layer="91"/>
+<label x="79.756" y="-80.518" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="CONTROL_PIN" class="0">
@@ -780,15 +803,21 @@
 <label x="9.652" y="-88.138" size="1.27" layer="95"/>
 </segment>
 </net>
+<net name="+5V_RESISTOR" class="0">
+<segment>
+<pinref part="10K_RESISTOR" gate="G$1" pin="2"/>
+<wire x1="43.18" y1="-101.6" x2="40.64" y2="-101.6" width="0.1524" layer="91"/>
+<label x="26.924" y="-102.362" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$9" gate="G$1" pin="3"/>
+<wire x1="24.13" y1="-90.17" x2="22.86" y2="-90.17" width="0.1524" layer="91"/>
+<label x="9.398" y="-90.932" size="1.27" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </schematic>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
