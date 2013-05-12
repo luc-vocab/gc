@@ -238,7 +238,7 @@ void loop() {
   
   int warningState = 0;
 
-  if( sensorValue > 60 ) {
+  if( sensorValue > 60 && controlButtonState == HIGH ) {
     warning_grind();
     warningState = 1;
   }
