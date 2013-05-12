@@ -1,0 +1,25 @@
+PCB dimensions
+--------------
+
+thickness: 1.6mm
+width: 52m
+length: 87mm
+
+9v battery + snap
+-----------------
+length: 55m
+thickness: 17mm
+width: 27mm
+
+
+box dimensions
+--------------
+interior width: 55mm
+height: 29.5mm spacing: 2*0.5mm, 4mm PCB spacing off bottom, wall thickness: 2*3mm -> 40.5mm
+length: 93.5mm
+
+strap
+-----
+
+width: 20mm
+spacing: 4mm
