@@ -10,4 +10,4 @@ Photos
 ======
 
 Early prototype on breadboard:
-![Early Prototype on breadboard](/gc/photos/prototype_breadboard/photo1.jpg "Early Prototype on breadboard")
+![Early prototype on breadboard](https://raw.github.com/lucwastiaux/gc/master/photos/prototype_breadboard/photo1.jpg)
