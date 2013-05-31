@@ -10,11 +10,6 @@ Features:
 * A micro-SD card is used to record bruxism patterns for later analysis.
 * A custom-made case was designed which can be 3d-printed.
 
-Overview
-========
-* Has a 3.5mm audio jack to plug-in 
-
-
 Photos
 ======
 
