@@ -18,3 +18,24 @@ Early prototype on breadboard:
 
 The device is worn around the neck, held by a strap:
 ![Device](https://raw.github.com/lucwastiaux/gc/master/photos/version1/20130601-P6010001.jpg)
+
+Three electrodes are stuck on the temporalis muscle, the red one on the middle of the muscle, the blue one at the end, and the black one at a neutral area of the skin. Earphones are used for the audio signal:
+![Electrodes](https://raw.github.com/lucwastiaux/gc/master/photos/version1/20130601-P6010010.jpg)
+
+The device with strap, earphone, and electrode cable. The case is a custom designed enclosure, designed in Sketchup and printed using Selective Laser Sintering:
+![Device 2](https://raw.github.com/lucwastiaux/gc/master/photos/version1/20130601-P6010011.jpg)
+
+Inside of the device, with two 9V batteries:
+![Inside](https://raw.github.com/lucwastiaux/gc/master/photos/version1/20130601-P6010012.jpg)
+
+The printed circuit board. You can see the Arduino Micro microcontroller, micro-sd card reader, muscle sensor, switches and 3.5mm headphone jack.
+![PCB](https://raw.github.com/lucwastiaux/gc/master/photos/version1/20130601-P6010019.jpg)
+
+The printed circuit board, designed in Eagle:
+![PCB](https://raw.github.com/lucwastiaux/gc/master/photos/version1/eagle_board.png)
+
+Schematics in Eagle:
+![PCB](https://raw.github.com/lucwastiaux/gc/master/photos/version1/eagle_schematic.png)
+
+
+
