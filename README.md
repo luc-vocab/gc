@@ -13,9 +13,6 @@ Features:
 Photos
 ======
 
-Early prototype on breadboard:
-![Early prototype on breadboard](https://raw.github.com/lucwastiaux/gc/master/photos/prototype_breadboard/photo1.jpg)
-
 The device is worn around the neck, held by a strap:
 ![Device](https://raw.github.com/lucwastiaux/gc/master/photos/version1/20130601-P6010001.jpg)
 
