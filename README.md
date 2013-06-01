@@ -1,6 +1,8 @@
 Grind Control Device
 ====================
 
+<b>Disclaimer: use this design, or any of the parts at your own risk.</b>
+
 This device attemps to prevent night-time bruxism. It works by detecting muscle activation on the temporalis 
 muscle and will emit an audio signal to wake the user up if bruxism is detected.
 
