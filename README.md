@@ -10,6 +10,8 @@ Features:
 * A micro-SD card is used to record bruxism patterns for later analysis.
 * A custom-made case was designed which can be 3d-printed.
 
+The design is heavily inspired by the commercially available [Grind Care](http://grindcare.com/) device (which appears to no longer be available), except an audio signal is used instead of electrical impulses.
+
 Photos
 ======
 
