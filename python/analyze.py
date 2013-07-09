@@ -5,7 +5,7 @@ import math
 
 
 class Reading():
-    def __init__(self, millis, value, average):
+    def __init__(self, millis, value, warning_mode):
         self.millis = millis
         
         # convert millis to human-readable time
@@ -19,21 +19,22 @@ class Reading():
         self.time_str = "%02d:%02d:%02d.%03d" %(hours, minutes, seconds, milliseconds)
         
         self.value = value
-        self.average = average
+        self.warning_mode = warning_mode
        
     def __str__(self):
-        return "%s reading: %4d average: %4d" %(self.time_str, self.value, self.average)
+        return "%s reading: %4d warning_mode: %d" %(self.time_str, self.value, self.warning_mode)
     
 
 class GcLog():
     def __init__(self, filename):
         self.readings = []
         reader = csv.reader(open(filename))
+        next(reader)
         for row in reader:
             millis = int(row[0])
             value = int(row[1])
-            average = int(row[2])
-            reading = Reading(millis, value, average)
+            warning_mode = int(row[2])
+            reading = Reading(millis, value, warning_mode)
             self.readings.append(reading)
             
     def all(self):

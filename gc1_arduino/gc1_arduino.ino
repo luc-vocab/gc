@@ -16,109 +16,84 @@ SdFile root;
 String logFileName = "gcLog_";
 
 char logFileName_c[40];
+
+// file handle for logging
+File logDataFile;
+
 // sd card pin
 const int chipSelect = 3;    
 
 // we will keep updating this to keep track of the lowest value seen
 int lowestValueSeen = 1023;
 
-const int numReadings = 60;
-int lastReadings[numReadings];
-int numReadingsSoFar = 0;
+// considered a grind if value is >30 + lowestValueSeen
+const int grindThreshold = 30;
 
-const int segment1_duration = 2; // 2*250ms
-const int segment2_duration = 12; // 6*250ms
-const int segment3_duration = 8; 
-const int segment4_duration = 8; 
-const int segment_1_2_gap = 3;
-const int segment_2_3_gap = 8; // 2 seconds
+const byte LEVEL_NO_GRIND      = 0;
+const byte LEVEL_GRIND_NO_WARN = 1;
+const byte LEVEL_GRIND_WARN_1  = 2;
+const byte LEVEL_GRIND_WARN_2  = 3;
+const byte LEVEL_GRIND_ALERT   = 4;
 
-// segment 1 boundaries
-const int segment1_index_start = 0;
-const int segment1_index_end = segment1_index_start + segment1_duration;
-// segment 2 boundaries
-const int segment2_index_start = segment1_index_end + segment_1_2_gap;
-const int segment2_index_end = segment2_index_start + segment2_duration;
-// segment 3 boundaries 
-const int segment3_index_start = segment2_index_end + segment_2_3_gap;
-const int segment3_index_end = segment3_index_start + segment3_duration;
-// segment 4 boundaries 
-const int segment4_index_start = segment3_index_end;
-const int segment4_index_end = segment4_index_start + segment4_duration;
+// no warning for first 5 grinds
+const int warn0NumGrinds = 10;
+// allow 5 grinds at the first warning level
+const int warn1NumGrinds = 5;
+// allow 5 grinds at hte second warning level
+const int warn2NumGrinds = 5;
 
+const int flush_every = 20;
+const int log_records_max = 50;
 
+// warning_mode array
+byte warning_mode_array[log_records_max];
 
-// data buffer
-struct EntryStruct {
-  unsigned long milliseconds;
-  int sensor_value;
-  boolean segment1_above;
-  boolean segment2_above;
-  boolean segment3_above;
-  boolean segment4_above;
-  byte warning_mode;
-};
-
-const int log_records_max = 20;
-EntryStruct entries[log_records_max];
-int struct_index = 0;
-
-void initialize_readings_array() {
-  int i;
-  for (i = 0; i < numReadings; i++ ){
-    lastReadings[i] = 0;
-  }
-}
+unsigned long numEntriesSoFar = 0;
 
 void reset_lowest_value_seen() {
   lowestValueSeen = 1023;
 }
 
 int grind_threshold(int lowest_value_seen) {
-  return lowest_value_seen + 18;
+  return lowest_value_seen + 30;
 }
 
-void add_reading(int reading) {
+void add_reading(int reading, byte warning_mode) {
   // shift numbers out of array
   int i;
-  for (i = numReadings - 1; i > 0; i-- ) {
-    lastReadings[i] = lastReadings[i - 1];
+  for (i = log_records_max - 1; i > 0; i-- ) {
+    warning_mode_array[i] = warning_mode_array[i - 1];
   }
-  lastReadings[0] = reading;  
-  numReadingsSoFar = numReadingsSoFar + 1;
+  warning_mode_array[0] = warning_mode;
   
+  numEntriesSoFar = numEntriesSoFar + 1;
+  
+  // memorize lowest value seen if necessary
   if (reading < lowestValueSeen) {
     lowestValueSeen = reading;
   }
+
+  // flushing will be automatic
+  log_data_to_sd(millis(), reading, warning_mode);
   
 }
 
-boolean segment_above_threshold(int start_index, int end_index) {
-  for (int i = start_index; i < end_index; i = i + 1) {
-    if( lastReadings[i] >= grind_threshold(lowestValueSeen) ) {
-      return true;
+// number of grinds in the 10-second window so far
+int num_grinds() {
+  
+  int result = 0;
+  for(int i = 0; i < log_records_max; i++) {
+    if (warning_mode_array[i] == LEVEL_GRIND_ALERT) {
+      // stop counting at that point, a grind alert already happened
+      break;
     }
-  }    
-  return false;
+    if (warning_mode_array[i] > LEVEL_NO_GRIND ) {
+      result += 1;
+    }
+  }
+  
+  return result;
 }
-
-boolean segment1_is_above() {
-  return segment_above_threshold(segment1_index_start, segment1_index_end); // first 1.5 seconds
-}
-
-boolean segment2_is_above() {
-  return segment_above_threshold(segment2_index_start, segment2_index_end);  // second 1.5 seconds
-}
-
-boolean segment3_is_above() {
-  return segment_above_threshold(segment3_index_start, segment3_index_end);  // following 3 seconds
-}
-
-boolean segment4_is_above() {
-    return segment_above_threshold(segment4_index_start, segment4_index_end);  // following 3 seconds  
-}
-
-
 
 // the setup routine runs once when you press reset:
 void setup() {
@@ -127,8 +102,6 @@ void setup() {
     Serial.begin(9600);
    
   };
- 
-  initialize_readings_array();
  
   // ******* sd card init ********
   pinMode(10, OUTPUT);
@@ -169,6 +142,13 @@ void setup() {
      Serial.print(logFileName_c);
      Serial.println("]");
    }
+   
+   // initialize warning_mode_array
+   for(int i = 0; i < log_records_max; i++) {
+     warning_mode_array[i] = LEVEL_NO_GRIND;
+   }
+   
+   logDataFile = SD.open(logFileName_c, FILE_WRITE);
    
    log_headers();
    
@@ -211,6 +191,12 @@ void start_program_beep() {
 
 void warning_grind() {
   tone(soundPin,400);
+  delay(50);
+  noTone(soundPin);
+}
+
+void warning_grind_high() {
+  tone(soundPin,800);
   delay(50);
   noTone(soundPin);
 }
@@ -279,76 +265,32 @@ int freeRam () {
 void trigger_grind_alarm(){
   alert_grind();
   wait_for_reset();
-  initialize_readings_array();
   reset_lowest_value_seen();
 }
 
 void log_headers() {
   // write headers onto data file
-  File dataFile = SD.open(logFileName_c, FILE_WRITE);
-  String dataString = "millis,sensorValue,segment1_above,segment2_above,segment3_above,segment4_above,warning_mode";
-  dataFile.println(dataString);
-  dataFile.close();  
+  String dataString = "millis,sensorValue,warning_mode,";
+  logDataFile.println(dataString);
 }
 
-void log_data(int sensorValue, 
-              boolean segment1_above, 
-              boolean segment2_above, 
-              boolean segment3_above, 
-              boolean segment4_above, 
-              byte warning_mode) {
-  entries[struct_index] = (EntryStruct){millis(), sensorValue,segment1_above,segment2_above,segment3_above,segment4_above,warning_mode};
-  
-  if(data_buffer_full()) {
-    flush_data_buffer();
-  } else {
-    struct_index += 1; 
-  }
-}
+void log_data_to_sd(unsigned long milliseconds, int sensor_value, byte warning_mode) {
+  String dataString = String(milliseconds) + "," + \
+                          String(sensor_value) + "," + \
+                          String(warning_mode) + ",";
+    logDataFile.println(dataString);
 
-String convert_bool(boolean value) {
-  if (value) {
-    return "1";
-  }
-  return "0";
-}
-
-void flush_data_buffer() {
-  File dataFile = SD.open(logFileName_c, FILE_WRITE);
-
-  // if the file is available, write to it:
-  if (dataFile) {
-    for( int i = 0; i < log_records_max; i++) {
-      EntryStruct entry = entries[i];
-      String dataString = String(entry.milliseconds) + "," + \
-                          String(entry.sensor_value) + "," + \
-                          convert_bool(entry.segment1_above) + "," + \
-                          convert_bool(entry.segment2_above) + "," + \
-                          convert_bool(entry.segment3_above) + "," + \
-                          convert_bool(entry.segment4_above) + "," + \
-                          String(entry.warning_mode) + ",";
-      dataFile.println(dataString);
-      if(useSerial) {
-        Serial.println(dataString);
-      }      
-    }
+  if (numEntriesSoFar % flush_every == 0) {
+    logDataFile.flush();
     
-    dataFile.close();
-    struct_index = 0;
-    
-    if( useSerial) {
-      Serial.println("wrote to data file (" + String(log_records_max) + " entries)");
+    if(useSerial) {
+      // Serial.println(dataString);
+      Serial.println("flushed");
       log_free_ram();
-    }
-  }    
+    }    
+  }
 }
 
-boolean data_buffer_full() {
-  if (struct_index == log_records_max - 1) {
-    return true;
-  }
-  return false;
-}
 
 int sensor_value() {
   sensorValue = analogRead(A0);
@@ -360,32 +302,41 @@ void loop() {
   controlButtonState = digitalRead(controlPin);
   sensorValue = sensor_value();
 
-  // insert current reading into array
-  add_reading(sensorValue);
-  
-  boolean segment1_above = segment1_is_above();
-  boolean segment2_above = segment2_is_above();
-  boolean segment3_above = segment3_is_above();
-  boolean segment4_above = segment4_is_above();
-  
-  byte warning_mode = 0; // no warning
-  if (segment1_above && segment2_above && (segment3_above || segment4_above)) {
-    // grind alert
-    warning_mode = 2;
-  } else if (segment1_above && segment2_above) {
-    // grind warning
-    warning_mode = 1;
-  }
-    
-  // log to flashcard
-  log_data(sensorValue, segment1_above, segment2_above, segment3_above, segment4_above, warning_mode);
-  
+  byte warning_mode = LEVEL_NO_GRIND; // no warning
 
-  if( warning_mode == 1 ) {
+  boolean grindDetected = false;
+  if( sensorValue >= grind_threshold(lowestValueSeen) ) {
+    grindDetected = true;
+  }
+
+  // how many grinds do we have so far ?
+  int num_grinds_in_window = num_grinds();
+  
+  if( grindDetected ) {
+    warning_mode = LEVEL_GRIND_NO_WARN;
+  }
+  if( grindDetected && num_grinds_in_window > warn0NumGrinds ) {
+    warning_mode = LEVEL_GRIND_WARN_1;
+  }
+  if ( grindDetected && num_grinds_in_window > warn0NumGrinds + warn1NumGrinds ) {
+    warning_mode = LEVEL_GRIND_WARN_2;    
+  }
+  if ( grindDetected && num_grinds_in_window > warn0NumGrinds + warn1NumGrinds + warn2NumGrinds ) {
+    warning_mode = LEVEL_GRIND_ALERT;
+  }  
+    
+  // insert current reading into array
+  add_reading(sensorValue, warning_mode);
+  
+  if( warning_mode == LEVEL_GRIND_WARN_1 ) {
     warning_grind();
   }
 
-  if ( warning_mode == 2 ) {
+  if( warning_mode == LEVEL_GRIND_WARN_2 ) {
+    warning_grind_high();
+  }
+  
+  if ( warning_mode == LEVEL_GRIND_ALERT ) {
     trigger_grind_alarm();
   }
  
