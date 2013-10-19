@@ -122,11 +122,43 @@ values over the last 10 seconds (sampling 4 times per second). If they exceed 5,
 beep with every new high value. Once the number of high readings exceed 10, issue a higher pitched beep with every new high value.
 If they exceed 15, then go into alarm mode and continuously beep until the user resets the device.
 
+Notes about using Arduino Micro
+-------------------------------
 
+Working with the Arduino Micro was a good experience overall. The only issue is the limited amount of RAM: 2.5kb. This
+is very restrictive. The most annoying issue is that the device will automatically reset if you run out of RAM. It took
+me a long time to understand that. Other than that, the Arduino is perfect for this application. The power consumption is
+such that I'll go through 2 500mah 9V batteries in one night. Not a big deal since I can recharge them easily.
 
+Experiences using the device
+============================
 
+For many months I had grown convinced that the source fo my issues is an unconscious night-time behavior of my jaw that 
+no one could explain. It seemed obvious to me that if I could detect this and stop it then I would solve my problem.
+To me this has been a very successful project. Since I started using the device in April 2013, my symptoms have improved
+progressively but very noticeably.
 
+There are some drawbacks, the biggest one being interference with your sleep. In my case, it was a lot better to interrupt
+my sleep than to let the destructive night-time bruxism keep on happening. However sleep segmentation may have some negative side
+effects. Ironically, sleep deprivation may lead to headaches so you need to be careful if you try something like that.
 
+One source of frustration is that bruxism is not well understood by the medical community. Most doctors and dentist will
+not be able to help you much besides suggesting mouth guards and other dental treatments. There is a belief that bruxism
+is caused by malocclusion or other problems in the mouth. While that may be true, i've also heard dentists say that you could
+have perfect teeth and still experience bruxism symptoms. Other people will say it's due to stress. In my personal opinion,
+bruxism becomes a habit that is very hard to get rid of. While it may initially be due to stress or dental problems, it will
+become a habit that you cannot control.
 
+Problems with current design
+----------------------------
+* No LCD screen. This makes it difficult to experiment with different algorithms as you can't tell what the current reading is.
+* Only works off 9V batteries. I end up having to charge a new set every day.
+* The sensitivity is based on the EMG readings from my muscles. It may vary from one person to another. Right now the only way to change this is in the code.
 
+Interested in using this ?
+==========================
 
+In its current state, I cannot recommend using this device to anyone who is not an engineer. You may have to do a lot of 
+experimentation to get it work for you, however if your bruxism symptoms are as severe as mine were, I can only encourage 
+you to pursue this. I'm not planning on making an updated version right now, but several people have expressed interest.
+If you have any ideas around this please contact me.
