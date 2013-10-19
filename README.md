@@ -138,6 +138,12 @@ no one could explain. It seemed obvious to me that if I could detect this and st
 To me this has been a very successful project. Since I started using the device in April 2013, my symptoms have improved
 progressively but very noticeably.
 
+The first times I got woken up by the beeping audio sound were a victory for me as I had finally found an effective
+system to put a stop to this destructive unconscious habit. I distintively remember being woken up a few times with 
+my jaw clenched and the device beeping into my ears. I had no idea why my jaw was clenched but only after I became more
+conscious would I relax my jaw muscles. This was a revelation and yet another proof that my problems were due to night-time,
+unconscious bruxism.
+
 There are some drawbacks, the biggest one being interference with your sleep. In my case, it was a lot better to interrupt
 my sleep than to let the destructive night-time bruxism keep on happening. However sleep segmentation may have some negative side
 effects. Ironically, sleep deprivation may lead to headaches so you need to be careful if you try something like that.
