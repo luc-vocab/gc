@@ -69,9 +69,9 @@ At electrode is stuck on your face near the temporal muscle. The electrode serve
 send a shock if muscle contraction is detected.
 
 The grindcare device was the thing that helped me the most up to that point. It would give me some metrics of how many times
-I grinded my teeth at night. It started out at 140/night, then progressively moved to 30/night. My symptoms improved radically.
-However by December 2012 the number of grinds/night started increasing, as if my body had somehow adjusted and no longer cared
-about the electric shock.
+I ground my teeth at night. It started out at 140/night, then progressively moved to 30/night. My symptoms improved radically.
+However by December 2012 the number of grinds/night started increasing, to 100/night, 200/night and even as high as 300/night
+, as if my body had somehow adjusted and no longer cared about the electric shock.
 
 The idea started forming in my head that the device should not just send an electric shock, but actually wake me up if 
 bruxism is detected.
@@ -133,7 +133,7 @@ such that I'll go through 2 500mah 9V batteries in one night. Not a big deal sin
 Experiences using the device
 ============================
 
-For many months I had grown convinced that the source fo my issues is an unconscious night-time behavior of my jaw that 
+For many months I had grown convinced that the source for my issues is an unconscious night-time behavior of my jaw that 
 no one could explain. It seemed obvious to me that if I could detect this and stop it then I would solve my problem.
 To me this has been a very successful project. Since I started using the device in April 2013, my symptoms have improved
 progressively but very noticeably.
@@ -166,7 +166,7 @@ Potential improvements
  no experience with that, but it's an interesting idea. Not sure what it would mean for power consumption, although with on-board storage, I wouldn't need
 to keep the bluetooth radio on the whole night, only when the user is configuring the device.
 * Run off a LIPO battery. This presents some challenges, as the EMG sensor requires a dual power supply, and with the 2 9V batteries forming a +/- 9V dual supply, the output voltage 
-of the EMG sensor moves between 0.1V and 0.9V. This is only a small range of the Arduino's 0V-5V resolution. Maybe my mucles are weak. If I were to use a LIPO batterie, I would
+of the EMG sensor moves between 0.1V and 0.9V. This is only a small range of the Arduino's 0V-5V resolution. Maybe my mucles are weak. If I were to use a LIPO battery, I would
 have to first use a step-up converter to increase the voltage from 3.7V to 9V, and then create a dual power supply. This is beyond my level of knowledge. There are some ready-made boost
 converters you can buy, I may look into those. Then I may need a charging circuit for the LIPO, but again that's beyond my area of expertise.
 
