@@ -59,7 +59,9 @@ This had a hugely positive impact on my symptoms and two months after wearing th
 However I occasionally still felt dizziness. In October of 2011, I had ocasional dizziness and semi-permanent headaches again.
 This time, I experienced pain when chewing which clearly pointed to an issue with the jaw and especially jaw muscles.
 In march 2012, I went to see a dentist in Hong Kong who made another type of mouthguard, and eventually put tooth fillings on my back teeth
-to attempt to remediate a malocclusion problem. This had a beneficial impact.
+to attempt to remediate a malocclusion problem. This had a beneficial impact. The dentist mentioned that night-time
+bruxism is extremely challenging to control, that it may be caused by stress, but may become habitual and persist even
+after the stress stimulus is removed.
 
 In September 2012, I purchased the Grind Care device which detects night-time bruxism and attemps to condition you out of 
 it by triggering a small electric shock. It's a very well made very compact device which you wear at night around your neck.
@@ -78,7 +80,14 @@ Development of Grind Control Device
 -----------------------------------
 
 In December 2012, I purchased a book on electronics to refresh my knowledge on the topic and learn some of the necessary
-techniques such as soldering.
+techniques such as soldering. I experimented with an USB voltmeter capable of detecting +/- 200mV. I started experimenting
+with Operational Amplifiers. However in order to accurately detect muscle activity, you need a true EMG signal processing circuit.
+I purchased an Olimex EMG and Arduino kit. That kit turned out not to be sensitive enough to detect temporal muscle activity.
+A couple of weeks later, I received my Advancer Technologies Muscle Sensor v3. Through playing around with the electrodes
+connected on my face, and measuring output voltage with a multimeter, I realized this was the way to go. The output voltage would
+show 0.1V with muscles relaxed, and +0.9V with muscles contracted. This was perfect and exactly within the range that I needed
+to process the signal with my Arduino Micro.
+
 
 
 
