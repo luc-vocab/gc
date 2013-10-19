@@ -14,6 +14,8 @@ Features:
 
 The design is heavily inspired by the commercially available [Grind Care](http://grindcare.com/) device (which appears to no longer be available), except an audio signal is used instead of electrical impulses.
 
+Do you have questions ? You may want to read all of the info below. You can also [contact me](mailto:grindcontrol@mailc.net)
+
 Photos
 ======
 
