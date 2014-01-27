@@ -20,6 +20,7 @@ Similar Projects
 ----------------
 * Anthony is building a similar device, using a LIPO battery, an OLED display, SRAM chips http://chompr.blogspot.com
 * Frank is starting on a similar project http://forums.adafruit.com/viewtopic.php?f=8&t=25611
+* Lucy built a device using the EMG sensor and wrote a research paper http://lucyaimeemorcos.wordpress.com/2013/12/17/dont-grind-your-gears-pictures/
 * Anthony setup a mailing list to discuss bruxism detection / prevention projects: https://groups.google.com/d/forum/bruxhackers
 
 Photos
