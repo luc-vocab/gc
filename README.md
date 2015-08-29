@@ -47,6 +47,32 @@ The printed circuit board, designed in Eagle:
 Schematics in Eagle:
 ![PCB](https://raw.github.com/lucwastiaux/gc/master/photos/version1/eagle_schematic.png)
 
+Parts List
+==========
+* **Adafruit Arduino Micro** https://www.adafruit.com/products/1086
+* **Adafruit MicroSD breakout board** https://www.adafruit.com/products/254
+* **Advancer Technologies Muscle Sensor V3** http://www.advancertechnologies.com/p/muscle-sensor-v3.html
+  * Also comes with electrodes
+* **SS12SDH2 switch** http://www.mouser.hk/Search/ProductDetail.aspx?R=SS12SDH2virtualkey63300000virtualkey633-SS12SDH2
+  * this switch is used to register an alarm / cancel the permanent alarm once it goes off.
+* **SS22SDH2 switch** http://www.mouser.hk/Search/ProductDetail.aspx?R=SS22SDH2virtualkey63300000virtualkey633-SS22SDH2
+  * this switch is used to power on the device. It simultaneously connects the two batteries.
+* **66WR1KLF potentiometer / trimmer resistor** http://www.mouser.hk/Search/ProductDetail.aspx?R=66WR1KLFvirtualkey57700000virtualkey858-66WR1KLF
+  * used to control the volume in the headphones
+* **35RAPC2BV4 3.5mm headphone jack** http://www.mouser.hk/Search/ProductDetail.aspx?R=35RAPC2BV4virtualkey50210000virtualkey502-35RAPC2BV4
+  * for audio output into headphones
+* **10k ohm resistor**, a standard resistor will do.
+* **Printed Circuit Board**, designed in Eagle CAD and printed using http://www.seeedstudio.com (https://github.com/lucwastiaux/gc/tree/master/gc1_eagle_project)
+* **3d-printed case** printed using http://www.sculpteo.com, white SLS print (https://github.com/lucwastiaux/gc/tree/master/case)
+* **Rubber band** to hold the case together
+* **Shure SE215 headphones** http://www.shure.com/americas/products/earphones/se-earphones/se215-sound-isolating-earphones
+  * in-ear headphones with decent volume, and stay inside the ears the whole night.
+* **Strapworks 1" tubular polyester webbing, 2 ft** http://www.strapworks.com/product_p/stpw1.htm
+  * this is the hollow nylon strap used to wrap the headphone cable, electrode cable, and support strap
+* **Strapworks 3/4" 4ft adjustable strap** http://www.strapworks.com/Strap_Adjuster_Straps_p/sas34l.htm
+  * support strap to hold the device around the neck
+ 
+
 History and development
 =======================
 
