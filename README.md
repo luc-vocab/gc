@@ -62,6 +62,8 @@ Parts List
 * **35RAPC2BV4 3.5mm headphone jack** http://www.mouser.hk/Search/ProductDetail.aspx?R=35RAPC2BV4virtualkey50210000virtualkey502-35RAPC2BV4
   * for audio output into headphones
 * **10k ohm resistor**, a standard resistor will do.
+* **MicroSD card** any capacity will do, the device usually outputs a 1mb file per night
+* **MicroSD card reader** the data has to be analyzed on your computer using a card reader
 * **Printed Circuit Board**, designed in Eagle CAD and printed using http://www.seeedstudio.com (https://github.com/lucwastiaux/gc/tree/master/gc1_eagle_project)
 * **3d-printed case** printed using http://www.sculpteo.com, white SLS print (https://github.com/lucwastiaux/gc/tree/master/case)
 * **9V batteries** http://www.amazon.com/gp/product/B0051WZ516 , these need to have enough capacity to last a whole night, the 550mah seem to last through a whole 10hr night. 
