@@ -64,6 +64,9 @@ Parts List
 * **10k ohm resistor**, a standard resistor will do.
 * **Printed Circuit Board**, designed in Eagle CAD and printed using http://www.seeedstudio.com (https://github.com/lucwastiaux/gc/tree/master/gc1_eagle_project)
 * **3d-printed case** printed using http://www.sculpteo.com, white SLS print (https://github.com/lucwastiaux/gc/tree/master/case)
+* **9V batteries** http://www.amazon.com/gp/product/B0051WZ516 , these need to have enough capacity to last a whole night, the 550mah seem to last through a whole 10hr night. 
+  * order enough of them as they are completely drained after one night
+* **9V battery charger** http://www.amazon.com/gp/product/B005PUZQ04
 * **Rubber band** to hold the case together
 * **Shure SE215 headphones** http://www.shure.com/americas/products/earphones/se-earphones/se215-sound-isolating-earphones
   * in-ear headphones with decent volume, and stay inside the ears the whole night.
@@ -72,6 +75,25 @@ Parts List
 * **Strapworks 3/4" 4ft adjustable strap** http://www.strapworks.com/Strap_Adjuster_Straps_p/sas34l.htm
   * support strap to hold the device around the neck
  
+Building
+========
+
+PCB
+---
+The PCB can be order on http://www.seeedstudio.com/. Select **Fusion PCB** service 
+* PCB Qty. - 5 ( you can order more if you want to play around but the minimum is 5)
+* Layer - 2
+* PCB Thickness - 1.6mm
+* PCB Dimension - 10cm Max*10cm Max
+* PCB Color - Green
+* Surface Finish - Hasl
+* E-Test - 100% E-test(Free)
+
+Submit the following zip file: https://github.com/lucwastiaux/gc/blob/master/gc1_eagle_project/gerber/gc1_20130428.zip
+
+This should get you the exact same PCB that I have on my device without requiring processing in Eagle CAD. You will have 5 PCBs, and I recommend dedicating one for testing. You can solder male/female headers on that one to easily add/remove the Arduino, microSD breakout, and muscle sensor (other components like switches, you can just order extra and solder them on directly).
+
+
 
 History and development
 =======================
