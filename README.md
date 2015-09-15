@@ -69,6 +69,7 @@ Parts List
 * **9V batteries** http://www.amazon.com/gp/product/B0051WZ516 , these need to have enough capacity to last a whole night, the 550mah seem to last through a whole 10hr night. 
   * order enough of them as they are completely drained after one night
 * **9V battery charger** http://www.amazon.com/gp/product/B005PUZQ04
+* **2x 9V connectors + wires*** any electronics stores will have those
 * **Rubber band** to hold the case together
 * **Shure SE215 headphones** http://www.shure.com/americas/products/earphones/se-earphones/se215-sound-isolating-earphones
   * in-ear headphones with decent volume, and stay inside the ears the whole night.
