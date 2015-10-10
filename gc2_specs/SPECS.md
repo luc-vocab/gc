@@ -2,6 +2,17 @@ Project Overview
 ================
 The project consists of building a device to monitor and log night-time bruxism as well as associated sleep data. More background here: https://github.com/lucwastiaux/gc/edit/master/README.md
 
+Diagrams
+========
+How the device will be worn on the head. A couple of notes:
+* The PCB will be enclosed in a custom case and placed inside a sleeve which will be stiched to the headband.
+* The left and right side of the PCB will be accessible, but not the top and bottom, so connectors can only be on the left or right.
+![Head Diagram](https://raw.githubusercontent.com/lucwastiaux/gc/dev/gc2_specs/head_diagram.jpg)
+
+What the PCB should look like:
+* I am not yet 100% set on which side the connectors will need to be on, I need to experiment with placement.
+![PCB Diagram](https://raw.githubusercontent.com/lucwastiaux/gc/dev/gc2_specs/pcb_diagram.jpg)
+
 Board Components
 ================
 * Particle Photon board https://www.particle.io/. There seem to be two options, either include the SMT (headerless) version of the Photon dev board, or use the P1 chip, which requires a voltage regulator, some buttons and LEDs. 
