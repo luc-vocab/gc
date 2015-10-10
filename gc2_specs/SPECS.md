@@ -11,6 +11,9 @@ Board Components
   * I am not clear in what position the I2C pull up jumper needs to be (will try to clarify)
   * If you are using the Photon P1 chip, then we need an additional micro-USB port for charging.
 * All components of this IMU shield: https://www.sparkfun.com/products/13629
+* A 3-pole connector for connecting to the EMG sensor https://www.kickstarter.com/projects/312488939/myowaretm-harness-the-power-of-your-muscle-signals
+  * The 3 poles are Ground, +3.3V regulated, and signal from the EMG
+  * The signal from the EMG will be read by an analog input pin on the Photon using analogRead()
 * A switch to close/open the battery circuit and turn the device off.
 * A side-mounted 2-position switch which sets one of the digital input pins on the Photon to either high or low
   * This will be used to configure an "offline mode" in the software as the Photon expects full time internet connectivity by default
