@@ -37,3 +37,8 @@ Board Components
   * This will be used to output audio tones using the tone() function.
   * I would like the tone volume to be software-configurable, however I am not clear what the exact circuit should be.
   
+Current State of Prototyping
+============================
+At this stage the prototype only exists in my head, I have not started putting anything on the breadboard yet, and i'm still waiting for my Photon boards. For example, I don't know what pins I will connect the EMG, offline switch and 2 pushbuttons to. The exact pin numbers will depend on what constraints that exist on analog/digital input on the Photon.
+
+However, the schematics of (Photon + LIPO charging/gauge circuit + IMU circuit) are already set in stone as they are a simple replica of the Sparkfun shields. So you could start by putting together those schematics.
