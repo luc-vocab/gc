@@ -14,6 +14,12 @@ Board Components
 * A switch to close/open the battery circuit and turn the device off.
 * A side-mounted 2-position switch which sets one of the digital input pins on the Photon to either high or low
   * This will be used to configure an "offline mode" in the software as the Photon expects full time internet connectivity by default
+  * The value of the switch will be read using digitalRead()
 * 2 side-mounted push-buttons (not sure i'm using the right word) which will be connected to 2 respective digital pins on the Photon.
   * These will be used to interact with the software.
   * The wiring will be similar to this https://www.arduino.cc/en/Tutorial/Button
+  * The value of the switch will be read using digitalRead()
+* An audio circuit with a 3.5mm jack
+  * This will be used to output audio tones using the tone() function.
+  * I would like the tone volume to be software-configurable, however I am not clear what the exact circuit should be.
+  
