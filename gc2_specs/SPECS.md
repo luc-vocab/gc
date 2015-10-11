@@ -33,9 +33,9 @@ Board Components
   * These will be used to interact with the software.
   * The wiring will be similar to this https://www.arduino.cc/en/Tutorial/Button
   * The value of the switch will be read using digitalRead()
-* An audio circuit with a 3.5mm jack
-  * This will be used to output audio tones using the tone() function.
-  * I would like the tone volume to be software-configurable, however I am not clear what the exact circuit should be.
+* An mono audio circuit with a 3.5mm jack
+  * This will be used to output audio tones using the tone() function. The quality of the audio output is not important, it'll just be used to wake the user up.
+  * I would like the tone volume to be software-configurable. Some of the simpler circuits here look like they should work: https://www.maximintegrated.com/en/app-notes/index.mvp/id/1828
   
 Current State of Prototyping
 ============================
