@@ -36,7 +36,20 @@ Board Components
 * An mono audio circuit with a 3.5mm jack
   * This will be used to output audio tones using the tone() function. The quality of the audio output is not important, it'll just be used to wake the user up.
   * I would like the tone volume to be software-configurable. Some of the simpler circuits here look like they should work: https://www.maximintegrated.com/en/app-notes/index.mvp/id/1828
+  * The board should have small mounting holes on each corner 
   
+Proposed Pin Layout
+===================
+* D0 and D1 are reserved for the I2C bus
+* A0: EMG signal
+* D2: push button 1 (used to interact with software on photon)
+* D3: push button 2 (used to interact with software on photon)
+* D4: 2-position switch (used to interact with software on photon)
+* D5: for MAX5160 INC pin
+* D6: for MAX5160 U/D pin
+* D7: headphone jack insertion detection
+* A1: audio output
+
 Current State of Prototyping
 ============================
 At this stage the prototype only exists in my head, I have not started putting anything on the breadboard yet, and i'm still waiting for my Photon boards. For example, I don't know what pins I will connect the EMG, offline switch and 2 pushbuttons to. The exact pin numbers will depend on what constraints that exist on analog/digital input on the Photon.
