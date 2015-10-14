@@ -6,4 +6,4 @@
 * the MAX6160L circuit you show seems complicated, it looked like there were other choices for mono
 * JTAG: not sure, however the push buttons and RGB LED seem like a must
 * go over P1 integration page: https://docs.particle.io/guide/how-to-build-a-product/pcb-design/
-
+* any choices regarding the regulator ? Or 3.3V regulators are quite standard ?
