@@ -5,3 +5,5 @@
 * on/off switch: yes I need that, to open close the battery circuit
 * the MAX6160L circuit you show seems complicated, it looked like there were other choices for mono
 * JTAG: not sure, however the push buttons and RGB LED seem like a must
+* go over P1 integration page: https://docs.particle.io/guide/how-to-build-a-product/pcb-design/
+
