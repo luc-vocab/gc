@@ -35,6 +35,7 @@ Board Components
   * The value of the switch will be read using digitalRead()
 * An mono audio circuit with a 3.5mm jack
   * This will be used to output audio tones using the tone() function. The quality of the audio output is not important, it'll just be used to wake the user up.
+* A piezo buzzer. This will be used to acknowledge button presses when the user is not wearing headphones. Having the audio feedback is important because the device will be worn on the side of the head, and used in the dark (night time), so the only form of feedback that would work is audio.
   * I would like the tone volume to be software-configurable. Some of the simpler circuits here look like they should work: https://www.maximintegrated.com/en/app-notes/index.mvp/id/1828
   * The board should have small mounting holes on each corner 
   
@@ -49,6 +50,7 @@ Proposed Pin Layout
 * D6: for MAX5160 U/D pin
 * D7: headphone jack insertion detection
 * A1: audio output
+* A2: piezo buzzer
 
 Current State of Prototyping
 ============================
