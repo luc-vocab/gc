@@ -50,7 +50,7 @@ Proposed Pin Layout
 * D6: for MAX5160 U/D pin
 * D7: headphone jack insertion detection
 * A1: audio output
-* A2: piezo buzzer
+* A4: piezo buzzer
 
 Current State of Prototyping
 ============================
