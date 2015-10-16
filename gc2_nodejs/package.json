@@ -1,0 +1,27 @@
+{
+  "name": "gc2_server",
+  "version": "0.0.1",
+  "description": "Realtime server for communication with the grind control 2 device",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucwastiaux/gc"
+  },
+  "keywords": [
+    "grind",
+    "control",
+    "iot",
+    "device"
+  ],
+  "author": "luc wastiaux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucwastiaux/gc/issues"
+  },
+  "dependencies": {
+    "influx": "^4.0.1"
+  }
+}
