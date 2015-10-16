@@ -22,6 +22,6 @@
     "url": "https://github.com/lucwastiaux/gc/issues"
   },
   "dependencies": {
-    "influx": "^4.0.1"
+    "influent": "^0.4.2"
   }
 }
