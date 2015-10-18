@@ -22,28 +22,27 @@ function GcClient(socket) {
     var self = this;
     
     this.socket.on('data', function(data){
-        self.log("received data");
+        self.log("received data, length: " + data.length);
     
         if(self.state == CONNECTION_STATES.CONNECTED) {
             // console.log("received data");
             var device_id = data.readInt32BE(0);
             var protocol_version = data.readInt32BE(4);
-            self.log("device_id: ", device_id, " protocol_version: ", protocol_version);
+            self.log("device_id: " + device_id + " protocol_version: " + protocol_version);
             
             var mode = data.readInt32BE(8);
             
             if( mode == MODE.REALTIME ) {
-                this.state = CONNECTION_STATES.READY_REALTIME;
+                self.state = CONNECTION_STATES.READY_REALTIME;
                 self.log("realtime mode");
             } else if ( mode == MODE.DATALOGGING ) {
-                this.state == CONNECTION_STATES.READY_DATALOGGING
+                self.state == CONNECTION_STATES.READY_DATALOGGING
                 self.log("datalogging mode");
             }
            
         } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
-            
-            
-            
+            var value = data.readInt32BE(0);
+            self.log("received value " + value);
         }
     });
     
