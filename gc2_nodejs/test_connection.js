@@ -1,21 +1,11 @@
-// require('es6-promise').polyfill();
 var influent = require('influent');
- 
-console.log("starting up");
+var influx_config = require('./influx_config.js');
+
+
+console.log("connecting to: ", influx_config.config);
  
 influent
-    .createClient({
-        username: "dev",
-        password: "dev",
-        database: "test_gc_data",
-        server: [
-            {
-                protocol: "https",
-                host:     "eightyeight-misterfusion-55.c.influxdb.com",
-                port:     8086
-            }
-        ]
-    })
+    .createClient(influx_config.config)
     .then(function(client) {
         console.log("client created");
         
