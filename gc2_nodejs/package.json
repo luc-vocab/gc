@@ -22,6 +22,8 @@
     "url": "https://github.com/lucwastiaux/gc/issues"
   },
   "dependencies": {
-    "influent": "^0.4.2"
+    "es6-promise": "^3.0.2",
+    "fast-csv": "^0.6.0",
+    "influent": "^0.4.2",
   }
 }
