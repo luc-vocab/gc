@@ -6,13 +6,45 @@
     .controller('RealtimeController', RealtimeController);
 
   /** @ngInject */
-  function RealtimeController($timeout, $log, $rootScope, PubNub) {
+  function RealtimeController($timeout, $log, $scope, $rootScope, PubNub) {
     var vm = this;
 
     
     vm.channel = "sleep-track-data-luc";
     
     init();
+    
+    vm.emg_plot_values = [40, 100, 30];
+    
+    vm.chartConfig = {
+        options: {
+            chart: {
+                type: 'column'
+            },
+        },
+        series: [{
+            data: vm.emg_plot_values
+        }],        
+        title: {
+            text: 'EMG Value'
+        }        
+    };
+    
+    function add_value(emg_value) {
+        $log.info("adding value: ", emg_value);
+
+        vm.chartConfig.series[0].data.push(emg_value);     
+        if( vm.chartConfig.series[0].data.length > 20 ) {
+            vm.chartConfig.series[0].data.splice(0, 1);
+        }
+        
+        
+        /*
+        var data = vm.chartConfig.series[0].data;
+        vm.chartConfig.series[0].data = data.concat([emg_value]);
+        */
+        $scope.$apply();
+    }
     
     function init() {
         $log.info("RealTimeController init");
@@ -33,6 +65,7 @@
     $rootScope.$on(PubNub.ngMsgEv(vm.channel), function(event, payload) {
         // payload contains message, channel, env...
         $log.info("payload: ", payload.message);
+        add_value(payload.message.emg_value);
     })    
     
   }
