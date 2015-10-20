@@ -1,6 +1,6 @@
 {
-  "name": "gc2Website",
-  "version": "0.0.0",
+  "name": "gc2website",
+  "version": "0.0.1",
   "dependencies": {
     "angular-cookies": "~1.4.2",
     "angular-touch": "~1.4.2",

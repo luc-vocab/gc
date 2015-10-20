@@ -13,7 +13,14 @@
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
-      });
+      })
+      .state('realtime', {
+        url: '/realtime',
+        templateUrl: 'app/realtime/realtime.html',
+        controller: 'RealtimeController',
+        controllerAs: 'realtime'
+      })      
+      ;
 
     $urlRouterProvider.otherwise('/');
   }
