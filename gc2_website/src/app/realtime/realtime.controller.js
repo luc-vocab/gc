@@ -34,15 +34,10 @@
         $log.info("adding value: ", emg_value);
 
         vm.chartConfig.series[0].data.push(emg_value);     
-        if( vm.chartConfig.series[0].data.length > 20 ) {
+        if( vm.chartConfig.series[0].data.length > 10 ) {
             vm.chartConfig.series[0].data.splice(0, 1);
         }
-        
-        
-        /*
-        var data = vm.chartConfig.series[0].data;
-        vm.chartConfig.series[0].data = data.concat([emg_value]);
-        */
+
         $scope.$apply();
     }
     

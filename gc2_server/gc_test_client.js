@@ -29,6 +29,6 @@ client.connect(7001, '127.0.0.1', function() {
         buffer.writeInt32BE(value, 0);
         client.write(buffer);        
         i++;
-    }, 250);
+    }, 1000);
     
 });
