@@ -1,7 +1,13 @@
 var influent = require('influent');
+var pubnub = require("pubnub");
 var influx_config = require('./influx_config.js');
 var net = require('net');
 
+
+pubnub_client = pubnub({
+    publish_key: "pub-c-879cf9bb-46af-4bf1-8dca-e011ea412cd2",
+    subscribe_key: "sub-c-cba703c8-7b42-11e3-9cac-02ee2ddab7fe"
+});
 
 MODE = {
     REALTIME: 1,
@@ -43,6 +49,10 @@ function GcClient(socket) {
         } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
             var value = data.readInt32BE(0);
             self.log("received value " + value);
+            pubnub_client.publish({
+                channel: "sleep-track-data-luc",
+                message: {"emg_value": value}
+            });
         }
     });
     
