@@ -1,3 +1,10 @@
+2015/10/22
+* low dropout supply vs. SMPS ?
+* payment
+* audio circuit uses different parts, OK
+  * green LED ?
+* 
+
 2015/10/14
 * molex connector for EMG sensor: the one on the kickstarter looks different (http://imgur.com/a/07ak6)
    * Luc to give more details after receiving muscle sensor and cables 
