@@ -1,9 +1,11 @@
 2015/10/22
 * low dropout supply vs. SMPS ?
-* payment
-* audio circuit uses different parts, OK
-  * green LED ?
-* 
+ * Madison suggests going with the low dropout supply as it's the reference implementation
+* The buzzer and headphone outputs should be on separate pins, they will be activated separately
+* On the slide switch, add a resistor between the 3.3V and the slide switch pin to limit current
+* luc to send over datasheet for connector
+  * http://www.mouser.hk/Search/ProductDetail.aspx?R=61900311021virtualkey51110000virtualkey710-61900311021 . 3 pins with 2.54mm pitch
+* EMG connector should be at the bottom of the board as it'll avoid creating a right angle when going to the EMG sensor.
 
 2015/10/14
 * molex connector for EMG sensor: the one on the kickstarter looks different (http://imgur.com/a/07ak6)
