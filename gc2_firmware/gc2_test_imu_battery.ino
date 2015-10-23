@@ -82,7 +82,7 @@ void loop()
 	Serial.println(" %");
 	Serial.println();
 
-	Particle.publish("battery_stats", String(soc) + "_" + String(voltage));
+	// Particle.publish("battery_stats", String(soc) + "_" + String(voltage));
 
 	delay(3000);
 }
