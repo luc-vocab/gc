@@ -6,7 +6,7 @@ Diagrams
 ========
 How the device will be worn on the head. A couple of notes:
 * The PCB will be enclosed in a custom case and placed inside a sleeve which will be stiched to the headband.
-* The left and right side of the PCB will be accessible, but not the top and bottom, so connectors can only be on the left or right.
+* The left and right side of the PCB will be accessible, as well as the center bottom, to plug-in the cable going to the EMG/muscle sensor.
 ![Head Diagram](https://raw.githubusercontent.com/lucwastiaux/gc/dev/gc2_specs/head_diagram.jpg)
 
 What the PCB should look like:
