@@ -68,7 +68,7 @@ LSM9DS1 imu;
 ////////////////////////////
 #define PRINT_CALCULATED
 //#define PRINT_RAW
-#define PRINT_SPEED 250 // 250 ms between prints
+#define PRINT_SPEED 500 // 250 ms between prints
 
 // Earth's magnetic field varies by location. Add or subtract
 // a declination to get a more accurate heading. Calculate
@@ -79,7 +79,7 @@ LSM9DS1 imu;
 void setup()
 {
 
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   // Before initializing the IMU, there are a few settings
   // we may need to adjust. Use the settings struct to set
@@ -103,7 +103,27 @@ void setup()
   }
 }
 
+void loop()
+{
+  /*
+  printGyro();  // Print "G: gx, gy, gz"
+  printAccel(); // Print "A: ax, ay, az"
+  printMag();   // Print "M: mx, my, mz"
+  */
 
+  // Print the heading and orientation for fun!
+  // Call print attitude. The LSM9DS1's magnetometer x and y
+  // axes are opposite to the accelerometer, so my and mx are
+  // substituted for each other.
+  /*
+  printAttitude(imu.ax, imu.ay, imu.az, -imu.my, -imu.mx, imu.mz);
+  */
+  Serial.println();
+
+  delay(PRINT_SPEED);
+}
+
+/*
 void printGyro()
 {
   // To read from the gyroscope, you must first call the
@@ -226,19 +246,4 @@ float ax, float ay, float az, float mx, float my, float mz)
   Serial.println(roll, 2);
   Serial.print("Heading: "); Serial.println(heading, 2);
 }
-
-void loop()
-{
-  printGyro();  // Print "G: gx, gy, gz"
-  printAccel(); // Print "A: ax, ay, az"
-  printMag();   // Print "M: mx, my, mz"
-
-  // Print the heading and orientation for fun!
-  // Call print attitude. The LSM9DS1's magnetometer x and y
-  // axes are opposite to the accelerometer, so my and mx are
-  // substituted for each other.
-  printAttitude(imu.ax, imu.ay, imu.az, -imu.my, -imu.mx, imu.mz);
-  Serial.println();
-
-  delay(PRINT_SPEED);
-}
+*/
