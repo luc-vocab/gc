@@ -47,12 +47,31 @@ function GcClient(socket) {
             }
            
         } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
-            var value = data.readInt32BE(0);
-            self.log("received value " + value);
+        
+            // read long value containing timestamp
+            var timestamp = data.readUInt32LE(0);
+            // read EMG value
+            var emg_value = data.readUInt16LE(4);
+            
+            // read gyro max
+            var gyro_max = data.readFloatLE(6);
+            // read accel values
+            var accel_x = data.readFloatLE(10);
+            var accel_y = data.readFloatLE(14);
+            var accel_z = data.readFloatLE(18);
+            
+            console.log("timestamp: ", timestamp,
+                        " emg_value: ", emg_value,
+                        " accel_x: ", accel_x,
+                        " accel_y: ", accel_y,
+                        " accel_z: ", accel_z);
+        
+            /*
             pubnub_client.publish({
                 channel: "sleep-track-data-luc",
                 message: {"emg_value": value}
             });
+            */
         }
     });
     
