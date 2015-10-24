@@ -10,6 +10,7 @@ double battery_soc = 0;
 bool serial_debug = true;
 
 TCPClient gc_client;
+int program_startup_time;
 
 char send_buffer[500];
 
@@ -20,6 +21,10 @@ int gc_server_send_data(String command);
 int gc_server_send_data_point(String command);
 
 void setup() {
+  program_startup_time = Time.now();
+
+  pinMode(A0, INPUT);
+
   Particle.function("gc_conn", gc_server_connect);
   Particle.function("gc_disc", gc_server_disconnect);
   Particle.function("gc_send_1", gc_server_send_data);
@@ -58,13 +63,25 @@ int gc_server_disconnect(String command) {
   return 0;
 }
 
-void write_int_to_buffer(char *buffer, int number, int offset) {
+void write_int_to_buffer(char *buffer, int number, int *offset) {
   for (int i = 0; i < 4; i++)
-      buffer[3 - i + offset] = (number >> (i * 8));
+      buffer[3 - i + *offset] = (number >> (i * 8));
+  *offset += sizeof(number);
 }
 
-void write_float_to_buffer(char *buffer, float number, int offset) {
+void write_float_to_buffer(char *buffer, float number, int *offset) {
   memcpy(buffer, &number, sizeof(number));
+  *offset += sizeof(number);
+}
+
+void write_int16_to_buffer(char *buffer, uint16_t number, int *offset) {
+  memcpy(buffer, &number, sizeof(number));
+  *offset += sizeof(number);
+}
+
+void write_long_to_buffer(char *buffer, unsigned long number, int *offset) {
+  memcpy(buffer, &number, sizeof(number));
+  *offset += sizeof(number);
 }
 
 int gc_server_send_data(String command) {
@@ -72,31 +89,69 @@ int gc_server_send_data(String command) {
       Serial.println("gc_server_send_data");
   }
 
+  int offset = 0;
+
   // write device id
-  write_int_to_buffer(send_buffer, 42, 0);
+  write_int_to_buffer(send_buffer, 42, &offset);
   // write protocol version
-  write_int_to_buffer(send_buffer, 100, 4);
+  write_int_to_buffer(send_buffer, 100, &offset);
   // write realtime mode
-  write_int_to_buffer(send_buffer, 1, 8);
-  gc_client.write((const uint8_t *) send_buffer, 12);
+  write_int_to_buffer(send_buffer, 1, &offset);
+
+  if(serial_debug) {
+      Serial.println("sending data: " + String(offset));
+  }
+
+
+  gc_client.write((const uint8_t *) send_buffer, offset);
   gc_client.flush();
 
   return 0;
 }
+
+void collect_datapoint_append_buffer(int *offset) {
+  // collect a data point of each type and write to the buffer
+
+  // write timestamp
+  unsigned long timestamp = millis() + program_startup_time;
+  write_long_to_buffer(send_buffer, timestamp, offset);
+
+  // get emg value
+  uint16_t emg_value = digitalRead(A0);
+  write_int16_to_buffer(send_buffer, emg_value, offset);
+
+  float gyro_max = 0.0001;
+  float accel_x = 0.001;
+  float accel_y = 0.002;
+  float accel_z = 0.003;
+
+  write_float_to_buffer(send_buffer, gyro_max, offset);
+  write_float_to_buffer(send_buffer, accel_x, offset);
+  write_float_to_buffer(send_buffer, accel_y, offset);
+  write_float_to_buffer(send_buffer, accel_z, offset);
+
+}
+
 
 int gc_server_send_data_point(String command) {
   if(serial_debug) {
       Serial.println("gc_server_send_data_point");
   }
 
-  // write emg value
-  write_float_to_buffer(send_buffer, 0.42, 0);
+  // write data to buffer
+  int offset = 0;
+  collect_datapoint_append_buffer(&offset);
 
-  gc_client.write((const uint8_t *) send_buffer, 4);
+  if(serial_debug) {
+      Serial.println("sending bytes of data: " + String(offset));
+  }
+
+  gc_client.write((const uint8_t *) send_buffer, offset);
   gc_client.flush();
 
   return 0;
 }
+
 
 void loop() {
 
