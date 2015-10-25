@@ -18,6 +18,7 @@ CONNECTION_STATES = {
     CONNECTED: 0,
     READY_REALTIME: 1,
     READY_DATALOGGING: 2,
+    PENDING_DATALOGGING: 3 // some more batch data is expected
 };
 
 function GcClient(socket) {
@@ -28,7 +29,8 @@ function GcClient(socket) {
     var self = this;
     
     this.socket.on('data', function(data){
-        self.log("received data, length: " + data.length);
+        var data_length = data.length;
+        console.log("received data, length: ", data_length, " current state: ", self.state);
     
         if(self.state == CONNECTION_STATES.CONNECTED) {
             // console.log("received data");
@@ -42,43 +44,128 @@ function GcClient(socket) {
                 self.state = CONNECTION_STATES.READY_REALTIME;
                 self.log("realtime mode");
             } else if ( mode == MODE.DATALOGGING ) {
-                self.state == CONNECTION_STATES.READY_DATALOGGING
+                self.state = CONNECTION_STATES.READY_DATALOGGING
                 self.log("datalogging mode");
             }
-           
-        } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
+        
+        } else if (self.state == CONNECTION_STATES.READY_DATALOGGING) {
         
             offset = 0;
-            // read long value containing timestamp
-            var timestamp = data.readUInt32LE(offset); offset += 4;
-            var milliseconds = data.readUInt16LE(offset); offset += 2;
+
+            // read battery charge
+            var charged_percent = data.readUInt16LE(offset); offset += 2;
+            // read number of datapoints
+            var num_datapoints = data.readUInt16LE(offset); offset += 2;
+            // read total buffer size to expect
+            var buffer_size = data.readUInt32LE(offset); offset += 4;
             
-            // read EMG value
-            var emg_value = data.readUInt16LE(offset); ; offset += 2;
+            console.log("datalogging header", new Date(),
+                        "charged_percent:", charged_percent / 100.0,
+                        "num_datapoints:", num_datapoints,
+                        "buffer_size:", buffer_size);
+                        
+            self.expect_buffer_size = buffer_size;
+            self.data_buffer = new Buffer(buffer_size);
+            self.data_buffer_offset = 0;
+            self.num_datapoints = num_datapoints;
+            self.state = CONNECTION_STATES.PENDING_DATALOGGING;
+
+            if( data_length > offset ) {
+                // more data is available than what we read in the buffer
+                data.copy(self.data_buffer, self.data_buffer_offset, offset);
+                self.data_buffer_offset += data_length - offset;
+            }
             
-            // read gyro max
-            var gyro_max = data.readFloatLE(offset); offset += 4;
-            // read accel values
-            var accel_x = data.readFloatLE(offset); offset += 4;
-            var accel_y = data.readFloatLE(offset); offset += 4;
-            var accel_z = data.readFloatLE(offset); offset += 4;
+            /*
+            var packet_size = 0;
+            var continue_reading = true;
             
+            while(continue_reading) {
+                var offset_before = offset;
+                offset = self.read_data_packet(data, offset);
+                packet_size = offset - offset_before;
+                
+                i++;
+                // have we read everything
+                if( i == num_datapoints ) {
+                    continue_reading = false;
+                }
+                // are we running out of data to read
+                if( offset + packet_size > data_length ) {
+                    // the rest of the data will come later
+                    console.log("pausing reading, offset:", offset, "packet_size:", packet_size, "data_length:", data_length);
+                    self.pending_buffer = new Buffer();
+                    data.copy(self.pending_buffer, 0, offset, data_length);
+                    continue_reading = false;
+                }
+                
+            }
+            */
+            
+        } else if (self.state == CONNECTION_STATES.PENDING_DATALOGGING) {
+        
+            data.copy(self.data_buffer, self.data_buffer_offset);
+            self.data_buffer_offset += data_length;
+            
+            console.log("appended to data_buffer: ", data_length,
+                        "data_buffer_offset:", self.data_buffer_offset);
+            
+            if(self.data_buffer_offset == self.expect_buffer_size) {
+                // received full data size
+                console.log("ready to process buffer");
+                
+                self.process_datalogging_buffer();
+                
+                self.state = CONNECTION_STATES.READY_DATALOGGING;
+            }
+        
+        } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
+            offset = 0;
+            self.read_data_packet(data, offset);
+        }
+    });
+    
+    this.process_datalogging_buffer = function() {
+    
+        var offset = 0;
+        for(var i = 0; i < self.num_datapoints; i++) {
+            offset = self.read_data_packet(self.data_buffer, offset, false);
+        }
+    }
+    
+    this.read_data_packet = function(data, offset, print_data) {
+        var timestamp = data.readUInt32LE(offset); offset += 4;
+        var milliseconds = data.readUInt16LE(offset); offset += 2;
+        
+        // read EMG value
+        var emg_value = data.readUInt16LE(offset); ; offset += 2;
+        
+        // read gyro max
+        var gyro_max = data.readFloatLE(offset); offset += 4;
+        // read accel values
+        var accel_x = data.readFloatLE(offset); offset += 4;
+        var accel_y = data.readFloatLE(offset); offset += 4;
+        var accel_z = data.readFloatLE(offset); offset += 4;
+        
+        if(print_data) {
             console.log("timestamp: ", timestamp,
                         " milliseconds: ", milliseconds,
                         " emg_value: ", emg_value,
                         " gyro_max: ", gyro_max,
                         " accel_x: ", accel_x,
                         " accel_y: ", accel_y,
-                        " accel_z: ", accel_z);
-        
-            /*
-            pubnub_client.publish({
-                channel: "sleep-track-data-luc",
-                message: {"emg_value": value}
-            });
-            */
+                        " accel_z: ", accel_z);    
         }
-    });
+
+        /*
+        pubnub_client.publish({
+            channel: "sleep-track-data-luc",
+            message: {"emg_value": value}
+        });
+        */                    
+                    
+        return offset;
+    };
     
     this.socket.on('close', function(data) {
         console.log("connection closed");
