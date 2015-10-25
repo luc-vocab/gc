@@ -5,9 +5,15 @@
 #include "SparkFunLSM9DS1.h" // include Sparkfun LSM9DS1 library, IMU
 #include "math.h"
 
+LSM9DS1 imu;
+#define LSM9DS1_M	0x1E
+#define LSM9DS1_AG	0x6B
+
+
 double battery_voltage = 0;
 double battery_soc = 0;
 bool serial_debug = true;
+bool realtime_send = false;
 
 TCPClient gc_client;
 
@@ -17,20 +23,32 @@ char send_buffer[500];
 int gc_server_connect(String command);
 int gc_server_disconnect(String command);
 int gc_server_send_data(String command);
-int gc_server_send_data_point(String command);
+int enable_realtime_send(String command);
 
 void setup() {
   pinMode(A0, INPUT);
 
-  Particle.function("gc_conn", gc_server_connect);
-  Particle.function("gc_disc", gc_server_disconnect);
-  Particle.function("gc_send_1", gc_server_send_data);
-  Particle.function("gc_send_2", gc_server_send_data_point);
-
-
   if (serial_debug) {
     Serial.begin(9600);
   }
+
+
+  // IMU setup
+  imu.settings.device.commInterface = IMU_MODE_I2C;
+  imu.settings.device.mAddress = LSM9DS1_M;
+  imu.settings.device.agAddress = LSM9DS1_AG;
+
+  if (!imu.begin())
+  {
+    Serial.println("Failed to communicate with LSM9DS1.");
+  }
+
+
+  Particle.function("gc_conn", gc_server_connect);
+  Particle.function("gc_disc", gc_server_disconnect);
+  Particle.function("gc_send_1", gc_server_send_data);
+  Particle.function("realtime", enable_realtime_send);
+
 
   // setup battery gauge
   lipo.begin();
@@ -112,6 +130,23 @@ int gc_server_send_data(String command) {
   return 0;
 }
 
+float get_gyro_max() {
+  // retrieve the highest gyro rate on 3 axes
+  imu.readGyro();
+  float gyro_x = imu.calcGyro(imu.gx);
+  float gyro_y = imu.calcGyro(imu.gy);
+  float gyro_z = imu.calcGyro(imu.gz);
+
+  return max(max(gyro_x, gyro_y), gyro_z);
+}
+
+void get_accel(float *accel_values) {
+  imu.readAccel();
+  accel_values[0] = imu.calcAccel(imu.ax);
+  accel_values[1] = imu.calcAccel(imu.ay);
+  accel_values[2] = imu.calcAccel(imu.az);
+}
+
 void collect_datapoint_append_buffer(int *offset) {
   // collect a data point of each type and write to the buffer
 
@@ -125,10 +160,13 @@ void collect_datapoint_append_buffer(int *offset) {
   uint16_t emg_value = analogRead(A0);
   write_int16_to_buffer(send_buffer, emg_value, offset);
 
-  float gyro_max = 0.0001;
-  float accel_x = 0.001;
-  float accel_y = 0.002;
-  float accel_z = 0.003;
+  float gyro_max = get_gyro_max();
+  float accel_values[3];
+  get_accel(accel_values);
+
+  float accel_x = accel_values[0];
+  float accel_y = accel_values[1];
+  float accel_z = accel_values[2];
 
   write_float_to_buffer(send_buffer, gyro_max, offset);
   write_float_to_buffer(send_buffer, accel_x, offset);
@@ -137,8 +175,18 @@ void collect_datapoint_append_buffer(int *offset) {
 
 }
 
+int enable_realtime_send(String command) {
+  if(command == "0") {
+    realtime_send = false;
+  } else {
+    realtime_send = true;
+  }
 
-int gc_server_send_data_point(String command) {
+  return 0;
+}
+
+
+int gc_server_send_data_point() {
   if(serial_debug) {
       Serial.println("gc_server_send_data_point");
   }
@@ -159,6 +207,10 @@ int gc_server_send_data_point(String command) {
 
 
 void loop() {
+
+  if(realtime_send) {
+    gc_server_send_data_point();
+  }
 
   /*
   battery_voltage = lipo.getVoltage();
