@@ -32,11 +32,11 @@ function GcClient(socket) {
     
         if(self.state == CONNECTION_STATES.CONNECTED) {
             // console.log("received data");
-            var device_id = data.readInt32BE(0);
-            var protocol_version = data.readInt32BE(4);
+            var device_id = data.readUInt32LE(0);
+            var protocol_version = data.readUInt32LE(4);
             self.log("device_id: " + device_id + " protocol_version: " + protocol_version);
             
-            var mode = data.readInt32BE(8);
+            var mode = data.readUInt32LE(8);
             
             if( mode == MODE.REALTIME ) {
                 self.state = CONNECTION_STATES.READY_REALTIME;
@@ -48,20 +48,25 @@ function GcClient(socket) {
            
         } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
         
+            offset = 0;
             // read long value containing timestamp
-            var timestamp = data.readUInt32LE(0);
+            var timestamp = data.readUInt32LE(offset); offset += 4;
+            var milliseconds = data.readUInt16LE(offset); offset += 2;
+            
             // read EMG value
-            var emg_value = data.readUInt16LE(4);
+            var emg_value = data.readUInt16LE(offset); ; offset += 2;
             
             // read gyro max
-            var gyro_max = data.readFloatLE(6);
+            var gyro_max = data.readFloatLE(offset); offset += 4;
             // read accel values
-            var accel_x = data.readFloatLE(10);
-            var accel_y = data.readFloatLE(14);
-            var accel_z = data.readFloatLE(18);
+            var accel_x = data.readFloatLE(offset); offset += 4;
+            var accel_y = data.readFloatLE(offset); offset += 4;
+            var accel_z = data.readFloatLE(offset); offset += 4;
             
             console.log("timestamp: ", timestamp,
+                        " milliseconds: ", milliseconds,
                         " emg_value: ", emg_value,
+                        " gyro_max: ", gyro_max,
                         " accel_x: ", accel_x,
                         " accel_y: ", accel_y,
                         " accel_z: ", accel_z);
