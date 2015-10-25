@@ -19,6 +19,10 @@ bool batch_send = false;
 
 TCPClient gc_client;
 
+#define MANAGE_WIFI false // whether to switch off wifi in batch mode
+
+#define DEBUG_LOG(x) serial_log(x)
+
 #define HANDSHAKE_BUFFER_LENGTH 64
 #define BUFFER_LENGTH 5766
 char handshake_buffer[HANDSHAKE_BUFFER_LENGTH];
@@ -38,6 +42,12 @@ int set_mode(String command);
 
 void reset_batch_buffer();
 
+void serial_log(String message) {
+  if(serial_debug){
+    Serial.println(message);
+  }
+}
+
 void setup() {
   pinMode(A0, INPUT);
 
@@ -53,7 +63,7 @@ void setup() {
 
   if (!imu.begin())
   {
-    Serial.println("Failed to communicate with LSM9DS1.");
+    DEBUG_LOG("Failed to communicate with LSM9DS1.");
   }
 
 
@@ -112,9 +122,7 @@ void write_long_to_buffer(char *buffer, unsigned long number, uint32_t *offset) 
 }
 
 void gc_server_initial_handshake(uint32_t mode) {
-  if(serial_debug) {
-      Serial.println("gc_server_initial_handshake");
-  }
+  DEBUG_LOG("gc_server_initial_handshake");
 
   uint32_t offset = 0;
 
@@ -129,6 +137,8 @@ void gc_server_initial_handshake(uint32_t mode) {
 
   gc_client.write((const uint8_t *) handshake_buffer, offset);
   gc_client.flush();
+
+  DEBUG_LOG("gc_server_initial_handshake done");
 }
 
 int gc_server_send_data(String command) {
@@ -183,21 +193,22 @@ void collect_datapoint_append_buffer(uint32_t *offset) {
 
 int set_mode(String command) {
   if(command == "batch") {
-    if(serial_debug) {
-        Serial.println("enabled batch mode");
-    }
+    DEBUG_LOG("enabled batch mode");
+
     realtime_send = false;
     batch_send = true;
+
+    if(MANAGE_WIFI)
+      WiFi.off();
 
     reset_batch_buffer();
 
   } else if(command == "realtime") {
+    DEBUG_LOG("enabling realtime mode");
     realtime_send = true;
     batch_send = false;
   } else {
-    if(serial_debug) {
-        Serial.println("disabling realtime and batch mode");
-    }
+    DEBUG_LOG("disabling realtime and batch mode");
     realtime_send = false;
     batch_send = false;
   }
@@ -230,15 +241,28 @@ void reset_batch_buffer() {
   num_datapoints = 0;
 }
 
-void gc_server_upload_batch() {
-  if(serial_debug) {
-      Serial.println("gc_server_upload_batch");
+int gc_server_upload_batch() {
+  DEBUG_LOG("gc_server_upload_batch begin");
+
+  if(MANAGE_WIFI)
+    WiFi.on();
+
+  while(! WiFi.ready()) {
+    if(serial_debug) {
+        Serial.println("waiting for wifi to be available");
+    }
+    delay(250);
   }
 
   // connect to GC server
-  gc_client.connect("dev2.photozzap.com", 7001);
+  if( ! gc_client.connect("dev2.photozzap.com", 7001) ) {
+    DEBUG_LOG("TCPClient connection failed");
+    return -1;
+  }
   // indicate that we're uploading a batch
   gc_server_initial_handshake(GC_MODE_BATCH);
+
+  int bytes_written;
 
   // write data header
   uint32_t temp_offset = 0;
@@ -249,22 +273,37 @@ void gc_server_upload_batch() {
   write_int16_to_buffer(handshake_buffer, num_datapoints, &temp_offset);
   // indicate total buffer size
   write_int_to_buffer(handshake_buffer, current_offset, &temp_offset);
-  gc_client.write((const uint8_t *) handshake_buffer, temp_offset);
+  bytes_written = gc_client.write((const uint8_t *) handshake_buffer, temp_offset);
+  if(bytes_written != temp_offset) {
+    DEBUG_LOG("didn't write expected number of bytes");
+  }
   gc_client.flush();
 
 
 
   // send full data buffer
-  gc_client.write((const uint8_t *) send_buffer, current_offset);
+  bytes_written = gc_client.write((const uint8_t *) send_buffer, current_offset);
+  if(bytes_written != current_offset) {
+    DEBUG_LOG("didn't write expected number of bytes");
+  }
   gc_client.flush();
 
   reset_batch_buffer();
 
+  // wait for server to send us final byte, indicating data has been received
+  while( gc_client.read() == -1 ) {
+    delay(100);
+    DEBUG_LOG("waiting for final byte sent by server");
+  }
+
+
   // disconnect from GC server
   gc_client.stop();
 
+  if(MANAGE_WIFI)
+    WiFi.off();
 
-
+  DEBUG_LOG("gc_server_upload_batch end");
 }
 
 
