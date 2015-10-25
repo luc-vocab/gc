@@ -68,7 +68,7 @@ LSM9DS1 imu;
 ////////////////////////////
 #define PRINT_CALCULATED
 //#define PRINT_RAW
-#define PRINT_SPEED 250 // 250 ms between prints
+#define PRINT_SPEED 250 // 100 ms between prints
 
 // Earth's magnetic field varies by location. Add or subtract
 // a declination to get a more accurate heading. Calculate
@@ -203,11 +203,16 @@ float ax, float ay, float az, float mx, float my, float mz)
   float roll = atan2(ay, az);
   float pitch = atan2(-ax, sqrt(ay * ay + az * az));
 
+  // select inputs into heading formula
+  float input_mx = mx;
+  float input_my = my;
+  float input_mz = mz;
+
   float heading;
-  if (my == 0)
-    heading = (mx < 0) ? 180.0 : 0;
+  if (input_my == 0)
+    heading = (input_mx < 0) ? 180.0 : 0;
   else
-    heading = atan2(mx, my);
+    heading = atan2(input_mx, input_my);
 
   heading -= DECLINATION * M_PI / 180;
 
