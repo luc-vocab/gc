@@ -10,7 +10,6 @@ double battery_soc = 0;
 bool serial_debug = true;
 
 TCPClient gc_client;
-int program_startup_time;
 
 char send_buffer[500];
 
@@ -21,8 +20,6 @@ int gc_server_send_data(String command);
 int gc_server_send_data_point(String command);
 
 void setup() {
-  program_startup_time = Time.now();
-
   pinMode(A0, INPUT);
 
   Particle.function("gc_conn", gc_server_connect);
@@ -64,23 +61,26 @@ int gc_server_disconnect(String command) {
 }
 
 void write_int_to_buffer(char *buffer, int number, int *offset) {
+  /*
   for (int i = 0; i < 4; i++)
       buffer[3 - i + *offset] = (number >> (i * 8));
+  */
+  memcpy(buffer + *offset, &number, sizeof(number));
   *offset += sizeof(number);
 }
 
 void write_float_to_buffer(char *buffer, float number, int *offset) {
-  memcpy(buffer, &number, sizeof(number));
+  memcpy(buffer + *offset, &number, sizeof(number));
   *offset += sizeof(number);
 }
 
 void write_int16_to_buffer(char *buffer, uint16_t number, int *offset) {
-  memcpy(buffer, &number, sizeof(number));
+  memcpy(buffer + *offset, &number, sizeof(number));
   *offset += sizeof(number);
 }
 
 void write_long_to_buffer(char *buffer, unsigned long number, int *offset) {
-  memcpy(buffer, &number, sizeof(number));
+  memcpy(buffer + *offset, &number, sizeof(number));
   *offset += sizeof(number);
 }
 
@@ -92,11 +92,14 @@ int gc_server_send_data(String command) {
   int offset = 0;
 
   // write device id
-  write_int_to_buffer(send_buffer, 42, &offset);
+  uint32_t device_id = 42;
+  write_int_to_buffer(send_buffer, device_id, &offset);
   // write protocol version
-  write_int_to_buffer(send_buffer, 100, &offset);
+  uint32_t protocol_version = 100;
+  write_int_to_buffer(send_buffer, protocol_version, &offset);
   // write realtime mode
-  write_int_to_buffer(send_buffer, 1, &offset);
+  uint32_t mode = 1;
+  write_int_to_buffer(send_buffer, mode, &offset);
 
   if(serial_debug) {
       Serial.println("sending data: " + String(offset));
@@ -112,12 +115,14 @@ int gc_server_send_data(String command) {
 void collect_datapoint_append_buffer(int *offset) {
   // collect a data point of each type and write to the buffer
 
-  // write timestamp
-  unsigned long timestamp = millis() + program_startup_time;
-  write_long_to_buffer(send_buffer, timestamp, offset);
+  // write timestamp in two parts, program startup time and millis
+  uint32_t timestamp = Time.now();
+  write_int_to_buffer(send_buffer, timestamp, offset);
+  uint16_t milliseconds = millis() % 1000;
+  write_int16_to_buffer(send_buffer, milliseconds, offset);
 
   // get emg value
-  uint16_t emg_value = digitalRead(A0);
+  uint16_t emg_value = analogRead(A0);
   write_int16_to_buffer(send_buffer, emg_value, offset);
 
   float gyro_max = 0.0001;
