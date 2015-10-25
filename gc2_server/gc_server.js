@@ -76,32 +76,6 @@ function GcClient(socket) {
                 self.data_buffer_offset += data_length - offset;
             }
             
-            /*
-            var packet_size = 0;
-            var continue_reading = true;
-            
-            while(continue_reading) {
-                var offset_before = offset;
-                offset = self.read_data_packet(data, offset);
-                packet_size = offset - offset_before;
-                
-                i++;
-                // have we read everything
-                if( i == num_datapoints ) {
-                    continue_reading = false;
-                }
-                // are we running out of data to read
-                if( offset + packet_size > data_length ) {
-                    // the rest of the data will come later
-                    console.log("pausing reading, offset:", offset, "packet_size:", packet_size, "data_length:", data_length);
-                    self.pending_buffer = new Buffer();
-                    data.copy(self.pending_buffer, 0, offset, data_length);
-                    continue_reading = false;
-                }
-                
-            }
-            */
-            
         } else if (self.state == CONNECTION_STATES.PENDING_DATALOGGING) {
         
             data.copy(self.data_buffer, self.data_buffer_offset);
@@ -131,6 +105,12 @@ function GcClient(socket) {
         for(var i = 0; i < self.num_datapoints; i++) {
             offset = self.read_data_packet(self.data_buffer, offset, false);
         }
+        
+        var final_byte = new Buffer(1);
+        final_byte.writeUInt8(1,0);
+        self.socket.write(final_byte);
+        
+        console.log("processed datalogging buffer");
     }
     
     this.read_data_packet = function(data, offset, print_data) {
@@ -169,6 +149,10 @@ function GcClient(socket) {
     
     this.socket.on('close', function(data) {
         console.log("connection closed");
+    });
+    
+    this.socket.on('error', function(error) {
+        console.log("error:", error);
     });
     
     this.log = function(log_entry) {
