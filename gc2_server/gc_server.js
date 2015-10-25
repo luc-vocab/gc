@@ -64,7 +64,7 @@ function GcClient(socket) {
                         "num_datapoints:", num_datapoints,
                         "buffer_size:", buffer_size);
                         
-            self.expect_buffer_size = buffer_size;
+            self.expect_buffer_size = buffer_size - offset;
             self.data_buffer = new Buffer(buffer_size);
             self.data_buffer_offset = 0;
             self.num_datapoints = num_datapoints;
