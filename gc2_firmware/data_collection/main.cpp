@@ -26,8 +26,8 @@ int gc_server_disconnect(String command);
 int set_mode(String command);
 int device_util(String command);
 
-void serial_log(String message) {
-  Serial.println(message);
+void serial_log(const char *func, int line, String message) {
+  Serial.printlnf("%s:%d %s", func, line, message.c_str());
 }
 
 

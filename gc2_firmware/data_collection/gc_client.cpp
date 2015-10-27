@@ -34,6 +34,10 @@ void GcClient::set_mode(uint16_t mode) {
   if(mode == GC_MODE_BATCH) {
     // clear buffer
     reset_data_buffer();
+    if(MANAGE_WIFI) {
+      DEBUG_LOG("turning off wifi");
+      WiFi.off();
+    }
   }
 }
 
@@ -66,8 +70,10 @@ int GcClient::upload_batch_iteration() {
   int i;
 
   // turn on WiFi
-  if(MANAGE_WIFI)
+  if(MANAGE_WIFI) {
+    DEBUG_LOG("enabling wifi");
     WiFi.on();
+  }
   // wait for wifi to be available
   if(!waitFor(WiFi.ready, WIFI_MAX_WAIT)) {
     return ERROR_WIFI_UNAVAILABLE;
@@ -88,8 +94,10 @@ int GcClient::upload_batch_iteration() {
   }
 
   // turn off wifi
-  if(MANAGE_WIFI)
+  if(MANAGE_WIFI) {
+      DEBUG_LOG("disabling wifi");
       WiFi.off();
+  }
 
   return 0;
 }

@@ -12,10 +12,12 @@
 #define GC_BUFFER_LENGTH 64
 #define HANDSHAKE_BUFFER_LENGTH 64
 #define BUFFER_HEADER_LENGTH 8
-#define DATA_BUFFER_LENGTH 5768
+
+//#define DATA_BUFFER_LENGTH 5768 // 1mn of data
+#define DATA_BUFFER_LENGTH 28808 // 5mn of data
 #define CHUNK_SIZE 1024
 
-#define MANAGE_WIFI false // whether to switch off wifi in batch mode
+#define MANAGE_WIFI true // whether to switch off wifi in batch mode
 
 #define WIFI_MAX_WAIT 5000
 #define RETRY_DELAY 250
