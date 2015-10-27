@@ -63,11 +63,11 @@ void GcClient::upload_batch() {
     m_abandon_count++;
     reset_data_buffer();
   }
-
 }
 
 int GcClient::upload_batch_iteration() {
   int i;
+  int rv;
 
   // turn on WiFi
   if(MANAGE_WIFI) {
@@ -80,17 +80,10 @@ int GcClient::upload_batch_iteration() {
   }
 
   // try calling connect_and_transfer_batch up to 3 times
-  i = 4;
-  while(connect_and_transfer_batch() != SUCCESS_RETURN && i > 0) {
-    DEBUG_LOG("FAILED connect_and_transfer_batch(), retrying " + String(i));
-    delay(RETRY_DELAY);
-    i--;
-  }
-  if(i == 0) {
-    // failed all retries
-    DEBUG_LOG("failed all retries of connect_and_transfer_batch");
-    m_error_count++;
-    return ERROR_FAILED_RETRIES;
+  rv = connect_and_transfer_batch();
+  if (rv != SUCCESS_RETURN) {
+    DEBUG_LOG("FAILED connect_and_transfer_batch");
+    return rv;
   }
 
   // turn off wifi
@@ -106,19 +99,22 @@ int GcClient::connect_and_transfer_batch() {
   int i;
   int rv;
 
-  DEBUG_LOG("GcClient::connect_and_transfer_batch begin");
+  DEBUG_LOG("begin");
 
-  i = 3;
-  while(! GcClient::connect() && i > 0) {
-    delay(RETRY_DELAY);
-    i--;
+  rv = GcClient::connect();
+  if( !rv ) {
+    DEBUG_LOG("ERROR: TCP connection failed");
+    return ERROR_TCP_CONNECTION_FAILED;
   }
+
   if( ! m_tcp_client.status() ) {
+    DEBUG_LOG("ERROR: not connected");
     return ERROR_TCP_CONNECTION_FAILED;
   }
 
   rv = initial_handshake(GC_MODE_BATCH);
   if(rv == -1) {
+    DEBUG_LOG("ERROR: initial handshake failed");
     return ERROR_TCP_WRITE_FAILED;
   }
 
@@ -133,7 +129,7 @@ int GcClient::connect_and_transfer_batch() {
   write_int_to_buffer(m_data_buffer, m_data_buffer_offset, &temp_offset);
 
   size_t written_so_far = 0;
-  size_t bytes_written;
+  int bytes_written;
   size_t need_to_write;
   size_t message_size;
   while(written_so_far < m_data_buffer_offset) {
@@ -145,8 +141,8 @@ int GcClient::connect_and_transfer_batch() {
       return ERROR_TCP_WRITE_FAILED;
     }
     written_so_far += bytes_written;
+    delay(CHUNK_DELAY);
   }
-  m_tcp_client.flush();
 
   i = 6;
   while( m_tcp_client.read() == -1 && i > 0) {
@@ -155,7 +151,7 @@ int GcClient::connect_and_transfer_batch() {
     i--;
   }
   if(i == 0) {
-    DEBUG_LOG("didn't receive final byte confirmation");
+    DEBUG_LOG("ERROR: didn't receive final byte confirmation");
     return ERROR_NO_FINAL_CONFIRMATION;
   }
 
@@ -163,7 +159,7 @@ int GcClient::connect_and_transfer_batch() {
 
   reset_data_buffer();
 
-  DEBUG_LOG("GcClient::connect_and_transfer_batch end");
+  DEBUG_LOG("end");
 
   return SUCCESS_RETURN;
 }
