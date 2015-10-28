@@ -54,6 +54,7 @@ void GcClient::upload_batch() {
   i = BATCH_NUM_RETRIES;
   while(upload_batch_iteration() != SUCCESS_RETURN && i > 0) {
     DEBUG_LOG("FAILED upload_batch_iteration(), retrying " + String(i));
+    m_error_count++;
     delay(RETRY_DELAY);
     i--;
   }
@@ -63,6 +64,8 @@ void GcClient::upload_batch() {
     m_abandon_count++;
     reset_data_buffer();
   }
+
+  DEBUG_LOG(String::format("errors: %d abandonned: %d", m_error_count, m_abandon_count));
 }
 
 int GcClient::upload_batch_iteration() {
@@ -144,7 +147,7 @@ int GcClient::connect_and_transfer_batch() {
     delay(CHUNK_DELAY);
   }
 
-  i = 6;
+  i = 8;
   while( m_tcp_client.read() == -1 && i > 0) {
     delay(RETRY_DELAY);
     DEBUG_LOG("waiting for final byte sent by server");

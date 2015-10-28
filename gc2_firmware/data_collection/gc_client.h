@@ -17,7 +17,7 @@
 //#define DATA_BUFFER_LENGTH 5768 // 1mn of data
 #define DATA_BUFFER_LENGTH 28808 // 5mn of data
 #define CHUNK_SIZE 1024
-#define CHUNK_DELAY 30 // amount of time to wait between chunks
+#define CHUNK_DELAY 50 // amount of time to wait between chunks
 
 #define MANAGE_WIFI true // whether to switch off wifi in batch mode
 

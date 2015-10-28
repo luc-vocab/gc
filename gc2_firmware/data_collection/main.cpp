@@ -27,7 +27,7 @@ int set_mode(String command);
 int device_util(String command);
 
 void serial_log(const char *func, int line, String message) {
-  Serial.printlnf("%s:%d %s", func, line, message.c_str());
+  Serial.printlnf("%s %s:%d %s", Time.timeStr().c_str(), func, line, message.c_str());
 }
 
 
@@ -41,6 +41,7 @@ int device_util(String command) {
     Serial.begin(9600);
     return 0;
   }
+
 
   return 0;
 }
