@@ -8,6 +8,7 @@ GcClient::GcClient() : m_mode(GC_MODE_STANDBY),
                        m_battery_charge(0),
                        m_error_count(0),
                        m_abandon_count(0),
+                       m_batch_upload_count(0),
                        m_data_size(0),
                        m_num_datapoints(0){
 
@@ -34,17 +35,17 @@ void GcClient::set_mode(uint16_t mode) {
   if(mode == GC_MODE_BATCH) {
     // clear buffer
     reset_data_buffer();
-    if(MANAGE_WIFI) {
-      DEBUG_LOG("turning off wifi");
-      WiFi.off();
-    }
   }
 }
 
 void GcClient::battery_charge(float percent_charged) {
+  DEBUG_LOG("received battery_charge: " + String(percent_charged));
   m_battery_charge = percent_charged;
 }
 
+String GcClient::get_stats() {
+  return "batches: " + String(m_batch_upload_count) + " errors: " + String(m_error_count) + " abandon: " + String(m_abandon_count);
+}
 
 void GcClient::upload_batch() {
   // try calling upload_batch_iteration up to 3 times
@@ -72,27 +73,11 @@ int GcClient::upload_batch_iteration() {
   int i;
   int rv;
 
-  // turn on WiFi
-  if(MANAGE_WIFI) {
-    DEBUG_LOG("enabling wifi");
-    WiFi.on();
-  }
-  // wait for wifi to be available
-  if(!waitFor(WiFi.ready, WIFI_MAX_WAIT)) {
-    return ERROR_WIFI_UNAVAILABLE;
-  }
-
   // try calling connect_and_transfer_batch up to 3 times
   rv = connect_and_transfer_batch();
   if (rv != SUCCESS_RETURN) {
     DEBUG_LOG("FAILED connect_and_transfer_batch");
     return rv;
-  }
-
-  // turn off wifi
-  if(MANAGE_WIFI) {
-      DEBUG_LOG("disabling wifi");
-      WiFi.off();
   }
 
   return 0;
@@ -162,6 +147,8 @@ int GcClient::connect_and_transfer_batch() {
 
   reset_data_buffer();
 
+  m_batch_upload_count++;
+
   DEBUG_LOG("end");
 
   return SUCCESS_RETURN;
@@ -193,17 +180,15 @@ void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, 
     return;
   }
 
-  if(m_mode == GC_MODE_BATCH) {
-    // check whether we have enough room to write datapoint
-    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
-    if(m_data_buffer_offset + m_data_size > DATA_BUFFER_LENGTH) {
-      // we have filled up the buffer
-      DEBUG_LOG("Filled up buffer, offset: " + String(m_data_buffer_offset) +
-                " datapoints: " + String(m_num_datapoints));
-      upload_batch();
-    }
-  }
+  write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
 
+}
+
+bool GcClient::need_upload() {
+  if(m_data_buffer_offset + m_data_size > DATA_BUFFER_LENGTH) {
+    return true;
+  }
+  return false;
 }
 
 void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z) {

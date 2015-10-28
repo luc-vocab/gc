@@ -19,8 +19,6 @@
 #define CHUNK_SIZE 1024
 #define CHUNK_DELAY 50 // amount of time to wait between chunks
 
-#define MANAGE_WIFI true // whether to switch off wifi in batch mode
-
 #define WIFI_MAX_WAIT 5000
 #define RETRY_DELAY 250
 
@@ -47,11 +45,13 @@ public:
   void add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z);
   void battery_charge(float percent_charged);
   void set_mode(uint16_t mode);
-
-private:
-
+  String get_stats();
+  // whether data needs to be uploaded
+  bool need_upload();
   // upload batch when data buffer is full. Will repeat N times
   void upload_batch();
+
+private:
 
   // try to upload batch once
   int upload_batch_iteration();
@@ -105,7 +105,8 @@ private:
   // realtime or batch mode
   uint16_t m_mode;
 
-  // error counters
+  // stats and error counters
+  uint16_t m_batch_upload_count;
   uint16_t m_error_count;
   uint16_t m_abandon_count;
 };

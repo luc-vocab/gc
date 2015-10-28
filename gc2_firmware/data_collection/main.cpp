@@ -13,16 +13,15 @@ LSM9DS1 imu;
 
 GcClient gc_client;
 
-double battery_voltage = 0;
-double battery_soc = 0;
-bool serial_debug = true;
-bool realtime_send = false;
-bool batch_send = false;
+#define MANAGE_WIFI true // whether to switch off wifi in batch mode
+#define DATA_TRANSFER_DELAY 500
+#define COLLECT_DATA_FREQUENCY 250      // 250ms
+#define BATTERY_REPORT_FREQUENCY 300000 // 5mn
+#define STATS_REPORT_FREQUENCY 1800000  // 30mn
 
+bool serial_debug = true;
 
 // declare functions
-int gc_server_connect(String command);
-int gc_server_disconnect(String command);
 int set_mode(String command);
 int device_util(String command);
 
@@ -83,6 +82,10 @@ void setup() {
 int set_mode(String command) {
   if(command == "batch") {
     DEBUG_LOG("enable batch mode");
+    if(MANAGE_WIFI) {
+      DEBUG_LOG("turning off wifi");
+      WiFi.off();
+    }
     gc_client.set_mode(GC_MODE_BATCH);
   } else if (command == "realtime" ) {
     DEBUG_LOG("enable realtime mode");
@@ -94,6 +97,16 @@ int set_mode(String command) {
 
   return 0;
 }
+
+void report_battery_charge() {
+  gc_client.battery_charge(lipo.getSOC());
+}
+
+void report_stats() {
+  DEBUG_LOG("reporting stats");
+  Particle.publish("upload_stats", gc_client.get_stats());
+}
+
 
 float get_gyro_max() {
   // retrieve the highest gyro rate on 3 axes
@@ -123,9 +136,37 @@ void collect_data() {
   float accel_z = accel_values[2];
 
   gc_client.add_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
+
+  if(gc_client.need_upload()){
+    DEBUG_LOG("need to upload batch");
+    // get battery data
+    report_battery_charge();
+
+    // turn on WiFi
+    if(MANAGE_WIFI) {
+      DEBUG_LOG("enabling wifi");
+      WiFi.on();
+    }
+    DEBUG_LOG("wait for wifi to be available");
+    // wait for wifi to be available
+    waitFor(WiFi.ready, WIFI_MAX_WAIT);
+    DEBUG_LOG("wifi available");
+
+    gc_client.upload_batch();
+    // report_stats();
+
+    // delay(DATA_TRANSFER_DELAY);
+
+    // turn off wifi
+    if(MANAGE_WIFI) {
+        DEBUG_LOG("disabling wifi");
+        WiFi.off();
+    }
+
+  }
 }
 
 void loop() {
   collect_data();
-  delay(250);
+  delay(COLLECT_DATA_FREQUENCY);
 }
