@@ -38,6 +38,11 @@ void GcClient::set_mode(uint16_t mode) {
     // clear buffer
     reset_data_buffer();
   }
+
+  if(mode == GC_MODE_REALTIME) {
+    connect();
+    initial_handshake(m_mode);
+  }
 }
 
 void GcClient::battery_charge(float percent_charged) {
@@ -199,7 +204,18 @@ void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, 
     return;
   }
 
-  write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
+  if (m_mode == GC_MODE_BATCH) {
+    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
+  }
+
+  if (m_mode == GC_MODE_REALTIME) {
+    // write at the beginning of the buffer
+    m_data_buffer_offset = 0;
+    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
+    // immediately send
+    m_tcp_client.write((const uint8_t *) m_data_buffer, m_data_buffer_offset);
+  }
+
 
 }
 
