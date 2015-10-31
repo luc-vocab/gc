@@ -10,7 +10,9 @@ GcClient::GcClient() : m_mode(GC_MODE_STANDBY),
                        m_abandon_count(0),
                        m_batch_upload_count(0),
                        m_data_size(0),
-                       m_num_datapoints(0){
+                       m_num_datapoints(0),
+                       m_start_timestamp(0),
+                       m_start_millis(0){
 
 }
 
@@ -110,18 +112,33 @@ int GcClient::connect_and_transfer_batch() {
   size_t temp_offset = 0;
   // write battery charge
   uint16_t percent_charged = m_battery_charge * 100.0;
-  write_int16_to_buffer(m_data_buffer, percent_charged, &temp_offset);
+  write_uint16_to_buffer(m_data_buffer, percent_charged, &temp_offset);
+  // write starting timestamp
+  write_int_to_buffer(m_data_buffer, m_start_timestamp, &temp_offset );
+  // write starting millis
+  write_int_to_buffer(m_data_buffer, m_start_millis, &temp_offset);
+  // write how many batches we've uploaded so far
+  write_uint16_to_buffer(m_data_buffer, m_batch_upload_count, &temp_offset);
+  // write how many errors so far
+  write_uint16_to_buffer(m_data_buffer, m_error_count, &temp_offset);
+  // write how many batches were abandonned so far
+  write_uint16_to_buffer(m_data_buffer, m_abandon_count, &temp_offset);
   // indicate how many datapoints we're sending
-  write_int16_to_buffer(m_data_buffer, m_num_datapoints, &temp_offset);
+  write_uint16_to_buffer(m_data_buffer, m_num_datapoints, &temp_offset);
   // indicate total buffer size
-  write_int_to_buffer(m_data_buffer, m_data_buffer_offset, &temp_offset);
+  write_int_to_buffer(m_data_buffer, m_data_buffer_offset + END_MARKER_LENGTH, &temp_offset);
+  // add starting marker
+  write_uint16_to_buffer(m_data_buffer, UINT16_MARKER_START, &temp_offset);
+  // add ending marker
+  temp_offset = m_data_buffer_offset;
+  write_uint16_to_buffer(m_data_buffer, UINT16_MARKER_END, &temp_offset);
 
   size_t written_so_far = 0;
   int bytes_written;
   size_t need_to_write;
   size_t message_size;
-  while(written_so_far < m_data_buffer_offset) {
-    need_to_write = m_data_buffer_offset - written_so_far;
+  while(written_so_far < m_data_buffer_offset + END_MARKER_LENGTH) {
+    need_to_write = m_data_buffer_offset + END_MARKER_LENGTH - written_so_far;
     message_size = min(need_to_write, CHUNK_SIZE);
     DEBUG_LOG("need_to_write: " + String(need_to_write) + " message_size: " + String(message_size));
     bytes_written = m_tcp_client.write((const uint8_t *) m_data_buffer + written_so_far, min(need_to_write, CHUNK_SIZE));
@@ -131,6 +148,8 @@ int GcClient::connect_and_transfer_batch() {
     written_so_far += bytes_written;
     delay(CHUNK_DELAY);
   }
+
+
 
   i = 8;
   while( m_tcp_client.read() == -1 && i > 0) {
@@ -185,7 +204,7 @@ void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, 
 }
 
 bool GcClient::need_upload() {
-  if(m_data_buffer_offset + m_data_size > DATA_BUFFER_LENGTH) {
+  if(m_data_buffer_offset + m_data_size + END_MARKER_LENGTH > DATA_BUFFER_LENGTH) {
     return true;
   }
   return false;
@@ -197,17 +216,21 @@ void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float accel_x
   size_t *offset = &m_data_buffer_offset;
 
   // write timestamp in two parts, program startup time and millis
-  uint32_t timestamp = Time.now();
-  write_int_to_buffer(m_data_buffer, timestamp, offset);
-  uint16_t milliseconds = millis() % 1000;
-  write_int16_to_buffer(m_data_buffer, milliseconds, offset);
+  uint32_t milliseconds = millis();
+  write_int_to_buffer(m_data_buffer, milliseconds, offset);
 
-  write_int16_to_buffer(m_data_buffer, emg_value, offset);
+  write_uint16_to_buffer(m_data_buffer, emg_value, offset);
 
-  write_float_to_buffer(m_data_buffer, gyro_max, offset);
-  write_float_to_buffer(m_data_buffer, accel_x, offset);
-  write_float_to_buffer(m_data_buffer, accel_y, offset);
-  write_float_to_buffer(m_data_buffer, accel_z, offset);
+  int16_t gyro_value = gyro_max * 100.0;
+  write_int16_to_buffer(m_data_buffer, gyro_value, offset);
+
+  int16_t accel_x_value = accel_x * 10000.0;
+  int16_t accel_y_value = accel_y * 10000.0;
+  int16_t accel_z_value = accel_z * 10000.0;
+
+  write_int16_to_buffer(m_data_buffer, accel_x_value, offset);
+  write_int16_to_buffer(m_data_buffer, accel_y_value, offset);
+  write_int16_to_buffer(m_data_buffer, accel_z_value, offset);
 
   m_data_size = m_data_buffer_offset - original_offset;
 
@@ -222,6 +245,8 @@ void GcClient::reset_data_buffer() {
   DEBUG_LOG("GcClient::reset_data_buffer");
   m_data_buffer_offset = BUFFER_HEADER_LENGTH;
   m_num_datapoints = 0;
+  m_start_timestamp = Time.now();
+  m_start_millis = millis();
 }
 
 // non-member functions
@@ -235,7 +260,12 @@ void write_float_to_buffer(char *buffer, float number, size_t *offset) {
   *offset += sizeof(number);
 }
 
-void write_int16_to_buffer(char *buffer, uint16_t number, size_t *offset) {
+void write_uint16_to_buffer(char *buffer, uint16_t number, size_t *offset) {
+  memcpy(buffer + *offset, &number, sizeof(number));
+  *offset += sizeof(number);
+}
+
+void write_int16_to_buffer(char *buffer, int16_t number, size_t *offset) {
   memcpy(buffer + *offset, &number, sizeof(number));
   *offset += sizeof(number);
 }

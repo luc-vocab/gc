@@ -11,11 +11,15 @@
 
 #define GC_BUFFER_LENGTH 64
 #define HANDSHAKE_BUFFER_LENGTH 64
-#define BUFFER_HEADER_LENGTH 8
+#define BUFFER_HEADER_LENGTH 24
+#define END_MARKER_LENGTH 2
 
-//#define DATA_BUFFER_LENGTH 1448 // 15s of data
-//#define DATA_BUFFER_LENGTH 5768 // 1mn of data
-#define DATA_BUFFER_LENGTH 28808 // 5mn of data
+
+//#define DATA_BUFFER_LENGTH 500 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // a few seconds of data
+#define DATA_BUFFER_LENGTH 1440 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // 15s of data
+//#define DATA_BUFFER_LENGTH 5760 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // 1mn of data
+//#define DATA_BUFFER_LENGTH 28800 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // 5mn of data
+//#define DATA_BUFFER_LENGTH 50000 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // possibly longer
 #define CHUNK_SIZE 1024
 #define CHUNK_DELAY 50 // amount of time to wait between chunks
 
@@ -31,10 +35,14 @@
 #define ERROR_WIFI_UNAVAILABLE -4
 #define ERROR_FAILED_RETRIES -5
 
+#define UINT16_MARKER_START 6713 // after header in batch mode
+#define UINT16_MARKER_END 21826  // after end of data in batch mode
+
 // functions for serializing data
 void write_int_to_buffer(char *buffer, int number, size_t *offset);
 void write_float_to_buffer(char *buffer, float number, size_t *offset);
-void write_int16_to_buffer(char *buffer, uint16_t number, size_t *offset);
+void write_uint16_to_buffer(char *buffer, uint16_t number, size_t *offset);
+void write_int16_to_buffer(char *buffer, int16_t number, size_t *offset);
 void write_long_to_buffer(char *buffer, unsigned long number, size_t *offset);
 
 class GcClient {
@@ -98,6 +106,10 @@ private:
 
   // unique number identifying the device
   uint32_t m_device_id;
+
+  // starting point for collecting the data
+  uint32_t m_start_timestamp;
+  uint32_t m_start_millis;
 
   // percent battery charged
   float m_battery_charge;
