@@ -4,6 +4,8 @@ var influx_config = require('./influx_config.js');
 var net = require('net');
 
 
+
+
 pubnub_client = pubnub({
     publish_key: "pub-c-879cf9bb-46af-4bf1-8dca-e011ea412cd2",
     subscribe_key: "sub-c-cba703c8-7b42-11e3-9cac-02ee2ddab7fe"
@@ -20,6 +22,9 @@ CONNECTION_STATES = {
     READY_DATALOGGING: 2,
     PENDING_DATALOGGING: 3 // some more batch data is expected
 };
+
+UINT16_MARKER_START = 6713;
+UINT16_MARKER_END = 21826;
 
 function GcClient(socket) {
     this.socket = socket;
@@ -54,26 +59,55 @@ function GcClient(socket) {
 
             // read battery charge
             var charged_percent = data.readUInt16LE(offset); offset += 2;
+            
+            // read starting timestamp
+            var starting_timestamp = data.readUInt32LE(offset); offset += 4;
+            // read starting millis
+            var starting_millis = data.readUInt32LE(offset); offset += 4;
+            
+            // read stats about data uploaded
+            var batches_uploaded = data.readUInt16LE(offset); offset += 2;
+            var error_count = data.readUInt16LE(offset); offset += 2;
+            var abandon_count = data.readUInt16LE(offset); offset += 2;
+            
             // read number of datapoints
             var num_datapoints = data.readUInt16LE(offset); offset += 2;
             // read total buffer size to expect
             var buffer_size = data.readUInt32LE(offset); offset += 4;
+            // read starting marker
+            var starting_marker = data.readUInt16LE(offset); offset += 2;
             
-            console.log("datalogging header", new Date(),
-                        "charged_percent:", charged_percent / 100.0,
-                        "num_datapoints:", num_datapoints,
-                        "buffer_size:", buffer_size);
-                        
+            if(starting_marker != UINT16_MARKER_START) {
+                console.log("ERROR starting marker incorrect");
+            }
+
             self.expect_buffer_size = buffer_size - offset;
             self.data_buffer = new Buffer(buffer_size);
             self.data_buffer_offset = 0;
             self.num_datapoints = num_datapoints;
             self.state = CONNECTION_STATES.PENDING_DATALOGGING;
-
-            if( data_length > offset ) {
+            
+            console.log("datalogging header", new Date(),
+                        "charged_percent:", charged_percent / 100.0,
+                        "num_datapoints:", num_datapoints,
+                        "total buffer_size:", buffer_size,
+                        "expect buffer_size:", self.expect_buffer_size);
+            
+            console.log("stats:", "batches: ", batches_uploaded,
+                                  "errors: ", error_count,
+                                  "abandons: ", abandon_count);
+            
+            if( data_length > offset || data_length == buffer_size) {
                 // more data is available than what we read in the buffer
                 data.copy(self.data_buffer, self.data_buffer_offset, offset);
                 self.data_buffer_offset += data_length - offset;
+            } 
+            
+            if (data_length == buffer_size) {
+                // all done
+                console.log("ready to process buffer");
+                self.process_datalogging_buffer();
+                self.state = CONNECTION_STATES.READY_DATALOGGING;                
             }
             
         } else if (self.state == CONNECTION_STATES.PENDING_DATALOGGING) {
@@ -106,6 +140,13 @@ function GcClient(socket) {
             offset = self.read_data_packet(self.data_buffer, offset, false);
         }
         
+        // read end marker
+        var end_marker = self.data_buffer.readUInt16LE(offset); offset += 2;
+        if( end_marker != UINT16_MARKER_END ) {
+            console.log("ERROR invalid end marker");
+        }
+        
+        
         var final_byte = new Buffer(1);
         final_byte.writeUInt8(1,0);
         self.socket.write(final_byte);
@@ -114,18 +155,22 @@ function GcClient(socket) {
     }
     
     this.read_data_packet = function(data, offset, print_data) {
-        var timestamp = data.readUInt32LE(offset); offset += 4;
-        var milliseconds = data.readUInt16LE(offset); offset += 2;
+        var milliseconds = data.readUInt32LE(offset); offset += 4;
         
         // read EMG value
         var emg_value = data.readUInt16LE(offset); ; offset += 2;
         
         // read gyro max
-        var gyro_max = data.readFloatLE(offset); offset += 4;
+        var gyro_max_adj = data.readUInt16LE(offset); offset += 2;
         // read accel values
-        var accel_x = data.readFloatLE(offset); offset += 4;
-        var accel_y = data.readFloatLE(offset); offset += 4;
-        var accel_z = data.readFloatLE(offset); offset += 4;
+        var accel_x_adj = data.readUInt16LE(offset); offset += 2;
+        var accel_y_adj = data.readUInt16LE(offset); offset += 2;
+        var accel_z_adj = data.readUInt16LE(offset); offset += 2;
+        
+        var gyro_max = gyro_max_adj / 100.0;
+        var accel_x = accel_x_adj / 10000.0;
+        var accel_y = accel_y_adj / 10000.0;
+        var accel_z = accel_z_adj / 10000.0;
         
         if(print_data) {
             console.log("timestamp: ", timestamp,
