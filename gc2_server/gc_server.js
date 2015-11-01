@@ -132,7 +132,7 @@ function GcClient(socket) {
         
         } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
             offset = 0;
-            self.read_data_packet(data, offset);
+            self.read_data_packet(data, offset, true, true);
         }
     });
     
@@ -140,7 +140,7 @@ function GcClient(socket) {
     
         var offset = 0;
         for(var i = 0; i < self.num_datapoints; i++) {
-            offset = self.read_data_packet(self.data_buffer, offset, true);
+            offset = self.read_data_packet(self.data_buffer, offset, false, false);
         }
         
         // read end marker
@@ -157,7 +157,7 @@ function GcClient(socket) {
         console.log("processed datalogging buffer");
     }
     
-    this.read_data_packet = function(data, offset, print_data) {
+    this.read_data_packet = function(data, offset, print_data, publish) {
         var milliseconds = data.readUInt32LE(offset); offset += 4;
         
         var diff = milliseconds - self.starting_millis;
@@ -189,12 +189,16 @@ function GcClient(socket) {
                         " accel_z: ", accel_z);    
         }
 
-        /*
-        pubnub_client.publish({
-            channel: "sleep-track-data-luc",
-            message: {"emg_value": value}
-        });
-        */                    
+        if(publish) {
+            pubnub_client.publish({
+                channel: "sleep-track-data-luc",
+                message: {"emg_value": emg_value,
+                          "gyro_max": gyro_max,
+                          "accel_x": accel_x,
+                          "accel_y": accel_y,
+                          "accel_z": accel_z}
+            });
+        }
                     
         return offset;
     };
