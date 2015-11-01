@@ -10,7 +10,121 @@
             
             
         </div>
-        <highchart id="chart1" config="realtime.chartConfig" class="col-md-12"></highchart>
+
+        <div class="col-md-12">
+            <div id="container-emg"></div>
+        </div>
+        
+        <script>
+$(function () {
+
+    var gaugeOptions = {
+
+        chart: {
+            type: 'solidgauge'
+        },
+
+        title: null,
+
+        pane: {
+            center: ['50%', '85%'],
+            size: '140%',
+            startAngle: -90,
+            endAngle: 90,
+            background: {
+                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+                innerRadius: '60%',
+                outerRadius: '100%',
+                shape: 'arc'
+            }
+        },
+
+        tooltip: {
+            enabled: false
+        },
+
+        // the value axis
+        yAxis: {
+            stops: [
+                [0.1, '#55BF3B'], // green
+                [0.5, '#DDDF0D'], // yellow
+                [0.9, '#DF5353'] // red
+            ],
+            lineWidth: 0,
+            minorTickInterval: null,
+            tickPixelInterval: 400,
+            tickWidth: 0,
+            title: {
+                y: 30
+            },
+            labels: {
+                y: 16
+            }
+        },
+
+        plotOptions: {
+            solidgauge: {
+                dataLabels: {
+                    y: 5,
+                    borderWidth: 0,
+                    useHTML: true
+                }
+            }
+        }
+    };
+
+    // The speed gauge
+    $('#container-emg').highcharts(Highcharts.merge(gaugeOptions, {
+        yAxis: {
+            min: 0,
+            max: 4000,
+            title: {
+                text: 'Muscle Activity'
+            }
+        },
+
+        credits: {
+            enabled: false
+        },
+
+        series: [{
+            name: 'Muscle Activity',
+            data: [80],
+            dataLabels: {
+                format: '<div style="text-align:center"><span style="font-size:350%;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>'
+            }
+        }]
+
+    }));
+
+
+    // Bring life to the dials
+    setInterval(function () {
+        // Speed
+        var chart = $('#container-emg').highcharts(),
+            point,
+            newVal,
+            inc;
+
+        if (chart) {
+            point = chart.series[0].points[0];
+            inc = Math.round((Math.random() - 0.5) * 100);
+            newVal = point.y + inc;
+
+            if (newVal < 0 || newVal > 200) {
+                newVal = point.y - inc;
+            }
+
+            point.update(newVal);
+        }
+
+    }, 2000);
+
+
+});        
+        </script>
+        
     </div>
 
 </div>

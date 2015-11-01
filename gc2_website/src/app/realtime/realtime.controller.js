@@ -30,6 +30,55 @@
         }        
     };
     
+    
+    
+    vm.gaugeConfig = {
+
+        chart: {
+            type: 'solidgauge'
+        },
+
+        title: "accel data",
+
+        pane: {
+            center: ['50%', '85%'],
+            size: '140%',
+            startAngle: -90,
+            endAngle: 90,
+            background: {
+                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+                innerRadius: '60%',
+                outerRadius: '100%',
+                shape: 'arc'
+            }
+        },        
+        
+        yAxis: {
+            min: 0,
+            max: 200,
+            title: {
+                text: 'EMG'
+            }
+        },        
+        
+        series: [{
+            name: "EMG",
+            data: [20]
+        }],
+
+        plotOptions: {
+            solidgauge: {
+                dataLabels: {
+                    y: 5,
+                    borderWidth: 0,
+                    useHTML: true
+                }
+            }
+        }        
+        
+    };
+    
+    
     function add_value(emg_value) {
         $log.info("adding value: ", emg_value);
 
