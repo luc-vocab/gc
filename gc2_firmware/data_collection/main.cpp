@@ -13,7 +13,7 @@ LSM9DS1 imu;
 
 GcClient gc_client;
 
-#define MANAGE_WIFI false // whether to switch off wifi in batch mode
+#define MANAGE_WIFI true // whether to switch off wifi in batch mode
 #define DATA_TRANSFER_DELAY 500
 #define COLLECT_DATA_FREQUENCY 250      // 250ms
 
