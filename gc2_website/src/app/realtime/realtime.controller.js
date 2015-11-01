@@ -13,9 +13,6 @@
     vm.channel = "sleep-track-data-luc";
     
    
-    vm.emg_plot_values = [40, 100, 30];
-    
-    
     vm.emgGaugeOptions = {
         chart: {
             type: 'solidgauge'
@@ -43,7 +40,7 @@
         // the value axis
         yAxis: {
             min: 0,
-            max: 200,        
+            max: 2000,        
             stops: [
                 [0.1, '#55BF3B'], // green
                 [0.5, '#DDDF0D'], // yellow
@@ -54,7 +51,7 @@
             tickPixelInterval: 400,
             tickWidth: 0,
             title: {
-                y: -70
+                y: 30
             },
             labels: {
                 y: 16
@@ -76,27 +73,20 @@
             data: [80],
             dataLabels: {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                       '<span style="font-size:12px;color:silver">km/h</span></div>'
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>'
             },
-            tooltip: {
-                valueSuffix: ' km/h'
-            }
         }]        
         
     };
     
-    
-    
-    function add_value(emg_value) {
-        $log.info("adding value: ", emg_value);
+   
+    function update_emg_value(emg_value) {
+        var chart = $('#container-emg').highcharts();
 
-        vm.chartConfig.series[0].data.push(emg_value);     
-        if( vm.chartConfig.series[0].data.length > 10 ) {
-            vm.chartConfig.series[0].data.splice(0, 1);
-        }
-
-        $scope.$apply();
+        if (chart) {
+            var point = chart.series[0].points[0];
+            point.update(emg_value);
+        }        
     }
     
     function init() {
@@ -123,7 +113,7 @@
     $rootScope.$on(PubNub.ngMsgEv(vm.channel), function(event, payload) {
         // payload contains message, channel, env...
         $log.info("payload: ", payload.message);
-        add_value(payload.message.emg_value);
+        update_emg_value(payload.message.emg_value);
     })    
     
     init();
