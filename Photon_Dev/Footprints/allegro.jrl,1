@@ -1,0 +1,35 @@
+\t (00:00:03) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:03)     Journal start - Sun Nov 01 18:08:16 2015
+\t (00:00:03)         Host=MADISON-PC User=Madison Pid=6828 CPUs=4
+\t (00:00:03) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe
+\t (00:00:03) 
+\t (00:00:05) Opening existing design...
+\d (00:00:05) Design opened: C:/Users/Madison/Dropbox/Photon_Dev/Footprints/microUSB.dra
+\i (00:00:05) trapsize 83
+\i (00:00:05) trapsize 81
+\i (00:00:05) trapsize 83
+\i (00:00:05) trapsize 85
+\i (00:00:05) trapsize 85
+\i (00:00:05) generaledit 
+\i (00:00:07) new 
+\i (00:00:14) newdrawfillin "P1.brd" "Board (Wizard)"
+\t (00:00:14) Starting new design...
+\i (00:00:14) trapsize 68
+\i (00:00:14) trapsize 67
+\i (00:00:14) trapsize 68
+\i (00:00:14) trapsize 59
+\i (00:00:14) trapsize 339
+\i (00:00:14) trapsize 339
+\i (00:00:14) layout wizard 
+\i (00:00:14) generaledit 
+\i (00:00:15) setwindow form.brd_wizard
+\i (00:00:15) FORM brd_wizard cancel  
+\t (00:00:15) Starting new design...
+\i (00:00:15) setwindow pcb
+\i (00:00:15) trapsize 339
+\i (00:00:15) trapsize 339
+   (00:00:15) Loading cmds.cxt 
+   (00:00:15) Loading axlcore.cxt 
+\i (00:00:15) generaledit 
+\i (00:00:17) exit 
+\t (00:00:17)     Journal end - Sun Nov 01 18:08:30 2015

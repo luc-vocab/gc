@@ -1,0 +1,16 @@
+\t (00:00:03) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:03)     Journal start - Sun Nov 01 18:08:36 2015
+\t (00:00:03)         Host=MADISON-PC User=Madison Pid=8848 CPUs=4
+\t (00:00:03) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe
+\t (00:00:03) 
+\t (00:00:05) Opening existing design...
+\d (00:00:05) Design opened: C:/Users/Madison/Dropbox/Photon_Dev/Footprints/microUSB.dra
+\i (00:00:05) trapsize 83
+\i (00:00:05) trapsize 81
+\i (00:00:05) trapsize 83
+\i (00:00:05) trapsize 85
+\i (00:00:05) trapsize 85
+\i (00:00:06) generaledit 
+\i (00:00:07) new 
+\i (00:00:51) newdrawfillin "P1.brd" "Board (Wizard)"
+\t (00:00:51)     Journal end - Sun Nov 01 18:09:24 2015

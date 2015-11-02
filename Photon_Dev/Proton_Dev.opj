@@ -1,0 +1,219 @@
+(ExpressProject "Proton_Dev"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\library1.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\proton_dev.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory" "C:\USERS\MADISON\DROPBOX\PHOTON_DEV")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" "allegro\PROTON_DEV.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Output Warnings" "TRUE")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (Netlist_TAB "0"))
+  (Folder "Outputs"
+    (File ".\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (MPSSessionName "Madison")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\proton_dev.dsn")
+      (Path "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1")
+      (Path "Design Resources" ".\proton_dev.dsn" "Design Cache")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library" ".\library1.olb")
+      (Path "Outputs")
+      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1" "IMU"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 480"))
+      (Tab 0))
+    (Doc
+      (Type "COrPartDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 100 1529 100 410")
+        (PackageScroll "0 0")
+        (PackageZoom "1")
+        (PartPackage "Part")
+        (Scroll "1127 206")
+        (Zoom "264"))
+      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\LIBRARY1.OLB")
+      (Package "TPA2005D1DRB"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 50 1636 50 568")
+        (Scroll "546 256")
+        (Zoom "236")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Power Regulation"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 75 1367 75 593")
+        (Scroll "90 532")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Connectors/ Push Buttons"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 200 1786 200 718")
+        (Scroll "-284 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Photon P1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 125 1711 125 643")
+        (Scroll "-196 0")
+        (Zoom "118")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Audio"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 25 1454 25 335")
+        (Scroll "-118 24")
+        (Zoom "118")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "IMU")))
+  (PartMRUSelector
+    ("SW KEY-SPST"
+      (FullPartName "SW KEY-SPST.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 3"
+      (FullPartName "HEADER 3.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 10/SM"
+      (FullPartName "HEADER 10/SM.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (AD5220
+      (FullPartName "AD5220.Normal")
+      (LibraryName "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (PORTBOTH-L
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (RESISTOR
+      (FullPartName "RESISTOR.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (DS1866
+      (FullPartName "DS1866.Normal")
+      (LibraryName "C:\USERS\MADISON\DESKTOP\PROTON_DEV\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (LED
+      (FullPartName "LED.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("NPN BCE"
+      (FullPartName "NPN BCE.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\TRANSISTOR.OLB")
+      (DeviceIndex "0"))
+    ("CAP NP"
+      (FullPartName "CAP NP.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (TPA2005D1DRB
+      (FullPartName "TPA2005D1DRB.Normal")
+      (LibraryName "C:\USERS\MADISON\DESKTOP\PROTON_DEV\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SPEAKER
+      (FullPartName "SPEAKER.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (DIODE
+      (FullPartName "DIODE.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (TRI-LED
+      (FullPartName "TRI-LED.Normal")
+      (LibraryName "C:\USERS\MADISON\DESKTOP\PROTON_DEV\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 10x2/SM"
+      (FullPartName "HEADER 10x2/SM.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (JUMPER20
+      (FullPartName "JUMPER20.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("Photon P1"
+      (FullPartName "Photon P1.Normal")
+      (LibraryName "C:\USERS\MADISON\DESKTOP\PROTON_DEV\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (Jumper3-1
+      (FullPartName "Jumper3-1.Normal")
+      (LibraryName "C:\USERS\MADISON\DESKTOP\PROTON_DEV\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (JUMPER
+      (FullPartName "JUMPER.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (lsm9ds1
+      (FullPartName "lsm9ds1.Normal")
+      (LibraryName "C:\USERS\MADISON\DESKTOP\PROTON_DEV\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (CAP
+      (FullPartName "CAP.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (SW_TC_SPST
+      (FullPartName "SW_TC_SPST.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (INDUCTOR
+      (FullPartName "INDUCTOR.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Cadence\SPB_17.0\tools\capture\library\oldlibs")
+  (ISPCBBASICLICENSE "false"))
