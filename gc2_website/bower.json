@@ -25,6 +25,13 @@
     "angular-mocks": "~1.4.2"
   },
   "overrides": {
+    "highcharts": {
+      "main": [
+        "highcharts.js",
+        "highcharts-more.js",
+        "modules/solid-gauge.js"
+      ]
+    },
     "bootstrap-sass": {
       "main": [
         "assets/stylesheets/_bootstrap.scss",

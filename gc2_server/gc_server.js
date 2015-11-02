@@ -65,6 +65,9 @@ function GcClient(socket) {
             // read starting millis
             var starting_millis = data.readUInt32LE(offset); offset += 4;
             
+            self.starting_timestamp = starting_timestamp * 1000 + starting_millis % 1000;
+            self.starting_millis = starting_millis;
+            
             // read stats about data uploaded
             var batches_uploaded = data.readUInt16LE(offset); offset += 2;
             var error_count = data.readUInt16LE(offset); offset += 2;
@@ -129,7 +132,7 @@ function GcClient(socket) {
         
         } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
             offset = 0;
-            self.read_data_packet(data, offset);
+            self.read_data_packet(data, offset, true, true);
         }
     });
     
@@ -137,7 +140,7 @@ function GcClient(socket) {
     
         var offset = 0;
         for(var i = 0; i < self.num_datapoints; i++) {
-            offset = self.read_data_packet(self.data_buffer, offset, false);
+            offset = self.read_data_packet(self.data_buffer, offset, false, false);
         }
         
         // read end marker
@@ -154,18 +157,22 @@ function GcClient(socket) {
         console.log("processed datalogging buffer");
     }
     
-    this.read_data_packet = function(data, offset, print_data) {
+    this.read_data_packet = function(data, offset, print_data, publish) {
         var milliseconds = data.readUInt32LE(offset); offset += 4;
+        
+        var diff = milliseconds - self.starting_millis;
+        var timestamp = self.starting_timestamp + diff;
+        var datetime = new Date(timestamp);
         
         // read EMG value
         var emg_value = data.readUInt16LE(offset); ; offset += 2;
         
         // read gyro max
-        var gyro_max_adj = data.readUInt16LE(offset); offset += 2;
+        var gyro_max_adj = data.readInt16LE(offset); offset += 2;
         // read accel values
-        var accel_x_adj = data.readUInt16LE(offset); offset += 2;
-        var accel_y_adj = data.readUInt16LE(offset); offset += 2;
-        var accel_z_adj = data.readUInt16LE(offset); offset += 2;
+        var accel_x_adj = data.readInt16LE(offset); offset += 2;
+        var accel_y_adj = data.readInt16LE(offset); offset += 2;
+        var accel_z_adj = data.readInt16LE(offset); offset += 2;
         
         var gyro_max = gyro_max_adj / 100.0;
         var accel_x = accel_x_adj / 10000.0;
@@ -173,8 +180,8 @@ function GcClient(socket) {
         var accel_z = accel_z_adj / 10000.0;
         
         if(print_data) {
-            console.log("timestamp: ", timestamp,
-                        " milliseconds: ", milliseconds,
+            console.log("time: ", datetime,
+                        " millisecond diff: ", diff,
                         " emg_value: ", emg_value,
                         " gyro_max: ", gyro_max,
                         " accel_x: ", accel_x,
@@ -182,12 +189,16 @@ function GcClient(socket) {
                         " accel_z: ", accel_z);    
         }
 
-        /*
-        pubnub_client.publish({
-            channel: "sleep-track-data-luc",
-            message: {"emg_value": value}
-        });
-        */                    
+        if(publish) {
+            pubnub_client.publish({
+                channel: "sleep-track-data-luc",
+                message: {"emg_value": emg_value,
+                          "gyro_max": gyro_max,
+                          "accel_x": accel_x,
+                          "accel_y": accel_y,
+                          "accel_z": accel_z}
+            });
+        }
                     
         return offset;
     };

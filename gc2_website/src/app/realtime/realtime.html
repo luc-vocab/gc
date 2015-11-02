@@ -7,10 +7,49 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Realtime Control</h2>
-            
-            
         </div>
-        <highchart id="chart1" config="realtime.chartConfig" class="col-md-12"></highchart>
     </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div id="container-emg"></div>
+        </div>    
+    </div>
+        
+      
+   
+        <script>
+       
+$(function () {
+
+    /*
+    // Bring life to the dials
+    setInterval(function () {
+        // Speed
+        var chart = $('#container-emg').highcharts(),
+            point,
+            newVal,
+            inc;
+
+        if (chart) {
+            point = chart.series[0].points[0];
+            inc = Math.round((Math.random() - 0.5) * 100);
+            newVal = point.y + inc;
+
+            if (newVal < 0 || newVal > 200) {
+                newVal = point.y - inc;
+            }
+
+            point.update(newVal);
+        }
+
+    }, 2000);
+    
+    */
+
+
+});        
+        </script>
+    
 
 </div>
