@@ -52,6 +52,16 @@ Proposed Pin Layout
 * A1: audio output
 * A4: piezo buzzer
 
+Connector Placement Constraints
+===============================
+* EMG connector must be on the bottom (facing down, but can be off to the left / off to the right / centered)
+* 3.5mm audio jack must be on the left
+* 2 side mounted push buttons must be on the right, side by side
+* battery JST connector must be on the right (the battery will either be mounted under the PCB, or "forward" of the PCB, more towards the forehead of the user. I haven't decided yet)
+* side-mounted on/off slide switch can be anywhere (left,right,top,bottom)
+* side-mounted offline mode slide switch can be anywhere (left,right,top,bottom)
+* micro USB port for charging can be anywhere (left,right,top,bottom)
+
 Current State of Prototyping
 ============================
 At this stage the prototype only exists in my head, I have not started putting anything on the breadboard yet, and i'm still waiting for my Photon boards. For example, I don't know what pins I will connect the EMG, offline switch and 2 pushbuttons to. The exact pin numbers will depend on what constraints that exist on analog/digital input on the Photon.
