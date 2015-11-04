@@ -48,7 +48,7 @@
       (Path "Design Resources" "Library")
       (Path "Design Resources" "Library" ".\library1.olb")
       (Path "Outputs")
-      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1" "IMU"))
+      (Select "Design Resources" ".\proton_dev.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -56,67 +56,40 @@
         (Placement "44 0 1 -1 -1 -8 -30 0 200 0 480"))
       (Tab 0))
     (Doc
-      (Type "COrPartDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1529 100 410")
-        (PackageScroll "0 0")
-        (PackageZoom "1")
-        (PartPackage "Part")
-        (Scroll "1127 206")
-        (Zoom "264"))
-      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\LIBRARY1.OLB")
-      (Package "TPA2005D1DRB"))
-    (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1636 50 568")
-        (Scroll "546 256")
-        (Zoom "236")
+        (Placement "44 2 3 -1 -1 -8 -30 50 1698 50 568")
+        (Scroll "0 530")
+        (Zoom "200")
         (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
       (Page "Power Regulation"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1367 75 593")
-        (Scroll "90 532")
+        (Placement "44 0 1 -1 -1 -8 -30 100 1748 100 618")
+        (Scroll "0 0")
         (Zoom "200")
         (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "Connectors/ Push Buttons"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 200 1786 200 718")
-        (Scroll "-284 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "Photon P1"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 125 1711 125 643")
-        (Scroll "-196 0")
-        (Zoom "118")
-        (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
       (Page "Audio"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 25 1454 25 335")
-        (Scroll "-118 24")
-        (Zoom "118")
+        (Placement "44 0 1 -1 -1 -8 -30 175 1823 175 693")
+        (Scroll "100 180")
+        (Zoom "200")
         (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DROPBOX\PHOTON_DEV\PROTON_DEV.DSN")
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
       (Page "IMU")))
   (PartMRUSelector
+    (RESISTOR
+      (FullPartName "RESISTOR.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
     ("SW KEY-SPST"
       (FullPartName "SW KEY-SPST.Normal")
       (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
@@ -135,10 +108,6 @@
       (DeviceIndex "0"))
     (PORTBOTH-L
       (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (RESISTOR
-      (FullPartName "RESISTOR.Normal")
-      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
       (DeviceIndex "0"))
     (DS1866
       (FullPartName "DS1866.Normal")

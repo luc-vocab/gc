@@ -3,8 +3,8 @@
 (    DRC Update                                                       )
 (                                                                     )
 (    Drawing          : Proton.brd                                    )
-(    Software Version : 17.0P011                                      )
-(    Date/Time        : Sun Nov 01 20:31:25 2015                      )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Tue Nov 03 21:57:28 2015                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -20,7 +20,7 @@
  ========= check standalone text              0:00:00
  ========= check standalone rectangles        0:00:00
 
- ..... Total number of DRC errors  0
+ ..... Total number of DRC errors  3
 
  ..... DRC update completed, total CPU time   0:00:00
  *************************************************************************
