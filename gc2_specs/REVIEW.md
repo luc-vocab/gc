@@ -35,5 +35,10 @@ IMU
 * you can remove all of the jumpers as long as both SDA/D0 SCL/D1 each have their pull-up resistors I think.
 
 
+Power circuit
+-------------
+MAX17043
+* correct me if i'm wrong, the wiring doesn't seem to match the sparkfun schematics (https://cdn.sparkfun.com/datasheets/IoT/Photon_Battery_Shield_v10.pdf) CELL should go to VBAT, it seems you have it connected to GND. Your previous schematic looked more correct. 
+
 
 
