@@ -40,5 +40,10 @@ Power circuit
 MAX17043
 * correct me if i'm wrong, the wiring doesn't seem to match the sparkfun schematics (https://cdn.sparkfun.com/datasheets/IoT/Photon_Battery_Shield_v10.pdf) CELL should go to VBAT, it seems you have it connected to GND. Your previous schematic looked more correct. 
 
+* I see the regulator circuit is fully matching the reference P1 schematic now.
 
 
+Photon P1
+---------
+
+Not reviewing as I think you only removed the JTAG connectors.
