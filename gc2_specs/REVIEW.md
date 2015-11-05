@@ -14,4 +14,6 @@ Headphone circuit
 AD5220 circuit
 * the datasheet (http://www.analog.com/media/en/technical-documentation/data-sheets/AD5220.pdf) doesn't indicate audio as a potential application. Any concerns ?
 * Should D5 / CLK be held high ? I'm worried about what will happen when I power-on the device and the D5/D6 outputs are floating temporarily (until I set their outputs in software). The datasheet says the potentiometer starts up centered, so I'll how many times to adjust down or up before outputting sound, but that logic may not work if there has been some inadvertent increases/decreases ?
-* 
+* Which version of the AD5220 will you pick, 10k, 50k, 100k ?
+
+
