@@ -16,4 +16,8 @@ AD5220 circuit
 * Should D5 / CLK be held high ? I'm worried about what will happen when I power-on the device and the D5/D6 outputs are floating temporarily (until I set their outputs in software). The datasheet says the potentiometer starts up centered, so I'll how many times to adjust down or up before outputting sound, but that logic may not work if there has been some inadvertent increases/decreases ?
 * Which version of the AD5220 will you pick, 10k, 50k, 100k ?
 
+TPA2005D1DRB
+* is there a difference between the Sleeve output (VOUT-) and GND ? I see on the SJ1-3515N, it seems Sleeve and GND are one and the same somehow.
+* I don't understand the point of the shutdown circuit and associated LED ? I couldn't understand from the datasheet what that shutdown pin is for.
+* besides those two things, it looks good to me.
 
