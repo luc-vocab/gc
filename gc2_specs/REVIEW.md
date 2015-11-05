@@ -21,3 +21,16 @@ TPA2005D1DRB
 * I don't understand the point of the shutdown circuit and associated LED ? I couldn't understand from the datasheet what that shutdown pin is for.
 * besides those two things, it looks good to me.
 
+
+Connectors / Push Buttons
+-------------------------
+
+* Auxillary slide switch: can you put a resistor between the 3V3 and the D2 pin
+* Auxillary switches 1 and 2: what is VIN ? Should that be 3V3 instead ? Also, is it advisable to put a resistor between the 3V3 and the photon pin ? I think you mentioned just to be safe we can add that ?
+* I think you may have slightly changed the pin connections between the mode slide switch and push buttons (compared to https://github.com/lucwastiaux/gc/blob/dev/gc2_specs/SPECS.md#proposed-pin-layout), but let's leave it like that, as D2, D3, D4 will all be setup as digital inputs and are interchangeable.
+
+
+IMU
+---
+
+
