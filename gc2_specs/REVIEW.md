@@ -32,5 +32,8 @@ Connectors / Push Buttons
 
 IMU
 ---
+* you can remove all of the jumpers as long as both SDA/D0 SCL/D1 each have their pull-up resistors I think.
+
+
 
 
