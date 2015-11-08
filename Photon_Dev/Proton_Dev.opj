@@ -44,47 +44,17 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\proton_dev.dsn")
       (Path "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1")
-      (Path "Design Resources" ".\proton_dev.dsn" "Design Cache")
       (Path "Design Resources" "Library")
       (Path "Design Resources" "Library" ".\library1.olb")
       (Path "Outputs")
-      (Select "Design Resources" ".\proton_dev.dsn"))
+      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1"
+         "Connectors/ Push Buttons"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 480"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1698 50 568")
-        (Scroll "0 530")
-        (Zoom "200")
-        (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "Power Regulation"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1748 100 618")
-        (Scroll "0 0")
-        (Zoom "200")
-        (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "Audio"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 175 1823 175 693")
-        (Scroll "100 180")
-        (Zoom "200")
-        (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "IMU")))
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 480"))
+      (Tab 0)))
   (PartMRUSelector
     (RESISTOR
       (FullPartName "RESISTOR.Normal")

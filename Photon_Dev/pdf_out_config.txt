@@ -1,0 +1,9 @@
+page_setup/unit=Inch
+page_setup/margin_left=0.500
+page_setup/margin_right=0.500
+page_setup/margin_top=0.500
+page_setup/margin_bottom=0.500
+page_setup/header_footer_text_size_width=0.048
+page_setup/header_footer_text_size_height=0.048
+page_setup/scale_factor=1.000
+page_setup/orientation=portrait
