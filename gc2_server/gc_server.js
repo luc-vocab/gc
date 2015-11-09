@@ -26,8 +26,9 @@ CONNECTION_STATES = {
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
 
-function GcClient(socket) {
+function GcClient(socket, influx_client) {
     this.socket = socket;
+    this.influx_client = influx_client;
 
     this.state = CONNECTION_STATES.CONNECTED;
     
@@ -132,15 +133,18 @@ function GcClient(socket) {
         
         } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
             offset = 0;
-            self.read_data_packet(data, offset, true, true);
+            self.read_data_packet(data, offset, true, true, false);
         }
     });
     
     this.process_datalogging_buffer = function() {
+        
+        // reset the measurements array
+        self.measurements = [];
     
         var offset = 0;
         for(var i = 0; i < self.num_datapoints; i++) {
-            offset = self.read_data_packet(self.data_buffer, offset, false, false);
+            offset = self.read_data_packet(self.data_buffer, offset, false, false, true);
         }
         
         // read end marker
@@ -155,9 +159,14 @@ function GcClient(socket) {
         self.socket.write(final_byte);
         
         console.log("processed datalogging buffer");
+        console.log("writing to influxdb");
+        
+        self.influx_client.writeMany(self.measurements).then(function() {
+            console.log("done writing to influxDB");
+        });        
     }
     
-    this.read_data_packet = function(data, offset, print_data, publish) {
+    this.read_data_packet = function(data, offset, print_data, publish, push_to_influxdb) {
         var milliseconds = data.readUInt32LE(offset); offset += 4;
         
         var diff = milliseconds - self.starting_millis;
@@ -199,7 +208,34 @@ function GcClient(socket) {
                           "accel_z": accel_z}
             });
         }
-                    
+
+        tags = {user: "luc",
+                env: "dev"};
+        
+        if(push_to_influxdb) {
+            var timestamp_nanos = datetime.getTime().toString() + "000000";
+            // EMG sensor value
+            self.measurements.push({
+                key: "emg",
+                tags: tags,
+                fields: {
+                    emg_value: new influent.Value(emg_value, influent.type.INT64),
+                },
+                timestamp: timestamp_nanos
+            });
+            self.measurements.push({
+                key: "imu",
+                tags: tags,
+                fields: {
+                    gyro: new influent.Value(gyro_max, influent.type.FLOAT64),
+                    accel_x: new influent.Value(accel_x, influent.type.FLOAT64),
+                    accel_y: new influent.Value(accel_y, influent.type.FLOAT64),
+                    accel_z: new influent.Value(accel_z, influent.type.FLOAT64),
+                },
+                timestamp: timestamp_nanos
+            });
+        }
+
         return offset;
     };
     
@@ -218,14 +254,27 @@ function GcClient(socket) {
     
 }
 
-var server = net.createServer(function(socket) {
-    console.log('received connection');
-    // socket.write('hello from server\r\n');
-    
-    var gcClient = new GcClient(socket);
+influent
+.createClient({
+    username: "dev",
+    password: "dev",
+    database: "gc_dev",
+    server: [
+        {
+            protocol: "http",
+            host:     "influxdb.dev.sleeptrack.io",
+            port:     8086
+        }
+    ]
+})
+.then(function(client) {
+    var server = net.createServer(function(socket) {
+        console.log('received connection');
+        
+        var gcClient = new GcClient(socket, client);
+    });
+    server.listen(7001, '0.0.0.0');
 });
 
 
-
-server.listen(7001, '0.0.0.0');
 
