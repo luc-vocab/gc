@@ -1,0 +1,14 @@
+
+install influxdb
+https://influxdb.com/docs/v0.9/introduction/installation.html
+
+setup DNS record
+for example influxdb.dev.sleeptrack.io
+
+set hostname
+# hostname influxdb.dev.sleeptrack.io
+
+# ufw allow 8083
+# ufw allow 8086
+
+
