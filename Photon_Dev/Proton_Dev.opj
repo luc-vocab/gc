@@ -46,7 +46,7 @@
       (Path "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Outputs")
-      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1" "Audio"))
+      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1" "IMU"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -56,8 +56,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 50 1636 50 568")
-        (Scroll "-284 0")
+        (Placement "44 2 3 -1 -1 -8 -30 50 1636 50 568")
+        (Scroll "-404 0")
         (Zoom "100")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
@@ -66,8 +66,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 1354 0 518")
-        (Scroll "-303 -6")
+        (Placement "44 0 1 -1 -1 -8 -30 0 1354 0 518")
+        (Scroll "-182 0")
         (Zoom "97")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
@@ -77,12 +77,22 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1379 25 543")
-        (Scroll "-182 0")
-        (Zoom "97")
+        (Scroll "94 0")
+        (Zoom "194")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "Audio")))
+      (Page "Audio"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 25 1611 25 543")
+        (Scroll "-284 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "IMU")))
   (PartMRUSelector
     ("T POINT R"
       (FullPartName "T POINT R.Normal")
