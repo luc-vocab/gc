@@ -45,20 +45,64 @@
       (Path "Design Resources" ".\proton_dev.dsn")
       (Path "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library" ".\library1.olb")
       (Path "Outputs")
-      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1"
-         "Connectors/ Push Buttons"))
+      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1" "Audio"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 480"))
-      (Tab 0)))
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 480"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 50 1636 50 568")
+        (Scroll "-284 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Power Regulation"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 1354 0 518")
+        (Scroll "-303 -6")
+        (Zoom "97")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Photon P1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 25 1379 25 543")
+        (Scroll "-182 0")
+        (Zoom "97")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Audio")))
   (PartMRUSelector
+    ("T POINT R"
+      (FullPartName "T POINT R.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("SW SLIDE-DPST"
+      (FullPartName "SW SLIDE-DPST.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
     (RESISTOR
       (FullPartName "RESISTOR.Normal")
       (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("CAP NP"
+      (FullPartName "CAP NP.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (MC14490
+      (FullPartName "MC14490.Normal")
+      (LibraryName "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\LIBRARY1.OLB")
       (DeviceIndex "0"))
     ("SW KEY-SPST"
       (FullPartName "SW KEY-SPST.Normal")
@@ -90,10 +134,6 @@
     ("NPN BCE"
       (FullPartName "NPN BCE.Normal")
       (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\TRANSISTOR.OLB")
-      (DeviceIndex "0"))
-    ("CAP NP"
-      (FullPartName "CAP NP.Normal")
-      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
       (DeviceIndex "0"))
     (GND
       (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
@@ -140,18 +180,6 @@
     (lsm9ds1
       (FullPartName "lsm9ds1.Normal")
       (LibraryName "C:\USERS\MADISON\DESKTOP\PROTON_DEV\LIBRARY1.OLB")
-      (DeviceIndex "0"))
-    (CAP
-      (FullPartName "CAP.Normal")
-      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
-      (DeviceIndex "0"))
-    (SW_TC_SPST
-      (FullPartName "SW_TC_SPST.Normal")
-      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
-      (DeviceIndex "0"))
-    (INDUCTOR
-      (FullPartName "INDUCTOR.Normal")
-      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
       (DeviceIndex "0")))
   (LastUsedLibraryBrowseDirectory
      "C:\Cadence\SPB_17.0\tools\capture\library\oldlibs")
