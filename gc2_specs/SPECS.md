@@ -50,6 +50,7 @@ Proposed Pin Layout
 * D6: for MAX5160 U/D pin
 * D7: headphone jack insertion detection
 * A1: audio output
+* A2: audio amplifier shutdown pin
 * A4: piezo buzzer
 
 Connector Placement Constraints
