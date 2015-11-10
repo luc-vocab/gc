@@ -50,7 +50,18 @@ Proposed Pin Layout
 * D6: for MAX5160 U/D pin
 * D7: headphone jack insertion detection
 * A1: audio output
+* A2: audio amplifier shutdown pin
 * A4: piezo buzzer
+
+Connector Placement Constraints
+===============================
+* EMG connector must be on the bottom (facing down, but can be off to the left / off to the right / centered)
+* 3.5mm audio jack must be on the left
+* 2 side mounted push buttons must be on the right, side by side
+* battery JST connector must be on the right (the battery will either be mounted under the PCB, or "forward" of the PCB, more towards the forehead of the user. I haven't decided yet)
+* side-mounted on/off slide switch can be anywhere (left,right,top,bottom)
+* side-mounted offline mode slide switch can be anywhere (left,right,top,bottom)
+* micro USB port for charging can be anywhere (left,right,top,bottom)
 
 Current State of Prototyping
 ============================
