@@ -151,9 +151,6 @@ void collect_data() {
     DEBUG_LOG("wifi available");
 
     gc_client.upload_batch();
-    // report_stats();
-
-    // delay(DATA_TRANSFER_DELAY);
 
     // turn off wifi
     if(MANAGE_WIFI) {

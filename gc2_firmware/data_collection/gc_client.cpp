@@ -113,6 +113,8 @@ int GcClient::connect_and_transfer_batch() {
     return ERROR_TCP_WRITE_FAILED;
   }
 
+  delay(TRANSFER_DELAY);
+
   // write data header
   size_t temp_offset = 0;
   // write battery charge
@@ -138,10 +140,13 @@ int GcClient::connect_and_transfer_batch() {
   temp_offset = m_data_buffer_offset;
   write_uint16_to_buffer(m_data_buffer, UINT16_MARKER_END, &temp_offset);
 
+  delay(INITIAL_DELAY);
+
   size_t written_so_far = 0;
   int bytes_written;
   size_t need_to_write;
   size_t message_size;
+  i = 0;
   while(written_so_far < m_data_buffer_offset + END_MARKER_LENGTH) {
     need_to_write = m_data_buffer_offset + END_MARKER_LENGTH - written_so_far;
     message_size = min(need_to_write, CHUNK_SIZE);
@@ -152,6 +157,7 @@ int GcClient::connect_and_transfer_batch() {
     }
     written_so_far += bytes_written;
     delay(CHUNK_DELAY);
+    i++;
   }
 
 

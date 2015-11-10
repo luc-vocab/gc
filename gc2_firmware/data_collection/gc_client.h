@@ -18,12 +18,16 @@
 //#define DATA_BUFFER_LENGTH 500 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // a few seconds of data
 //#define DATA_BUFFER_LENGTH 1440 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // 15s of data
 //#define DATA_BUFFER_LENGTH 5760 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // 1mn of data
+//#define DATA_BUFFER_LENGTH 10000 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // a few minutes of data
+//#define DATA_BUFFER_LENGTH 16800  + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // 5mn of data
 //#define DATA_BUFFER_LENGTH 28800 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // 5mn of data
 #define DATA_BUFFER_LENGTH 50000 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // possibly longer
-#define CHUNK_SIZE 1024
-#define CHUNK_DELAY 50 // amount of time to wait between chunks
+#define CHUNK_SIZE 512
+#define CHUNK_DELAY 20 // amount of time to wait between chunks
+#define INITIAL_DELAY 3000 // amount of time to wait before sending full buffer of data
 
 #define WIFI_MAX_WAIT 5000
+#define TRANSFER_DELAY 250
 #define RETRY_DELAY 250
 
 #define BATCH_NUM_RETRIES 3
