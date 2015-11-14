@@ -63,7 +63,7 @@ void GcClient::upload_batch() {
   while(upload_batch_iteration() != SUCCESS_RETURN && i > 0) {
     DEBUG_LOG("FAILED upload_batch_iteration(), retrying " + String(i));
     m_error_count++;
-    delay(RETRY_DELAY);
+    delay(LONG_RETRY_DELAY);
     i--;
   }
 
