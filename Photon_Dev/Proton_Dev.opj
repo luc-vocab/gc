@@ -45,19 +45,18 @@
       (Path "Design Resources" ".\proton_dev.dsn")
       (Path "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Outputs")
-      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1" "IMU"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 480"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 480"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1636 50 568")
-        (Scroll "-404 0")
+        (Placement "44 0 1 -1 -1 -8 -30 50 1636 50 568")
+        (Scroll "-284 0")
         (Zoom "100")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
@@ -77,7 +76,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1379 25 543")
-        (Scroll "94 0")
+        (Scroll "0 171")
         (Zoom "194")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
@@ -87,12 +86,22 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1611 25 543")
-        (Scroll "-284 0")
-        (Zoom "100")
+        (Scroll "0 196")
+        (Zoom "200")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "IMU")))
+      (Page "IMU"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 150 1798 150 668")
+        (Scroll "-329 0")
+        (Zoom "97")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Connectors/ Push Buttons")))
   (PartMRUSelector
     ("T POINT R"
       (FullPartName "T POINT R.Normal")
