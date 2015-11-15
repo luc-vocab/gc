@@ -45,6 +45,11 @@ void GcClient::set_mode(uint16_t mode) {
   }
 }
 
+void GcClient::set_device_id(uint32_t device_id) {
+  m_device_id = device_id;
+  DEBUG_LOG("Set device id to " + String(m_device_id));
+}
+
 void GcClient::battery_charge(float percent_charged) {
   DEBUG_LOG("received battery_charge: " + String(percent_charged));
   m_battery_charge = percent_charged;

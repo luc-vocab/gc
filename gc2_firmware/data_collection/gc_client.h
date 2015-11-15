@@ -58,6 +58,7 @@ public:
   void add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z);
   void battery_charge(float percent_charged);
   void set_mode(uint16_t mode);
+  void set_device_id(uint32_t device_id);
   String get_stats();
   // whether data needs to be uploaded
   bool need_upload();
