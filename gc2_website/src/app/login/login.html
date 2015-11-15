@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Login</h2>
+            
+
+            <form class="form-inline" ng-submit="login.login()">
+              <div class="form-group">
+                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" ng-model="login.form_data.login">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password" ng-model="login.form_data.password">
+              </div>
+              <button type="submit" class="btn btn-default">Sign in</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-default" ng-click="login.logout()">Logout</button>
+        </div>
+    </div>
+    
+
+</div>

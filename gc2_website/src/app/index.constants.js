@@ -5,6 +5,9 @@
   angular
     .module('gc2Website')
     .constant('malarkey', malarkey)
-    .constant('moment', moment);
+    .constant('moment', moment)
+    
+    // firebase setup
+    .constant('firebase_root', 'https://gcserver-dev.firebaseio.com/');
 
 })();

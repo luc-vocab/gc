@@ -11,45 +11,19 @@
     </div>
     
     <div class="row">
+        <div class="col-md-12"> 
+            <h3>Devices</h3>
+            <div>
+                Current device: Name: {{realtime.current_device.name}} Connected: {{realtime.current_device.connected}}
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
         <div class="col-md-12">
             <div id="container-emg"></div>
         </div>    
     </div>
         
-      
-   
-        <script>
-       
-$(function () {
-
-    /*
-    // Bring life to the dials
-    setInterval(function () {
-        // Speed
-        var chart = $('#container-emg').highcharts(),
-            point,
-            newVal,
-            inc;
-
-        if (chart) {
-            point = chart.series[0].points[0];
-            inc = Math.round((Math.random() - 0.5) * 100);
-            newVal = point.y + inc;
-
-            if (newVal < 0 || newVal > 200) {
-                newVal = point.y - inc;
-            }
-
-            point.update(newVal);
-        }
-
-    }, 2000);
-    
-    */
-
-
-});        
-        </script>
-    
 
 </div>
