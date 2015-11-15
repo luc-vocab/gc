@@ -6,10 +6,9 @@
     .controller('RealtimeController', RealtimeController);
 
   /** @ngInject */
-  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, PubNub, currentAuth, firebase_auth) {
+  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, PubNub, currentAuth, firebase_auth, device_manager) {
     var vm = this;
 
-    
     vm.channel = "sleep-track-data-luc";
     
    
@@ -93,8 +92,9 @@
         $log.info("RealTimeController init");
         
         $log.info("currentAuth: ", currentAuth);
+        vm.uid = currentAuth.uid;
         
-        var user_ref = firebase_auth.get_user_ref(currentAuth.uid);
+        var user_ref = firebase_auth.get_user_ref(vm.uid);
         vm.user_obj = $firebaseObject(user_ref);
         
         // initialize chart
@@ -135,6 +135,13 @@
             vm.devices = devices;
             if(vm.devices.length == 1) {
                 vm.current_device = vm.devices[0];
+                try {
+                    device_manager.create_device_id(vm.current_device, vm.uid);
+                } 
+                catch(err) {
+                    $log.info("error calling create_device_id: ", err);
+                    
+                }
             }
             $scope.$apply();
           },
