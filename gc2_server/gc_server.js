@@ -1,9 +1,8 @@
 var influent = require('influent');
 var pubnub = require("pubnub");
-var influx_config = require('./influx_config.js');
 var net = require('net');
-
-
+var Firebase = require('firebase');
+var config = require('./' + process.argv[2]);
 
 
 pubnub_client = pubnub({
@@ -26,9 +25,14 @@ CONNECTION_STATES = {
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
 
-function GcClient(socket, influx_client) {
+function GcClient(socket, influx_client, config) {
     this.socket = socket;
     this.influx_client = influx_client;
+    this.config = config;
+    
+    // firebase setup
+    this.firebaseRoot = new Firebase(config.firebaseRoot);
+    this.firebaseDevicesRoot = this.firebaseRoot.child('devices');
 
     this.state = CONNECTION_STATES.CONNECTED;
     
@@ -43,6 +47,8 @@ function GcClient(socket, influx_client) {
             var device_id = data.readUInt32LE(0);
             var protocol_version = data.readUInt32LE(4);
             self.log("device_id: " + device_id + " protocol_version: " + protocol_version);
+            
+            self.firebaseDeviceRef = self.firebaseDevicesRoot.child(device_id.toString());
             
             var mode = data.readUInt32LE(8);
             
@@ -199,14 +205,16 @@ function GcClient(socket, influx_client) {
         }
 
         if(publish) {
-            pubnub_client.publish({
-                channel: "sleep-track-data-luc",
-                message: {"emg_value": emg_value,
-                          "gyro_max": gyro_max,
-                          "accel_x": accel_x,
-                          "accel_y": accel_y,
-                          "accel_z": accel_z}
+        
+            // publish to firebase
+            this.firebaseDeviceRef.update({
+                "emg_value": emg_value,
+                "gyro_max": gyro_max,
+                "accel_x": accel_x,
+                "accel_y": accel_y,
+                "accel_z": accel_z
             });
+        
         }
 
         tags = {user: "luc",
@@ -271,7 +279,7 @@ influent
     var server = net.createServer(function(socket) {
         console.log('received connection');
         
-        var gcClient = new GcClient(socket, client);
+        var gcClient = new GcClient(socket, client, config);
     });
     server.listen(7001, '0.0.0.0');
 });

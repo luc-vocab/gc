@@ -6,7 +6,7 @@
     .controller('RealtimeController', RealtimeController);
 
   /** @ngInject */
-  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, PubNub, currentAuth, firebase_auth, device_manager) {
+  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, currentAuth, firebase_auth, device_manager) {
     var vm = this;
 
     vm.channel = "sleep-track-data-luc";
@@ -102,12 +102,6 @@
         $log.info("gauge options: ", vm.emgGaugeOptions);
         $('#container-emg').highcharts(vm.emgGaugeOptions);
                 
-        PubNub.init({
-            publish_key: 'pub-c-879cf9bb-46af-4bf1-8dca-e011ea412cd2',
-            subscribe_key: 'sub-c-cba703c8-7b42-11e3-9cac-02ee2ddab7fe'
-        });
-        
-        subscribe();
         spark_setup();
     }
     
@@ -135,7 +129,11 @@
             vm.devices = devices;
             if(vm.devices.length == 1) {
                 vm.current_device = vm.devices[0];
-                device_manager.create_device_id(vm.current_device, vm.uid);
+                device_manager.create_device_id(vm.current_device, vm.uid).
+                then(function(device_id) {
+                    vm.current_device_id = device_id;
+                    $log.info("current_device_id: ", vm.current_device_id);
+                });
             }
             $scope.$apply();
           },
@@ -145,17 +143,21 @@
         );    
     };
     
-    function subscribe() {
-        PubNub.ngSubscribe({ channel: vm.channel });
-    }
+    this.enable_realtime =  function() {
+        vm.current_device.callFunction('set_mode', 'realtime');
+        var device_ref = device_manager.get_device_ref(vm.current_device_id);
+        device_ref.on("value", function(snapshot){
+            var data = snapshot.val();
+            $log.info("received data: ", data);
+            update_emg_value(data.emg_value);
+        });
+    };
     
+    this.standby = function() {
+        vm.current_device.callFunction('set_mode', 'standby');
+    };
     
-    $rootScope.$on(PubNub.ngMsgEv(vm.channel), function(event, payload) {
-        // payload contains message, channel, env...
-        $log.info("payload: ", payload.message);
-        update_emg_value(payload.message.emg_value);
-    })    
-    
+  
     init();
     
   }

@@ -6,12 +6,17 @@
       .service('device_manager', device_manager);
 
   /** @ngInject */
-  function device_manager(firebase_root, $log) {
+  function device_manager(firebase_root, $log, $q) {
     var root_ref = new Firebase(firebase_root);
     var devices_ref = root_ref.child('devices');
     
     
+    this.get_device_ref = function(device_id) {
+        return devices_ref.child(device_id);
+    };
+    
     this.create_device_id = function(device, uid) {
+        var defer = $q.defer();
     
         // get snapshot under devices
         devices_ref.once("value", function(snapshot) {
@@ -41,10 +46,14 @@
             });
 
             $log.info("associated device ", device.name, " with id: ", device_id);
+            
+            defer.resolve(device_id);
 
         });
+        
+        return defer.promise;
     
-    }
+    };
   
   }
   
