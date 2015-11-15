@@ -16,7 +16,7 @@
         // get snapshot under devices
         devices_ref.once("value", function(snapshot) {
             // identify unique number
-            var max_int32 = 4294967295;
+            var max_int32 = 2147483647;
             var tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString(); 
             while (snapshot.hasChild(tentative_device_id)) {
                 tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString(); 

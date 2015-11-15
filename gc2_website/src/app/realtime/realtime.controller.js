@@ -135,13 +135,7 @@
             vm.devices = devices;
             if(vm.devices.length == 1) {
                 vm.current_device = vm.devices[0];
-                try {
-                    device_manager.create_device_id(vm.current_device, vm.uid);
-                } 
-                catch(err) {
-                    $log.info("error calling create_device_id: ", err);
-                    
-                }
+                device_manager.create_device_id(vm.current_device, vm.uid);
             }
             $scope.$apply();
           },
