@@ -6,7 +6,7 @@
     .controller('RealtimeController', RealtimeController);
 
   /** @ngInject */
-  function RealtimeController($timeout, $log, $scope, $rootScope, PubNub) {
+  function RealtimeController($timeout, $log, $scope, $rootScope, PubNub, currentAuth) {
     var vm = this;
 
     
@@ -91,6 +91,8 @@
     
     function init() {
         $log.info("RealTimeController init");
+        
+        $log.info("currentAuth: ", currentAuth);
         
         // initialize chart
         $log.info("container emg: ", $('#container-emg'));
