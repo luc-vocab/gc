@@ -6,7 +6,7 @@
     .controller('RealtimeController', RealtimeController);
 
   /** @ngInject */
-  function RealtimeController($timeout, $log, $scope, $rootScope, PubNub, currentAuth) {
+  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, PubNub, currentAuth, firebase_auth) {
     var vm = this;
 
     
@@ -94,6 +94,9 @@
         
         $log.info("currentAuth: ", currentAuth);
         
+        var user_ref = firebase_auth.get_user_ref(currentAuth.uid);
+        vm.user_obj = $firebaseObject(user_ref);
+        
         // initialize chart
         $log.info("container emg: ", $('#container-emg'));
         $log.info("gauge options: ", vm.emgGaugeOptions);
@@ -105,7 +108,41 @@
         });
         
         subscribe();
+        spark_setup();
     }
+    
+    function spark_setup() {
+        vm.user_obj.$loaded().then(function(){
+            $log.info("spark access token: ", vm.user_obj.particle_access_token);
+            // login to spark
+            spark.login({accessToken: vm.user_obj.particle_access_token}).then(
+                function(token){
+                    $log.info("spark login successful ", token);
+                    spark_list_devices();
+                },
+                function(err) {
+                    $log.error("spark login error: ", err);
+                }
+            );
+        });        
+    };
+    
+    function spark_list_devices() {
+        var devicesPr = spark.listDevices();
+        devicesPr.then(
+          function(devices){
+            $log.info('Devices: ', devices);
+            vm.devices = devices;
+            if(vm.devices.length == 1) {
+                vm.current_device = vm.devices[0];
+            }
+            $scope.$apply();
+          },
+          function(err) {
+            $log.error('List devices call failed: ', err);
+          }
+        );    
+    };
     
     function subscribe() {
         PubNub.ngSubscribe({ channel: vm.channel });

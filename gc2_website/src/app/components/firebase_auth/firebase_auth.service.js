@@ -36,8 +36,13 @@
     this.logout = function() {
         $log.info("logging out");
         auth.$unauth();
-    }    
+    };
     
+    this.get_user_ref = function(uid) {
+        var user_ref = users_ref.child(uid);
+        return user_ref;
+    };
+
   }
   
 
