@@ -11,6 +11,11 @@
     var devices_ref = root_ref.child('devices');
     
     
+    this.spark_login = function(particle_access_token) {
+        $log.info("logging in with token: ", particle_access_token);
+        return spark.login({accessToken: particle_access_token});
+    };
+    
     this.get_device_ref = function(device_id) {
         return devices_ref.child(device_id);
     };
