@@ -1,3 +1,7 @@
+
+/* globals Highcharts: false */
+/* globals spark: false */
+
 (function() {
   'use strict';
 
@@ -73,14 +77,14 @@
             dataLabels: {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:' +
                     ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>'
-            },
+            }
         }]        
         
     };
     
    
     function update_emg_value(emg_value) {
-        var chart = $('#container-emg').highcharts();
+        var chart = angular.element('#container-emg').highcharts();
 
         if (chart) {
             var point = chart.series[0].points[0];
@@ -98,9 +102,8 @@
         vm.user_obj = $firebaseObject(user_ref);
         
         // initialize chart
-        $log.info("container emg: ", $('#container-emg'));
         $log.info("gauge options: ", vm.emgGaugeOptions);
-        $('#container-emg').highcharts(vm.emgGaugeOptions);
+        angular.element('#container-emg').highcharts(vm.emgGaugeOptions);
                 
         spark_setup();
     }
@@ -119,7 +122,7 @@
                 }
             );
         });        
-    };
+    }
     
     function spark_list_devices() {
         var devicesPr = spark.listDevices();
@@ -141,9 +144,9 @@
             $log.error('List devices call failed: ', err);
           }
         );    
-    };
+    }
     
-    this.enable_realtime =  function() {
+    vm.enable_realtime =  function() {
         vm.current_device.callFunction('set_mode', 'realtime');
         var device_ref = device_manager.get_device_ref(vm.current_device_id);
         device_ref.on("value", function(snapshot){
@@ -153,7 +156,7 @@
         });
     };
     
-    this.standby = function() {
+    vm.standby = function() {
         vm.current_device.callFunction('set_mode', 'standby');
     };
     
