@@ -1,0 +1,32 @@
+{
+  "name": "metronic",
+  "version": "4.5.1",
+  "homepage": "https://github.com/lucwastiaux/gc",
+  "authors": [
+    "Luc Wastiaux <luc.wastiaux@airpost.net>"
+  ],
+  "description": "metronic bootstrap theme",
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "jquery.uniform": "~2.1.2"
+  },
+  "main": [
+    "assets/global/scripts/app.js",
+    "assets/pages/scripts/dashboard.js",
+    "assets/layouts/layout5/scripts/layout.js",
+    "assets/layouts/global/scripts/quick-sidebar.js",
+    
+    "assets/global/css/components-md.css",
+    "assets/global/css/plugins-md.css",
+    "assets/layouts/layout5/css/layout.css",
+    "assets/layouts/layout5/css/custom.css"
+  ],
+  "keywords": [
+    "bootstrap",
+    "theme"
+  ],
+  "license": "MIT"
+}
