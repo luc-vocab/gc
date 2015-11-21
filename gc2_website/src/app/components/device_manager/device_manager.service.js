@@ -1,3 +1,6 @@
+/* globals Firebase: false */
+/* globals spark: false */
+
 (function() {
   'use strict';
 
