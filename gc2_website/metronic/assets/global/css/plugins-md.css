@@ -98,6 +98,9 @@ Bootstrap Daterangepicker
 
 .daterangepicker {
   margin-top: 4px; }
+  .daterangepicker .input-mini {
+    width: 100% !important;
+    outline: none !important; }
 
 .daterangepicker td {
   text-shadow: none; }
@@ -255,7 +258,7 @@ Error state for WYSIWYG Editors
   border: 1px solid #fbe1e3 !important; }
 
 .has-success .md-editor {
-  border: 1px solid #b4eaee !important; }
+  border: 1px solid #abe7ed !important; }
 
 .has-warning .md-editor {
   border: 1px solid #f9e491 !important; }
@@ -293,7 +296,7 @@ Bootstrap Select
   border-color: #fbe1e3; }
 
 .has-success .bootstrap-select .btn {
-  border-color: #b4eaee; }
+  border-color: #abe7ed; }
 
 .has-warning .bootstrap-select .btn {
   border-color: #f9e491; }
@@ -495,7 +498,7 @@ Bootstrap Wizard
       .form-wizard .steps > li > a.step > .desc > i {
         display: none; }
   .form-wizard .steps > li.active > a.step .number {
-    background-color: #3fc9d5;
+    background-color: #36c6d3;
     color: #fff; }
   .form-wizard .steps > li.active > a.step .desc {
     color: #333; }
@@ -562,7 +565,7 @@ Error state for WYSIWYG Editors
   border: 1px solid #fbe1e3 !important; }
 
 .has-success .wysihtml5-sandbox {
-  border: 1px solid #b4eaee !important; }
+  border: 1px solid #abe7ed !important; }
 
 .has-warning .wysihtml5-sandbox {
   border: 1px solid #f9e491 !important; }
@@ -609,7 +612,7 @@ Error state for WYSIWYG Editors
   border: 1px solid #fbe1e3 !important; }
 
 .has-success .note-editor {
-  border: 1px solid #b4eaee !important; }
+  border: 1px solid #abe7ed !important; }
 
 .has-warning .note-editor {
   border: 1px solid #f9e491 !important; }
@@ -871,7 +874,7 @@ Error state for WYSIWYG Editors
   border: 1px solid #fbe1e3 !important; }
 
 .has-success .cke {
-  border: 1px solid #b4eaee !important; }
+  border: 1px solid #abe7ed !important; }
 
 .has-warning .cke {
   border: 1px solid #f9e491 !important; }
@@ -1002,6 +1005,31 @@ Datatables processing
 /***
 Tool Buttons
 ***/
+.dt-button-background {
+  display: none !important; }
+
+div.dt-button-collection {
+  border: 1px solid #eee;
+  background: #ffffff;
+  box-shadow: 5px 5px rgba(102, 102, 102, 0.1);
+  padding: 0; }
+  div.dt-button-collection > a.dt-button {
+    background: none;
+    padding: 8px 16px;
+    font-weight: 300;
+    margin: 1px 1px;
+    box-shadow: none !important;
+    border: 0 !important; }
+    div.dt-button-collection > a.dt-button > span {
+      font-size: 14px;
+      color: #333; }
+    div.dt-button-collection > a.dt-button.active {
+      background: #f6f6f6 !important;
+      box-shadow: none !important;
+      border: 0 !important; }
+      div.dt-button-collection > a.dt-button.active > span {
+        color: #333; }
+
 button.dt-button,
 div.dt-button,
 a.dt-button {
@@ -1108,7 +1136,7 @@ table.dataTable.dtr-column > tbody > tr.parent td.control:before,
 table.dataTable.dtr-column > tbody > tr.parent th.control:before,
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
-  background-color: #3fc9d5;
+  background-color: #36c6d3;
   font-weight: 300;
   vertical-align: middle;
   line-height: 14px;
@@ -1320,7 +1348,7 @@ Fullcalendar
   .portlet.calendar.light .fc-button.fc-state-active,
   .portlet.calendar.light .fc-button.fc-state-hover {
     color: #333;
-    border-bottom: 2px solid #3fc9d5; }
+    border-bottom: 2px solid #36c6d3; }
   .portlet.calendar.light .fc-button.fc-state-disabled {
     color: #aaa; }
 
