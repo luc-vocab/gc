@@ -1,3 +1,5 @@
+/* globals Firebase: false */
+
 (function() {
   'use strict';
 

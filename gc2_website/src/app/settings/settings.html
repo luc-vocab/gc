@@ -17,13 +17,13 @@
             <form class="form-inline">
               <div class="form-group">
                 <label class="sr-only" for="access_token">Particle Access Token</label>
-                <input type="text" class="form-control" id="access_token" placeholder="Access Token"  ng-model="user_obj.particle_access_token" style="width: 400px;">
+                <input type="text" class="form-control" id="access_token" placeholder="Access Token"  ng-model="settings.user_obj.particle_access_token" style="width: 400px;">
               </div>
               <button type="submit" class="btn btn-default" ng-click="settings.verify_token()">Set</button>
             </form>          
-            <p><span ng-show="show_status.login_verifying">Verifying...</span> 
-               <span ng-show="show_status.login_ok">Login OK</span>
-               <span ng-show="show_status.login_error">Login Error: {{show_status.login_error_text}}</span>
+            <p><span ng-show="settings.show_status.login_verifying">Verifying...</span> 
+               <span ng-show="settings.show_status.login_ok">Login OK</span>
+               <span ng-show="settings.show_status.login_error">Login Error: {{settings.show_status.login_error_text}}</span>
             </p>
         </div>
     </div>
@@ -31,16 +31,16 @@
     <div class="row">
         <div class="col-md-12">
             <h3>Devices</h3>
-            <div ng-show="show_status.listing_devices" class="alert" 
-                 ng-class="show_status.listing_device_class" role="alert">
-               <span ng-show="show_status.listing_devices">Listing Devices...</span>
-               <strong ng-show="show_status.listing_devices_ok">OK</strong>
-               <strong ng-show="show_status.listing_devices_error">Error</strong>
-               <span ng-show="show_status.listing_devices_error">{{show_status.listing_devices_error_text}}</span>
+            <div ng-show="settings.show_status.listing_devices" class="alert" 
+                 ng-class="settings.show_status.listing_device_class" role="alert">
+               <span ng-show="settings.show_status.listing_devices">Listing Devices...</span>
+               <strong ng-show="settings.show_status.listing_devices_ok">OK</strong>
+               <strong ng-show="settings.show_status.listing_devices_error">Error</strong>
+               <span ng-show="settings.show_status.listing_devices_error">{{show_status.listing_devices_error_text}}</span>
             </div>
             <p>
             </p>
-            <div class="panel panel-default" ng-show="show_status.listing_devices_ok" 
+            <div class="panel panel-default" ng-show="settings.show_status.listing_devices_ok" 
                  ng-repeat="device in settings.devices">
               <div class="panel-body">
                 Device: {{device.name}} Online: {{device.connected}}
