@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <title>SleepTrack</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css"/>
     
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -27,8 +28,10 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <metronicheader></metronicheader>    
-    <div ui-view></div>
+    <div class="wrapper">
+        <metronicheader></metronicheader>    
+        <div ui-view></div>
+    </div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
