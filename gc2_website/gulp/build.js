@@ -52,6 +52,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe($.sourcemaps.init())
     .pipe($.replace('../../bower_components/bootstrap-sass/assets/fonts/bootstrap/', '../fonts/'))
     .pipe($.replace('../../bower_components/font-awesome/fonts', '../fonts'))    
+    .pipe($.replace('../../bower_components/simple-line-icons/fonts', '../fonts/'))    
     .pipe($.minifyCss({ processImport: false }))
     .pipe($.sourcemaps.write('maps'))
     .pipe(cssFilter.restore)

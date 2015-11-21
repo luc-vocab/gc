@@ -7,11 +7,12 @@
   ],
   "description": "metronic bootstrap theme",
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
+    "bootstrap": "~3.3.5",
     "font-awesome": "~4.4.0",
     "jquery": "~2.1.4",
     "jquery-ui": "~1.11.4",
-    "jquery.uniform": "~2.1.2"
+    "jquery.uniform": "~2.1.2",
+    "simple-line-icons": "~2.2.3"
   },
   "main": [
     "assets/global/scripts/app.js",
