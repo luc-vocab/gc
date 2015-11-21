@@ -33,3 +33,10 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
  */
 // injector
 // endinjector
+
+
+// metronic styles
+@import 'metronic_styles/components-md.css';
+@import 'metronic_styles/plugins-md.css';
+@import 'metronic_styles/layout.css';
+@import 'metronic_styles/custom.css';
