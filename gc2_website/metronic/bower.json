@@ -16,7 +16,6 @@
   },
   "main": [
     "assets/global/scripts/app.js",
-    "assets/pages/scripts/dashboard.js",
     "assets/layouts/layout5/scripts/layout.js",
     "assets/layouts/global/scripts/quick-sidebar.js",
     
