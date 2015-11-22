@@ -2,12 +2,15 @@
 .about-text {
 
     h1 {
+        color: $gc-header-color;
         font-family: $gc-header-font;
         text-transform: uppercase;
+        margin-top: 5px;
     }
 
 
     h2 {
+        color: $gc-header-color;
         font-family: $gc-header-font;
         text-transform: uppercase;
         font-size: 150%;
@@ -19,6 +22,10 @@
         font-style: italic;
         line-height: 1.3em;
         padding-left: 1em;
+    }
+    
+    i.fa {
+        color: #525e64;
     }
     
 }
