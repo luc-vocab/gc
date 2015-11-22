@@ -1,26 +1,25 @@
 
+.about-text {
 
-.about-text h4 {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
-    padding: 14px;
+    h1 {
+        font-family: $gc-header-font;
+        text-transform: uppercase;
+    }
+
+
+    h2 {
+        font-family: $gc-header-font;
+        text-transform: uppercase;
+        font-size: 150%;
+    }
+
+    .about-quote > h3 {
+        border-color: #ccc;
+        border-left: 3px solid #ccc;
+        font-style: italic;
+        line-height: 1.3em;
+        padding-left: 1em;
+    }
+    
 }
 
-.about-text .about-quote > h3 {
-    border-color: #ccc;
-    border-left: 3px solid #ccc;
-    font-style: italic;
-    line-height: 1.3em;
-    padding-left: 1em;
-}
-
-.about-text h5 {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.sleeptrack-logo img {
-    margin-top: 20px;
-}
