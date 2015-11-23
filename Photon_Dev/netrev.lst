@@ -2,36 +2,36 @@
 (                                                                     )
 (    Allegro Netrev Import Logic                                      )
 (                                                                     )
-(    Drawing          : Proton.brd                                    )
+(    Drawing          : Photon_4Layer_shrunk.brd                      )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Sun Nov 01 20:35:27 2015                      )
+(    Date/Time        : Sun Nov 22 20:57:17 2015                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 ------ Directives ------------
 
-Ripup etch:                  No
+Ripup etch:                  Yes
 Ripup delete first segment:  No
 Ripup retain bondwire:       No
-Ripup symbols:               Always
+Ripup symbols:               IfSame
 Missing symbol has error:    No
 DRC update:                  Yes
-Schematic directory:         'C:/Users/Madison/Dropbox/Photon_Dev'
+Schematic directory:         'C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer'
 Design Directory:            '.'
-Old design name:             'C:/Users/Madison/Dropbox/Photon_Dev/Proton.brd'
-New design name:             'C:/Users/Madison/Dropbox/Photon_Dev/Proton.brd'
+Old design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_shrunk.brd'
+New design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_shrunk.brd'
 
-CmdLine: netrev -$ -i C:/Users/Madison/Dropbox/Photon_Dev -y 1 -q netrev_constraint_report.xml C:/Users/Madison/Dropbox/Photon_Dev/#Taaaabc06540.tmp
+CmdLine: netrev -$ -i C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer -x -y 2 -q netrev_constraint_report.xml C:/Users/Madison/Desktop/gc/Photon_Dev/#Taaaael07936.tmp
 
 ------ Preparing to read pst files ------
 
-Starting to read C:/Users/Madison/Dropbox/Photon_Dev/pstchip.dat 
-   Finished reading C:/Users/Madison/Dropbox/Photon_Dev/pstchip.dat (00:00:00.03)
-Starting to read C:/Users/Madison/Dropbox/Photon_Dev/pstxprt.dat 
-   Finished reading C:/Users/Madison/Dropbox/Photon_Dev/pstxprt.dat (00:00:00.00)
-Starting to read C:/Users/Madison/Dropbox/Photon_Dev/pstxnet.dat 
-   Finished reading C:/Users/Madison/Dropbox/Photon_Dev/pstxnet.dat (00:00:00.00)
+Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstchip.dat 
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstchip.dat (00:00:00.02)
+Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxprt.dat 
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxprt.dat (00:00:00.00)
+Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxnet.dat 
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxnet.dat (00:00:00.00)
 
 ------ Oversights/Warnings/Errors ------
 
@@ -60,7 +60,7 @@ PADPATH =  .
 ------ Summary Statistics ------
 
 
-netrev run on Nov 1 20:35:27 2015
+netrev run on Nov 22 20:57:17 2015
    DESIGN NAME : 'PROTON_DEV'
    PACKAGING ON Feb  9 2015 06:09:36
 
@@ -85,6 +85,6 @@ netrev run on Nov 1 20:35:27 2015
  No oversight detected
  No warning detected
 
-cpu time      0:00:47
-elapsed time  0:00:01
+cpu time      0:00:26
+elapsed time  0:00:00
 

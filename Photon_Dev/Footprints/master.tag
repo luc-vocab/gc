@@ -1,1 +1,1 @@
-microUSB.dra
+TestPoint_SMD.dra

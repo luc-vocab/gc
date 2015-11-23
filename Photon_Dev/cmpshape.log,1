@@ -1,0 +1,16 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Compose Shapes                                                   )
+(                                                                     )
+(    Drawing          : Photon_4Layer.brd                             )
+(    Software Version : 17.0P011                                      )
+(    Date/Time        : Wed Nov 18 20:56:41 2015                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+WARNING(SPMHIS-473): 1 selected items completely overlapped with segments from other selected items and have been filtered.
+current class name(ETCH)
+Find smallest gap failed. Be cautious, this may not be an error
+Retrieve closedLoop with segments (nil) failed
+A total of 1 shapes were created.

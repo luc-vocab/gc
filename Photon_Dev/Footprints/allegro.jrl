@@ -1,16 +1,43 @@
 \t (00:00:03) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:03)     Journal start - Sun Nov 01 18:08:36 2015
-\t (00:00:03)         Host=MADISON-PC User=Madison Pid=8848 CPUs=4
-\t (00:00:03) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe
+\t (00:00:03)     Journal start - Wed Nov 18 21:05:25 2015
+\t (00:00:03)         Host=MADISON-PC User=Madison Pid=5624 CPUs=4
+\t (00:00:03) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Footprints\microUSB.dra
 \t (00:00:03) 
-\t (00:00:05) Opening existing design...
-\d (00:00:05) Design opened: C:/Users/Madison/Dropbox/Photon_Dev/Footprints/microUSB.dra
-\i (00:00:05) trapsize 83
-\i (00:00:05) trapsize 81
-\i (00:00:05) trapsize 83
-\i (00:00:05) trapsize 85
-\i (00:00:05) trapsize 85
-\i (00:00:06) generaledit 
-\i (00:00:07) new 
-\i (00:00:51) newdrawfillin "P1.brd" "Board (Wizard)"
-\t (00:00:51)     Journal end - Sun Nov 01 18:09:24 2015
+\t (00:00:03) Opening existing design...
+\d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Footprints/microUSB.dra
+\i (00:00:04) trapsize 83
+\i (00:00:04) trapsize 81
+\i (00:00:04) trapsize 83
+\i (00:00:04) trapsize 85
+\i (00:00:04) trapsize 85
+\i (00:00:08) padeditdb 
+\i (00:00:10) pick grid 5.264 1.705
+\t (00:00:10) last pick:  5.406 1.590
+\i (00:00:12) setwindow form.mini
+\i (00:00:12) FORM mini pad_stack_edit  
+\i (00:00:32) setwindow pcb
+\i (00:00:32) pick grid 8.417 1.265
+\t (00:00:32) last pick:  8.268 1.272
+\i (00:00:32) zoom in 1 
+\i (00:00:32) setwindow pcb
+\i (00:00:32) zoom in 3.688 2.349
+\i (00:00:32) trapsize 42
+\i (00:00:33) zoom out 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom out 3.688 2.350
+\i (00:00:33) trapsize 85
+\i (00:00:42) pick grid 5.722 1.248
+\t (00:00:42) last pick:  5.724 1.272
+\i (00:00:42) prepopup 4.332 2.434
+\i (00:00:45) pick grid 5.806 3.926
+\t (00:00:45) last pick:  5.724 3.816
+\i (00:00:45) pick grid 4.772 2.299
+\t (00:00:45) last pick:  4.770 2.226
+\i (00:00:46) prepopup 4.772 2.299
+\i (00:00:47) pick grid 6.145 3.316
+\t (00:00:47) last pick:  6.042 3.180
+\i (00:00:50) exit 
+\e (00:00:50) Do you want to save the changes you made to microUSB.dra?
+\i (00:00:51) fillin yes 
+\t (00:00:52) Symbol 'microusb.psm' created.
+\t (00:00:52)     Journal end - Wed Nov 18 21:06:14 2015

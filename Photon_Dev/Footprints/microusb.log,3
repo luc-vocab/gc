@@ -4,13 +4,13 @@
 (                                                                     )
 (    Drawing          : microUSB.dra                                  )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Wed Nov 18 21:06:13 2015                      )
+(    Date/Time        : Sat Oct 31 16:58:30 2015                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 Create Symbol of type: PACKAGE
-    Directory = C:/Users/Madison/Desktop/gc/Photon_Dev/Footprints
+    Directory = C:/Users/Madison/Dropbox/Photon_Dev/Footprints
     Name      = microusb.psm
     User      = Madison
     Machine   = MADISON-PC
