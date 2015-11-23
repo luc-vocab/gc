@@ -20,8 +20,8 @@
         controller: 'LoginController',
         controllerAs: 'login'
       })
-      .state('realtime', {
-        url: '/realtime',
+      .state('control', {
+        url: '/control',
         templateUrl: 'app/realtime/realtime.html',
         controller: 'RealtimeController',
         controllerAs: 'realtime',

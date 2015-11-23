@@ -1,3 +1,5 @@
+/* globals angular */
+
 (function() {
   'use strict';
 
@@ -21,8 +23,10 @@
     return directive;
 
     /** @ngInject */
-    function MetronicHeaderController(moment, $state, $log) {
+    function MetronicHeaderController(moment, $scope, $state, $log) {
       var vm = this;
+      
+      $scope.$state = $state;
 
     }
   }
