@@ -12,7 +12,7 @@
       // We can catch the error thrown when the $requireAuth promise is rejected
       // and redirect the user back to the home page
       if (error === "AUTH_REQUIRED") {
-        $log.info("authentication required");
+        $log.info("authentication required", toState, toParams);
         $state.go("login");
       }
     });    

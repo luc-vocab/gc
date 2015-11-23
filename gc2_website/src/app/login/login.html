@@ -1,33 +1,51 @@
-<div class="container">
+<div class="container-fluid">
+  <div class="page-content">
 
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+    <!--<div class="row">-->
+    <!--  <div class="col-md-12">-->
+    <!--    <h2>Login</h2>-->
+
+
+    <!--    <form class="form-inline" ng-submit="login.login()">-->
+    <!--      <div class="form-group">-->
+    <!--        <label class="sr-only" for="exampleInputEmail3">Email address</label>-->
+    <!--        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" ng-model="login.form_data.login">-->
+    <!--      </div>-->
+    <!--      <div class="form-group">-->
+    <!--        <label class="sr-only" for="exampleInputPassword3">Password</label>-->
+    <!--        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password" ng-model="login.form_data.password">-->
+    <!--      </div>-->
+    <!--      <button type="submit" class="btn btn-default">Sign in</button>-->
+    <!--    </form>-->
+    <!--  </div>-->
+    <!--</div>-->
+
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+        <h1>Login</h1>
+        <p>Login with your SleepTrack email and password.</p>
+        
+        <form role="form" ng-submit="login.login()">
+          <div class="form-body">
+            <div class="form-group form-md-line-input form-md-floating-label has-info">
+              <input type="email" id="form_control_1" class="form-control" ng-model="login.form_data.login">
+              <label for="form_control_1">Enter Email Address</label>
+            </div>
+            <div class="form-group form-md-line-input form-md-floating-label has-info">
+              <input type="password" id="form_control_2" class="form-control" ng-model="login.form_data.password">
+              <label for="form_control_2">Enter Password</label>
+            </div>            
+          
+          </div>
+          <div class="form-actions noborder text-center">
+            <button class="btn default" type="button">Cancel</button>
+            <button class="btn default" type="button" ng-click="login.logout()">Logout</button>
+            <button class="btn blue" type="button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
   </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Login</h2>
-            
-
-            <form class="form-inline" ng-submit="login.login()">
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" ng-model="login.form_data.login">
-              </div>
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password" ng-model="login.form_data.password">
-              </div>
-              <button type="submit" class="btn btn-default">Sign in</button>
-            </form>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-md-12">
-            <button class="btn btn-default" ng-click="login.logout()">Logout</button>
-        </div>
-    </div>
-    
-
 </div>
