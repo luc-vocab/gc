@@ -1,6 +1,6 @@
 \t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:01)     Journal start - Sun Nov 22 22:54:23 2015
-\t (00:00:01)         Host=MADISON-PC User=Madison Pid=8004 CPUs=4
+\t (00:00:01)     Journal start - Sun Nov 22 22:57:55 2015
+\t (00:00:01)         Host=MADISON-PC User=Madison Pid=7780 CPUs=4
 \t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Photon_4Layer_shrunk.brd
 \t (00:00:01) 
 \t (00:00:03) Opening existing design...
@@ -11,33 +11,28 @@
 \i (00:00:03) trapsize 2521
 \i (00:00:03) trapsize 2521
 \i (00:00:04) placementedit 
-\i (00:00:04) zoom out 1 
-\i (00:00:04) setwindow pcb
-\i (00:00:04) zoom out 123.84 -201.65
-\i (00:00:04) trapsize 5042
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in -750.89 -468.86
-\i (00:00:05) trapsize 2521
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in -826.51 -453.74
-\i (00:00:05) trapsize 1260
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in -826.50 -453.73
-\i (00:00:05) trapsize 630
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in -826.50 -451.21
-\i (00:00:05) trapsize 315
-\i (00:00:06) zoom out 1 
-\i (00:00:06) setwindow pcb
-\i (00:00:06) zoom out -826.49 -451.21
-\i (00:00:06) trapsize 630
-\i (00:00:06) zoom out 1 
-\i (00:00:06) setwindow pcb
-\i (00:00:06) zoom out -826.50 -451.21
-\i (00:00:06) trapsize 1260
-\i (00:00:08) exit 
-\t (00:00:09)     Journal end - Sun Nov 22 22:54:31 2015
+\i (00:00:12) step out 
+\i (00:00:17) setwindow form.step_out
+\i (00:00:17) FORM step_out elec_drill YES 
+   (00:00:17) The STEP file size will increase dramatically to include electrical holes.
+\i (00:00:20) fillin confirm
+\i (00:00:22) FORM step_out external_copper YES 
+   (00:00:22) The STEP file size will increase dramatically to include external copper.
+\i (00:00:23) fillin confirm
+\i (00:00:25) FORM step_out bare_board YES 
+\i (00:00:29) FORM step_out mapped_pkg YES 
+\i (00:00:29) FORM step_out unmapped_pkg YES 
+\i (00:00:35) FORM step_out browse  
+\i (00:00:54) fillin "C:\Users\Madison\Desktop\gc\Photon_Dev\3D Model\Photon_4Layer_shrunk.stp"
+\i (00:01:02) FORM step_out done  
+\t (00:01:02) Starting Exporting STEP File...
+\t (00:01:04) STEP output completed.
+\i (00:01:10) FORM step_out cancel  
+\i (00:01:10) setwindow pcb
+\i (00:01:10) placementedit 
+\i (00:01:11) pick grid 28.05 1497.35
+\t (00:01:11) last pick:  28.08 1497.34
+\i (00:01:13) exit 
+\e (00:01:13) Do you want to save the changes you made to Photon_4Layer_shrunk.brd?
+\i (00:01:15) fillin yes 
+\t (00:01:15)     Journal end - Sun Nov 22 22:59:10 2015
