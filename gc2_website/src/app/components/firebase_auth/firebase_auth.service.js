@@ -18,7 +18,7 @@
         return auth;
     };
     
-    this.login = function(username, password){
+    this.login = function(username, password, defer){
         $log.info("logging in with username: ", username);
         auth.$authWithPassword({
             email: username,
@@ -29,8 +29,10 @@
             user_ref.update({
                 last_login: Firebase.ServerValue.TIMESTAMP
             });
+            defer.resolve();
         }).catch(function(error) {
             $log.error("Authentication failed:", error);
+            defer.reject(error.message);
         });        
         
     };
