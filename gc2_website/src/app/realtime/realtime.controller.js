@@ -1,6 +1,7 @@
 
 /* globals Highcharts: false */
 /* globals spark: false */
+/* globals angular */
 
 (function() {
   'use strict';
@@ -105,17 +106,39 @@
         $log.info("gauge options: ", vm.emgGaugeOptions);
         angular.element('#container-emg').highcharts(vm.emgGaugeOptions);
                 
-        spark_setup();
+        vm.user_obj.$loaded().then(function()  {
+            vm.spark_setup();            
+        });
     }
     
-    function spark_setup() {
+    vm.device_setup = function() {
+        var device_name = vm.user_obj.device_name;
+        if(device_name) {
+            // we have a device name
+            spark.getDevice(vm.user_obj.device_name, function(err, device) {
+                if(err) {
+                    $log.error("could not get device object for device ", device_name);
+                } else {
+                    $log.info("got device object: ", device);
+                    vm.current_device = device;
+                }
+            });
+        
+        } else {
+            // no device selected - go to settings  
+            $log.error("no device selected");
+        };
+        
+    };
+    
+    vm.spark_setup = function() {
         vm.user_obj.$loaded().then(function(){
             $log.info("spark access token: ", vm.user_obj.particle_access_token);
             // login to spark
             spark.login({accessToken: vm.user_obj.particle_access_token}).then(
                 function(token){
                     $log.info("spark login successful ", token);
-                    spark_list_devices();
+                    vm.device_setup();
                 },
                 function(err) {
                     $log.error("spark login error: ", err);
@@ -124,31 +147,9 @@
         });        
     }
     
-    function spark_list_devices() {
-        var devicesPr = spark.listDevices();
-        devicesPr.then(
-          function(devices){
-            $log.info('Devices: ', devices);
-            vm.devices = devices;
-            if(vm.devices.length == 1) {
-                vm.current_device = vm.devices[0];
-                device_manager.create_device_id(vm.current_device, vm.uid).
-                then(function(device_id) {
-                    vm.current_device_id = device_id;
-                    $log.info("current_device_id: ", vm.current_device_id);
-                });
-            }
-            $scope.$apply();
-          },
-          function(err) {
-            $log.error('List devices call failed: ', err);
-          }
-        );    
-    }
-    
     vm.enable_realtime =  function() {
         vm.current_device.callFunction('set_mode', 'realtime');
-        var device_ref = device_manager.get_device_ref(vm.current_device_id);
+        var device_ref = device_manager.get_device_ref(vm.user_obj.device_id);
         device_ref.on("value", function(snapshot){
             var data = snapshot.val();
             $log.info("received data: ", data);

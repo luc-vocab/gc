@@ -1,31 +1,30 @@
-<div class="container">
+<div class="container-fluid">
+    <div class="page-content">
 
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
-  </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Realtime Control</h2>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-md-12"> 
-            <h3>Devices</h3>
-            <div>
-                Current device: Name: {{realtime.current_device.name}} Connected: {{realtime.current_device.connected}}
-                <button class="btn btn-default" ng-click="realtime.enable_realtime()">Realtime Mode</button>
-                <button class="btn btn-default" ng-click="realtime.standby()">Standby Mode</button>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Realtime Control</h1>
             </div>
         </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-md-12">
-            <div id="container-emg"></div>
-        </div>    
-    </div>
-        
 
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Devices</h3>
+                <div>
+                    Current device: Name: {{realtime.current_device.name}} Connected: {{realtime.current_device.connected}}
+                    <button class="btn btn-default" ng-click="realtime.enable_realtime()">Realtime Mode</button>
+                    <button class="btn btn-default" ng-click="realtime.standby()">Standby Mode</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="container-emg"></div>
+            </div>
+        </div>
+
+    </div>
 </div>
