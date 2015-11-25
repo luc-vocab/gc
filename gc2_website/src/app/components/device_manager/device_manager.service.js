@@ -37,32 +37,33 @@
             // device id should be unique
             var device_id = tentative_device_id;
             $log.info("device_id: ", device_id);
-            // create firebase entry
-            var device_ref = devices_ref.child(device_id);
-            device_ref.set({
-                owner_uid: uid,
-                device_name: device.name
-            });
-            
-            var user_ref = firebase_auth.get_user_ref(uid);
-            user_ref.update({
-                device_name: device.name,
-                device_id: device_id
-            })
-            
+
             // call spark function to set device id
             // calldevice_id function
             device.callFunction('device_id', device_id).then(
             function(result){
                 $log.info("device_id result: ", result);
+                $log.info("associated device ", device.name, " with id: ", device_id);
+                
+                // create firebase entry
+                var device_ref = devices_ref.child(device_id);
+                device_ref.set({
+                    owner_uid: uid,
+                    device_name: device.name
+                });
+                
+                var user_ref = firebase_auth.get_user_ref(uid);
+                user_ref.update({
+                    device_name: device.name,
+                    device_id: device_id
+                });                
+                
+                defer.resolve(device_id);
             },
             function(error){
                 $log.info("device_id error: ", error);
+                defer.reject(error.message);
             });
-
-            $log.info("associated device ", device.name, " with id: ", device_id);
-            
-            defer.resolve(device_id);
 
         });
         

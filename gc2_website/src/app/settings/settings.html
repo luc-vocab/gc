@@ -33,6 +33,9 @@
                     <span ng-show="settings.show_status.listing_devices_error">{{show_status.listing_devices_error_text}}</span>
                     <button class="btn blue pull-right" ng-click="settings.list_devices()"><i class="fa fa-refresh"></i>Refresh <i class="fa fa-cog fa-spin ng-hide" ng-show="settings.show_status.refresh_spinner"></i></button>
                 </div>
+                <div class="alert alert-danger" ng-show="settings.show_status.select_device_error">
+                  <strong><i class="fa fa-exclamation-triangle"></i> Error Selecting Device: </strong> {{settings.show_status.select_device_error_text}}
+                </div>                
                 <p>
                     Click to select your device below
                 </p>
@@ -43,7 +46,9 @@
                         <i class="fa fa-check"></i> Selected
                     </div>                    
                     <div class="panel-heading">
-                        <h3 class="panel-title">Device: <strong>{{device.name}}</strong></h3>
+                        <h3 class="panel-title">Device: <strong>{{device.name}}</strong>
+                        <span ng-show="device.selecting_progress">Selecting <i class="fa fa-spin fa-cog" ng-show="true"></i></span>
+                        </h3>
                     </div>
                     <div class="panel-body"> 
                         Online: <i class="fa fa-check text-success" ng-show="device.connected"></i>

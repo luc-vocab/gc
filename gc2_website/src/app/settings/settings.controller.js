@@ -94,7 +94,19 @@
       if(selected_device.running_gc_firmware) {
         // proceed
         $log.info("selected device: ", selected_device.name);
-        device_manager.select_device(selected_device, currentAuth.uid);
+        vm.devices[index].selecting_progress = true;
+        // $scope.$apply();
+        
+        device_manager.select_device(selected_device, currentAuth.uid).then(
+        function(device_id){
+          vm.show_status.select_device_error = false;
+          vm.devices[index].selecting_progress = false;
+        }, function(error) {
+          $log.error("error selecting device: ", error);
+          vm.show_status.select_device_error = true;
+          vm.show_status.select_device_error_text = error;
+          vm.devices[index].selecting_progress = false;
+        })
       }
       
     };
