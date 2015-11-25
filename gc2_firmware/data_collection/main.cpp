@@ -11,7 +11,11 @@ LSM9DS1 imu;
 #define LSM9DS1_M	0x1E
 #define LSM9DS1_AG	0x6B
 
+#define FIRMWARE_VERSION 1
+
 GcClient gc_client;
+
+int firmware_version = FIRMWARE_VERSION;
 
 #define MANAGE_WIFI true // whether to switch off wifi in batch mode
 #define DATA_TRANSFER_DELAY 500
@@ -73,6 +77,8 @@ void setup() {
   Particle.function("device_id", set_device_id);
   Particle.function("device_util", device_util);
   Particle.function("set_mode", set_mode);
+
+  Particle.variable("gc_version", firmware_version);
 
   gc_client.configure("dev2.photozzap.com", 7001, 42);
 
