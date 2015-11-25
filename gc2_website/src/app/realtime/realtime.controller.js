@@ -14,9 +14,7 @@
   function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, currentAuth, firebase_auth, device_manager) {
     var vm = this;
 
-    vm.channel = "sleep-track-data-luc";
-    
-   
+
     vm.emgGaugeOptions = {
         chart: {
             type: 'solidgauge'
@@ -106,44 +104,60 @@
         $log.info("gauge options: ", vm.emgGaugeOptions);
         angular.element('#container-emg').highcharts(vm.emgGaugeOptions);
                 
-        vm.user_obj.$loaded().then(function()  {
-            vm.spark_setup();            
-        });
+        vm.spark_setup();            
     }
     
     vm.device_setup = function() {
         var device_name = vm.user_obj.device_name;
-        if(device_name) {
+        var device_id = vm.user_obj.device_id;
+        if(device_name && device_id) {
             // we have a device name
             spark.getDevice(vm.user_obj.device_name, function(err, device) {
                 if(err) {
                     $log.error("could not get device object for device ", device_name);
+                    vm.error_message = "Could not get device object for device [" + device_name + "]";
+                    vm.show_error = true;                    
+                    $scope.$apply();
                 } else {
                     $log.info("got device object: ", device);
                     vm.current_device = device;
+                    vm.realtime_ready = true;
+                    $scope.$apply();
                 }
             });
         
         } else {
             // no device selected - go to settings  
             $log.error("no device selected");
+            vm.error_message = "No device selected";
+            vm.show_error = true;
+            $scope.$apply();
         };
         
     };
     
     vm.spark_setup = function() {
         vm.user_obj.$loaded().then(function(){
-            $log.info("spark access token: ", vm.user_obj.particle_access_token);
-            // login to spark
-            spark.login({accessToken: vm.user_obj.particle_access_token}).then(
-                function(token){
-                    $log.info("spark login successful ", token);
-                    vm.device_setup();
-                },
-                function(err) {
-                    $log.error("spark login error: ", err);
-                }
-            );
+            var access_token = vm.user_obj.particle_access_token;
+            if(access_token) {
+                $log.info("spark access token: ", access_token);
+                // login to spark
+                spark.login({accessToken: access_token}).then(
+                    function(token){
+                        $log.info("spark login successful ", token);
+                        vm.device_setup();
+                    },
+                    function(err) {
+                        $log.error("spark login error: ", err);
+                        vm.error_message = "Particle login error: " + err;
+                        vm.show_error = true;   
+                        $scope.$apply();
+                    }
+                );                
+            } else {
+                vm.error_message = "No Particle Access Token";
+                vm.show_error = true;
+            }
         });        
     }
     

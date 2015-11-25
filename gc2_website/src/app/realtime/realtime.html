@@ -8,22 +8,43 @@
             </div>
         </div>
 
-
         <div class="row">
-            <div class="col-md-12">
-                <h3>Devices</h3>
-                <div>
-                    Current device: Name: {{realtime.current_device.name}} Connected: {{realtime.current_device.connected}}
-                    <button class="btn btn-default" ng-click="realtime.enable_realtime()">Realtime Mode</button>
-                    <button class="btn btn-default" ng-click="realtime.standby()">Standby Mode</button>
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12"
+                 ng-show="realtime.show_error">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>
+                            <i class="fa fa-exclamation-triangle"></i>
+                            Setup Not Complete</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body"> 
+                        {{realtime.error_message}}
+                        <a href="#/settings"><button class="btn blue pull-right"><i class="fa fa-cog"></i> Go To Settings</button></a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div id="container-emg"></div>
+        <div ng-show="realtime.realtime_ready">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Devices</h3>
+                    <div>
+                        Current device: Name: {{realtime.current_device.name}} Connected: {{realtime.current_device.connected}}
+                        <button class="btn btn-default" ng-click="realtime.enable_realtime()">Realtime Mode</button>
+                        <button class="btn btn-default" ng-click="realtime.standby()">Standby Mode</button>
+                    </div>
+                </div>
             </div>
+    
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="container-emg"></div>
+                </div>
+            </div>
+        
         </div>
 
     </div>
