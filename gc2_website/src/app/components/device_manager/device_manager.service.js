@@ -9,7 +9,7 @@
       .service('device_manager', device_manager);
 
   /** @ngInject */
-  function device_manager(firebase_root, $log, $q) {
+  function device_manager(firebase_root, firebase_auth, $log, $q) {
     var root_ref = new Firebase(firebase_root);
     var devices_ref = root_ref.child('devices');
     
@@ -23,7 +23,7 @@
         return devices_ref.child(device_id);
     };
     
-    this.create_device_id = function(device, uid) {
+    this.select_device = function(device, uid) {
         var defer = $q.defer();
     
         // get snapshot under devices
@@ -40,8 +40,15 @@
             // create firebase entry
             var device_ref = devices_ref.child(device_id);
             device_ref.set({
-                owner_uid: uid
+                owner_uid: uid,
+                device_name: device.name
             });
+            
+            var user_ref = firebase_auth.get_user_ref(uid);
+            user_ref.update({
+                device_name: device.name,
+                device_id: device_id
+            })
             
             // call spark function to set device id
             // calldevice_id function
