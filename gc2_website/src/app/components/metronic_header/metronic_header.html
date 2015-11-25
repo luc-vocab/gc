@@ -45,7 +45,7 @@
                     <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('home'),
                                                                 open:     $state.includes('home'),
                                                                 selected: $state.includes('home')}">
-                        <a href="#/home" class="text-uppercase" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <a href="#/home" class="text-uppercase">
                             <i class="fa fa-home"></i>Home</a>
                         <ul class="dropdown-menu dropdown-menu-fw">
                             <li class="active">
@@ -63,22 +63,41 @@
                     <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('control'),
                                                                 open:     $state.includes('control'),
                                                                 selected: $state.includes('control')}">
-                        <a href="#/control" class="text-uppercase" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <a href="#/control" class="text-uppercase">
                             <i class="fa fa-power-off"></i>Control</a>
+                        <ul class="dropdown-menu dropdown-menu-fw">
+                            <li class="active">
+                                <a href="index.html">
+                                    <i class="fa fa-bolt"></i> Realtime Mode
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="dashboard_2.html">
+                                    <i class="fa fa-bed"></i> Night Mode</a>
+                            </li>
+                        </ul>                            
 
                     </li>
                     <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('data'),
                                                                 open:     $state.includes('data'),
                                                                 selected: $state.includes('data')}">
-                        <a href="#/data" class="text-uppercase" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <a href="#/data" class="text-uppercase">
                             <i class="fa fa-bar-chart"></i>Data</a>
 
                     </li>
                     <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('settings'),
                                                                 open:     $state.includes('settings'),
                                                                 selected: $state.includes('settings')}">
-                        <a href="#/settings" class="text-uppercase" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <a href="#/settings" class="text-uppercase">
                             <i class="fa fa-cog"></i>Settings</a>
+                        <ul class="dropdown-menu dropdown-menu-fw">
+                            <li class="active">
+                                <a href="index.html">
+                                    <i class="fa fa-cog"></i>Default Settings
+                                </a>
+                            </li>
+                        </ul>                            
 
                     </li>
 

@@ -1,4 +1,5 @@
 /* globals Firebase: false */
+/* globals angular */
 
 (function() {
   'use strict';

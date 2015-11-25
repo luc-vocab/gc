@@ -8,7 +8,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-10 col-sm-offset-1 col-xs-12">
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
                 <h2>Particle Access Token</h2>
                 <p>Allows access to your Sleeptrack device</p>
                 <form class="form-inline">
@@ -24,21 +24,42 @@
                 </p>
             </div>
             
-            <div class="col-lg-4 col-md-6 col-sm-10 col-sm-offset-1 col-xs-12">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 <h2>Devices</h2>
                 <div ng-show="settings.show_status.listing_devices" class="alert" ng-class="settings.show_status.listing_device_class" role="alert">
                     <span ng-show="settings.show_status.listing_devices">Listing Devices...</span>
                     <strong ng-show="settings.show_status.listing_devices_ok">OK</strong>
                     <strong ng-show="settings.show_status.listing_devices_error">Error</strong>
                     <span ng-show="settings.show_status.listing_devices_error">{{show_status.listing_devices_error_text}}</span>
+                    <button class="btn blue pull-right" ng-click="settings.list_devices()"><i class="fa fa-refresh"></i>Refresh <i class="fa fa-cog fa-spin ng-hide" ng-show="settings.show_status.refresh_spinner"></i></button>
                 </div>
+                <div class="alert alert-danger" ng-show="settings.show_status.select_device_error">
+                  <strong><i class="fa fa-exclamation-triangle"></i> Error Selecting Device: </strong> {{settings.show_status.select_device_error_text}}
+                </div>                
                 <p>
+                    Click to select your device below
                 </p>
-                <div class="panel panel-default" ng-show="settings.show_status.listing_devices_ok" ng-repeat="device in settings.devices">
-                    <div class="panel-body">
-                        Device: {{device.name}} Online: {{device.connected}}
+                <div class="panel panel-info mt-element-ribbon" style="margin-bottom: 10px;" ng-show="settings.show_status.listing_devices_ok" ng-repeat="device in settings.devices"
+                     ng-click="settings.select_device($index)">
+                    <div class="ribbon ribbon-vertical-right ribbon-shadow ribbon-color-info uppercase blue"
+                         ng-show="settings.user_obj.device_name === device.name">
+                        <i class="fa fa-check"></i> Selected
+                    </div>                    
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Device: <strong>{{device.name}}</strong>
+                        <span ng-show="device.selecting_progress">Selecting <i class="fa fa-spin fa-cog" ng-show="true"></i></span>
+                        </h3>
                     </div>
-                </div>
+                    <div class="panel-body"> 
+                        Online: <i class="fa fa-check text-success" ng-show="device.connected"></i>
+                                <i class="fa fa-times text-danger" ng-show="! device.connected"></i>
+                        SleepTrack firmware: 
+                            <span ng-show="! device.running_gc_firmware"><i class="fa fa-times text-danger"></i> <i>Cannot select device</i></span>
+                            <span ng-show="device.running_gc_firmware"><strong>{{device.gc_firmware_version}}</strong><i class="fa fa-check text-success"></i></span>
+                    </div>
+
+                </div>                
+
             </div>
             
         </div>
