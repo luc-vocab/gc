@@ -42,11 +42,33 @@ int device_util(String command) {
   if(command=="test_serial") {
     DEBUG_LOG("serial test");
     return 0;
-  }
-
-  if(command=="setup_serial") {
+  } else if(command=="setup_serial") {
     Serial.begin(9600);
     return 0;
+  } else if(command=="test_tone") {
+    tone(A4, 600, 500);
+  } else if(command.startsWith("cfg=")) {
+    // format: cfg=dev2.photozzap.com,7001,2341234
+    int i = command.indexOf("=");
+    int j = command.indexOf(",");
+    int k = command.indexOf(",", j+1);
+
+    if(i == -1 || j == -1 || k == -1) {
+      DEBUG_LOG("config parsing error: " +  command);
+    }
+    // DEBUG_LOG(String(i) + " " + String(j) + " " + String(k) + " " + String(l));
+
+    // substring between i and j is hostname
+    String hostname = command.substring(i+1,j);
+    String port = command.substring(j+1,k);
+    String deviceId = command.substring(k+1);
+
+    DEBUG_LOG("config: hostname: " + hostname + " port: " + port + " deviceId: " + deviceId);
+
+    tone(A4, 600, 150);
+    delay(150);
+    tone(A4, 900, 150);
+
   }
 
 
@@ -55,6 +77,7 @@ int device_util(String command) {
 
 void setup() {
   pinMode(A0, INPUT);
+  pinMode(A4, OUTPUT);
 
   if (serial_debug) {
     Serial.begin(9600);
