@@ -38,6 +38,13 @@ int set_device_id(String command) {
   return 0;
 }
 
+void validation_tone() {
+  tone(A4, 600, 150);
+  delay(150);
+  tone(A4, 900, 150);
+}
+
+
 int device_util(String command) {
   if(command=="test_serial") {
     DEBUG_LOG("serial test");
@@ -64,10 +71,7 @@ int device_util(String command) {
     String deviceId = command.substring(k+1);
 
     DEBUG_LOG("config: hostname: " + hostname + " port: " + port + " deviceId: " + deviceId);
-
-    tone(A4, 600, 150);
-    delay(150);
-    tone(A4, 900, 150);
+    validation_tone();
 
   }
 
@@ -110,6 +114,8 @@ void setup() {
   lipo.quickStart();
 
   DEBUG_LOG("started up");
+
+  validation_tone();
 
 }
 
