@@ -5,12 +5,24 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Realtime Control</h1>
+                <p>Realtime mode is for testing your device and verifying electrode placement.
+                Your device will be continously transmitting with WiFi on. Data will not be persisted
+                into stats. <strong>Remember to go back to standby mode after testing.</strong>
+                </p>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12"
-                 ng-show="realtime.show_error">
+        <div class="row" ng-show="realtime.show_loading">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+
+                <div class="alert alert-info">
+                    <strong><i class="fa fa-spin fa-cog"></i> Loading</strong> Please wait
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="realtime.show_error">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
                 <div class="panel panel-danger">
                     <div class="panel-heading">
                         <h3 class="panel-title"><strong>
@@ -18,15 +30,57 @@
                             Setup Not Complete</strong>
                         </h3>
                     </div>
-                    <div class="panel-body"> 
+                    <div class="panel-body">
                         {{realtime.error_message}}
-                        <a href="#/settings"><button class="btn blue pull-right"><i class="fa fa-cog"></i> Go To Settings</button></a>
+                        <a href="#/settings">
+                            <button class="btn blue pull-right"><i class="fa fa-cog"></i> Go To Settings</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" ng-show="realtime.show_device_not_connected">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>
+                            <i class="fa fa-exclamation-triangle"></i>
+                            Device Not Connected</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        Device <strong>{{realtime.user_obj.device_name}}</strong> is not connected. Please turn it on and try again.
+                        <button class="btn blue pull-right" ng-click="realtime.device_setup()"><i class="fa fa-refresh"></i> Refresh</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div ng-show="realtime.realtime_ready">
+
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <strong><i class="fa fa-check"></i>
+                                {{realtime.current_device.name}}</strong>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            Device ready.
+                            <div class="btn-toolbar pull-right">
+                                <div class="btn-group btn-group-solid margin-bottom-10">
+                                    <button class="btn blue" type="button" ng-click="realtime.enable_realtime()">Realtime Mode<i class="fa fa-spin fa-cog" ng-show="realtime.show_enable_realtime_spinner"></i></Mode></button>
+                                    <button class="btn" type="button">Standby</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-md-12">
@@ -38,13 +92,13 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="row">
                 <div class="col-md-12">
                     <div id="container-emg"></div>
                 </div>
             </div>
-        
+
         </div>
 
     </div>

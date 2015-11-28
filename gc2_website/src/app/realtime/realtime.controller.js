@@ -104,10 +104,15 @@
         $log.info("gauge options: ", vm.emgGaugeOptions);
         angular.element('#container-emg').highcharts(vm.emgGaugeOptions);
                 
+        vm.show_loading = true;
         vm.spark_setup();            
     }
     
     vm.device_setup = function() {
+        vm.show_error = false;
+        vm.show_device_not_connected = false;
+        vm.show_loading = true;
+        
         var device_name = vm.user_obj.device_name;
         var device_id = vm.user_obj.device_id;
         if(device_name && device_id) {
@@ -117,13 +122,19 @@
                     $log.error("could not get device object for device ", device_name);
                     vm.error_message = "Could not get device object for device [" + device_name + "]";
                     vm.show_error = true;                    
-                    $scope.$apply();
                 } else {
                     $log.info("got device object: ", device);
-                    vm.current_device = device;
-                    vm.realtime_ready = true;
-                    $scope.$apply();
+                    if(! device.connected) {
+                        $log.info("device not connected: ", device.name);
+                        // indicate that device is not connected
+                        vm.show_device_not_connected = true;
+                    } else {
+                        vm.current_device = device;
+                        vm.realtime_ready = true;
+                    }
                 }
+                vm.show_loading = false;
+                $scope.$apply();                
             });
         
         } else {
@@ -131,6 +142,7 @@
             $log.error("no device selected");
             vm.error_message = "No device selected";
             vm.show_error = true;
+            vm.show_loading = false;
             $scope.$apply();
         };
         
@@ -151,23 +163,34 @@
                         $log.error("spark login error: ", err);
                         vm.error_message = "Particle login error: " + err;
                         vm.show_error = true;   
+                        vm.show_loading = false;
                         $scope.$apply();
                     }
                 );                
             } else {
                 vm.error_message = "No Particle Access Token";
                 vm.show_error = true;
+                vm.show_loading = false;
             }
         });        
     }
     
     vm.enable_realtime =  function() {
-        vm.current_device.callFunction('set_mode', 'realtime');
+        vm.show_enable_realtime_spinner = true;
+        
         var device_ref = device_manager.get_device_ref(vm.user_obj.device_id);
         device_ref.on("value", function(snapshot){
             var data = snapshot.val();
             $log.info("received data: ", data);
             update_emg_value(data.emg_value);
+        });        
+        
+        vm.current_device.callFunction('set_mode', 'realtime', function(err,data) {
+            if(err) {
+                $log.error("could not enable realtime mode");
+            } 
+            vm.show_enable_realtime_spinner = false;
+            $scope.$apply();
         });
     };
     
