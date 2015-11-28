@@ -1,23 +1,17 @@
 
 // purpose: collect data and upload to gc2 server at 5mn intervals
 
-#include "SparkFunMAX17043.h" // Include the SparkFun MAX17043 library, battery gauge
-#include "SparkFunLSM9DS1.h" // include Sparkfun LSM9DS1 library, IMU
-#include "math.h"
 #include "gc_client.h"
+#include "gc_data.h"
 #include "common.h"
-
-LSM9DS1 imu;
-#define LSM9DS1_M	0x1E
-#define LSM9DS1_AG	0x6B
 
 #define FIRMWARE_VERSION 1
 
 GcClient gc_client;
+GcData gc_data;
 
 int firmware_version = FIRMWARE_VERSION;
 
-#define MANAGE_WIFI true // whether to switch off wifi in batch mode
 #define DATA_TRANSFER_DELAY 500
 #define COLLECT_DATA_FREQUENCY 250      // 250ms
 
@@ -80,8 +74,6 @@ int device_util(String command) {
 }
 
 void setup() {
-  pinMode(A0, INPUT);
-  pinMode(A4, OUTPUT);
 
   if (serial_debug) {
     Serial.begin(9600);
@@ -90,16 +82,7 @@ void setup() {
     DEBUG_LOG("serial setup OK");
   }
 
-
-  // IMU setup
-  imu.settings.device.commInterface = IMU_MODE_I2C;
-  imu.settings.device.mAddress = LSM9DS1_M;
-  imu.settings.device.agAddress = LSM9DS1_AG;
-
-  if (!imu.begin())
-  {
-    DEBUG_LOG("Failed to communicate with LSM9DS1.");
-  }
+  gc_data.init(&gc_client);
 
   Particle.function("device_id", set_device_id);
   Particle.function("device_util", device_util);
@@ -108,10 +91,6 @@ void setup() {
   Particle.variable("gc_version", firmware_version);
 
   gc_client.configure("dev2.photozzap.com", 7001, 42);
-
-  // setup battery gauge
-  lipo.begin();
-  lipo.quickStart();
 
   DEBUG_LOG("started up");
 
@@ -138,72 +117,13 @@ int set_mode(String command) {
   return 0;
 }
 
-void report_battery_charge() {
-  gc_client.battery_charge(lipo.getSOC());
-}
-
 void report_stats() {
   DEBUG_LOG("reporting stats");
   Particle.publish("upload_stats", gc_client.get_stats());
 }
 
 
-float get_gyro_max() {
-  // retrieve the highest gyro rate on 3 axes
-  imu.readGyro();
-  float gyro_x = imu.calcGyro(imu.gx);
-  float gyro_y = imu.calcGyro(imu.gy);
-  float gyro_z = imu.calcGyro(imu.gz);
-
-  return max(max(gyro_x, gyro_y), gyro_z);
-}
-
-void get_accel(float *accel_values) {
-  imu.readAccel();
-  accel_values[0] = imu.calcAccel(imu.ax);
-  accel_values[1] = imu.calcAccel(imu.ay);
-  accel_values[2] = imu.calcAccel(imu.az);
-}
-
-void collect_data() {
-  uint16_t emg_value = analogRead(A0);
-  float gyro_max = get_gyro_max();
-  float accel_values[3];
-  get_accel(accel_values);
-
-  float accel_x = accel_values[0];
-  float accel_y = accel_values[1];
-  float accel_z = accel_values[2];
-
-  gc_client.add_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
-
-  if(gc_client.need_upload()){
-    DEBUG_LOG("need to upload batch");
-    // get battery data
-    report_battery_charge();
-
-    // turn on WiFi
-    if(MANAGE_WIFI) {
-      DEBUG_LOG("enabling wifi");
-      WiFi.on();
-    }
-    DEBUG_LOG("wait for wifi to be available");
-    // wait for wifi to be available
-    waitFor(WiFi.ready, WIFI_MAX_WAIT);
-    DEBUG_LOG("wifi available");
-
-    gc_client.upload_batch();
-
-    // turn off wifi
-    if(MANAGE_WIFI) {
-        DEBUG_LOG("disabling wifi");
-        WiFi.off();
-    }
-
-  }
-}
-
 void loop() {
-  collect_data();
+  gc_data.collect_data();
   delay(COLLECT_DATA_FREQUENCY);
 }
