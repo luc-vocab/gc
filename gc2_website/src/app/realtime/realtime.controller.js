@@ -176,12 +176,21 @@
     }
     
     vm.enable_realtime =  function() {
-        vm.current_device.callFunction('set_mode', 'realtime');
+        vm.show_enable_realtime_spinner = true;
+        
         var device_ref = device_manager.get_device_ref(vm.user_obj.device_id);
         device_ref.on("value", function(snapshot){
             var data = snapshot.val();
             $log.info("received data: ", data);
             update_emg_value(data.emg_value);
+        });        
+        
+        vm.current_device.callFunction('set_mode', 'realtime', function(err,data) {
+            if(err) {
+                $log.error("could not enable realtime mode");
+            } 
+            vm.show_enable_realtime_spinner = false;
+            $scope.$apply();
         });
     };
     
