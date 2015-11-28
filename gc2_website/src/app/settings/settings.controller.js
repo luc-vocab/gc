@@ -20,6 +20,7 @@
         // subscribe to user object
         var user_ref = firebase_auth.get_user_ref(currentAuth.uid);
         vm.user_obj = $firebaseObject(user_ref);
+        vm.servers_obj = $firebaseObject(device_manager.get_servers_ref());
         
         vm.user_obj.$loaded(function(){
             vm.verify_token();
@@ -97,7 +98,7 @@
         vm.devices[index].selecting_progress = true;
         // $scope.$apply();
         
-        device_manager.select_device(selected_device, currentAuth.uid).then(
+        device_manager.select_device(selected_device, currentAuth.uid, vm.servers_obj[vm.user_obj.server]).then(
         function(device_id){
           vm.show_status.select_device_error = false;
           vm.devices[index].selecting_progress = false;
@@ -109,6 +110,11 @@
         })
       }
       
+    };
+    
+    vm.select_server = function(server_key) {
+      vm.user_obj.server = server_key;
+      vm.user_obj.$save();
     };
     
     vm.verify_token = function() {

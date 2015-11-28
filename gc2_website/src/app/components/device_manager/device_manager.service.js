@@ -1,5 +1,6 @@
 /* globals Firebase: false */
 /* globals spark: false */
+/* globals angular */
 
 (function() {
   'use strict';
@@ -12,6 +13,7 @@
   function device_manager(firebase_root, firebase_auth, $log, $q) {
     var root_ref = new Firebase(firebase_root);
     var devices_ref = root_ref.child('devices');
+    var servers_ref = root_ref.child('servers');
     
     
     this.spark_login = function(particle_access_token) {
@@ -19,11 +21,15 @@
         return spark.login({accessToken: particle_access_token});
     };
     
+    this.get_servers_ref = function() {
+        return servers_ref;
+    }
+    
     this.get_device_ref = function(device_id) {
         return devices_ref.child(device_id);
     };
     
-    this.select_device = function(device, uid) {
+    this.select_device = function(device, uid, server_data) {
         var defer = $q.defer();
     
         // get snapshot under devices
@@ -38,9 +44,10 @@
             var device_id = tentative_device_id;
             $log.info("device_id: ", device_id);
 
-            // call spark function to set device id
-            // calldevice_id function
-            device.callFunction('device_id', device_id).then(
+            // call spark function to set config
+            // call "set_config" function
+            var config_string = server_data.hostname + "," + server_data.port + "," + device_id;
+            device.callFunction('set_config', config_string).then(
             function(result){
                 $log.info("device_id result: ", result);
                 $log.info("associated device ", device.name, " with id: ", device_id);

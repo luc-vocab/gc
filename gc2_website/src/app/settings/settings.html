@@ -7,10 +7,13 @@
             </div>
         </div>
 
+
         <div class="row">
+
             <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
                 <h2>Particle Access Token</h2>
-                <p>Allows access to your Sleeptrack device</p>
+                <p>Allows access to your Sleeptrack device. 
+                   Can be found on <a href="https://build.particle.io/">build.particle.io</a> under Settings.</p>
                 <form class="form-inline">
                     <div class="form-group">
                         <label class="sr-only" for="access_token">Particle Access Token</label>
@@ -23,8 +26,41 @@
                     <span ng-show="settings.show_status.login_error">Login Error: {{settings.show_status.login_error_text}}</span>
                 </p>
             </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
+                <h2>Servers</h2>
+                <p>Your SleepTrack device will connect to one of these servers to log data.
+                Pick the closest geographical location.
+                </p>
+                
+                <div class="panel panel-info mt-element-ribbon" style="margin-bottom: 10px;" ng-repeat="(server_key, server_data) in settings.servers_obj"
+                     ng-click="settings.select_server(server_key)">
+                    <div class="ribbon ribbon-vertical-right ribbon-shadow ribbon-color-info uppercase blue"
+                         ng-show="settings.user_obj.server === server_key">
+                        <i class="fa fa-check"></i> Selected
+                    </div>                    
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>{{server_data.hostname}}</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body"> 
+                        Online: <i class="fa fa-check text-success" ng-show="server_data.online"></i>
+                                <i class="fa fa-times text-danger" ng-show="! server_data.online"></i>
+                        Location: {{server_data.location}}
+                    </div>
+
+                </div>                                
+                
+                
+            </div>            
+
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
                 <h2>Devices</h2>
                 <div ng-show="settings.show_status.listing_devices" class="alert" ng-class="settings.show_status.listing_device_class" role="alert">
                     <span ng-show="settings.show_status.listing_devices">Listing Devices...</span>
@@ -64,9 +100,6 @@
             
         </div>
 
-        <div class="row">
-            
-        </div>
     </div>
 
 </div>
