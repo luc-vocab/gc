@@ -1,18 +1,16 @@
 #include "gc_data.h"
 #include "common.h"
 
-GcData::GcData() {
+GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client) {
 
 }
 
-void GcData::init(GcClient *gc_client) {
+void GcData::init() {
   //  set pin modes
   pinMode(EMG_SENSOR_PIN, INPUT);
   pinMode(BUZZER_PIN, OUTPUT);
 
   // initialize various sensors
-
-  m_gc_client = gc_client;
 
   // IMU setup
   m_imu.settings.device.commInterface = IMU_MODE_I2C;
@@ -32,7 +30,7 @@ void GcData::init(GcClient *gc_client) {
 }
 
 void GcData::report_battery_charge() {
-    m_gc_client->battery_charge(lipo.getSOC());
+    m_gc_client.battery_charge(lipo.getSOC());
 }
 
 float GcData::get_gyro_max() {
@@ -62,9 +60,9 @@ void GcData::collect_data() {
   float accel_y = accel_values[1];
   float accel_z = accel_values[2];
 
-  m_gc_client->add_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
+  m_gc_client.add_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
 
-  if(m_gc_client->need_upload()){
+  if(m_gc_client.need_upload()){
     DEBUG_LOG("need to upload batch");
     // get battery data
     report_battery_charge();
@@ -79,7 +77,7 @@ void GcData::collect_data() {
     waitFor(WiFi.ready, WIFI_MAX_WAIT);
     DEBUG_LOG("wifi available");
 
-    m_gc_client->upload_batch();
+    m_gc_client.upload_batch();
 
     // turn off wifi
     if(MANAGE_WIFI) {

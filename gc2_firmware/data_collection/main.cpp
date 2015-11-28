@@ -3,13 +3,17 @@
 
 #include "gc_client.h"
 #include "gc_data.h"
+#include "gc_config.h"
 #include "common.h"
+#include "utils.h"
 
 #define FIRMWARE_VERSION 1
 
 GcClient gc_client;
-GcData gc_data;
+GcData gc_data(gc_client);
+GcConfig gc_config(gc_client);
 
+// cloud variables
 int firmware_version = FIRMWARE_VERSION;
 
 #define DATA_TRANSFER_DELAY 500
@@ -26,18 +30,15 @@ void serial_log(const char *func, int line, String message) {
   Serial.printlnf("%s %s:%d %s", Time.timeStr().c_str(), func, line, message.c_str());
 }
 
+int set_config(String command) {
+  gc_config.set_config(command);
+}
+
 int set_device_id(String command) {
   uint32_t device_id = command.toInt();
   gc_client.set_device_id(device_id);
   return 0;
 }
-
-void validation_tone() {
-  tone(A4, 600, 150);
-  delay(150);
-  tone(A4, 900, 150);
-}
-
 
 int device_util(String command) {
   if(command=="test_serial") {
@@ -47,28 +48,8 @@ int device_util(String command) {
     Serial.begin(9600);
     return 0;
   } else if(command=="test_tone") {
-    tone(A4, 600, 500);
-  } else if(command.startsWith("cfg=")) {
-    // format: cfg=dev2.photozzap.com,7001,2341234
-    int i = command.indexOf("=");
-    int j = command.indexOf(",");
-    int k = command.indexOf(",", j+1);
-
-    if(i == -1 || j == -1 || k == -1) {
-      DEBUG_LOG("config parsing error: " +  command);
-    }
-    // DEBUG_LOG(String(i) + " " + String(j) + " " + String(k) + " " + String(l));
-
-    // substring between i and j is hostname
-    String hostname = command.substring(i+1,j);
-    String port = command.substring(j+1,k);
-    String deviceId = command.substring(k+1);
-
-    DEBUG_LOG("config: hostname: " + hostname + " port: " + port + " deviceId: " + deviceId);
-    validation_tone();
-
+    tone(BUZZER_PIN, 600, 500);
   }
-
 
   return 0;
 }
@@ -82,15 +63,19 @@ void setup() {
     DEBUG_LOG("serial setup OK");
   }
 
-  gc_data.init(&gc_client);
+  gc_data.init();
+  gc_config.init();
 
   Particle.function("device_id", set_device_id);
   Particle.function("device_util", device_util);
   Particle.function("set_mode", set_mode);
+  Particle.function("set_config", set_config);
 
   Particle.variable("gc_version", firmware_version);
-
-  gc_client.configure("dev2.photozzap.com", 7001, 42);
+  Particle.variable("gc_hostname", gc_config.p_hostname);
+  Particle.variable("gc_port", gc_config.p_port);
+  Particle.variable("gc_device_id", gc_config.p_device_id);
+  Particle.variable("setup_done", gc_config.p_setup_done);
 
   DEBUG_LOG("started up");
 

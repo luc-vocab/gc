@@ -30,6 +30,8 @@ void GcClient::configure(String host, int port, uint32_t device_id) {
   m_host = host;
   m_port = port;
   m_device_id = device_id;
+
+  DEBUG_LOG("set config: " + host + " port: " + String(port) + " device_id: " + String(device_id));
 }
 
 void GcClient::set_mode(uint16_t mode) {
