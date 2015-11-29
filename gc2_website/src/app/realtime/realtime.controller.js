@@ -105,76 +105,26 @@
         angular.element('#container-emg').highcharts(vm.emgGaugeOptions);
                 
         vm.show_loading = true;
-        vm.spark_setup();            
+        vm.verify_device_setup();            
     }
     
-    vm.device_setup = function() {
-        vm.show_error = false;
-        vm.show_device_not_connected = false;
-        vm.show_loading = true;
-        
-        var device_name = vm.user_obj.device_name;
-        var device_id = vm.user_obj.device_id;
-        if(device_name && device_id) {
-            // we have a device name
-            spark.getDevice(vm.user_obj.device_name, function(err, device) {
-                if(err) {
-                    $log.error("could not get device object for device ", device_name);
-                    vm.error_message = "Could not get device object for device [" + device_name + "]";
-                    vm.show_error = true;                    
-                } else {
-                    $log.info("got device object: ", device);
-                    if(! device.connected) {
-                        $log.info("device not connected: ", device.name);
-                        // indicate that device is not connected
-                        vm.show_device_not_connected = true;
-                    } else {
-                        vm.current_device = device;
-                        vm.realtime_ready = true;
-                    }
-                }
-                vm.show_loading = false;
-                $scope.$apply();                
-            });
-        
-        } else {
-            // no device selected - go to settings  
-            $log.error("no device selected");
-            vm.error_message = "No device selected";
-            vm.show_error = true;
-            vm.show_loading = false;
-            $scope.$apply();
-        };
-        
+    vm.verify_device_setup = function() {
+        // ensure everything is good with the device setup
+        var device_setup_promise = device_manager.verify_device(vm.uid);
+        device_setup_promise.then(function(success) {
+            vm.current_device_name = success.device.name;
+            vm.current_device = success.device;
+            vm.device_setup_update = undefined; // don't display updates
+            vm.realtime_ready = true;
+        }, function(error) {
+            vm.device_setup_error = error;
+        }, function(update) {
+            $log.info("verify_device_setup update: ", update);
+            vm.device_setup_update = update;
+        });
     };
-    
-    vm.spark_setup = function() {
-        vm.user_obj.$loaded().then(function(){
-            var access_token = vm.user_obj.particle_access_token;
-            if(access_token) {
-                $log.info("spark access token: ", access_token);
-                // login to spark
-                spark.login({accessToken: access_token}).then(
-                    function(token){
-                        $log.info("spark login successful ", token);
-                        vm.device_setup();
-                    },
-                    function(err) {
-                        $log.error("spark login error: ", err);
-                        vm.error_message = "Particle login error: " + err;
-                        vm.show_error = true;   
-                        vm.show_loading = false;
-                        $scope.$apply();
-                    }
-                );                
-            } else {
-                vm.error_message = "No Particle Access Token";
-                vm.show_error = true;
-                vm.show_loading = false;
-            }
-        });        
-    }
-    
+
+
     vm.enable_realtime =  function() {
         vm.show_enable_realtime_spinner = true;
         

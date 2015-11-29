@@ -14,6 +14,7 @@
     var root_ref = new Firebase(firebase_root);
     var devices_ref = root_ref.child('devices');
     var servers_ref = root_ref.child('servers');
+    var spark_login_done =  false;
     
     
     this.spark_login = function(particle_access_token) {
@@ -27,6 +28,81 @@
     
     this.get_device_ref = function(device_id) {
         return devices_ref.child(device_id);
+    };
+    
+    
+    // verify that default device is online and configured (before starting realtime/batch mode)
+    this.verify_device = function(uid) {
+        var defer = $q.defer();
+        var num_tasks = 4;
+        
+        // retrieve default device
+        defer.notify({status:"Retrieving device information", task:1, total:num_tasks});
+        var user_ref = firebase_auth.get_user_ref(uid);
+        user_ref.once("value", function(snapshot) {
+            var user_data = snapshot.val();
+            
+            defer.notify({status:"Logging in to Particle", task:2, total:num_tasks});
+    
+            var login_defer = $q.defer();
+            if( ! spark_login_done) {
+                // login to spark
+                $log.info("logging in to particle");
+                var access_token = user_data.particle_access_token;
+                if( !access_token ) {
+                    defer.reject({message:"No Particle Access Token",go_settings:true});
+                } else {
+                    spark.login({accessToken: access_token}).then(
+                        function(token){
+                            $log.info("verify_device: spark login successful ", token);
+                            spark_login_done = true;
+                            login_defer.resolve();
+                        },
+                        function(err) {
+                            defer.reject({message:"Couldn't login to Particle, please check Particle Access Token",
+                                          api_error: err,
+                                          go_settings:true});
+                        }
+                    );                
+                }
+            } else {
+                // no need to login
+                $log.info("particle login already done");
+                login_defer.resolve();
+            }
+
+            login_defer.promise.then(function(){
+               // get device id 
+               if(! user_data.device_id || ! user_data.device_name) {
+                   defer.reject("No device configured");
+               } else {
+                   defer.notify({status:"Checking device status", task:3, total:num_tasks});
+                   var device_name = user_data.device_name;
+                   spark.getDevice(device_name, function(err, device) {
+                       if(err) {
+                           $log.error("verify_device error: ", err);
+                           defer.reject({message:"Couldn't obtain device details ",
+                                         api_error: err,
+                                         device_name: device_name,
+                                         go_settings:true});
+                       } else {
+                           defer.notify({status:"Checking that device is online",task:4, total:num_tasks});
+                           if(! device.connected) {
+                               defer.reject({message:"Device is not connected",
+                                             device_name: device_name});
+                           } else {
+                               defer.resolve({message:"Device ready",
+                                              device: device});
+                           }
+                       }
+                   });
+               }                
+            });
+            
+
+        });
+        
+        return defer.promise;   
     };
     
     this.select_device = function(device, uid, server_data) {

@@ -5,22 +5,46 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Realtime Control</h1>
-                <p>Realtime mode is for testing your device and verifying electrode placement.
-                Your device will be continously transmitting with WiFi on. Data will not be persisted
-                into stats. <strong>Remember to go back to standby mode after testing.</strong>
+                <p>Realtime mode is for testing your device and verifying electrode placement. Your device will be continously transmitting with WiFi on. Data will not be persisted into stats. <strong>Remember to go back to standby mode after testing.</strong>
                 </p>
             </div>
         </div>
 
-        <div class="row" ng-show="realtime.show_loading">
+        <div class="row" ng-show="realtime.device_setup_update">
             <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
 
                 <div class="alert alert-info">
-                    <strong><i class="fa fa-spin fa-cog"></i> Loading</strong> Please wait
+                    <strong><i class="fa fa-spin fa-cog"></i> Loading</strong> {{realtime.device_setup_update.status}}
+                    <div class="progress progress-striped active">
+                        <div style="width: {{100 * (realtime.device_setup_update.task / realtime.device_setup_update.total ) }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
+                            <span class="sr-only"> 20% Complete </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <div class="row" ng-show="realtime.device_setup_error">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>
+                            <i class="fa fa-exclamation-triangle"></i>
+                            An Error Occurred</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        {{realtime.device_setup_error.message}}
+                        <a href="#/settings" ng-show="realtime.device_setup_error.go_settings">
+                            <button class="btn blue pull-right"><i class="fa fa-cog"></i> Go To Settings</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--
         <div class="row" ng-show="realtime.show_error">
             <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
                 <div class="panel panel-danger">
@@ -57,6 +81,7 @@
                 </div>
             </div>
         </div>
+        -->
 
         <div ng-show="realtime.realtime_ready">
 
@@ -73,7 +98,8 @@
                             Device ready.
                             <div class="btn-toolbar pull-right">
                                 <div class="btn-group btn-group-solid margin-bottom-10">
-                                    <button class="btn blue" type="button" ng-click="realtime.enable_realtime()">Realtime Mode<i class="fa fa-spin fa-cog" ng-show="realtime.show_enable_realtime_spinner"></i></Mode></button>
+                                    <button class="btn blue" type="button" ng-click="realtime.enable_realtime()">Realtime Mode<i class="fa fa-spin fa-cog" ng-show="realtime.show_enable_realtime_spinner"></i></Mode>
+                                    </button>
                                     <button class="btn" type="button">Standby</button>
                                 </div>
                             </div>
