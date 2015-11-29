@@ -91,8 +91,26 @@
                                defer.reject({message:"Device is not connected",
                                              device_name: device_name});
                            } else {
-                               defer.resolve({message:"Device ready",
-                                              device: device});
+                               // check whether device setup has been done
+                               device.getVariable("setup_done", function(err, data) {
+                                  if(err) {
+                                      defer.reject({message:"Could not check whether device setup was done",
+                                                    api_error: err,
+                                                    device_name: device_name});
+                                  } else {
+                                      $log.info("retrieved setup_done variable: ", data);
+                                      if(data.result == 1) {
+                                          defer.resolve({message:"Device ready",
+                                                         device: device});
+                                      } else {
+                                          defer.reject({message:"Device setup not done",
+                                                        device_name: device_name,
+                                                        go_settings:true});
+                                      }
+                                      
+                                  }
+                               });
+                               
                            }
                        }
                    });
