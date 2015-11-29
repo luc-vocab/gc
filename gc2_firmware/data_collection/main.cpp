@@ -25,6 +25,7 @@ bool serial_debug = true;
 int set_device_id(String command);
 int set_mode(String command);
 int device_util(String command);
+int connection_test(String command);
 
 void serial_log(const char *func, int line, String message) {
   Serial.printlnf("%s %s:%d %s", Time.timeStr().c_str(), func, line, message.c_str());
@@ -32,11 +33,6 @@ void serial_log(const char *func, int line, String message) {
 
 int set_config(String command) {
   gc_config.set_config(command);
-}
-
-int set_device_id(String command) {
-  uint32_t device_id = command.toInt();
-  gc_client.set_device_id(device_id);
   return 0;
 }
 
@@ -54,6 +50,12 @@ int device_util(String command) {
   return 0;
 }
 
+int connection_test(String command) {
+  int random_number = command.toInt();
+  gc_client.connection_test(random_number);
+  return 0;
+}
+
 void setup() {
 
   if (serial_debug) {
@@ -66,10 +68,10 @@ void setup() {
   gc_data.init();
   gc_config.init();
 
-  Particle.function("device_id", set_device_id);
   Particle.function("device_util", device_util);
   Particle.function("set_mode", set_mode);
   Particle.function("set_config", set_config);
+  Particle.function("conn_test", connection_test);
 
   Particle.variable("gc_version", firmware_version);
   Particle.variable("gc_hostname", gc_config.p_hostname);

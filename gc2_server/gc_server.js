@@ -5,6 +5,12 @@ var Firebase = require('firebase');
 var config = require('./' + process.argv[2]);
 
 
+/* global pubnub_client: true */
+/* global MODE: true */
+/* global CONNECTION_STATES: true */
+/* global UINT16_MARKER_START: true */
+/* global UINT16_MARKER_END: true */
+
 pubnub_client = pubnub({
     publish_key: "pub-c-879cf9bb-46af-4bf1-8dca-e011ea412cd2",
     subscribe_key: "sub-c-cba703c8-7b42-11e3-9cac-02ee2ddab7fe"
@@ -13,6 +19,7 @@ pubnub_client = pubnub({
 MODE = {
     REALTIME: 1,
     DATALOGGING: 2,
+    CONNECTION_TEST: 3
 };
 
 CONNECTION_STATES = {
@@ -56,13 +63,20 @@ function GcClient(socket, influx_client, config) {
                 self.state = CONNECTION_STATES.READY_REALTIME;
                 self.log("realtime mode");
             } else if ( mode == MODE.DATALOGGING ) {
-                self.state = CONNECTION_STATES.READY_DATALOGGING
+                self.state = CONNECTION_STATES.READY_DATALOGGING;
                 self.log("datalogging mode");
+            } else if ( mode == MODE.CONNECTION_TEST ) {
+                self.log("connection test");
+                var random_number = data.readUInt32LE(12);
+                // write data on firebase to show we received data
+                self.firebaseDeviceRef.update({
+                    "ping_test": random_number
+                });
             }
         
         } else if (self.state == CONNECTION_STATES.READY_DATALOGGING) {
         
-            offset = 0;
+            var offset = 0;
 
             // read battery charge
             var charged_percent = data.readUInt16LE(offset); offset += 2;
@@ -217,7 +231,7 @@ function GcClient(socket, influx_client, config) {
         
         }
 
-        tags = {user: "luc",
+        var tags = {user: "luc",
                 env: "dev"};
         
         if(push_to_influxdb) {
