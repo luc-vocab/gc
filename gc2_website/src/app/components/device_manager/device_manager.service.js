@@ -91,7 +91,8 @@
                            defer.notify({status:"Checking that device is online",task:4, total:num_tasks});
                            if(! device.connected) {
                                defer.reject({message:"Device is not connected",
-                                             device_name: device_name});
+                                             device_name: device_name,
+                                             retry:true});
                            } else {
                                // check whether device setup has been done
                                device.getVariable("setup_done", function(err, data) {
