@@ -43,7 +43,7 @@ void GcClient::set_mode(uint16_t mode) {
 
   if(mode == GC_MODE_REALTIME) {
     connect();
-    initial_handshake(m_mode);
+    initial_handshake(m_mode, 0);
   }
 }
 
@@ -97,6 +97,13 @@ int GcClient::upload_batch_iteration() {
   return 0;
 }
 
+void GcClient::connection_test(int random_number) {
+  DEBUG_LOG("running connection test with random_number: " + String(random_number));
+  GcClient::connect();
+  initial_handshake(GC_MODE_CONNECTION_TEST, random_number);
+  m_tcp_client.stop();
+}
+
 int GcClient::connect_and_transfer_batch() {
   int i;
   int rv;
@@ -114,7 +121,7 @@ int GcClient::connect_and_transfer_batch() {
     return ERROR_TCP_CONNECTION_FAILED;
   }
 
-  rv = initial_handshake(GC_MODE_BATCH);
+  rv = initial_handshake(GC_MODE_BATCH, 0);
   if(rv == -1) {
     DEBUG_LOG("ERROR: initial handshake failed");
     return ERROR_TCP_WRITE_FAILED;
@@ -191,7 +198,7 @@ int GcClient::connect_and_transfer_batch() {
   return SUCCESS_RETURN;
 }
 
-int GcClient::initial_handshake(uint32_t mode) {
+int GcClient::initial_handshake(uint32_t mode, int random_number) {
   DEBUG_LOG("GcClient::initial_handshake");
 
   size_t offset = 0;
@@ -202,6 +209,11 @@ int GcClient::initial_handshake(uint32_t mode) {
   write_int_to_buffer(m_handshake_buffer, PROTOCOL_VERSION, &offset);
   // write mode (batch or realtime)
   write_int_to_buffer(m_handshake_buffer, mode, &offset);
+
+  if(mode == GC_MODE_CONNECTION_TEST) {
+    // add random number used for connection test
+    write_int_to_buffer(m_handshake_buffer, random_number, &offset);
+  }
 
   int rv = m_tcp_client.write((const uint8_t *) m_handshake_buffer, offset);
   m_tcp_client.flush();

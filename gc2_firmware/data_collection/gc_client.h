@@ -8,6 +8,7 @@
 #define GC_MODE_STANDBY 0
 #define GC_MODE_REALTIME 1
 #define GC_MODE_BATCH 2
+#define GC_MODE_CONNECTION_TEST 3
 
 #define GC_BUFFER_LENGTH 64
 #define HANDSHAKE_BUFFER_LENGTH 64
@@ -64,6 +65,8 @@ public:
   bool need_upload();
   // upload batch when data buffer is full. Will repeat N times
   void upload_batch();
+  // do a connection test to ensure the device can communicate end to end
+  void connection_test(int random_number);
 
 private:
 
@@ -81,7 +84,7 @@ private:
 
   // send initial handshake, identifying the device and specifying what kind of data
   // we'll be sending
-  int initial_handshake(uint32_t mode);
+  int initial_handshake(uint32_t mode, int random_number);
 
   // connect to GC server
   int connect();
