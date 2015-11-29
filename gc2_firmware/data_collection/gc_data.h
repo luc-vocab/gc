@@ -17,6 +17,8 @@ public:
   void init();
   void collect_data();
 
+  int p_battery_charge;
+
 private:
   void report_battery_charge();
   float get_gyro_max();
