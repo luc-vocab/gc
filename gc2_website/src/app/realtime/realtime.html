@@ -32,11 +32,11 @@
                             <strong>
                                 <i class="fa fa-exclamation-triangle"></i>
                                 An Error Occurred
-                                <span ng-show="realtime.device_setup_error.device_name">({{realtime.device_setup_error.device_name}})</span>
                             </strong>
                         </h3>
                     </div>
                     <div class="panel-body">
+                        <strong ng-show="realtime.device_setup_error.device_name">{{realtime.device_setup_error.device_name}}</strong>
                         {{realtime.device_setup_error.message}}
                         <i>{{realtime.device_setup_error.api_error}}</i>
                         <a href="#/settings" ng-show="realtime.device_setup_error.go_settings">

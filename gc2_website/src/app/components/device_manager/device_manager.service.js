@@ -37,12 +37,12 @@
         var num_tasks = 4;
         
         // retrieve default device
-        defer.notify({status:"Retrieving device information", task:1, total:num_tasks});
+       
         var user_ref = firebase_auth.get_user_ref(uid);
         user_ref.once("value", function(snapshot) {
             var user_data = snapshot.val();
             
-            defer.notify({status:"Logging in to Particle", task:2, total:num_tasks});
+            defer.notify({status:"Logging in to Particle", task:1, total:num_tasks});
     
             var login_defer = $q.defer();
             if( ! spark_login_done) {
@@ -71,10 +71,12 @@
                 login_defer.resolve();
             }
 
+            defer.notify({status:"Retrieving device information", task:2, total:num_tasks});
             login_defer.promise.then(function(){
                // get device id 
                if(! user_data.device_id || ! user_data.device_name) {
-                   defer.reject("No device configured");
+                   defer.reject({message:"No device configured, please check settings.",
+                                 go_settings:true});
                } else {
                    defer.notify({status:"Checking device status", task:3, total:num_tasks});
                    var device_name = user_data.device_name;
@@ -82,7 +84,7 @@
                        if(err) {
                            $log.error("verify_device error: ", err);
                            defer.reject({message:"Couldn't obtain device details ",
-                                         api_error: err,
+                                         api_error: err.message,
                                          device_name: device_name,
                                          go_settings:true});
                        } else {
@@ -95,7 +97,7 @@
                                device.getVariable("setup_done", function(err, data) {
                                   if(err) {
                                       defer.reject({message:"Could not check whether device setup was done",
-                                                    api_error: err,
+                                                    api_error: err.message,
                                                     device_name: device_name});
                                   } else {
                                       $log.info("retrieved setup_done variable: ", data);

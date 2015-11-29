@@ -109,6 +109,11 @@
     }
     
     vm.verify_device_setup = function() {
+        
+        vm.realtime_ready = false;
+        vm.device_setup_error = false;
+        vm.device_setup_update = false;
+        
         // ensure everything is good with the device setup
         var device_setup_promise = device_manager.verify_device(vm.uid);
         device_setup_promise.then(function(success) {
@@ -117,6 +122,7 @@
             vm.device_setup_update = undefined; // don't display updates
             vm.realtime_ready = true;
         }, function(error) {
+            $log.error("verify_device_setup error: ", error);
             vm.device_setup_error = error;
         }, function(update) {
             $log.info("verify_device_setup update: ", update);
