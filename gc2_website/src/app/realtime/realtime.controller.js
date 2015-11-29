@@ -119,7 +119,9 @@
         device_setup_promise.then(function(success) {
             vm.current_device_name = success.device.name;
             vm.current_device = success.device;
+            vm.current_device_id = success.device_id;
             vm.device_setup_update = undefined; // don't display updates
+            vm.bind_device_obj();
             vm.realtime_ready = true;
         }, function(error) {
             $log.error("verify_device_setup error: ", error);
@@ -130,6 +132,11 @@
         });
     };
 
+
+    vm.bind_device_obj = function() {
+      var device_ref = device_manager.get_device_ref(vm.current_device_id);
+      vm.device_obj = $firebaseObject(device_ref);
+    };
 
     vm.enable_realtime =  function() {
         vm.show_enable_realtime_spinner = true;
