@@ -63,6 +63,7 @@
                         <div class="panel-body">
                             <strong>{{realtime.current_device.name}}</strong>
                             ready.
+                            <i class="fa fa-battery-full"></i> Battery: {{realtime.device_obj.battery_charge}}%
                             <div class="btn-toolbar pull-right">
                                 <div class="btn-group btn-group-solid margin-bottom-10">
                                     <button class="btn blue" type="button" ng-click="realtime.enable_realtime()">Realtime Mode<i class="fa fa-spin fa-cog" ng-show="realtime.show_enable_realtime_spinner"></i></Mode>

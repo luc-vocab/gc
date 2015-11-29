@@ -249,8 +249,11 @@
                                $log.info("connection test successful");
                                device_ref.off("value", on_function);
                                $timeout.cancel(timeout_handler);
-                               defer.resolve({message:"Device ready",
-                                               device: device});
+                               defer.resolve({
+                                   message:"Device ready",
+                                   device: device,
+                                   device_id: device_id
+                               });
                            }
                         });
 
