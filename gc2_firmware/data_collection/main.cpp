@@ -51,6 +51,7 @@ int device_util(String command) {
 }
 
 int connection_test(String command) {
+  validation_tone();
   int random_number = command.toInt();
   gc_client.connection_test(random_number);
   return 0;
