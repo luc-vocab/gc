@@ -93,6 +93,15 @@ function GcClient(socket, influx_client, config) {
             var batches_uploaded = data.readUInt16LE(offset); offset += 2;
             var error_count = data.readUInt16LE(offset); offset += 2;
             var abandon_count = data.readUInt16LE(offset); offset += 2;
+
+            // update firebase with a few stats
+            self.firebaseDeviceRef.update({
+                "battery_charge": charged_percent,
+                "batches_uploaded": batches_uploaded,
+                "error_count": error_count,
+                "abandon_count": abandon_count
+            });            
+
             
             // read number of datapoints
             var num_datapoints = data.readUInt16LE(offset); offset += 2;
