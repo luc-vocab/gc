@@ -96,7 +96,7 @@ function GcClient(socket, influx_client, config) {
 
             // update firebase with a few stats
             self.firebaseDeviceRef.update({
-                "battery_charge": charged_percent,
+                "battery_charge": charged_percent / 100.0,
                 "batches_uploaded": batches_uploaded,
                 "error_count": error_count,
                 "abandon_count": abandon_count
