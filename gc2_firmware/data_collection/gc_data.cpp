@@ -1,7 +1,8 @@
 #include "gc_data.h"
 #include "common.h"
 
-GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client) {
+GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client),
+p_battery_charge(0){
 
 }
 
@@ -26,11 +27,14 @@ void GcData::init() {
   lipo.begin();
   lipo.quickStart();
 
-
+  report_battery_charge();
 }
 
 void GcData::report_battery_charge() {
-    m_gc_client.battery_charge(lipo.getSOC());
+    float battery_charge = lipo.getSOC();
+    battery_charge = min(battery_charge, 100.0);
+    p_battery_charge = battery_charge;
+    m_gc_client.battery_charge(battery_charge);
 }
 
 float GcData::get_gyro_max() {

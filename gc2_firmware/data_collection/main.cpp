@@ -51,6 +51,7 @@ int device_util(String command) {
 }
 
 int connection_test(String command) {
+  validation_tone();
   int random_number = command.toInt();
   gc_client.connection_test(random_number);
   return 0;
@@ -78,6 +79,7 @@ void setup() {
   Particle.variable("gc_port", gc_config.p_port);
   Particle.variable("gc_device_id", gc_config.p_device_id);
   Particle.variable("setup_done", gc_config.p_setup_done);
+  Particle.variable("bat_charge", gc_data.p_battery_charge);
 
   DEBUG_LOG("started up");
 
