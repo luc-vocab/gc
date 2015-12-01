@@ -3,7 +3,7 @@
 (    STEP Export                                                      )
 (                                                                     )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Sun Nov 22 23:05:27 2015                      )
+(    Date/Time        : Sun Nov 22 23:04:25 2015                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -17,12 +17,12 @@ STEP protocol: AP-214
 Source identification: allegro_17.0P011
 Export selected and highlighted parts?: NO
 Export secondary parts?: NO
-Export parts with mapped STEP Models?: NO
-Export parts without mapped STEP Models?: NO
+Export parts with mapped STEP Models?: YES
+Export parts without mapped STEP Models?: YES
 Export assemblies and enclosures parts?: NO
 Export mechanical drills?: YES
 Export electrical through pin drills?: NO
 Export electrical through via drills?: NO
-Export bare board only?: YES
+Export bare board only?: NO
 Export external copper?: NO
 step_out complete.
