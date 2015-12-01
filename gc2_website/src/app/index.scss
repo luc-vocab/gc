@@ -30,6 +30,11 @@ h2 {
     font-size: 150%;
 }
 
+.progress {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 @import "main/main.scss";
 @import "login/login.scss";
 @import "settings/settings.scss";

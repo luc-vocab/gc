@@ -1,0 +1,84 @@
+<div class="container-fluid">
+    <div class="page-content">
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Night Mode</h1>
+                <p>Night mode is for monitoring during sleep. You may enable night mode / standby here. Your device
+                   will wait for a button press, then will continously record data during your sleep, until you turn it off.
+                </p>
+             </div>
+        </div>
+
+        <div class="row" ng-show="nightmode.device_setup_update">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+
+                <div class="alert alert-info">
+                    <strong><i class="fa fa-spin fa-cog"></i> Loading</strong> {{nightmode.device_setup_update.status}}
+                    <div class="progress progress-striped active">
+                        <div style="width: {{100 * (nightmode.device_setup_update.task / nightmode.device_setup_update.total ) }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="nightmode.device_setup_error">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>
+                                <i class="fa fa-exclamation-triangle"></i>
+                                An Error Occurred
+                            </strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <strong ng-show="nightmode.device_setup_error.device_name">{{nightmode.device_setup_error.device_name}}</strong>
+                        {{nightmode.device_setup_error.message}}
+                        <i>{{nightmode.device_setup_error.api_error}}</i>
+                        <a href="#/settings" ng-show="nightmode.device_setup_error.go_settings">
+                            <button class="btn blue pull-right"><i class="fa fa-cog"></i> Go To Settings</button>
+                        </a>
+                        <a ng-click="nightmode.verify_device_setup()" ng-show="nightmode.device_setup_error.retry">
+                            <button class="btn blue pull-right"><i class="fa fa-refresh"></i> Retry</button>
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="nightmode.realtime_ready">
+
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <strong><i class="fa fa-check"></i> Device Ready
+                                </strong>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <strong>{{nightmode.current_device.name}}</strong>
+                            ready.
+                            <i class="fa fa-battery-full"></i> Battery: {{nightmode.device_obj.battery_charge}}%
+                            <div class="btn-toolbar pull-right">
+                                <div class="btn-group btn-group-solid margin-bottom-10">
+                                    <button class="btn blue" type="button" ng-click="nightmode.enable_nightmode()">
+                                        <i class="fa fa-bed"></i>
+                                        Night Mode<i class="fa fa-spin fa-cog" ng-show="nightmode.show_enable_nightmode_spinner"></i></Mode>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
