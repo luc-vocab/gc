@@ -276,6 +276,46 @@
             }
         }
 
+        // retrieve existing device id, or create new one
+        this.get_device_id = function(device, uid) {
+            var defer = $q.defer();
+            
+            // find out whether device already has an id
+            // get the gc_device_id variable
+            device.getVariable("gc_device_id", function(err,data) {
+                if(err) {
+                    $log.error("couldn't get device id: ", err);
+                    defer.reject(err.message);
+                } else {
+                    if(data.result > 0) {
+                        // device already has an id
+                        $log.info("device ", device.name, " has existing id: ", data.result);
+                        defer.resolve(data.result);
+                    } else {
+                        // create new id after checking firebase
+                        // get snapshot under devices
+                        devices_ref.once("value", function(snapshot) {
+                            // identify unique number
+                            var max_int32 = 2147483647;
+                            var tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString();
+                            while (snapshot.hasChild(tentative_device_id)) {
+                                tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString();
+                            }
+                            // device id should be unique
+                            var device_id = tentative_device_id;
+                            $log.info("generated device_id: ", device_id);
+                            
+                            defer.resolve(device_id);
+                            
+                        });
+                        
+                    }
+                }
+            });
+            
+            return defer.promise;
+        };
+
 
         this.save_settings = function(device, uid, server_data, user_name, particle_access_token) {
             var defer = $q.defer();
@@ -283,16 +323,11 @@
             $log.info("selecting device: ", device.name, " uid: " , uid, " server_data: ", server_data,
                       "user_name:", user_name);
             
-            // get snapshot under devices
-            devices_ref.once("value", function(snapshot) {
-                // identify unique number
-                var max_int32 = 2147483647;
-                var tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString();
-                while (snapshot.hasChild(tentative_device_id)) {
-                    tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString();
-                }
-                // device id should be unique
-                var device_id = tentative_device_id;
+            
+            var device_id_promise = self.get_device_id(device, uid);
+            
+            device_id_promise.then(function(device_id) {
+
                 $log.info("device_id: ", device_id);
 
                 // call spark function to set config
@@ -325,9 +360,12 @@
                         $log.info("device_id error: ", error);
                         defer.reject(error.message);
                     });
-
+                
+            }, function(error) {
+                $log.error("couldn't get device_id: ", error);
+                defer.reject(error);
             });
-
+            
             return defer.promise;
 
         };
