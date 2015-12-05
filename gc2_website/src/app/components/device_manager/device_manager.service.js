@@ -18,7 +18,7 @@
 
         var self = this;
 
-        var DEVICE_VERIFY_NUM_TASKS = 8;
+        var DEVICE_VERIFY_NUM_TASKS = 9;
 
         this.spark_login = function(particle_access_token) {
             $log.info("logging in with token: ", particle_access_token);
@@ -193,8 +193,53 @@
                    var device_ref = self.get_device_ref(device_id);
                    device_ref.update({battery_charge: batt_level});
                    $log.info("got battery level: ", batt_level);
-                   self.check_server(defer, device, device_name, device_id, user_data, uid);
+                   self.check_device_entry(defer, device, device_name, device_id, user_data, uid);
                }
+            });
+        };
+
+        this.check_device_entry = function(defer, device, device_name, device_id, user_data, uid) {
+            defer.notify({
+                status: "Checking device node",
+                task: 6,
+                total: DEVICE_VERIFY_NUM_TASKS
+            });            
+            
+            var device_ref = devices_ref.child(device_id).once('value', function(snapshot) {
+                var data = snapshot.val();
+                // ensure we have device_name, owner_uid, and user_name
+                if( !data.device_name ) {
+                    defer.reject({
+                       message: "Device name not set",
+                       device_name: device_name,
+                       go_settings: true
+                    });
+                }
+                if( !data.owner_uid ) {
+                    defer.reject({
+                       message: "Owner UID not set",
+                       device_name: device_name,
+                       go_settings: true
+                    });
+                }
+                if( !data.user_name ) {
+                    defer.reject({
+                       message: "Username not set",
+                       device_name: device_name,
+                       go_settings: true
+                    });
+                }
+                
+                // go to next step
+                self.check_server(defer, device, device_name, device_id, user_data, uid);
+                
+                
+            }, function(err) {
+                defer.reject({
+                   message: "Could not check device node",
+                   api_error: err.message,
+                   device_name: device_name
+                });
             });
         };
 
@@ -202,7 +247,7 @@
             // do a connection test with the server
             defer.notify({
                 status: "Checking server setup",
-                task: 6,
+                task: 7,
                 total: DEVICE_VERIFY_NUM_TASKS
             });
             if (!user_data.server) {
@@ -218,7 +263,7 @@
                     var server_data = snapshot.val();
                     if (!server_data.online) {
                         defer.reject({
-                            message: "Server " + user_data.server + " not online",
+                            message: "Server " + server_data.hostname + " not online",
                             go_settings: true
                         });
                     }
@@ -229,7 +274,7 @@
                         // try connection test
                         defer.notify({
                             status: "Performing connection test",
-                            task: 7,
+                            task: 8,
                             total: DEVICE_VERIFY_NUM_TASKS
                         });
 
