@@ -10,6 +10,8 @@ void GcData::init() {
   //  set pin modes
   pinMode(EMG_SENSOR_PIN, INPUT);
   pinMode(BUZZER_PIN, OUTPUT);
+  pinMode(BUTTON1_PIN, INPUT);
+  pinMode(BUTTON2_PIN, INPUT);
 
   // initialize various sensors
 

@@ -7,6 +7,8 @@
 
 #define EMG_SENSOR_PIN A0
 #define BUZZER_PIN A4
+#define BUTTON1_PIN D2
+#define BUTTON2_PIN D3
 
 
 #define DEBUG_LOG(x) serial_log(__func__, __LINE__, x)

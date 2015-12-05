@@ -20,6 +20,7 @@ int firmware_version = FIRMWARE_VERSION;
 #define COLLECT_DATA_FREQUENCY 250      // 250ms
 
 bool serial_debug = true;
+bool pending_night_mode = false;
 
 // declare functions
 int set_device_id(String command);
@@ -94,7 +95,7 @@ int set_mode(String command) {
       DEBUG_LOG("turning off wifi");
       WiFi.off();
     }
-    gc_client.set_mode(GC_MODE_BATCH);
+    pending_night_mode = true;
   } else if (command == "realtime" ) {
     DEBUG_LOG("enable realtime mode");
     gc_client.set_mode(GC_MODE_REALTIME);
@@ -115,4 +116,13 @@ void report_stats() {
 void loop() {
   gc_data.collect_data();
   delay(COLLECT_DATA_FREQUENCY);
+  if (pending_night_mode) {
+    if(digitalRead(BUTTON1_PIN) == LOW) {
+      DEBUG_LOG("button1 low, starting batch mode");
+      // set mode to batch
+      pending_night_mode = false;
+      validation_tone();
+      gc_client.set_mode(GC_MODE_BATCH);
+    }
+  }
 }
