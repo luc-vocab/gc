@@ -64,11 +64,9 @@
             if(err) {
                 $log.error("could not enable night mode");
             } 
-            // vm.show_enable_nightmode_spinner = false;
-            // $scope.$apply();
         });
         
-    }
+    };
 
 
     init();

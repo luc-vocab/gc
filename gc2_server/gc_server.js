@@ -56,6 +56,11 @@ function GcClient(socket, influx_client, config) {
             self.log("device_id: " + device_id + " protocol_version: " + protocol_version);
             
             self.firebaseDeviceRef = self.firebaseDevicesRoot.child(device_id.toString());
+            // get the user_name (to be added as an influxdb tag)
+            self.firebaseDeviceRef.once('value', function(snapshot){
+               var data = snapshot.val();
+               self.user_name = data.user_name;
+            });
             
             var mode = data.readUInt32LE(8);
             
@@ -240,8 +245,8 @@ function GcClient(socket, influx_client, config) {
         
         }
 
-        var tags = {user: "luc",
-                env: "dev"};
+        var tags = {user: self.user_name,
+                    env:  self.config.environment};
         
         if(push_to_influxdb) {
             var timestamp_nanos = datetime.getTime().toString() + "000000";
@@ -305,6 +310,16 @@ influent
         var gcClient = new GcClient(socket, client, config);
     });
     server.listen(7001, '0.0.0.0');
+    
+    // mark server online
+    var firebaseRoot = new Firebase(config.firebaseRoot);
+    var serverRef = firebaseRoot.child('servers').child(config.serverKey);
+    serverRef.update({
+        online: true
+    });
+    var presenceRef = serverRef.child("online");
+    presenceRef.onDisconnect().set(false);
+    
 });
 
 

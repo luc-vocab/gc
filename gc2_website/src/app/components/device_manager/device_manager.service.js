@@ -18,7 +18,7 @@
 
         var self = this;
 
-        var DEVICE_VERIFY_NUM_TASKS = 8;
+        var DEVICE_VERIFY_NUM_TASKS = 9;
 
         this.spark_login = function(particle_access_token) {
             $log.info("logging in with token: ", particle_access_token);
@@ -193,8 +193,53 @@
                    var device_ref = self.get_device_ref(device_id);
                    device_ref.update({battery_charge: batt_level});
                    $log.info("got battery level: ", batt_level);
-                   self.check_server(defer, device, device_name, device_id, user_data, uid);
+                   self.check_device_entry(defer, device, device_name, device_id, user_data, uid);
                }
+            });
+        };
+
+        this.check_device_entry = function(defer, device, device_name, device_id, user_data, uid) {
+            defer.notify({
+                status: "Checking device node",
+                task: 6,
+                total: DEVICE_VERIFY_NUM_TASKS
+            });            
+            
+            var device_ref = devices_ref.child(device_id).once('value', function(snapshot) {
+                var data = snapshot.val();
+                // ensure we have device_name, owner_uid, and user_name
+                if( !data.device_name ) {
+                    defer.reject({
+                       message: "Device name not set",
+                       device_name: device_name,
+                       go_settings: true
+                    });
+                }
+                if( !data.owner_uid ) {
+                    defer.reject({
+                       message: "Owner UID not set",
+                       device_name: device_name,
+                       go_settings: true
+                    });
+                }
+                if( !data.user_name ) {
+                    defer.reject({
+                       message: "Username not set",
+                       device_name: device_name,
+                       go_settings: true
+                    });
+                }
+                
+                // go to next step
+                self.check_server(defer, device, device_name, device_id, user_data, uid);
+                
+                
+            }, function(err) {
+                defer.reject({
+                   message: "Could not check device node",
+                   api_error: err.message,
+                   device_name: device_name
+                });
             });
         };
 
@@ -202,7 +247,7 @@
             // do a connection test with the server
             defer.notify({
                 status: "Checking server setup",
-                task: 6,
+                task: 7,
                 total: DEVICE_VERIFY_NUM_TASKS
             });
             if (!user_data.server) {
@@ -218,7 +263,7 @@
                     var server_data = snapshot.val();
                     if (!server_data.online) {
                         defer.reject({
-                            message: "Server " + user_data.server + " not online",
+                            message: "Server " + server_data.hostname + " not online",
                             go_settings: true
                         });
                     }
@@ -229,7 +274,7 @@
                         // try connection test
                         defer.notify({
                             status: "Performing connection test",
-                            task: 7,
+                            task: 8,
                             total: DEVICE_VERIFY_NUM_TASKS
                         });
 
@@ -276,20 +321,58 @@
             }
         }
 
-
-        this.select_device = function(device, uid, server_data) {
+        // retrieve existing device id, or create new one
+        this.get_device_id = function(device, uid) {
             var defer = $q.defer();
-
-            // get snapshot under devices
-            devices_ref.once("value", function(snapshot) {
-                // identify unique number
-                var max_int32 = 2147483647;
-                var tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString();
-                while (snapshot.hasChild(tentative_device_id)) {
-                    tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString();
+            
+            // find out whether device already has an id
+            // get the gc_device_id variable
+            device.getVariable("gc_device_id", function(err,data) {
+                if(err) {
+                    $log.error("couldn't get device id: ", err);
+                    defer.reject(err.message);
+                } else {
+                    if(data.result > 0) {
+                        // device already has an id
+                        $log.info("device ", device.name, " has existing id: ", data.result);
+                        defer.resolve(data.result);
+                    } else {
+                        // create new id after checking firebase
+                        // get snapshot under devices
+                        devices_ref.once("value", function(snapshot) {
+                            // identify unique number
+                            var max_int32 = 2147483647;
+                            var tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString();
+                            while (snapshot.hasChild(tentative_device_id)) {
+                                tentative_device_id = Math.floor((Math.random() * max_int32) + 1).toString();
+                            }
+                            // device id should be unique
+                            var device_id = tentative_device_id;
+                            $log.info("generated device_id: ", device_id);
+                            
+                            defer.resolve(device_id);
+                            
+                        });
+                        
+                    }
                 }
-                // device id should be unique
-                var device_id = tentative_device_id;
+            });
+            
+            return defer.promise;
+        };
+
+
+        this.save_settings = function(device, uid, server_data, user_name, particle_access_token) {
+            var defer = $q.defer();
+            
+            $log.info("selecting device: ", device.name, " uid: " , uid, " server_data: ", server_data,
+                      "user_name:", user_name);
+            
+            
+            var device_id_promise = self.get_device_id(device, uid);
+            
+            device_id_promise.then(function(device_id) {
+
                 $log.info("device_id: ", device_id);
 
                 // call spark function to set config
@@ -304,13 +387,16 @@
                         var device_ref = devices_ref.child(device_id);
                         device_ref.set({
                             owner_uid: uid,
-                            device_name: device.name
+                            device_name: device.name,
+                            user_name: user_name
                         });
 
                         var user_ref = firebase_auth.get_user_ref(uid);
                         user_ref.update({
                             device_name: device.name,
-                            device_id: device_id
+                            device_id: device_id,
+                            user_name: user_name,
+                            particle_access_token: particle_access_token
                         });
 
                         defer.resolve(device_id);
@@ -319,9 +405,12 @@
                         $log.info("device_id error: ", error);
                         defer.reject(error.message);
                     });
-
+                
+            }, function(error) {
+                $log.error("couldn't get device_id: ", error);
+                defer.reject(error);
             });
-
+            
             return defer.promise;
 
         };
