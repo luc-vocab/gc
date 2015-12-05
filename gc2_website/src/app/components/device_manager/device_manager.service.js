@@ -277,9 +277,12 @@
         }
 
 
-        this.select_device = function(device, uid, server_data) {
+        this.save_settings = function(device, uid, server_data, user_name, particle_access_token) {
             var defer = $q.defer();
-
+            
+            $log.info("selecting device: ", device.name, " uid: " , uid, " server_data: ", server_data,
+                      "user_name:", user_name);
+            
             // get snapshot under devices
             devices_ref.once("value", function(snapshot) {
                 // identify unique number
@@ -304,13 +307,16 @@
                         var device_ref = devices_ref.child(device_id);
                         device_ref.set({
                             owner_uid: uid,
-                            device_name: device.name
+                            device_name: device.name,
+                            user_name: user_name
                         });
 
                         var user_ref = firebase_auth.get_user_ref(uid);
                         user_ref.update({
                             device_name: device.name,
-                            device_id: device_id
+                            device_id: device_id,
+                            user_name: user_name,
+                            particle_access_token: particle_access_token
                         });
 
                         defer.resolve(device_id);

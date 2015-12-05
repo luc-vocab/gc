@@ -15,6 +15,8 @@
     
     vm.show_status = {};
     
+    vm.save_button_enabled = false;
+    
    
     vm.init = function() {
         // subscribe to user object
@@ -32,6 +34,11 @@
       // query GC firmware version for all devices in array
       
       _.forEach(devices, function(device, index) {
+        // mark device as selected if we recognize the name
+        if(device.name === vm.user_obj.device_name) {
+          vm.selected_device = device;
+        }
+        
         device.getVariable('gc_version', function(err,data) {
           if(err) {
             $log.info("err: ", err);
@@ -88,33 +95,22 @@
           }
         );                        
     };
-    
+
     vm.select_device = function(index) {
-      var selected_device = vm.devices[index];
-      
-      if(selected_device.running_gc_firmware) {
-        // proceed
-        $log.info("selected device: ", selected_device.name);
-        vm.devices[index].selecting_progress = true;
-        // $scope.$apply();
-        
-        device_manager.select_device(selected_device, currentAuth.uid, vm.servers_obj[vm.user_obj.server]).then(
-        function(device_id){
-          vm.show_status.select_device_error = false;
-          vm.devices[index].selecting_progress = false;
-        }, function(error) {
-          $log.error("error selecting device: ", error);
-          vm.show_status.select_device_error = true;
-          vm.show_status.select_device_error_text = error;
-          vm.devices[index].selecting_progress = false;
-        })
-      }
-      
+      vm.selected_device = vm.devices[index];
+      vm.save_button_enabled = true;
     };
     
+
     vm.select_server = function(server_key) {
       vm.user_obj.server = server_key;
-      vm.user_obj.$save();
+      vm.save_button_enabled = true;
+    };
+    
+    vm.set_token = function() {
+      $log.info("set_token");
+      vm.save_button_enabled = true;
+      vm.verify_token();
     };
     
     vm.verify_token = function() {
@@ -130,8 +126,34 @@
         function(error) {
             $log.error("spark login error: ", error);
         });
-    }
+    };
     
+    vm.set_username = function() {
+      $log.info("set_username");
+      vm.save_button_enabled = true;
+    };
+    
+    vm.save_settings = function() {
+      $log.info("save_settings");
+      vm.save_in_progress = true;
+      vm.save_error = false;
+      device_manager.save_settings(vm.selected_device, 
+                                   currentAuth.uid, 
+                                   vm.servers_obj[vm.user_obj.server], 
+                                   vm.user_obj.user_name,
+                                   vm.user_obj.particle_access_token)
+      .then(
+        function(device_id){
+          vm.save_in_progress = false;
+          vm.save_button_enabled = false;
+        }, function(error) {
+          $log.error("error selecting device: ", error);
+          vm.save_in_progress = false;
+          vm.save_error = true;
+          vm.save_error_message = error;
+        });
+                                          
+    };
     
     vm.init();
     

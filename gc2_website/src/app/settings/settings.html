@@ -19,7 +19,7 @@
                         <label class="sr-only" for="access_token">Particle Access Token</label>
                         <input type="text" class="form-control" id="access_token" placeholder="Access Token" ng-model="settings.user_obj.particle_access_token" style="width: 400px;">
                     </div>
-                    <button type="submit" class="btn btn-default" ng-click="settings.verify_token()">Set</button>
+                    <button type="submit" class="btn btn-default" ng-click="settings.set_token()">Set</button>
                 </form>
                 <p><span ng-show="settings.show_status.login_verifying">Verifying...</span>
                     <span ng-show="settings.show_status.login_ok">Login OK</span>
@@ -69,21 +69,17 @@
                     <span ng-show="settings.show_status.listing_devices_error">{{show_status.listing_devices_error_text}}</span>
                     <button class="btn blue pull-right" ng-click="settings.list_devices()"><i class="fa fa-refresh"></i>Refresh <i class="fa fa-cog fa-spin ng-hide" ng-show="settings.show_status.refresh_spinner"></i></button>
                 </div>
-                <div class="alert alert-danger" ng-show="settings.show_status.select_device_error">
-                  <strong><i class="fa fa-exclamation-triangle"></i> Error Selecting Device: </strong> {{settings.show_status.select_device_error_text}}
-                </div>                
                 <p>
                     Click to select your device below
                 </p>
                 <div class="panel panel-info mt-element-ribbon" style="margin-bottom: 10px;" ng-show="settings.show_status.listing_devices_ok" ng-repeat="device in settings.devices"
                      ng-click="settings.select_device($index)">
                     <div class="ribbon ribbon-vertical-right ribbon-shadow ribbon-color-info uppercase blue"
-                         ng-show="settings.user_obj.device_name === device.name">
+                         ng-show="settings.selected_device.name === device.name">
                         <i class="fa fa-check"></i> Selected
                     </div>                    
                     <div class="panel-heading">
                         <h3 class="panel-title">Device: <strong>{{device.name}}</strong>
-                        <span ng-show="device.selecting_progress">Selecting <i class="fa fa-spin fa-cog" ng-show="true"></i></span>
                         </h3>
                     </div>
                     <div class="panel-body"> 
@@ -98,6 +94,34 @@
 
             </div>
             
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
+                <h2>User</h2>
+                <p>Your personal user settings</p>
+                <p>This user name will appear in your InfluxDB data.</p>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="user_name">Particle Access Token</label>
+                        <input type="text" class="form-control" id="user_name" placeholder="User Name" ng-model="settings.user_obj.user_name">
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="settings.set_username()">Set</button>
+                </form>
+                
+                
+            </div>            
+            
+        </div>
+        
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-lg-4 col-lg-offset-7 col-md-6 col-md-offset-4 col-sm-10 col-xs-10">
+                <div class="alert alert-danger" ng-show="settings.save_error">
+                    <strong>Error:</strong> couldn't save settings: {{settings.save_error_message}}
+                </div>
+            </div>            
+            <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2">
+                <button type="submit" class="btn blue pull-right" ng-click="settings.save_settings()" ng-disabled="! settings.save_button_enabled">
+                    <i class="fa fa-save"></i>Save <i class="fa fa-spin fa-cog" ng-show="settings.save_in_progress"></i>
+                </button>
+            </div>
         </div>
 
     </div>
