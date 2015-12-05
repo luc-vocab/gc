@@ -263,7 +263,7 @@
                     var server_data = snapshot.val();
                     if (!server_data.online) {
                         defer.reject({
-                            message: "Server " + user_data.server + " not online",
+                            message: "Server " + server_data.hostname + " not online",
                             go_settings: true
                         });
                     }
