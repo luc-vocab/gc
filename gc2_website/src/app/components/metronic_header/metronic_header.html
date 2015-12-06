@@ -60,19 +60,19 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('control'),
-                                                                open:     $state.includes('control'),
-                                                                selected: $state.includes('control')}">
+                    <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('control') || $state.includes('realtime') || $state.includes('night'),
+                                                                open:     $state.includes('control') || $state.includes('realtime') || $state.includes('night'),
+                                                                selected: $state.includes('control') || $state.includes('realtime') || $state.includes('night')}">
                         <a href="#/control" class="text-uppercase">
                             <i class="fa fa-power-off"></i>Control</a>
                         <ul class="dropdown-menu dropdown-menu-fw">
-                            <li class="active">
-                                <a href="#/control">
+                            <li ng-class="{active: $state.includes('realtime')}">
+                                <a href="#/realtime">
                                     <i class="fa fa-bolt"></i> Realtime Mode
                                 </a>
                             </li>
 
-                            <li>
+                            <li ng-class="{active: $state.includes('night')}">
                                 <a href="#/night">
                                     <i class="fa fa-bed"></i> Night Mode</a>
                             </li>

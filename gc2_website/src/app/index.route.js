@@ -1,3 +1,6 @@
+
+/* global angular:false */
+
 (function() {
   'use strict';
 
@@ -22,6 +25,10 @@
       })
       .state('control', {
         url: '/control',
+        templateUrl: 'app/control/control.html'
+      })
+      .state('realtime', {
+        url: '/realtime',
         templateUrl: 'app/realtime/realtime.html',
         controller: 'RealtimeController',
         controllerAs: 'realtime',
