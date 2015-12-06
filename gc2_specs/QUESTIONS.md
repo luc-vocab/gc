@@ -1,3 +1,9 @@
+2015/12/10
+* buzzer: can the smaller magnetic buzzers work ?
+* PCB color: red
+* url, revision number and names on the silkscreen
+* can buttons be of different color ? easier for the user.
+
 2015/10/22
 * low dropout supply vs. SMPS ?
  * Madison suggests going with the low dropout supply as it's the reference implementation
