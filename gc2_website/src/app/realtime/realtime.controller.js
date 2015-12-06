@@ -1,6 +1,5 @@
 
 /* globals Highcharts: false */
-/* globals spark: false */
 /* globals angular */
 
 (function() {
@@ -151,7 +150,9 @@
         vm.current_device.callFunction('set_mode', 'realtime', function(err,data) {
             if(err) {
                 $log.error("could not enable realtime mode");
-            } 
+            } else {
+                $log.info("enabled realtime mode: ", data);
+            }
             vm.show_enable_realtime_spinner = false;
             $scope.$apply();
         });

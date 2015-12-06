@@ -20,20 +20,8 @@
                 <!-- END LOGO -->
 
                 <!-- BEGIN TOPBAR ACTIONS -->
-                <div class="topbar-actions">
-                    <div class="btn-group btn-group-md btn-group-solid margin-bottom-10">
-                        <button class="btn red" type="button">99% <i class="fa fa-battery-full"></i> </button>
-                        <button class="btn green" type="button"><i class="fa fa-wifi"></i> Online</button>
-                        <button class="btn blue" type="button"><i class="fa fa-clock-o"></i> 7hr</button>
-                    </div>
-
-                    <!-- BEGIN QUICK SIDEBAR TOGGLER -->
-                    <button type="button" class="quick-sidebar-toggler" data-toggle="collapse">
-                        <span class="sr-only">Toggle Quick Sidebar</span>
-                        <i class="icon-logout"></i>
-                    </button>
-                    <!-- END QUICK SIDEBAR TOGGLER -->
-
+                <div class="topbar-actions device-status">
+                    <devicestatus></devicestatus>
                 </div>
                 <!-- END TOPBAR ACTIONS -->
             </div>
@@ -60,20 +48,20 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('control'),
-                                                                open:     $state.includes('control'),
-                                                                selected: $state.includes('control')}">
+                    <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('control') || $state.includes('realtime') || $state.includes('night'),
+                                                                open:     $state.includes('control') || $state.includes('realtime') || $state.includes('night'),
+                                                                selected: $state.includes('control') || $state.includes('realtime') || $state.includes('night')}">
                         <a href="#/control" class="text-uppercase">
                             <i class="fa fa-power-off"></i>Control</a>
                         <ul class="dropdown-menu dropdown-menu-fw">
-                            <li class="active">
-                                <a href="index.html">
+                            <li ng-class="{active: $state.includes('realtime')}">
+                                <a href="#/realtime">
                                     <i class="fa fa-bolt"></i> Realtime Mode
                                 </a>
                             </li>
 
-                            <li>
-                                <a href="dashboard_2.html">
+                            <li ng-class="{active: $state.includes('night')}">
+                                <a href="#/night">
                                     <i class="fa fa-bed"></i> Night Mode</a>
                             </li>
                         </ul>                            

@@ -1,0 +1,19 @@
+<div class="btn-group btn-group-md btn-group-solid margin-bottom-10" ng-show="device.show_device_status">
+    <button class="btn" type="button" ng-class="{'green-meadow': device.device_obj.battery_charge >= 75,
+                                                 'yellow-crusta':device.device_obj.battery_charge >= 25 && device.device_obj.battery_charge < 75,
+                                                 'red':device.device_obj.battery_charge >= 0 && device.device_obj.battery_charge < 25}">
+        {{device.device_obj.battery_charge}}% 
+        <i class="fa" ng-class="{'fa-battery-full': device.device_obj.battery_charge > 95,
+                                 'fa-battery-three-quarters': device.device_obj.battery_charge > 75 && device.device_obj.battery_charge <= 95,
+                                 'fa-battery-half': device.device_obj.battery_charge > 50 && device.device_obj.battery_charge <= 75,
+                                 'fa-battery-quarter': device.device_obj.battery_charge > 25 && device.device_obj.battery_charge <= 50,
+                                 'fa-battery-empty': device.device_obj.battery_charge >= 0  && device.device_obj.battery_charge <= 25}"></i> 
+    </button>
+    <button class="btn blue-madison" type="button">
+        <i class="fa" ng-class="{'fa-bed': device.device_obj.mode == 'night'}"></i> 
+        {{device.device_obj.mode}}
+    </button>
+    <button class="btn purple-plum" type="button"><i class="fa fa-clock-o"></i> 
+    {{device.device_obj.collected_duration | timefilter}}
+    </button>
+</div>

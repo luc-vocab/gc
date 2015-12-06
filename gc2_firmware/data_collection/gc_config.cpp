@@ -2,7 +2,7 @@
 #include "common.h"
 #include "utils.h"
 
-GcConfig::GcConfig(GcClient &gc_client) : m_gc_client(gc_client), p_setup_done(0) {
+GcConfig::GcConfig(GcClient &gc_client) : m_gc_client(gc_client), p_setup_done(0), p_device_id(0) {
 
 }
 

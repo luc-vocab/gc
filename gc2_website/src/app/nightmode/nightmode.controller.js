@@ -1,5 +1,4 @@
 
-/* globals spark: false */
 /* globals angular */
 
 (function() {
@@ -63,7 +62,9 @@
         vm.current_device.callFunction('set_mode', 'batch', function(err,data) {
             if(err) {
                 $log.error("could not enable night mode");
-            } 
+            } else {
+                $log.info("enabled night mode: ", data);
+            }
         });
         
     };

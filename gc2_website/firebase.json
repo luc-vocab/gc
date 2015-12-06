@@ -1,0 +1,9 @@
+{
+  "firebase": "gcserver-dev",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

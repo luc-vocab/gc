@@ -205,7 +205,7 @@
                 total: DEVICE_VERIFY_NUM_TASKS
             });            
             
-            var device_ref = devices_ref.child(device_id).once('value', function(snapshot) {
+            devices_ref.child(device_id).once('value', function(snapshot) {
                 var data = snapshot.val();
                 // ensure we have device_name, owner_uid, and user_name
                 if( !data.device_name ) {
@@ -244,6 +244,8 @@
         };
 
         this.check_server = function(defer, device, device_name, device_id, user_data, uid) {
+            $log.info("check_server, uid:", uid);
+            
             // do a connection test with the server
             defer.notify({
                 status: "Checking server setup",
@@ -283,7 +285,7 @@
                             defer.reject({
                                 message: "Server communication test failed (timeout)",
                                 device_name: device_name
-                            })
+                            });
                         }, 5000);
 
                         // listen for updates on the device node
@@ -305,7 +307,7 @@
 
 
                         device.callFunction("conn_test", random_number).then(
-                            function(result) {
+                            function() {
                                 $log.info("called conn_test function");
                                 
                             }, function(error) {
@@ -319,10 +321,12 @@
                     }
                 });
             }
-        }
+        };
 
         // retrieve existing device id, or create new one
         this.get_device_id = function(device, uid) {
+            $log.info("get_device_id, uid:", uid);
+            
             var defer = $q.defer();
             
             // find out whether device already has an id

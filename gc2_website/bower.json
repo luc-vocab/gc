@@ -45,7 +45,13 @@
         "dist/css/bootstrap.css",
         "dist/js/bootstrap.js"
       ]
-    }
+    },
+    "font-awesome": {
+          "main": [
+            "scss/font-awesome.scss",
+            "fonts/*"
+          ]
+    }    
   },
   "resolutions": {
     "jquery": "~2.1.4",
