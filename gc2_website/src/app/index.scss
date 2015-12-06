@@ -35,8 +35,10 @@ h2 {
     margin-bottom: 5px;
 }
 
+@import "components/metronic_header/header.scss";
 @import "main/main.scss";
 @import "login/login.scss";
+@import "control/control.scss";
 @import "settings/settings.scss";
 @import "realtime/realtime.scss";
 

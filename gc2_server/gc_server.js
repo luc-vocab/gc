@@ -86,6 +86,9 @@ function GcClient(socket, influx_client, config) {
             // read battery charge
             var charged_percent = data.readUInt16LE(offset); offset += 2;
             
+            // read number of seconds collected
+            var collected_duration = data.readUInt32LE(offset); offset += 4;
+            
             // read starting timestamp
             var starting_timestamp = data.readUInt32LE(offset); offset += 4;
             // read starting millis
@@ -99,15 +102,18 @@ function GcClient(socket, influx_client, config) {
             var error_count = data.readUInt16LE(offset); offset += 2;
             var abandon_count = data.readUInt16LE(offset); offset += 2;
 
-            // update firebase with a few stats
-            self.firebaseDeviceRef.update({
+            // update firebase with a few stats after influxDB writing is done
+            self.firebase_update_obj = {
                 "battery_charge": charged_percent / 100.0,
                 "batches_uploaded": batches_uploaded,
                 "error_count": error_count,
-                "abandon_count": abandon_count
-            });            
-
+                "abandon_count": abandon_count,
+                "last_upload_time": Firebase.ServerValue.TIMESTAMP,
+                "collected_duration": collected_duration,
+                "mode": "night"
+            };
             
+
             // read number of datapoints
             var num_datapoints = data.readUInt16LE(offset); offset += 2;
             // read total buffer size to expect
@@ -185,6 +191,7 @@ function GcClient(socket, influx_client, config) {
         var end_marker = self.data_buffer.readUInt16LE(offset); offset += 2;
         if( end_marker != UINT16_MARKER_END ) {
             console.log("ERROR invalid end marker");
+            return;
         }
         
         
@@ -195,8 +202,21 @@ function GcClient(socket, influx_client, config) {
         console.log("processed datalogging buffer");
         console.log("writing to influxdb");
         
+        // add data for battery
+        var tags = {user: self.user_name,
+                    env:  self.config.environment};        
+        self.measurements.push({
+            key: "battery",
+            tags: tags,
+            fields: {
+                charge: new influent.Value(self.firebase_update_obj.battery_charge, influent.type.FLOAT64)
+            },
+        });        
+        
+        
         self.influx_client.writeMany(self.measurements).then(function() {
             console.log("done writing to influxDB");
+            self.firebaseDeviceRef.update(self.firebase_update_obj);
         });        
     }
     
