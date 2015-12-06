@@ -191,6 +191,7 @@ function GcClient(socket, influx_client, config) {
         var end_marker = self.data_buffer.readUInt16LE(offset); offset += 2;
         if( end_marker != UINT16_MARKER_END ) {
             console.log("ERROR invalid end marker");
+            return;
         }
         
         
