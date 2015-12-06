@@ -86,6 +86,9 @@ function GcClient(socket, influx_client, config) {
             // read battery charge
             var charged_percent = data.readUInt16LE(offset); offset += 2;
             
+            // read number of seconds collected
+            var collected_duration = data.readUInt32LE(offset); offset += 4;
+            
             // read starting timestamp
             var starting_timestamp = data.readUInt32LE(offset); offset += 4;
             // read starting millis
@@ -104,7 +107,10 @@ function GcClient(socket, influx_client, config) {
                 "battery_charge": charged_percent / 100.0,
                 "batches_uploaded": batches_uploaded,
                 "error_count": error_count,
-                "abandon_count": abandon_count
+                "abandon_count": abandon_count,
+                "last_upload_time": Firebase.ServerValue.TIMESTAMP,
+                "collected_duration": collected_duration,
+                "mode": "night"
             });            
 
             
