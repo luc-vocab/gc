@@ -15,7 +15,7 @@ public:
   GcData(GcClient &gc_client);
   // initialize various sensors (should be called during setup())
   void init();
-  void collect_data();
+  void collect_data(bool upload_requested);
 
   int p_battery_charge;
 

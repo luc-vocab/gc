@@ -21,6 +21,7 @@ int firmware_version = FIRMWARE_VERSION;
 
 bool serial_debug = true;
 bool pending_night_mode = false;
+bool upload_requested = false;
 
 // declare functions
 int set_device_id(String command);
@@ -114,7 +115,12 @@ void report_stats() {
 
 
 void loop() {
-  gc_data.collect_data();
+  if(digitalRead(BUTTON2_PIN) == LOW) {
+    upload_requested = true;
+    validation_tone();
+  }
+  gc_data.collect_data(upload_requested);
+  upload_requested = false;
   delay(COLLECT_DATA_FREQUENCY);
   if (pending_night_mode) {
     if(digitalRead(BUTTON1_PIN) == LOW) {

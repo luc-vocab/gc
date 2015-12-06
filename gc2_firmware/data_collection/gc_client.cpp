@@ -12,7 +12,8 @@ GcClient::GcClient() : m_mode(GC_MODE_STANDBY),
                        m_data_size(0),
                        m_num_datapoints(0),
                        m_start_timestamp(0),
-                       m_start_millis(0){
+                       m_start_millis(0),
+                       m_data_collection_start_timestamp(0){
 
 }
 
@@ -37,6 +38,7 @@ void GcClient::configure(String host, int port, uint32_t device_id) {
 void GcClient::set_mode(uint16_t mode) {
   m_mode = mode;
   if(mode == GC_MODE_BATCH) {
+    m_data_collection_start_timestamp = Time.now();
     // clear buffer
     reset_data_buffer();
   }
@@ -134,6 +136,8 @@ int GcClient::connect_and_transfer_batch() {
   // write battery charge
   uint16_t percent_charged = m_battery_charge * 100.0;
   write_uint16_to_buffer(m_data_buffer, percent_charged, &temp_offset);
+  // write number of seconds collected
+  write_int_to_buffer(m_data_buffer, Time.now() - m_data_collection_start_timestamp, &temp_offset );
   // write starting timestamp
   write_int_to_buffer(m_data_buffer, m_start_timestamp, &temp_offset );
   // write starting millis

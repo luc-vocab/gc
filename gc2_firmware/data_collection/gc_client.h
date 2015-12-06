@@ -12,7 +12,7 @@
 
 #define GC_BUFFER_LENGTH 64
 #define HANDSHAKE_BUFFER_LENGTH 64
-#define BUFFER_HEADER_LENGTH 24
+#define BUFFER_HEADER_LENGTH 28
 #define END_MARKER_LENGTH 2
 
 
@@ -117,6 +117,7 @@ private:
   uint32_t m_device_id;
 
   // starting point for collecting the data
+  uint32_t m_data_collection_start_timestamp;
   uint32_t m_start_timestamp;
   uint32_t m_start_millis;
 

@@ -56,7 +56,7 @@ void GcData::get_accel(float *accel_values) {
   accel_values[2] = m_imu.calcAccel(m_imu.az);
 }
 
-void GcData::collect_data() {
+void GcData::collect_data(bool upload_requested) {
   uint16_t emg_value = analogRead(A0);
   float gyro_max = get_gyro_max();
   float accel_values[3];
@@ -68,7 +68,7 @@ void GcData::collect_data() {
 
   m_gc_client.add_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
 
-  if(m_gc_client.need_upload()){
+  if(m_gc_client.need_upload() || upload_requested){
     DEBUG_LOG("need to upload batch");
     // get battery data
     report_battery_charge();
