@@ -143,7 +143,7 @@
                                    vm.user_obj.user_name,
                                    vm.user_obj.particle_access_token)
       .then(
-        function(device_id){
+        function(){ // device_id is parameter
           vm.save_in_progress = false;
           vm.save_button_enabled = false;
         }, function(error) {
