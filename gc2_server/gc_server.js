@@ -265,7 +265,7 @@ function GcClient(socket, influx_client, config) {
         
         }
 
-        var tags = {user: self.user_name,
+        var tags = {username: self.user_name,
                     env:  self.config.environment};
         
         if(push_to_influxdb) {

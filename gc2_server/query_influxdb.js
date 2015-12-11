@@ -19,7 +19,7 @@ influent
 })
 .then(function(client) {
     var influx_data = GcInfluxData(client);
-    influx_data.compute_total_score();
+    influx_data.compute_total_score("time > now() - 30m", "luc-dev-1");
 });
 
 
