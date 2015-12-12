@@ -1,18 +1,52 @@
 <div class="container-fluid">
     <div class="page-content">
 
-
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Latest Data</h1>
-                <p>Your Data
-                </p>
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption font-green">
+                        <span class="caption-subject bold uppercase">EMG</span>
+                        <span class="caption-helper">Latest muscle activity</span>
+                    </div>
+                    <div class="actions">
+                        <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                            <i class="icon-cloud-upload"></i>
+                        </a>
+                        <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                            <i class="icon-wrench"></i>
+                        </a>
+                        <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                            <i class="icon-trash"></i>
+                        </a>
+                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#" data-original-title="" title=""> </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <img class="img-responsive" src="http://influxdb.dev.sleeptrack.io/render/dashboard-solo/db/sleeptrack?panelId=1&fullscreen&from=1449936497160&to=1449936802677&width=1000&height=500"></img>
+                </div>
             </div>
         </div>
-        
-        <div class="row">
-            collected_duration: {{latest.latest_data_obj.collected_duration}}
-        </div>
-
     </div>
+
+    <!--
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat2 bordered">
+                    <div class="display">
+                        <div class="number">
+                            <h3 class="font-green-sharp">
+                                {{latest.latest_data_obj.collected_duration | timefilter}}
+                            </h3>
+                            <small>Collected Duration</small>
+                        </div>
+                        <div class="icon">
+                            <i class="icon-pie-chart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+
+</div>
 </div>
