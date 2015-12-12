@@ -5,7 +5,7 @@ var q = require('promised-io/promise');
 var GcInfluxData = function(influx_client, firebase_root, username, uid) {
     
     var firebase_root_ref = new Firebase(firebase_root);
-    this.firebase_data_latest_ref = firebase_root_ref.child('data').child(uid);
+    this.firebase_data_latest_ref = firebase_root_ref.child('data').child(uid).child('latest');
 
     this.client = influx_client;
     this.username = username;

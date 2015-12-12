@@ -38,8 +38,6 @@ function GcClient(socket, influx_client, config) {
     this.config = config;
     
     // firebase setup
-    this.firebaseRoot = new Firebase(config.firebaseRoot);
-    this.firebaseDevicesRoot = this.firebaseRoot.child('devices');
 
     this.state = CONNECTION_STATES.CONNECTED;
     
@@ -59,6 +57,10 @@ function GcClient(socket, influx_client, config) {
             // get the user_name (to be added as an influxdb tag)
             self.firebaseDeviceRef.once('value', function(snapshot){
                var data = snapshot.val();
+               if(! data.user_name) {
+                   // username not present, device id is probably bad, disconnect
+                   self.socket.close();
+               }
                self.user_name = data.user_name;
             });
             
