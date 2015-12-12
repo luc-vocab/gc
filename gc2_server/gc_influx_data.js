@@ -16,16 +16,24 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
     
     
     
-    this.update_latest_data = function(time_clause) {
-        self.compute_total_score(time_clause).then(function(total_score) {
-           console.log("total_score: ", total_score);
-           
-           // update firebase
-           self.firebase_data_latest_ref.update({
-              total_score: total_score,
-              last_update_time: Firebase.ServerValue.TIMESTAMP
-           });
+    this.update_latest_data = function() {
+        
+        self.get_current_night_intervals().then(function(intervals) {
+            self.compute_total_score(intervals.time_clause).then(function(total_score) {
+               console.log("total_score: ", total_score);
+               
+               // update firebase
+               self.firebase_data_latest_ref.update({
+                  start_timestamp: intervals.start_timestamp,
+                  end_timestamp: intervals.end_timestamp,
+                  total_score: total_score,
+                  collected_duration: intervals.collected_duration,
+                  last_update_time: Firebase.ServerValue.TIMESTAMP
+               });
+            });            
         });
+        
+
         
     };
     
@@ -42,7 +50,8 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
             var result = {
                 "start_timestamp": start_timestamp,
                 "end_timestamp": end_timestamp,
-                "time_clause:": "time > '" + start_date.toISOString() + "' and time < '" + end_date.toISOString() + "'"
+                "time_clause": "time > '" + start_date.toISOString() + "' and time < '" + end_date.toISOString() + "'",
+                "collected_duration": data.collected_duration
             }
             
             defer.resolve(result);
@@ -54,7 +63,8 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
     this.compute_total_score = function(time_clause) {
         var defer = q.defer();
         
-        console.log("compute_total_score");
+
+        console.log("compute_total_score, time_clause: ", time_clause);
         
 	    var query_percentile = "select percentile(emg_value,85) from emg where " + time_clause + " and username='" + self.username + "'";	
 	    console.log("query_percentile: ", query_percentile);
@@ -63,7 +73,7 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
 	    self.client
             .query(query_percentile)
             .then(function(result) {
-                // console.log(util.inspect(result, {showHidden: false, depth: null}));
+                console.log(util.inspect(result, {showHidden: false, depth: null}));
                 var threshold_value = result.results[0].series[0].values[0][1];
                 console.log("threshold_value: ", threshold_value);
                 
