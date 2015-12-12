@@ -2,12 +2,14 @@ var influent = require('influent');
 var pubnub = require("pubnub");
 var net = require('net');
 var Firebase = require('firebase');
+var q = require('promised-io/promise');
 var config = require('./' + process.argv[2]);
 
 
 /* global pubnub_client: true */
 /* global MODE: true */
 /* global CONNECTION_STATES: true */
+/* global UINT16_MARKER_HANDSHAKE: true */
 /* global UINT16_MARKER_START: true */
 /* global UINT16_MARKER_END: true */
 
@@ -29,6 +31,7 @@ CONNECTION_STATES = {
     PENDING_DATALOGGING: 3 // some more batch data is expected
 };
 
+UINT16_MARKER_HANDSHAKE = 39780;
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
 
@@ -38,6 +41,8 @@ function GcClient(socket, influx_client, config) {
     this.config = config;
     
     // firebase setup
+    this.firebaseRoot = new Firebase(config.firebaseRoot);
+    this.firebaseDevicesRoot = this.firebaseRoot.child('devices');
 
     this.state = CONNECTION_STATES.CONNECTED;
     
@@ -49,37 +54,61 @@ function GcClient(socket, influx_client, config) {
     
         if(self.state == CONNECTION_STATES.CONNECTED) {
             // console.log("received data");
-            var device_id = data.readUInt32LE(0);
-            var protocol_version = data.readUInt32LE(4);
-            self.log("device_id: " + device_id + " protocol_version: " + protocol_version);
             
-            self.firebaseDeviceRef = self.firebaseDevicesRoot.child(device_id.toString());
-            // get the user_name (to be added as an influxdb tag)
-            self.firebaseDeviceRef.once('value', function(snapshot){
-               var data = snapshot.val();
-               if(! data.user_name) {
-                   // username not present, device id is probably bad, disconnect
-                   self.socket.close();
-               }
-               self.user_name = data.user_name;
-            });
+            // this should be equal to UINT16_MARKER_HANDSHAKE
+            var marker = data.readUInt16LE(0);
+            if(marker != UINT16_MARKER_HANDSHAKE) {
+                // something must be wrong as marker is incorrect
+                self.log("closing connection, handshake marker incorrect: " + marker);
+                self.socket.destroy();
+                
+            } else {
             
-            var mode = data.readUInt32LE(8);
-            
-            if( mode == MODE.REALTIME ) {
-                self.state = CONNECTION_STATES.READY_REALTIME;
-                self.log("realtime mode");
-            } else if ( mode == MODE.DATALOGGING ) {
-                self.state = CONNECTION_STATES.READY_DATALOGGING;
-                self.log("datalogging mode");
-            } else if ( mode == MODE.CONNECTION_TEST ) {
-                self.log("connection test");
-                var random_number = data.readUInt32LE(12);
-                // write data on firebase to show we received data
-                self.firebaseDeviceRef.update({
-                    "ping_test": random_number
+                var device_id = data.readUInt32LE(2);
+                var protocol_version = data.readUInt32LE(6);
+                self.log("device_id: " + device_id + " protocol_version: " + protocol_version);
+                
+                self.firebaseDeviceRef = self.firebaseDevicesRoot.child(device_id.toString());
+                
+                var defer = q.defer();
+                
+                // get the user_name (to be added as an influxdb tag)
+                self.firebaseDeviceRef.once('value', function(snapshot){
+                   var data = snapshot.val();
+                   if(! data.user_name) {
+                       // username not present, device id is probably bad, disconnect
+                       self.log("no user_name present, disconnecting");
+                       self.socket.destroy();
+                   } else {
+                    self.user_name = data.user_name;
+                    defer.resolve();
+                   }
                 });
+                
+                defer.promise.then(function() {
+                    
+                    var mode = data.readUInt32LE(10);
+                    
+                    if( mode == MODE.REALTIME ) {
+                        self.state = CONNECTION_STATES.READY_REALTIME;
+                        self.log("realtime mode");
+                    } else if ( mode == MODE.DATALOGGING ) {
+                        self.state = CONNECTION_STATES.READY_DATALOGGING;
+                        self.log("datalogging mode");
+                    } else if ( mode == MODE.CONNECTION_TEST ) {
+                        self.log("connection test");
+                        var random_number = data.readUInt32LE(14);
+                        // write data on firebase to show we received data
+                        self.firebaseDeviceRef.update({
+                            "ping_test": random_number
+                        });
+                    }                       
+                })
+                
+             
             }
+
+
         
         } else if (self.state == CONNECTION_STATES.READY_DATALOGGING) {
         
