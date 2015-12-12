@@ -67,11 +67,20 @@
                         </ul>                            
 
                     </li>
-                    <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('data'),
-                                                                open:     $state.includes('data'),
-                                                                selected: $state.includes('data')}">
+                    <li class="dropdown dropdown-fw" ng-class="{active:   vm.current_tab == 'data',
+                                                                open:     vm.current_tab == 'data',
+                                                                selected: vm.current_tab == 'data'}">
                         <a href="#/data" class="text-uppercase">
                             <i class="fa fa-bar-chart"></i>Data</a>
+                            
+                        <ul class="dropdown-menu dropdown-menu-fw">
+                            <li ng-class="{active: $state.includes('data-latest')}">
+                                <a href="#/data/latest">
+                                    <i class="fa fa-bolt"></i> Latest
+                                </a>
+                            </li>
+                        </ul>                                              
+                            
 
                     </li>
                     <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('settings'),

@@ -57,6 +57,25 @@
           }]
         }        
       })      
+      .state('data', {
+        url: '/data',
+        templateUrl: 'app/data/data.html'
+      })
+      .state('data-latest', {
+        url: '/data/latest',
+        templateUrl: 'app/latest/latest.html',
+        controller: 'LatestController',
+        controllerAs: 'latest',
+        resolve: {
+          // controller will not be loaded until $requireAuth resolves
+          // Auth refers to our $firebaseAuth wrapper in the example above
+          "currentAuth": ["firebase_auth", function(firebase_auth) {
+            // $requireAuth returns a promise so the resolve waits for it to complete
+            // If the promise is rejected, it will throw a $stateChangeError (see above)
+            return firebase_auth.getAuth().$requireAuth();
+          }]
+        }        
+      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/settings/settings.html',
