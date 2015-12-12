@@ -136,8 +136,8 @@ int GcClient::connect_and_transfer_batch() {
   // write battery charge
   uint16_t percent_charged = m_battery_charge * 100.0;
   write_uint16_to_buffer(m_data_buffer, percent_charged, &temp_offset);
-  // write number of seconds collected
-  write_int_to_buffer(m_data_buffer, Time.now() - m_data_collection_start_timestamp, &temp_offset );
+  // write data collection start timestamp
+  write_int_to_buffer(m_data_buffer, m_data_collection_start_timestamp, &temp_offset );
   // write starting timestamp
   write_int_to_buffer(m_data_buffer, m_start_timestamp, &temp_offset );
   // write starting millis
@@ -206,7 +206,8 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   DEBUG_LOG("GcClient::initial_handshake");
 
   size_t offset = 0;
-
+  // write marker
+  write_uint16_to_buffer(m_handshake_buffer, UINT16_MARKER_HANDSHAKE, &offset);
   // write device id
   write_int_to_buffer(m_handshake_buffer, m_device_id, &offset);
   // write protocol version

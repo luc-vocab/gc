@@ -56,8 +56,30 @@ void GcData::get_accel(float *accel_values) {
   accel_values[2] = m_imu.calcAccel(m_imu.az);
 }
 
+uint16_t GcData::read_emg() {
+  if(SIMULATION_MODE) {
+    unsigned long milliseconds = millis();
+    unsigned long seconds = milliseconds / 1000;
+    uint16_t minRand;
+    uint16_t maxRand;
+    if(seconds % 60 == 0 || seconds % 61 == 0 || seconds % 62 == 0 || seconds % 63 == 0
+       || seconds % 64 == 0 || seconds % 65 == 0
+    ) {
+      // every N seconds
+      minRand = 350;
+      maxRand = 600;
+    }  else {
+      minRand = 85;
+      maxRand = 125;
+    }
+    return rand() % (maxRand-minRand+1) + minRand;
+  } else {
+    return analogRead(A0);
+  }
+}
+
 void GcData::collect_data(bool upload_requested) {
-  uint16_t emg_value = analogRead(A0);
+  uint16_t emg_value = read_emg();
   float gyro_max = get_gyro_max();
   float accel_values[3];
   get_accel(accel_values);

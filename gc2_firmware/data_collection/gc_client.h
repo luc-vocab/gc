@@ -41,6 +41,7 @@
 #define ERROR_WIFI_UNAVAILABLE -4
 #define ERROR_FAILED_RETRIES -5
 
+#define UINT16_MARKER_HANDSHAKE 39780  // in the handshake
 #define UINT16_MARKER_START 6713 // after header in batch mode
 #define UINT16_MARKER_END 21826  // after end of data in batch mode
 

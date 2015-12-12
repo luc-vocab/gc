@@ -9,6 +9,8 @@
 #define LSM9DS1_M	0x1E
 #define LSM9DS1_AG	0x6B
 
+#define SIMULATION_MODE true
+
 
 class GcData {
 public:
@@ -23,6 +25,7 @@ private:
   void report_battery_charge();
   float get_gyro_max();
   void get_accel(float *accel_values);
+  uint16_t read_emg();
 
   GcClient &m_gc_client;
   LSM9DS1 m_imu;
