@@ -118,8 +118,10 @@ function GcClient(socket, influx_client, config) {
             var charged_percent = data.readUInt16LE(offset); offset += 2;
             
             // read number of seconds collected
-            var collected_duration = data.readUInt32LE(offset); offset += 4;
-            
+            var data_collection_start_timestamp = data.readUInt32LE(offset) * 1000; offset += 4;
+            var current_timestamp = new Date().getTime();
+            var collected_duration = Math.round((current_timestamp - data_collection_start_timestamp) / 1000);
+
             // read starting timestamp
             var starting_timestamp = data.readUInt32LE(offset); offset += 4;
             // read starting millis
@@ -141,6 +143,7 @@ function GcClient(socket, influx_client, config) {
                 "abandon_count": abandon_count,
                 "last_upload_time": Firebase.ServerValue.TIMESTAMP,
                 "collected_duration": collected_duration,
+                "collection_start": data_collection_start_timestamp,
                 "mode": "night"
             };
             

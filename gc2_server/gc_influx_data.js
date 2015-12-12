@@ -2,16 +2,19 @@ var Firebase = require('firebase');
 var util = require('util');
 var q = require('promised-io/promise');
 
-var GcInfluxData = function(influx_client, firebase_root, username, uid) {
+var GcInfluxData = function(influx_client, firebase_root, username, uid, device_id) {
     
     var firebase_root_ref = new Firebase(firebase_root);
     this.firebase_data_latest_ref = firebase_root_ref.child('data').child(uid).child('latest');
+    this.device_ref = firebase_root_ref.child('devices').child(device_id);
 
     this.client = influx_client;
     this.username = username;
     this.uid = uid;
     
     var self = this;
+    
+    
     
     this.update_latest_data = function(time_clause) {
         self.compute_total_score(time_clause).then(function(total_score) {
@@ -24,6 +27,28 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid) {
            });
         });
         
+    };
+    
+    this.get_current_night_intervals = function() {
+        var defer = q.defer();
+        
+        self.device_ref.once('value', function(snapshot) {
+            var data = snapshot.val();
+            var start_timestamp = data.collection_start;
+            var end_timestamp = data.last_upload_time;
+            var start_date = new Date(start_timestamp);
+            var end_date = new Date(end_timestamp);
+            
+            var result = {
+                "start_timestamp": start_timestamp,
+                "end_timestamp": end_timestamp,
+                "time_clause:": "time > '" + start_date.toISOString() + "' and time < '" + end_date.toISOString() + "'"
+            }
+            
+            defer.resolve(result);
+        })
+        
+        return defer.promise;
     };
     
     this.compute_total_score = function(time_clause) {
