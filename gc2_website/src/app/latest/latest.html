@@ -15,11 +15,11 @@
                     </div>
                 </div>
             </div>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="dashboard-stat2 bordered">
                     <div class="display">
                         <div class="number">
-                            <h3 class="font-green-sharp">
+                            <h3 class="font-red-haze">
                                 {{latest.latest_data_obj.end_timestamp | date : 'H:mm' }}
                             </h3>
                             <small>NIGHT END</small>
@@ -28,7 +28,19 @@
                     </div>
                 </div>
             </div>            
-
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat2 bordered">
+                    <div class="display">
+                        <div class="number">
+                            <h3 class="font-blue-sharp">
+                                {{latest.latest_data_obj.total_score / 1000 | number:0 }}
+                            </h3>
+                            <small>BRUXISM SCORE</small>
+                        </div>
+                        <i class="fa fa-bar-chart pull-right"></i>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
