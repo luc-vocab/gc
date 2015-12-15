@@ -1,29 +1,62 @@
 <div class="container-fluid">
-    <div class="page-content">
+    <div class="page-content data-latest">
 
-        <div class="col-md-12 col-sm-12">
-            <div class="portlet light bordered">
-                <div class="portlet-title">
-                    <div class="caption font-green">
-                        <span class="caption-subject bold uppercase">EMG</span>
-                        <span class="caption-helper">Latest muscle activity</span>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                            <i class="icon-cloud-upload"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                            <i class="icon-wrench"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                            <i class="icon-trash"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#" data-original-title="" title=""> </a>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat2 bordered">
+                    <div class="display">
+                        <div class="number">
+                            <h3 class="font-green-sharp">
+                                {{latest.latest_data_obj.start_timestamp | date : 'H:mm' }}
+                            </h3>
+                            <small>NIGHT BEGIN</small>
+                        </div>
+                        <i class="fa fa-clock-o pull-right"></i>
                     </div>
                 </div>
-                <div class="portlet-body">
-                    <iframe src="http://influxdb.dev.sleeptrack.io/dashboard-solo/db/sleeptrack?panelId=1&fullscreen&theme=light" width="800" height="200" frameborder="0"></iframe>
-                    <!--<img class="img-responsive" src="http://influxdb.dev.sleeptrack.io/render/dashboard-solo/db/sleeptrack?panelId=1&fullscreen&from=1449936497160&to=1449936802677&width=1000&height=500"></img>-->
+            </div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat2 bordered">
+                    <div class="display">
+                        <div class="number">
+                            <h3 class="font-green-sharp">
+                                {{latest.latest_data_obj.end_timestamp | date : 'H:mm' }}
+                            </h3>
+                            <small>NIGHT END</small>
+                        </div>
+                        <i class="fa fa-clock-o pull-right"></i>
+                    </div>
+                </div>
+            </div>            
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="portlet light bordered">
+                    <div class="portlet-title">
+                        <div class="caption font-green">
+                            <span class="caption-subject bold uppercase">EMG</span>
+                            <span class="caption-helper">Latest muscle activity</span>
+                        </div>
+                        <div class="actions">
+                            <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                                <i class="icon-cloud-upload"></i>
+                            </a>
+                            <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                                <i class="icon-wrench"></i>
+                            </a>
+                            <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                                <i class="icon-trash"></i>
+                            </a>
+                            <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#" data-original-title="" title=""> </a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <iframe src="http://influxdb.dev.sleeptrack.io/dashboard-solo/db/sleeptrack?panelId=1&fullscreen&theme=light" width="800" height="200" frameborder="0"></iframe>
+                        <!--<img class="img-responsive" src="http://influxdb.dev.sleeptrack.io/render/dashboard-solo/db/sleeptrack?panelId=1&fullscreen&from=1449936497160&to=1449936802677&width=1000&height=500"></img>-->
+                    </div>
                 </div>
             </div>
         </div>
