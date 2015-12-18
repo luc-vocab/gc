@@ -1,0 +1,18 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    DBDOCTOR                                                         )
+(                                                                     )
+(    Drawing          : Photon_4Layer_shrunk.brd                      )
+(    Software Version : 17.0P011                                      )
+(    Date/Time        : Sat Dec 05 13:12:31 2015                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+Regenerating DRC
+  Original DRC errors:   31
+  Updated DRC errors:    31
+  DRC elapsed time:      00:00:01
+
+0 warnings, 0 errors detected, 0 errors  fixed.

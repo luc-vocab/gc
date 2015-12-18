@@ -1,10 +1,8 @@
 \t (00:00:00) padstack_editor 17.0 P003 (v17-0-118C) Windows SPB 64-bit Edition
-\t (00:00:00)     Journal start - Wed Nov 18 21:05:34 2015
-\t (00:00:00)         Host=MADISON-PC User=Madison Pid=6892 CPUs=4
-\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaaaa05624.tmp -pname SMD126_55 -data C:/Users/Madison/AppData/Local/Temp/#Taaaaac05624.tmp
+\t (00:00:00)     Journal start - Sat Dec 05 13:07:48 2015
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=2828 CPUs=4
+\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaaec08956.tmp -pname HOLE24 -data C:/Users/Madison/AppData/Local/Temp/#Taaaaee08956.tmp
 \t (00:00:00) 
-\d (00:00:08) QtSignal GuidedDesignLayersTab PadWidth editingFinished 1.600
-\d (00:00:08) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged
-\d (00:00:10) QtSignal MainWindow Save triggered
-\d (00:00:17) QtSignal MainWindow UpdateToDesignExit triggered
-\t (00:00:17)     Journal end - Wed Nov 18 21:05:52 2015
+\d (00:00:03) QtSignal MainWindow SaveAs triggered
+\d (00:00:11) QtFillin 
+\t (00:01:19)     Journal end - Sat Dec 05 13:09:07 2015

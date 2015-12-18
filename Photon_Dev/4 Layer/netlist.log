@@ -1,11 +1,11 @@
-{ Using PSTWRITER 17.0.0 d001Nov-22-2015 at 20:56:18 }
+{ Using PSTWRITER 17.0.0 d001Dec-05-2015 at 13:10:31 }
 
 #1 WARNING(ORCAP-36038): "No_connect" property on Pin "SW12.3" ignored for SW12: SCHEMATIC1, Photon P1 (0.50, 2.20). Connecting pin to net "GND".
 #2 WARNING(ORCAP-36038): "No_connect" property on Pin "SW10.3" ignored for SW10: SCHEMATIC1, Power Regulation (1.40, 4.30). Connecting pin to net "GND".
 #3 WARNING(ORCAP-36038): "No_connect" property on Pin "U9.2" ignored for U9: SCHEMATIC1, Audio (7.00, 3.00). Connecting pin to net "N36040".
 #4 WARNING(ORCAP-36038): "No_connect" property on Pin "SW8.3" ignored for SW8: SCHEMATIC1, Photon P1 (0.40, 0.70). Connecting pin to net "SETUP".
 #5 WARNING(ORCAP-36006): Part Name "TRI-LED_RGBLED_CLMVB-FKA-CFHEHLCBB7A363" is renamed to "TRI-LED_RGBLED_CLMVB-FKA-CFHEHL".
-#6 WARNING(ORCAP-36006): Part Name "SW KEY-Y1011_0_SS12SDH2_SS12SDH2" is renamed to "SW KEY-Y1011_0_SS12SDH2_SS12SDH".
+#6 WARNING(ORCAP-36006): Part Name "SW KEY-Y1011_0_NEW_SS12SDH2_SS12SDH2" is renamed to "SW KEY-Y1011_0_NEW_SS12SDH2_SS1".
 #7 WARNING(ORCAP-36006): Part Name "SW_TC_SPST_0_KMR211GLFS_KMR211GLFS" is renamed to "SW_TC_SPST_0_KMR211GLFS_KMR211G".
 #8 WARNING(ORCAP-36006): Part Name "SW KEY-SPST_TL3330_TL3330AF260QG" is renamed to "SW KEY-SPST_TL3330_TL3330AF260Q".
 #9 WARNING(ORCAP-36006): Part Name "T POINT R_TESTPOINT_SMD_T POINT R" is renamed to "T POINT R_TESTPOINT_SMD_T POINT".

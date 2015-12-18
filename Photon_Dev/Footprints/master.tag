@@ -1,1 +1,1 @@
-TestPoint_SMD.dra
+Battery_outline.dra

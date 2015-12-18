@@ -1,5 +1,5 @@
 FILE_TYPE = EXPANDEDPARTLIST;
-{ Using PSTWRITER 17.0.0 d001Nov-18-2015 at 21:49:53 }
+{ Using PSTWRITER 17.0.0 d001Nov-22-2015 at 19:55:18 }
 DIRECTIVES
  PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
  ROOT_DRAWING='PROTON_DEV';
@@ -661,9 +661,19 @@ PART_NAME
  TP11 'T POINT R_TESTPOINT_SMD_T POINT':;
 
 SECTION_NUMBER 1
- '@PROTON_DEV.SCHEMATIC1(SCH_1):INS98507@DISCRETE.T POINT R.NORMAL(CHIPS)':
- C_PATH='@proton_dev.schematic1(sch_1):ins98507@discrete.\t point r.normal\(chips)',
- P_PATH='@proton_dev.schematic1(sch_1):page1_ins98507@discrete.\t point r.normal\(chips)',
+ '@PROTON_DEV.SCHEMATIC1(SCH_1):INS223747@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@proton_dev.schematic1(sch_1):ins223747@discrete.\t point r.normal\(chips)',
+ P_PATH='@proton_dev.schematic1(sch_1):page1_ins223747@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP12 'T POINT R_TESTPOINT_SMD_T POINT':;
+
+SECTION_NUMBER 1
+ '@PROTON_DEV.SCHEMATIC1(SCH_1):INS113221@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@proton_dev.schematic1(sch_1):ins113221@discrete.\t point r.normal\(chips)',
+ P_PATH='@proton_dev.schematic1(sch_1):page1_ins113221@discrete.\t point r.normal\(chips)',
  PRIM_FILE='.\pstchip.dat',
  SECTION='';
 

@@ -1,0 +1,169 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Refresh Padstack                                                 )
+(                                                                     )
+(    Drawing          : Photon_4Layer_shrunk.brd                      )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Sat Dec 05 13:03:57 2015                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Sat Dec 05 13:03:57 2015				Page     1
+
+
+------ Pad Stack Refresh Options ------
+
+Input design  = 'C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_shrunk.brd'
+Output design = ''
+Reset symbol text and size locations   = 'NO'
+
+
+------ Library Paths ------
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.0/share/local/pcb/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/allegrolib/symbols 
+
+PADPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.0/share/local/pcb/padstacks 
+           C:/Cadence/SPB_17.0/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/allegrolib/symbols 
+
+
+------ Pad Stack Refresh Messages ------
+
+'MH2_4-40'  pad stack refresh starting.
+
+     'MH2_4-40'  pad stack refreshed successfully.
+     
+'MH_4-40'  pad stack refresh starting.
+
+     'MH_4-40'  pad stack refreshed successfully.
+     
+'SLOT79_40'  pad stack refresh starting.
+
+     'SLOT79_40'  pad stack refreshed successfully.
+     
+'SMD126_55'  pad stack refresh starting.
+
+     'SMD126_55'  pad stack refreshed successfully.
+     
+'SMD55_16'  pad stack refresh starting.
+
+     'SMD55_16'  pad stack refreshed successfully.
+     
+'SMD_TP_1MM'  pad stack refresh starting.
+
+     'SMD_TP_1MM'  pad stack refreshed successfully.
+     
+'40X30'  pad stack refresh starting.
+
+     '40X30'  pad stack refreshed successfully.
+     
+'SMD69_63'  pad stack refresh starting.
+
+     'SMD69_63'  pad stack refreshed successfully.
+     
+'60X50'  pad stack refresh starting.
+
+     '60X50'  pad stack refreshed successfully.
+     
+'25X40R'  pad stack refresh starting.
+
+     '25X40R'  pad stack refreshed successfully.
+     
+'SMD25_9'  pad stack refresh starting.
+
+     'SMD25_9'  pad stack refreshed successfully.
+     
+'SMD60_69'  pad stack refresh starting.
+
+     'SMD60_69'  pad stack refreshed successfully.
+     
+'SMD15_26'  pad stack refresh starting.
+
+     'SMD15_26'  pad stack refreshed successfully.
+     
+'SMD40_40'  pad stack refresh starting.
+
+     'SMD40_40'  pad stack refreshed successfully.
+     
+'SMD40_24'  pad stack refresh starting.
+
+     'SMD40_24'  pad stack refreshed successfully.
+     
+'SMD18_9'  pad stack refresh starting.
+
+     'SMD18_9'  pad stack refreshed successfully.
+     
+'SMD20_10'  pad stack refresh starting.
+
+     'SMD20_10'  pad stack refreshed successfully.
+     
+'SMD50_25'  pad stack refresh starting.
+
+     'SMD50_25'  pad stack refreshed successfully.
+     
+'SMD40_35'  pad stack refresh starting.
+
+     'SMD40_35'  pad stack refreshed successfully.
+     
+'SMD50_35'  pad stack refresh starting.
+
+     'SMD50_35'  pad stack refreshed successfully.
+     
+'SMD31_57'  pad stack refresh starting.
+
+     'SMD31_57'  pad stack refreshed successfully.
+     
+'HOLE24'  pad stack refresh starting.
+
+     'HOLE24'  pad stack refreshed successfully.
+     
+'SMD0_76X1_00'  pad stack refresh starting.
+
+     'SMD0_76X1_00'  pad stack refreshed successfully.
+     
+'SMD24_20'  pad stack refresh starting.
+
+     'SMD24_20'  pad stack refreshed successfully.
+     
+'SMD99_99_PENT'  pad stack refresh starting.
+
+     'SMD99_99_PENT'  pad stack refreshed successfully.
+     Sat Dec 05 13:03:57 2015				Page     2
+
+
+     
+'SMD106_32'  pad stack refresh starting.
+
+     'SMD106_32'  pad stack refreshed successfully.
+     
+'PAD60CIR36D'  pad stack refresh starting.
+
+     'PAD60CIR36D'  pad stack refreshed successfully.
+     
+'SMD47_32'  pad stack refresh starting.
+
+     'SMD47_32'  pad stack refreshed successfully.
+     
+'SMD43_67'  pad stack refresh starting.
+
+     'SMD43_67'  pad stack refreshed successfully.
+     
+'VIA26'  pad stack refresh starting.
+
+     'VIA26'  pad stack refreshed successfully.
+     
+'VIA'  pad stack refresh starting.
+
+     'VIA'  pad stack refreshed successfully.
+     
+Completed refreshing all pad stacks successfully.

@@ -1,5 +1,5 @@
 FILE_TYPE=LIBRARY_PARTS;
-{ Using PSTWRITER 17.0.0 d001Nov-22-2015 at 20:56:19}
+{ Using PSTWRITER 17.0.0 d001Dec-05-2015 at 13:10:32}
 primitive 'CAP NP_0603RF_WV_12D_4.7UF';
   pin
     '1':
@@ -491,7 +491,7 @@ primitive 'RESISTOR_0603RF_WV_12D_100K';
     VALUE='100k';
   end_body;
 end_primitive;
-primitive 'SW KEY-Y1011_0_SS12SDH2_SS12SDH';
+primitive 'SW KEY-Y1011_0_NEW_SS12SDH2_SS1';
   pin
     'COMMON':
       PIN_NUMBER='(1)';
@@ -505,7 +505,7 @@ primitive 'SW KEY-Y1011_0_SS12SDH2_SS12SDH';
   end_pin;
   body
     PART_NAME='SW KEY-Y1011_0';
-    JEDEC_TYPE='ss12sdh2';
+    JEDEC_TYPE='new_ss12sdh2';
     VALUE='SS12SDH2';
   end_body;
 end_primitive;

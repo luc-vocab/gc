@@ -1,0 +1,14 @@
+Reading Layer Conversion File 
+Error: Illegal class encountered in layer conversion file.
+  Cannot import DXF data into class PIN...mappings ignored.
+Reading DXF file...
+done.
+Layer conversion file: C:/Cadence/SPB_17.0/share/pcb/text/dlibx2iff.cnv
+DXF file: C:/Users/Madison/Desktop/Mario_Edges.dxf
+BRD file: #Taaaacj06316.tmp
+Update existing design?: NO
+Use default text?: NO
+DXF units: MILS
+Design units: MILS
+Design precision: 4
+dxf2a complete.

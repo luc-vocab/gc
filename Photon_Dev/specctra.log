@@ -1,0 +1,768 @@
+# 
+# ===============================================================================
+#                               Allegro PCB Router                               
+# Copyright 1990-2010 Cadence Design Systems, Inc.  All Rights Reserved.
+# ===============================================================================
+# 
+# Software licensed for sale by Cadence Design Systems, Inc.
+# Current time = Tue Dec 15 22:51:05 2015
+# 
+# Allegro PCB Router v17-0-118 made 2015/02/12 at 09:12:48
+# Running on: madison-pc, OS Version: WindowsNT 6.1.7601, Architecture: Intel Pentium II, III, or 4
+# Licensing: The program will not obey any unlicensed rules
+# No graphics will be displayed.
+# Design Name C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Batch File Name: pasde.do
+# Did File Name: C:/Users/Madison/Desktop/gc/Photon_Dev/specctra.did
+# Current time = Tue Dec 15 22:51:05 2015
+# PCB C:/Users/Madison/Desktop/gc/Photon_Dev
+# Master Unit set up as: MIL 1000
+# PCB Limits xlo=-1094.5000 ylo=-1094.5000 xhi=1094.5000 yhi=1094.5000
+# Total 65 Images Consolidated.
+# <<ERROR:>> Shape does not cover origin of Padstack SMD99_99_PENT
+# Via VIA z=1, 2 xlo=-12.0000 ylo=-12.0000 xhi= 12.0000 yhi= 12.0000
+# 
+#    VIA     TOP  BOTTOM
+# 
+#    TOP  ------   VIA  
+# BOTTOM   VIA    ------
+# 
+# Wires Processed 236, Vias Processed 90
+# Using colormap in design file.
+# Layers Processed: Signal Layers 2
+# Layers Processed: Power Layers 2
+# Components Placed 86, Images Processed 107, Padstacks Processed 32
+# Nets Processed 73, Net Terminals 360
+# PCB Area=3960100.000  EIC=21  Area/EIC=188576.190  SMDs=77
+# Total Pin Count: 307
+# Net GND uses split power plane.
+# Net 3V3 uses split power plane.
+# Signal Connections Created 14
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0100 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Layer BOTTOM Vert Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# 
+# Wiring Statistics ----------------- C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Nets 73 Connections 191 Unroutes 17
+# Signal Layers 2 Power Layers 2
+# Wire Junctions 26, at vias 6 Total Vias 90
+# Percent Connected   81.15
+# Manhattan Length 36737.7720 Horizontal 18007.6490 Vertical 18730.1230
+# Routed Length 33669.9263 Horizontal 20525.9300 Vertical 17104.6800
+# Ratio Actual / Manhattan   0.9165
+# Unconnected Length 12404.8890 Horizontal 4750.6200 Vertical 7654.2690
+# Total Conflicts: 70 (Cross: 0, Clear: 70, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:01
+# Loading Do File pasde.do ...
+# Loading Do File C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk_rules.do ...
+# Colormap Written to File _notify.std
+# Enter command <# Loading Do File C:/Users/Madison/AppData/Local/Temp/#Taaaaab08228.tmp ...
+# All Components Unselected.
+# All Nets Unselected.
+set route_diagonal 0
+grid wire 0.010000 (direction x) (offset 0.000000)
+grid wire 0.010000 (direction y) (offset 0.000000)
+grid via 0.010000 (direction x) (offset 0.000000)
+grid via 0.010000 (direction y) (offset 0.000000)
+protect all wires
+# All Wires Protected.
+direction TOP horizontal
+select layer TOP
+protect layer_wires TOP
+# Wires on layer TOP were Protected.
+direction BOTTOM vertical
+select layer BOTTOM
+protect layer_wires BOTTOM
+# Wires on layer BOTTOM were Protected.
+cost via -1
+# System default cost will be used.
+set turbo_stagger off
+limit outside 24.000000
+rule pcb (patterns_allowed  trombone accordion)
+set pattern_stacking on
+rule pcb (sawtooth_amplitude -1 -1)
+rule pcb (sawtooth_gap -1)
+rule pcb (accordion_amplitude -1 -1)
+rule pcb (accordion_gap -1)
+rule pcb (trombone_run_length -1)
+rule pcb (trombone_gap -1)
+smart_route (auto_fanout on) (auto_fanout_via_share off) (auto_fanout_pin_share off) (auto_testpoint off) (auto_miter on)
+# Smart Route: This board is already 81.15% completed. 
+# Using modified smart_route algorithm.
+# Smart Route: Executing 50 route passes.
+# Current time = Tue Dec 15 22:51:48 2015
+# 
+#    VIA     TOP  BOTTOM
+# 
+#    TOP  ------   VIA  
+# BOTTOM   VIA    ------
+# 
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0100 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Layer BOTTOM Vert Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# 
+# Wiring Statistics ----------------- C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Nets 73 Connections 191 Unroutes 17
+# Signal Layers 2 Power Layers 2
+# Wire Junctions 26, at vias 6 Total Vias 90
+# Percent Connected   85.86
+# Manhattan Length 36737.7720 Horizontal 18007.6490 Vertical 18730.1230
+# Routed Length 33669.9263 Horizontal 20525.9300 Vertical 17104.6800
+# Ratio Actual / Manhattan   0.9165
+# Unconnected Length 12404.8890 Horizontal 4750.6200 Vertical 7654.2690
+# Start Route Pass 1 of 50
+# Routing 17 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 6
+# Attempts 15 Successes 11 Failures 4 Vias 99
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 1 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 1 passes.
+# Start Route Pass 2 of 50
+# Routing 6 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 6
+# Attempts 4 Successes 0 Failures 4 Vias 99
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 2 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# <<WARNING:>> Smart Route: Conflict reduction rate 0 is very low 
+# after 2 passes. 
+# Design may not reach 100%. 
+# Check number of layers, grids and design rules.
+# Start Route Pass 3 of 50
+# Routing 6 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 4 Successes 1 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 3 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# <<WARNING:>> Smart Route: Average reduction ratio only 0 after 3 passes. 
+# Design may converge very slowly. 
+# Monitor status file carefully.
+# Start Route Pass 4 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 4 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# <<WARNING:>> Smart Route: Average reduction ratio only 0 after 4 passes. 
+# Design may converge very slowly. 
+# Monitor status file carefully.
+# Start Route Pass 5 of 50
+# Routing 5 wires.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 5 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# <<WARNING:>> Smart Route: Average reduction ratio only 0 after 5 passes. 
+# Design may converge very slowly. 
+# Monitor status file carefully.
+# Start Route Pass 6 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 6 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 6 passes.
+# Start Route Pass 7 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 7 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 7 passes.
+# Start Route Pass 8 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 8 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 8 passes.
+# Start Route Pass 9 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:01
+# End Pass 9 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 9 passes.
+# Start Route Pass 10 of 50
+# Routing 5 wires.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 10 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 10 passes.
+# Start Route Pass 11 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 11 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 11 passes.
+# Start Route Pass 12 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 12 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 12 passes.
+# Start Route Pass 13 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 13 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 13 passes.
+# Start Route Pass 14 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 14 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 14 passes.
+# Start Route Pass 15 of 50
+# Routing 5 wires.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 15 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 15 passes.
+# Start Route Pass 16 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 16 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 16 passes.
+# Start Route Pass 17 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 17 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 17 passes.
+# Start Route Pass 18 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 18 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 18 passes.
+# Start Route Pass 19 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 19 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 19 passes.
+# Start Route Pass 20 of 50
+# Routing 5 wires.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 20 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 20 passes.
+# Start Route Pass 21 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 21 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 21 passes.
+# Start Route Pass 22 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 22 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 22 passes.
+# Start Route Pass 23 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 23 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 23 passes.
+# Start Route Pass 24 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 24 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 24 passes.
+# Start Route Pass 25 of 50
+# Routing 5 wires.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 25 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Smart Route: Smart_route progressing normally after 25 passes.
+# Start Route Pass 26 of 50
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 0 Successes 0 Failures 0 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 26 of 50
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:05
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0100 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Layer BOTTOM Vert Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# ROUTING HISTORY ================================================================
+#     Pass     |   Conflicts |    |     |     |     |    |Red|      CPU Time     |
+#   Name   |No.| Cross| Clear|Fail|Unrte| Vias|XTalk|Len.| % |  Pass   |  Total  |
+#----------+---+------+------+----+-----+-----+-----+----+---+---------+---------|
+# Route    |  1|     0|     0|   4|    6|   99|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  2|     0|     0|   4|    6|   99|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  3|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  4|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  5|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  6|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  7|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  8|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  9|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 10|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 11|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 12|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 13|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 14|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 15|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 16|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 17|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 18|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 19|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 20|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 21|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 22|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 23|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 24|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 25|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 26|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Conflicts between polygon wires and fixed objects:   0
+# Stub Violations:   0
+# Net Order Violations:   0
+# Diffpair Uncoupled Length Violations:   0
+# Diffpair Phase Tolerance  Violations:   0
+# Total layerset violations:   0
+# Total layerset violations (exclude Fanout/Stagger/XNet Short side):   0
+# Overall Routing Time: 0:00:00
+# 
+# Wiring Statistics ----------------- C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Nets 73 Connections 191 Unroutes 5
+# Signal Layers 2 Power Layers 2
+# Wire Junctions 27, at vias 4 Total Vias 103
+# Percent Connected   97.38
+# Manhattan Length 36737.7720 Horizontal 18020.5940 Vertical 18717.1780
+# Routed Length 44027.2948 Horizontal 25069.9430 Vertical 22945.0930
+# Ratio Actual / Manhattan   1.1984
+# Unconnected Length 2673.1620 Horizontal 881.2460 Vertical 1791.9160
+# <<WARNING:>> Smart Route: No real conflict reduction achieved in previous 5 passes. 
+# Automatically forcing convergence.
+# Current time = Tue Dec 15 22:51:53 2015
+# 
+#    VIA     TOP  BOTTOM
+# 
+#    TOP  ------   VIA  
+# BOTTOM   VIA    ------
+# 
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0100 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Layer BOTTOM Vert Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# 
+# Wiring Statistics ----------------- C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Nets 73 Connections 191 Unroutes 5
+# Signal Layers 2 Power Layers 2
+# Wire Junctions 27, at vias 4 Total Vias 103
+# Percent Connected   97.38
+# Manhattan Length 36737.7720 Horizontal 18020.5940 Vertical 18717.1780
+# Routed Length 44027.2948 Horizontal 25069.9430 Vertical 22945.0930
+# Ratio Actual / Manhattan   1.1984
+# Unconnected Length 2673.1620 Horizontal 881.2460 Vertical 1791.9160
+# Start Route Pass 1 of 5
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 1 of 5
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Start Route Pass 2 of 5
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 2 of 5
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Start Route Pass 3 of 5
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 3 of 5
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Start Route Pass 4 of 5
+# Routing 5 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:01
+# End Pass 4 of 5
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Start Route Pass 5 of 5
+# Routing 5 wires.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 3 Successes 0 Failures 3 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 5 of 5
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:02
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0100 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Layer BOTTOM Vert Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# ROUTING HISTORY ================================================================
+#     Pass     |   Conflicts |    |     |     |     |    |Red|      CPU Time     |
+#   Name   |No.| Cross| Clear|Fail|Unrte| Vias|XTalk|Len.| % |  Pass   |  Total  |
+#----------+---+------+------+----+-----+-----+-----+----+---+---------+---------|
+# Route    |  1|     0|     0|   4|    6|   99|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  2|     0|     0|   4|    6|   99|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  3|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  4|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  5|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  6|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  7|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  8|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  9|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 10|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 11|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 12|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 13|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 14|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 15|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 16|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 17|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 18|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 19|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 20|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 21|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 22|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 23|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 24|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 25|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 26|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 27|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 28|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 29|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 30|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 31|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Conflicts between polygon wires and fixed objects:   0
+# Stub Violations:   0
+# Net Order Violations:   0
+# Diffpair Uncoupled Length Violations:   0
+# Diffpair Phase Tolerance  Violations:   0
+# Total layerset violations:   0
+# Total layerset violations (exclude Fanout/Stagger/XNet Short side):   0
+# Overall Routing Time: 0:00:00
+# 
+# Wiring Statistics ----------------- C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Nets 73 Connections 191 Unroutes 5
+# Signal Layers 2 Power Layers 2
+# Wire Junctions 27, at vias 4 Total Vias 103
+# Percent Connected   97.38
+# Manhattan Length 36737.7720 Horizontal 18020.5940 Vertical 18717.1780
+# Routed Length 44027.2948 Horizontal 25069.9430 Vertical 22945.0930
+# Ratio Actual / Manhattan   1.1984
+# Unconnected Length 2673.1620 Horizontal 881.2460 Vertical 1791.9160
+# <<ERROR:>> Smart Route: Design has 5 unrouted connections. 
+# Check placement, rules, grids, keepouts
+# Smart Route: Executing 2 clean passes.
+# Current time = Tue Dec 15 22:51:55 2015
+# 
+#    VIA     TOP  BOTTOM
+# 
+#    TOP  ------   VIA  
+# BOTTOM   VIA    ------
+# 
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0100 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Layer BOTTOM Vert Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# 
+# Wiring Statistics ----------------- C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Nets 73 Connections 191 Unroutes 5
+# Signal Layers 2 Power Layers 2
+# Wire Junctions 27, at vias 4 Total Vias 103
+# Percent Connected   97.38
+# Manhattan Length 36737.7720 Horizontal 18020.5940 Vertical 18717.1780
+# Routed Length 44027.2948 Horizontal 25069.9430 Vertical 22945.0930
+# Ratio Actual / Manhattan   1.1984
+# Unconnected Length 2673.1620 Horizontal 881.2460 Vertical 1791.9160
+# Start Clean Pass 1 of 2
+# Routing 28 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 16 Successes 12 Failures 4 Vias 102
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 1 of 2
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Start Clean Pass 2 of 2
+# Routing 27 wires.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 16 Successes 12 Failures 4 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 2 of 2
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:01
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0100 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Layer BOTTOM Vert Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# ROUTING HISTORY ================================================================
+#     Pass     |   Conflicts |    |     |     |     |    |Red|      CPU Time     |
+#   Name   |No.| Cross| Clear|Fail|Unrte| Vias|XTalk|Len.| % |  Pass   |  Total  |
+#----------+---+------+------+----+-----+-----+-----+----+---+---------+---------|
+# Route    |  1|     0|     0|   4|    6|   99|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  2|     0|     0|   4|    6|   99|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  3|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  4|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  5|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  6|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  7|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  8|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  9|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 10|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 11|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 12|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 13|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 14|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 15|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 16|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 17|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 18|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 19|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 20|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 21|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 22|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 23|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 24|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 25|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 26|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 27|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 28|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 29|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 30|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 31|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Clean    | 32|     0|     0|   4|    5|  102|    0|   0|   |  0:00:00|  0:00:00|
+# Clean    | 33|     0|     0|   4|    5|  103|    0|   0|   |  0:00:00|  0:00:00|
+# Conflicts between polygon wires and fixed objects:   0
+# Stub Violations:   0
+# Net Order Violations:   0
+# Diffpair Uncoupled Length Violations:   0
+# Diffpair Phase Tolerance  Violations:   0
+# Total layerset violations:   0
+# Total layerset violations (exclude Fanout/Stagger/XNet Short side):   0
+# Overall Routing Time: 0:00:00
+# 
+# Wiring Statistics ----------------- C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Nets 73 Connections 191 Unroutes 5
+# Signal Layers 2 Power Layers 2
+# Wire Junctions 27, at vias 5 Total Vias 103
+# Percent Connected   97.38
+# Manhattan Length 36770.3920 Horizontal 18018.3100 Vertical 18752.0820
+# Routed Length 43848.9023 Horizontal 24903.4030 Vertical 22906.1830
+# Ratio Actual / Manhattan   1.1925
+# Unconnected Length 2673.1620 Horizontal 881.2460 Vertical 1791.9160
+# Smart Route: Executing 2 clean passes.
+# Current time = Tue Dec 15 22:51:57 2015
+# 
+#    VIA     TOP  BOTTOM
+# 
+#    TOP  ------   VIA  
+# BOTTOM   VIA    ------
+# 
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0100 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Layer BOTTOM Vert Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# 
+# Wiring Statistics ----------------- C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Nets 73 Connections 191 Unroutes 5
+# Signal Layers 2 Power Layers 2
+# Wire Junctions 27, at vias 5 Total Vias 103
+# Percent Connected   97.38
+# Manhattan Length 36770.3920 Horizontal 18018.3100 Vertical 18752.0820
+# Routed Length 43848.9023 Horizontal 24903.4030 Vertical 22906.1830
+# Ratio Actual / Manhattan   1.1925
+# Unconnected Length 2673.1620 Horizontal 881.2460 Vertical 1791.9160
+# Start Clean Pass 1 of 2
+# Routing 27 wires.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 16 Successes 12 Failures 4 Vias 102
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# End Pass 1 of 2
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Start Clean Pass 2 of 2
+# Routing 26 wires.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# 0 bend points have been removed.
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Total Unroutes: 5
+# Attempts 16 Successes 12 Failures 4 Vias 103
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:01
+# End Pass 2 of 2
+# Wiring Written to File C:/Users/Madison/Desktop/gc/Photon_Dev\bestsave.w
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:01
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0100 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# Layer BOTTOM Vert Signal Wire Grid 0.0100 with offset 0.0000, Width= 6.0000, Clearance= 6.0000
+# ROUTING HISTORY ================================================================
+#     Pass     |   Conflicts |    |     |     |     |    |Red|      CPU Time     |
+#   Name   |No.| Cross| Clear|Fail|Unrte| Vias|XTalk|Len.| % |  Pass   |  Total  |
+#----------+---+------+------+----+-----+-----+-----+----+---+---------+---------|
+# Route    |  1|     0|     0|   4|    6|   99|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  2|     0|     0|   4|    6|   99|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  3|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  4|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  5|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  6|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  7|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  8|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    |  9|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 10|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 11|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 12|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 13|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 14|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 15|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 16|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 17|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 18|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 19|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 20|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 21|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 22|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 23|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 24|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 25|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 26|     0|     0|   0|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 27|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 28|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 29|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 30|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Route    | 31|     0|     0|   3|    5|  103|    0|   0|  0|  0:00:00|  0:00:00|
+# Clean    | 32|     0|     0|   4|    5|  102|    0|   0|   |  0:00:00|  0:00:00|
+# Clean    | 33|     0|     0|   4|    5|  103|    0|   0|   |  0:00:00|  0:00:00|
+# Clean    | 34|     0|     0|   4|    5|  102|    0|   0|   |  0:00:00|  0:00:00|
+# Clean    | 35|     0|     0|   4|    5|  103|    0|   0|   |  0:00:00|  0:00:00|
+# Conflicts between polygon wires and fixed objects:   0
+# Stub Violations:   0
+# Net Order Violations:   0
+# Diffpair Uncoupled Length Violations:   0
+# Diffpair Phase Tolerance  Violations:   0
+# Total layerset violations:   0
+# Total layerset violations (exclude Fanout/Stagger/XNet Short side):   0
+# Overall Routing Time: 0:00:00
+# 
+# Wiring Statistics ----------------- C:/Users/Madison/Desktop/gc/Photon_Dev\Photon_4Layer_shrunk.dsn
+# Nets 73 Connections 191 Unroutes 5
+# Signal Layers 2 Power Layers 2
+# Wire Junctions 27, at vias 5 Total Vias 103
+# Percent Connected   97.38
+# Manhattan Length 36739.5120 Horizontal 18004.0340 Vertical 18735.4780
+# Routed Length 43848.1923 Horizontal 24896.7030 Vertical 22912.1730
+# Ratio Actual / Manhattan   1.1935
+# Unconnected Length 2673.1620 Horizontal 881.2460 Vertical 1791.9160
+# Smart Route: Smart_route finished, completion rate: 97.38.
+write routes (changed_only) (reset_changed) C:/Users/Madison/AppData/Local/Temp/#Taaaaac08228.tmp
+# Routing Written to File C:/Users/Madison/AppData/Local/Temp/#Taaaaac08228.tmp
+quit

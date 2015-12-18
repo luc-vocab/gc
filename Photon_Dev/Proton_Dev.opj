@@ -83,9 +83,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1636 50 568")
-        (Scroll "-435 0")
-        (Zoom "100")
+        (Placement "44 0 1 -1 -1 -8 -30 50 1636 50 568")
+        (Scroll "90 0")
+        (Zoom "200")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
@@ -94,8 +94,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 0 1354 0 518")
-        (Scroll "-182 0")
-        (Zoom "97")
+        (Scroll "42 0")
+        (Zoom "194")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
@@ -104,8 +104,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1379 25 543")
-        (Scroll "0 0")
-        (Zoom "100")
+        (Scroll "161 261")
+        (Zoom "144")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
@@ -113,8 +113,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 25 1611 25 543")
-        (Scroll "90 124")
+        (Placement "44 2 3 -1 -1 -8 -30 25 1611 25 543")
+        (Scroll "90 144")
         (Zoom "200")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
@@ -124,7 +124,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 150 1798 150 668")
-        (Scroll "32 115")
+        (Scroll "32 248")
         (Zoom "194")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
