@@ -18,6 +18,7 @@ Do you have questions ? You may want to read all of the info below. You can also
 
 Similar Projects
 ----------------
+* Peter is planning on launching a commercial device, called Grindbit http://grindbit.launchrock.com/ - http://community.particle.io/t/im-building-a-night-time-bruxism-sleep-tracking-wearable-device/16840/6?u=dustpuppy
 * Anthony is building a similar device, using a LIPO battery, an OLED display, SRAM chips http://chompr.blogspot.com
 * Frank is starting on a similar project http://forums.adafruit.com/viewtopic.php?f=8&t=25611
 * Lucy built a device using the EMG sensor and wrote a research paper http://lucyaimeemorcos.wordpress.com/2013/12/17/dont-grind-your-gears-pictures/
