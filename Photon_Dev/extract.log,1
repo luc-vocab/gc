@@ -1,0 +1,15 @@
+#
+#   Extract commands file for the 'Slot Hole Report'
+#
+COMPOSITE_PAD
+  DRILL_HOLE_TYPE != CIRCLE_DRILL
+  DRILL_HOLE_TYPE != ''
+#
+  SLOT_TYPE
+  SLOT_SIZE_MAJOR 
+  SLOT_SIZE_MINOR
+  SLOT_X
+  SLOT_Y
+  SLOT_ROTATION
+  SLOT_PLATING
+END

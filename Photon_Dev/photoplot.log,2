@@ -1,0 +1,326 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : Photon_4Layer_shrunk.brd                      )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Fri Dec 18 22:17:58 2015                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ ******************************************
+ WARNING: DRC OUT OF DATE on this layout.
+ ******************************************
+
+ ---- Photoplot outline rectangle not found; using drawing extents.
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          INCHES
+    FILM-SIZE             2400000 1600000
+    FORMAT                2.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  YES
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+================================================================
+     PROCESSING FILM < TOP >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.13500                                  DARK 
+  SQUARE     0.04724                     0.000 NO     DARK 
+  RECTANGLE  0.01575     x 0.05512       0.000 NO     DARK 
+  RECTANGLE  0.01969     x 0.02362       0.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.00984      90.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.04724       0.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.04724      90.000 NO     DARK 
+  RECTANGLE  0.02500     x 0.04000      90.000 NO     DARK 
+  RECTANGLE  0.02559     x 0.01457       0.000 NO     DARK 
+  RECTANGLE  0.02953     x 0.00906      90.000 NO     DARK 
+  RECTANGLE  0.03150     x 0.10630       0.000 NO     DARK 
+  RECTANGLE  0.03543     x 0.05000       0.000 NO     DARK 
+  RECTANGLE  0.03937     x 0.03543       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000       0.001 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000      89.999 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000      90.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000     179.999 NO     DARK 
+  RECTANGLE  0.04331     x 0.06693      90.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.03150      90.000 NO     DARK 
+  RECTANGLE  0.05000     x 0.02500       0.000 NO     DARK 
+  RECTANGLE  0.05709     x 0.03150       0.000 NO     DARK 
+  RECTANGLE  0.06299     x 0.06890       0.000 NO     DARK 
+  RECTANGLE  0.06299     x 0.06890      90.000 NO     DARK 
+  RECTANGLE  0.06890     x 0.05906      90.000 NO     DARK 
+  RECTANGLE  0.12598     x 0.05512       0.000 NO     DARK 
+  OBLONG     0.07874     x 0.03937      89.999 NO     DARK 
+  OBLONG     0.07874     x 0.03937      90.000 NO     DARK 
+  OBLONG     0.07874     x 0.03937     179.999 NO     DARK 
+  PAD SHAPE  CHAMFERED_RECTANGLE ,4921  44.999 NO     DARK 
+  PAD SHAPE  CHAMFERED_RECTANGLE ,4921 134.999 NO     DARK 
+  PAD SHAPE  CHAMFERED_RECTANGLE ,4921 224.999 NO     DARK 
+  PAD SHAPE  CHAMFERED_RECTANGLE ,4921 314.999 NO     DARK 
+
+     SleepTrack_V1_TOP created with warnings
+
+
+================================================================
+     PROCESSING FILM < BOTTOM >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       YES
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+    ERROR: aborting film - Layer polarity of layer ETCH/BOTTOM does not
+           match film polarity of Negative. DRC may be unreliable.
+           
+    WARNING: Null ANTI-PAD specified for padstack MH2_4-40 at (-900.00 -900.00).
+    WARNING: Null ANTI-PAD specified for padstack MH2_4-40 at (-900.00 900.00).
+    WARNING: Null ANTI-PAD specified for padstack SMD18_9 at (-791.53 761.99).
+    WARNING: Null ANTI-PAD specified for padstack SMD18_9 at (-791.53 798.40).
+    WARNING: Null ANTI-PAD specified for padstack SMD18_9 at (-791.53 818.09).
+    WARNING: Null ANTI-PAD specified for padstack SMD18_9 at (-791.53 837.78).
+    WARNING: Null ANTI-PAD specified for padstack SMD18_9 at (-791.53 874.19).
+    WARNING: Null ANTI-PAD specified for padstack SMD18_9 at (-771.85 874.19).
+    WARNING: Null ANTI-PAD specified for padstack SMD18_9 at (-752.16 874.19).
+    WARNING: Null ANTI-PAD specified for padstack SMD18_9 at (-732.48 874.19).
+    WARNING: Null ANTI-PAD specified for padstack SMD18_9 at (-712.79 874.19).
+    WARNING: Null ANTI-PAD specified for padstack MH2_4-40 at (900.00 -900.00).
+    WARNING: Null ANTI-PAD specified for padstack MH2_4-40 at (900.00 900.00).
+    WARNING: No Photoplot Outline was found,
+negative shape outline will be determined by Board Outline
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.03000                                  CLEAR
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.08800                                  CLEAR
+  RECTANGLE  0.01772     x 0.00906      89.999 NO     DARK 
+  RECTANGLE  0.01772     x 0.00906     179.999 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000      89.999 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000      90.000 NO     DARK 
+  OBLONG     0.07874     x 0.03937      89.999 NO     DARK 
+  OBLONG     0.07874     x 0.03937     179.999 NO     DARK 
+  OBLONG     0.08465     x 0.04528      90.000 NO     CLEAR
+
+ Error in SleepTrack_V1_BOTTOM--halting output.  Artwork file not generated.
+ *** ERROR with SleepTrack_V1_BOTTOM
+
+
+
+
+================================================================
+     PROCESSING FILM < BoardOutline >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_BoardOutline.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: rectangle or unfilled shape composed 0 width line found at (-910.00 -1000.00)
+           ... ignored.
+
+
+
+  APERTURES USED:  NONE
+     SleepTrack_V1_BoardOutline created with warnings
+
+
+================================================================
+     PROCESSING FILM < Soldermask_Top >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_Soldermask_Top.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                10.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.04400                                  DARK 
+  CIRCLE     0.07000                                  DARK 
+  CIRCLE     0.07500                                  DARK 
+  RECTANGLE  0.03100     x 0.04600      90.000 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600       0.000 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600       0.001 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600      89.999 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600      90.000 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600     179.999 NO     DARK 
+  RECTANGLE  0.05500     x 0.03000       0.000 NO     DARK 
+  OBLONG     0.08465     x 0.04528      89.999 NO     DARK 
+  OBLONG     0.08465     x 0.04528      90.000 NO     DARK 
+  OBLONG     0.08465     x 0.04528     179.999 NO     DARK 
+
+     SleepTrack_V1_Soldermask_Top created with warnings
+
+
+================================================================
+     PROCESSING FILM < Soldermask_Bottom >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_Soldermask_Bottom.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.04400                                  DARK 
+  CIRCLE     0.07000                                  DARK 
+  CIRCLE     0.07500                                  DARK 
+  RECTANGLE  0.04600     x 0.03600       0.000 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600      89.999 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600      90.000 NO     DARK 
+  OBLONG     0.08465     x 0.04528      89.999 NO     DARK 
+  OBLONG     0.08465     x 0.04528      90.000 NO     DARK 
+  OBLONG     0.08465     x 0.04528     179.999 NO     DARK 
+
+     SleepTrack_V1_Soldermask_Bottom created with warnings
+
+
+================================================================
+     PROCESSING FILM < Silkscreen_Top >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_Silkscreen_Top.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: 0 width line found at (-894.48 -752.81)
+           ... ignored.
+
+    WARNING: Multiple 0 width lines; all will be treated the same as the first.
+           ... ignored.
+
+    WARNING: rectangle or unfilled shape having Multiple 0 width lines; all will be treated the same as the first.
+           ... ignored.
+
+    WARNING: text composed 0 width line found at (-941.59 601.90)
+           ... ignored.
+
+    WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
+           ... ignored.
+
+
+
+  APERTURES USED:  NONE
+     SleepTrack_V1_Silkscreen_Top created with warnings
+
+
+================================================================
+     PROCESSING FILM < Silkscreen_Bottom >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_Silkscreen_Bottom.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:  NONE
+     SleepTrack_V1_Silkscreen_Bottom created with warnings
+
+
+------------------------------------------------------
+ SUMMARY:
+        SleepTrack_V1_TOP created with warnings
+    *** ERROR with SleepTrack_V1_BOTTOM
+        SleepTrack_V1_BoardOutline created with warnings
+        SleepTrack_V1_Soldermask_Top created with warnings
+        SleepTrack_V1_Soldermask_Bottom created with warnings
+        SleepTrack_V1_Silkscreen_Top created with warnings
+        SleepTrack_V1_Silkscreen_Bottom created with warnings
+
+ ARTWORK Error

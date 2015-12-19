@@ -1,0 +1,13 @@
+;LEADER: 12 
+;HEADER: 
+;CODE  : ASCII 
+;FILE  : Photon_4Layer_shrunk-1-1.drl for  ... layers TOP and TOP
+;DESIGN: Photon_4Layer_shrunk.brd
+;   Holesize 1. = 25.590000 Tolerance = +0.000000/-0.000000 PLATED MILS Quantity = 4
+%
+G90
+X-0009764Y0087882
+X-0049219Y0088129
+X-0022645Y0088129
+X0016810Y0087882
+M30

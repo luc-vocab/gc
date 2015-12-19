@@ -2,17 +2,17 @@
 (                                                                     )
 (    DBDOCTOR                                                         )
 (                                                                     )
-(    Drawing          : Proton.brd                                    )
+(    Drawing          : Photon_4Layer_shrunk.brd                      )
 (    Software Version : 17.0P011                                      )
-(    Date/Time        : Sun Nov 01 20:31:25 2015                      )
+(    Date/Time        : Sat Dec 05 13:12:31 2015                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 
 Regenerating DRC
-  Original DRC errors:   0
-  Updated DRC errors:    0
+  Original DRC errors:   31
+  Updated DRC errors:    31
   DRC elapsed time:      00:00:01
 
 0 warnings, 0 errors detected, 0 errors  fixed.
