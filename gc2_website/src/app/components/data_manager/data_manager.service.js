@@ -9,8 +9,7 @@
         .service('data_manager', data_manager);
 
     /** @ngInject */
-    function data_manager(firebase_root, firebase_auth, $log, $q, 
-                          $timeout) {
+    function data_manager(firebase_root) {
         var root_ref = new Firebase(firebase_root);
         var data_ref = root_ref.child('data');
         

@@ -30,7 +30,7 @@
       $scope.$state = $state;
       
       
-      var destroy_callback = $rootScope.$on("$stateChangeSuccess", function(event, toState, toParams, fromState, fromParams, error) {
+      var destroy_callback = $rootScope.$on("$stateChangeSuccess", function(event, toState) {
         $log.info("stateChangeSuccess: ", toState);
         
         if(toState.name == "data-latest" || toState.name == "data") {
