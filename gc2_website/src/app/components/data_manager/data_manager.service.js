@@ -1,6 +1,7 @@
 /* globals Firebase: false */
 /* globals angular */
 /* globals influent */
+/* globals _ */
 
 (function() {
     'use strict';
@@ -50,6 +51,11 @@
                 client.query(query).then(function(result) {
                    $log.info("result: ", result); 
                    var data = result.results[0].series[0].values;
+                   data = _.map(data, function(entry) {
+                      var result = [new Date(entry[0]).getTime(), entry[1]];
+                      return result;
+                   });
+                   $log.info("data: ", data);
                    defer.resolve(data);
                 });
             });                              
