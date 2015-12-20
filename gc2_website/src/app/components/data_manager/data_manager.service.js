@@ -43,6 +43,7 @@
 
             var username_clause = "username='" + username + "'";
             var time_clause = "time > '" + start_time.toISOString() + "' and time < '" + end_time.toISOString() + "'";
+
             var query = "select MAX(emg_value) from emg where " + username_clause + 
                         " and " + time_clause + " GROUP BY time(1s)";
             $log.info("latest_emg_data query: ", query);
