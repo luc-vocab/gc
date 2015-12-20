@@ -1,4 +1,10 @@
  { 
     "firebase_root": "https://gcserver-dev.firebaseio.com/",
-    "dummy_setting": "dummy"
+    "influx_config": {
+     "host": "influxdb.dev.sleeptrack.io",
+     "port": 8086,
+     "username": "dev",
+     "password": "dev",
+     "db": "gc_dev"
+    }
   }
