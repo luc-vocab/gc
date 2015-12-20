@@ -23,7 +23,7 @@
     return directive;
 
     /** @ngInject */
-    function MetronicHeaderController(moment, $scope, $rootScope,
+    function MetronicHeaderController($scope, $rootScope,
                                       $log, $state) {
       var vm = this;
       
