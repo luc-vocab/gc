@@ -9,7 +9,22 @@ var $ = require('gulp-load-plugins')();
 var wiredep = require('wiredep').stream;
 var _ = require('lodash');
 
-gulp.task('inject', ['scripts', 'styles'], function () {
+
+
+gulp.task('config', function () {
+  var env_config = process.env.GC_ENV;
+  var file_path = path.join(conf.paths.src, '/app/config-' + env_config + '.json');
+  console.log("file_path: ", file_path);
+  gulp.src(file_path)
+    .pipe($.ngConstant({
+      name: 'gc2Website',
+      templatePath: path.join(conf.paths.src, '/app/config-template.ejs')
+    }))
+    .pipe($.rename("index.constants.js"))
+    .pipe(gulp.dest('src/app'));
+});
+
+gulp.task('inject', ['scripts', 'styles', 'config'], function () {
   var injectStyles = gulp.src([
     path.join(conf.paths.tmp, '/serve/app/**/*.css'),
     path.join('!' + conf.paths.tmp, '/serve/app/vendor.css')

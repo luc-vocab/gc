@@ -1,0 +1,4 @@
+ { 
+    "firebase_root": "https://gcserver-dev.firebaseio.com/",
+    "dummy_setting": "dummy"
+  }
