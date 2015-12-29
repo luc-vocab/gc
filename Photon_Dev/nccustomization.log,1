@@ -1,18 +1,14 @@
 (---------------------------------------------------------------------)
 (                                                                     )
-(    DBDOCTOR                                                         )
+(    NCDrill Customization Warnings/Errors                            )
 (                                                                     )
 (    Drawing          : Photon_4Layer_shrunk.brd                      )
 (    Software Version : 17.0P011                                      )
-(    Date/Time        : Mon Dec 07 22:19:03 2015                      )
+(    Date/Time        : Tue Dec 22 23:26:13 2015                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 
-Regenerating DRC
-  Original DRC errors:   10
-  Updated DRC errors:    10
-  DRC elapsed time:      00:00:01
 
-0 warnings, 0 errors detected, 0 errors  fixed.
+No warnings or errors detected.

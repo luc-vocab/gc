@@ -4,15 +4,10 @@
 (                                                                     )
 (    Drawing          : Photon_4Layer_shrunk.brd                      )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Fri Dec 18 22:18:30 2015                      )
+(    Date/Time        : Tue Dec 29 01:26:45 2015                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
-
-
- ******************************************
- WARNING: DRC OUT OF DATE on this layout.
- ******************************************
 
  ---- Photoplot outline rectangle not found; using drawing extents.
 
@@ -57,6 +52,7 @@ negative shape outline will be determined by Board Outline
   ---------------------------------------------------------
   CIRCLE     0.03000                                  CLEAR
   CIRCLE     0.07500                                  CLEAR
+  CIRCLE     0.16000                                  CLEAR
   OBLONG     0.08465     x 0.04528      89.999 NO     CLEAR
   OBLONG     0.08465     x 0.04528      90.000 NO     CLEAR
   OBLONG     0.08465     x 0.04528     179.999 NO     CLEAR
@@ -92,6 +88,7 @@ negative shape outline will be determined by Board Outline
   CIRCLE     0.03000                                  CLEAR
   CIRCLE     0.05500                                  DARK 
   CIRCLE     0.07500                                  CLEAR
+  CIRCLE     0.16000                                  CLEAR
   OBLONG     0.08465     x 0.04528      89.999 NO     CLEAR
   OBLONG     0.08465     x 0.04528      90.000 NO     CLEAR
   OBLONG     0.08465     x 0.04528     179.999 NO     CLEAR

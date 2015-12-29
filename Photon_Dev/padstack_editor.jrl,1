@@ -1,0 +1,20 @@
+\t (00:00:00) padstack_editor 17.0 P003 (v17-0-118C) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Tue Dec 29 01:19:50 2015
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=7420 CPUs=4
+\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaacq03400.tmp -pname SMD47_32 -data C:/Users/Madison/AppData/Local/Temp/#Taaaacs03400.tmp
+\t (00:00:00) 
+\d (00:00:23) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:00:24) QtSignal GuidedMaskLayersTab LayersTable itemSelectionChanged 3 Pad
+\d (00:00:24) QtSignal GuidedMaskLayersTab LayersTable itemSelectionChanged 2 Pad 3 Pad
+\d (00:00:25) QtSignal GuidedMaskLayersTab LayersTable itemSelectionChanged 2 Pad
+\d (00:00:28) QtSignal GuidedMaskLayersTab PadShape CurrentIndexChanged Rectangle
+\d (00:00:33) QtSignal GuidedMaskLayersTab PadWidth editingFinished 47.24
+\d (00:00:35) QtSignal GuidedMaskLayersTab PadHeight editingFinished 31.50
+\d (00:00:36) QtSignal GuidedMaskLayersTab LayersTable itemSelectionChanged 0 Pad
+\d (00:00:38) QtSignal GuidedMaskLayersTab PadShape CurrentIndexChanged Rectangle
+\d (00:00:44) QtSignal GuidedMaskLayersTab PadWidth editingFinished 53.24
+\d (00:00:47) QtSignal GuidedMaskLayersTab PadHeight editingFinished 27.50
+\d (00:00:52) QtSignal GuidedMaskLayersTab PadHeight editingFinished 37.50
+\d (00:00:53) QtSignal MainWindow Save triggered
+\d (00:00:55) QtSignal MainWindow UpdateToDesignExit triggered
+\t (00:00:55)     Journal end - Tue Dec 29 01:20:46 2015

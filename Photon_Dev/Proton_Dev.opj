@@ -27,7 +27,18 @@
     ("Allegro Netlist Combine Property String" "PCB Footprint")
     ("Allegro Netlist Ignore Fixed Property" "FALSE")
     ("Allegro Netlist User Defined Property" "FALSE")
-    (Netlist_TAB "0"))
+    (Netlist_TAB "0")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_Header "Item\tQuantity\tReference\tPart")
+    (BOM_Include_File "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "FALSE")
+    (BOM_View_Output "TRUE"))
   (Folder "Outputs"
     (File ".\pstxnet.dat"
       (Type "Report")
@@ -64,7 +75,9 @@
       (DisplayName "pstxprt.dat"))
     (File ".\4 layer\pstchip.dat"
       (Type "Report")
-      (DisplayName "pstchip.dat")))
+      (DisplayName "pstchip.dat"))
+    (File ".\proton_dev.bom"
+      (Type "Report")))
   (Folder "Referenced Projects")
   (MPSSessionName "Madison")
   (GlobalState
@@ -73,6 +86,7 @@
       (Path "Design Resources" ".\proton_dev.dsn")
       (Path "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
+      (Path "Outputs")
       (Select "Design Resources" ".\proton_dev.dsn"))
     (HierarchyView)
     (Doc
@@ -84,7 +98,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 50 1636 50 568")
-        (Scroll "90 0")
+        (Scroll "90 320")
         (Zoom "200")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
@@ -94,7 +108,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 0 1354 0 518")
-        (Scroll "42 0")
+        (Scroll "32 0")
         (Zoom "194")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
@@ -104,7 +118,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1379 25 543")
-        (Scroll "161 261")
+        (Scroll "161 275")
         (Zoom "144")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
@@ -113,8 +127,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 1611 25 543")
-        (Scroll "90 144")
+        (Placement "44 0 1 -1 -1 -8 -30 25 1611 25 543")
+        (Scroll "90 184")
         (Zoom "200")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
@@ -123,8 +137,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 150 1798 150 668")
-        (Scroll "32 248")
+        (Placement "44 2 3 -1 -1 -8 -30 150 1798 150 668")
+        (Scroll "32 229")
         (Zoom "194")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")

@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : Photon_4Layer_shrunk.brd                      )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Fri Dec 18 22:41:04 2015                      )
+(    Date/Time        : Tue Dec 22 23:18:27 2015                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -21,55 +21,68 @@
  COORDINATES		ABSOLUTE
  OUTPUT-UNITS		ENGLISH
  TOOL-ORDER		INCREASING
- REPEAT-CODES		NO
+ REPEAT-CODES		YES
  SUPPRESS-LEAD-ZEROES	NO
  SUPPRESS-TRAIL-ZEROES	NO
  SUPPRESS-EQUAL		NO
- TOOL-SELECT		NO
+ TOOL-SELECT		YES
  HEADER			none
  LEADER			12
  CODE			ASCII
  SEPARATE		NO
  SEPARATE-ROUTING	NO
  OPTIMIZE_DRILLING	NO
- ENHANCED_EXCELLON	NO
+ ENHANCED_EXCELLON	YES
  SCALE			1.000000
 
  WARNING(SPMHMF-358): Design precision is the same as that of the drill output file data.
  WARNING(SPMHMF-359): Data rounding errors may still be possible.
  WARNING(SPMHMF-365): This design contains 7 slot holes that can NOT be drilled.
  WARNING(SPMHMF-366): They can be processed by NC routing instead.
+ WARNING(SPMHMF-368): Cannot find NC Drill tool file 'nc_tools.txt'
+ WARNING(SPMHMF-369): ... will auto-generate tool file 'nc_tools_auto.txt'.
 
 
- Drill files being output to directory 'C:/Users/Madison/Desktop/gc/Photon_Dev' ...
+     Auto-generating tool file 'nc_tools_auto.txt' ...
+
+           Size  Plating  Tool        + Tolerance  - Tolerance
+
+          13.00  P        T01            0.000000     0.000000
+          25.59  P        T02            0.000000     0.000000
+          35.00  P        T03            0.000000     0.000000
+          36.00  P        T04            0.000000     0.000000
+         130.00  N        T05            0.000000     0.000000
+
+
+ Drill files being output to directory 'C:/Users/Madison/Desktop/gc/Photon_Dev/Physical' ...
 
 
 
-     'test_drill-1-4.drl' created for holes connecting TOP and BOTTOM
-     ----------------------------------------------------------------
+     'Photon_4Layer_shrunk_drill-1-4.drl' created for holes connecting TOP and BOTTOM
+     --------------------------------------------------------------------------------
 
-           Num     Size      +/- Tolerance     Plating   Quantity
+     Tool  Num     Size      +/- Tolerance     Plating   Quantity
 
-            1.  13.0000    0.0000/  0.0000      PLATED        111
-            2.  35.0000    0.0000/  0.0000      PLATED          6
-            3.  36.0000    0.0000/  0.0000      PLATED          5
-            4. 130.0000    0.0000/  0.0000  NON_PLATED          4
+     T01    1.  13.0000    0.0000/  0.0000      PLATED        111
+     T03    2.  35.0000    0.0000/  0.0000      PLATED          6
+     T04    3.  36.0000    0.0000/  0.0000      PLATED          5
+     T05    4. 130.0000    0.0000/  0.0000  NON_PLATED          4
 
      ---- Total holes:                                        126
 
-     ---- Total head travel:              5.10 feet (1.56 meters)
+     ---- Total head travel:              7.27 feet (2.22 meters)
 
 
 
 
-     'test_drill-1-1.drl' created for holes connecting TOP and TOP
-     -------------------------------------------------------------
+     'Photon_4Layer_shrunk_drill-1-1.drl' created for holes connecting TOP and TOP
+     -----------------------------------------------------------------------------
 
-           Num     Size      +/- Tolerance     Plating   Quantity
+     Tool  Num     Size      +/- Tolerance     Plating   Quantity
 
-            1.  25.5900    0.0000/  0.0000      PLATED          4
+     T02    1.  25.5900    0.0000/  0.0000      PLATED          4
 
      ---- Total holes:                                          4
 
-     ---- Total head travel:              0.09 feet (0.03 meters)
+     ---- Total head travel:              0.06 feet (0.02 meters)
 
