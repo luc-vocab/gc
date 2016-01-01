@@ -222,7 +222,7 @@ function GcClient(socket, influx_client, config) {
     
         var offset = 0;
         for(var i = 0; i < self.num_datapoints; i++) {
-            offset = self.read_data_packet(self.data_buffer, offset, false, false, true);
+            offset = self.read_data_packet(self.data_buffer, offset, true, false, true);
         }
         
         // read end marker
