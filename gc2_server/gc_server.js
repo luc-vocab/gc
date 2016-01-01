@@ -12,6 +12,7 @@ var config = require('./' + process.argv[2]);
 /* global UINT16_MARKER_HANDSHAKE: true */
 /* global UINT16_MARKER_START: true */
 /* global UINT16_MARKER_END: true */
+/* global WRITE_INFLUXDB: true */
 
 pubnub_client = pubnub({
     publish_key: "pub-c-879cf9bb-46af-4bf1-8dca-e011ea412cd2",
@@ -34,6 +35,9 @@ CONNECTION_STATES = {
 UINT16_MARKER_HANDSHAKE = 39780;
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
+
+WRITE_INFLUXDB = false;
+
 
 function GcClient(socket, influx_client, config) {
     this.socket = socket;
@@ -247,11 +251,13 @@ function GcClient(socket, influx_client, config) {
             },
         });        
         
-        
-        self.influx_client.writeMany(self.measurements).then(function() {
-            console.log("done writing to influxDB");
-            self.firebaseDeviceRef.update(self.firebase_update_obj);
-        });        
+    
+        if(WRITE_INFLUXDB) {
+            self.influx_client.writeMany(self.measurements).then(function() {
+                console.log("done writing to influxDB");
+                self.firebaseDeviceRef.update(self.firebase_update_obj);
+            });                    
+        }
     }
     
     this.read_data_packet = function(data, offset, print_data, publish, push_to_influxdb) {

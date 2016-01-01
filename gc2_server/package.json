@@ -22,6 +22,7 @@
     "url": "https://github.com/lucwastiaux/gc/issues"
   },
   "dependencies": {
+    "async": "^1.5.0",
     "es6-promise": "^3.0.2",
     "fast-csv": "^0.6.0",
     "firebase": "^2.3.1",
