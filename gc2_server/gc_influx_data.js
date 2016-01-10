@@ -15,6 +15,13 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
     var self = this;
     
     
+    this.subscribe_device_node = function() {
+        // keep an open subscription to the device node and update as needed
+        self.device_ref.on('value', function(snapshot) {
+            console.log("updating data for uid ", self.uid);
+           self.update_latest_data(); 
+        });
+    };
     
     this.update_latest_data = function() {
         
