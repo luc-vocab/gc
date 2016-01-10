@@ -36,7 +36,7 @@ UINT16_MARKER_HANDSHAKE = 39780;
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
 
-WRITE_INFLUXDB = false;
+WRITE_INFLUXDB = true;
 
 
 function GcClient(socket, influx_client, config) {
@@ -222,7 +222,7 @@ function GcClient(socket, influx_client, config) {
     
         var offset = 0;
         for(var i = 0; i < self.num_datapoints; i++) {
-            offset = self.read_data_packet(self.data_buffer, offset, true, false, true);
+            offset = self.read_data_packet(self.data_buffer, offset, false, false, true);
         }
         
         // read end marker

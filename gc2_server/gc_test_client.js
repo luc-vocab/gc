@@ -3,7 +3,10 @@
 /* global UINT16_MARKER_HANDSHAKE: true */
 /* global UINT16_MARKER_START: true */
 /* global UINT16_MARKER_END: true */
+/* global NUM_ITERATIONS: true */
 /* global NUM_DATAPOINTS: true */
+/* global DATALOGGING_HEADER_SIZE: true */
+/* global DATALOGGING_FOOTER_SIZE: true */
 
 
 MODE = {
@@ -16,7 +19,8 @@ UINT16_MARKER_HANDSHAKE = 39780;
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
 
-NUM_DATAPOINTS = 20;
+NUM_ITERATIONS = 1000;
+NUM_DATAPOINTS = 100;
 DATALOGGING_HEADER_SIZE = 28;
 DATALOGGING_FOOTER_SIZE = 2;
 
@@ -35,7 +39,15 @@ var add_datapoint = function(starting_timestamp_full, data_buffer,
     data_buffer.writeUInt32LE(current_millis, data_buffer_offset); data_buffer_offset += 4;
     
     // write EMG value
-    data_buffer.writeUInt16LE(150, data_buffer_offset); data_buffer_offset += 2;
+    // randomly generate EMG value
+    
+    var emg_value = Math.floor((Math.random() * 10) + 1) + 100;
+    if(current_millis % 60000 < 5000) {
+        // during the 5s  of every 60s interval, use higher value
+        emg_value = Math.floor((Math.random() * 10) + 1) + 300;
+    }
+    
+    data_buffer.writeUInt16LE(emg_value, data_buffer_offset); data_buffer_offset += 2;
     
     // write gyro and accel values
     data_buffer.writeInt16LE(0, data_buffer_offset); data_buffer_offset += 2;
@@ -124,7 +136,6 @@ var do_iteration = function(context) {
 var client = new net.Socket();
 client.connect(7001, '127.0.0.1', function() {
     console.log('connected to server');
-    // client.write('Hello, server! Love, Client.');
     
     // create buffer
     var buffer = new Buffer(14);
@@ -132,8 +143,8 @@ client.connect(7001, '127.0.0.1', function() {
     var offset = 0;
     // write UINT16_MARKER_HANDSHAKE
     buffer.writeUInt16LE(UINT16_MARKER_HANDSHAKE, offset); offset += 2;
-    // write device id (954894663)
-    buffer.writeInt32LE(954894663, offset); offset += 4;
+    // write device id (932326611)
+    buffer.writeInt32LE(932326611, offset); offset += 4;
     // write protocol version
     buffer.writeInt32LE(100, offset); offset += 4;
     // write realtime mode
@@ -166,7 +177,7 @@ client.connect(7001, '127.0.0.1', function() {
 
 
     var tasks = [];
-    for(var i = 0; i < 1; i++) {
+    for(var i = 0; i < NUM_ITERATIONS; i++) {
         tasks.push(function(cb) {
             var iteration_promise = do_iteration(context);
             iteration_promise.then(function(){
