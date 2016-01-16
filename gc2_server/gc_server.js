@@ -3,8 +3,32 @@ var pubnub = require("pubnub");
 var net = require('net');
 var Firebase = require('firebase');
 var q = require('promised-io/promise');
+var winston = require('winston');
+require('winston-papertrail').Papertrail;
+
 var config = require('./' + process.argv[2]);
 
+var papertrailTransport = new winston.transports.Papertrail({
+        host: config.papertrailHost,
+        port: config.papertrailPort,
+        level: config.loggingLevel,
+        program: 'gc_server'
+    });
+
+var consoleTransport = new winston.transports.Console({
+        level: 'debug',
+        timestamp: function() {
+            return new Date().toString();
+        },
+        colorize: true
+});
+
+var logger = new winston.Logger({
+transports: [
+    papertrailTransport,
+    consoleTransport
+]
+});
 
 /* global pubnub_client: true */
 /* global MODE: true */
@@ -54,7 +78,7 @@ function GcClient(socket, influx_client, config) {
     
     this.socket.on('data', function(data){
         var data_length = data.length;
-        console.log("received data, length: ", data_length, " current state: ", self.state);
+        self.logger_verbose("received data, length: ", data_length, " current state: ", self.state);
     
         if(self.state == CONNECTION_STATES.CONNECTED) {
             // console.log("received data");
@@ -63,14 +87,14 @@ function GcClient(socket, influx_client, config) {
             var marker = data.readUInt16LE(0);
             if(marker != UINT16_MARKER_HANDSHAKE) {
                 // something must be wrong as marker is incorrect
-                self.log("closing connection, handshake marker incorrect: " + marker);
+                self.log_error("closing connection, handshake marker incorrect: " + marker);
                 self.socket.destroy();
                 
             } else {
             
                 var device_id = data.readUInt32LE(2);
                 var protocol_version = data.readUInt32LE(6);
-                self.log("device_id: " + device_id + " protocol_version: " + protocol_version);
+                self.log_info("device_id: " + device_id + " protocol_version: " + protocol_version);
                 
                 self.firebaseDeviceRef = self.firebaseDevicesRoot.child(device_id.toString());
                 
@@ -81,7 +105,7 @@ function GcClient(socket, influx_client, config) {
                    var data = snapshot.val();
                    if(data == null || ! data.user_name) {
                        // username not present, device id is probably bad, disconnect
-                       self.log("device id " + device_id + " not present, or no user_name present, disconnecting");
+                       self.log_error("device id " + device_id + " not present, or no user_name present, disconnecting");
                        self.socket.destroy();
                    } else {
                     self.user_name = data.user_name;
@@ -95,12 +119,12 @@ function GcClient(socket, influx_client, config) {
                     
                     if( mode == MODE.REALTIME ) {
                         self.state = CONNECTION_STATES.READY_REALTIME;
-                        self.log("realtime mode");
+                        self.log_info("realtime mode");
                     } else if ( mode == MODE.DATALOGGING ) {
                         self.state = CONNECTION_STATES.READY_DATALOGGING;
-                        self.log("datalogging mode");
+                        self.log_info("datalogging mode");
                     } else if ( mode == MODE.CONNECTION_TEST ) {
-                        self.log("connection test");
+                        self.log_info("connection test");
                         var random_number = data.readUInt32LE(14);
                         // write data on firebase to show we received data
                         self.firebaseDeviceRef.update({
@@ -169,13 +193,13 @@ function GcClient(socket, influx_client, config) {
             self.num_datapoints = num_datapoints;
             self.state = CONNECTION_STATES.PENDING_DATALOGGING;
             
-            console.log("datalogging header", new Date(),
+            self.log_info("datalogging header", new Date(),
                         "charged_percent:", charged_percent / 100.0,
                         "num_datapoints:", num_datapoints,
                         "total buffer_size:", buffer_size,
                         "expect buffer_size:", self.expect_buffer_size);
             
-            console.log("stats:", "batches: ", batches_uploaded,
+            self.log_info("stats:", "batches: ", batches_uploaded,
                                   "errors: ", error_count,
                                   "abandons: ", abandon_count);
             
@@ -187,7 +211,7 @@ function GcClient(socket, influx_client, config) {
             
             if (data_length == buffer_size) {
                 // all done
-                console.log("ready to process buffer");
+                self.log_verbose("ready to process buffer");
                 self.process_datalogging_buffer();
                 self.state = CONNECTION_STATES.READY_DATALOGGING;                
             }
@@ -197,12 +221,12 @@ function GcClient(socket, influx_client, config) {
             data.copy(self.data_buffer, self.data_buffer_offset);
             self.data_buffer_offset += data_length;
             
-            console.log("appended to data_buffer: ", data_length,
+            self.log_verbose("appended to data_buffer: ", data_length,
                         "data_buffer_offset:", self.data_buffer_offset);
             
             if(self.data_buffer_offset == self.expect_buffer_size) {
                 // received full data size
-                console.log("ready to process buffer");
+                self.log_verbose("ready to process buffer");
                 
                 self.process_datalogging_buffer();
                 
@@ -228,7 +252,7 @@ function GcClient(socket, influx_client, config) {
         // read end marker
         var end_marker = self.data_buffer.readUInt16LE(offset); offset += 2;
         if( end_marker != UINT16_MARKER_END ) {
-            console.log("ERROR invalid end marker");
+            self.log_error("invalid end marker");
             return;
         }
         
@@ -237,8 +261,8 @@ function GcClient(socket, influx_client, config) {
         final_byte.writeUInt8(1,0);
         self.socket.write(final_byte);
         
-        console.log("processed datalogging buffer");
-        console.log("writing to influxdb");
+        self.log_info("processed datalogging buffer");
+        self.log_info("writing to influxdb");
         
         // add data for battery
         var tags = {user: self.user_name,
@@ -254,7 +278,7 @@ function GcClient(socket, influx_client, config) {
     
         if(WRITE_INFLUXDB) {
             self.influx_client.writeMany(self.measurements).then(function() {
-                console.log("done writing to influxDB");
+                self.log_info("done writing to influxDB");
                 self.firebaseDeviceRef.update(self.firebase_update_obj);
             });                    
         }
@@ -282,15 +306,14 @@ function GcClient(socket, influx_client, config) {
         var accel_y = accel_y_adj / 10000.0;
         var accel_z = accel_z_adj / 10000.0;
         
-        if(print_data) {
-            console.log("time: ", datetime,
-                        " millisecond diff: ", diff,
-                        " emg_value: ", emg_value,
-                        " gyro_max: ", gyro_max,
-                        " accel_x: ", accel_x,
-                        " accel_y: ", accel_y,
-                        " accel_z: ", accel_z);    
-        }
+        
+        self.log_debug("time:", datetime,
+                       "millisecond diff:", diff,
+                       "emg_value:", emg_value,
+                       "gyro_max:", gyro_max,
+                       "accel_x:", accel_x,
+                       "accel_y:", accel_y,
+                       "accel_z:", accel_z);    
 
         if(publish) {
         
@@ -336,40 +359,63 @@ function GcClient(socket, influx_client, config) {
     };
     
     this.socket.on('close', function(data) {
-        console.log("connection closed");
+        self.log_info("connection closed");
     });
     
     this.socket.on('error', function(error) {
-        console.log("error:", error);
+        self.log_error(error);
     });
     
     this.log = function(log_entry) {
         console.log(log_entry);
     };
+
+    this.log_debug = function() {
+        logger.debug(arguments);
+    }
+
+    this.log_verbose = function() {
+        logger.verbose(arguments);
+    }
     
+    this.log_info = function() {
+        logger.info(arguments);
+    }
+    
+    this.log_error = function() {
+        logger.info(arguments);
+    }
     
 }
 
+process.on('uncaughtException', (err) => {
+    logger.error("unhandled exception:", err, err.stack);
+});
+
+
 influent
 .createClient({
-    username: "dev",
-    password: "dev",
-    database: "gc_dev",
+    username: config.influxUsername,
+    password: config.influxPassword,
+    database: config.influxDb,
     server: [
         {
             protocol: "http",
-            host:     "influxdb.dev.sleeptrack.io",
-            port:     8086
+            host:     config.influxHost,
+            port:     config.influxPort
         }
     ]
 })
 .then(function(client) {
     var server = net.createServer(function(socket) {
-        console.log('received connection');
         
+        logger.info(socket.remoteAddress, ':', socket.remotePort, "received connection");
         var gcClient = new GcClient(socket, client, config);
     });
-    server.listen(7001, '0.0.0.0');
+    
+    logger.info("server", config.serverKey, "listening on", config.serverPort);
+    
+    server.listen(config.serverPort, '0.0.0.0');
     
     // mark server online
     var firebaseRoot = new Firebase(config.firebaseRoot);
