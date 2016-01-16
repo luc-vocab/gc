@@ -6,6 +6,7 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
     
     var firebase_root_ref = new Firebase(firebase_root);
     this.firebase_data_latest_ref = firebase_root_ref.child('data').child(uid).child('latest');
+    this.firebase_data_historical_ref = firebase_root_ref.child('data').child(uid).child('historical');
     this.device_ref = firebase_root_ref.child('devices').child(device_id);
 
     this.client = influx_client;
@@ -29,14 +30,22 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
             self.compute_total_score(intervals.time_clause).then(function(total_score) {
                console.log("total_score: ", total_score);
                
-               // update firebase
-               self.firebase_data_latest_ref.update({
+               var data = {
                   start_timestamp: intervals.start_timestamp,
                   end_timestamp: intervals.end_timestamp,
                   total_score: total_score,
                   collected_duration: intervals.collected_duration,
                   last_update_time: Firebase.ServerValue.TIMESTAMP
-               });
+               };
+               
+               // update firebase "latest" data
+               self.firebase_data_latest_ref.update(data);
+               
+               // update historical data
+               var historical_ref = self.firebase_data_historical_ref.child(intervals.start_timestamp);
+               historical_ref.update(data);
+                               
+               
             });            
         });
         
