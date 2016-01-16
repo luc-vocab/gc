@@ -1,15 +1,28 @@
 \t (00:00:00) padstack_editor 17.0 P003 (v17-0-118C) Windows SPB 64-bit Edition
-\t (00:00:00)     Journal start - Tue Dec 29 01:20:56 2015
-\t (00:00:00)         Host=MADISON-PC User=Madison Pid=8360 CPUs=4
-\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaact03400.tmp -pname SMD_TP_1MM -data C:/Users/Madison/AppData/Local/Temp/#Taaaacv03400.tmp
+\t (00:00:00)     Journal start - Sat Jan 16 10:49:08 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=5276 CPUs=4
+\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaaae05024.tmp -pname VIA -data C:/Users/Madison/AppData/Local/Temp/#Taaaaag05024.tmp
 \t (00:00:00) 
-\d (00:00:05) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
-\d (00:00:06) QtSignal GuidedMaskLayersTab LayersTable itemSelectionChanged 2 Pad
-\d (00:00:09) QtSignal GuidedMaskLayersTab PadShape CurrentIndexChanged Circle
-\d (00:00:12) QtSignal GuidedMaskLayersTab PadDiameter editingFinished 39.37
-\d (00:00:14) QtSignal GuidedMaskLayersTab LayersTable itemSelectionChanged 0 Pad
-\d (00:00:17) QtSignal GuidedMaskLayersTab PadShape CurrentIndexChanged Circle
-\d (00:00:22) QtSignal GuidedMaskLayersTab PadDiameter editingFinished 45.37
-\d (00:00:23) QtSignal MainWindow Save triggered
-\d (00:00:24) QtSignal MainWindow UpdateToDesignExit triggered
-\t (00:00:24)     Journal end - Tue Dec 29 01:21:21 2015
+\d (00:00:02) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:00:39) QtSignal GuidedMaskLayersTab PadShape CurrentIndexChanged None
+\d (00:00:40) QtSignal GuidedMaskLayersTab LayersTable itemSelectionChanged 1 Pad
+\d (00:00:42) QtSignal GuidedMaskLayersTab PadShape CurrentIndexChanged None
+\d (00:00:47) QtSignal MainWindow UpdateToDesignExit triggered
+\d (00:01:11) QtSignal pseCheckBrowser Close clicked
+\d (00:01:12) QtFillin Cancel
+\d (00:01:14) QtSignal GuidedTabsParent GuidedTabs currentChanged "Design Layers"
+\d (00:01:15) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged
+\d (00:02:45) QtSignal GuidedTabsParent GuidedTabs currentChanged "Drill Symbol"
+\d (00:02:50) QtSignal GuidedTabsParent GuidedTabs currentChanged "Design Layers"
+\d (00:02:51) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:02:51) QtSignal GuidedTabsParent GuidedTabs currentChanged Options
+\d (00:02:52) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:02:53) QtSignal GuidedMaskLayersTab LayersTable itemSelectionChanged
+\d (00:02:54) QtSignal GuidedTabsParent GuidedTabs currentChanged Start
+\d (00:02:56) QtSignal GuidedTabsParent GuidedTabs currentChanged Drill
+\d (00:02:56) QtSignal GuidedTabsParent GuidedTabs currentChanged "Secondary Drill"
+\d (00:02:58) QtSignal GuidedTabsParent GuidedTabs currentChanged "Drill Symbol"
+\d (00:03:01) QtSignal MainWindow UpdateToDesignExit triggered
+\d (00:03:03) QtSignal pseCheckBrowser Close clicked
+\d (00:03:04) QtFillin Yes
+\t (00:03:04)     Journal end - Sat Jan 16 10:52:13 2016

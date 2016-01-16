@@ -3,14 +3,14 @@
 (    STEP Export                                                      )
 (                                                                     )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Sun Nov 22 22:58:57 2015                      )
+(    Date/Time        : Sun Nov 22 23:04:25 2015                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 
 
-STEP file: C:/Users/Madison/Desktop/gc/Photon_Dev/3D Model/Photon_4Layer_shrunk.stp
+STEP file: Photon_4Layer_shrunk
 Design file: C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_shrunk.brd
 Export units: Inch
 STEP protocol: AP-214
@@ -21,8 +21,8 @@ Export parts with mapped STEP Models?: YES
 Export parts without mapped STEP Models?: YES
 Export assemblies and enclosures parts?: NO
 Export mechanical drills?: YES
-Export electrical through pin drills?: YES
-Export electrical through via drills?: YES
+Export electrical through pin drills?: NO
+Export electrical through via drills?: NO
 Export bare board only?: NO
-Export external copper?: YES
+Export external copper?: NO
 step_out complete.

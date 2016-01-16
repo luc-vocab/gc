@@ -1,308 +1,208 @@
 \t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:01)     Journal start - Wed Dec 23 00:16:12 2015
-\t (00:00:01)         Host=MADISON-PC User=Madison Pid=7368 CPUs=4
+\t (00:00:01)     Journal start - Sat Jan 16 11:36:15 2016
+\t (00:00:01)         Host=MADISON-PC User=Madison Pid=9304 CPUs=4
 \t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Photon_4Layer_shrunk.brd
 \t (00:00:01) 
 \t (00:00:03) Opening existing design...
 \d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_shrunk.brd
-\i (00:00:03) trapsize 2380
-\i (00:00:03) trapsize 2334
-\i (00:00:03) trapsize 2386
-\i (00:00:03) trapsize 2435
-\i (00:00:03) trapsize 2435
-\i (00:00:04) generaledit 
-\i (00:00:04) zoom in 1 
+\i (00:00:03) trapsize 1144
+\i (00:00:03) trapsize 1122
+\i (00:00:03) trapsize 1147
+\i (00:00:03) trapsize 1170
+\i (00:00:03) trapsize 1170
+\i (00:00:04) etchedit 
+\i (00:00:04) zoom out 1 
 \i (00:00:04) setwindow pcb
-\i (00:00:04) zoom in -339.70 -58.52
-\i (00:00:04) trapsize 1217
-\i (00:00:25) zoom in 1 
-\i (00:00:25) setwindow pcb
-\i (00:00:25) zoom in 926.27 -630.63
-\i (00:00:25) trapsize 609
-\i (00:00:25) zoom in 1 
-\i (00:00:25) setwindow pcb
-\i (00:00:25) zoom in 926.27 -630.63
-\i (00:00:25) trapsize 304
-\i (00:00:25) zoom in 1 
-\i (00:00:25) setwindow pcb
-\i (00:00:25) zoom in 909.24 -628.19
-\i (00:00:25) trapsize 152
-\i (00:00:26) zoom out 1 
-\i (00:00:26) setwindow pcb
-\i (00:00:26) zoom out 907.41 -628.49
-\i (00:00:26) trapsize 304
-\i (00:00:29) pick grid 1147.22 -573.11
-\t (00:00:29) last pick:  1147.25 -573.17
-\i (00:00:30) zoom out 1 
-\i (00:00:30) setwindow pcb
-\i (00:00:30) zoom out 1140.52 -573.11
-\i (00:00:30) trapsize 609
-\i (00:00:30) zoom out 1 
-\i (00:00:30) setwindow pcb
-\i (00:00:30) zoom out 1140.52 -573.12
-\i (00:00:30) trapsize 1217
-\i (00:00:30) zoom out 1 
-\i (00:00:30) setwindow pcb
-\i (00:00:30) zoom out 1140.53 -573.11
-\i (00:00:30) trapsize 2435
-\i (00:00:30) zoom in 1 
-\i (00:00:30) setwindow pcb
-\i (00:00:30) zoom in 1091.84 -587.72
-\i (00:00:30) trapsize 1217
-\i (00:00:31) zoom in 1 
-\i (00:00:31) setwindow pcb
-\i (00:00:31) zoom in 1072.37 -592.59
-\i (00:00:31) trapsize 609
-\i (00:00:31) zoom in 1 
-\i (00:00:31) setwindow pcb
-\i (00:00:31) zoom in 1033.42 -602.32
-\i (00:00:31) trapsize 304
-\i (00:00:32) zoom in 1 
-\i (00:00:32) setwindow pcb
-\i (00:00:32) zoom in 1032.20 -602.92
-\i (00:00:32) trapsize 152
-\i (00:00:33) zoom out 1 
-\i (00:00:33) setwindow pcb
-\i (00:00:33) zoom out 1027.94 -604.75
-\i (00:00:33) trapsize 304
-\i (00:00:33) zoom out 1 
-\i (00:00:33) setwindow pcb
-\i (00:00:33) zoom out 1027.94 -604.75
-\i (00:00:33) trapsize 609
-\i (00:00:48) zoom out 1 
-\i (00:00:48) setwindow pcb
-\i (00:00:48) zoom out 1315.22 -339.38
-\i (00:00:48) trapsize 1217
-\i (00:00:50) 3d_viewer 
-\i (00:00:50) setwindow pcb3D
-\i (00:00:50) trapsize 1217
-\i (00:00:50) setwindow pcb
-\i (00:00:50) generaledit 
-\i (00:04:02) pick grid 1354.17 -444.06
-\t (00:04:02) last pick:  1354.21 -444.08
-\i (00:04:02) zoom out 1 
-\i (00:04:02) setwindow pcb
-\i (00:04:02) zoom out 1300.61 -497.62
-\i (00:04:02) trapsize 2435
-\i (00:04:03) pick grid 1579.67 -205.47
-\t (00:04:03) last pick:  1579.63 -205.53
-\i (00:04:03) zoom in 1 
-\i (00:04:03) setwindow pcb
-\i (00:04:03) zoom in 1482.29 778.09
-\i (00:04:03) trapsize 1217
-\i (00:04:04) zoom in 1 
-\i (00:04:04) setwindow pcb
-\i (00:04:04) zoom in 934.52 726.97
-\i (00:04:04) trapsize 609
-\i (00:04:04) zoom in 1 
-\i (00:04:04) setwindow pcb
-\i (00:04:04) zoom in 951.56 734.28
-\i (00:04:04) trapsize 304
-\i (00:04:04) zoom out 1 
-\i (00:04:05) setwindow pcb
-\i (00:04:05) zoom out 963.13 727.58
-\i (00:04:05) trapsize 609
-\i (00:06:14) step pkg map 
-\i (00:06:21) setwindow form.pkgmap3d
-\i (00:06:21) FORM pkgmap3d pkglist JUMPER2 
-\i (00:06:27) FORM pkgmap3d stplist 02NR-E4K.STEP 
-\i (00:06:29) FORM pkgmap3d hide_board YES 
-\i (00:06:36) FORM pkgmap3d view_orientation Top 
-\i (00:06:39) FORM pkgmap3d view_orientation Right 
-\i (00:06:55) FORM pkgmap3d view_orientation Left 
-\i (00:06:58) FORM pkgmap3d save_current  
-\i (00:06:59) FORM pkgmap3d done  
-\i (00:06:59) setwindow pcb
-\i (00:06:59) generaledit 
-\i (00:07:00) 3d_viewer 
-\i (00:07:01) setwindow pcb3D
-\i (00:07:01) trapsize 609
-\i (00:07:01) setwindow pcb
-\i (00:07:01) generaledit 
-\i (00:08:10) step pkg map 
-\i (00:08:12) fillin confirm
-\i (00:08:15) setwindow form.pkgmap3d
-\i (00:08:15) FORM pkgmap3d stplist B2B-XH-AM.STEP 
-\i (00:08:20) FORM pkgmap3d rotation_x 90 
-\i (00:08:33) FORM pkgmap3d view_orientation Front 
-\i (00:08:41) FORM pkgmap3d view_orientation Back 
-\i (00:08:44) FORM pkgmap3d view_orientation Left 
-\i (00:08:48) FORM pkgmap3d view_orientation Bottom 
-\i (00:08:56) FORM pkgmap3d save_current  
-\i (00:08:58) FORM pkgmap3d done  
-\i (00:08:58) setwindow pcb
-\i (00:08:58) generaledit 
-\i (00:09:00) 3d_viewer 
-\i (00:09:00) setwindow pcb3D
-\i (00:09:00) trapsize 609
-\i (00:09:00) setwindow pcb
-\i (00:09:00) generaledit 
-\i (00:09:40) step pkg map 
-\i (00:09:46) setwindow form.pkgmap3d
-\i (00:09:46) FORM pkgmap3d rotation_y 180 
-\i (00:09:48) FORM pkgmap3d save_current  
-\i (00:09:50) setwindow pcb
-\i (00:09:50) 3d_viewer 
-\i (00:09:50) setwindow pcb3D
-\i (00:09:50) trapsize 609
-\i (00:09:50) setwindow pcb
-\i (00:09:50) generaledit 
-\i (00:10:00) step pkg map 
-\i (00:10:04) setwindow form.pkgmap3d
-\i (00:10:04) FORM pkgmap3d rotation_y  
-\i (00:10:07) FORM pkgmap3d rotation_z 180 
-\i (00:10:09) FORM pkgmap3d save_current  
-\i (00:10:11) setwindow pcb
-\i (00:10:11) 3d_viewer 
-\i (00:10:11) setwindow pcb3D
-\i (00:10:11) trapsize 609
-\i (00:10:11) setwindow pcb
-\i (00:10:11) generaledit 
-\i (00:10:27) step pkg map 
-\i (00:10:34) setwindow form.pkgmap3d
-\i (00:10:34) FORM pkgmap3d save_current  
-\i (00:10:37) FORM pkgmap3d done  
-\i (00:10:37) setwindow pcb
-\i (00:10:37) generaledit 
-\i (00:10:38) 3d_viewer 
-\i (00:10:38) setwindow pcb3D
-\i (00:10:38) trapsize 609
-\i (00:10:38) setwindow pcb
-\i (00:10:38) generaledit 
-\i (00:11:21) step pkg map 
-\i (00:11:28) setwindow form.pkgmap3d
-\i (00:11:28) FORM pkgmap3d unmapped_pkg YES 
-\i (00:11:42) FORM pkgmap3d pkglist MICROUSB 
-\i (00:11:45) FORM pkgmap3d stplist USB_Micro_476420001.stp 
-\i (00:11:52) FORM pkgmap3d rotation_x 90 
-\i (00:12:11) FORM pkgmap3d save_current  
-\i (00:12:13) FORM pkgmap3d done  
-\i (00:12:13) setwindow pcb
-\i (00:12:13) generaledit 
-\i (00:12:13) zoom out 1 
-\i (00:12:13) setwindow pcb
-\i (00:12:13) zoom out 717.23 615.60
-\i (00:12:13) trapsize 1217
-\i (00:12:13) zoom out 1 
-\i (00:12:13) setwindow pcb
-\i (00:12:13) zoom out 300.93 605.86
-\i (00:12:13) trapsize 2435
-\i (00:12:16) 3d_viewer 
-\i (00:12:16) setwindow pcb3D
-\i (00:12:16) trapsize 2435
-\i (00:12:16) setwindow pcb
-\i (00:12:16) generaledit 
-\i (00:12:41) step pkg map 
-\i (00:12:45) setwindow form.pkgmap3d
-\i (00:12:45) FORM pkgmap3d view_orientation Front 
-\i (00:12:49) FORM pkgmap3d save_current  
-\i (00:12:51) setwindow pcb
-\i (00:12:51) 3d_viewer 
-\i (00:12:51) setwindow pcb3D
-\i (00:12:51) trapsize 2435
-\i (00:12:51) setwindow pcb
-\i (00:12:51) generaledit 
-\i (00:12:58) save 
-\i (00:13:00) fillin yes 
-\i (00:13:00) generaledit 
-\i (00:13:01) zoom in 1 
-\i (00:13:01) setwindow pcb
-\i (00:13:01) zoom in -668.01 -942.51
-\i (00:13:01) trapsize 1217
-\i (00:13:07) step pkg map 
-\i (00:13:12) setwindow form.pkgmap3d
-\i (00:13:12) FORM pkgmap3d stplist 'User Library-LGA-24L.STEP' 
-\i (00:13:17) FORM pkgmap3d pkglist LGA-24L 
-\i (00:13:21) FORM pkgmap3d view_orientation Right 
-\i (00:13:23) FORM pkgmap3d save_current  
-\i (00:13:24) fillin confirm
-\i (00:13:25) FORM pkgmap3d stplist 'User Library-LGA-24L.STEP' 
-\i (00:13:35) FORM pkgmap3d view_orientation Front 
-\i (00:13:50) FORM pkgmap3d save_current  
-\i (00:13:51) FORM pkgmap3d done  
-\i (00:13:51) setwindow pcb
-\i (00:13:51) generaledit 
-\i (00:13:53) 3d_viewer 
-\i (00:13:53) setwindow pcb3D
-\i (00:13:53) trapsize 1217
-\i (00:13:53) setwindow pcb
-\i (00:13:53) generaledit 
-\i (00:14:14) step pkg map 
-\i (00:14:17) setwindow form.pkgmap3d
-\i (00:14:17) FORM pkgmap3d rotation_z 90 
-\i (00:14:47) FORM pkgmap3d save_current  
-\i (00:14:50) setwindow pcb
-\i (00:14:50) 3d_viewer 
-\i (00:14:50) setwindow pcb3D
-\i (00:14:50) trapsize 1217
-\i (00:14:50) setwindow pcb
-\i (00:14:50) generaledit 
-\i (00:18:21) 3d_viewer 
-\i (00:18:21) setwindow pcb3D
-\i (00:18:21) trapsize 1217
-\i (00:18:21) setwindow pcb
-\i (00:18:21) generaledit 
-\i (00:19:01) setwindow pcb3D
-\i (00:19:01) trapsize 1217
-\i (00:19:02) trapsize 1217
-\i (00:19:03) setwindow pcb
-\i (00:19:03) pick grid 1230.93 -616.28
-\t (00:19:03) last pick:  1230.97 -616.33
-\i (00:19:03) zoom in 1 
-\i (00:19:03) setwindow pcb
-\i (00:19:03) zoom in 880.36 -703.92
-\i (00:19:03) trapsize 609
-\i (00:19:03) zoom in 1 
-\i (00:19:03) setwindow pcb
-\i (00:19:03) zoom in 902.27 -682.01
-\i (00:19:03) trapsize 304
-\i (00:19:03) zoom in 1 
-\i (00:19:03) setwindow pcb
-\i (00:19:03) zoom in 916.27 -672.88
-\i (00:19:03) trapsize 152
-\i (00:19:04) zoom out 1 
-\i (00:19:04) setwindow pcb
-\i (00:19:04) zoom out 843.24 -724.01
-\i (00:19:04) trapsize 304
-\i (00:19:04) zoom out 1 
-\i (00:19:04) setwindow pcb
-\i (00:19:04) zoom out 842.63 -724.00
-\i (00:19:04) trapsize 609
-\i (00:19:04) zoom in 1 
-\i (00:19:04) setwindow pcb
-\i (00:19:04) zoom in 935.15 -793.39
-\i (00:19:04) trapsize 304
-\i (00:19:05) zoom out 1 
-\i (00:19:05) setwindow pcb
-\i (00:19:05) zoom out 961.93 -800.69
-\i (00:19:05) trapsize 609
-\i (00:19:06) pick grid 1106.78 -629.05
-\t (00:19:06) last pick:  1106.82 -629.07
-\i (00:19:12) zoom out 1 
-\i (00:19:12) setwindow pcb
-\i (00:19:12) zoom out 406.85 -487.85
-\i (00:19:12) trapsize 1217
-\i (00:19:12) zoom out 1 
-\i (00:19:12) setwindow pcb
-\i (00:19:12) zoom out 2271.71 -794.59
-\i (00:19:12) trapsize 2435
-\i (00:19:13) zoom in 1 
-\i (00:19:13) setwindow pcb
-\i (00:19:13) zoom in 1103.14 583.36
-\i (00:19:13) trapsize 1217
-\i (00:19:13) zoom in 1 
-\i (00:19:13) setwindow pcb
-\i (00:19:13) zoom in 1103.14 583.36
-\i (00:19:13) trapsize 609
-\i (00:19:13) zoom in 1 
-\i (00:19:13) setwindow pcb
-\i (00:19:13) zoom in 1103.15 583.37
-\i (00:19:13) trapsize 304
-\i (00:19:14) zoom out 1 
-\i (00:19:14) setwindow pcb
-\i (00:19:14) zoom out 1100.72 534.68
-\i (00:19:14) trapsize 609
-\i (00:29:24) exit 
-\e (00:29:24) Do you want to save the changes you made to C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_shrunk.brd?
-\i (00:29:25) fillin yes 
-\t (00:29:25)     Journal end - Wed Dec 23 00:45:37 2015
+\i (00:00:04) zoom out -1164.57 -896.56
+\i (00:00:04) trapsize 2340
+\i (00:00:04) zoom out 1 
+\i (00:00:04) setwindow pcb
+\i (00:00:04) zoom out -1852.58 -854.44
+\i (00:00:04) trapsize 4681
+\i (00:00:05) zoom in 1 
+\i (00:00:05) setwindow pcb
+\i (00:00:05) zoom in 1642.62 -18.72
+\i (00:00:05) trapsize 2340
+\i (00:00:19) step out 
+\i (00:00:24) setwindow form.step_out
+\i (00:00:24) FORM step_out elec_drill NO 
+\i (00:00:27) FORM step_out mapped_pkg NO 
+\i (00:00:28) FORM step_out unmapped_pkg NO 
+\i (00:00:28) FORM step_out mapped_pkg YES 
+\i (00:00:29) FORM step_out unmapped_pkg YES 
+\i (00:00:29) FORM step_out unmapped_pkg NO 
+\i (00:00:33) FORM step_out external_copper NO 
+\i (00:00:34) FORM step_out bare_board YES 
+\i (00:00:45) FORM step_out done  
+\t (00:00:45) Starting Exporting STEP File...
+\t (00:00:46) STEP output completed.
+\i (00:02:12) FORM step_out mech_drill NO 
+\i (00:02:17) FORM step_out protocol AP-242 
+\i (00:02:23) FORM step_out done  
+\t (00:02:23) Starting Exporting STEP File...
+\t (00:02:25) STEP output completed.
+\i (00:03:19) FORM step_out viewlog  
+\i (00:03:22) setwindow text
+\i (00:03:22) close 
+\i (00:03:23) setwindow form.step_out
+\i (00:03:23) FORM step_out cancel  
+\i (00:03:23) setwindow pcb
+\i (00:03:23) etchedit 
+\i (00:03:41) dxf out 
+\i (00:03:44) setwindow form.dxf_out
+\i (00:03:44) FORM dxf_out units INCHES 
+\i (00:03:57) FORM dxf_out dxfformat Revision 14 
+\i (00:03:58) FORM dxf_out browsedxf  
+\i (00:04:08) fillin "C:\Users\Madison\Desktop\gc\Photon_Dev\3D Model\Photon.dxf"
+\i (00:04:11) FORM dxf_out execute  
+\i (00:04:21) FORM dxf_out liblayer  
+\i (00:04:24) fillin "dlibx2iff"
+\i (00:04:25) FORM dxf_out execute  
+\t (00:04:25) Starting DxfFile...
+\t (00:04:27) Translation complete. See logfile (using File->ViewLog).
+\i (00:06:06) FORM dxf_out exportfilledpads YES 
+\i (00:06:12) FORM dxf_out drillinfo YES 
+\i (00:06:30) setwindow pcb
+\i (00:06:30) pick grid 4085.90 528.91
+\t (00:06:30) last pick:  4085.90 528.97
+\i (00:06:45) setwindow form.dxf_out
+\i (00:06:45) FORM dxf_out close  
+\i (00:06:45) setwindow pcb
+\i (00:06:45) etchedit 
+\i (00:06:47) zoom in 1 
+\i (00:06:47) setwindow pcb
+\i (00:06:47) zoom in -880.23 627.20
+\i (00:06:47) trapsize 1170
+\i (00:06:47) zoom in 1 
+\i (00:06:47) setwindow pcb
+\i (00:06:47) zoom in -877.89 627.20
+\i (00:06:47) trapsize 585
+\i (00:06:47) zoom in 1 
+\i (00:06:47) setwindow pcb
+\i (00:06:47) zoom in -877.88 627.20
+\i (00:06:47) trapsize 293
+\i (00:06:47) zoom out 1 
+\i (00:06:47) setwindow pcb
+\i (00:06:47) zoom out -877.88 626.62
+\i (00:06:47) trapsize 585
+\i (00:06:47) zoom out 1 
+\i (00:06:47) setwindow pcb
+\i (00:06:47) zoom out -876.70 626.62
+\i (00:06:47) trapsize 1170
+\i (00:06:47) zoom out 1 
+\i (00:06:47) setwindow pcb
+\i (00:06:47) zoom out -876.71 626.62
+\i (00:06:47) trapsize 2340
+\i (00:06:48) zoom in 1 
+\i (00:06:48) setwindow pcb
+\i (00:06:48) zoom in -1059.26 1202.35
+\i (00:06:48) trapsize 1170
+\i (00:06:48) zoom in 1 
+\i (00:06:48) setwindow pcb
+\i (00:06:48) zoom in -1010.12 1150.87
+\i (00:06:48) trapsize 585
+\i (00:06:48) zoom in 1 
+\i (00:06:48) setwindow pcb
+\i (00:06:48) zoom in -975.01 1115.76
+\i (00:06:48) trapsize 293
+\i (00:06:48) zoom in 1 
+\i (00:06:48) setwindow pcb
+\i (00:06:48) zoom in -959.80 1094.70
+\i (00:06:48) trapsize 146
+\i (00:06:48) zoom out 1 
+\i (00:06:48) setwindow pcb
+\i (00:06:48) zoom out -950.74 1003.43
+\i (00:06:48) trapsize 293
+\i (00:06:48) zoom out 1 
+\i (00:06:48) setwindow pcb
+\i (00:06:48) zoom out -939.04 1019.24
+\i (00:06:49) trapsize 585
+\i (00:06:50) zoom out 1 
+\i (00:06:50) setwindow pcb
+\i (00:06:50) zoom out -1001.06 1407.74
+\i (00:06:50) trapsize 1170
+\i (00:06:55) setwindow form.vf_vis
+\i (00:06:55) FORM vf_vis colorview_list Film: BoardOutline 
+\i (00:06:55) setwindow pcb
+\i (00:06:55) zoom out 1 
+\i (00:06:55) setwindow pcb
+\i (00:06:55) zoom out -76.61 1243.91
+\i (00:06:55) trapsize 2340
+\i (00:06:59) save_as 
+\i (00:07:03) fillin "menu_cancel"
+\i (00:07:03) etchedit 
+\i (00:07:09) dxf out 
+\i (00:07:22) setwindow form.dxf_out
+\i (00:07:22) FORM dxf_out dxffile Outline 
+\i (00:07:22) FORM dxf_out drillinfo YES 
+\i (00:07:22) FORM dxf_out drillinfo NO 
+\i (00:07:25) FORM dxf_out liblayer  
+\i (00:07:29) fillin "ecad_mcad"
+\i (00:07:33) FORM dxf_out execute  
+\t (00:07:33) Starting DxfFile...
+\t (00:07:34) Translation complete. See logfile (using File->ViewLog).
+\i (00:08:25) FORM dxf_out close  
+\i (00:08:25) setwindow pcb
+\i (00:08:25) etchedit 
+\i (00:08:27) setwindow form.mini
+\i (00:08:27) FORM mini subcolor 1 
+\i (00:08:27) FORM mini subcolor 0 
+\i (00:08:27) FORM mini subcolor 1 
+\i (00:08:29) setwindow pcb
+\i (00:08:29) zoom in 1 
+\i (00:08:29) setwindow pcb
+\i (00:08:29) zoom in -783.41 -764.14
+\i (00:08:29) trapsize 1170
+\i (00:08:29) zoom out 1 
+\i (00:08:29) setwindow pcb
+\i (00:08:29) zoom out -769.37 -754.77
+\i (00:08:29) trapsize 2340
+\i (00:08:31) zoom in 1 
+\i (00:08:31) setwindow pcb
+\i (00:08:31) zoom in -703.83 630.73
+\i (00:08:31) trapsize 1170
+\i (00:08:31) zoom in 1 
+\i (00:08:31) setwindow pcb
+\i (00:08:31) zoom in -703.83 630.73
+\i (00:08:31) trapsize 585
+\i (00:08:31) zoom in 1 
+\i (00:08:31) setwindow pcb
+\i (00:08:31) zoom in -703.83 630.73
+\i (00:08:31) trapsize 293
+\i (00:08:31) zoom out 1 
+\i (00:08:31) setwindow pcb
+\i (00:08:31) zoom out -754.74 683.39
+\i (00:08:31) trapsize 585
+\i (00:08:33) prepopup -917.39 889.35
+\i (00:08:36) pop dyn_option_select '@:@Show element' 
+\i (00:08:37) show element 
+\i (00:08:37) etchedit 
+\i (00:08:39) pick grid -561.66 830.84
+\t (00:08:39) last pick:  -561.60 830.83
+\i (00:15:17) setwindow text
+\i (00:15:17) close 
+\i (00:15:18) setwindow pcb
+\i (00:15:18) zoom out 1 
+\i (00:15:18) setwindow pcb
+\i (00:15:18) zoom out -6.99 815.63
+\i (00:15:18) trapsize 1170
+\i (00:15:18) zoom out 1 
+\i (00:15:18) setwindow pcb
+\i (00:15:18) zoom out -526.55 696.27
+\i (00:15:18) trapsize 2340
+\i (00:15:18) zoom in 1 
+\i (00:15:18) setwindow pcb
+\i (00:15:18) zoom in 1055.55 -586.27
+\i (00:15:18) trapsize 1170
+\i (00:15:19) zoom out 1 
+\i (00:15:19) setwindow pcb
+\i (00:15:19) zoom out 1067.25 -480.95
+\i (00:15:19) trapsize 2340
+\i (00:16:42) setwindow form.vf_vis
+\i (00:16:42) FORM vf_vis colorview_list Film: TOP 
+\i (00:16:48) FORM vf_vis colorview_list Film: BOTTOM 
+\i (00:16:54) setwindow pcb
+\i (00:16:54) exit 
+\e (00:16:54) Do you want to save the changes you made to Photon_4Layer_shrunk.brd?
+\i (00:16:55) fillin no 
+\t (00:16:55)     Journal end - Sat Jan 16 11:53:10 2016

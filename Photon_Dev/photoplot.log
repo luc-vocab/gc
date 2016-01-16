@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : Photon_4Layer_shrunk.brd                      )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Tue Dec 29 01:26:45 2015                      )
+(    Date/Time        : Sat Jan 16 11:21:10 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -27,8 +27,8 @@ Results from parameter file ...
 
 
 ================================================================
-     PROCESSING FILM < GROUND >
-     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_GROUND.art > ...
+     PROCESSING FILM < Pastemask_Top >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_Pastemask_Top.art > ...
 ================================================================
 
   FILM PARAMETERS :
@@ -38,68 +38,91 @@ Results from parameter file ...
   Rotate angle                        NONE
   Offset x:                           0.00
   Offset y:                           0.00
-  Plot negative                       YES
+  Plot negative                       NO
   Suppress unconnected internal pads  NO
   Draw holes only                     NO
 
-    WARNING: No Photoplot Outline was found,
-negative shape outline will be determined by Board Outline
 
 
   APERTURES USED:
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     0.03000                                  CLEAR
-  CIRCLE     0.07500                                  CLEAR
-  CIRCLE     0.16000                                  CLEAR
-  OBLONG     0.08465     x 0.04528      89.999 NO     CLEAR
-  OBLONG     0.08465     x 0.04528      90.000 NO     CLEAR
-  OBLONG     0.08465     x 0.04528     179.999 NO     CLEAR
+  CIRCLE     0.04537                                  DARK 
+  CIRCLE     0.07000                                  DARK 
+  CIRCLE     0.07500                                  DARK 
+  SQUARE     0.05324                     0.000 NO     DARK 
+  RECTANGLE  0.02175     x 0.06112       0.000 NO     DARK 
+  RECTANGLE  0.02569     x 0.02962       0.000 NO     DARK 
+  RECTANGLE  0.02962     x 0.01584      90.000 NO     DARK 
+  RECTANGLE  0.02962     x 0.05324       0.000 NO     DARK 
+  RECTANGLE  0.02962     x 0.05324      90.000 NO     DARK 
+  RECTANGLE  0.03100     x 0.04600      90.000 NO     DARK 
+  RECTANGLE  0.03159     x 0.02057       0.000 NO     DARK 
+  RECTANGLE  0.03750     x 0.11230       0.000 NO     DARK 
+  RECTANGLE  0.04143     x 0.05600       0.000 NO     DARK 
+  RECTANGLE  0.04537     x 0.04143       0.000 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600       0.000 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600       0.001 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600      89.999 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600      90.000 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600     179.999 NO     DARK 
+  RECTANGLE  0.04931     x 0.07293      90.000 NO     DARK 
+  RECTANGLE  0.05324     x 0.03750      90.000 NO     DARK 
+  RECTANGLE  0.05500     x 0.03000       0.000 NO     DARK 
+  RECTANGLE  0.06309     x 0.03750       0.000 NO     DARK 
+  RECTANGLE  0.06899     x 0.07490       0.000 NO     DARK 
+  RECTANGLE  0.06899     x 0.07490      90.000 NO     DARK 
+  OBLONG     0.08465     x 0.04528      89.999 NO     DARK 
+  OBLONG     0.08465     x 0.04528      90.000 NO     DARK 
+  OBLONG     0.08465     x 0.04528     179.999 NO     DARK 
+  PAD SHAPE  CHAMFERED_RECTANGLE ,5000  44.999 NO     DARK 
+  PAD SHAPE  CHAMFERED_RECTANGLE ,5000 134.999 NO     DARK 
+  PAD SHAPE  CHAMFERED_RECTANGLE ,5000 224.999 NO     DARK 
+  PAD SHAPE  CHAMFERED_RECTANGLE ,5000 314.999 NO     DARK 
 
-     SleepTrack_V1_GROUND created with warnings
+     SleepTrack_V1_Pastemask_Top created.
 
 
 ================================================================
-     PROCESSING FILM < 3V3 >
-     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_3V3.art > ...
+     PROCESSING FILM < Pastemask_Bottom >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V1_Pastemask_Bottom.art > ...
 ================================================================
 
   FILM PARAMETERS :
   ---------------------------------------------------------
-  Undefined line width                0.00
+  Undefined line width                10.00
   Mirror code                         NONE
   Rotate angle                        NONE
   Offset x:                           0.00
   Offset y:                           0.00
-  Plot negative                       YES
+  Plot negative                       NO
   Suppress unconnected internal pads  NO
   Draw holes only                     NO
 
-    WARNING: No thermal flash for padstack "PAD60CIR36D", regular pad used.
-    WARNING: No Photoplot Outline was found,
-negative shape outline will be determined by Board Outline
 
 
   APERTURES USED:
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     0.03000                                  CLEAR
-  CIRCLE     0.05500                                  DARK 
-  CIRCLE     0.07500                                  CLEAR
-  CIRCLE     0.16000                                  CLEAR
-  OBLONG     0.08465     x 0.04528      89.999 NO     CLEAR
-  OBLONG     0.08465     x 0.04528      90.000 NO     CLEAR
-  OBLONG     0.08465     x 0.04528     179.999 NO     CLEAR
-  FLASH SYM  AB00                        0.000 NO     CLEAR
+  CIRCLE     0.07000                                  DARK 
+  CIRCLE     0.07500                                  DARK 
+  RECTANGLE  0.02372     x 0.01506      89.999 NO     DARK 
+  RECTANGLE  0.02372     x 0.01506     179.999 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600       0.000 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600      89.999 NO     DARK 
+  RECTANGLE  0.04600     x 0.03600      90.000 NO     DARK 
+  OBLONG     0.08465     x 0.04528      89.999 NO     DARK 
+  OBLONG     0.08465     x 0.04528      90.000 NO     DARK 
+  OBLONG     0.08465     x 0.04528     179.999 NO     DARK 
 
-     SleepTrack_V1_3V3 created with warnings
+     SleepTrack_V1_Pastemask_Bottom created.
 
 
 ------------------------------------------------------
  SUMMARY:
-        SleepTrack_V1_GROUND created with warnings
-        SleepTrack_V1_3V3 created with warnings
+        SleepTrack_V1_Pastemask_Top created.
+        SleepTrack_V1_Pastemask_Bottom created.
 
- ARTWORK had warnings
+ ARTWORK finished
