@@ -20,7 +20,11 @@ influent
 .then(function(client) {
     var influx_data = GcInfluxData(client, config.firebaseRoot, "luc-dev-1", "f0f624e0-055f-41f3-9954-0ffb1bde7d8d", "932326611");
     // console.log("influx_data: ", influx_data);
-    influx_data.update_latest_data();
+    // influx_data.update_latest_data();
+    
+    // keep subscription open
+    influx_data.subscribe_device_node();
+    
     // influx_data.get_current_night_intervals().then(function(result) {
     //   console.log(result); 
     // });  

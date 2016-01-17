@@ -12,6 +12,7 @@ var config = require('./' + process.argv[2]);
 /* global UINT16_MARKER_HANDSHAKE: true */
 /* global UINT16_MARKER_START: true */
 /* global UINT16_MARKER_END: true */
+/* global WRITE_INFLUXDB: true */
 
 pubnub_client = pubnub({
     publish_key: "pub-c-879cf9bb-46af-4bf1-8dca-e011ea412cd2",
@@ -34,6 +35,9 @@ CONNECTION_STATES = {
 UINT16_MARKER_HANDSHAKE = 39780;
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
+
+WRITE_INFLUXDB = true;
+
 
 function GcClient(socket, influx_client, config) {
     this.socket = socket;
@@ -75,9 +79,9 @@ function GcClient(socket, influx_client, config) {
                 // get the user_name (to be added as an influxdb tag)
                 self.firebaseDeviceRef.once('value', function(snapshot){
                    var data = snapshot.val();
-                   if(! data.user_name) {
+                   if(data == null || ! data.user_name) {
                        // username not present, device id is probably bad, disconnect
-                       self.log("no user_name present, disconnecting");
+                       self.log("device id " + device_id + " not present, or no user_name present, disconnecting");
                        self.socket.destroy();
                    } else {
                     self.user_name = data.user_name;
@@ -103,7 +107,7 @@ function GcClient(socket, influx_client, config) {
                             "ping_test": random_number
                         });
                     }                       
-                })
+                });
                 
              
             }
@@ -247,11 +251,13 @@ function GcClient(socket, influx_client, config) {
             },
         });        
         
-        
-        self.influx_client.writeMany(self.measurements).then(function() {
-            console.log("done writing to influxDB");
-            self.firebaseDeviceRef.update(self.firebase_update_obj);
-        });        
+    
+        if(WRITE_INFLUXDB) {
+            self.influx_client.writeMany(self.measurements).then(function() {
+                console.log("done writing to influxDB");
+                self.firebaseDeviceRef.update(self.firebase_update_obj);
+            });                    
+        }
     }
     
     this.read_data_packet = function(data, offset, print_data, publish, push_to_influxdb) {
