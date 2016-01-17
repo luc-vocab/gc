@@ -26,9 +26,11 @@
         vm.latest_data_obj = $firebaseObject(latest_data_ref);
         
         vm.user_obj.$loaded().then(function(){
-          vm.latest_data_obj.$loaded().then(function(){
+            
+            vm.latest_data_obj.$watch(function(){
+               vm.load_data(); 
+            });
             vm.load_data();
-          })
         })
     };
     
@@ -44,6 +46,7 @@
         vm.chart_emg_data(data);  
       })
     };
+    
     
     vm.chart_emg_data = function(data) {
         Highcharts.setOptions({
@@ -102,6 +105,7 @@
                 data: data
             }]
         });      
+        
     };
 
 
