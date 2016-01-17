@@ -80,7 +80,7 @@ function GcClient(socket, influx_client, config) {
     
     this.socket.on('data', function(data){
         var data_length = data.length;
-        self.log_verbose("received data, length: ", data_length, " current state: ", self.state);
+        self.log_info("received data, length: ", data_length, " current state: ", self.state);
     
         if(self.state == CONNECTION_STATES.CONNECTED) {
             
@@ -212,7 +212,7 @@ function GcClient(socket, influx_client, config) {
             
             if (data_length == buffer_size) {
                 // all done
-                self.log_verbose("ready to process buffer");
+                self.log_info("ready to process buffer");
                 self.process_datalogging_buffer();
                 self.state = CONNECTION_STATES.READY_DATALOGGING;                
             }
@@ -222,12 +222,12 @@ function GcClient(socket, influx_client, config) {
             data.copy(self.data_buffer, self.data_buffer_offset);
             self.data_buffer_offset += data_length;
             
-            self.log_verbose("appended to data_buffer: ", data_length,
+            self.log_info("appended to data_buffer: ", data_length,
                         "data_buffer_offset:", self.data_buffer_offset);
             
             if(self.data_buffer_offset == self.expect_buffer_size) {
                 // received full data size
-                self.log_verbose("ready to process buffer");
+                self.log_info("ready to process buffer");
                 
                 self.process_datalogging_buffer();
                 
@@ -383,10 +383,6 @@ function GcClient(socket, influx_client, config) {
         self.log_base('debug', arguments);
     }
 
-    this.log_verbose = function() {
-        self.log_base('verbose', arguments);
-    }
-    
     this.log_info = function() {
         self.log_base('info', arguments);
     }
