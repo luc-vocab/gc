@@ -6,6 +6,12 @@ var q = require('promised-io/promise');
 var winston = require('winston');
 require('winston-papertrail').Papertrail;
 
+require('ssl-root-cas/latest')
+  .inject()
+  .addFile(__dirname + '/isrgrootx1.pem')
+  .addFile(__dirname + '/letsencryptauthorityx1.pem')
+  .addFile(__dirname + '/lets-encrypt-x1-cross-signed.pem');
+
 var config = require('./' + process.argv[2]);
 
 var papertrailTransport = new winston.transports.Papertrail({
@@ -409,7 +415,7 @@ influent
     database: config.influxDb,
     server: [
         {
-            protocol: "http",
+            protocol: config.influxProtocol,
             host:     config.influxHost,
             port:     config.influxPort
         }
@@ -435,6 +441,8 @@ influent
     var presenceRef = serverRef.child("online");
     presenceRef.onDisconnect().set(false);
     
+}, function(error) {
+    logger.error("could not create influxdb client:", error);
 });
 
 

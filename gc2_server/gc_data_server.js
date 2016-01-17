@@ -7,6 +7,12 @@ var Firebase = require('firebase');
 var winston = require('winston');
 require('winston-papertrail').Papertrail;
 
+require('ssl-root-cas/latest')
+  .inject()
+  .addFile(__dirname + '/isrgrootx1.pem')
+  .addFile(__dirname + '/letsencryptauthorityx1.pem')
+  .addFile(__dirname + '/lets-encrypt-x1-cross-signed.pem');
+
 var papertrailTransport = new winston.transports.Papertrail({
         host: config.papertrailHost,
         port: config.papertrailPort,
@@ -41,7 +47,7 @@ influent
     database: config.influxDb,
     server: [
         {
-            protocol: "http",
+            protocol: config.influxProtocol,
             host:     config.influxHost,
             port:     config.influxPort
         }
@@ -68,4 +74,6 @@ influent
     });
     
     
+}, function(err) {
+    logger.error("could not create influxdb client:", err);
 });
