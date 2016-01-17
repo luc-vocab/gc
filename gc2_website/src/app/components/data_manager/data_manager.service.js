@@ -29,7 +29,7 @@
                 database: influx_config.db,
                 server: [
                     {
-                        protocol: "http",
+                        protocol: "https",
                         host: influx_config.host,
                         port: influx_config.port
                     }
