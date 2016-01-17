@@ -29,6 +29,7 @@
     "influent": "^0.4.2",
     "promised-io": "^0.3.5",
     "pubnub": "^3.7.15",
+    "ssl-root-cas": "^1.1.10",
     "util": "^0.10.3",
     "winston": "^2.1.1",
     "winston-papertrail": "^1.0.2"

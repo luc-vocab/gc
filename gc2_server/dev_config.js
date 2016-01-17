@@ -6,6 +6,7 @@
     influxUsername: 'dev',
     influxPassword: 'dev',
     influxDb: 'gc_dev',
+    influxProtocol: 'https',
     influxHost: 'influxdb.dev.sleeptrack.io',
     influxPort: 8086,
     papertrailHost: 'logs3.papertrailapp.com',
