@@ -2,7 +2,7 @@ var Firebase = require('firebase');
 var util = require('util');
 var q = require('promised-io/promise');
 
-var GcInfluxData = function(influx_client, firebase_root, username, uid, device_id) {
+var GcInfluxData = function(logger, influx_client, firebase_root, username, uid, device_id) {
     
     var firebase_root_ref = new Firebase(firebase_root);
     this.firebase_data_latest_ref = firebase_root_ref.child('data').child(uid).child('latest');
@@ -15,11 +15,33 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
     
     var self = this;
     
+
+    this.log_base = function(level, args) {
+        var args = Array.prototype.slice.call(args);
+        
+        // figure out what we know about this client
+        args.unshift(self.username);
+        args.unshift(self.uid);
+        logger.log(level, args.join(' '));
+    }
+
+    this.log_debug = function() {
+        self.log_base('debug', arguments);
+    }
+
+    this.log_info = function() {
+        self.log_base('info', arguments);
+    }
+    
+    this.log_error = function() {
+        self.log_base('error', arguments);
+    }
+    
     
     this.subscribe_device_node = function() {
         // keep an open subscription to the device node and update as needed
         self.device_ref.on('value', function(snapshot) {
-            console.log("updating data for uid ", self.uid);
+            self.log_info("updating data");
            self.update_latest_data(); 
         });
     };
@@ -28,7 +50,7 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
         
         self.get_current_night_intervals().then(function(intervals) {
             self.compute_total_score(intervals.time_clause).then(function(total_score) {
-               console.log("total_score: ", total_score);
+                self.log_info("total_score:", total_score);
                
                var data = {
                   start_timestamp: intervals.start_timestamp,
@@ -80,35 +102,36 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
         var defer = q.defer();
         
 
-        console.log("compute_total_score, time_clause: ", time_clause);
+        self.log_debug("compute_total_score, time_clause: ", time_clause);
+        
         
 	    var query_percentile = "select percentile(emg_value,85) from emg where " + time_clause + " and username='" + self.username + "'";	
-	    console.log("query_percentile: ", query_percentile);
+	    self.log_debug("query_percentile: ", query_percentile);
 	
 	    // perform query here
 	    self.client
             .query(query_percentile)
             .then(function(result) {
-                console.log(util.inspect(result, {showHidden: false, depth: null}));
+                //console.log(util.inspect(result, {showHidden: false, depth: null}));
                 var threshold_value = result.results[0].series[0].values[0][1];
-                console.log("threshold_value: ", threshold_value);
+                self.log_debug("threshold_value: ", threshold_value);
                 
                 var query_sum = "select sum(emg_value) from emg where " + time_clause + " and emg_value > " + 
                                 threshold_value + " and username='" + self.username + "'";
                 self.client.query(query_sum).then(function(result) {
-                    console.log(util.inspect(result, {showHidden: false, depth:null}));                                        
+                    self.log_debug(util.inspect(result, {showHidden: false, depth:null}));                                        
                     var sum = result.results[0].series[0].values[0][1];
-                    console.log("sum: ", sum);
+                    self.log_debug("sum: ", sum);
                     
                     var query_count = "select count(emg_value) from emg where " + time_clause + " and emg_value > " + 
                         threshold_value + " and username='" + self.username + "'";
                     self.client.query(query_count).then(function(result) {
-                        console.log(util.inspect(result, {showHidden: false, depth:null}));
+                        self.log_debug(util.inspect(result, {showHidden: false, depth:null}));
                         var count = result.results[0].series[0].values[0][1];
-                        console.log("count: ", count);
+                        self.log_debug("count: ", count);
                         
                         var total_score = sum - count * threshold_value;
-                        console.log("total_score: ", total_score);
+                        self.log_debug("total_score: ", total_score);
                         
                         defer.resolve(total_score);
                         
@@ -116,7 +139,7 @@ var GcInfluxData = function(influx_client, firebase_root, username, uid, device_
                 });
                 
             }, function(error) {
-            	console.log("error: ", error);
+            	self.log_error(error);
             	
             });
     
