@@ -74,14 +74,15 @@ function GcClient(socket, influx_client, config) {
 
     this.state = CONNECTION_STATES.CONNECTED;
     
+    this.socket_info = socket.remoteAddress + ':' + socket.remotePort;
+    
     var self = this;
     
     this.socket.on('data', function(data){
         var data_length = data.length;
-        self.logger_verbose("received data, length: ", data_length, " current state: ", self.state);
+        self.log_verbose("received data, length: ", data_length, " current state: ", self.state);
     
         if(self.state == CONNECTION_STATES.CONNECTED) {
-            // console.log("received data");
             
             // this should be equal to UINT16_MARKER_HANDSHAKE
             var marker = data.readUInt16LE(0);
@@ -92,11 +93,11 @@ function GcClient(socket, influx_client, config) {
                 
             } else {
             
-                var device_id = data.readUInt32LE(2);
+                self.device_id = data.readUInt32LE(2);
                 var protocol_version = data.readUInt32LE(6);
-                self.log_info("device_id: " + device_id + " protocol_version: " + protocol_version);
+                self.log_info("device_id: " + self.device_id + " protocol_version: " + protocol_version);
                 
-                self.firebaseDeviceRef = self.firebaseDevicesRoot.child(device_id.toString());
+                self.firebaseDeviceRef = self.firebaseDevicesRoot.child(self.device_id.toString());
                 
                 var defer = q.defer();
                 
@@ -105,7 +106,7 @@ function GcClient(socket, influx_client, config) {
                    var data = snapshot.val();
                    if(data == null || ! data.user_name) {
                        // username not present, device id is probably bad, disconnect
-                       self.log_error("device id " + device_id + " not present, or no user_name present, disconnecting");
+                       self.log_error("device id " + self.device_id + " not present, or no user_name present, disconnecting");
                        self.socket.destroy();
                    } else {
                     self.user_name = data.user_name;
@@ -366,24 +367,32 @@ function GcClient(socket, influx_client, config) {
         self.log_error(error);
     });
     
-    this.log = function(log_entry) {
-        console.log(log_entry);
-    };
+
+    this.log_base = function(level, args) {
+        var args = Array.prototype.slice.call(args);
+        
+        // figure out what we know about this client
+        if(self.device_id) {
+            args.unshift(self.device_id);
+        }
+        args.unshift(self.socket_info);
+        logger.log(level, args.join(' '));
+    }
 
     this.log_debug = function() {
-        logger.debug(arguments);
+        self.log_base('debug', arguments);
     }
 
     this.log_verbose = function() {
-        logger.verbose(arguments);
+        self.log_base('verbose', arguments);
     }
     
     this.log_info = function() {
-        logger.info(arguments);
+        self.log_base('info', arguments);
     }
     
     this.log_error = function() {
-        logger.info(arguments);
+        self.log_base('error', arguments);
     }
     
 }
