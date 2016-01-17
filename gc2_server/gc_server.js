@@ -110,6 +110,7 @@ function GcClient(socket, influx_client, config) {
                        self.socket.destroy();
                    } else {
                     self.user_name = data.user_name;
+                    self.owner_uid = data.owner_uid;
                     defer.resolve();
                    }
                 });
@@ -374,6 +375,9 @@ function GcClient(socket, influx_client, config) {
         // figure out what we know about this client
         if(self.device_id) {
             args.unshift(self.device_id);
+        }
+        if(self.owner_uid) {
+            args.unshift(self.owner_uid);
         }
         args.unshift(self.socket_info);
         logger.log(level, args.join(' '));

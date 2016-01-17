@@ -192,6 +192,9 @@ client.connect(7001, '127.0.0.1', function() {
     }
 
 
-    async.series(tasks);
+    async.series(tasks, function() {
+        console.log("done");
+        process.exit(0);
+    });
     
 });
