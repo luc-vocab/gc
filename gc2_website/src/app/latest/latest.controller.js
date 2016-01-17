@@ -30,6 +30,7 @@
             vm.latest_data_obj.$watch(function(){
                vm.load_data(); 
             });
+            vm.load_data();
         })
     };
     
