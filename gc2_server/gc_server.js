@@ -42,6 +42,7 @@ transports: [
 /* global UINT16_MARKER_HANDSHAKE: true */
 /* global UINT16_MARKER_START: true */
 /* global UINT16_MARKER_END: true */
+/* global BYTE_HANDSHAKE_OK: true */
 /* global WRITE_INFLUXDB: true */
 
 pubnub_client = pubnub({
@@ -65,6 +66,7 @@ CONNECTION_STATES = {
 UINT16_MARKER_HANDSHAKE = 39780;
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
+BYTE_HANDSHAKE_OK = 42;
 
 WRITE_INFLUXDB = true;
 
@@ -117,6 +119,7 @@ function GcClient(socket, influx_client, config) {
                    } else {
                     self.user_name = data.user_name;
                     self.owner_uid = data.owner_uid;
+                    self.log_info("identified user", self.user_name, "owner_uid:", self.owner_uid);
                     defer.resolve();
                    }
                 });
@@ -138,7 +141,17 @@ function GcClient(socket, influx_client, config) {
                         self.firebaseDeviceRef.update({
                             "ping_test": random_number
                         });
-                    }                       
+                    } else {
+                        self.log_error("unknown mode:", mode, "disconnecting");
+                        self.socket.destroy();
+                        return;
+                    }
+                    
+                    // write acknowledgement byte
+                    var final_byte = new Buffer(1);
+                    final_byte.writeUInt8(BYTE_HANDSHAKE_OK,0);
+                    self.socket.write(final_byte);       
+                    
                 });
                 
              
