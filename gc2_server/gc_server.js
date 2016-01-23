@@ -117,6 +117,7 @@ function GcClient(socket, influx_client, config) {
                    } else {
                     self.user_name = data.user_name;
                     self.owner_uid = data.owner_uid;
+                    self.log_info("identified user", self.user_name, "owner_uid:", self.owner_uid);
                     defer.resolve();
                    }
                 });
@@ -138,7 +139,10 @@ function GcClient(socket, influx_client, config) {
                         self.firebaseDeviceRef.update({
                             "ping_test": random_number
                         });
-                    }                       
+                    } else {
+                        self.log_error("unknown mode:", mode, "disconnecting");
+                        self.socket.destroy();
+                    }
                 });
                 
              
