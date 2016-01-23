@@ -108,8 +108,9 @@
                 
         
         // initialize smoothie chart        
-        var smoothie_chart = new SmoothieChart({grid:{fillStyle:'transparent',strokeStyle:'transparent',sharpLines:true,borderVisible:false}}),
-            canvas = document.getElementById('smoothie-chart');
+        var smoothie_chart = new SmoothieChart({grid:{fillStyle:'transparent',strokeStyle:'transparent',sharpLines:true,borderVisible:false},labels:{fillStyle:'#000000'},timestampFormatter:SmoothieChart.timeFormatter,horizontalLines:[{color:'#ffffff',lineWidth:1,value:0},{color:'#880000',lineWidth:2,value:3333},{color:'#880000',lineWidth:2,value:-3333}]}),
+        canvas = document.getElementById('smoothie-chart');
+        
         vm.smoothie_series = new TimeSeries();
         
         smoothie_chart.addTimeSeries(vm.smoothie_series, {lineWidth:2.6,strokeStyle:'#5959f4',fillStyle:'#93a8ff'});
