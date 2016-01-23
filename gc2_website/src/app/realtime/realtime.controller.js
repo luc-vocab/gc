@@ -23,7 +23,7 @@
 
         pane: {
             center: ['50%', '85%'],
-            size: '140%',
+            size: '110%',
             startAngle: -90,
             endAngle: 90,
             background: {
@@ -88,6 +88,9 @@
             var point = chart.series[0].points[0];
             point.update(emg_value);
         }        
+        
+        
+        vm.smoothie_series.append(new Date().getTime(), emg_value);
     }
     
     function init() {
@@ -102,6 +105,15 @@
         // initialize chart
         $log.info("gauge options: ", vm.emgGaugeOptions);
         angular.element('#container-emg').highcharts(vm.emgGaugeOptions);
+                
+        
+        // initialize smoothie chart        
+        var smoothie_chart = new SmoothieChart({grid:{fillStyle:'transparent',strokeStyle:'transparent',sharpLines:true,borderVisible:false}}),
+            canvas = document.getElementById('smoothie-chart');
+        vm.smoothie_series = new TimeSeries();
+        
+        smoothie_chart.addTimeSeries(vm.smoothie_series, {lineWidth:2.6,strokeStyle:'#5959f4',fillStyle:'#93a8ff'});
+        smoothie_chart.streamTo(canvas, 500);
                 
         vm.show_loading = true;
         vm.verify_device_setup();            
