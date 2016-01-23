@@ -44,6 +44,7 @@
 #define UINT16_MARKER_HANDSHAKE 39780  // in the handshake
 #define UINT16_MARKER_START 6713 // after header in batch mode
 #define UINT16_MARKER_END 21826  // after end of data in batch mode
+#define BYTE_HANDSHAKE_OK 42 // after we send the initial handshake
 
 // functions for serializing data
 void write_int_to_buffer(char *buffer, int number, size_t *offset);

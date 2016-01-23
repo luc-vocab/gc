@@ -17,7 +17,7 @@ GcConfig gc_config(gc_client);
 int firmware_version = FIRMWARE_VERSION;
 
 #define DATA_TRANSFER_DELAY 500
-#define COLLECT_DATA_FREQUENCY 250      // 250ms
+#define COLLECT_DATA_FREQUENCY 100      // 250ms
 
 bool serial_debug = true;
 bool pending_night_mode = false;

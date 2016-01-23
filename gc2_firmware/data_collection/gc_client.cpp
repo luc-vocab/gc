@@ -223,6 +223,18 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   int rv = m_tcp_client.write((const uint8_t *) m_handshake_buffer, offset);
   m_tcp_client.flush();
 
+  // now wait for acknowledgement byte
+  int i = 8;
+  while( m_tcp_client.read() == -1 && i > 0) {
+    delay(RETRY_DELAY);
+    DEBUG_LOG("waiting for final byte sent by server");
+    i--;
+  }
+  if(i == 0) {
+    DEBUG_LOG("ERROR: didn't receive final byte confirmation");
+    return ERROR_NO_FINAL_CONFIRMATION;
+  }
+
   DEBUG_LOG("GcClient::initial_handshake done");
   return rv;
 }
