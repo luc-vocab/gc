@@ -22,7 +22,7 @@ var papertrailTransport = new winston.transports.Papertrail({
     });
 
 var consoleTransport = new winston.transports.Console({
-        level: 'debug',
+        level: 'info',
         timestamp: function() {
             return new Date().toString();
         },
