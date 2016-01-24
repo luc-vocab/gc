@@ -29,7 +29,8 @@
     "spark": "~1.0.0",
     "underscore": "~1.8.3",
     "angular-timeago": "~0.2.4",
-    "influent": "~0.5.0"
+    "influent": "~0.5.0",
+    "smoothie": "~1.27.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"

@@ -2,8 +2,7 @@
 #include "common.h"
 
 GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client),
-p_battery_charge(0){
-
+p_battery_charge(0), m_last_report_battery_time(-REPORT_BATTERY_INTERVAL) {
 }
 
 void GcData::init() {
@@ -29,10 +28,10 @@ void GcData::init() {
   lipo.begin();
   lipo.quickStart();
 
-  report_battery_charge();
+  read_battery_charge();
 }
 
-void GcData::report_battery_charge() {
+void GcData::read_battery_charge() {
     float battery_charge = lipo.getSOC();
     battery_charge = min(battery_charge, 100.0);
     p_battery_charge = battery_charge;
@@ -78,6 +77,20 @@ uint16_t GcData::read_emg() {
   }
 }
 
+void GcData::report_battery_charge() {
+  DEBUG_LOG("Reporting battery charge");
+  read_battery_charge();
+  m_last_report_battery_time = millis();
+  m_gc_client.report_battery_charge();
+}
+
+bool GcData::need_report_battery_charge() {
+  if (millis() - m_last_report_battery_time > REPORT_BATTERY_INTERVAL) {
+    return true;
+  }
+  return false;
+}
+
 void GcData::collect_data(bool upload_requested) {
   uint16_t emg_value = read_emg();
   float gyro_max = get_gyro_max();
@@ -90,10 +103,12 @@ void GcData::collect_data(bool upload_requested) {
 
   m_gc_client.add_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
 
+  if(need_report_battery_charge()){
+    report_battery_charge();
+  }
+
   if(m_gc_client.need_upload() || upload_requested){
     DEBUG_LOG("need to upload batch");
-    // get battery data
-    report_battery_charge();
 
     // turn on WiFi
     if(MANAGE_WIFI) {

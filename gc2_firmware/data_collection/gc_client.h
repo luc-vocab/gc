@@ -9,6 +9,7 @@
 #define GC_MODE_REALTIME 1
 #define GC_MODE_BATCH 2
 #define GC_MODE_CONNECTION_TEST 3
+#define GC_MODE_REPORT_BATTERY 4
 
 #define GC_BUFFER_LENGTH 64
 #define HANDSHAKE_BUFFER_LENGTH 64
@@ -44,6 +45,7 @@
 #define UINT16_MARKER_HANDSHAKE 39780  // in the handshake
 #define UINT16_MARKER_START 6713 // after header in batch mode
 #define UINT16_MARKER_END 21826  // after end of data in batch mode
+#define BYTE_HANDSHAKE_OK 42 // after we send the initial handshake
 
 // functions for serializing data
 void write_int_to_buffer(char *buffer, int number, size_t *offset);
@@ -68,6 +70,8 @@ public:
   void upload_batch();
   // do a connection test to ensure the device can communicate end to end
   void connection_test(int random_number);
+  // report battery charge
+  void report_battery_charge();
 
 private:
 
