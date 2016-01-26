@@ -48,7 +48,7 @@ var GcDeviceMonitor = function(logger, firebase_root, username, uid, device_id) 
                self.device_ref.update({
                    "mode": "offline"
                });
-            }, 60*1000);
+            }, 20*60*1000);
                         
         });
     };
