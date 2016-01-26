@@ -133,6 +133,11 @@ function GcClient(socket, influx_client, config) {
                     if( mode == MODE.REALTIME ) {
                         self.state = CONNECTION_STATES.READY_REALTIME;
                         self.log_info("realtime mode");
+                        self.firebaseDeviceRef.update({
+                            "last_device_update": Firebase.ServerValue.TIMESTAMP,
+                            "mode": "realtime"
+                        });
+                        
                     } else if ( mode == MODE.DATALOGGING ) {
                         self.state = CONNECTION_STATES.READY_DATALOGGING;
                         self.log_info("datalogging mode");
