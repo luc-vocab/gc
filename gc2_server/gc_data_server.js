@@ -2,6 +2,7 @@ var influent = require('influent');
 var util = require('util');
 var config = require('./' + process.argv[2]);
 var GcInfluxData = require('./gc_influx_data');
+var GcDeviceMonitor = require('./gc_device_monitor');
 var Firebase = require('firebase');
 
 var winston = require('winston');
@@ -70,6 +71,9 @@ influent
         
         var influx_data = GcInfluxData(logger, client, config.firebaseRoot, device_name, owner_uid, device_id);
         influx_data.subscribe_device_node();
+        
+        var device_monitor = GcDeviceMonitor(logger, config.firebaseRoot, device_name, owner_uid, device_id);
+        device_monitor.subscribe_device_node();
        
     });
     
