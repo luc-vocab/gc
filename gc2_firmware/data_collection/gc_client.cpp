@@ -99,6 +99,37 @@ int GcClient::upload_batch_iteration() {
   return 0;
 }
 
+void GcClient::report_battery_charge() {
+  if( m_mode != GC_MODE_STANDBY) {
+    // only do this in standby
+    return;
+  }
+  if( m_host.length() == 0 ) {
+    // no server configured
+    return;
+  }
+
+  DEBUG_LOG("Connecting");
+
+  connect();
+  initial_handshake(GC_MODE_REPORT_BATTERY, 0);
+
+  // write data header
+  size_t temp_offset = 0;
+  // write battery charge
+  uint16_t percent_charged = m_battery_charge * 100.0;
+  write_uint16_to_buffer(m_data_buffer, percent_charged, &temp_offset);
+
+  // write out buffer
+  m_tcp_client.write((const uint8_t *) m_data_buffer, temp_offset);
+
+  // disconnect
+  m_tcp_client.stop();
+
+  DEBUG_LOG("Reported battery charge, disconnecting");
+
+}
+
 void GcClient::connection_test(int random_number) {
   DEBUG_LOG("running connection test with random_number: " + String(random_number));
   GcClient::connect();

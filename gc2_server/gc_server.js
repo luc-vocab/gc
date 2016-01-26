@@ -22,7 +22,7 @@ var papertrailTransport = new winston.transports.Papertrail({
     });
 
 var consoleTransport = new winston.transports.Console({
-        level: 'debug',
+        level: 'info',
         timestamp: function() {
             return new Date().toString();
         },
@@ -53,14 +53,16 @@ pubnub_client = pubnub({
 MODE = {
     REALTIME: 1,
     DATALOGGING: 2,
-    CONNECTION_TEST: 3
+    CONNECTION_TEST: 3,
+    REPORT_BATTERY: 4
 };
 
 CONNECTION_STATES = {
     CONNECTED: 0,
     READY_REALTIME: 1,
     READY_DATALOGGING: 2,
-    PENDING_DATALOGGING: 3 // some more batch data is expected
+    PENDING_DATALOGGING: 3, // some more batch data is expected
+    READY_BATTERY: 4
 };
 
 UINT16_MARKER_HANDSHAKE = 39780;
@@ -131,6 +133,11 @@ function GcClient(socket, influx_client, config) {
                     if( mode == MODE.REALTIME ) {
                         self.state = CONNECTION_STATES.READY_REALTIME;
                         self.log_info("realtime mode");
+                        self.firebaseDeviceRef.update({
+                            "last_device_update": Firebase.ServerValue.TIMESTAMP,
+                            "mode": "realtime"
+                        });
+                        
                     } else if ( mode == MODE.DATALOGGING ) {
                         self.state = CONNECTION_STATES.READY_DATALOGGING;
                         self.log_info("datalogging mode");
@@ -141,6 +148,9 @@ function GcClient(socket, influx_client, config) {
                         self.firebaseDeviceRef.update({
                             "ping_test": random_number
                         });
+                    }  else if( mode == MODE.REPORT_BATTERY ) {
+                        self.state = CONNECTION_STATES.READY_BATTERY;
+                        self.log_info("report battery");
                     } else {
                         self.log_error("unknown mode:", mode, "disconnecting");
                         self.socket.destroy();
@@ -193,6 +203,7 @@ function GcClient(socket, influx_client, config) {
                 "last_upload_time": Firebase.ServerValue.TIMESTAMP,
                 "collected_duration": collected_duration,
                 "collection_start": data_collection_start_timestamp,
+                "last_device_update": Firebase.ServerValue.TIMESTAMP,
                 "mode": "night"
             };
             
@@ -257,8 +268,23 @@ function GcClient(socket, influx_client, config) {
         } else if (self.state == CONNECTION_STATES.READY_REALTIME) {
             offset = 0;
             self.read_data_packet(data, offset, true, true, false);
+        } else if( self.state == CONNECTION_STATES.READY_BATTERY ) {
+            self.ready_battery_level(data);
         }
     });
+    
+    
+    this.ready_battery_level = function(data) {
+        // read battery charge
+        var charged_percent = data.readUInt16LE(0) / 100.0;
+        self.log_info("battery level: ", charged_percent);
+        
+        self.firebaseDeviceRef.update({
+            "battery_charge": charged_percent,
+            "last_device_update": Firebase.ServerValue.TIMESTAMP,
+            "mode": "online"       
+        });
+    }
     
     this.process_datalogging_buffer = function() {
         

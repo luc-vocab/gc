@@ -9,6 +9,7 @@
 #define GC_MODE_REALTIME 1
 #define GC_MODE_BATCH 2
 #define GC_MODE_CONNECTION_TEST 3
+#define GC_MODE_REPORT_BATTERY 4
 
 #define GC_BUFFER_LENGTH 64
 #define HANDSHAKE_BUFFER_LENGTH 64
@@ -69,6 +70,8 @@ public:
   void upload_batch();
   // do a connection test to ensure the device can communicate end to end
   void connection_test(int random_number);
+  // report battery charge
+  void report_battery_charge();
 
 private:
 
