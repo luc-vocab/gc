@@ -11,7 +11,7 @@
         .service('data_manager', data_manager);
 
     /** @ngInject */
-    function data_manager(firebase_root, influx_config, $log, $q) {
+    function data_manager(firebase_root, $log, $q) {
         var root_ref = new Firebase(firebase_root);
         var data_ref = root_ref.child('data');
         
@@ -23,18 +23,30 @@
         
      
         this.get_influx_client = function() {
-            return influent.createHttpClient({
-                username: influx_config.username,
-                password: influx_config.password,
-                database: influx_config.db,
-                server: [
-                    {
-                        protocol: "https",
-                        host: influx_config.host,
-                        port: influx_config.port
-                    }
-                ]
-            });
+            var defer = $q.defer();
+            
+            var influx_config_ref = new Firebase(firebase_root).child('config').child('influxdb');
+            influx_config_ref.once('value', function(snapshot) {
+                var data = snapshot.val();
+                
+                influent.createHttpClient({
+                    username: data.username,
+                    password: data.password,
+                    database: data.db,
+                    server: [
+                        {
+                            protocol: "https",
+                            host: data.host,
+                            port: data.port
+                        }
+                    ]
+                }).then(function(client) {
+                    defer.resolve(client);
+                });
+            })
+            
+            
+            return defer.promise;
         };
         
         this.get_latest_emg_data = function(username, start_time, end_time) {
