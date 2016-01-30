@@ -366,7 +366,7 @@
         };
 
 
-        this.save_settings = function(device, uid, server_data, user_name, particle_access_token) {
+        this.save_settings = function(device, uid, server_key, server_data, user_name, particle_access_token) {
             var defer = $q.defer();
             
             $log.info("selecting device: ", device.name, " uid: " , uid, " server_data: ", server_data,
@@ -400,7 +400,8 @@
                             device_name: device.name,
                             device_id: device_id,
                             user_name: user_name,
-                            particle_access_token: particle_access_token
+                            particle_access_token: particle_access_token,
+                            server: server_key
                         });
 
                         defer.resolve(device_id);

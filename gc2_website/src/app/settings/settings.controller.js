@@ -104,6 +104,8 @@
 
     vm.select_server = function(server_key) {
       vm.user_obj.server = server_key;
+      vm.selected_server_key = server_key;
+      
       vm.save_button_enabled = true;
     };
     
@@ -139,6 +141,7 @@
       vm.save_error = false;
       device_manager.save_settings(vm.selected_device, 
                                    currentAuth.uid, 
+                                   vm.selected_server_key,
                                    vm.servers_obj[vm.user_obj.server], 
                                    vm.user_obj.user_name,
                                    vm.user_obj.particle_access_token)
