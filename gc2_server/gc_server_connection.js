@@ -39,6 +39,7 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
     this.socket = socket;
     this.influx_client = influx_client;
     this.config = config;
+    this.logger = logger;
     
     // firebase setup
     var firebase_root_ref = new Firebase(firebase_root);
@@ -276,7 +277,7 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         
         // add data for battery
         var tags = {user: self.user_name,
-                    env:  self.config.environment};        
+                    env:  self.config.env};        
         self.measurements.push({
             key: "battery",
             tags: tags,
@@ -339,7 +340,7 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         }
 
         var tags = {username: self.user_name,
-                    env:  self.config.environment};
+                    env:  self.config.env};
         
         if(push_to_influxdb) {
             var timestamp_nanos = datetime.getTime().toString() + "000000";
