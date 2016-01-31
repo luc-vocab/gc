@@ -3,18 +3,20 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="page-header-fixed page-sidebar-closed-hide-logo page-md">
 
-    {% include header.html %}
+    
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <div class="wrapper">
+      {% include metronic_header.html %}
+      <div class="container-fluid">
+        <div class="page-content">
+          {{ content }}
+        </div>
       </div>
     </div>
-
-    {% include footer.html %}
-
+    
+    {% include javascripts.html %}
   </body>
 
 </html>
