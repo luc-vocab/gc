@@ -2,7 +2,7 @@
 layout: post
 title: "Development of Grind Control Device"
 date:   2013-04-01 12:45:00 +0000
-categories: bruxism device grind control
+section: blog
 ---
 In December 2012, I purchased a book on electronics to refresh my knowledge on the topic and learn some of the necessary techniques such as soldering. I experimented with an USB voltmeter capable of detecting +/- 200mV. I started experimenting with Operational Amplifiers. However in order to accurately detect muscle activity, you need a true EMG signal processing circuit. I purchased an Olimex EMG and Arduino kit. That kit turned out not to be sensitive enough to detect temporal muscle activity. A couple of weeks later, I received my Advancer Technologies Muscle Sensor v3. Through playing around with the electrodes connected on my face, and measuring output voltage with a multimeter, I realized this was the way to go. The output voltage would show 0.1V with muscles relaxed, and +0.9V with muscles contracted. This was perfect and exactly within the range that I needed to process the signal with my Arduino Micro.
 

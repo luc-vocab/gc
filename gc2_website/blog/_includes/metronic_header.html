@@ -21,8 +21,12 @@
             <!-- BEGIN HEADER MENU -->
             <div class="nav-collapse collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown dropdown-fw  active open selected">
-                        <a class="text-uppercase" href="javascript:;">
+                    {% if page.url == "/" %}
+                    <li class="dropdown dropdown-fw active open selected" >
+                    {% else %}
+                    <li class="dropdown dropdown-fw" >
+                    {% endif %}
+                        <a class="text-uppercase" href="/">
                             <i class="fa fa-home"></i> Home</a>
                         <ul class="dropdown-menu dropdown-menu-fw">
                             <li class="active">
@@ -40,11 +44,13 @@
                         </ul>
                     </li>
 
+                    {% if page.section == "blog" %}
+                    <li class="dropdown dropdown-fw active open selected" >
+                    {% else %}
                     <li class="dropdown dropdown-fw" >
-                        <a href="#/control" class="text-uppercase">
+                    {% endif %}
+                        <a href="/blog" class="text-uppercase">
                             <i class="fa fa-rss"></i>Blog</a>
-                          
-
                     </li>
                     
                     <li class="dropdown dropdown-fw" >

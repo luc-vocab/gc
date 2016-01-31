@@ -2,7 +2,7 @@
 layout: post
 title: "Symptoms and Diagnosis"
 date:   2012-10-01 12:45:00 +0000
-categories: symptoms diagnosis bruxism grindcare
+section: blog
 ---
 In October 2010, I started experiencing an unexplained permanent dizziness. It would come and go and be more severe during certain weeks. By March 2011, the symptoms had become more severe and included permanent headaches and facial muscle pain. I started making doctor's appointments, saw three neurologists, one ENT doctor, took blood samples, had an MRI brain scan but no diagnosis yet. Since the beginning I had been researching an explanation for those symptoms on the web. Many leads did not pan out but I read that night-time bruxism (unconscious grinding of teeth at night-time) could be a possible explanations. Several things pointed in that direction:
 
