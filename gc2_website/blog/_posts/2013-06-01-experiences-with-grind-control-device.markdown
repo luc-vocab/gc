@@ -2,7 +2,6 @@
 layout: post
 title: "Experiences Using the Grind Control Device"
 date:   2013-06-01 12:45:00 +0000
-categories: bruxism device grind control sleep
 ---
 For many months I had grown convinced that the source for my issues is an unconscious night-time behavior of my jaw that no one could explain. It seemed obvious to me that if I could detect this and stop it then I would solve my problem. To me this has been a very successful project. Since I started using the device in April 2013, my symptoms have improved progressively but very noticeably.
 
