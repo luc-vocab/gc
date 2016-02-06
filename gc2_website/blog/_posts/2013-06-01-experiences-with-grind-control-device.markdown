@@ -7,6 +7,11 @@ thumbnail: http://res.cloudinary.com/photozzap/image/upload/c_fill,h_400,w_400/v
 ---
 For many months I had grown convinced that the source for my issues is an unconscious night-time behavior of my jaw that no one could explain. It seemed obvious to me that if I could detect this and stop it then I would solve my problem. To me this has been a very successful project. Since I started using the device in April 2013, my symptoms have improved progressively but very noticeably.
 
+<div class="row">
+<img src="http://res.cloudinary.com/photozzap/image/upload/c_scale,h_1024/v1454745964/gc_website_blog/20130601-P6010010.jpg" class="col-lg-6 col-md-6 img-responsive">
+<img src="http://res.cloudinary.com/photozzap/image/upload/c_scale,h_1024/v1454745965/gc_website_blog/20130601-P6010001.jpg" class="col-lg-6 col-md-6 img-responsive">
+</div>
+
 The first times I got woken up by the beeping audio sound were a victory for me as I had finally found an effective system to put a stop to this destructive unconscious habit. I distintively remember being woken up a few times with my jaw clenched and the device beeping into my ears. I had no idea why my jaw was clenched but only after I became more conscious would I relax my jaw muscles. This was a revelation and yet another proof that my problems were due to night-time, unconscious bruxism.
 
 There are some drawbacks, the biggest one being interference with your sleep. In my case, it was a lot better to interrupt my sleep than to let the destructive night-time bruxism keep on happening. However sleep segmentation may have some negative side effects. Ironically, sleep deprivation may lead to headaches so you need to be careful if you try something like that.
@@ -21,6 +26,8 @@ Problems with current design
  *  No LCD screen. This makes it difficult to experiment with different algorithms as you can't tell what the current reading is.
  * Only works off 9V batteries. I end up having to charge a new set every day.
  * The sensitivity is based on the EMG readings from my muscles. It may vary from one person to another. Right now the only way to change this is in the code.
+
+<img src="http://res.cloudinary.com/photozzap/image/upload/c_scale,w_1024/v1454745965/gc_website_blog/20130601-P6010012.jpg" class="img-responsive">
 
 Potential improvements
 ----------------------
