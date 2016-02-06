@@ -77,20 +77,7 @@ layout: default
   </div>
   <div class="col-md-4 col-sm-12 col-xs-12 project-status">
     <div class="row">
-      <h1>Current Status <span class="label label-default update-date">2016/02/06</span></h1>
-      <h2>Device</h2>
-      <ul>
-        <li>Breadboard prototype working with IMU and battery shields</li>
-        <li>First PCB rev printed, some issues with footprints, working on rev2</li>
-        <li>Working firmware which collects EMG readings and IMU data, and periodically uploads to GC server</li>
-      </ul>
-      <h2>Web App</h2>
-      <ul>
-        <li>Backend servers (collecting data from device) stable, deployed in a docker instance.</li>
-        <li>InfluxDB and Grafana instances deployed.</li>
-        <li>Angular front-end allows user to interact with device, start realtime mode, or night mode and view
-        nightly stats.</li>
-      </ul>
+      {% include current_status.html %}
     </div>
     <div class="row">
       <img class="img-responsive center-block" src="https://res.cloudinary.com/photozzap/image/upload/c_scale,w_300/v1448113449/gc_website_assets/sleeptrack_square_logo.png"></img>
