@@ -1,8 +1,6 @@
 
 .about-text {
 
-    padding-right: 50px;
-
     .about-quote > h3 {
         border-color: #ccc;
         border-left: 3px solid #ccc;
@@ -32,22 +30,6 @@
 }
 
 .project-status {
-
-    /*
-    .update-date {
-        margin-top: 2px;
-        margin-bottom: 2px;
-        margin-left: 50px;
-        font-size: 140%;
-        color: get-color(grey-salt);
-    } 
-    */
-    .update-date {
-        font-size: 14px;
-        position: relative;
-        top: -10px;
-        left: 5px;
-    }
     
     img {
         margin-top: 30px;    
