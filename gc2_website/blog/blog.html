@@ -1,33 +1,18 @@
 --- 
-layout: default 
+layout: blog 
 section: blog 
 ---
 
+<h1>Blog</h1>
+<!-- blog posts -->
+{% for post in site.posts %}
+<li>
+  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-<div class="row">
-  <div class="col-md-8 col-sm-12 col-xs-12 left-column">
-    <h1>Blog</h1>
-    <!-- blog posts -->
-    {% for post in site.posts %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <h2>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2> {{ post.excerpt }}
+</li>
+{% endfor %}
 
-      <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2> {{ post.excerpt }}
-    </li>
-    {% endfor %}
-
-    <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
-  </div>
-
-  <div class="col-md-4 col-sm-12 col-xs-12">
-    <div class="row">
-      {% include project_description.html %}
-    </div>
-    <div class="row">
-      {% include current_status.html %}
-    </div>
-  </div>
-
-</div>
+<p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
