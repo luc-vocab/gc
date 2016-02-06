@@ -43,6 +43,16 @@
                     {% endif %}
                         <a href="/blog" class="text-uppercase">
                             <i class="fa fa-rss"></i>Blog</a>
+                        <ul class="dropdown-menu dropdown-menu-fw">
+                            {% if page.url == "/blog.html" %}
+                            <li class="active">
+                            {% else %}
+                            <li>
+                            {% endif %}
+                                <a href="/blog">
+                                    <i class="fa fa-bookmark"></i> Blog Index </a>
+                            </li>
+                        </ul>
                     </li>
                     
                     <li class="dropdown dropdown-fw" >

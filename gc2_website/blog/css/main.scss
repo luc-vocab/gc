@@ -9,7 +9,8 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "colors",
-        "index"
+        "index",
+        "blog"
 ;
 
 
@@ -38,8 +39,20 @@ h2 {
 
 
 .update-date {
+    background-color: get-color(grey-salt);
     font-size: 14px !important;
     position: relative;
-    top: -10px;
     left: 5px;
+}
+
+h1 {
+    .update-date {
+        top: -10px;
+    }
+}
+
+h2 {
+    .update-date {
+        top: -5px;
+    }
 }

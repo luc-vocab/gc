@@ -6,13 +6,11 @@ section: blog
 <h1>Blog</h1>
 <!-- blog posts -->
 {% for post in site.posts %}
-<li>
-  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-  <h2>
+<h2>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2> {{ post.excerpt }}
-</li>
+      <span class="post-meta label label-info update-date">{{ post.date | date: "%Y/%m/%d" }}</span>
+</h2>
+{{ post.excerpt }}  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-angle-double-right"></i> continue reading</a>
 {% endfor %}
 
 <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
