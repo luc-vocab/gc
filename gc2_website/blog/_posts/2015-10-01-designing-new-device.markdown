@@ -3,7 +3,7 @@ layout: post
 title: "Designing a new anti-bruxism device"
 date: 2015-10-01 00:00:00 +0000
 section: blog
-thumbnail: http://res.cloudinary.com/photozzap/image/upload/c_fill,h_400,w_400/v1454776145/gc_website_blog/photon2.jpg
+thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,h_400,w_400/v1454776145/gc_website_blog/photon2.jpg
 ---
 For two and a half years, my bruxism symptoms were manageable. After I stopped wearing the early grind control device in August/September 2013, my symptoms continued to steadily improve. Not completely gone, but most days I felt completely normal, without headaches or dizziness, and no pain or muscle tension while chewing. The symptoms would occasionally come back sometimes occasionally, for example I would feel tension in the morning for a few hours.
 
@@ -13,7 +13,7 @@ Most recently, during a weekend trip to Taiwan, I felt the kind of dizziness in 
 
 Besides keeping in touch with the fine folks on the [Bruxhackers Mailing List](https://groups.google.com/forum/#!forum/bruxhackers), I hadn't touched any electronics, hadn't powered up any microcontrollers or held a soldering iron in the last two years. I loaded up [Sparkfun.com](http://www.sparkfun.com) to see what's new and came across this little gem:
 
-<img src="http://res.cloudinary.com/photozzap/image/upload/c_scale,w_1024/v1454776145/gc_website_blog/photon2.jpg" class="img-responsive">
+<img src="https://res.cloudinary.com/photozzap/image/upload/c_scale,w_1024/v1454776145/gc_website_blog/photon2.jpg" class="img-responsive">
 
 The [Particle Photon](https://www.particle.io/) is an Arduino-compatible, wifi-enabled dev board, made to work seamlessly with the _Particle Cloud_. In short, you can call a REST API to invoke a function on the Photon, or query a particular variable value, without worrying about network connectivity behind a router, or setting up an internet-facing server. Firmware flashing happens over the internet as well. This seemed like a perfect platform to build a bruxism-tracking device on. With the previous grind control device, I always felt like I was running blind. I couldn't see in realtime what the EMG value was, because the only way of outputting data was connecting to the USB/serial port, and that wasn't compatible with the EMG sensor, which had to be electrically isolated.
 
@@ -28,7 +28,7 @@ Objectives for the new device:
 
 An essential component in an anti-bruxism device is the EMG ([Electromyography](https://en.wikipedia.org/wiki/Electromyography)) sensor. The grind control device used the [http://www.advancertechnologies.com/](Advancer Technologies) Muscle Sensor V3. It just so happened that they released a new version, the [Myoware Sensor](https://www.kickstarter.com/projects/312488939/myowaretm-harness-the-power-of-your-muscle-signals/description) right around the time I set out to build a new device.
 
-<img src="http://res.cloudinary.com/photozzap/image/upload/c_scale,w_1024/v1454817653/gc_website_blog/P2070010.jpg" class="img-responsive">
+<img src="https://res.cloudinary.com/photozzap/image/upload/c_scale,w_1024/v1454817653/gc_website_blog/P2070010.jpg" class="img-responsive">
 
 The Myoware has a number of advantages:
 
