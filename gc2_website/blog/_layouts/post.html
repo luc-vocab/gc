@@ -21,20 +21,20 @@ layout: blog
 <div class="row">
   {% if page.previous %}
   <a href="{{ page.previous.url }}">
-    <div class="col-md-2">
+    <div class="col-md-2 col-sm-2 col-xs-6">
       <img src="{{ page.previous.thumbnail }}" class="img-responsive">
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4 col-xs-6">
       <h2>{{ page.previous.title }}</h2>
     </div>
   </a>
   {% endif %}
   {% if page.next %}
   <a href="{{ page.next.url }}">
-    <div class="col-md-2">
+    <div class="col-md-2 col-sm-2 col-xs-6">
       <img src="{{ page.next.thumbnail }}" class="img-responsive">
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4 col-xs-6">
       <h2>{{ page.next.title }}</h2>
     </div>
   </a>
