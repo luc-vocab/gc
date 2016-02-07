@@ -32,9 +32,19 @@ h2 {
     font-size: 150%;
 }
 
+
+/* ensure that two-column layout has enough spacing */
 @media (min-width: 992px) {
     .left-column {
          padding-right: 50px;
+    }
+}
+
+/* on mobile devices, use all available horizontal space */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 
