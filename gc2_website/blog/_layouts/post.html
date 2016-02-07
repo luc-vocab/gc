@@ -13,3 +13,32 @@ layout: blog
   </div>
 
 </article>
+
+{% if page.previous or page.next %}
+<div class="row">
+  <h2>More Articles</h2>  
+</div>
+<div class="row">
+  {% if page.previous %}
+  <a href="{{ page.previous.url }}">
+    <div class="col-md-2">
+      <img src="{{ page.previous.thumbnail }}" class="img-responsive">
+    </div>
+    <div class="col-md-4">
+      <h2>{{ page.previous.title }}</h2>
+    </div>
+  </a>
+  {% endif %}
+  {% if page.next %}
+  <a href="{{ page.next.url }}">
+    <div class="col-md-2">
+      <img src="{{ page.next.thumbnail }}" class="img-responsive">
+    </div>
+    <div class="col-md-4">
+      <h2>{{ page.next.title }}</h2>
+    </div>
+  </a>
+  {% endif %}
+</div>
+
+{% endif %}

@@ -38,10 +38,10 @@ The Myoware has a number of advantages:
 
 It seems like a perfect fit for this project. Sparkfun has released a number of shields for the Photon which I can also directly use. Here are the building blocks for the new device:
 
-* **Particle Photon**: microcontroller and WIFI
-* **Myoware sensor**: EMG sensor
-* **Sparkfun Battery Shield**: LIPO battery charging and battery gauge
-* **Sparkfun IMU Shield**: 3-axis accelerometer, gyroscope and magnetometer, to track movements during sleep.
+* [Particle Photon](https://www.particle.io/): microcontroller and WIFI
+* [Myoware sensor](https://www.kickstarter.com/projects/312488939/myowaretm-harness-the-power-of-your-muscle-signals/description): EMG sensor
+* [Sparkfun Battery Shield](https://www.sparkfun.com/products/13626): LIPO battery charging and battery gauge
+* [Sparkfun IMU Shield](https://www.sparkfun.com/products/13629): 3-axis accelerometer, gyroscope and magnetometer, to track movements during sleep.
 
 As a first step, a PCB must be designed that regroups all of these elements onto one board. The Myoware sensor will be external, connected using a short cable.
 
