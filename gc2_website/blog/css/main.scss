@@ -32,9 +32,10 @@ h2 {
     font-size: 150%;
 }
 
-
-.left-column {
-    padding-right: 50px;
+@media (min-width: 992px) {
+    .left-column {
+         padding-right: 50px;
+    }
 }
 
 
