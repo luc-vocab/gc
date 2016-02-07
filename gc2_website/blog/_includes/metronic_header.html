@@ -21,7 +21,7 @@
             <!-- BEGIN HEADER MENU -->
             <div class="nav-collapse collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
-                    {% if page.url == "/" %}
+                    {% if page.section == "home" %}
                     <li class="dropdown dropdown-fw active open selected" >
                     {% else %}
                     <li class="dropdown dropdown-fw" >
@@ -29,10 +29,22 @@
                         <a class="text-uppercase" href="/">
                             <i class="fa fa-home"></i> Home</a>
                         <ul class="dropdown-menu dropdown-menu-fw">
+                            {% if page.url == "/" %}
                             <li class="active">
-                                <a href="index.html">
+                            {% else %}
+                            <li>
+                            {% endif %}
+                                <a href="/">
                                     <i class="fa fa-info-circle"></i> Description </a>
                             </li>
+                            {% if page.url == "/contact/" %}
+                            <li class="active">
+                            {% else %}
+                            <li>
+                            {% endif %}
+                                <a href="/contact">
+                                    <i class="fa fa-envelope"></i> Contact </a>
+                            </li>                            
                         </ul>
                     </li>
 
