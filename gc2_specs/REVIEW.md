@@ -9,7 +9,7 @@ Changes to the board
 * Solder mask covering mechanical pad for the audio amp U9
 * Correct placement of push buttons so that they're facing outward
 * JST and EMG connector should be 90-degree angled connectors (will provide exact part numbers if you can't find them)
-* Add an unsoldered footprint for a potential I2C extension board. Part for the footprint: http://www.digikey.com/product-search/en?mpart=61900411021&v=732
+* Add an unsoldered footprint for a potential I2C extension board. Part for the footprint: http://www.digikey.com/product-search/en?mpart=61900411021&v=732 . You can order the pins below in way that makes sense to reduce the complexity of the board.
   * GND
   * +3.3V
   * D0 (SDA)
