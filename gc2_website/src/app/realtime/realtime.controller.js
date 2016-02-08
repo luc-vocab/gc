@@ -1,6 +1,8 @@
 
 /* globals Highcharts: false */
 /* globals angular */
+/* globals SmoothieChart */
+/* globals TimeSeries */
 
 (function() {
   'use strict';
@@ -10,7 +12,7 @@
     .controller('RealtimeController', RealtimeController);
 
   /** @ngInject */
-  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, currentAuth, firebase_auth, device_manager) {
+  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, $document, currentAuth, firebase_auth, device_manager) {
     var vm = this;
 
 
@@ -109,7 +111,7 @@
         
         // initialize smoothie chart        
         var smoothie_chart = new SmoothieChart({grid:{fillStyle:'transparent',strokeStyle:'transparent',sharpLines:true,borderVisible:false},labels:{fillStyle:'#000000'},timestampFormatter:SmoothieChart.timeFormatter,horizontalLines:[{color:'#ffffff',lineWidth:1,value:0},{color:'#880000',lineWidth:2,value:3333},{color:'#880000',lineWidth:2,value:-3333}]}),
-        canvas = document.getElementById('smoothie-chart');
+        canvas = angular.element('#smoothie-chart')[0];
         
         vm.smoothie_series = new TimeSeries();
         

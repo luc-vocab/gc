@@ -1,0 +1,48 @@
+---
+layout: blog
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta post-date"><i class="fa fa-calendar"></i> <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>
+
+{% if page.previous or page.next %}
+<div class="row">
+  <h2>More Articles</h2>  
+</div>
+<div class="row">
+  {% if page.previous %}
+  <div class="col-md-6 col-sm-6 col-xs-12">
+    <a href="{{ page.previous.url }}">
+      <div class="col-md-4 col-sm-4 col-xs-6">
+        <img src="{{ page.previous.thumbnail }}" class="img-responsive">
+      </div>
+      <div class="col-md-8 col-sm-8 col-xs-6">
+        <h2>{{ page.previous.title }}</h2>
+      </div>
+    </a>
+  </div>
+  {% endif %}
+  {% if page.next %}
+  <div class="col-md-6 col-sm-6 col-xs-12">
+  <a href="{{ page.next.url }}">
+    <div class="col-md-4 col-sm-4 col-xs-6">
+      <img src="{{ page.next.thumbnail }}" class="img-responsive">
+    </div>
+    <div class="col-md-8 col-sm-8 col-xs-6">
+      <h2>{{ page.next.title }}</h2>
+    </div>
+  </a>
+  </div>
+  {% endif %}
+</div>
+
+{% endif %}

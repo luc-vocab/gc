@@ -1,3 +1,31 @@
+2016/02/08 Checklist for Rev2
+=============================
+
+Changes to the board
+------------------
+* Fix speaker footprint, was too large
+* RGB lead position, was too close to the photon
+* Mechanical mounting pads too large and covered with solder mask for the USB connector (I don't understand the issue but it's in your email)
+* Solder mask covering mechanical pad for the audio amp U9
+* Correct placement of push buttons so that they're facing outward
+* JST and EMG connector should be 90-degree angled connectors (will provide exact part numbers if you can't find them)
+* Add an unsoldered footprint for a potential I2C extension board. Part for the footprint: http://www.digikey.com/product-search/en?mpart=61900411021&v=732 . You can order the pins below in way that makes sense to reduce the complexity of the board.
+  * GND
+  * +3.3V
+  * D0 (SDA)
+  * D1 (SCL)
+* Remove mode switch to make space for the above connector holes.
+
+General checks
+--------------
+* Make necessary changes to PCB and update artwork.
+* 1:1 Print out to test component fitment, silkscreen, REF DES, etc...
+* Validate Gerber files using online Gerber viewer. (http://www.gerber-viewer.com/)
+* Ask for proofs before manufacture to confirm we are receiving the expected results
+* Proof read BOM and provide enhanced documentation to assembly team. (Reference designation column for BOM components, # parts, # of individual parts, assembly drawing, etc..)
+* Preform QC and Electrical Check of assembled boards.
+
+
 2015/11/05 Review of annotated PDFs generated on nov 1st
 ========================================================
 

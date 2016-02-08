@@ -1,40 +1,6 @@
 var influent = require('influent');
-var pubnub = require("pubnub");
-var net = require('net');
 var Firebase = require('firebase');
 var q = require('promised-io/promise');
-var winston = require('winston');
-require('winston-papertrail').Papertrail;
-
-require('ssl-root-cas/latest')
-  .inject()
-  .addFile(__dirname + '/isrgrootx1.pem')
-  .addFile(__dirname + '/letsencryptauthorityx1.pem')
-  .addFile(__dirname + '/lets-encrypt-x1-cross-signed.pem');
-
-var config = require('./' + process.argv[2]);
-
-var papertrailTransport = new winston.transports.Papertrail({
-        host: config.papertrailHost,
-        port: config.papertrailPort,
-        level: config.loggingLevel,
-        program: 'gc_server'
-    });
-
-var consoleTransport = new winston.transports.Console({
-        level: 'info',
-        timestamp: function() {
-            return new Date().toString();
-        },
-        colorize: true
-});
-
-var logger = new winston.Logger({
-transports: [
-    papertrailTransport,
-    consoleTransport
-]
-});
 
 /* global pubnub_client: true */
 /* global MODE: true */
@@ -45,10 +11,6 @@ transports: [
 /* global BYTE_HANDSHAKE_OK: true */
 /* global WRITE_INFLUXDB: true */
 
-pubnub_client = pubnub({
-    publish_key: "pub-c-879cf9bb-46af-4bf1-8dca-e011ea412cd2",
-    subscribe_key: "sub-c-cba703c8-7b42-11e3-9cac-02ee2ddab7fe"
-});
 
 MODE = {
     REALTIME: 1,
@@ -73,13 +35,15 @@ BYTE_HANDSHAKE_OK = 42;
 WRITE_INFLUXDB = true;
 
 
-function GcClient(socket, influx_client, config) {
+function GcClient(socket, influx_client, config, firebase_root, logger) {
     this.socket = socket;
     this.influx_client = influx_client;
     this.config = config;
+    this.logger = logger;
     
     // firebase setup
-    this.firebaseRoot = new Firebase(config.firebaseRoot);
+    var firebase_root_ref = new Firebase(firebase_root);
+    this.firebaseRoot = firebase_root_ref;
     this.firebaseDevicesRoot = this.firebaseRoot.child('devices');
 
     this.state = CONNECTION_STATES.CONNECTED;
@@ -133,6 +97,11 @@ function GcClient(socket, influx_client, config) {
                     if( mode == MODE.REALTIME ) {
                         self.state = CONNECTION_STATES.READY_REALTIME;
                         self.log_info("realtime mode");
+                        self.firebaseDeviceRef.update({
+                            "last_device_update": Firebase.ServerValue.TIMESTAMP,
+                            "mode": "realtime"
+                        });
+                        
                     } else if ( mode == MODE.DATALOGGING ) {
                         self.state = CONNECTION_STATES.READY_DATALOGGING;
                         self.log_info("datalogging mode");
@@ -308,7 +277,7 @@ function GcClient(socket, influx_client, config) {
         
         // add data for battery
         var tags = {user: self.user_name,
-                    env:  self.config.environment};        
+                    env:  self.config.env};        
         self.measurements.push({
             key: "battery",
             tags: tags,
@@ -371,7 +340,7 @@ function GcClient(socket, influx_client, config) {
         }
 
         var tags = {username: self.user_name,
-                    env:  self.config.environment};
+                    env:  self.config.env};
         
         if(push_to_influxdb) {
             var timestamp_nanos = datetime.getTime().toString() + "000000";
@@ -420,7 +389,7 @@ function GcClient(socket, influx_client, config) {
             args.unshift(self.owner_uid);
         }
         args.unshift(self.socket_info);
-        logger.log(level, args.join(' '));
+        self.logger.log(level, args.join(' '));
     }
 
     this.log_debug = function() {
@@ -437,47 +406,4 @@ function GcClient(socket, influx_client, config) {
     
 }
 
-process.on('uncaughtException', (err) => {
-    logger.error("unhandled exception:", err, err.stack);
-});
-
-
-influent
-.createClient({
-    username: config.influxUsername,
-    password: config.influxPassword,
-    database: config.influxDb,
-    server: [
-        {
-            protocol: config.influxProtocol,
-            host:     config.influxHost,
-            port:     config.influxPort
-        }
-    ]
-})
-.then(function(client) {
-    var server = net.createServer(function(socket) {
-        
-        logger.info(socket.remoteAddress, ':', socket.remotePort, "received connection");
-        var gcClient = new GcClient(socket, client, config);
-    });
-    
-    logger.info("server", config.serverKey, "listening on", config.serverPort);
-    
-    server.listen(config.serverPort, '0.0.0.0');
-    
-    // mark server online
-    var firebaseRoot = new Firebase(config.firebaseRoot);
-    var serverRef = firebaseRoot.child('servers').child(config.serverKey);
-    serverRef.update({
-        online: true
-    });
-    var presenceRef = serverRef.child("online");
-    presenceRef.onDisconnect().set(false);
-    
-}, function(error) {
-    logger.error("could not create influxdb client:", error);
-});
-
-
-
+module.exports = GcClient;

@@ -12,14 +12,17 @@ var _ = require('lodash');
 
 
 gulp.task('config', function () {
-  var env_config = process.env.GC_ENV;
-  var file_path = path.join(conf.paths.src, '/app/config-' + env_config + '.json');
-  console.log("file_path: ", file_path);
-  gulp.src(file_path)
-    .pipe($.ngConstant({
+  var fb_root = process.env.FB_ROOT;
+  if(!fb_root) {
+    throw "FB_ROOT not set [FB_ROOT=gcserver-dev.firebaseio.com]";
+  }
+  var constants = {"firebase_root": 'https://' + fb_root + '/'};
+  $.ngConstant({
       name: 'gc2Website',
-      templatePath: path.join(conf.paths.src, '/app/config-template.ejs')
-    }))
+      templatePath: path.join(conf.paths.src, '/app/config-template.ejs'),
+      constants: constants,
+      stream: true
+    })
     .pipe($.rename("index.constants.js"))
     .pipe(gulp.dest('src/app'));
 });

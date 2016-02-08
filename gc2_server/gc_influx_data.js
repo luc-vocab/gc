@@ -41,8 +41,10 @@ var GcInfluxData = function(logger, influx_client, firebase_root, username, uid,
     this.subscribe_device_node = function() {
         // keep an open subscription to the device node and update as needed
         self.device_ref.on('value', function(snapshot) {
-            self.log_info("updating data");
-           self.update_latest_data(); 
+            if(snapshot.val().mode=="night") {
+                self.log_info("updating data");
+                self.update_latest_data(); 
+            }
         });
     };
     

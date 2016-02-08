@@ -55,7 +55,7 @@
           }
         });
       
-        $('#container-emg-chart').highcharts({
+        angular.element('#container-emg-chart').highcharts({
             chart: {
                 type: "area"
             },

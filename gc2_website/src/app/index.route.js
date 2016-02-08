@@ -27,8 +27,8 @@
         url: '/control',
         templateUrl: 'app/control/control.html'
       })
-      .state('realtime', {
-        url: '/realtime',
+      .state('control-realtime', {
+        url: '/control/realtime',
         templateUrl: 'app/realtime/realtime.html',
         controller: 'RealtimeController',
         controllerAs: 'realtime',
@@ -42,8 +42,8 @@
           }]
         }        
       })
-      .state('night', {
-        url: '/night',
+      .state('control-night', {
+        url: '/control/night',
         templateUrl: 'app/nightmode/nightmode.html',
         controller: 'NightmodeController',
         controllerAs: 'nightmode',

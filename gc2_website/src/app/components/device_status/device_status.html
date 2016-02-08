@@ -9,11 +9,15 @@
                                  'fa-battery-quarter': device.device_obj.battery_charge > 25 && device.device_obj.battery_charge <= 50,
                                  'fa-battery-empty': device.device_obj.battery_charge >= 0  && device.device_obj.battery_charge <= 25}"></i> 
     </button>
-    <button class="btn blue-madison" type="button">
-        <i class="fa" ng-class="{'fa-bed': device.device_obj.mode == 'night'}"></i> 
+    <button class="btn blue-madison" ng-class="{'grey-salsa': device.device_obj.mode == 'offline',
+                                                'blue-madison': device.device_obj.mode != 'offline'}" type="button">
+        <i class="fa" ng-class="{'fa-bed': device.device_obj.mode == 'night',
+                                 'fa-wifi': device.device_obj.mode == 'online',
+                                 'fa-bolt': device.device_obj.mode == 'realtime',
+                                 'fa-power-off': device.device_obj.mode == 'offline'}"></i> 
         {{device.device_obj.mode}}
     </button>
-    <button class="btn purple-plum" type="button"><i class="fa fa-clock-o"></i> 
+    <button ng-if="device.device_obj.mode == 'night'" class="btn purple-plum" type="button"><i class="fa fa-clock-o"></i> 
     {{device.device_obj.collected_duration | timefilter}}
     </button>
 </div>

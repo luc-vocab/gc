@@ -33,7 +33,10 @@
       var destroy_callback = $rootScope.$on("$stateChangeSuccess", function(event, toState) {
         $log.info("stateChangeSuccess: ", toState);
         
-        if(toState.name == "data-latest" || toState.name == "data") {
+        
+        if(toState.name == "control-realtime" || toState.name == "control-night" || toState.name == "control" ) {
+          vm.current_tab = "control";
+        } else if(toState.name == "data-latest" || toState.name == "data") {
           vm.current_tab = "data";
         } else {
           vm.current_tab = toState.name;
