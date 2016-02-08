@@ -5,7 +5,7 @@ Changes to the board
 ------------------
 * Fix speaker footprint, was too large
 * RGB lead position, was too close to the photon
-* Mechanical mounting pads too large and covered with solder mask for the USB connector (I don't understand the issue but it's your email)
+* Mechanical mounting pads too large and covered with solder mask for the USB connector (I don't understand the issue but it's in your email)
 * Solder mask covering mechanical pad for the audio amp U9
 * Correct placement of push buttons so that they're facing outward
 * JST and EMG connector should be 90-degree angled connectors (will provide exact part numbers if you can't find them)
