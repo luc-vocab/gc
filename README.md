@@ -1,6 +1,9 @@
 Grind Control Device
 ====================
 
+**2015/10/01 update: I've started a new project, a wearable device focused on tracking sleep bruxism: 
+ <a href="https://sleeptrack.io">SleepTrack</a>**
+
 <b>Disclaimer: use this design, or any of the parts at your own risk.</b>
 
 This device attemps to prevent night-time bruxism. It works by detecting muscle activation on the temporalis 
