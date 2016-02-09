@@ -5,7 +5,7 @@ date: 2016-01-31 00:00:00 +0000
 section: blog
 thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,h_400,w_400/v1454817859/gc_website_blog/Photo_Jan_30_10_56_58_PM.jpg
 ---
-I've been working with a PCB (Printed Circuit Board) designer for the last two months to put together the board for the Sleeptrack device. The [Grind Control device](2013/04/01/development-of-grind-control-device/) was built on top of breadboard-ready through-hole components which could all be soldered easily. In this new iteration, one of the objectives is to keep the size small. This means using [SMD components](https://en.wikipedia.org/wiki/Surface-mount_technology), and I don't have the skills or equipment to solder those. So PCB design and assembly is contracted out and a few days ago, we received the first revision of the boards. 
+I've been working with a PCB (Printed Circuit Board) designer for the last two months to put together the board for the Sleeptrack device. The [Grind Control device](/2013/04/01/development-of-grind-control-device/) was built on top of breadboard-ready through-hole components which could all be soldered easily. In this new iteration, one of the objectives is to keep the size small. This means using [SMD components](https://en.wikipedia.org/wiki/Surface-mount_technology), and I don't have the skills or equipment to solder those. So PCB design and assembly is contracted out and a few days ago, we received the first revision of the boards. 
 
 <img src="https://res.cloudinary.com/photozzap/image/upload/c_fill,h_1024,w_1024/v1454922913/gc_website_blog/pcb_rounded_corners.jpg" class="img-responsive">
 
