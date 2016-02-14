@@ -3,6 +3,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var debug = require('gulp-debug');
+var shell = require('gulp-shell');
 var conf = require('./conf');
 
 var browserSync = require('browser-sync');
@@ -11,7 +12,7 @@ function isOnlyChange(event) {
   return event.type === 'changed';
 }
 
-gulp.task('watch', ['inject', 'copy_blog_files'], function () {
+gulp.task('watch', ['inject', 'build_blog', 'copy_blog_files'], function () {
 
   gulp.watch([path.join(conf.paths.src, '/*.html'), 'bower.json'], ['inject']);
 
@@ -38,7 +39,13 @@ gulp.task('watch', ['inject', 'copy_blog_files'], function () {
     browserSync.reload(event.path);
   });
   
-  // watch blog area
+  
+  // watch blog src area
+  gulp.watch(path.join(conf.paths.blog_src, '/**/*'), function(event){
+    gulp.start('build_blog');
+  })
+  
+  // watch blog dist area
   gulp.watch(path.join(conf.paths.blog_site, '/**/*'), function(event) {
     gulp.start('copy_blog_files');
   });
@@ -46,6 +53,10 @@ gulp.task('watch', ['inject', 'copy_blog_files'], function () {
 });
 
 gulp.task('copy_blog_files', function() {
-  gulp.src(conf.paths.blog_site)
+  gulp.src(path.join(conf.paths.blog_site, '/**/*'))
   .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve')));
 });
+
+gulp.task('build_blog', shell.task([
+  'jekyll build'
+], {cwd: conf.paths.blog_src}));
