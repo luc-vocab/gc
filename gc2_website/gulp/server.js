@@ -16,15 +16,21 @@ var buildRedirectCleanUrl = function(root) {
   var redirectCleanUrl = function(req, res, next) {
     // console.log("req.url", req.url);
     var original_url = req.url;
+
     var candidate_url = original_url + '/index.html';
     var candidate_full_path = root + candidate_url;
     if (fileExists(candidate_full_path)) {
       //console.log("File exists !", candidate_full_path);
       req.url = candidate_url;
-    } else {
-      //console.log("File doesn't exists !", candidate_full_path);
     }
-    // var full_path = '.tmp/serve' + req.url
+    
+    candidate_url = original_url + '.html';
+    candidate_full_path = root + candidate_url;
+    if (fileExists(candidate_full_path)) {
+      //console.log("File exists !", candidate_full_path);
+      req.url = candidate_url;
+    }    
+    
     return next();
   };
   return redirectCleanUrl;
