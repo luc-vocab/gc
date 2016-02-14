@@ -10,6 +10,22 @@ var browserSyncSpa = require('browser-sync-spa');
 var util = require('util');
 
 var proxyMiddleware = require('http-proxy-middleware');
+var fileExists = require('file-exists');
+
+var redirectCleanUrl = function(req, res, next) {
+  // console.log("req.url", req.url);
+  var original_url = req.url;
+  var candidate_url = original_url + '/index.html';
+  var candidate_full_path = '.tmp/serve' + candidate_url;
+  if (fileExists(candidate_full_path)) {
+    //console.log("File exists !", candidate_full_path);
+    req.url = candidate_url;
+  } else {
+    //console.log("File doesn't exists !", candidate_full_path);
+  }
+  // var full_path = '.tmp/serve' + req.url
+  return next();
+};
 
 function browserSyncInit(baseDir, browser) {
   browser = browser === undefined ? 'default' : browser;
@@ -23,7 +39,8 @@ function browserSyncInit(baseDir, browser) {
 
   var server = {
     baseDir: baseDir,
-    routes: routes
+    routes: routes,
+    middleware: redirectCleanUrl
   };
 
   /*
