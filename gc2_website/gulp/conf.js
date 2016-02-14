@@ -16,6 +16,7 @@ exports.paths = {
   dist: 'dist',
   tmp: '.tmp',
   e2e: 'e2e',
+  static_assets: 'static_assets',
   blog_site: 'blog_site',
   blog_src: 'blog'
 };

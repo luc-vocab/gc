@@ -75,7 +75,7 @@ browserSync.use(browserSyncSpa({
 
 gulp.task('serve', ['watch'], function () {
   var serve_path = path.join(conf.paths.tmp, '/serve');
-  browserSyncInit(serve_path, [serve_path, conf.paths.src]);
+  browserSyncInit(serve_path, [serve_path, conf.paths.src, conf.paths.static_assets]);
 });
 
 gulp.task('serve:dist', ['build'], function () {
