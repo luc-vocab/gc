@@ -1,4 +1,4 @@
-{ Using PSTWRITER 17.0.0 d001Dec-05-2015 at 13:10:31 }
+{ Using PSTWRITER 17.0.0 d001Feb-10-2016 at 23:55:42 }
 
 #1 WARNING(ORCAP-36038): "No_connect" property on Pin "SW12.3" ignored for SW12: SCHEMATIC1, Photon P1 (0.50, 2.20). Connecting pin to net "GND".
 #2 WARNING(ORCAP-36038): "No_connect" property on Pin "SW10.3" ignored for SW10: SCHEMATIC1, Power Regulation (1.40, 4.30). Connecting pin to net "GND".

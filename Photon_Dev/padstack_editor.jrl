@@ -1,0 +1,23 @@
+\t (00:00:00) padstack_editor 17.0 P003 (v17-0-118C) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Thu Feb 11 00:02:14 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=8336 CPUs=4
+\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaacc07556.tmp -pname SLOT41_26 -data C:/Users/Madison/AppData/Local/Temp/#Taaaace07556.tmp
+\t (00:00:00) 
+\d (00:00:01) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 0 "Thermal Pad"
+\d (00:00:01) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 0 "Thermal Pad" 0 +
+\d (00:00:01) QtSignal "Anti Pad"
+\d (00:00:02) QtSignal GuidedDesignLayersTab LayersTable customContextMenuRequest 0 "Anti Pad"
+\d (00:00:03) QtFillin Copy|0
+\d (00:00:03) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 1 "Thermal Pad"
+\d (00:00:04) QtSignal GuidedDesignLayersTab LayersTable customContextMenuRequest 1 "Thermal Pad"
+\d (00:00:04) QtFillin Paste|1
+\d (00:00:05) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 2 "Thermal Pad"
+\d (00:00:05) QtSignal GuidedDesignLayersTab LayersTable customContextMenuRequest 2 "Thermal Pad"
+\d (00:00:06) QtFillin Paste|1
+\d (00:00:06) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 3 "Thermal Pad"
+\d (00:00:06) QtSignal GuidedDesignLayersTab LayersTable customContextMenuRequest 3 "Thermal Pad"
+\d (00:00:07) QtFillin Paste|1
+\d (00:00:08) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged
+\d (00:00:09) QtSignal MainWindow Save triggered
+\d (00:00:10) QtSignal MainWindow UpdateToDesignExit triggered
+\t (00:00:10)     Journal end - Thu Feb 11 00:02:25 2016

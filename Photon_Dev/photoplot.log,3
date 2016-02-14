@@ -1,0 +1,78 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : Photon_4Layer_V2.brd                          )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Fri Feb 12 22:29:29 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ ******************************************
+ WARNING: DRC OUT OF DATE on this layout.
+ ******************************************
+
+ ---- Photoplot outline rectangle not found; using drawing extents.
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          INCHES
+    FILM-SIZE             2400000 1600000
+    FORMAT                2.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  YES
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+================================================================
+     PROCESSING FILM < 3V3 >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V2_3V3.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+    ERROR: aborting film - Layer polarity of layer ETCH/3V3 does not
+           match film polarity of Positive. DRC may be unreliable.
+           
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.05500                                  DARK 
+  CIRCLE     0.13500                                  DARK 
+  OBLONG     0.03346     x 0.05118       0.000 NO     DARK 
+  OBLONG     0.05709     x 0.06496       0.000 NO     DARK 
+  OBLONG     0.06890     x 0.02953      89.999 NO     DARK 
+  OBLONG     0.06890     x 0.02953     179.999 NO     DARK 
+
+ Error in SleepTrack_V2_3V3--halting output.  Artwork file not generated.
+ *** ERROR with SleepTrack_V2_3V3
+
+
+
+
+------------------------------------------------------
+ SUMMARY:
+    *** ERROR with SleepTrack_V2_3V3
+
+ ARTWORK Error

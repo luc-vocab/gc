@@ -1,0 +1,28 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    STEP Export                                                      )
+(                                                                     )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Sun Jan 31 00:45:58 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+
+STEP file: C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_shrunk_big.stp
+Design file: C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_shrunk.brd
+Export units: Millimeter
+STEP protocol: AP-214
+Source identification: allegro_17.0P011
+Export selected and highlighted parts?: NO
+Export secondary parts?: NO
+Export parts with mapped STEP Models?: YES
+Export parts without mapped STEP Models?: NO
+Export assemblies and enclosures parts?: NO
+Export mechanical drills?: YES
+Export electrical through pin drills?: YES
+Export electrical through via drills?: YES
+Export bare board only?: NO
+Export external copper?: YES
+step_out complete.

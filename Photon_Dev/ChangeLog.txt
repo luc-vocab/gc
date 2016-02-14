@@ -1,0 +1,28 @@
+SleepTrack V2 Change Log:
+02/13/16
+
+Major Changes:
+- Added Support for future I2C Devices with J10.
+- Removed SW1
+- Relocated D7 
+- Updated Footprint for LS1
+- Connected I2C Lines to U2 and J10
+- Rotated SW4 and SW5 180 degrees
+- Updated U9 Footprint and Thermal Relief pads
+- Updated JST Footprint with correct sized through holes
+- Updated JP1 Footprint
+- Updated USB Connector Footprint
+- Update Test Point REFDES
+- Verify Silkscreen
+- Check and do 1:1 comparison
+- Generate Gerber Files
+- Updated BOM to match SleepTrack_V2.0 Changes
+
+
+
+
+
+
+
+
+

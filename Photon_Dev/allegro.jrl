@@ -1,0 +1,39 @@
+\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Sat Feb 13 22:41:08 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=8376 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Sleep_Track_V2.brd
+\t (00:00:00) 
+\t (00:00:02) Opening existing design...
+\d (00:00:02) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V2.brd
+\i (00:00:02) trapsize 3123
+\i (00:00:02) trapsize 3063
+\i (00:00:02) trapsize 3131
+\i (00:00:02) trapsize 3194
+\i (00:00:02) trapsize 3194
+\i (00:00:02) generaledit 
+\i (00:00:13) artwork 
+\i (00:00:20) setwindow form.film_control
+\i (00:00:20) FORM film_control select_all  
+\i (00:00:24) FORM film_control general_parameters  
+\i (00:00:25) FORM film_control film_control  
+\i (00:00:39) setwindow pcb
+\i (00:00:39) pdf out 
+\i (00:00:41) setwindow form.pdf_out
+\i (00:00:41) FORM pdf_out selectall  
+\i (00:01:00) FORM pdf_out filename Sleep_Track_V2_PCB 
+\i (00:01:00) FORM pdf_out attrtree  Component 
+\i (00:01:00) FORM pdf_out property_parameters  
+\i (00:01:01) FORM pdf_out pdf_export  
+\i (00:01:02) FORM pdf_out page_setup  
+\i (00:01:02) FORM pdf_out property_parameters  
+\i (00:01:03) FORM pdf_out pdf_export  
+\i (00:01:05) FORM pdf_out export  
+\t (00:01:05) Starting Exporting PDF File...
+\t (00:01:10) PDF output completed.
+\i (00:02:47) FORM pdf_out cancel  
+\i (00:02:47) setwindow pcb
+\i (00:02:47) generaledit 
+\i (00:02:48) exit 
+\e (00:02:48) Do you want to save the changes you made to Sleep_Track_V2.brd?
+\i (00:02:49) fillin yes 
+\t (00:02:49)     Journal end - Sat Feb 13 22:43:57 2016

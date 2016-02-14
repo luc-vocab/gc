@@ -1,0 +1,42 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Silkscreen Audit Log File                                        )
+(                                                                     )
+(    Drawing          : Photon_4Layer_V2.brd                          )
+(    Software Version : 17.0P011                                      )
+(    Date/Time        : Fri Feb 12 22:12:30 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Auditing silkscreen for the top of the board.
+
+Element to Pad clearance is 0.00
+
+     ----- Top Silkscreen Audit -----
+
+TEXT 'Q1' @ (-939.38, -567.45) ... with via @ (-906.70, -553.46)
+TEXT 'TP7' @ (261.04, -146.75) ... with pin @ (220.61, -107.76)
+TEXT 'TP7' @ (261.04, -146.75) ... with pin @ (220.61, -7.76)
+TEXT 'TP7' @ (261.04, -146.75) ... with pin @ (220.61, -57.76)
+TEXT 'VBAT' @ (812.50, 534.17) ... with board geometry
+TEXT '3V3' @ (-423.77, -478.27) ... with via @ (-335.40, -434.20)
+TEXT 'SW5' @ (-548.73, 1009.97) ... with pin @ (-484.00, 967.83)
+TEXT 'SW5' @ (-548.73, 1009.97) ... with board geometry
+TEXT 'U1' @ (253.73, 121.26) ... with line starting at (168.83, 152.67)
+TEXT 'U1' @ (253.73, 121.26) ... with pin @ (193.83, 172.67)
+TEXT 'U1' @ (253.73, 121.26) ... with via @ (238.81, 190.32)
+TEXT 'R39' @ (214.76, 800.86) ... with via @ (142.35, 750.75)
+TEXT 'C21' @ (369.50, 20.09) ... with pin @ (425.10, -57.36)
+TEXT 'C6' @ (-66.82, 745.68) ... with via @ (-49.92, 800.28)
+TEXT 'R1' @ (145.58, 102.09) ... with line starting at (55.61, -132.76)
+TEXT 'U9' @ (148.52, -397.87) ... with line starting at (89.95, -434.20)
+TEXT 'U9' @ (148.52, -397.87) ... with via @ (101.93, -433.53)
+
+Audit Errors: 17
+
+
+Total Audit Errors: 17
+
+Log End
+

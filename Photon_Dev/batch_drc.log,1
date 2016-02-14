@@ -1,0 +1,30 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    DRC Update                                                       )
+(                                                                     )
+(    Drawing          : Photon_4Layer_V2.brd                          )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Wed Feb 10 22:16:13 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+ ========= check shapes                       0:00:00
+ ========= check standalone pins              0:00:00
+ ========= check symbols (pins,lines,text)    0:00:00
+ ========= check xnets                        0:00:00
+ ========= check nets                         0:00:00
+ ========= check standalone branches          0:00:00
+ ========= check standalone filled rectangles 0:00:00
+ ========= check standalone lines             0:00:00
+ ========= check standalone text              0:00:00
+ ========= check standalone rectangles        0:00:00
+
+ ..... Total number of DRC errors  3
+
+
+WARNING: 2 dynamic shape(s) out of date; checking skipped on these elements.
+
+ ..... DRC update completed, total CPU time   0:00:00
+ *************************************************************************
+

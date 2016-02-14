@@ -1,5 +1,5 @@
 FILE_TYPE = EXPANDEDPARTLIST;
-{ Using PSTWRITER 17.0.0 d001Nov-18-2015 at 21:49:53 }
+{ Using PSTWRITER 17.0.0 d001Feb-07-2016 at 16:44:28 }
 DIRECTIVES
  PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
  ROOT_DRAWING='PROTON_DEV';
@@ -298,6 +298,16 @@ SECTION_NUMBER 1
  SECTION='';
 
 PART_NAME
+ J10 '4 HEADER_JUMPER4_4 HEADER':;
+
+SECTION_NUMBER 1
+ '@PROTON_DEV.SCHEMATIC1(SCH_1):INS227295@CONNECTOR.4 HEADER.NORMAL(CHIPS)':
+ C_PATH='@proton_dev.schematic1(sch_1):ins227295@connector.\4 header.normal\(chips)',
+ P_PATH='@proton_dev.schematic1(sch_1):page1_ins227295@connector.\4 header.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
  J9 'HEADER 3_JUMPER3_HEADER 3':;
 
 SECTION_NUMBER 1
@@ -328,12 +338,12 @@ SECTION_NUMBER 1
  SECTION='';
 
 PART_NAME
- LS1 'SPEAKER_0_EC211_SDR08540M3-01':;
+ LS1 'SPEAKER_1_EC211_SDR08540M3-01':;
 
 SECTION_NUMBER 1
- '@PROTON_DEV.SCHEMATIC1(SCH_1):INS35450@PROTON_DEV.SPEAKER_0.NORMAL(CHIPS)':
- C_PATH='@proton_dev.schematic1(sch_1):ins35450@proton_dev.\speaker_0.normal\(chips)',
- P_PATH='@proton_dev.schematic1(sch_1):page1_ins35450@proton_dev.\speaker_0.normal\(chips)',
+ '@PROTON_DEV.SCHEMATIC1(SCH_1):INS35450@PROTON_DEV.SPEAKER_1.NORMAL(CHIPS)':
+ C_PATH='@proton_dev.schematic1(sch_1):ins35450@proton_dev.\speaker_1.normal\(chips)',
+ P_PATH='@proton_dev.schematic1(sch_1):page1_ins35450@proton_dev.\speaker_1.normal\(chips)',
  PRIM_FILE='.\pstchip.dat',
  SECTION='';
 
@@ -568,16 +578,6 @@ SECTION_NUMBER 1
  SECTION='';
 
 PART_NAME
- R43 'RESISTOR_0603RF_WV_12D_10K':;
-
-SECTION_NUMBER 1
- '@PROTON_DEV.SCHEMATIC1(SCH_1):INS99830@DISCRETE.RESISTOR.NORMAL(CHIPS)':
- C_PATH='@proton_dev.schematic1(sch_1):ins99830@discrete.\resistor.normal\(chips)',
- P_PATH='@proton_dev.schematic1(sch_1):page1_ins99830@discrete.\resistor.normal\(chips)',
- PRIM_FILE='.\pstchip.dat',
- SECTION='';
-
-PART_NAME
  R6 'RESISTOR_0603RF_WV_12D_100K':;
 
 SECTION_NUMBER 1
@@ -588,17 +588,7 @@ SECTION_NUMBER 1
  SECTION='';
 
 PART_NAME
- SW1 'SW KEY-Y1011_0_SS12SDH2_SS12SDH':;
-
-SECTION_NUMBER 1
- '@PROTON_DEV.SCHEMATIC1(SCH_1):INS5697@PROTON_DEV.SW KEY-Y1011_0.NORMAL(CHIPS)':
- C_PATH='@proton_dev.schematic1(sch_1):ins5697@proton_dev.\sw key-y1011_0.normal\(chips)',
- P_PATH='@proton_dev.schematic1(sch_1):page1_ins5697@proton_dev.\sw key-y1011_0.normal\(chips)',
- PRIM_FILE='.\pstchip.dat',
- SECTION='';
-
-PART_NAME
- SW10 'SW KEY-Y1011_0_SS12SDH2_SS12SDH':;
+ SW10 'SW KEY-Y1011_0_NEW_SS12SDH2_SS1':;
 
 SECTION_NUMBER 1
  '@PROTON_DEV.SCHEMATIC1(SCH_1):INS56294@PROTON_DEV.SW KEY-Y1011_0.NORMAL(CHIPS)':
@@ -661,9 +651,19 @@ PART_NAME
  TP11 'T POINT R_TESTPOINT_SMD_T POINT':;
 
 SECTION_NUMBER 1
- '@PROTON_DEV.SCHEMATIC1(SCH_1):INS98507@DISCRETE.T POINT R.NORMAL(CHIPS)':
- C_PATH='@proton_dev.schematic1(sch_1):ins98507@discrete.\t point r.normal\(chips)',
- P_PATH='@proton_dev.schematic1(sch_1):page1_ins98507@discrete.\t point r.normal\(chips)',
+ '@PROTON_DEV.SCHEMATIC1(SCH_1):INS223747@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@proton_dev.schematic1(sch_1):ins223747@discrete.\t point r.normal\(chips)',
+ P_PATH='@proton_dev.schematic1(sch_1):page1_ins223747@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP12 'T POINT R_TESTPOINT_SMD_T POINT':;
+
+SECTION_NUMBER 1
+ '@PROTON_DEV.SCHEMATIC1(SCH_1):INS113221@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@proton_dev.schematic1(sch_1):ins113221@discrete.\t point r.normal\(chips)',
+ P_PATH='@proton_dev.schematic1(sch_1):page1_ins113221@discrete.\t point r.normal\(chips)',
  PRIM_FILE='.\pstchip.dat',
  SECTION='';
 

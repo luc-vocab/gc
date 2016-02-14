@@ -1,0 +1,46 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Refresh Padstack                                                 )
+(                                                                     )
+(    Drawing          : jst-2POS.dra                                  )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Wed Feb 10 22:30:49 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Wed Feb 10 22:30:49 2016				Page     1
+
+
+------ Pad Stack Refresh Options ------
+
+Input design  = 'C:/Users/Madison/Desktop/gc/Photon_Dev/jst-2POS.dra'
+Output design = ''
+Reset symbol text and size locations   = 'NO'
+
+
+------ Library Paths ------
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.0/share/local/pcb/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/allegrolib/symbols 
+
+PADPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.0/share/local/pcb/padstacks 
+           C:/Cadence/SPB_17.0/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/allegrolib/symbols 
+
+
+------ Pad Stack Refresh Messages ------
+
+'HOLE24'  pad stack refresh starting.
+
+     'HOLE24'  pad stack refreshed successfully.
+     
+Completed refreshing all pad stacks successfully.

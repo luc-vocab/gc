@@ -1,0 +1,33 @@
+G04 ================== begin FILE IDENTIFICATION RECORD ==================*
+G04 Layout Name:  C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_V2.brd*
+G04 Film Name:    SleepTrack_V2_BoardOutline*
+G04 File Format:  Gerber RS274X*
+G04 File Origin:  Cadence Allegro 17.0-P009*
+G04 Origin Date:  Fri Feb 12 22:27:43 2016*
+G04 *
+G04 Layer:  BOARD GEOMETRY/OUTLINE*
+G04 *
+G04 Offset:    (0.00 0.00)*
+G04 Mirror:    No*
+G04 Mode:      Positive*
+G04 Rotation:  0*
+G04 FullContactRelief:  No*
+G04 UndefLineWidth:     6.00*
+G04 ================== end FILE IDENTIFICATION RECORD ====================*
+%FSLAX25Y25*MOIN*%
+%IR0*IPPOS*OFA0.00000B0.00000*MIA0B0*SFA1.00000B1.00000*%
+%ADD10C,.006*%
+G75*
+%LPD*%
+G75*
+G54D10*
+G01X-91000Y-100000D02*
+X91000D01*
+G03X100000Y-91000I0J9000D01*
+G01Y91000D01*
+G03X91000Y100000I-9000J0D01*
+G01X-91000D01*
+G03X-100000Y91000I0J-9000D01*
+G01Y-91000D01*
+G03X-91000Y-100000I9000J0D01*
+M02*
