@@ -30,24 +30,14 @@
             <div class="nav-collapse collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
                     <!--<li class="dropdown dropdown-fw active open selected">-->
-                    <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('home'),
-                                                                open:     $state.includes('home'),
-                                                                selected: $state.includes('home')}">
-                        <a href="#/home" class="text-uppercase">
+                    <li class="dropdown dropdown-fw">
+                        <a href="/" class="text-uppercase">
                             <i class="fa fa-home"></i>Home</a>
-                        <ul class="dropdown-menu dropdown-menu-fw">
-                            <li class="active">
-                                <a href="index.html">
-                                    <i class="fa fa-info-circle"></i>Overview
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="dashboard_2.html">
-                                    <i class="icon-bulb"></i>Features</a>
-                            </li>
-                        </ul>
                     </li>
+                    <li class="dropdown dropdown-fw" >
+                        <a href="/blog" class="text-uppercase">
+                            <i class="fa fa-rss"></i>Blog</a>
+                    </li>                    
                     <li class="dropdown dropdown-fw" ng-class="{active:   vm.current_tab == 'control',
                                                                 open:     vm.current_tab == 'control',
                                                                 selected: vm.current_tab == 'control'}">
