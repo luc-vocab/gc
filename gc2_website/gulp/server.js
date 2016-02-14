@@ -12,22 +12,25 @@ var util = require('util');
 var proxyMiddleware = require('http-proxy-middleware');
 var fileExists = require('file-exists');
 
-var redirectCleanUrl = function(req, res, next) {
-  // console.log("req.url", req.url);
-  var original_url = req.url;
-  var candidate_url = original_url + '/index.html';
-  var candidate_full_path = '.tmp/serve' + candidate_url;
-  if (fileExists(candidate_full_path)) {
-    //console.log("File exists !", candidate_full_path);
-    req.url = candidate_url;
-  } else {
-    //console.log("File doesn't exists !", candidate_full_path);
-  }
-  // var full_path = '.tmp/serve' + req.url
-  return next();
-};
+var buildRedirectCleanUrl = function(root) {
+  var redirectCleanUrl = function(req, res, next) {
+    // console.log("req.url", req.url);
+    var original_url = req.url;
+    var candidate_url = original_url + '/index.html';
+    var candidate_full_path = root + candidate_url;
+    if (fileExists(candidate_full_path)) {
+      //console.log("File exists !", candidate_full_path);
+      req.url = candidate_url;
+    } else {
+      //console.log("File doesn't exists !", candidate_full_path);
+    }
+    // var full_path = '.tmp/serve' + req.url
+    return next();
+  };
+  return redirectCleanUrl;
+}
 
-function browserSyncInit(baseDir, browser) {
+function browserSyncInit(root, baseDir, browser) {
   browser = browser === undefined ? 'default' : browser;
 
   var routes = null;
@@ -40,7 +43,7 @@ function browserSyncInit(baseDir, browser) {
   var server = {
     baseDir: baseDir,
     routes: routes,
-    middleware: redirectCleanUrl
+    middleware: buildRedirectCleanUrl(root)
   };
 
   /*
@@ -65,13 +68,15 @@ browserSync.use(browserSyncSpa({
 }));
 
 gulp.task('serve', ['watch'], function () {
-  browserSyncInit([path.join(conf.paths.tmp, '/serve'), conf.paths.src]);
+  var serve_path = path.join(conf.paths.tmp, '/serve');
+  browserSyncInit(serve_path, [serve_path, conf.paths.src]);
 });
 
 gulp.task('serve:dist', ['build'], function () {
-  browserSyncInit(conf.paths.dist);
+  browserSyncInit(conf.paths.dist, conf.paths.dist);
 });
 
+/*
 gulp.task('serve:e2e', ['inject'], function () {
   browserSyncInit([conf.paths.tmp + '/serve', conf.paths.src], []);
 });
@@ -79,3 +84,4 @@ gulp.task('serve:e2e', ['inject'], function () {
 gulp.task('serve:e2e-dist', ['build'], function () {
   browserSyncInit(conf.paths.dist, []);
 });
+*/
