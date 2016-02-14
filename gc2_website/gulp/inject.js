@@ -50,5 +50,11 @@ gulp.task('inject', ['scripts', 'styles', 'config'], function () {
     .pipe($.inject(injectStyles, injectOptions))
     .pipe($.inject(injectScripts, injectOptions))
     .pipe(wiredep(_.extend({}, conf.wiredep)))
+    .pipe($.rename(function(path) {
+      if (path.basename == "app" && path.extname == ".html" ) {
+        path.dirname = "app";
+        path.basename = "index";
+     }
+    }))
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve')));
 });
