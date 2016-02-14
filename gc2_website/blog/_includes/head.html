@@ -13,13 +13,17 @@
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/photozzap/image/upload/c_scale,w_144/v1449374700/gc_website_assets/sleeptrack_square_head_only.png" />
 
 
-  <link rel="stylesheet" href="{{ " /css/bootstrap.css " | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ " /css/font-awesome.css " | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ " /css/animate.css " | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ " /css/components-md.css " | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ " /css/plugins-md.css " | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ " /css/layout.css " | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ " /css/main.css " | prepend: site.baseurl }}">
+  <!-- build:css(.tmp/serve) styles/blog.css -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/font-awesome.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/animate.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/components-md.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/plugins-md.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/layout.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <!-- endinject -->
+  <!-- endbuild -->
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
