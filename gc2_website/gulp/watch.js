@@ -12,7 +12,7 @@ function isOnlyChange(event) {
   return event.type === 'changed';
 }
 
-gulp.task('watch', ['inject', 'build_blog', 'copy_blog_files'], function () {
+gulp.task('watch', ['inject', 'build_and_copy_blog'], function () {
 
   gulp.watch([path.join(conf.paths.src, '/*.html'), 'bower.json'], ['inject']);
 
@@ -53,10 +53,14 @@ gulp.task('watch', ['inject', 'build_blog', 'copy_blog_files'], function () {
 });
 
 gulp.task('copy_blog_files', function() {
-  gulp.src(path.join(conf.paths.blog_site, '/**/*'))
+  return gulp.src(path.join(conf.paths.blog_site, '/**/*'))
   .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve')));
 });
 
 gulp.task('build_blog', shell.task([
   'jekyll build'
 ], {cwd: conf.paths.blog_src}));
+
+gulp.task('build_and_copy_blog', ['build_blog'], function() {
+  return gulp.start('copy_blog_files');
+});
