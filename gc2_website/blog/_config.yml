@@ -16,3 +16,5 @@ permalink: pretty
 
 # Build settings
 markdown: kramdown
+
+destination: ../blog_site
