@@ -17,6 +17,7 @@ exports.paths = {
   tmp: '.tmp',
   e2e: 'e2e',
   static_assets: 'static_assets',
+  common_sass: 'common_sass',
   blog_site: 'blog_site',
   blog_src: 'blog'
 };
