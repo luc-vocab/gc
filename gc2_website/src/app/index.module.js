@@ -6,7 +6,7 @@
   angular
     .module('gc2Website', ['ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 
                            'ngAria', 'ui.router', 'ui.bootstrap', 'toastr', 
-                           "pubnub.angular.service", "highcharts-ng", "firebase",
+                           "highcharts-ng", "firebase",
                            "yaru22.angular-timeago"]);
 
 })();

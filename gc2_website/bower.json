@@ -23,8 +23,6 @@
     "jquery.uniform": "~2.1.2",
     "metronic": "~4.5.1",
     "moment": "~2.10.6",
-    "pubnub": "~3.7.15",
-    "pubnub-angular": "~1.1.0",
     "simple-line-icons": "~2.2.3",
     "spark": "~1.0.0",
     "underscore": "~1.8.3",
