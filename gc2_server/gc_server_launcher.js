@@ -70,7 +70,7 @@ GcConfig(server_type).then(function(config_data) {
             
             logger.info("subscribing to device_id", device_id);
             
-            var influx_data = GcInfluxData(logger, client, firebase_root, device_name, owner_uid, device_id);
+            var influx_data = new GcInfluxData(logger, client, firebase_root, device_name, owner_uid, device_id);
             influx_data.subscribe_device_node();
             
             var device_monitor = GcDeviceMonitor(logger, firebase_root, device_name, owner_uid, device_id);
