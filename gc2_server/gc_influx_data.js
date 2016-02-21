@@ -12,6 +12,7 @@ var GcInfluxData = function(logger, influx_client, firebase_root, username, uid,
     this.client = influx_client;
     this.username = username;
     this.uid = uid;
+    this.device_id = device_id;
     
     var self = this;
     
@@ -20,6 +21,7 @@ var GcInfluxData = function(logger, influx_client, firebase_root, username, uid,
         var args = Array.prototype.slice.call(args);
         
         // figure out what we know about this client
+        args.unshift(self.device_id);
         args.unshift(self.username);
         args.unshift(self.uid);
         logger.log(level, args.join(' '));
