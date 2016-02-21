@@ -80,6 +80,8 @@ var GcInfluxData = function(logger, influx_client, firebase_root, username, uid,
     };
     
     this.get_current_night_intervals = function() {
+        self.log_debug("get_current_night_intervals");
+        
         var defer = q.defer();
         
         self.device_ref.once('value', function(snapshot) {
@@ -95,6 +97,8 @@ var GcInfluxData = function(logger, influx_client, firebase_root, username, uid,
                 "time_clause": "time > '" + start_date.toISOString() + "' and time < '" + end_date.toISOString() + "'",
                 "collected_duration": data.collected_duration
             }
+            
+            self.log_debug("get_current_night_intervals result ", result);
             
             defer.resolve(result);
         })
@@ -139,7 +143,11 @@ var GcInfluxData = function(logger, influx_client, firebase_root, username, uid,
                         
                         defer.resolve(total_score);
                         
+                    }, function(error) {
+                        self.log_error(error);
                     });
+                }, function(error) {
+                    self.log_error(error);
                 });
                 
             }, function(error) {

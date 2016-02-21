@@ -65,15 +65,15 @@ GcConfig(server_type).then(function(config_data) {
         devices_ref.on('child_added', function(childSnapshot, prevChildKey) {
             var device_id = childSnapshot.key();
             var data = childSnapshot.val();
-            var device_name = data.device_name;
+            var user_name = data.user_name;
             var owner_uid = data.owner_uid;
             
             logger.info("subscribing to device_id", device_id);
             
-            var influx_data = new GcInfluxData(logger, client, firebase_root, device_name, owner_uid, device_id);
+            var influx_data = new GcInfluxData(logger, client, firebase_root, user_name, owner_uid, device_id);
             influx_data.subscribe_device_node();
             
-            var device_monitor = GcDeviceMonitor(logger, firebase_root, device_name, owner_uid, device_id);
+            var device_monitor = GcDeviceMonitor(logger, firebase_root, user_name, owner_uid, device_id);
             device_monitor.subscribe_device_node();
            
         });
