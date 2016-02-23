@@ -4,33 +4,82 @@ title: "Review of Bruxism Devices on the market"
 section: blog
 ---
 
-There are a number of devices that help monitor or attempt to prevent bruxism on the market. Most of them use an [EMG](https://en.wikipedia.org/wiki/Electromyography) sensor to detect muscle activation, either on the temporal muscle or the masseter muscle. 
+There are a number of devices that help monitor or attempt to prevent bruxism on the market. Most of them use an [EMG](https://en.wikipedia.org/wiki/Electromyography) sensor to detect muscle activation, either on the temporal muscle or the masseter muscle. Most have biofeedback functionality. Some are generally available to the public while others are sold to dentists only. Here is a list of the devices that I know about. If you know of a device which we didn't list, please email us: {% include email.html %}
 
 Readily available devices
 =========================
 
-These devices should be readily available for anyone to purchase now.
+These devices should be readily available to purchase now.
 
 Grindcare v1
 ------------
 
-I purchased a Grindcare in September 2012 after coming across their website. The
+I purchased a Grindcare in September 2012 after coming across their website. Although the device is marketed towards dental professionals, I was able to get in touch with one of their salespeople and buy the device during a dental conference. The device consists of a base station with an LCD screen and buttons, and a small wearable unit worn at night, connected to the electrode. The wearable unit is inserted into the base station for charging and configuration, and worn around the neck at night.
 
+The first night, the device is configured in monitoring mode only, and subsequent nights, the biofeedback effect is turned on. The feedback consists of a small electric shock which is supposed to unconsciously discourage the clenching action of the temporal muscle. The strength of the effect is configurable, and ranges from barely perceptible, to a electric stimulus so strong that it causes the eyelid to involuntarily close. The electric stimulus is delivered through the same electrode that measures muscle activity.
+
+During the first three months of use, the Grindcare had a tremendous positive effect on my night-time bruxism. The device would provide a *grind count* at the end the night. When I first started wearing the device, I would average 140 grinds / night. This progressively moved down to 10/night. After 3 months however, my bruxism reappeared and the grind count moved back up to 100, 200 and even 300 / night. This was with the electric stimulus at the highest setting. It was as if my body had learned to ignore the electric shock and the impulse to clench my teeth was stronger than anything else. One of the frustrating aspects is that I didn't have detailed data about when the bruxism activity was happening, as the device would just give me a total *grind count* at the end of the night. I wished for more detailed data to answer questions such as:
+
+* When is the bruxism happening.
+* Does the electric stimulus actually hinder the bruxism activity.
+
+Overall the Grindcare device was of a lot of help, but in my case, I need a much stronger anti-bruxism signal to prevent night-time clenching. The Grindcare device is what gave me the idea to look into electronic bruxism detection which eventually led me to build the [Grind Control device](https://github.com/lucwastiaux/gc). For a while, even considered building a device around it, by detecting the electric shock sent to the electrode and leveraging the Grindcare's clenching detection mechanism.
+
+There are number of [Youtube Videos](https://www.youtube.com/user/GrindCare) demonstrating the Grindcare device in action. It's worth noting that the company originally behind Grindcare has been sold and a new version of the device is in development (see below).
  
 Sleepguard
 ----------
+
+The [Sleepguard](http://mysleepguard.com/) is a headband which uses a couple of electrodes to detect clenching and uses an audio biofeedback signal delivered through bone conduction. Their introduction page provides a good overview of the device's functionality: [Sleepguard Overview](http://mysleepguard.com/sg-international/how-it-works/overview/).
+
+I purchased the device around March 2011 when it became clear to me that my symptoms may be due to night-time bruxism (but I wasn't 100% sure of that at the time). From my experimentation, I could tell the device was properly detecting clenching and was emitting the biodfeedback tone. However, there were a number of problems:
+
+* Some nights, when waking up, I would discover the device was off, without a way of understanding what happened.
+* The device only gives a final *clench count*, similarly to the Grindcare device.
+* I could not be completely sure that my body was responding to the biofeedback tone.
+
+Shortly after purchasing the Sleepguard, my dentist made a new mouthguard for me which made clenching more difficult by improving contact between front teeth. When wearing this new mouthguard, the device was unable to register any clenching action (the muscle activation must have looked different when wearing this new mouthguard, maybe appearing weaker to the EMG sensors). I ended up returning the device due to this reason.
+
+The Sleepguard device obtains good reviews on Amazon and seems to be generally popular. It may be a good diagnosis device (to understand whether you are a bruxism sufferer or not). However the data it provides is not detailed enough for me, and the biofeedback signal is not strong enough do deter very serious bruxism cases in my opinion.
 
 [Interview with Lee Weinstein, inventor of the Sleepguard](http://www.tmjhope.org/lee-weinstein-interview/)
 
 StatDDS
 -------
 
+The [StatDDS Sleep and Bruxism](http://statdds.com/collections/frontpage/products/statdds-sleep-and-bruxism-device) device looks like it is marketed exclusively to dentists and is able to detect sleep bruxism and sleep apnea. The price tag makes it out of reach of individuals but there is a rental program available. I don't have experience with this device but it looks very functional. In my opinion though, serious sufferers of bruxism will want to have a lower-cost device which they can comfortable wear everyday in order to effectively monitor their bruxism over time.
+
+
 Bruxoff
 -------
 
+The bruxoff device is a diagnosis-only device which includes EMG sensors and heart-rate sensors. At the time of this writing, their website ([Bruxoff.com](http://www.bruxoff.com)) is unavailable. The product is an ipod-sized worn around the chest, with electrodes going up to the masseter muscles on each sides, as well as electrodes on the chest to measure heart rate.
+
+The inclusion of a heartrate sensor is an interesting addition which may be motivated by [recent research](http://www.ncbi.nlm.nih.gov/pubmed/23626977) indicating there is a clear correlation between heart rate and bruxism events.
+
+* A [Youtube Video](https://www.youtube.com/watch?v=2EFzQXUXDNM) of the Bruxoff device.
+* A [Medical paper](http://www.ncbi.nlm.nih.gov/pubmed/24374575) using the device to explore the relationship between heart rate and bruxism.
 
 Devices in development / research devices
 =========================================
+
+Bruxane
+-------
+
+http://www.precisionmicrodrives.com/tech-blog/2014/11/06/vibration-motors-used-to-combat-bruxism
+http://www.bruxane.com/home.html
+
+Smart Mouthguard
+----------------
+
+http://www.gizmag.com/bruxism-detecting-mouth-guard/38328/
+
+http://news.ufl.edu/archive/2015/07/smart-mouth-guard-could-detect-teeth-grinding-dehydration-concussions.html#prettyPhoto
+
+Grindcare V2
+------------
+
+http://www.grindcare.com/
 
 Grindbit
 --------
