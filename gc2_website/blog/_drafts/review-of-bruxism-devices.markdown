@@ -53,7 +53,7 @@ The [StatDDS Sleep and Bruxism](http://statdds.com/collections/frontpage/product
 Bruxoff
 -------
 
-The bruxoff device is a diagnosis-only device which includes EMG sensors and heart-rate sensors. At the time of this writing, their website ([Bruxoff.com](http://www.bruxoff.com)) is unavailable. The product is an ipod-sized worn around the chest, with electrodes going up to the masseter muscles on each sides, as well as electrodes on the chest to measure heart rate.
+The bruxoff device is a diagnosis-only device which includes EMG sensors and heart-rate sensors. At the time of this writing, their website ([Bruxoff.com](http://www.bruxoff.com)) is unavailable. The product is an ipod-sized worn around the chest, with electrodes going up to the masseter muscles on each sides, as well as electrodes on the chest to measure heart rate. The data is then analyzed using a desktop application which seems to provide extremely detailed second-by-second data.
 
 The inclusion of a heartrate sensor is an interesting addition which may be motivated by [recent research](http://www.ncbi.nlm.nih.gov/pubmed/23626977) indicating there is a clear correlation between heart rate and bruxism events.
 
@@ -80,7 +80,7 @@ This [Smart Mouthguard](http://www.gizmag.com/bruxism-detecting-mouth-guard/3832
 Grindcare V2
 ------------
 
-The new [Grindcare](Grindcare) device looks like a very compact bruxism device which presumably uses the same electric stimulus as the previous iteration of the device. The very small size and the lack of wires could make it a very convenient and comfortable to wear device. Unfortunately the website doesn't include any information about availability.
+The new [Grindcare](http://www.grindcare.com) device looks like a very compact bruxism device which presumably uses the same electric stimulus as the previous iteration of the device. The very small size and the lack of wires could make it a very convenient and comfortable to wear device. Unfortunately the website doesn't include any information about availability.
 
 Grindbit
 --------
