@@ -36,5 +36,11 @@ gulp.task('build_blog', function(callback) {
 gulp.task('build_and_copy_blog', function(callback) {
   runSequence('build_blog',
               'copy_blog_files',
+              'copy_misc_blog_files',
               callback);
 })
+
+gulp.task('copy_misc_blog_files', function() {
+  return gulp.src(path.join(conf.paths.blog_site, '/feed.xml'))
+     .pipe(gulp.dest(path.join(conf.paths.dist, '/')))
+});
