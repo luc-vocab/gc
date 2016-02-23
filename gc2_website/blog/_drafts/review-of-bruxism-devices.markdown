@@ -66,26 +66,26 @@ Devices in development / research devices
 Bruxane
 -------
 
-http://www.precisionmicrodrives.com/tech-blog/2014/11/06/vibration-motors-used-to-combat-bruxism
-http://www.bruxane.com/home.html
+The [Bruxane](http://www.bruxane.com/) (website in German only) device is a custom-built mouthguard with a built-in vibration motor. This approach is interesting and all integrated in the mouth with no wires around the face. 
+
+The website is not very explicit about the ordering process, but I can imagine it won't be cheap, given the need to custom-mold the mouthguard and fit the electronics inside. It's possible that it'll only be available through a dentist.
+
+[English-language overview](http://www.precisionmicrodrives.com/tech-blog/2014/11/06/vibration-motors-used-to-combat-bruxism)
 
 Smart Mouthguard
 ----------------
 
-http://www.gizmag.com/bruxism-detecting-mouth-guard/38328/
-
-http://news.ufl.edu/archive/2015/07/smart-mouth-guard-could-detect-teeth-grinding-dehydration-concussions.html#prettyPhoto
+This [Smart Mouthguard](http://www.gizmag.com/bruxism-detecting-mouth-guard/38328/) is a university project consisting of a mouthguard fitted with force sensors, relaying information to a smartphone app via bluetooth. [More Information](http://news.ufl.edu/archive/2015/07/smart-mouth-guard-could-detect-teeth-grinding-dehydration-concussions.html#prettyPhoto)
 
 Grindcare V2
 ------------
 
-http://www.grindcare.com/
+The new [Grindcare](Grindcare) device looks like a very compact bruxism device which presumably uses the same electric stimulus as the previous iteration of the device. The very small size and the lack of wires could make it a very convenient and comfortable to wear device. Unfortunately the website doesn't include any information about availability.
 
 Grindbit
 --------
 
-http://grindbit.launchrock.com/
-https://community.particle.io/t/im-building-a-night-time-bruxism-sleep-tracking-wearable-device/16840/6?u=dustpuppy
+The [Grindbit](http://grindbit.launchrock.com/) is a headband device in development by Peter, a member of the [Bruxhackers](https://groups.google.com/forum/#!forum/bruxhackers) mailing list. Some more information available [here](https://community.particle.io/t/im-building-a-night-time-bruxism-sleep-tracking-wearable-device/16840/6?u=dustpuppy). It uses an interesting form factor and some kind of rubberized material.
 
 
 DIY Devices
@@ -96,10 +96,12 @@ These devices are made by individuals who have shared the blueprints indicating 
 Grind Control
 -------------
 
-[Grind Control Device](https://github.com/lucwastiaux/gc)
+The [Grind Control Device](https://github.com/lucwastiaux/gc) is my original bruxism device, built in 2013, using an Arduino Micro, the Muscle Sensor v3 and a microSD card reader. [Development of Grind Control Device](/2013/04/01/development-of-grind-control-device/). Instructions on how to build are available on [Github](https://github.com/lucwastiaux/gc). A few people on the Bruxhackers mailing list have built the device for themselves.
 
 Chompr
 ------
+
+The [Chompr](http://chompr.blogspot.hk/search/label/compr-movr) device is built by Anthony, also a member of the Bruxhackers mailing list. It tracks sleep position in an attempt to find a correlation between bruxism and head position. Arduino code is available on [Github](https://github.com/anthonyadams/).
 
 Plans for Sleeptrack device
 ===========================
