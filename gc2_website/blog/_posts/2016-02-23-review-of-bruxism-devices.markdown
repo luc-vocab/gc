@@ -1,10 +1,14 @@
 ---
 layout: post
 title: "Review of Bruxism Devices on the market"
+date: 2016-02-23 00:00:00 +0000
 section: blog
+thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north_west,h_400,w_400/v1456221905/gc_website_blog/bruxism_devices/grindcare_v2.jpg
 ---
 
 There are a number of devices that help monitor or attempt to prevent bruxism on the market. Most of them use an [EMG](https://en.wikipedia.org/wiki/Electromyography) sensor to detect muscle activation, either on the temporal muscle or the masseter muscle. Most have biofeedback functionality. Some are generally available to the public while others are sold to dentists only. Here is a list of the devices that I know about. If you know of a device which we didn't list, please email us: {% include email.html %}
+
+<p style="margin-bottom: 50px;"></p>
 
 Readily available devices
 =========================
@@ -13,6 +17,8 @@ These devices should be readily available to purchase now.
 
 Grindcare v1
 ------------
+
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/grindcare.jpg" %}
 
 I purchased a Grindcare in September 2012 after coming across their website. Although the device is marketed towards dental professionals, I was able to get in touch with one of their salespeople and buy the device during a dental conference. The device consists of a base station with an LCD screen and buttons, and a small wearable unit worn at night, connected to the electrode. The wearable unit is inserted into the base station for charging and configuration, and worn around the neck at night.
 
@@ -29,6 +35,8 @@ There are number of [Youtube Videos](https://www.youtube.com/user/GrindCare) dem
  
 Sleepguard
 ----------
+
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/sleepguard_biofeedback.jpg" %}
 
 The [Sleepguard](http://mysleepguard.com/) is a headband which uses a couple of electrodes to detect clenching and uses an audio biofeedback signal delivered through bone conduction. Their introduction page provides a good overview of the device's functionality: [Sleepguard Overview](http://mysleepguard.com/sg-international/how-it-works/overview/).
 
@@ -47,11 +55,15 @@ The Sleepguard device obtains good reviews on Amazon and seems to be generally p
 StatDDS
 -------
 
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/statdds.jpg" %}
+
 The [StatDDS Sleep and Bruxism](http://statdds.com/collections/frontpage/products/statdds-sleep-and-bruxism-device) device looks like it is marketed exclusively to dentists and is able to detect sleep bruxism and sleep apnea. The price tag makes it out of reach of individuals but there is a rental program available. I don't have experience with this device but it looks very functional. In my opinion though, serious sufferers of bruxism will want to have a lower-cost device which they can comfortable wear everyday in order to effectively monitor their bruxism over time.
 
 
 Bruxoff
 -------
+
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/bruxoff.png" %}
 
 The bruxoff device is a diagnosis-only device which includes EMG sensors and heart-rate sensors. At the time of this writing, their website ([Bruxoff.com](http://www.bruxoff.com)) is unavailable. The product is an ipod-sized worn around the chest, with electrodes going up to the masseter muscles on each sides, as well as electrodes on the chest to measure heart rate. The data is then analyzed using a desktop application which seems to provide extremely detailed second-by-second data.
 
@@ -60,11 +72,15 @@ The inclusion of a heartrate sensor is an interesting addition which may be moti
 * A [Youtube Video](https://www.youtube.com/watch?v=2EFzQXUXDNM) of the Bruxoff device.
 * A [Medical paper](http://www.ncbi.nlm.nih.gov/pubmed/24374575) using the device to explore the relationship between heart rate and bruxism.
 
+<p style="margin-bottom: 50px;"></p>
+
 Devices in development / research devices
 =========================================
 
 Bruxane
 -------
+
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/bruxane.jpg" %}
 
 The [Bruxane](http://www.bruxane.com/) (website in German only) device is a custom-built mouthguard with a built-in vibration motor. This approach is interesting and all integrated in the mouth with no wires around the face. 
 
@@ -75,18 +91,25 @@ The website is not very explicit about the ordering process, but I can imagine i
 Smart Mouthguard
 ----------------
 
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/smart-mouth-guard.jpg" %}
+
 This [Smart Mouthguard](http://www.gizmag.com/bruxism-detecting-mouth-guard/38328/) is a university project consisting of a mouthguard fitted with force sensors, relaying information to a smartphone app via bluetooth. [More Information](http://news.ufl.edu/archive/2015/07/smart-mouth-guard-could-detect-teeth-grinding-dehydration-concussions.html#prettyPhoto)
 
 Grindcare V2
 ------------
+
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/grindcare_v2.jpg" %}
 
 The new [Grindcare](http://www.grindcare.com) device looks like a very compact bruxism device which presumably uses the same electric stimulus as the previous iteration of the device. The very small size and the lack of wires could make it a very convenient and comfortable to wear device. Unfortunately the website doesn't include any information about availability.
 
 Grindbit
 --------
 
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/grindbit.png" %}
+
 The [Grindbit](http://grindbit.launchrock.com/) is a headband device in development by Peter, a member of the [Bruxhackers](https://groups.google.com/forum/#!forum/bruxhackers) mailing list. Some more information available [here](https://community.particle.io/t/im-building-a-night-time-bruxism-sleep-tracking-wearable-device/16840/6?u=dustpuppy). It uses an interesting form factor and some kind of rubberized material.
 
+<p style="margin-bottom: 50px;"></p>
 
 DIY Devices
 ===========
@@ -96,12 +119,18 @@ These devices are made by individuals who have shared the blueprints indicating 
 Grind Control
 -------------
 
+{% include image.html scaling="c_scale,w_1024" image="20130601-P6010011.jpg" %}
+
 The [Grind Control Device](https://github.com/lucwastiaux/gc) is my original bruxism device, built in 2013, using an Arduino Micro, the Muscle Sensor v3 and a microSD card reader. [Development of Grind Control Device](/2013/04/01/development-of-grind-control-device/). Instructions on how to build are available on [Github](https://github.com/lucwastiaux/gc). A few people on the Bruxhackers mailing list have built the device for themselves.
 
 Chompr
 ------
 
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/chompr.jpg" %}
+
 The [Chompr](http://chompr.blogspot.hk/search/label/compr-movr) device is built by Anthony, also a member of the Bruxhackers mailing list. It tracks sleep position in an attempt to find a correlation between bruxism and head position. Arduino code is available on [Github](https://github.com/anthonyadams/).
+
+<p style="margin-bottom: 50px;"></p>
 
 Plans for Sleeptrack device
 ===========================
