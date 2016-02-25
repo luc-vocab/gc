@@ -1,6 +1,6 @@
 {
   "firebase": "gcwww-prod",
-  "public": "public",
+  "public": "dist",
   "ignore": [
     "firebase.json",
     "**/.*",

@@ -25,7 +25,7 @@ gulp.task('partials', function () {
     .pipe(gulp.dest(conf.paths.tmp + '/partials/'));
 });
 
-gulp.task('html', ['inject', 'partials'], function () {
+gulp.task('html', ['build_and_copy_blog', 'inject', 'partials'], function () {
   var partialsInjectFile = gulp.src(path.join(conf.paths.tmp, '/partials/templateCacheHtml.js'), { read: false });
   var partialsInjectOptions = {
     starttag: '<!-- inject:partials -->',
@@ -99,4 +99,4 @@ gulp.task('clean', function () {
                 path.join(conf.paths.blog_site, '/')]);
 });
 
-gulp.task('build', ['html', 'fonts', 'other', 'build_and_copy_blog']);
+gulp.task('build', ['html', 'fonts', 'other']);
