@@ -6,7 +6,7 @@ section: blog
 thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north_west,h_400,w_400/v1456221905/gc_website_blog/bruxism_devices/grindcare_v2.jpg
 ---
 
-There are a number of devices that help monitor or attempt to prevent bruxism on the market. Most of them use an [EMG](https://en.wikipedia.org/wiki/Electromyography) sensor to detect muscle activation, either on the temporal muscle or the masseter muscle. Most have biofeedback functionality. Some are generally available to the public while others are sold to dentists only. Here is a list of the devices that I know about. If you know of a device which we didn't list, please email us: {% include email.html %}
+There are a number of devices that help monitor or attempt to prevent bruxism on the market. Most of them use an [EMG](https://en.wikipedia.org/wiki/Electromyography) sensor to detect muscle activation, either on the temporal muscle or the masseter muscle. Some have biofeedback functionality while others are purely allow diagnosing of bruxism / teeth grinding. Some are generally available to the public while others are sold to dentists only. Here is a list of the devices that I know about. If you know of a device which we didn't list, please email us: {% include email.html %}
 
 <p style="margin-bottom: 50px;"></p>
 
@@ -71,6 +71,20 @@ The inclusion of a heartrate sensor is an interesting addition which may be moti
 
 * A [Youtube Video](https://www.youtube.com/watch?v=2EFzQXUXDNM) of the Bruxoff device.
 * A [Medical paper](http://www.ncbi.nlm.nih.gov/pubmed/24374575) using the device to explore the relationship between heart rate and bruxism.
+
+Bitestrip
+---------
+
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/bitestrip.jpg" %}
+
+The [Bitestrip](http://www.bitestrip.com/) is a low-cost diagnosis-only device stuck to the masseter muscle at night. At the end of the night, it shows a *bruxism severity level* indicating how severe the patient's bruxism was that night (no bruxism, mild, moderate, severe). The company calls it a *disposable bruxism test* and can apparently only be used for a single night. After that, it must be returned to the dentist. 
+
+Bruxlab
+-------
+
+{% include image.html scaling="c_scale,w_1024" image="bruxism_devices/bruxlab.jpg" %}
+
+[Bruxlab](http://www.bruxlab.com/) is mobile application which detects bruxism by identifying sounds. It uses special filtering to identify grinding sounds. I haven't tried this app but it sounds like an easy solution to try out given everyone has a smartphone. The FAQ does indicate loud fans or air conditioners may interfere with the results.
 
 <p style="margin-bottom: 50px;"></p>
 
