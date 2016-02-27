@@ -50,7 +50,7 @@
         </div>
 
         <div ng-show="realtime.realtime_ready">
-
+            
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
                     <div class="panel panel-primary">
@@ -73,6 +73,18 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <b>30s</b>
+                    Min: {{ realtime.emg_stats_1.min }}
+                    Max: {{ realtime.emg_stats_1.max }}
+                    
+                    <b>5s</b>
+                    Min: {{ realtime.emg_stats_2.min }}
+                    Max: {{ realtime.emg_stats_2.max }}                    
                 </div>
             </div>
 

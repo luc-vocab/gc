@@ -3,6 +3,7 @@
 /* globals angular */
 /* globals SmoothieChart */
 /* globals TimeSeries */
+/* globals _ */
 
 (function() {
   'use strict';
@@ -93,6 +94,8 @@
         
         
         vm.smoothie_series.append(new Date().getTime(), emg_value);
+        
+        vm.emg_stat_process_value(emg_value);
     }
     
     function init() {
@@ -120,6 +123,53 @@
                 
         vm.show_loading = true;
         vm.verify_device_setup();            
+    }
+    
+    vm.init_emg_stat_arrays = function() {
+        // longer time horizon
+        vm.emg_stat_array_1 = [];
+        vm.emg_stat_duration_1 = 30;
+        vm.emg_stats_1 = {};
+        
+        // shorter time horizon
+        vm.emg_stat_array_2 = [];
+        vm.emg_stat_duration_2 = 5;
+        vm.emg_stats_2 = {};
+        
+    }
+
+    vm.emg_stat_process_value = function(emg_value) {
+        var timestamp = new Date().getTime();
+        vm.emg_stat_add_value_to_array(emg_value, vm.emg_stat_array_1, timestamp, vm.emg_stat_duration_1);
+        vm.emg_stat_add_value_to_array(emg_value, vm.emg_stat_array_2, timestamp, vm.emg_stat_duration_2);
+        
+        vm.emg_stat_update();
+    }
+
+    vm.emg_stat_add_value_to_array = function(emg_value, stat_array, timestamp, duration) {
+        var min_timestamp = timestamp - duration * 1000;
+        
+        stat_array.push({emg: emg_value,
+                         timestamp: timestamp
+                        });
+                        
+        var first_value = stat_array[0];
+        while(first_value.timestamp < min_timestamp) {
+            // remove this value
+            stat_array.shift();
+            first_value = stat_array[0];
+        }
+        
+    }
+    
+    vm.emg_stat_update = function() {
+        // get min, avg and max for both arrays
+        vm.emg_stats_1.min = _.min(vm.emg_stat_array_1, function(item) { return item.emg; }).emg;
+        vm.emg_stats_1.max = _.max(vm.emg_stat_array_1, function(item) { return item.emg; }).emg;
+        
+        vm.emg_stats_2.min = _.min(vm.emg_stat_array_2, function(item) { return item.emg; }).emg;
+        vm.emg_stats_2.max = _.max(vm.emg_stat_array_2, function(item) { return item.emg; }).emg;        
+        
     }
     
     vm.verify_device_setup = function() {
@@ -154,6 +204,8 @@
 
     vm.enable_realtime =  function() {
         vm.show_enable_realtime_spinner = true;
+        
+        vm.init_emg_stat_arrays();
         
         var device_ref = device_manager.get_device_ref(vm.user_obj.device_id);
         device_ref.on("value", function(snapshot){
