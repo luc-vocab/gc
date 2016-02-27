@@ -1,0 +1,13 @@
+Drill Customization Report
+C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V2.brd
+Sat Feb 27 06:23:55 2016
+
+#,,Type,Size X,Size Y,ToolSize,+ Tolerance,- Tolerance,Symbol Figure,Symbol Characters,Symbol Size X,Symbol Size Y,Plating,Non-standard Drill,Quantity
+1,,Circle Drill,13.00,,,0.00,0.00,Circle,+,50.00,50.00,Plated,,109
+2,,Circle Drill,25.59,,,0.00,0.00,Circle,,23.62,23.62,Plated,,4
+3,,Circle Drill,35.00,,,0.00,0.00,Circle,,50.00,50.00,Plated,,5
+4,,Circle Drill,36.00,,,0.00,0.00,Hexagon X,,50.00,50.00,Plated,,7
+5,,Circle Drill,130.00,,,0.00,0.00,Circle,,116.00,116.00,Non-Plated,,4
+6,,Oval Slot,25.59,41.34,,0.00,0.00,Oblong Y,,25.59,41.34,Plated,,2
+7,,Oval Slot,47.24,55.12,,0.00,0.00,Oblong Y,,47.24,55.12,Plated,,2
+8,,Oval Slot,68.90,29.53,,0.00,0.00,Oblong X,,68.90,29.53,Plated,,5

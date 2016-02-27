@@ -14,6 +14,7 @@ TOOL-SELECT            NO
 OPTIMIZE_DRILLING      NO
 ENHANCED_EXCELLON      YES
 TAPE-FILE              C:/Users/Madison/Desktop/gc/Photon_Dev/Physical/SleepTrack_V2/Drill/Sleep_Track_V2.drl
+ROUTE-FILE             C:/Users/Madison/Desktop/gc/Photon_Dev/Physical/SleepTrack_V2/Drill/Sleep_Track_V2.rou
 HEADER                 none
 LEADER                 12
 CODE                   ASCII
