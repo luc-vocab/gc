@@ -158,7 +158,7 @@
         var device_ref = device_manager.get_device_ref(vm.user_obj.device_id);
         device_ref.on("value", function(snapshot){
             var data = snapshot.val();
-            $log.info("received data: ", data);
+            // $log.info("received data: ", data);
             update_emg_value(data.emg_value);
         });        
         
