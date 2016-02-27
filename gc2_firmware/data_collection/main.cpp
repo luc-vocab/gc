@@ -35,6 +35,7 @@ void serial_log(const char *func, int line, String message) {
 
 int set_config(String command) {
   gc_config.set_config(command);
+  gc_data.queue_status_battery_charge();
   return 0;
 }
 
@@ -47,9 +48,6 @@ int device_util(String command) {
     return 0;
   } else if(command=="test_tone") {
     tone(BUZZER_PIN, 600, 500);
-  } else if (command=="report_battery") {
-    DEBUG_LOG("report_util");
-    gc_data.report_battery_charge();
   }
 
   return 0;
@@ -106,6 +104,7 @@ int set_mode(String command) {
   } else if (command == "standby") {
     DEBUG_LOG("enable standby mode");
     gc_client.set_mode(GC_MODE_STANDBY);
+    gc_data.queue_status_battery_charge();
   }
 
   return 0;
