@@ -166,9 +166,15 @@
         // get min, avg and max for both arrays
         vm.emg_stats_1.min = _.min(vm.emg_stat_array_1, function(item) { return item.emg; }).emg;
         vm.emg_stats_1.max = _.max(vm.emg_stat_array_1, function(item) { return item.emg; }).emg;
+        var stats_1_sum = _.reduce(vm.emg_stat_array_1, function(memo, item){ return memo + item.emg; }, 0);
+        //$log.info("stats_1_sum:", stats_1_sum);
+        vm.emg_stats_1.avg = stats_1_sum / vm.emg_stat_array_1.length;
         
         vm.emg_stats_2.min = _.min(vm.emg_stat_array_2, function(item) { return item.emg; }).emg;
         vm.emg_stats_2.max = _.max(vm.emg_stat_array_2, function(item) { return item.emg; }).emg;        
+        var stats_2_sum = _.reduce(vm.emg_stat_array_2, function(memo, item){ return memo + item.emg; }, 0);
+        vm.emg_stats_2.avg = stats_2_sum / vm.emg_stat_array_2.length;
+
         
     }
     

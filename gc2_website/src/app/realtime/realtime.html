@@ -81,10 +81,12 @@
                     <b>30s</b>
                     Min: {{ realtime.emg_stats_1.min }}
                     Max: {{ realtime.emg_stats_1.max }}
+                    Avg: {{ realtime.emg_stats_1.avg | number:2 }}
                     
                     <b>5s</b>
                     Min: {{ realtime.emg_stats_2.min }}
-                    Max: {{ realtime.emg_stats_2.max }}                    
+                    Max: {{ realtime.emg_stats_2.max }}
+                    Avg: {{ realtime.emg_stats_2.avg | number:2 }}
                 </div>
             </div>
 
