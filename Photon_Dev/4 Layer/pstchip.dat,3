@@ -1,5 +1,5 @@
 FILE_TYPE=LIBRARY_PARTS;
-{ Using PSTWRITER 17.0.0 d001Feb-10-2016 at 22:26:52}
+{ Using PSTWRITER 17.0.0 d001Feb-10-2016 at 23:55:43}
 primitive 'CAP NP_0603RF_WV_12D_4.7UF';
   pin
     '1':
@@ -148,7 +148,7 @@ primitive '3.5MM_5POS_3_5MMJACK_SJ1-3515N';
     VALUE='SJ1-3515N';
   end_body;
 end_primitive;
-primitive 'USB-5PIN_MICROUSB_USB-5PIN';
+primitive 'USB-5PIN_U_USB_USB-5PIN';
   pin
     'VBUS':
       PIN_NUMBER='(1)';
@@ -174,7 +174,7 @@ primitive 'USB-5PIN_MICROUSB_USB-5PIN';
   end_pin;
   body
     PART_NAME='USB-5PIN';
-    JEDEC_TYPE='microusb';
+    JEDEC_TYPE='u_USB';
     VALUE='USB-5PIN';
   end_body;
 end_primitive;

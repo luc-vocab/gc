@@ -2,9 +2,9 @@
 (                                                                     )
 (    DRC Update                                                       )
 (                                                                     )
-(    Drawing          : Photon_4Layer_V2.brd                          )
-(    Software Version : 17.0P009                                      )
-(    Date/Time        : Wed Feb 10 22:16:13 2016                      )
+(    Drawing          : Sleep_Track_V2.brd                            )
+(    Software Version : 17.0P011                                      )
+(    Date/Time        : Wed Feb 17 01:57:08 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -20,10 +20,7 @@
  ========= check standalone text              0:00:00
  ========= check standalone rectangles        0:00:00
 
- ..... Total number of DRC errors  3
-
-
-WARNING: 2 dynamic shape(s) out of date; checking skipped on these elements.
+ ..... Total number of DRC errors  1
 
  ..... DRC update completed, total CPU time   0:00:00
  *************************************************************************

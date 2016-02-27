@@ -2,9 +2,9 @@
 (                                                                     )
 (    Allegro Netrev Import Logic                                      )
 (                                                                     )
-(    Drawing          : Photon_4Layer_V2.brd                          )
+(    Drawing          : Sleep_Track_V2.brd                            )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Wed Feb 10 23:56:06 2016                      )
+(    Date/Time        : Wed Feb 17 02:02:19 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -19,22 +19,28 @@ Missing symbol has error:    No
 DRC update:                  Yes
 Schematic directory:         'C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer'
 Design Directory:            '.'
-Old design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_V2.brd'
-New design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Photon_4Layer_V2.brd'
+Old design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V2.brd'
+New design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V2.brd'
 
-CmdLine: netrev -$ -i C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer -y 2 -q netrev_constraint_report.xml C:/Users/Madison/Desktop/gc/Photon_Dev/#Taaaabw07556.tmp
+CmdLine: netrev -$ -i C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer -y 2 -q netrev_constraint_report.xml C:/Users/Madison/Desktop/gc/Photon_Dev/#Taaaaab15880.tmp
 
 ------ Preparing to read pst files ------
 
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstchip.dat 
-   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstchip.dat (00:00:00.03)
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstchip.dat (00:00:00.30)
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxprt.dat 
-   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxprt.dat (00:00:00.00)
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxprt.dat (00:00:00.02)
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxnet.dat 
-   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxnet.dat (00:00:00.00)
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxnet.dat (00:00:00.04)
 
 ------ Oversights/Warnings/Errors ------
 
+
+#1   WARNING(SPMHNI-192): Device/Symbol check warning detected. [help]
+
+ERROR(SPMHNI-196): Symbol 'LGA-24L' for device 'LSM9DS1_LGA-24L_LSM9DS1' has extra pin '25'.
+
+ERROR(SPMHNI-195): Symbol 'LGA-24L' for device 'LSM9DS1_LGA-24L_LSM9DS1' is missing pin '1'.
 
 ------ Library Paths ------
 MODULEPATH =  . 
@@ -60,7 +66,7 @@ PADPATH =  .
 ------ Summary Statistics ------
 
 
-netrev run on Feb 10 23:56:06 2016
+netrev run on Feb 17 2:02:19 2016
    DESIGN NAME : 'PROTON_DEV'
    PACKAGING ON Feb  9 2015 06:09:36
 
@@ -83,8 +89,8 @@ netrev run on Feb 10 23:56:06 2016
 
  No error detected
  No oversight detected
- No warning detected
+  1 warnings detected
 
-cpu time      0:00:30
-elapsed time  0:00:00
+cpu time      0:02:22
+elapsed time  0:00:01
 

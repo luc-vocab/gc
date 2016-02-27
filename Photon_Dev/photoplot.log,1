@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : Photon_4Layer_V2.brd                          )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Fri Feb 12 22:25:34 2016                      )
+(    Date/Time        : Fri Feb 12 22:29:48 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -32,46 +32,45 @@ Results from parameter file ...
 
 
 ================================================================
-     PROCESSING FILM < BOTTOM >
-     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V2_BOTTOM.art > ...
+     PROCESSING FILM < 3V3 >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/SleepTrack_V2_3V3.art > ...
 ================================================================
 
   FILM PARAMETERS :
   ---------------------------------------------------------
-  Undefined line width                0.00
-  Mirror code                         NONE
+  Undefined line width                6.00
+  Mirror code                         X
   Rotate angle                        NONE
   Offset x:                           0.00
   Offset y:                           0.00
-  Plot negative                       NO
+  Plot negative                       YES
   Suppress unconnected internal pads  NO
   Draw holes only                     NO
 
+    WARNING: No thermal flash for padstack "PAD60CIR36D", regular pad used.
+    WARNING: No Photoplot Outline was found,
+negative shape outline will be determined by Board Outline
 
 
   APERTURES USED:
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     0.00600                                  DARK 
-  CIRCLE     0.02400                                  DARK 
-  CIRCLE     0.06000                                  DARK 
-  CIRCLE     0.13500                                  DARK 
-  RECTANGLE  0.01772     x 0.00906      89.999 NO     DARK 
-  RECTANGLE  0.01772     x 0.00906     179.999 NO     DARK 
-  RECTANGLE  0.04000     x 0.03000       0.000 NO     DARK 
-  RECTANGLE  0.04000     x 0.03000      89.999 NO     DARK 
-  RECTANGLE  0.04000     x 0.03000      90.000 NO     DARK 
-  OBLONG     0.03346     x 0.05118       0.000 NO     DARK 
-  OBLONG     0.05709     x 0.06496       0.000 NO     DARK 
-  OBLONG     0.07874     x 0.03937      89.999 NO     DARK 
-  OBLONG     0.07874     x 0.03937     179.999 NO     DARK 
+  CIRCLE     0.03000                                  CLEAR
+  CIRCLE     0.05500                                  DARK 
+  CIRCLE     0.07500                                  CLEAR
+  CIRCLE     0.16000                                  CLEAR
+  OBLONG     0.03740     x 0.05512       0.000 NO     CLEAR
+  OBLONG     0.06102     x 0.06890       0.000 NO     CLEAR
+  OBLONG     0.08465     x 0.04528      89.999 NO     CLEAR
+  OBLONG     0.08465     x 0.04528     179.999 NO     CLEAR
+  FLASH SYM  AB00                        0.000 NO     CLEAR
 
-     SleepTrack_V2_BOTTOM created with warnings
+     SleepTrack_V2_3V3 created with warnings
 
 
 ------------------------------------------------------
  SUMMARY:
-        SleepTrack_V2_BOTTOM created with warnings
+        SleepTrack_V2_3V3 created with warnings
 
  ARTWORK had warnings
