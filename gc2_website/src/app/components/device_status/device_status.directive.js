@@ -41,20 +41,29 @@
           // bind to user reference
           $log.info("user uid: ", authData.uid);
           var user_ref = firebase_auth.get_user_ref(authData.uid);
-          var user_obj = $firebaseObject(user_ref);
-          user_obj.$loaded().then(function() {
-            // check whether there is a device
-            if(user_obj.device_id) {
-              // get device ref
-              var device_ref = device_manager.get_device_ref(user_obj.device_id);
-              vm.device_obj = $firebaseObject(device_ref);
-              vm.show_device_status = true;
-              $log.info("DeviceStatusController found device, showing status");
-            }            
-          });
-
+          
+          
+          // subscribe to updates on a user's device id
+          var device_id_ref = user_ref.child('device_id');
+          vm.device_id_obj = $firebaseObject(device_id_ref);
+          
+          vm.device_id_obj.$watch(function() {
+            var device_id = vm.device_id_obj.$value;
+            if(device_id) {
+              $log.info("found device_id:", device_id);  
+              vm.subscribe_device_id(device_id);
+            }
+          })
         } 
       };
+      
+      vm.subscribe_device_id = function(device_id) {
+        // get device ref
+        var device_ref = device_manager.get_device_ref(device_id);
+        vm.device_obj = $firebaseObject(device_ref);
+        vm.show_device_status = true;
+        $log.info("DeviceStatusController found device", device_id, " showing status");        
+      }
       
       vm.init();
       
