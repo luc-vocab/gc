@@ -10,3 +10,9 @@ The objective is to create a very small IMU board which will be connected to the
 * SDO_M and SDO_A/G should be connected to **Low** so that we can use I2C addresses 0x6A / 0x1C (see schematic)
 * We only need  GND, 3.3V, SDA, SCL (these will be the 4 pins going to the connector)
 * The 4-pin connector is 1cm in width. I'm wondering whether 1cm x 1cm is possible for this board.
+
+
+Questions
+---------
+* Any concerns with having wires 20cm long on the I2C bus ? 
+* Do we need pull up / pull down resistors on the board itself ?
