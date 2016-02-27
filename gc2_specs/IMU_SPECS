@@ -1,4 +1,0 @@
-IMU extension board
-===================
-
-The idea is to create a a very small external IMU board, which will be connected via I2C to the main Sleeptrack board
