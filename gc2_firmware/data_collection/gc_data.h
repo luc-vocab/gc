@@ -9,7 +9,7 @@
 #define LSM9DS1_M	0x1E
 #define LSM9DS1_AG	0x6B
 
-#define SIMULATION_MODE false
+#define SIMULATION_MODE true
 #define REPORT_BATTERY_INTERVAL 120000 // every 2mn
 
 
@@ -20,7 +20,7 @@ public:
   void init();
   void collect_data(bool upload_requested);
   void report_battery_charge();
-  
+
   int p_battery_charge;
 
 private:
