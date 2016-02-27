@@ -1,6 +1,6 @@
 <div class="btn-group btn-group-md btn-group-solid margin-bottom-10" ng-show="device.show_device_status">
     <button class="btn" type="button" 
-        ng-if="device.device_obj.battery_charge != undefined"
+        ng-if="device.device_configured == true && device.device_obj.battery_charge != undefined"
         ng-class="{'green-meadow': device.device_obj.battery_charge >= 75,
                                                  'yellow-crusta':device.device_obj.battery_charge >= 25 && device.device_obj.battery_charge < 75,
                                                  'red':device.device_obj.battery_charge >= 0 && device.device_obj.battery_charge < 25}">
@@ -11,17 +11,18 @@
                                  'fa-battery-quarter': device.device_obj.battery_charge > 25 && device.device_obj.battery_charge <= 50,
                                  'fa-battery-empty': device.device_obj.battery_charge >= 0  && device.device_obj.battery_charge <= 25}"></i> 
     </button>
-    <button class="btn blue-madison" ng-class="{'yellow-crusta': device.device_obj.mode == undefined,
-                                                'grey-salsa': device.device_obj.mode == 'offline',
-                                                'blue-madison': device.device_obj.mode != 'offline'}" type="button">
-        <i class="fa" ng-class="{'fa-exclamation-triangle': device.device_obj.mode == undefined,
+    <button class="btn blue-madison" ng-class="{'yellow-crusta': device.device_configured == false,
+                                                'grey-salsa': device.device_configured == true && device.device_obj.mode == 'offline',
+                                                'blue-madison': device.device_configured == true && device.device_obj.mode != 'offline'}" type="button">
+        <i class="fa" ng-class="{'fa-exclamation-triangle': device.device_configured == false || device.device_obj.mode == undefined,
                                  'fa-bed': device.device_obj.mode == 'night',
                                  'fa-wifi': device.device_obj.mode == 'online',
                                  'fa-bolt': device.device_obj.mode == 'realtime',
                                  'fa-power-off': device.device_obj.mode == 'offline'}"></i> 
         
-        <span ng-if="device.device_obj.mode != undefined">{{device.device_obj.mode}}</span>
-        <span ng-if="device.device_obj.mode == undefined">Unknown</span>
+        <span ng-if="device.device_configured == false">No Device</span>
+        <span ng-if="device.device_configured == true && device.device_obj.mode != undefined">{{device.device_obj.mode}}</span>
+        <span ng-if="device.device_configured == true && device.device_obj.mode == undefined">Unknown</span>
     </button>
     <button ng-if="device.device_obj.mode == 'night'" class="btn purple-plum" type="button"><i class="fa fa-clock-o"></i> 
     {{device.device_obj.collected_duration | timefilter}}

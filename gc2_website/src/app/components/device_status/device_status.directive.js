@@ -52,16 +52,24 @@
             if(device_id) {
               $log.info("found device_id:", device_id);  
               vm.subscribe_device_id(device_id);
+            } else {
+              vm.no_device();
             }
+            vm.show_device_status = true;
           })
         } 
       };
+      
+      vm.no_device = function() {
+        $log.info("no device configured");
+        vm.device_configured = false;
+      }
       
       vm.subscribe_device_id = function(device_id) {
         // get device ref
         var device_ref = device_manager.get_device_ref(device_id);
         vm.device_obj = $firebaseObject(device_ref);
-        vm.show_device_status = true;
+        vm.device_configured = true;
         $log.info("DeviceStatusController found device", device_id, " showing status");        
       }
       
