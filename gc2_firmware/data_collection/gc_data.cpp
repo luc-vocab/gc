@@ -2,7 +2,7 @@
 #include "common.h"
 
 GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client),
-p_battery_charge(0), m_last_report_battery_time(-REPORT_BATTERY_INTERVAL) {
+p_battery_charge(0), m_last_report_battery_time(-REPORT_BATTERY_INTERVAL), m_report_status_battery(false) {
 }
 
 void GcData::init() {
@@ -85,10 +85,19 @@ void GcData::report_battery_charge() {
 }
 
 bool GcData::need_report_battery_charge() {
+  if(m_report_status_battery) {
+    // status / battery report request
+    m_report_status_battery = false;
+    return true;
+  }
   if (millis() - m_last_report_battery_time > REPORT_BATTERY_INTERVAL) {
     return true;
   }
   return false;
+}
+
+void GcData::queue_status_battery_charge() {
+  m_report_status_battery = true;
 }
 
 void GcData::collect_data(bool upload_requested) {
