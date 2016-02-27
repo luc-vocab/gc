@@ -407,7 +407,6 @@
                         try {
                         user_ref.update(update_data, function(error) {
                             if (error) {
-                                console.error("error updating", error);
                                 $log.error("Could not update user ref: ", error);
                                 defer.reject(error);
                             } else {
