@@ -73,7 +73,7 @@ GcConfig(server_type).then(function(config_data) {
             var influx_data = new GcInfluxData(logger, client, firebase_root, user_name, owner_uid, device_id);
             influx_data.subscribe_device_node();
             
-            var device_monitor = GcDeviceMonitor(logger, firebase_root, user_name, owner_uid, device_id);
+            var device_monitor = new GcDeviceMonitor(logger, firebase_root, user_name, owner_uid, device_id);
             device_monitor.subscribe_device_node();
            
         });
