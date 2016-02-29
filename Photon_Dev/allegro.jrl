@@ -1,121 +1,16 @@
-\t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:01)     Journal start - Sat Feb 27 06:23:21 2016
-\t (00:00:01)         Host=MADISON-PC User=Madison Pid=5256 CPUs=4
-\t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Sleep_Track_V2.brd
-\t (00:00:01) 
-\t (00:00:03) Opening existing design...
-\d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V2.brd
-\i (00:00:03) trapsize 784
-\i (00:00:03) trapsize 769
-\i (00:00:03) trapsize 786
-\i (00:00:03) trapsize 802
-\i (00:00:03) trapsize 802
-\i (00:00:04) generaledit 
-\i (00:00:11) ncdrill customization 
-\i (00:00:11) generaledit 
-\i (00:00:18) setwindow form.nc_drillcustomization
-\i (00:00:18) FORM nc_drillcustomization report  
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:19) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:20) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\w (00:00:21) WARNING(SPMHUT-48): Scaled value has been rounded off.
-\i (00:00:23) setwindow form.nc_drillreport
-\i (00:00:23) FORM nc_drillreport drillgrid cell 13,8 
-\i (00:00:29) FORM nc_drillreport close  
-\i (00:00:29) setwindow pcb
-\i (00:00:29) generaledit 
-\i (00:00:35) setwindow form.nc_drillcustomization
-\i (00:00:35) FORM nc_drillcustomization writefile  
-\i (00:00:55) FORM nc_drillcustomization validate  
-\i (00:01:00) FORM nc_drillcustomization auto_symbols  
-\i (00:01:03) fillin no 
-\i (00:01:06) FORM nc_drillcustomization done  
-\i (00:01:11) setwindow pcb
-\i (00:01:11) ncdrill legend 
-   (00:01:11) Loading mfg.cxt 
-\i (00:01:20) setwindow form.nc_drilllegend
-\i (00:01:20) FORM nc_drilllegend cancel  
-   (00:01:20) Loading axlcore.cxt 
-\i (00:01:20) setwindow pcb
-\i (00:01:20) generaledit 
-\i (00:01:25) ncdrill param 
-\i (00:01:25) generaledit 
-\i (00:01:35) setwindow form.nc_parameters
-\i (00:01:35) FORM nc_parameters auto_tool_select NO 
-\i (00:01:36) FORM nc_parameters auto_tool_select YES 
-\i (00:01:43) FORM nc_parameters done  
-\i (00:01:53) setwindow pcb
-\i (00:01:53) nctape_full 
-\i (00:01:59) setwindow form.nc_drill
-\i (00:01:59) FORM nc_drill scale 1.00 
-\i (00:01:59) FORM nc_drill execute  
-\w (00:01:59) WARNING(SPMHMF-269): Design contains slot holes that can not be drilled. They can be processed by NC Route instead.
-\t (00:01:59) Starting Generating NC Drill...
-\i (00:02:17) FORM nc_drill viewlog  
-\i (00:03:34) FORM nc_drill auto_tool_select NO 
-\i (00:03:40) FORM nc_drill execute  
-\w (00:03:40) WARNING(SPMHMF-269): Design contains slot holes that can not be drilled. They can be processed by NC Route instead.
-\t (00:03:40) Starting Generating NC Drill...
-\i (00:04:27) setwindow text
-\i (00:04:27) close 
-\i (00:04:28) setwindow form.nc_drill
-\i (00:04:28) FORM nc_drill cancel  
-\i (00:04:28) setwindow pcb
-\i (00:04:28) generaledit 
-\i (00:04:33) ncroute 
-\i (00:04:36) setwindow form.nc_route
-\i (00:04:36) FORM nc_route parameters  
-\i (00:04:40) setwindow form.nc_parameters
-\i (00:04:40) FORM nc_parameters browse  
-\i (00:05:09) fillin "C:\Users\Madison\Desktop\gc\Photon_Dev\Physical\SleepTrack_V2\Drill\nc_routebits_auto.txt"
-\i (00:05:16) fillin confirm
-\e (00:05:16) ERROR(SPMHMF-228): Error reading the NC parameters file.
-\i (00:05:23) FORM nc_parameters done  
-\i (00:05:25) setwindow form.nc_route
-\i (00:05:25) FORM nc_route parameters  
-\i (00:05:32) FORM nc_route browse  
-\i (00:05:37) fillin "C:\Users\Madison\Desktop\gc\Photon_Dev\Physical\SleepTrack_V2\Drill\Sleep_Track_V2.rou"
-\i (00:05:38) FORM nc_route execute  
-\t (00:05:38) Starting NC Route...
-\i (00:05:41) setwindow form.nc_parameters
-\i (00:05:41) FORM nc_parameters cancel  
-\i (00:58:05) setwindow form.nc_route
-\i (00:58:05) FORM nc_route close  
-\i (00:58:05) setwindow pcb
-\i (00:58:05) generaledit 
-\i (00:58:06) exit 
-\e (00:58:06) Do you want to save the changes you made to Sleep_Track_V2.brd?
-\i (00:58:07) fillin no 
-\t (00:58:08)     Journal end - Sat Feb 27 07:21:28 2016
+\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Sun Feb 28 22:35:03 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=1680 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe
+\t (00:00:00) 
+\t (00:00:02) Opening existing design...
+\d (00:00:02) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V2.brd
+\i (00:00:02) trapsize 784
+\i (00:00:02) trapsize 769
+\i (00:00:02) trapsize 786
+\i (00:00:02) trapsize 802
+\i (00:00:02) trapsize 802
+\i (00:00:03) etchedit 
+\i (00:00:05) new 
+\i (00:00:53) newdrawfillin "IMU.brd" "Board (Wizard)"
+\t (00:00:53)     Journal end - Sun Feb 28 22:35:57 2016
