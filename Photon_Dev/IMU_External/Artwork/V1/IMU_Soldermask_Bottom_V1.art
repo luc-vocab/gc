@@ -1,0 +1,40 @@
+G04 ================== begin FILE IDENTIFICATION RECORD ==================*
+G04 Layout Name:  C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd*
+G04 Film Name:    IMU_Soldermask_Bottom_V1*
+G04 File Format:  Gerber RS274X*
+G04 File Origin:  Cadence Allegro 17.0-P009*
+G04 Origin Date:  Tue Mar 01 05:51:37 2016*
+G04 *
+G04 Layer:  VIA CLASS/SOLDERMASK_BOTTOM*
+G04 Layer:  PIN/SOLDERMASK_BOTTOM*
+G04 Layer:  PACKAGE GEOMETRY/SOLDERMASK_BOTTOM*
+G04 Layer:  DRC ERROR CLASS/SOLDERMASK_BOTTOM*
+G04 Layer:  BOARD GEOMETRY/SOLDERMASK_BOTTOM*
+G04 *
+G04 Offset:    (0.00 0.00)*
+G04 Mirror:    No*
+G04 Mode:      Positive*
+G04 Rotation:  0*
+G04 FullContactRelief:  No*
+G04 UndefLineWidth:     6.00*
+G04 ================== end FILE IDENTIFICATION RECORD ====================*
+%FSLAX25Y25*MOIN*%
+%IR0*IPPOS*OFA0.00000B0.00000*MIA0B0*SFA1.00000B1.00000*%
+%ADD10C,.044*%
+%ADD11C,.075*%
+%LPD*%
+G75*
+G54D10*
+X-12550Y-9125D03*
+X-8762Y-9038D03*
+X5925Y-15950D03*
+X-2300Y-7125D03*
+X-2750Y12000D03*
+X-1350Y16750D03*
+X-2355Y-1305D03*
+G54D11*
+X13850Y-14850D03*
+Y-4850D03*
+Y5150D03*
+Y15150D03*
+M02*
