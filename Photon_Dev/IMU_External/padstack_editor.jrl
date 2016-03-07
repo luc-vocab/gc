@@ -1,0 +1,15 @@
+\t (00:00:00) padstack_editor 17.0 P003 (v17-0-118C) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Mon Mar 07 07:15:45 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=24224 CPUs=4
+\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaaac20676.tmp -pname VIA -data C:/Users/Madison/AppData/Local/Temp/#Taaaaae20676.tmp
+\t (00:00:00) 
+\d (00:00:11) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:00:17) QtSignal GuidedTabsParent GuidedTabs currentChanged Options
+\d (00:00:18) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:00:19) QtSignal GuidedTabsParent GuidedTabs currentChanged "Design Layers"
+\d (00:00:19) QtSignal GuidedTabsParent GuidedTabs currentChanged "Drill Offset"
+\d (00:00:20) QtSignal GuidedTabsParent GuidedTabs currentChanged "Drill Symbol"
+\d (00:00:20) QtSignal GuidedTabsParent GuidedTabs currentChanged "Drill Offset"
+\d (00:00:21) QtSignal GuidedTabsParent GuidedTabs currentChanged "Design Layers"
+\d (00:00:22) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\t (00:00:24)     Journal end - Mon Mar 07 07:16:08 2016

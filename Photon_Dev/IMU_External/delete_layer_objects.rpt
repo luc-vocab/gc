@@ -1,0 +1,17 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Database Objects Preventing Layer From Being Deleted             )
+(                                                                     )
+(    Drawing          : IMU.brd                                       )
+(    Software Version : 17.0P011                                      )
+(    Date/Time        : Mon Mar 07 07:44:30 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Layer being deleted: ETCH/GND
+
+    (-199.99 -199.99) DYNAMIC SHAPE: Gnd, Boundary/Gnd 
+    (-199.99 -199.99) SHAPE(auto-generated): Gnd, Etch/Gnd 
+
+... 2 total objects preventing delete layer

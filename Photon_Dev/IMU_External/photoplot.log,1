@@ -1,0 +1,350 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : IMU.brd                                       )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Mon Mar 07 07:31:06 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ ******************************************
+ WARNING: DRC OUT OF DATE on this layout.
+ ******************************************
+
+ ---- Photoplot outline rectangle not found; using drawing extents.
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          INCHES
+    FILM-SIZE             2400000 1600000
+    FORMAT                2.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  YES
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+================================================================
+     PROCESSING FILM < TOP >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_TOP_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  RECTANGLE  0.01772     x 0.00906       0.000 NO     DARK 
+  RECTANGLE  0.01772     x 0.00906      90.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.03150       0.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.03150      90.000 NO     DARK 
+
+     IMU_TOP_V1 created with warnings
+
+
+================================================================
+     PROCESSING FILM < GND >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_GND_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       YES
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: No thermal flash for padstack "PAD60CIR36D", regular pad used.
+    WARNING: No Photoplot Outline was found,
+negative shape outline will be determined by Board Outline
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.03000                                  CLEAR
+  CIRCLE     0.05500                                  DARK 
+  CIRCLE     0.07500                                  CLEAR
+  FLASH SYM  AB00                        0.000 NO     CLEAR
+
+     IMU_GND_V1 created with warnings
+
+
+================================================================
+     PROCESSING FILM < 3V3 >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_3V3_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       YES
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: No thermal flash for padstack "PAD60CIR36D", regular pad used.
+    WARNING: No Photoplot Outline was found,
+negative shape outline will be determined by Board Outline
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.03000                                  CLEAR
+  CIRCLE     0.05500                                  DARK 
+  CIRCLE     0.07500                                  CLEAR
+  FLASH SYM  AB00                        0.000 NO     CLEAR
+
+     IMU_3V3_V1 created with warnings
+
+
+================================================================
+     PROCESSING FILM < BOTTOM >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_BOTTOM_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+
+     IMU_BOTTOM_V1 created with warnings
+
+
+================================================================
+     PROCESSING FILM < Board_Outline >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_Board_Outline_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+
+     IMU_Board_Outline_V1 created with warnings
+
+
+================================================================
+     PROCESSING FILM < Soldermask_Top >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_Soldermask_Top_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.04400                                  DARK 
+  CIRCLE     0.07500                                  DARK 
+  RECTANGLE  0.02372     x 0.01506       0.000 NO     DARK 
+  RECTANGLE  0.02372     x 0.01506      90.000 NO     DARK 
+  RECTANGLE  0.02756     x 0.03543       0.000 NO     DARK 
+  RECTANGLE  0.02756     x 0.03543      90.000 NO     DARK 
+
+     IMU_Soldermask_Top_V1 created with warnings
+
+
+================================================================
+     PROCESSING FILM < Soldermask_Bottom >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_Soldermask_Bottom_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.04400                                  DARK 
+  CIRCLE     0.07500                                  DARK 
+
+     IMU_Soldermask_Bottom_V1 created with warnings
+
+
+================================================================
+     PROCESSING FILM < Silkscreen_Top >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_Silkscreen_Top_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: 0 width line found at (-162.62 -143.05)
+           ... using undefined line width of 6.00
+
+    WARNING: Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 6.00
+
+    WARNING: text composed 0 width line found at (62.50 -120.50)
+           ... using undefined line width of 6.00
+
+    WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 6.00
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+
+     IMU_Silkscreen_Top_V1 created with warnings
+
+
+================================================================
+     PROCESSING FILM < Silkscreen_Bottom >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_Silkscreen_Bottom_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:  NONE
+     IMU_Silkscreen_Bottom_V1 created with warnings
+
+
+================================================================
+     PROCESSING FILM < Assembly_Top >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_Assembly_Top_V1.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+
+     IMU_Assembly_Top_V1 created with warnings
+
+
+------------------------------------------------------
+ SUMMARY:
+        IMU_TOP_V1 created with warnings
+        IMU_GND_V1 created with warnings
+        IMU_3V3_V1 created with warnings
+        IMU_BOTTOM_V1 created with warnings
+        IMU_Board_Outline_V1 created with warnings
+        IMU_Soldermask_Top_V1 created with warnings
+        IMU_Soldermask_Bottom_V1 created with warnings
+        IMU_Silkscreen_Top_V1 created with warnings
+        IMU_Silkscreen_Bottom_V1 created with warnings
+        IMU_Assembly_Top_V1 created with warnings
+
+ ARTWORK had warnings

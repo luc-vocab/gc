@@ -1,0 +1,15 @@
+\t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Mon Mar 07 07:16:24 2016
+\t (00:00:01)         Host=MADISON-PC User=Madison Pid=22040 CPUs=4
+\t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Sleep_Track_V2.brd
+\t (00:00:01) 
+\t (00:00:03) Opening existing design...
+\d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V2.brd
+\i (00:00:03) trapsize 784
+\i (00:00:03) trapsize 769
+\i (00:00:03) trapsize 786
+\i (00:00:03) trapsize 802
+\i (00:00:03) trapsize 802
+\i (00:00:04) etchedit 
+\i (00:28:48) exit 
+\t (00:28:48)     Journal end - Mon Mar 07 07:45:11 2016
