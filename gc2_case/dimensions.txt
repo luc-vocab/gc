@@ -1,0 +1,2 @@
+outer dimensions are 50.8mm * 50.8mm with rounded corners (2.5mm)
+hole dimensions are 2.946mm diameter

@@ -1,0 +1,96 @@
+<header class="page-header">
+    <nav class="navbar mega-menu" role="navigation">
+        <div class="container-fluid">
+
+            <div class="clearfix navbar-fixed-top">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="toggle-icon">
+                <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </span>
+                </button>
+                <!-- End Toggle Button -->
+                <!-- BEGIN LOGO -->
+                <a id="index" class="page-logo" href="index.html">
+                    <img src="https://res.cloudinary.com/photozzap/image/upload/c_scale,w_300/v1446560646/gc_website_assets/sleeptrack_slim_logo.png" alt="Logo">
+                </a>
+                <!-- END LOGO -->
+
+                <!-- BEGIN TOPBAR ACTIONS -->
+                <div class="topbar-actions device-status">
+                    <devicestatus></devicestatus>
+                </div>
+                <!-- END TOPBAR ACTIONS -->
+            </div>
+
+            <!-- BEGIN HEADER MENU -->
+            <div class="nav-collapse collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <!--<li class="dropdown dropdown-fw active open selected">-->
+                    <li class="dropdown dropdown-fw">
+                        <a href="/" class="text-uppercase">
+                            <i class="fa fa-home"></i>Home</a>
+                    </li>
+                    <li class="dropdown dropdown-fw" >
+                        <a href="/blog" class="text-uppercase">
+                            <i class="fa fa-rss"></i>Blog</a>
+                    </li>                    
+                    <li class="dropdown dropdown-fw" ng-class="{active:   vm.current_tab == 'control',
+                                                                open:     vm.current_tab == 'control',
+                                                                selected: vm.current_tab == 'control'}">
+                        <a href="#/control" class="text-uppercase">
+                            <i class="fa fa-power-off"></i>Control</a>
+                        <ul class="dropdown-menu dropdown-menu-fw">
+                            <li ng-class="{active: $state.includes('control-realtime')}">
+                                <a href="#/control/realtime">
+                                    <i class="fa fa-bolt"></i> Realtime Mode
+                                </a>
+                            </li>
+
+                            <li ng-class="{active: $state.includes('control-night')}">
+                                <a href="#/control/night">
+                                    <i class="fa fa-bed"></i> Night Mode</a>
+                            </li>
+                        </ul>                            
+
+                    </li>
+                    <li class="dropdown dropdown-fw" ng-class="{active:   vm.current_tab == 'data',
+                                                                open:     vm.current_tab == 'data',
+                                                                selected: vm.current_tab == 'data'}">
+                        <a href="#/data" class="text-uppercase">
+                            <i class="fa fa-bar-chart"></i>Data</a>
+                            
+                        <ul class="dropdown-menu dropdown-menu-fw">
+                            <li ng-class="{active: $state.includes('data-latest')}">
+                                <a href="#/data/latest">
+                                    <i class="fa fa-bolt"></i> Latest
+                                </a>
+                            </li>
+                        </ul>                                              
+                            
+
+                    </li>
+                    <li class="dropdown dropdown-fw" ng-class="{active:   $state.includes('settings'),
+                                                                open:     $state.includes('settings'),
+                                                                selected: $state.includes('settings')}">
+                        <a href="#/settings" class="text-uppercase">
+                            <i class="fa fa-cog"></i>Settings</a>
+                        <ul class="dropdown-menu dropdown-menu-fw">
+                            <li class="active">
+                                <a href="index.html">
+                                    <i class="fa fa-cog"></i>Default Settings
+                                </a>
+                            </li>
+                        </ul>                            
+
+                    </li>
+
+                </ul>
+            </div>
+            <!-- END HEADER MENU -->
+        </div>
+    </nav>
+</header>

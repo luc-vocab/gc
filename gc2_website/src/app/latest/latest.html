@@ -1,0 +1,77 @@
+<div class="container-fluid">
+    <div class="page-content data-latest">
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat2 bordered">
+                    <div class="display">
+                        <div class="number">
+                            <h3 class="font-green-sharp">
+                                {{latest.latest_data_obj.start_timestamp | date : 'H:mm' }}
+                            </h3>
+                            <small>NIGHT BEGIN</small>
+                        </div>
+                        <i class="fa fa-clock-o pull-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat2 bordered">
+                    <div class="display">
+                        <div class="number">
+                            <h3 class="font-red-haze">
+                                {{latest.latest_data_obj.end_timestamp | date : 'H:mm' }}
+                            </h3>
+                            <small>NIGHT END</small>
+                        </div>
+                        <i class="fa fa-clock-o pull-right"></i>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat2 bordered">
+                    <div class="display">
+                        <div class="number">
+                            <h3 class="font-blue-sharp">
+                                {{latest.latest_data_obj.total_score / 1000 | number:0 }}
+                            </h3>
+                            <small>BRUXISM SCORE</small>
+                        </div>
+                        <i class="fa fa-bar-chart pull-right"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="portlet light bordered">
+                    <div class="portlet-title">
+                        <div class="caption font-green">
+                            <span class="caption-subject bold uppercase">EMG</span>
+                            <span class="caption-helper">Latest muscle activity. Last update {{latest.latest_data_obj.last_update_time | timeAgo }}</span>
+                        </div>
+                        <div class="actions">
+                            <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                                <i class="icon-cloud-upload"></i>
+                            </a>
+                            <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                                <i class="icon-wrench"></i>
+                            </a>
+                            <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                                <i class="icon-trash"></i>
+                            </a>
+                            <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#" data-original-title="" title=""> </a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div id="container-emg-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>

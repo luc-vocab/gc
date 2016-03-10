@@ -1,0 +1,129 @@
+<div class="container-fluid">
+    <div class="page-content">
+
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-2 col-md-12">
+                <h1>Settings</h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
+                <h2>Particle Access Token</h2>
+                <p>Allows access to your Sleeptrack device. 
+                   Can be found on <a href="https://build.particle.io/">build.particle.io</a> under Settings.</p>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="access_token">Particle Access Token</label>
+                        <input type="text" class="form-control" id="access_token" placeholder="Access Token" ng-model="settings.user_obj.particle_access_token" style="width: 400px;">
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="settings.set_token()">Set</button>
+                </form>
+                <p><span ng-show="settings.show_status.login_verifying">Verifying...</span>
+                    <span ng-show="settings.show_status.login_ok">Login OK</span>
+                    <span ng-show="settings.show_status.login_error">Login Error: {{settings.show_status.login_error_text}}</span>
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
+                <h2>Servers</h2>
+                <p>Your SleepTrack device will connect to one of these servers to log data.
+                Pick the closest geographical location.
+                </p>
+                
+                <div class="panel panel-info mt-element-ribbon" style="margin-bottom: 10px;" ng-repeat="(server_key, server_data) in settings.servers_obj"
+                     ng-click="settings.select_server(server_key)">
+                    <div class="ribbon ribbon-vertical-right ribbon-shadow ribbon-color-info uppercase blue"
+                         ng-show="settings.user_obj.server === server_key">
+                        <i class="fa fa-check"></i> Selected
+                    </div>                    
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>{{server_data.hostname}}</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body"> 
+                        Online: <i class="fa fa-check text-success" ng-show="server_data.online"></i>
+                                <i class="fa fa-times text-danger" ng-show="! server_data.online"></i>
+                        Location: {{server_data.location}}
+                    </div>
+
+                </div>                                
+                
+                
+            </div>            
+
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
+                <h2>Devices</h2>
+                <div ng-show="settings.show_status.listing_devices" class="alert" ng-class="settings.show_status.listing_device_class" role="alert">
+                    <span ng-show="settings.show_status.listing_devices">Listing Devices...</span>
+                    <strong ng-show="settings.show_status.listing_devices_ok">OK</strong>
+                    <strong ng-show="settings.show_status.listing_devices_error">Error</strong>
+                    <span ng-show="settings.show_status.listing_devices_error">{{show_status.listing_devices_error_text}}</span>
+                    <button class="btn blue pull-right" ng-click="settings.list_devices()"><i class="fa fa-refresh"></i>Refresh <i class="fa fa-cog fa-spin ng-hide" ng-show="settings.show_status.refresh_spinner"></i></button>
+                </div>
+                <p>
+                    Click to select your device below
+                </p>
+                <div class="panel panel-info mt-element-ribbon" style="margin-bottom: 10px;" ng-show="settings.show_status.listing_devices_ok" ng-repeat="device in settings.devices"
+                     ng-click="settings.select_device($index)">
+                    <div class="ribbon ribbon-vertical-right ribbon-shadow ribbon-color-info uppercase blue"
+                         ng-show="settings.selected_device.name === device.name">
+                        <i class="fa fa-check"></i> Selected
+                    </div>                    
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Device: <strong>{{device.name}}</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body"> 
+                        Online: <i class="fa fa-check text-success" ng-show="device.connected"></i>
+                                <i class="fa fa-times text-danger" ng-show="! device.connected"></i>
+                        SleepTrack firmware: 
+                            <span ng-show="! device.running_gc_firmware"><i class="fa fa-times text-danger"></i> <i>Cannot select device</i></span>
+                            <span ng-show="device.running_gc_firmware"><strong>{{device.gc_firmware_version}}</strong><i class="fa fa-check text-success"></i></span>
+                    </div>
+
+                </div>                
+
+            </div>
+            
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
+                <h2>User</h2>
+                <p>Your personal user settings</p>
+                <p>This user name will appear in your InfluxDB data.</p>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="user_name">Particle Access Token</label>
+                        <input type="text" class="form-control" id="user_name" placeholder="User Name" ng-model="settings.user_obj.user_name">
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="settings.set_username()">Set</button>
+                </form>
+                
+                
+            </div>            
+            
+        </div>
+        
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-lg-4 col-lg-offset-7 col-md-6 col-md-offset-4 col-sm-10 col-xs-10">
+                <div class="alert alert-danger" ng-show="settings.save_error">
+                    <strong>Error:</strong> couldn't save settings: {{settings.save_error_message}}
+                </div>
+            </div>            
+            <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2">
+                <button type="submit" class="btn blue pull-right" ng-click="settings.save_settings()" ng-disabled="! settings.save_button_enabled">
+                    <i class="fa fa-save"></i>Save <i class="fa fa-spin fa-cog" ng-show="settings.save_in_progress"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

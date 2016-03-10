@@ -1,0 +1,31 @@
+
+.about-text {
+
+
+    .about-quote > h3 {
+        border-color: #ccc;
+        border-left: 3px solid #ccc;
+        font-style: italic;
+        line-height: 1.3em;
+        padding-left: 1em;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+    
+    li > p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    
+    i.fa {
+        font-size: 125%;
+        color: #525e64;
+        margin-bottom: 3px;
+        margin-right: 3px;
+    }
+    
+}
+

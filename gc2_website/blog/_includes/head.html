@@ -1,0 +1,32 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+  <link href="//fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css" />
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/photozzap/image/upload/c_scale,w_144/v1449374700/gc_website_assets/sleeptrack_square_head_only.png" />
+
+
+  <!-- build:css(.tmp/serve) /styles/blog.css -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/font-awesome.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/animate.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/components-md.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/plugins-md.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/layout.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  
+  {% include google_analytics.html %}  
+</head>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="page-header-fixed page-sidebar-closed-hide-logo page-md">
+
+    
+
+    <div class="wrapper">
+      {% include metronic_header.html %}
+      <div class="container-fluid">
+        <div class="page-content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    
+    {% include javascripts.html %}
+    {% include mailmunch_code.html %}
+  </body>
+
+</html>

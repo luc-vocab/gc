@@ -1,0 +1,94 @@
+<header class="page-header">
+    <nav role="navigation" class="navbar mega-menu">
+        <div class="container-fluid">
+            <div class="clearfix navbar-fixed-top">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <button data-target=".navbar-responsive-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="toggle-icon">
+                                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </span>
+                </button>
+                <!-- End Toggle Button -->
+                <!-- BEGIN LOGO -->
+                <a href="index.html" class="page-logo" id="index">
+                    <img src="https://res.cloudinary.com/photozzap/image/upload/c_scale,w_300/v1446560646/gc_website_assets/sleeptrack_slim_logo.png" alt="Logo"> </a>
+                <!-- END LOGO -->
+
+            </div>
+            <!-- BEGIN HEADER MENU -->
+            <div class="nav-collapse collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    {% if page.section == "home" %}
+                    <li class="dropdown dropdown-fw active open selected" >
+                    {% else %}
+                    <li class="dropdown dropdown-fw" >
+                    {% endif %}
+                        <a class="text-uppercase" href="/">
+                            <i class="fa fa-home"></i> Home</a>
+                        <ul class="dropdown-menu dropdown-menu-fw">
+                            {% if page.url == "/" %}
+                            <li class="active">
+                            {% else %}
+                            <li>
+                            {% endif %}
+                                <a href="/">
+                                    <i class="fa fa-info-circle"></i> Description </a>
+                            </li>
+                            {% if page.url == "/contact/" %}
+                            <li class="active">
+                            {% else %}
+                            <li>
+                            {% endif %}
+                                <a href="/contact">
+                                    <i class="fa fa-envelope"></i> Contact </a>
+                            </li>                            
+                        </ul>
+                    </li>
+
+                    {% if page.section == "blog" %}
+                    <li class="dropdown dropdown-fw active open selected" >
+                    {% else %}
+                    <li class="dropdown dropdown-fw" >
+                    {% endif %}
+                        <a href="/blog" class="text-uppercase">
+                            <i class="fa fa-rss"></i>Blog</a>
+                        <ul class="dropdown-menu dropdown-menu-fw">
+                            {% if page.url == "/blog.html" %}
+                            <li class="active">
+                            {% else %}
+                            <li>
+                            {% endif %}
+                                <a href="/blog">
+                                    <i class="fa fa-bookmark"></i> Blog Index </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown dropdown-fw" >
+                        <a href="/app#/control" class="text-uppercase">
+                            <i class="fa fa-power-off"></i>Control</a>
+                          
+
+                    </li>
+                    <li class="dropdown dropdown-fw" >
+                        <a href="/app#/data" class="text-uppercase">
+                            <i class="fa fa-bar-chart"></i>Data</a>
+                            
+
+                    </li>
+                    <li class="dropdown dropdown-fw" >
+                        <a href="/app#/settings" class="text-uppercase">
+                            <i class="fa fa-cog"></i>Settings</a>
+
+                    </li>                    
+                    
+                </ul>
+            </div>
+            <!-- END HEADER MENU -->
+        </div>
+        <!--/container-->
+    </nav>
+</header>
