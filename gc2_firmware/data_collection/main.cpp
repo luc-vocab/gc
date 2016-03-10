@@ -17,11 +17,13 @@ GcConfig gc_config(gc_client);
 int firmware_version = FIRMWARE_VERSION;
 
 #define DATA_TRANSFER_DELAY 500
-#define COLLECT_DATA_FREQUENCY 100      // 250ms
+#define REALTIME_FREQUENCY 300
+#define COLLECT_DATA_FREQUENCY 100
 
 bool serial_debug = true;
 bool pending_night_mode = false;
 bool upload_requested = false;
+int frequency = COLLECT_DATA_FREQUENCY;
 
 // declare functions
 int set_device_id(String command);
@@ -92,6 +94,7 @@ void setup() {
 
 int set_mode(String command) {
   if(command == "batch") {
+    frequency = COLLECT_DATA_FREQUENCY;
     DEBUG_LOG("enable batch mode");
     if(MANAGE_WIFI) {
       DEBUG_LOG("turning off wifi");
@@ -100,6 +103,7 @@ int set_mode(String command) {
     pending_night_mode = true;
   } else if (command == "realtime" ) {
     DEBUG_LOG("enable realtime mode");
+    frequency = REALTIME_FREQUENCY;
     gc_client.set_mode(GC_MODE_REALTIME);
   } else if (command == "standby") {
     DEBUG_LOG("enable standby mode");
@@ -123,7 +127,7 @@ void loop() {
   }
   gc_data.collect_data(upload_requested);
   upload_requested = false;
-  delay(COLLECT_DATA_FREQUENCY);
+  delay(frequency);
   if (pending_night_mode) {
     if(digitalRead(BUTTON1_PIN) == LOW) {
       DEBUG_LOG("button1 low, starting batch mode");

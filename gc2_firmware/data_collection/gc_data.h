@@ -9,7 +9,7 @@
 #define LSM9DS1_M	0x1E
 #define LSM9DS1_AG	0x6B
 
-#define SIMULATION_MODE true
+#define SIMULATION_MODE false
 #define REPORT_BATTERY_INTERVAL 120000 // every 2mn
 
 
