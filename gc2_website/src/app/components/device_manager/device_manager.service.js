@@ -186,7 +186,8 @@
                    defer.reject({
                        message: "Could not check battery level",
                        api_error: err.message,
-                       device_name: device_name
+                       device_name: device_name,
+                       retry: true
                    });
                } else {
                    var batt_level = data.result;
