@@ -1,3 +1,20 @@
+2016/03/18 Checklist for Rev3
+=============================
+
+Changes to the board
+--------------------
+ * Fix USB footprint/schematic. GND and VCC should be the outermost pins.
+ * Fix IMU footprint
+ * Space out vias under photon package to reduce risk of short, or even move them outside if possible.
+ * Tent Vias to have soldermask cover open connections to other planes.
+
+Verifications
+-------------
+ * Update schematics PDFs to reflect latest state
+ * Find out whether there's a way to export footprints so that Luc can help review
+ * Check that drill file / project matches elecrow's expectation in terms of format (current v2 should be a working reference)
+
+
 2016/02/08 Checklist for Rev2
 =============================
 
