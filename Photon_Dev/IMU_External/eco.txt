@@ -1,0 +1,126 @@
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   1  |
+|------------------------------------------------------------------------------|
+|  C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd                 |
+|                                                    Sun Mar 20 22:48:02 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |    pin_id     |   x   |   y   |   to  net    |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  3V3          pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.1                           
+                                 U1.3                           
+                                 U1.22                          
+                                 U1.23                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  CSM          pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.8                           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  CS_A/G       pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.7                           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  D0           pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.4                           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  D1           pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.2                           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  DEN_A/G      pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.13                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  DRDY_M       pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.9                           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  GND          pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.14                          
+                                 U1.15                          
+                                 U1.16                          
+                                 U1.17                          
+                                 U1.18                          
+                                 U1.19                          
+                                 U1.20                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  INT1_A/B     pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.11                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  INT2_A/B     pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.12                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  INT_M        pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.10                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N224435      pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.21                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   2  |
+|------------------------------------------------------------------------------|
+|  C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd                 |
+|                                                    Sun Mar 20 22:48:02 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |    pin_id     |   x   |   y   |   to  net    |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  N224449      pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.24                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  SDO_A/G      pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.5                           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  SDO_M        pins ADDED TO this existing net (pins not previously on any net)
+                                 U1.6                           
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   3  |
+|------------------------------------------------------------------------------|
+|  C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd                 |
+|                                                    Sun Mar 20 22:48:02 2016  |
+|------------------------------------------------------------------------------|
+| COMPONENT DEFINITION added to design                                         |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    device type                                                               |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ LSM9DS1_LGA-24_LSM9DS1
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   4  |
+|------------------------------------------------------------------------------|
+|  C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd                 |
+|                                                    Sun Mar 20 22:48:02 2016  |
+|------------------------------------------------------------------------------|
+| COMPONENTS DELETED from design                                               |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    ref des        |    device type      |   x   |   y                        |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ U6                  LSM9DS1_LGA-24L_LSM9DS1 -114.00   18.25
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   5  |
+|------------------------------------------------------------------------------|
+|  C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd                 |
+|                                                    Sun Mar 20 22:48:02 2016  |
+|------------------------------------------------------------------------------|
+| COMPONENTS ADDED to design                                                   |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    ref des        |    device type                                           |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ U1                  LSM9DS1_LGA-24_LSM9DS1 
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   6  |
+|------------------------------------------------------------------------------|
+|  C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd                 |
+|                                                    Sun Mar 20 22:48:02 2016  |
+|------------------------------------------------------------------------------|
+| SLOT PROPERTIES added to design                                              |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   slot_id    |   x   |   y   |   property   |             value              |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ U1.3                           PRIM_FILE      .\pstchip.dat
+|------------------------------------------------------------------------------|
+|   total ECO changes reported  28                                             |
+|------------------------------------------------------------------------------|

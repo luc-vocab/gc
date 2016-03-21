@@ -1,4 +1,4 @@
-Mon Mar 07 07:41:32 2016				Page     1
+Sun Mar 20 23:15:51 2016				Page     1
 
 Photoplot log file
 Results from aperture table.
@@ -55,19 +55,21 @@ RECTANGLE      19.69     11.81   0.00000  D36
 RECTANGLE      19.69     23.62   0.00000  D74
 RECTANGLE      20.57     31.59   0.00000  D53
 RECTANGLE      21.75     61.12   0.00000  D56
-Mon Mar 07 07:41:32 2016				Page     2
+Sun Mar 20 23:15:51 2016				Page     2
 
 Photoplot log file
 Results from aperture table.
 
 RECTANGLE      23.62      9.84   0.00000  D46
 RECTANGLE      23.62     19.69   0.00000  D75
+RECTANGLE      23.62      31.5   0.00000  D143
 RECTANGLE      23.62     47.24   0.00000  D86
 RECTANGLE      23.72     15.06   0.00000  D40
 RECTANGLE         25        40   0.00000  D102
 RECTANGLE         25        50   0.00000  D107
 RECTANGLE      25.59     14.57   0.00000  D50
 RECTANGLE      25.69     29.62   0.00000  D76
+RECTANGLE      27.56     35.43   0.00000  D145
 RECTANGLE      29.53      9.06   0.00000  D26
 RECTANGLE      29.62     15.84   0.00000  D48
 RECTANGLE      29.62     25.69   0.00000  D77
@@ -76,10 +78,12 @@ RECTANGLE      29.92     39.37   0.00000  D110
 RECTANGLE         30        40   0.00000  D95
 RECTANGLE         30        55   0.00000  D109
 RECTANGLE         31        46   0.00000  D104
+RECTANGLE       31.5     23.62   0.00000  D144
 RECTANGLE       31.5     47.24   0.00000  D33
 RECTANGLE       31.5     57.09   0.00000  D63
 RECTANGLE       31.5     106.3   0.00000  D70
 RECTANGLE      31.59     20.57   0.00000  D52
+RECTANGLE      35.43     27.56   0.00000  D146
 RECTANGLE      35.43     39.37   0.00000  D67
 RECTANGLE      35.43        50   0.00000  D58
 RECTANGLE      35.83     45.28   0.00000  D112
@@ -108,15 +112,15 @@ RECTANGLE      53.24     29.62   0.00000  D89
 RECTANGLE      53.24      37.5   0.00000  D34
 RECTANGLE         55        30   0.00000  D108
 RECTANGLE      55.12     15.75   0.00000  D55
-RECTANGLE      55.12    125.98   0.00000  D93
-RECTANGLE         56     41.43   0.00000  D61
-RECTANGLE         56        66   0.00000  D101
-RECTANGLE       56.1     98.43   0.00000  D22
-Mon Mar 07 07:41:32 2016				Page     3
+Sun Mar 20 23:15:51 2016				Page     3
 
 Photoplot log file
 Results from aperture table.
 
+RECTANGLE      55.12    125.98   0.00000  D93
+RECTANGLE         56     41.43   0.00000  D61
+RECTANGLE         56        66   0.00000  D101
+RECTANGLE       56.1     98.43   0.00000  D22
 RECTANGLE      57.09      31.5   0.00000  D62
 RECTANGLE      59.06      68.9   0.00000  D29
 RECTANGLE         60        50   0.00000  D98

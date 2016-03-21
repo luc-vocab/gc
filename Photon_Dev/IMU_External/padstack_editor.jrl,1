@@ -1,0 +1,14 @@
+\t (00:00:00) padstack_editor 17.0 P003 (v17-0-118C) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Sun Mar 20 23:06:29 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=9480 CPUs=4
+\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaaak14600.tmp -pname VIA -data C:/Users/Madison/AppData/Local/Temp/#Taaaaam14600.tmp
+\t (00:00:00) 
+\d (00:00:03) QtSignal GuidedTabsParent GuidedTabs currentChanged "Drill Offset"
+\d (00:00:03) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:00:10) QtSignal GuidedMaskLayersTab PadShape CurrentIndexChanged None
+\d (00:00:11) QtSignal GuidedMaskLayersTab LayersTable itemSelectionChanged
+\d (00:00:12) QtSignal MainWindow Save triggered
+\d (00:00:31) QtSignal pseCheckBrowser Close clicked
+\d (00:00:32) QtFillin Cancel
+\d (00:00:40) QtFillin No
+\t (00:00:40)     Journal end - Sun Mar 20 23:07:10 2016

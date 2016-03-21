@@ -1,0 +1,82 @@
+Sun Mar 20 22:58:30 2016				Page     1
+
+
+ 
+Update Symbols/Modules Logfile
+	Sun Mar 20 22:58:30 2016
+
+------ Module Refresh Messages ------
+
+SUMMARY:    Updated 0 out of 0 modules
+
+------ End Module Messages     ------
+
+
+
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Refresh Symbol                                                   )
+(                                                                     )
+(    Drawing          : IMU.brd                                       )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Sun Mar 20 22:58:30 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Sun Mar 20 22:58:30 2016				Page     1
+
+
+------ Symbol Refresh Directives ------
+
+Input design  = 'C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd'
+Output design = ''
+
+Update mechanical symbols              = 'NO'
+Update format symbols                  = 'NO'
+Update package symbols                 = 'NO'
+Update shape/flash symbols             = 'NO'
+Update symbol padstacks                = 'NO'
+Preserve padstacks replaced on pins    = 'NO'
+Reset symbol text and size locations   = 'NO'
+Reset Pin Escapes (fanouts)            = 'NO'
+Ripup Etch                             = 'NO'
+Reset custom drill data                = 'NO'
+Symbol list file                       = 'C:/Users/Madison/AppData/Local/Temp/#Taaaaaa14600.tmp'
+
+
+------ Library Paths ------
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.0/share/local/pcb/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/allegrolib/symbols 
+
+PADPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.0/share/local/pcb/padstacks 
+           C:/Cadence/SPB_17.0/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/allegrolib/symbols 
+
+
+------ Symbol Refresh Messages ------
+
+
+'LGA-24L'  symbol starting to refresh:
+     ERROR(SPMHNI-270): 1 pins found in the symbol in the physical design, but missing from library symbol. They are:
+            1
+
+     ERROR(SPMHNI-271): 1 pins found in library symbol, but missing from the symbol in the physical design. They are:
+            25
+
+
+
+----- Symbol Update Summary ----
+
+Refresh symbol errors; due to these errors this design is NOT updated.
+       2  errors detected.
+       0  warnings detected.

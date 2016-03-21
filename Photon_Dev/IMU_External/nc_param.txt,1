@@ -13,7 +13,7 @@ SUPPRESS-EQUAL         NO
 TOOL-SELECT            YES
 OPTIMIZE_DRILLING      NO
 ENHANCED_EXCELLON      YES
-TAPE-FILE              C:/Users/Madison/Desktop/Sleep_Track_V2_test.drl
+TAPE-FILE              C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/Artwork/V1/Drill/IMU_Drill-1-4.drl
 HEADER                 none
 LEADER                 12
 CODE                   ASCII
