@@ -2,7 +2,7 @@
 layout: post
 title: "Why Mouthguards Are Not the Solution for Bruxism"
 section: blog
-thumbnail: http://res.cloudinary.com/photozzap/image/upload/c_fill,g_center,h_400,w_400/v1458570827/gc_website_blog/mouthguards_bruxism/mouthguard.jpg
+thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_center,h_400,w_400/v1458570827/gc_website_blog/mouthguards_bruxism/mouthguard.jpg
 ---
 
 While doctors recommend mouthguards for bruxism, they’re only a band-aid-fix. Considering bruxism is grinding teeth while we sleep, suggesting mouthguards makes some sense. They protect the teeth from scraping, cracking and breaking caused by night grinding. But mouthguards don’t cure bruxism itself and here lies the main issue.
