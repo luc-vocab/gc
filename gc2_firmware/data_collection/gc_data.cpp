@@ -2,7 +2,8 @@
 #include "common.h"
 
 GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client),
-p_battery_charge(0), m_last_report_battery_time(-REPORT_BATTERY_INTERVAL), m_report_status_battery(false) {
+p_battery_charge(0), m_last_report_battery_time(-REPORT_BATTERY_INTERVAL), m_report_status_battery(false),
+m_simulation_mode(false){
 }
 
 void GcData::init() {
@@ -56,7 +57,7 @@ void GcData::get_accel(float *accel_values) {
 }
 
 uint16_t GcData::read_emg() {
-  if(SIMULATION_MODE) {
+  if(m_simulation_mode) {
     unsigned long milliseconds = millis();
     unsigned long seconds = milliseconds / 1000;
     uint16_t minRand;

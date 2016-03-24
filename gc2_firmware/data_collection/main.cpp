@@ -50,6 +50,10 @@ int device_util(String command) {
     return 0;
   } else if(command=="test_tone") {
     tone(BUZZER_PIN, 600, 500);
+  } else if(command=="sim_on") {
+    gc_data.set_simulation_mode(true);
+  } else if (command=="sim_off") {
+    gc_data.set_simulation_mode(false);
   }
 
   return 0;
