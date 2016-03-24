@@ -40,26 +40,35 @@
 
         // initialize justgage
         vm.gauge_current_value = vm.init_justgage("gauge_current_value", "Current Value");
-        vm.gauge_1_min = vm.init_justgage("gauge_1_min", "30s Min");
-        vm.gauge_1_avg = vm.init_justgage("gauge_1_avg", "30s Avg");
-        vm.gauge_1_max = vm.init_justgage("gauge_1_max", "30s Max");
+
         
-        vm.gauge_2_min = vm.init_justgage("gauge_2_min", "5s Min");
-        vm.gauge_2_avg = vm.init_justgage("gauge_2_avg", "5s Avg");
-        vm.gauge_2_max = vm.init_justgage("gauge_2_max", "5s Max");        
-        
-        
-        /*
         // initialize smoothie chart        
-        var smoothie_chart = new SmoothieChart({grid:{fillStyle:'transparent',strokeStyle:'transparent',sharpLines:true,borderVisible:false},labels:{fillStyle:'#000000'},timestampFormatter:SmoothieChart.timeFormatter,horizontalLines:[{color:'#ffffff',lineWidth:1,value:0},{color:'#880000',lineWidth:2,value:3333},{color:'#880000',lineWidth:2,value:-3333}]}),
-        canvas = angular.element('#smoothie-chart')[0];
+        var smoothie_chart_options = {
+            grid:{
+                fillStyle:'transparent',
+                strokeStyle:'transparent',
+                sharpLines:true,
+                borderVisible:false},
+                labels:{
+                    fillStyle:'#000000',
+                    fontFamily:'Oswald',
+                    fontSize: 13,
+                    precision: 0
+                    
+                },
+                timestampFormatter:SmoothieChart.timeFormatter,
+                horizontalLines:[
+                    {color:'#ffffff',lineWidth:1,value:0},
+                    {color:'#880000',lineWidth:2,value:3333},
+                    {color:'#880000',lineWidth:2,value:-3333}]};
+        var smoothie_chart = new SmoothieChart(smoothie_chart_options);
+        var canvas = angular.element('#smoothie-chart')[0];
         
         vm.smoothie_series = new TimeSeries();
         
         smoothie_chart.addTimeSeries(vm.smoothie_series, {lineWidth:2.6,strokeStyle:'#5959f4',fillStyle:'#93a8ff'});
         smoothie_chart.streamTo(canvas, 500);
-        */
-        
+
     }
     
     vm.init_justgage = function(id, title) {
@@ -94,7 +103,7 @@
         vm.emg_stat_process_value(emg_value);        
         vm.gauge_current_value.refresh(emg_value, vm.alltime_max);
         
-        //vm.smoothie_series.append(new Date().getTime(), emg_value);
+        vm.smoothie_series.append(new Date().getTime(), emg_value);
 
     }
 
@@ -134,18 +143,22 @@
         //$log.info("stats_1_sum:", stats_1_sum);
         vm.emg_stats_1.avg = stats_1_sum / vm.emg_stat_array_1.length;
         
+        /*
         vm.gauge_1_min.refresh(vm.emg_stats_1.min, vm.alltime_max);
         vm.gauge_1_avg.refresh(vm.emg_stats_1.avg, vm.alltime_max);
         vm.gauge_1_max.refresh(vm.emg_stats_1.max, vm.alltime_max);
+        */
         
         vm.emg_stats_2.min = _.min(vm.emg_stat_array_2, function(item) { return item.emg; }).emg;
         vm.emg_stats_2.max = _.max(vm.emg_stat_array_2, function(item) { return item.emg; }).emg;        
         var stats_2_sum = _.reduce(vm.emg_stat_array_2, function(memo, item){ return memo + item.emg; }, 0);
         vm.emg_stats_2.avg = stats_2_sum / vm.emg_stat_array_2.length;
 
+        /*
         vm.gauge_2_min.refresh(vm.emg_stats_2.min, vm.alltime_max);
         vm.gauge_2_avg.refresh(vm.emg_stats_2.avg, vm.alltime_max);
         vm.gauge_2_max.refresh(vm.emg_stats_2.max, vm.alltime_max);        
+        */
         
     }
     
