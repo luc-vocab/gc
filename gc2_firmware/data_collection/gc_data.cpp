@@ -83,9 +83,12 @@ void GcData::emg_beep(uint16_t emg_value) {
     return;
   }
 
-  if(emg_value > 150) {
-    DEBUG_LOG("emg_beep");
-    tone(BUZZER_PIN, 900, 80);
+  if(emg_value > 1000) {
+    tone(BUZZER_PIN, 2000, 80);
+  } else if(emg_value > 500) {
+    tone(BUZZER_PIN, 1200, 80);
+  } else if(emg_value > 300) {
+    tone(BUZZER_PIN, 800, 80);
   }
 
 }
