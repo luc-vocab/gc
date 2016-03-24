@@ -2,7 +2,8 @@
 #include "common.h"
 
 GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client),
-p_battery_charge(0), m_last_report_battery_time(-REPORT_BATTERY_INTERVAL), m_report_status_battery(false) {
+p_battery_charge(0), m_last_report_battery_time(-REPORT_BATTERY_INTERVAL), m_report_status_battery(false),
+m_simulation_mode(false), m_emg_beep(false){
 }
 
 void GcData::init() {
@@ -56,7 +57,7 @@ void GcData::get_accel(float *accel_values) {
 }
 
 uint16_t GcData::read_emg() {
-  if(SIMULATION_MODE) {
+  if(m_simulation_mode) {
     unsigned long milliseconds = millis();
     unsigned long seconds = milliseconds / 1000;
     uint16_t minRand;
@@ -75,6 +76,18 @@ uint16_t GcData::read_emg() {
   } else {
     return analogRead(A0);
   }
+}
+
+void GcData::emg_beep(uint16_t emg_value) {
+  if(! m_emg_beep) {
+    return;
+  }
+
+  if(emg_value > 150) {
+    DEBUG_LOG("emg_beep");
+    tone(BUZZER_PIN, 900, 80);
+  }
+
 }
 
 void GcData::report_battery_charge() {
@@ -102,6 +115,7 @@ void GcData::queue_status_battery_charge() {
 
 void GcData::collect_data(bool upload_requested) {
   uint16_t emg_value = read_emg();
+  emg_beep(emg_value);
   float gyro_max = get_gyro_max();
   float accel_values[3];
   get_accel(accel_values);
