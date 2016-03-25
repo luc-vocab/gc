@@ -42,6 +42,17 @@
         vm.gauge_current_value = vm.init_justgage("gauge_current_value", "Current Value");
 
         
+        // resize canvas to something reasonable
+        var window_width = window.innerWidth;
+        if(window_width < 600) {
+            var new_width = window_width - 60;
+            $log.info("setting smoothie chart width to " + new_width);
+            var smoothie_chart_elt = document.getElementById("smoothie-chart");
+            smoothie_chart_elt.width = new_width;
+            smoothie_chart_elt.height = new_width/2;
+        }
+
+        
         // initialize smoothie chart        
         var smoothie_chart_options = {
             grid:{
