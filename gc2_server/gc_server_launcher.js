@@ -47,11 +47,17 @@ GcConfig(server_type).then(function(config_data) {
     
         // mark server online
         var server_ref = new Firebase(config_data.firebase_root).child('servers').child(server_key);
-        server_ref.update({
-            online: true
-        });
         var presenceRef = server_ref.child("online");
         presenceRef.onDisconnect().set(false);
+        
+        var connectedRef = new Firebase(config_data.firebase_root).child('.info').child('connected');
+        connectedRef.on("value", function(snap) {
+          if (snap.val() === true) {
+            presenceRef.set(true);
+          } else {
+            presenceRef.set(false);
+          }
+        });        
 
 
     } else if (server_type == "gc_data_server") {
