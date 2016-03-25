@@ -2,55 +2,59 @@
     <div class="page-content">
 
 
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Realtime Control</h1>
-                <p>Realtime mode is for testing your device and verifying electrode placement. Your device will be continously transmitting with WiFi on. Data will not be persisted into stats. <strong>Remember to go back to standby mode after testing.</strong>
-                </p>
+        <div ng-if="! realtime.realtime_mode_on">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Realtime Control</h1>
+                    <p>Realtime mode is for testing your device and verifying electrode placement. Your device will be continously transmitting with WiFi on. Data will not be persisted into stats. <strong>Remember to go back to standby mode after testing.</strong>
+                    </p>
+                </div>
             </div>
-        </div>
-
-        <div class="row" ng-show="realtime.device_setup_update">
-            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-
-                <div class="alert alert-info">
-                    <strong><i class="fa fa-spin fa-cog"></i> Loading</strong> {{realtime.device_setup_update.status}}
-                    <div class="progress progress-striped active">
-                        <div style="width: {{100 * (realtime.device_setup_update.task / realtime.device_setup_update.total ) }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
+    
+            <div class="row" ng-show="realtime.device_setup_update">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+    
+                    <div class="alert alert-info">
+                        <strong><i class="fa fa-spin fa-cog"></i> Loading</strong> {{realtime.device_setup_update.status}}
+                        <div class="progress progress-striped active">
+                            <div style="width: {{100 * (realtime.device_setup_update.task / realtime.device_setup_update.total ) }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row" ng-show="realtime.device_setup_error">
-            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            <strong>
-                                <i class="fa fa-exclamation-triangle"></i>
-                                An Error Occurred
-                            </strong>
-                        </h3>
-                    </div>
-                    <div class="panel-body">
-                        <strong ng-show="realtime.device_setup_error.device_name">{{realtime.device_setup_error.device_name}}</strong>
-                        {{realtime.device_setup_error.message}}
-                        <i>{{realtime.device_setup_error.api_error}}</i>
-                        <a href="#/settings" ng-show="realtime.device_setup_error.go_settings">
-                            <button class="btn blue pull-right"><i class="fa fa-cog"></i> Go To Settings</button>
-                        </a>
-                        <a ng-click="realtime.verify_device_setup()" ng-show="realtime.device_setup_error.retry">
-                            <button class="btn blue pull-right"><i class="fa fa-refresh"></i> Retry</button>
-                        </a>                        
+    
+            <div class="row" ng-show="realtime.device_setup_error">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <strong>
+                                    <i class="fa fa-exclamation-triangle"></i>
+                                    An Error Occurred
+                                </strong>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <strong ng-show="realtime.device_setup_error.device_name">{{realtime.device_setup_error.device_name}}</strong>
+                            {{realtime.device_setup_error.message}}
+                            <i>{{realtime.device_setup_error.api_error}}</i>
+                            <a href="#/settings" ng-show="realtime.device_setup_error.go_settings">
+                                <button class="btn blue pull-right"><i class="fa fa-cog"></i> Go To Settings</button>
+                            </a>
+                            <a ng-click="realtime.verify_device_setup()" ng-show="realtime.device_setup_error.retry">
+                                <button class="btn blue pull-right"><i class="fa fa-refresh"></i> Retry</button>
+                            </a>                        
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
-        <div ng-show="realtime.realtime_ready">
-
+        <div ng-show="realtime.realtime_ready && ! realtime.realtime_mode_on">
+            
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
                     <div class="panel panel-primary">
@@ -68,7 +72,6 @@
                                 <div class="btn-group btn-group-solid margin-bottom-10">
                                     <button class="btn blue" type="button" ng-click="realtime.enable_realtime()">Realtime Mode<i class="fa fa-spin fa-cog" ng-show="realtime.show_enable_realtime_spinner"></i></Mode>
                                     </button>
-                                    <button class="btn" type="button" ng-click="realtime.standby()">Standby</button>
                                 </div>
                             </div>
                         </div>
@@ -76,15 +79,40 @@
                 </div>
             </div>
 
+
+
+        </div>
+
+
+        <div ng-show="realtime.realtime_mode_on">
             <div class="row">
-                <div class="col-md-4">
-                    <div id="container-emg"></div>
-                </div>
-                <div class="col-md-8">
-                    <canvas id="smoothie-chart" width="600" height="400">
+                <div class="col-md-12 col-sm-12">
+                    <button class="btn" type="button" ng-click="realtime.standby()">Standby</button>
                 </div>
             </div>
-
+            
+            <div class="row">
+                <div class="col-md-4 col-sm-12 large_gauge" id="gauge_current_value">
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-4 small_gauge" id="gauge_1_min"></div>
+                        <div class="col-md-4 col-sm-4 col-xs-4  small_gauge" id="gauge_1_avg"></div>
+                        <div class="col-md-4 col-sm-4 col-xs-4  small_gauge" id="gauge_1_max"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-4  small_gauge" id="gauge_2_min"></div>
+                        <div class="col-md-4 col-sm-4 col-xs-4  small_gauge" id="gauge_2_avg"></div>
+                        <div class="col-md-4 col-sm-4 col-xs-4  small_gauge" id="gauge_2_max"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="smoothie-chart" width="600" height="200">
+                </div>
+            </div>            
         </div>
 
     </div>

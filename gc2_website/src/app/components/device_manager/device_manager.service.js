@@ -186,7 +186,8 @@
                    defer.reject({
                        message: "Could not check battery level",
                        api_error: err.message,
-                       device_name: device_name
+                       device_name: device_name,
+                       retry: true
                    });
                } else {
                    var batt_level = data.result;
@@ -396,15 +397,30 @@
                         });
 
                         var user_ref = firebase_auth.get_user_ref(uid);
-                        user_ref.update({
+                        var update_data = {
                             device_name: device.name,
                             device_id: device_id,
                             user_name: user_name,
                             particle_access_token: particle_access_token,
                             server: server_key
+                        };
+                        $log.info("updating user ref with ", update_data);
+                        try {
+                        user_ref.update(update_data, function(error) {
+                            if (error) {
+                                $log.error("Could not update user ref: ", error);
+                                defer.reject(error);
+                            } else {
+                                $log.info("update of user ref complete");
+                                defer.resolve(device_id);        
+                            }
                         });
+                        } catch (err) {
+                            $log.error("caught error", err);
+                            defer.reject("user ref update failed");
+                        }
 
-                        defer.resolve(device_id);
+                        
                     },
                     function(error) {
                         $log.info("device_id error: ", error);
