@@ -1,5 +1,4 @@
 
-/* globals Highcharts: false */
 /* globals angular */
 /* globals SmoothieChart */
 /* globals TimeSeries */
@@ -14,7 +13,7 @@
     .controller('RealtimeController', RealtimeController);
 
   /** @ngInject */
-  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, $document, currentAuth, firebase_auth, device_manager) {
+  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, $document, $window, currentAuth, firebase_auth, device_manager) {
     var vm = this;
 
 
@@ -43,10 +42,12 @@
 
         
         // resize canvas to something reasonable
-        var window_width = window.innerWidth;
-        if(window_width < 600) {
-            var new_width = window_width - 60;
+        var margin = 60;
+        var window_width = $window.innerWidth;
+        if(window_width < 600 - margin) {
+            var new_width = window_width - margin;
             $log.info("setting smoothie chart width to " + new_width);
+            //var smoothie_chart_elt = angular.element( document.querySelector( '#smoothie-chart' ) );
             var smoothie_chart_elt = document.getElementById("smoothie-chart");
             smoothie_chart_elt.width = new_width;
             smoothie_chart_elt.height = new_width/2;
