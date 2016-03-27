@@ -7,11 +7,11 @@ Changes to the board
  * Fix IMU footprint
  * Space out vias under photon package to reduce risk of short, or even move them outside if possible.
  * Tent Vias to have soldermask cover open connections to other planes.
+ * Fix U9 so that NC pin is unconnected
 
 Verifications
 -------------
  * Update schematics PDFs to reflect latest state
- * Find out whether there's a way to export footprints so that Luc can help review
  * Check that drill file / project matches elecrow's expectation in terms of format (current v2 should be a working reference)
 
 
