@@ -1,13 +1,8 @@
-M48
-INCH
-T01C.02559
-T02C.02953
-T03C.04724
 ;EXTENTS: -5.500  -4.250  5.500   4.250   
 ;LEADER: 12 
 ;HEADER: 
 ;CODE  : ASCII 
-;FILE  : C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V3_VAR.rou for board #Taaaaai06040.tmp
+;FILE  : C:/Users/Madison/Desktop/gc/Photon_Dev/Artwork/SleepTrack_V3/Rev B/Drill/Sleep_Track_V3_VAR.rou for board #Taaaaaj58884.tmp
 %
 G90
 F1

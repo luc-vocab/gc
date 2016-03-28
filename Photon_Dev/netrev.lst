@@ -2,16 +2,16 @@
 (                                                                     )
 (    Allegro Netrev Import Logic                                      )
 (                                                                     )
-(    Drawing          : Sleep_Track_V3.brd                            )
+(    Drawing          : Sleep_Track_V3_VAR.brd                        )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Mon Mar 21 06:31:03 2016                      )
+(    Date/Time        : Sun Mar 27 22:39:03 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 ------ Directives ------------
 
-Ripup etch:                  No
+Ripup etch:                  Yes
 Ripup delete first segment:  No
 Ripup retain bondwire:       No
 Ripup symbols:               IfSame
@@ -19,19 +19,19 @@ Missing symbol has error:    No
 DRC update:                  Yes
 Schematic directory:         'C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer'
 Design Directory:            '.'
-Old design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V3.brd'
-New design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V3.brd'
+Old design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V3_VAR.brd'
+New design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V3_VAR.brd'
 
-CmdLine: netrev -$ -i C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer -y 2 -q netrev_constraint_report.xml C:/Users/Madison/Desktop/gc/Photon_Dev/#Taaaaac06888.tmp
+CmdLine: netrev -$ -i C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer -x -y 2 -q netrev_constraint_report.xml C:/Users/Madison/Desktop/gc/Photon_Dev/#Taaaaab58884.tmp
 
 ------ Preparing to read pst files ------
 
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstchip.dat 
-   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstchip.dat (00:00:00.07)
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstchip.dat (00:00:00.03)
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxprt.dat 
    Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxprt.dat (00:00:00.00)
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxnet.dat 
-   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxnet.dat (00:00:00.01)
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/4 Layer/pstxnet.dat (00:00:00.00)
 
 ------ Oversights/Warnings/Errors ------
 
@@ -60,7 +60,7 @@ PADPATH =  .
 ------ Summary Statistics ------
 
 
-netrev run on Mar 21 6:31:03 2016
+netrev run on Mar 27 22:39:03 2016
    DESIGN NAME : 'PROTON_DEV'
    PACKAGING ON Feb  9 2015 06:09:36
 
@@ -85,6 +85,6 @@ netrev run on Mar 21 6:31:03 2016
  No oversight detected
  No warning detected
 
-cpu time      0:00:32
-elapsed time  0:00:01
+cpu time      0:00:49
+elapsed time  0:00:00
 

@@ -10,9 +10,10 @@ REPEAT-CODES           YES
 SUPPRESS-LEAD-ZEROES   NO
 SUPPRESS-TRAIL-ZEROES  NO
 SUPPRESS-EQUAL         NO
-TOOL-SELECT            YES
+TOOL-SELECT            NO
 OPTIMIZE_DRILLING      NO
-ENHANCED_EXCELLON      YES
+ENHANCED_EXCELLON      NO
+ROUTE-FILE             C:/Users/Madison/Desktop/gc/Photon_Dev/Artwork/SleepTrack_V3/Rev B/Drill/Sleep_Track_V3_VAR.rou
 HEADER                 none
 LEADER                 12
 CODE                   ASCII

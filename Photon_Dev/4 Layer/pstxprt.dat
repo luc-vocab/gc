@@ -1,5 +1,5 @@
 FILE_TYPE = EXPANDEDPARTLIST;
-{ Using PSTWRITER 17.0.0 d001Feb-17-2016 at 01:59:50 }
+{ Using PSTWRITER 17.0.0 d001Mar-27-2016 at 22:38:33 }
 DIRECTIVES
  PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
  ROOT_DRAWING='PROTON_DEV';
@@ -238,12 +238,12 @@ SECTION_NUMBER 1
  SECTION='';
 
 PART_NAME
- CN3 'USB-5PIN_U_USB_USB-5PIN':;
+ CN3 'USB-5PIN_0_U_USB_USB-5PIN':;
 
 SECTION_NUMBER 1
- '@PROTON_DEV.SCHEMATIC1(SCH_1):INS46660@LIBRARY1.USB-5PIN.NORMAL(CHIPS)':
- C_PATH='@proton_dev.schematic1(sch_1):ins46660@library1.\usb-5pin.normal\(chips)',
- P_PATH='@proton_dev.schematic1(sch_1):page1_ins46660@library1.\usb-5pin.normal\(chips)',
+ '@PROTON_DEV.SCHEMATIC1(SCH_1):INS46660@PROTON_DEV.USB-5PIN_0.NORMAL(CHIPS)':
+ C_PATH='@proton_dev.schematic1(sch_1):ins46660@proton_dev.\usb-5pin_0.normal\(chips)',
+ P_PATH='@proton_dev.schematic1(sch_1):page1_ins46660@proton_dev.\usb-5pin_0.normal\(chips)',
  PRIM_FILE='.\pstchip.dat',
  SECTION='';
 

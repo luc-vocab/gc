@@ -114,7 +114,11 @@
     (File ".\proton_dev.bom"
       (Type "Report"))
     (File ".\proton_dev.drc"
-      (Type "Report")))
+      (Type "Report"))
+    (Sort User)
+    (File ".\proton_dev_treelist.txt"
+      (Type "Unknown")
+      (DisplayName "PROTON_DEV_treelist.txt")))
   (Folder "Referenced Projects")
   (MPSSessionName "Madison")
   (GlobalState
@@ -145,8 +149,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1723 75 593")
-        (Scroll "-40 0")
-        (Zoom "100")
+        (Scroll "4568 2280")
+        (Zoom "800")
         (Occurrence "/"))
       (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
