@@ -5,6 +5,7 @@ Notes for Elecrow
 -----------------
  * Ask if we can pay extra for rush service.
  * Make sure they can do the tented vias under the photon.
+ * Ask them to source R1 as they don't have that part.
  * Ask them to check whether there is a short between GND and 3V3 after assembly, and notify us if there is one.
 
 Changes to the board
