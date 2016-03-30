@@ -1,0 +1,37 @@
+\t (00:00:06) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:06)     Journal start - Tue Mar 29 23:04:48 2016
+\t (00:00:06)         Host=MADISON-LAPTOP User=Madison Pid=5812 CPUs=4
+\t (00:00:06) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Documents\GitHub\gc\Photon_Dev\Sleep_Track_V3.brd
+\t (00:00:06) 
+\t (00:00:08) Opening existing design...
+\d (00:00:08) Design opened: C:/Users/Madison/Documents/GitHub/gc/Photon_Dev/Sleep_Track_V3.brd
+\i (00:00:08) trapsize 2889
+\i (00:00:08) trapsize 2835
+\i (00:00:08) trapsize 2896
+\i (00:00:08) trapsize 2558
+\i (00:00:08) trapsize 2646
+\i (00:00:08) generaledit 
+\i (00:00:15) add text 
+\t (00:00:15) Pick text location.
+\i (00:00:16) pick grid -1525.22 1665.52
+\t (00:00:16) last pick:  -1525.16 1665.56
+\t (00:00:16) Enter text string.
+\i (00:00:17) setwindow pcb
+\i (00:00:17) pick grid -1546.39 1691.98
+\t (00:00:17) last pick:  -1546.35 1691.95
+\t (00:00:17) Enter text string.
+\i (00:00:22) setwindow pcb
+\i (00:00:22) pick grid -1175.90 1633.76
+\t (00:00:22) last pick:  -1175.85 1633.71
+\i (00:00:22) setwindow pcb
+\i (00:00:22) pick -1546.35 1691.95
+\t (00:00:22) Enter text string.
+\i (00:00:28) setwindow pcb
+\i (00:00:28) prepopup -509.03 1422.05
+\i (00:00:29) done 
+\i (00:00:29) generaledit 
+\i (00:00:31) save 
+\i (00:00:33) fillin yes 
+\i (00:00:33) generaledit 
+\i (00:00:34) exit 
+\t (00:00:34)     Journal end - Tue Mar 29 23:05:17 2016
