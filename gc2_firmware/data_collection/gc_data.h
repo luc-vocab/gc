@@ -9,7 +9,6 @@
 #define LSM9DS1_M	0x1E
 #define LSM9DS1_AG	0x6B
 
-#define SIMULATION_MODE false
 #define REPORT_BATTERY_INTERVAL 120000 // every 2mn
 
 
@@ -21,6 +20,9 @@ public:
   void collect_data(bool upload_requested);
   // report status and battery charge at next cycle
   void queue_status_battery_charge();
+  void set_simulation_mode(bool simulation_mode) { m_simulation_mode = simulation_mode; }
+  void set_emg_beep(bool emg_beep) { m_emg_beep = emg_beep; }
+  void toggle_emg_beep() { if (!m_emg_beep) { m_emg_beep = true; } else { m_emg_beep = false;} }
 
   int p_battery_charge;
 
@@ -31,7 +33,10 @@ private:
   float get_gyro_max();
   void get_accel(float *accel_values);
   uint16_t read_emg();
+  void emg_beep(uint16_t emg_value);
 
+  bool m_simulation_mode;
+  bool m_emg_beep;
   bool m_report_status_battery;
   uint32_t m_last_report_battery_time;
   GcClient &m_gc_client;

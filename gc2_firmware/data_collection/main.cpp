@@ -42,6 +42,8 @@ int set_config(String command) {
 }
 
 int device_util(String command) {
+  DEBUG_LOG("got command " + command);
+
   if(command=="test_serial") {
     DEBUG_LOG("serial test");
     return 0;
@@ -50,6 +52,18 @@ int device_util(String command) {
     return 0;
   } else if(command=="test_tone") {
     tone(BUZZER_PIN, 600, 500);
+  } else if(command=="sim_on") {
+    gc_data.set_simulation_mode(true);
+  } else if (command=="sim_off") {
+    gc_data.set_simulation_mode(false);
+  } else if (command=="emg_beep_on") {
+    DEBUG_LOG("EMG beep on");
+    gc_data.set_emg_beep(true);
+  } else if (command=="emg_beep_off") {
+    DEBUG_LOG("EMG beep off");
+    gc_data.set_emg_beep(false);
+  } else {
+    DEBUG_LOG("unknown command");
   }
 
   return 0;
@@ -121,6 +135,11 @@ void report_stats() {
 
 
 void loop() {
+  if(digitalRead(BUTTON1_PIN) == LOW) {
+    gc_data.toggle_emg_beep();
+    validation_tone();
+  }
+
   if(digitalRead(BUTTON2_PIN) == LOW) {
     upload_requested = true;
     validation_tone();
@@ -129,7 +148,7 @@ void loop() {
   upload_requested = false;
   delay(frequency);
   if (pending_night_mode) {
-    if(digitalRead(BUTTON1_PIN) == LOW) {
+    if(digitalRead(BUTTON2_PIN) == LOW) {
       DEBUG_LOG("button1 low, starting batch mode");
       // set mode to batch
       pending_night_mode = false;

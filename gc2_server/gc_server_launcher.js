@@ -47,11 +47,17 @@ GcConfig(server_type).then(function(config_data) {
     
         // mark server online
         var server_ref = new Firebase(config_data.firebase_root).child('servers').child(server_key);
-        server_ref.update({
-            online: true
-        });
         var presenceRef = server_ref.child("online");
         presenceRef.onDisconnect().set(false);
+        
+        var connectedRef = new Firebase(config_data.firebase_root).child('.info').child('connected');
+        connectedRef.on("value", function(snap) {
+          if (snap.val() === true) {
+            presenceRef.set(true);
+          } else {
+            presenceRef.set(false);
+          }
+        });        
 
 
     } else if (server_type == "gc_data_server") {
@@ -73,7 +79,7 @@ GcConfig(server_type).then(function(config_data) {
             var influx_data = new GcInfluxData(logger, client, firebase_root, user_name, owner_uid, device_id);
             influx_data.subscribe_device_node();
             
-            var device_monitor = GcDeviceMonitor(logger, firebase_root, user_name, owner_uid, device_id);
+            var device_monitor = new GcDeviceMonitor(logger, firebase_root, user_name, owner_uid, device_id);
             device_monitor.subscribe_device_node();
            
         });

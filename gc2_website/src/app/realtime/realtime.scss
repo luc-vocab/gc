@@ -1,2 +1,16 @@
 
 
+.large_gauge {
+    height: 380px;
+}
+
+@media (max-width: 360px) {
+    .large_gauge {
+        height: 200px;
+     }
+}
+
+.small_gauge {
+    
+}
+

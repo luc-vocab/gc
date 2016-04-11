@@ -1,0 +1,11 @@
+20.84
+52.44
+
+max board height
+3.64mm
+board thickness: 1.6mm
+2.04mm support height
++ buffer
+2.14mm
++ wall thickness (0.6mm)
+2.75mm
