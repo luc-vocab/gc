@@ -1,89 +1,44 @@
-\t (00:00:05) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:05)     Journal start - Tue Mar 29 23:09:13 2016
-\t (00:00:05)         Host=MADISON-PC User=Madison Pid=19808 CPUs=4
-\t (00:00:05) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Sleep_Track_V3.brd
-\t (00:00:05) 
-\t (00:00:07) Opening existing design...
-\d (00:00:07) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V3.brd
-\i (00:00:07) trapsize 3107
-\i (00:00:07) trapsize 3047
-\i (00:00:07) trapsize 3115
-\i (00:00:07) trapsize 3177
-\i (00:00:07) trapsize 3177
+\t (00:00:04) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:04)     Journal start - Sun Apr 10 19:56:05 2016
+\t (00:00:04)         Host=MADISON-PC User=Madison Pid=11728 CPUs=4
+\t (00:00:04) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe
+\t (00:00:04) 
+\t (00:00:06) Opening existing design...
+\d (00:00:06) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Sleep_Track_V3.brd
+\i (00:00:07) trapsize 97
+\i (00:00:07) trapsize 95
+\i (00:00:07) trapsize 97
+\i (00:00:07) trapsize 99
+\i (00:00:07) trapsize 99
 \i (00:00:08) generaledit 
-\i (00:00:09) zoom in 1 
+\i (00:00:09) zoom out 1 
 \i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -1699.94 1688.67
-\i (00:00:09) trapsize 1589
-\i (00:00:09) zoom in 1 
+\i (00:00:09) zoom out -1450.70 1687.60
+\i (00:00:09) trapsize 199
+\i (00:00:09) zoom out 1 
 \i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -1699.95 1688.67
+\i (00:00:09) zoom out -1450.70 1687.60
+\i (00:00:09) trapsize 397
+\i (00:00:09) zoom out 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom out -1104.37 1635.18
 \i (00:00:09) trapsize 794
-\i (00:00:09) zoom in 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -1701.53 1688.67
-\i (00:00:09) trapsize 397
-\i (00:00:09) zoom in 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -1701.53 1688.67
-\i (00:00:09) trapsize 199
-\i (00:00:09) zoom in 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -1701.53 1688.68
-\i (00:00:09) trapsize 99
-\i (00:00:09) zoom in 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -1700.53 1688.68
-\i (00:00:09) trapsize 50
 \i (00:00:09) zoom out 1 
 \i (00:00:09) setwindow pcb
-\i (00:00:09) zoom out -1657.83 1689.58
-\i (00:00:09) trapsize 99
+\i (00:00:09) zoom out -1220.34 1651.07
+\i (00:00:09) trapsize 1589
 \i (00:00:09) zoom out 1 
 \i (00:00:09) setwindow pcb
-\i (00:00:09) zoom out -1665.77 1687.99
-\i (00:00:09) trapsize 199
-\i (00:00:09) zoom out 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom out -1685.64 1684.01
-\i (00:00:09) trapsize 397
-\i (00:00:10) zoom in 1 
+\i (00:00:09) zoom out -1271.18 1705.08
+\i (00:00:09) trapsize 3177
+\i (00:00:10) zoom out 1 
 \i (00:00:10) setwindow pcb
-\i (00:00:10) zoom in -1325.00 1715.00
-\i (00:00:10) trapsize 199
-\i (00:00:10) zoom in 1 
+\i (00:00:10) zoom out 34.96 2283.36
+\i (00:00:10) trapsize 6142
+\i (00:00:10) zoom out 1 
 \i (00:00:10) setwindow pcb
-\i (00:00:10) zoom in -1327.78 1717.78
-\i (00:00:10) trapsize 99
-\i (00:00:13) add text 
-\t (00:00:13) Pick text location.
-\i (00:00:14) pick grid -1541.45 1667.35
-\t (00:00:14) last pick:  -1541.41 1667.38
-\t (00:00:14) Enter text string.
-\i (00:00:18) setwindow pcb
-\i (00:00:18) pick -1541.41 1667.38
-\t (00:00:18) Enter text string.
-\i (00:00:20) prepopup -1549.60 1683.03
-\i (00:00:21) done 
-\i (00:00:21) generaledit 
-\i (00:00:22) save 
-\i (00:00:24) fillin yes 
-\i (00:00:24) generaledit 
-\i (00:00:24) zoom out 1 
-\i (00:00:24) setwindow pcb
-\i (00:00:24) zoom out -1483.07 1664.37
-\i (00:00:24) trapsize 199
-\i (00:00:24) zoom out 1 
-\i (00:00:24) setwindow pcb
-\i (00:00:24) zoom out -1483.47 1663.97
-\i (00:00:24) trapsize 397
-\i (00:00:24) zoom out 1 
-\i (00:00:24) setwindow pcb
-\i (00:00:24) zoom out -1483.46 1663.96
-\i (00:00:24) trapsize 794
-\i (00:00:24) zoom out 1 
-\i (00:00:24) setwindow pcb
-\i (00:00:24) zoom out -1483.46 1660.79
-\i (00:00:24) trapsize 1589
-\i (00:00:26) exit 
-\t (00:00:26)     Journal end - Tue Mar 29 23:09:34 2016
+\i (00:00:10) zoom out 4977.60 540.46
+\i (00:00:10) trapsize 6142
+\i (00:00:11) new 
+\i (00:00:59) newdrawfillin "IMU_V2_radius.brd" "Board (Wizard)"
+\t (00:00:59)     Journal end - Sun Apr 10 19:57:00 2016

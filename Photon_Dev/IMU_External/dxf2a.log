@@ -1,0 +1,15 @@
+Reading Layer Conversion File 
+Reading DXF file...
+NOTE: Replacing illegal character * with X in *Model_Space.
+NOTE: Replacing illegal character * with X in *Paper_Space.
+NOTE: Replacing illegal character * with X in *Paper_Space0.
+done.
+Layer conversion file: IMU_External_V2_BoardOutline_l.cnv
+DXF file: IMU_External_V2_BoardOutline.DXF
+BRD file: #Taaaaab11728.tmp
+Update existing design?: NO
+Use default text?: NO
+DXF units: MILS
+Design units: MILS
+Design precision: 4
+dxf2a complete.

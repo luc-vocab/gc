@@ -1,9 +1,9 @@
 G04 ================== begin FILE IDENTIFICATION RECORD ==================*
-G04 Layout Name:  C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd*
-G04 Film Name:    IMU_Soldermask_Top_V2*
+G04 Layout Name:  C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_V2.brd*
+G04 Film Name:    IMU_Soldermask_Top_V2_Radius*
 G04 File Format:  Gerber RS274X*
 G04 File Origin:  Cadence Allegro 17.0-P009*
-G04 Origin Date:  Sun Mar 20 23:17:24 2016*
+G04 Origin Date:  Sun Apr 10 20:23:49 2016*
 G04 *
 G04 Layer:  VIA CLASS/SOLDERMASK_TOP*
 G04 Layer:  PIN/SOLDERMASK_TOP*

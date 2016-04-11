@@ -6,7 +6,7 @@ T02C.036
 ;HEADER: 
 ;CODE  : ASCII 
 ;FILE  : IMU_Drill-1-4-1-4.drl for  ... layers TOP and BOTTOM
-;DESIGN: IMU.brd
+;DESIGN: IMU_V2.brd
 ;T01 Holesize 1. = 13.000000 Tolerance = +0.000000/-0.000000 PLATED MILS Quantity = 6
 ;T02 Holesize 2. = 36.000000 Tolerance = +0.000000/-0.000000 PLATED MILS Quantity = 4
 %

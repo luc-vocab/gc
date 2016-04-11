@@ -1,110 +1,146 @@
-\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:00)     Journal start - Sun Mar 20 22:57:32 2016
-\t (00:00:00)         Host=MADISON-PC User=Madison Pid=12072 CPUs=4
-\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\IMU_External\IMU.brd
-\t (00:00:00) 
-\t (00:00:00) Opening existing design...
-\d (00:00:00) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU.brd
-\i (00:00:00) trapsize 781
-\i (00:00:00) trapsize 766
-\i (00:00:00) trapsize 783
-\i (00:00:00) trapsize 799
-\i (00:00:00) trapsize 799
-\i (00:00:01) generaledit 
-\i (00:00:01) trapsize 2067
-\i (00:00:02) trapsize 768
-\i (00:00:03) zoom in 1 
-\i (00:00:03) setwindow pcb
-\i (00:00:03) zoom in 135.32 -279.32
-\i (00:00:03) trapsize 384
-\i (00:00:03) zoom in 1 
-\i (00:00:03) setwindow pcb
-\i (00:00:03) zoom in 132.26 -277.02
-\i (00:00:03) trapsize 192
-\i (00:00:03) zoom in 1 
-\i (00:00:03) setwindow pcb
-\i (00:00:03) zoom in 126.49 -268.96
-\i (00:00:03) trapsize 96
-\i (00:00:03) zoom out 1 
-\i (00:00:03) setwindow pcb
-\i (00:00:03) zoom out 102.12 -251.30
-\i (00:00:03) trapsize 192
-\i (00:00:03) zoom out 1 
-\i (00:00:03) setwindow pcb
-\i (00:00:03) zoom out 96.36 -255.91
-\i (00:00:03) trapsize 384
-\i (00:00:04) zoom out 1 
-\i (00:00:04) setwindow pcb
-\i (00:00:04) zoom out -40.30 -161.48
-\i (00:00:04) trapsize 768
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in -60.26 144.07
-\i (00:00:05) trapsize 384
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in -60.26 144.08
-\i (00:00:05) trapsize 192
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in -59.11 138.32
-\i (00:00:05) trapsize 96
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in -58.72 136.22
-\i (00:00:05) trapsize 48
-\i (00:00:05) zoom out 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom out -64.58 150.81
-\i (00:00:05) trapsize 96
-\i (00:00:05) zoom out 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom out -63.42 150.81
-\i (00:00:05) trapsize 192
-\i (00:00:06) zoom in 1 
-\i (00:00:06) setwindow pcb
-\i (00:00:06) zoom in -78.78 110.51
-\i (00:00:06) trapsize 96
-\i (00:00:07) zoom out 1 
-\i (00:00:07) setwindow pcb
-\i (00:00:07) zoom out -54.98 65.60
-\i (00:00:07) trapsize 192
-\i (00:00:08) zoom out 1 
-\i (00:00:08) setwindow pcb
-\i (00:00:08) zoom out -162.85 152.73
-\i (00:00:08) trapsize 384
-\i (00:00:09) zoom in 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -42.31 -72.98
-\i (00:00:09) trapsize 192
-\i (00:00:09) zoom in 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -42.31 -72.97
-\i (00:00:09) trapsize 96
-\i (00:00:10) prepopup -105.84 -14.62
-\i (00:00:20) pop dyn_option_select 'Symbol@:@Unplace component' 
-\i (00:00:20) unplace component 
-\i (00:00:20) generaledit 
-\i (00:00:21) zoom out 1 
-\i (00:00:21) setwindow pcb
-\i (00:00:21) zoom out -111.21 -36.50
-\i (00:00:21) trapsize 192
-\i (00:00:21) zoom out 1 
-\i (00:00:21) setwindow pcb
-\i (00:00:21) zoom out -47.11 -45.34
-\i (00:00:21) trapsize 384
-\i (00:00:26) refresh symbol 
-\i (00:00:33) setwindow form.upd_element
-\i (00:00:33) FORM upd_element close  
-\i (00:00:33) setwindow pcb
-\i (00:00:33) generaledit 
-\i (00:00:34) prepopup -282.81 -6.18
-\i (00:00:35) prepopup -153.83 56.78
-\i (00:00:39) zoom out 1 
-\i (00:00:39) setwindow pcb
-\i (00:00:39) zoom out -212.18 -48.40
-\i (00:00:39) trapsize 768
-\i (00:00:40) exit 
-\e (00:00:40) Do you want to save the changes you made to IMU.brd?
-\i (00:00:41) fillin no 
-\t (00:00:41)     Journal end - Sun Mar 20 22:58:14 2016
+\t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Sun Apr 10 20:23:41 2016
+\t (00:00:01)         Host=MADISON-PC User=Madison Pid=11540 CPUs=4
+\t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\IMU_External\IMU_V2.brd
+\t (00:00:01) 
+\t (00:00:03) Opening existing design...
+\d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_V2.brd
+\i (00:00:03) trapsize 390
+\i (00:00:03) trapsize 383
+\i (00:00:03) trapsize 391
+\i (00:00:03) trapsize 399
+\i (00:00:03) trapsize 399
+\i (00:00:04) generaledit 
+\i (00:00:06) artwork 
+\i (00:00:07) setwindow form.film_control
+\i (00:00:07) FORM film_control select_all  
+\i (00:00:09) FORM film_control create  
+\t (00:00:09) Checking db records
+\t (00:00:09)     checking for orphans...
+\t (00:00:09)     Checked 100 percent
+\w (00:00:09) Run batch DRC to correctly regenerate DRC errs.
+
+\t (00:00:09) Done dbdoctor.
+\t (00:00:09) Starting Create artwork films...
+\w (00:00:09) WARNING(SPMHGE-269): artwork had warnings, use Viewlog to review the log file.
+\w (00:00:10) Artwork generated with warnings.
+\i (00:00:17) setwindow text
+\i (00:00:17) close 
+\i (00:00:19) setwindow form.film_control
+\i (00:00:19) FORM film_control cancel  
+\i (00:00:19) setwindow pcb
+\i (00:00:19) generaledit 
+\i (00:03:06) pick grid 675.11 -3.08
+\t (00:03:06) last pick:  675.00 -3.00
+\i (00:03:06) zoom out 1 
+\i (00:03:06) setwindow pcb
+\i (00:03:06) zoom out 675.11 -2.29
+\i (00:03:06) trapsize 799
+\i (00:03:12) zoom in 1 
+\i (00:03:12) setwindow pcb
+\i (00:03:12) zoom in -203.29 141.46
+\i (00:03:12) trapsize 399
+\i (00:03:13) zoom in 1 
+\i (00:03:13) setwindow pcb
+\i (00:03:13) zoom in -203.29 141.46
+\i (00:03:13) trapsize 200
+\i (00:03:13) zoom in 1 
+\i (00:03:13) setwindow pcb
+\i (00:03:13) zoom in -203.28 141.46
+\i (00:03:13) trapsize 100
+\i (00:03:13) zoom in 1 
+\i (00:03:13) setwindow pcb
+\i (00:03:13) zoom in -203.28 141.47
+\i (00:03:13) trapsize 50
+\i (00:03:13) zoom out 1 
+\i (00:03:13) setwindow pcb
+\i (00:03:13) zoom out -203.27 141.47
+\i (00:03:13) trapsize 100
+\i (00:03:13) zoom out 1 
+\i (00:03:13) setwindow pcb
+\i (00:03:13) zoom out -203.28 141.48
+\i (00:03:13) trapsize 200
+\i (00:03:13) zoom out 1 
+\i (00:03:13) setwindow pcb
+\i (00:03:13) zoom out -203.27 141.47
+\i (00:03:13) trapsize 399
+\i (00:03:15) cut marks 
+\i (00:03:20) setwindow form.cutmarks
+\i (00:03:20) FORM cutmarks cancel  
+   (00:03:20) Loading signal.cxt 
+   (00:03:20) Loading mfg.cxt 
+   (00:03:20) Loading axlcore.cxt 
+\i (00:03:20) setwindow pcb
+\i (00:03:20) generaledit 
+\i (00:03:21) zoom in 1 
+\i (00:03:21) setwindow pcb
+\i (00:03:21) zoom in 1.95 -82.12
+\i (00:03:21) trapsize 200
+\i (00:03:21) zoom in 1 
+\i (00:03:21) setwindow pcb
+\i (00:03:21) zoom in 1.95 -82.51
+\i (00:03:21) trapsize 100
+\i (00:03:21) zoom in 1 
+\i (00:03:21) setwindow pcb
+\i (00:03:21) zoom in 1.55 -82.91
+\i (00:03:21) trapsize 50
+\i (00:03:21) zoom out 1 
+\i (00:03:21) setwindow pcb
+\i (00:03:21) zoom out -4.74 -84.00
+\i (00:03:21) trapsize 100
+\i (00:03:21) zoom out 1 
+\i (00:03:21) setwindow pcb
+\i (00:03:21) zoom out -17.32 -81.01
+\i (00:03:21) trapsize 200
+\i (00:03:22) zoom in 1 
+\i (00:03:22) setwindow pcb
+\i (00:03:22) zoom in 78.92 -60.25
+\i (00:03:22) trapsize 100
+\i (00:03:23) zoom out 1 
+\i (00:03:23) setwindow pcb
+\i (00:03:23) zoom out 78.92 -60.25
+\i (00:03:23) trapsize 200
+\i (00:03:24) zoom out 1 
+\i (00:03:24) setwindow pcb
+\i (00:03:24) zoom out 78.92 -60.25
+\i (00:03:24) trapsize 399
+\i (00:03:25) zoom in 1 
+\i (00:03:25) setwindow pcb
+\i (00:03:25) zoom in -95.16 27.59
+\i (00:03:25) trapsize 200
+\i (00:03:25) zoom in 1 
+\i (00:03:25) setwindow pcb
+\i (00:03:25) zoom in -95.96 32.78
+\i (00:03:25) trapsize 100
+\i (00:03:26) zoom out 1 
+\i (00:03:26) setwindow pcb
+\i (00:03:26) zoom out -106.74 70.51
+\i (00:03:26) trapsize 200
+\i (00:03:27) zoom out 1 
+\i (00:03:27) setwindow pcb
+\i (00:03:27) zoom out -113.53 -39.28
+\i (00:03:27) trapsize 399
+\i (00:03:27) zoom in 1 
+\i (00:03:27) setwindow pcb
+\i (00:03:27) zoom in -48.05 -84.80
+\i (00:03:27) trapsize 200
+\i (00:03:28) zoom in 1 
+\i (00:03:28) setwindow pcb
+\i (00:03:28) zoom in -84.38 -82.00
+\i (00:03:28) trapsize 100
+\i (00:03:28) zoom out 1 
+\i (00:03:28) setwindow pcb
+\i (00:03:28) zoom out -110.74 -41.27
+\i (00:03:28) trapsize 200
+\i (00:03:29) zoom in 1 
+\i (00:03:29) setwindow pcb
+\i (00:03:29) zoom in -139.88 -40.07
+\i (00:03:29) trapsize 100
+\i (00:03:29) zoom out 1 
+\i (00:03:29) setwindow pcb
+\i (00:03:29) zoom out -139.88 -40.07
+\i (00:03:29) trapsize 200
+\i (00:03:31) exit 
+\e (00:03:31) Do you want to save the changes you made to IMU_V2.brd?
+\i (00:03:35) fillin yes 
+\t (00:03:35)     Journal end - Sun Apr 10 20:27:15 2016
