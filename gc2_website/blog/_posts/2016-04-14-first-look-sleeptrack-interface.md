@@ -29,12 +29,27 @@ On the flipside, the device will require a reliable internet connection. This co
 
 {% include image.html scaling="" image="first_look_sleeptrack_interface/control_tab.jpg" %}
 
+The **Control** tab provides two options to take control of your device:
+
+* **Realtime mode** will stream data directly to the web application, in realtime. The main purpose of this mode is to verify the muscle sensor electrode placement. 
+* **Night mode** allows you to start recording data for the night.
+
+Also notice the **device status** on the upper right-hand corner. You can see that your device is online, and its battery is 100% charged.
+
 {% include image.html scaling="" image="first_look_sleeptrack_interface/realtime_mode_checks.jpg" %}
+
+Before entering realtime mode, a number checks will be performed, such as verifying that the device is reachable, and that the initial setup has been done.
 
 {% include image.html scaling="" image="first_look_sleeptrack_interface/realtime_mode_data.jpg" %}
 
+**Realtime mode**, showing the current EMG sensor value in the gauge on the left, as well as a short history on the chart on the right. Contracting the temporal muscle should show a spike on this chart. At rest, the chart should show a low value. Currently this only shows EMG/Muscle sensor data, but in the future it will show accelerometer data as well.
+
 {% include image.html scaling="" image="first_look_sleeptrack_interface/latest_data.jpg" %}
 
+This page shows **latest data** captured during night mode. This page will auto-refresh everytime the SleepTrack device uploads data, which should be around every 15mn. This currently only shows EMG data. A simplistic *bruxism score* is calculated. This is based on the time-weighted duration of EMG spikes. The formula for calculating this is very primitive currents. This whole page should see a great deal of enhancements in the future, but this will only be done after I have a working prototype that lets me accumulate data while sleeping.
+
 {% include image.html scaling="" image="first_look_sleeptrack_interface/influxdb.jpg" %}
+
+The interface above 
 
 {% include image.html scaling="" image="first_look_sleeptrack_interface/settings.jpg" %}
