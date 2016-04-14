@@ -46,10 +46,24 @@ Before entering realtime mode, a number checks will be performed, such as verify
 
 {% include image.html scaling="" image="first_look_sleeptrack_interface/latest_data.jpg" %}
 
-This page shows **latest data** captured during night mode. This page will auto-refresh everytime the SleepTrack device uploads data, which should be around every 15mn. This currently only shows EMG data. A simplistic *bruxism score* is calculated. This is based on the time-weighted duration of EMG spikes. The formula for calculating this is very primitive currents. This whole page should see a great deal of enhancements in the future, but this will only be done after I have a working prototype that lets me accumulate data while sleeping.
+This page shows **latest data** captured during night mode. This page will auto-refresh everytime the SleepTrack device uploads data, which should be around every 15mn. This currently only shows EMG data. A simplistic *bruxism score* is calculated. This is based on the time-weighted duration of EMG spikes. The formula for calculating this is very primitive currently. This whole page should see a great deal of enhancements in the future, but this will only be done after I have a working prototype that lets me accumulate data while sleeping.
+
+On the upper right hand corner, you can see the device is in **Sleep mode**, and has uploaded 5mn of data so far.
 
 {% include image.html scaling="" image="first_look_sleeptrack_interface/influxdb.jpg" %}
 
-The interface above 
+The interface above shows every single datapoint captured by the device. The technological stack making this possible uses the *InfluxDB* database, a datastore specialized for storing *IoT* (internet of things) device data. It also uses the *Grafana* **dashboard**, which is pictured in the screenshot above. SleepTrack users will have access to this dashboard and will be able to analyze their data if a very detailed analysis is required. The dashboard is very customizable, and for example can be used to highlight times at which the biofeedback alarm kicked in. And hopefully it will indicated that bruxism / teeth grinding / clenching stops after triggering the biofedback signal !
+
+While this interface will be extremely powerful, I don't expect every single SleepTrack user will make use of it, unless they have a keen interest in data analysis. In most cases, the data could be summarized in more readable way, with per-night results and a summary over the last weeks or months.
 
 {% include image.html scaling="" image="first_look_sleeptrack_interface/settings.jpg" %}
+
+Finally, this **settings** page allows you to configure your SleepTrack device. Most of the settings only need to be configured once, however more things may be added.
+
+All of the above is work in progress, but the current functionality should allow collecting data at night, and analyzing it the next day. Among the features that are planned, but not yet implemented:
+
+* **Biofeedback settings**: controlling the audio alarm (and vibration alarm, once the hardware is developed), how quickly it comes on, how often, will all be configured from this app.
+* **Detailed night data**: number of bruxism events, amount of movement during the night should all be shown in relevant way. There are a lot of ways to show this in a smart way.
+* **Historical stats**: these should show how your bruxism, teeth grinding or clenching behavior evolves over time. Effectiveness of the biofeedback should also be reflected.
+
+All of these enhancements will come later. For now, I'm focusing on a small set of functionality, just enough to capture nightly data. In software development, it's generally considered a good thing to deliver a small, but functional project, and progressively enhance it. There is a lot of work left to do, and the progress hinges on having a reliable hardware prototype to start capturing data.
