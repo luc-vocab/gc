@@ -18,7 +18,7 @@ As with everything, the hardware and software go hand in hand. One of the <a hre
 
 The approach I decided on to solve the above issues is to go with an internet-enabled micro-controller. The Particle Photon used inside the SleepTrack device is a wifi chip. All of its functionality can be controlled over wifi, specifically over a web application. And to me this makes a lot of sense for the following reasons:
 
-* **No LCD monitor:** because the device is worn on the side of the head, even if it had an LCD screen, you wouldn't be able to see it. Because the device will not be visible to you most of the time, being able to control it from your smartphone, tablet or PC makes a lot of sense.
+* **No LCD monitor:** because the device is worn on the side of the head, even if it had an LCD screen, you wouldn't be able to see it. Since the device will not be visible to you most of the time, being able to control it from your smartphone, tablet or PC makes a lot of sense.
 * **Amount of data:** while some of the other bruxism devices such as the Grindcare only expose limited data to the user such as *number of grinds per night*, the SleepTrack captures **all** of the data, namely EMG sensor data and accelerometer motion, several times a second. The data is uploaded periodically over wifi. Upon waking up, there is no need to "upload" any data, as that will have happened throughout the night. All of this requires a sophisticated interface to display the data. 
 * **Configuration:** configuring the device, such as changing the biofeedback settings, can be done in a user friendly way.
 * **Firmware upgrades:** the firmware can be upgraded over the air. This is an important feature as it allows me to fix bugs, or add functionality even after shipping the device.
@@ -46,13 +46,13 @@ Before entering realtime mode, a number checks will be performed, such as verify
 
 {% include image.html scaling="" image="first_look_sleeptrack_interface/latest_data.jpg" %}
 
-This page shows **latest data** captured during night mode. This page will auto-refresh everytime the SleepTrack device uploads data, which should be around every 15mn. This currently only shows EMG data. A simplistic *bruxism score* is calculated. This is based on the time-weighted duration of EMG spikes. The formula for calculating this is very primitive currently. This whole page should see a great deal of enhancements in the future, but this will only be done after I have a working prototype that lets me accumulate data while sleeping.
+This page shows **latest data** captured during night mode. The page will auto-refresh everytime the SleepTrack device uploads data, which should be around every 15mn. This currently only shows EMG data. A simplistic *bruxism score* is calculated. This is based on the time-weighted duration of EMG spikes. The formula for calculating this is very primitive currently. This whole page should see a great deal of enhancements in the future, but this will only be done after I have a working prototype that lets me accumulate data while sleeping.
 
-On the upper right hand corner, you can see the device is in **Sleep mode**, and has uploaded 5mn of data so far.
+On the upper right hand corner, you can see the device is in **Night mode**, and has uploaded 5mn of data so far.
 
 {% include image.html scaling="" image="first_look_sleeptrack_interface/influxdb.jpg" %}
 
-The interface above shows every single datapoint captured by the device. The technological stack making this possible uses the *InfluxDB* database, a datastore specialized for storing *IoT* (internet of things) device data. It also uses the *Grafana* **dashboard**, which is pictured in the screenshot above. SleepTrack users will have access to this dashboard and will be able to analyze their data if a very detailed analysis is required. The dashboard is very customizable, and for example can be used to highlight times at which the biofeedback alarm kicked in. And hopefully it will indicated that bruxism / teeth grinding / clenching stops after triggering the biofedback signal !
+The interface above shows every single datapoint captured by the device. The technological stack making this possible uses the *InfluxDB* database, a datastore specialized for storing *IoT* (internet of things) device data. It also uses the *Grafana* **dashboard**, which is pictured in the screenshot above. SleepTrack users will have access to this dashboard and will be able to analyze their data if a very detailed analysis is required. The dashboard is very customizable, and for example can be used to highlight times at which the biofeedback alarm kicked in. And hopefully it will indicate that bruxism / teeth grinding / clenching stops after triggering the biofedback signal !
 
 While this interface will be extremely powerful, I don't expect every single SleepTrack user will make use of it, unless they have a keen interest in data analysis. In most cases, the data could be summarized in more readable way, with per-night results and a summary over the last weeks or months.
 
