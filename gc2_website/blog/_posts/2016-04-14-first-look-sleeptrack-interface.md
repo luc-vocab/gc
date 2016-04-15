@@ -2,7 +2,7 @@
 layout: post
 title: "A first look at the SleepTrack Web Interface"
 section: blog
-thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north_westt,h_400,w_400/v1460198263/gc_website_blog/first_look_sleeptrack_interface/latest_data.jpg
+thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north_west,h_400,w_400/v1460198263/gc_website_blog/first_look_sleeptrack_interface/latest_data.jpg
 ---
 
 A few weeks ago, I posted an <a href="/2016/03/11/progress-update-pcb-prototype/">update on the status of the SleepTrack device</a>. I am currently waiting for revision 3 of the printed circuit board for testing. While I am hoping this revision will be functional and will allow me to start capturing data at night, the difficulties encountered in the hardware portion of this project have surprised me, but are not unusual in a hardware project. As the saying goes, hardware is hard. With that said, let's take a look at the SleepTrack web interface.
