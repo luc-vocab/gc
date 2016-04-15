@@ -5,7 +5,7 @@ section: blog
 thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north_westt,h_400,w_400/v1460198263/gc_website_blog/first_look_sleeptrack_interface/latest_data.jpg
 ---
 
-A few weeks ago, I posted an <a href="/2016/03/11/progress-update-pcb-prototype/">update on the status of the SleepTrack device</a>. I am currently waiting for revision 3 of the printed circuit board for testing. While I am hoping this revision will be functional and will allow me to start capturing data at night, the difficulties encountered in the hardware portion of this project have surprised me to say the least. As the saying goes, hardware is hard. With that said, let's take a look at the SleepTrack web interface.
+A few weeks ago, I posted an <a href="/2016/03/11/progress-update-pcb-prototype/">update on the status of the SleepTrack device</a>. I am currently waiting for revision 3 of the printed circuit board for testing. While I am hoping this revision will be functional and will allow me to start capturing data at night, the difficulties encountered in the hardware portion of this project have surprised me, but are not unusual in a hardware project. As the saying goes, hardware is hard. With that said, let's take a look at the SleepTrack web interface.
 
 {% include image.html scaling="" image="first_look_sleeptrack_interface/interface_tabs.jpg" %}
 *The various tabs on this website provide a preview of the different functionality available on the SleepTrack web app.*
@@ -32,7 +32,7 @@ On the flipside, the device will require a reliable internet connection. This co
 The **Control** tab provides two options to take control of your device:
 
 * **Realtime mode** will stream data directly to the web application, in realtime. The main purpose of this mode is to verify the muscle sensor electrode placement. 
-* **Night mode** allows you to start recording data for the night.
+* **Night mode** allows you to start recording data for the night, which will be uploaded in batches.
 
 Also notice the **device status** on the upper right-hand corner. You can see that your device is online, and its battery is 100% charged.
 
