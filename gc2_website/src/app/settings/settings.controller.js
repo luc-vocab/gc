@@ -26,6 +26,7 @@
         
         vm.user_obj.$loaded(function(){
             vm.verify_token();
+            vm.get_user_defaults();
         });
         
     };
@@ -108,6 +109,12 @@
       
       vm.save_button_enabled = true;
     };
+    
+    vm.get_user_defaults = function() {
+      if(vm.user_obj.server) {
+        vm.selected_server_key = vm.user_obj.server;
+      }
+    }
     
     vm.set_token = function() {
       $log.info("set_token");
