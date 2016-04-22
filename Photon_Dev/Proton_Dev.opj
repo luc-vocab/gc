@@ -128,43 +128,44 @@
       (Path "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Outputs")
-      (Select "Design Resources" ".\proton_dev.dsn"))
+      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1"
+         "Connectors/ Push Buttons"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 480"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 480"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 50 1698 50 568")
-        (Scroll "-315 0")
+        (Placement "44 0 1 -1 -1 -8 -30 75 743 75 527")
+        (Scroll "0 0")
         (Zoom "100")
         (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
+      (Path "C:\USERS\MADISON\DOCUMENTS\GITHUB\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "Connectors/ Push Buttons"))
+      (Page "BNO055"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1723 75 593")
-        (Scroll "4568 2280")
-        (Zoom "800")
+        (Placement "44 2 3 -1 -1 -8 -30 100 1744 100 568")
+        (Scroll "-421 0")
+        (Zoom "100")
         (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
+      (Path "C:\USERS\MADISON\DOCUMENTS\GITHUB\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "Audio"))
+      (Page "EMG Voltage"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1748 100 618")
-        (Scroll "-315 0")
-        (Zoom "100")
+        (Placement "44 0 1 -1 -1 -8 -30 125 1769 125 593")
+        (Scroll "0 144")
+        (Zoom "200")
         (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROTON_DEV.DSN")
+      (Path "C:\USERS\MADISON\DOCUMENTS\GITHUB\GC\PHOTON_DEV\PROTON_DEV.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "Power Regulation")))
+      (Page "Connectors/ Push Buttons")))
   (PartMRUSelector
     ("4 HEADER"
       (FullPartName "4 HEADER.Normal")
