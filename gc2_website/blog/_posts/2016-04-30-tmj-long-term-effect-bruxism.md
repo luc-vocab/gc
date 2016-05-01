@@ -2,10 +2,12 @@
 layout: post
 title: "TMJ Disorder – Are you at risk of this long-term Effect of Bruxism?"
 section: blog
-thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north,h_400,w_400/v1460198263/gc_website_blog/you_may_suffer_bruxism/headache.jpg
+thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north,h_400,w_400/v1462088409/gc_website_blog/tmj_disorder/jaw_pain_woman.jpg
 ---
 
 If you’ve ever experienced night-time teeth grinding, or bruxism in general, you may be aware of the short-term annoyances that come with it. Jaw ache, sore head, disturbed sleep and even an unhappy partner. While inconvenient, none of the effects above are permanent – unfortunately, there are some longer lasting effects that truly pose a threat to veteran bruxism sufferers. One example of this is Temporomandibular Joint Disorder, commonly known as TMJ disorder.
+
+{% include image.html scaling="c_fill,w_1024" image="tmj_disorder/jaw_pain_woman.jpg" %}
 
 If you’re wondering what bruxism is, or whether you suffer from it, you may need to explore the topic in a little more detail. Fortunately, my <a href="/2016/04/09/you-may-suffer-from-bruxism/">recent post</a> should help you to determine whether you suffer from night bruxism – and ultimately, whether you should be concerned with the long-term effects of bruxism.
 
@@ -17,6 +19,8 @@ Temporomandibular Joint Disorder
 <a href="http://patient.info/health/temporomandibular-joint-disorders">Temporomandibular Joint Disorder</a> is a little bit of a mouthful (no pun intended), so I will be referring to it as TMJ disorder from here on in. It is important to note that TMJ disorder isn’t a single condition nor is there a single symptom that all sufferers will experience. TMJ disorder is the name given to a number of issues relating to the joint that hinges the jaw to the cranium - the temporomandibular joint, or TMJ - and a couple of those disorders can be the result of night bruxism.
 
 To understand TMJ disorders, we must first understand the TMJ in general. The point at which two bones meet is known as a joint. Muscles control the two bones either side of a joint to allow for movement. In the same way that your triceps and biceps allow you to flex your arms at the elbow, your cranial and facial muscles control the movement of your jaw. Smooth cartilage coats the bones to protect them from friction and allow for ease of movement, with a little help from a lubricating synovial fluid.
+
+{% include image.html scaling="c_fill,w_1024" image="tmj_disorder/skull_side.jpg" %}
 
 Some people may experience TMJ and its symptoms because they have high sensitivity to pain. A large proportion of people suffering from TMJ, however, experience it because their jaw muscles are overly active. The latter is an example of the condition being related to night-time bruxism. Symptoms include:
 
