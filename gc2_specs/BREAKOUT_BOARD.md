@@ -5,6 +5,8 @@ Objective: allow us to solder all of the SMD components on a single board, and c
 
 All of the components should expose their pins into through-holes with 0.1" spacing so that we can use these female headers: https://www.adafruit.com/products/598
 
+Might be good to have properly marked pins along the header to know what we're connecting. But this board doesn't need to look pretty.
+
 Footprints to include
 ---------------------
 
