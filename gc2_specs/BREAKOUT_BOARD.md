@@ -9,7 +9,15 @@ Footprints to include
 ---------------------
 
 * *Headerless Particle Photon*: https://docs.particle.io/datasheets/photon-datasheet/#recommended-pcb-land-pattern-photon-without-headers-
-* *LSM9DS1*: https://cdn.sparkfun.com/assets/learn_tutorials/3/7/3/LSM9DS1_Datasheet.pdf
-* *BNO055*: https://cdn-shop.adafruit.com/product-files/2472/BST_BNO055_DS000_13.pdf
+* *LSM9DS1*: old IMU https://cdn.sparkfun.com/assets/learn_tutorials/3/7/3/LSM9DS1_Datasheet.pdf
+* *BNO055*: new IMU https://cdn-shop.adafruit.com/product-files/2472/BST_BNO055_DS000_13.pdf
+* *MCP73831*: battery charging chip https://www.sparkfun.com/datasheets/Prototyping/Batteries/MCP73831T.pdf
+* *MAX17043*: battery gauge https://datasheets.maximintegrated.com/en/ds/MAX17043-MAX17044.pdf
+* *AD5220*: digital pot http://www.analog.com/media/en/technical-documentation/data-sheets/AD5220.pdf
+* *TPA2005D1DRB*: audio amp http://pdf.datasheetcatalog.com/datasheet2/a/0ad3crwar7x8sgwq6e6uet5pfxfy.pdf
+* *SJ1-3515N*: 3.5mm audio jack http://www.cui.com/product/resource/sj1-351xn-series.pdf
+* *SDR08540M3-01*: speaker https://product.tdk.com/info/en/catalog/datasheets/ec211_sdr.pdf
+
+
 
 
