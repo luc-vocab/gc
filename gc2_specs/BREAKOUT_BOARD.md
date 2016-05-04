@@ -11,6 +11,7 @@ Footprints to include
 ---------------------
 
 * **Headerless Particle Photon**: https://docs.particle.io/datasheets/photon-datasheet/#recommended-pcb-land-pattern-photon-without-headers-
+* **LM3914**: Bar-chart chip http://www.ti.com/lit/ds/symlink/lm3914.pdf
 * **LSM9DS1**: old IMU https://cdn.sparkfun.com/assets/learn_tutorials/3/7/3/LSM9DS1_Datasheet.pdf
 * **BNO055**: new IMU https://cdn-shop.adafruit.com/product-files/2472/BST_BNO055_DS000_13.pdf
 * **MCP73831**: battery charging chip https://www.sparkfun.com/datasheets/Prototyping/Batteries/MCP73831T.pdf
