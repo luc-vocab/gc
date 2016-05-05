@@ -128,44 +128,13 @@
       (Path "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Outputs")
-      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1"
-         "Connectors/ Push Buttons"))
+      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1" "Audio"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 480"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 743 75 527")
-        (Scroll "0 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DOCUMENTS\GITHUB\GC\PHOTON_DEV\PROTON_DEV.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "BNO055"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 100 1744 100 568")
-        (Scroll "-421 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DOCUMENTS\GITHUB\GC\PHOTON_DEV\PROTON_DEV.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "EMG Voltage"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 125 1769 125 593")
-        (Scroll "0 144")
-        (Zoom "200")
-        (Occurrence "/"))
-      (Path "C:\USERS\MADISON\DOCUMENTS\GITHUB\GC\PHOTON_DEV\PROTON_DEV.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "Connectors/ Push Buttons")))
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 4 480"))
+      (Tab 0)))
   (PartMRUSelector
     ("4 HEADER"
       (FullPartName "4 HEADER.Normal")
