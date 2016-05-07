@@ -4,7 +4,7 @@ At every phase, we would:
 
 Phase 1
 =======
-Battery charging circuit and photon only 
+Battery charging circuit and photon only. All pins of the photon will be exposed using 0.1" spaced through-holes, so that headers can be soldered on. In the very final version, these through-holes will not be present.
 
 Chips:
 * Headerless Particle Photon
