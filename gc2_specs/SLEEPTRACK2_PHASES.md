@@ -1,6 +1,6 @@
 At every phase, we would:
-# Test circuit on breadboard, using the breakout board
-# Design and manufacture PCB
+* Test circuit on breadboard, using the breakout board
+* Design and manufacture PCB
 
 Phase 1
 =======
