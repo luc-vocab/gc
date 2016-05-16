@@ -15,6 +15,11 @@ Connectors:
 * On/off switch to open/close battery circuit.
 * EMG connector.
 
+Reference circuit:
+* https://cdn.sparkfun.com/datasheets/IoT/Photon_Battery_Shield_v10.pdf
+
+Is it possible to have this board have the same footprint as the sleeptrack1 board ?
+
 Phase 2
 =======
 Everything from phase 1 + IMU chips
