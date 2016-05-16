@@ -1,0 +1,19 @@
+\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Wed May 11 22:11:51 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=8804 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Breakout\allegro\BREAKOUT.brd
+\t (00:00:00) 
+\t (00:00:02) Opening existing design...
+\d (00:00:02) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Breakout/allegro/BREAKOUT.brd
+\i (00:00:02) trapsize 16667
+\i (00:00:02) trapsize 15885
+\i (00:00:02) trapsize 16773
+\i (00:00:02) trapsize 17647
+\i (00:00:02) trapsize 17647
+\i (00:00:02) generaledit 
+\i (00:00:03) zoom out 1 
+\i (00:00:03) setwindow pcb
+\i (00:00:03) zoom out 16835.29 3764.71
+\i (00:00:03) trapsize 17647
+\i (00:00:05) exit 
+\t (00:00:05)     Journal end - Wed May 11 22:11:57 2016

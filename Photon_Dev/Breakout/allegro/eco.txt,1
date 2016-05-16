@@ -1,0 +1,681 @@
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   1  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  AD5220_A1    pins ADDED TO this new net
+                                 J3.21          U7.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AD5220_B1    pins ADDED TO this new net
+                                 J4.21          U7.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AD5220_CLK   pins ADDED TO this new net
+                                 J3.19          U7.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AD5220_CS    pins ADDED TO this new net
+                                 J4.20          U7.7           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AD5220_GND   pins ADDED TO this new net
+                                 J3.22          U7.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AD5220_U/D   pins ADDED TO this new net
+                                 J3.20          U7.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AD5220_VDD   pins ADDED TO this new net
+                                 J4.19          U7.8           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AD5220_W1    pins ADDED TO this new net
+                                 J4.22          U7.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AUDIO_RING   pins ADDED TO this new net
+                                 CN1.3          J4.27          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AUDIO_RING_SW pins ADDED TO this new net
+                                 CN1.5          J4.28          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AUDIO_SLEEVE pins ADDED TO this new net
+                                 CN1.1          J3.29          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AUDIO_TIP    pins ADDED TO this new net
+                                 CN1.2          J3.27          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  AUDIO_TIP_SW pins ADDED TO this new net
+                                 CN1.4          J3.28          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_CAP   pins ADDED TO this new net
+                                 J3.13          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_COM0  pins ADDED TO this new net
+                                 J4.5           U5.20          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   2  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  BNO055_COM1  pins ADDED TO this new net
+                                 J4.6           U5.19          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_COM2  pins ADDED TO this new net
+                                 J4.7           U5.18          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_COM3  pins ADDED TO this new net
+                                 J4.8           U5.17          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_GND   pins ADDED TO this new net
+                                 J3.6           U5.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_GNDIO pins ADDED TO this new net
+                                 J3.1           U5.25          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_INT   pins ADDED TO this new net
+                                 J4.11          U5.14          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_NBOOT pins ADDED TO this new net
+                                 J3.8           U5.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_NRESET pins ADDED TO this new net
+                                 J4.14          U5.11          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_1 pins ADDED TO this new net
+                                 J3.5           U5.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_7 pins ADDED TO this new net
+                                 J3.11          U5.7           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_8 pins ADDED TO this new net
+                                 J3.12          U5.8           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_10 pins ADDED TO this new net
+                                 J3.14          U5.10          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_12 pins ADDED TO this new net
+                                 J4.13          U5.12          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_13 pins ADDED TO this new net
+                                 J4.12          U5.13          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_15 pins ADDED TO this new net
+                                 J4.10          U5.15          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   3  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  BNO055_PIN_16 pins ADDED TO this new net
+                                 J4.9           U5.16          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_21 pins ADDED TO this new net
+                                 J4.4           U5.21          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_22 pins ADDED TO this new net
+                                 J4.3           U5.22          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_23 pins ADDED TO this new net
+                                 J4.2           U5.23          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_24 pins ADDED TO this new net
+                                 J4.1           U5.24          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PS0   pins ADDED TO this new net
+                                 J3.10          U5.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PS1   pins ADDED TO this new net
+                                 J3.9           U5.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_VDD   pins ADDED TO this new net
+                                 J3.7           U5.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_VDDIO pins ADDED TO this new net
+                                 J3.4           U5.28          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_XIN32 pins ADDED TO this new net
+                                 J3.3           U5.27          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_XOUT32 pins ADDED TO this new net
+                                 J3.2           U5.26          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_DIVIDER_HIGH pins ADDED TO this new net
+                                 J1.20          U2.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_DIVIDER_LOW pins ADDED TO this new net
+                                 J1.18          U2.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_LED1  pins ADDED TO this new net
+                                 J2.17          U2.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_LED2  pins ADDED TO this new net
+                                 J2.18          U2.20          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   4  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  LM3914_LED3  pins ADDED TO this new net
+                                 J2.19          U2.19          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_LED4  pins ADDED TO this new net
+                                 J2.20          U2.18          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_LED5  pins ADDED TO this new net
+                                 J2.21          U2.17          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_LED6  pins ADDED TO this new net
+                                 J2.22          U2.16          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_LED7  pins ADDED TO this new net
+                                 J2.23          U2.15          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_LED8  pins ADDED TO this new net
+                                 J2.24          U2.14          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_LED9  pins ADDED TO this new net
+                                 J2.25          U2.13          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_LED10 pins ADDED TO this new net
+                                 J2.26          U2.12          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_MODE  pins ADDED TO this new net
+                                 J1.25          U2.11          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_N/C1  pins ADDED TO this new net
+                                 J1.23          U2.9           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_N/C   pins ADDED TO this new net
+                                 J1.21          U2.7           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_REF   pins ADDED TO this new net
+                                 J1.22          U2.8           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_REF_ADJ pins ADDED TO this new net
+                                 J1.24          U2.10          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_SIG   pins ADDED TO this new net
+                                 J1.19          U2.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LM3914_V+    pins ADDED TO this new net
+                                 J1.17          U2.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   5  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  LM3914_V-    pins ADDED TO this new net
+                                 J1.16          U2.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_C1   pins ADDED TO this new net
+                                 J1.35          U3.24          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_CAP  pins ADDED TO this new net
+                                 J2.38          U3.21          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_CS_AG pins ADDED TO this new net
+                                 J1.28          U3.7           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_CS_M pins ADDED TO this new net
+                                 J1.27          U3.8           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_DEN_AG pins ADDED TO this new net
+                                 J2.30          U3.13          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_DRDY_M pins ADDED TO this new net
+                                 J1.26          U3.9           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_GND1 pins ADDED TO this new net
+                                 J2.36          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_GND  pins ADDED TO this new net
+                                 J2.37          U3.19          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_GND_1 pins ADDED TO this new net
+                                 U3.20          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_INIT1_AG pins ADDED TO this new net
+                                 J2.28          U3.11          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_INIT2_AG pins ADDED TO this new net
+                                 J2.29          U3.12          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_INIT_M pins ADDED TO this new net
+                                 J2.27          U3.10          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_RES_0 pins ADDED TO this new net
+                                 J2.31          U3.14          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_RES_1 pins ADDED TO this new net
+                                 J2.32          U3.15          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   6  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  LSM9DS1_RES_2 pins ADDED TO this new net
+                                 J2.33          U3.16          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_RES_3 pins ADDED TO this new net
+                                 J2.34          U3.17          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_RES_4 pins ADDED TO this new net
+                                 J2.35          U3.18          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_SCL  pins ADDED TO this new net
+                                 J1.33          U3.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_SDA  pins ADDED TO this new net
+                                 J1.31          U3.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_SDO_A/G pins ADDED TO this new net
+                                 J1.30          U3.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_SDO_M pins ADDED TO this new net
+                                 J1.29          U3.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_VDD  pins ADDED TO this new net
+                                 J1.37          U3.22          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_VDD_1 pins ADDED TO this new net
+                                 J1.36          U3.23          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_VDD_IO pins ADDED TO this new net
+                                 J1.34          U3.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  LSM9DS1_VDD_IO_1 pins ADDED TO this new net
+                                 J1.32          U3.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MAX17044_ALERT pins ADDED TO this new net
+                                 J4.18          U6.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MAX17044_CELL pins ADDED TO this new net
+                                 J3.16          U6.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MAX17044_CTG pins ADDED TO this new net
+                                 J3.15          U6.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MAX17044_GND pins ADDED TO this new net
+                                 J3.18          U6.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   7  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  MAX17044_QSTRT pins ADDED TO this new net
+                                 J4.17          U6.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MAX17044_SCL pins ADDED TO this new net
+                                 J4.16          U6.7           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MAX17044_SDA pins ADDED TO this new net
+                                 J4.15          U6.8           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MAX17044_VDD pins ADDED TO this new net
+                                 J3.17          U6.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MCP73831_PROG pins ADDED TO this new net
+                                 J2.39          U4.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MCP73831_STAT pins ADDED TO this new net
+                                 J1.38          U4.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MCP73831_VBAT pins ADDED TO this new net
+                                 J1.40          U4.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MCP73831_VIN pins ADDED TO this new net
+                                 J2.40          U4.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  MCP73831_VSS pins ADDED TO this new net
+                                 J1.39          U4.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256822      pins ADDED TO this new net
+                                 J3.30          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256828      pins ADDED TO this new net
+                                 J3.31          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256834      pins ADDED TO this new net
+                                 J3.32          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256840      pins ADDED TO this new net
+                                 J3.33          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256846      pins ADDED TO this new net
+                                 J3.34          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256852      pins ADDED TO this new net
+                                 J3.35          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   8  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  N256858      pins ADDED TO this new net
+                                 J3.36          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256864      pins ADDED TO this new net
+                                 J3.37          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256870      pins ADDED TO this new net
+                                 J3.38          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256874      pins ADDED TO this new net
+                                 J3.39          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N256878      pins ADDED TO this new net
+                                 J3.40          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N258651      pins ADDED TO this new net
+                                 U5.9           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N259981      pins ADDED TO this new net
+                                 J4.31          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N259985      pins ADDED TO this new net
+                                 J4.32          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N259989      pins ADDED TO this new net
+                                 J4.33          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N259993      pins ADDED TO this new net
+                                 J4.34          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N259997      pins ADDED TO this new net
+                                 J4.35          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N260001      pins ADDED TO this new net
+                                 J4.36          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N260005      pins ADDED TO this new net
+                                 J4.37          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N260009      pins ADDED TO this new net
+                                 J4.38          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N260013      pins ADDED TO this new net
+                                 J4.39          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   9  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  N260017      pins ADDED TO this new net
+                                 J4.40          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_3V3   pins ADDED TO this new net
+                                 J2.1           U1.24          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A0    pins ADDED TO this new net
+                                 J1.12          U1.12          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A1    pins ADDED TO this new net
+                                 J1.11          U1.11          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A2    pins ADDED TO this new net
+                                 J1.10          U1.10          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A3    pins ADDED TO this new net
+                                 J1.9           U1.9           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A4    pins ADDED TO this new net
+                                 J1.8           U1.8           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A5    pins ADDED TO this new net
+                                 J1.7           U1.7           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D0    pins ADDED TO this new net
+                                 J2.12          U1.13          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D1    pins ADDED TO this new net
+                                 J2.11          U1.14          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D2    pins ADDED TO this new net
+                                 J2.10          U1.15          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D3    pins ADDED TO this new net
+                                 J2.9           U1.16          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D4    pins ADDED TO this new net
+                                 J2.8           U1.17          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D5    pins ADDED TO this new net
+                                 J2.7           U1.18          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D6    pins ADDED TO this new net
+                                 J2.6           U1.19          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page  10  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  PHOTON_D7    pins ADDED TO this new net
+                                 J2.5           U1.20          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_DAC   pins ADDED TO this new net
+                                 J1.6           U1.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_GND1  pins ADDED TO this new net
+                                 J2.4           U1.21          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_GND   pins ADDED TO this new net
+                                 J1.2           U1.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RGB_BLUE pins ADDED TO this new net
+                                 J1.15          U1.29          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RGB_GREEN pins ADDED TO this new net
+                                 J1.14          U1.28          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RGB_RED pins ADDED TO this new net
+                                 J1.13          U1.27          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RST   pins ADDED TO this new net
+                                 J2.2           U1.23          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RX    pins ADDED TO this new net
+                                 J1.4           U1.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_SETUP pins ADDED TO this new net
+                                 J2.14          U1.26          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_SMPS  pins ADDED TO this new net
+                                 J2.13          U1.25          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_TX    pins ADDED TO this new net
+                                 J1.3           U1.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_USB+  pins ADDED TO this new net
+                                 J2.15          U1.30          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_USB-  pins ADDED TO this new net
+                                 J2.16          U1.31          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_VBAT  pins ADDED TO this new net
+                                 J2.3           U1.22          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page  11  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  PHOTON_VIN   pins ADDED TO this new net
+                                 J1.1           U1.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_WKP   pins ADDED TO this new net
+                                 J1.5           U1.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  SPKR_NEG     pins ADDED TO this new net
+                                 J4.30          LS1.2          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  SPKR_POS     pins ADDED TO this new net
+                                 J4.29          LS1.1          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  TPA2005_GND  pins ADDED TO this new net
+                                 J4.24          U8.7           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  TPA2005_NC   pins ADDED TO this new net
+                                 J3.24          U8.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  TPA2005_SHT  pins ADDED TO this new net
+                                 J3.23          U8.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  TPA2005_VDD  pins ADDED TO this new net
+                                 J4.25          U8.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  TPA2005_VIN+ pins ADDED TO this new net
+                                 J3.25          U8.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  TPA2005_VIN- pins ADDED TO this new net
+                                 J3.26          U8.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  TPA2005_VOUT+ pins ADDED TO this new net
+                                 J4.26          U8.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  TPA2005_VOUT- pins ADDED TO this new net
+                                 J4.23          U8.8           
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page  12  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| COMPONENT DEFINITION added to design                                         |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    device type                                                               |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ 3.5MM_5POS_3_5MMJACK_SJ1-3515N
+ AD5220_SOIC8_AD5220
+ BNO055_BNO055_BNO055
+ HEADER 40_HEADER40_HEADER 40
+ LM3914_PLCC_LM3914_LM3914_PLCC
+ LSM9DS1_LGA-24L_LSM9DS1
+ MAX17044_MAX17044_MAX17043
+ MCP73831_SOT235_MCP73831
+ PHOTON_HEADERLESS_PHOTON_HEADER
+ SPEAKER_1_EC211_SDR08540M3-01
+ TPA2005D1DRB_SON8_TPA2005D1DRB
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page  13  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| COMPONENTS ADDED to design                                                   |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    ref des        |    device type                                           |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ CN1                 3.5MM_5POS_3_5MMJACK_SJ1-3515N 
+ J1                  HEADER 40_HEADER40_HEADER 40 
+ J2                  HEADER 40_HEADER40_HEADER 40 
+ J3                  HEADER 40_HEADER40_HEADER 40 
+ J4                  HEADER 40_HEADER40_HEADER 40 
+ LS1                 SPEAKER_1_EC211_SDR08540M3-01 
+ U1                  PHOTON_HEADERLESS_PHOTON_HEADER 
+ U2                  LM3914_PLCC_LM3914_LM3914_PLCC 
+ U3                  LSM9DS1_LGA-24L_LSM9DS1 
+ U4                  MCP73831_SOT235_MCP73831 
+ U5                  BNO055_BNO055_BNO055  
+ U6                  MAX17044_MAX17044_MAX17043 
+ U7                  AD5220_SOIC8_AD5220   
+ U8                  TPA2005D1DRB_SON8_TPA2005D1DRB 
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page  14  |
+|------------------------------------------------------------------------------|
+|  C:/USERS/MADISON/DESKTOP/GC/PHOTON_DEV/BREAKOUT/allegro/BREAKOUT.brd        |
+|                                                    Wed May 11 22:09:50 2016  |
+|------------------------------------------------------------------------------|
+| SLOT PROPERTIES added to design                                              |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   slot_id    |   x   |   y   |   property   |             value              |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ CN1.4                          PRIM_FILE      .\pstchip.dat
+ J1.9                           PRIM_FILE      .\pstchip.dat
+ J2.9                           PRIM_FILE      .\pstchip.dat
+ J3.9                           PRIM_FILE      .\pstchip.dat
+ J4.9                           PRIM_FILE      .\pstchip.dat
+ LS1.2                          PRIM_FILE      .\pstchip.dat
+ U1.5                           PRIM_FILE      .\pstchip.dat
+ U2.2                           PRIM_FILE      .\pstchip.dat
+ U3.3                           PRIM_FILE      .\pstchip.dat
+ U4.2                           PRIM_FILE      .\pstchip.dat
+ U5.26                          PRIM_FILE      .\pstchip.dat
+ U6.3                           PRIM_FILE      .\pstchip.dat
+ U7.5                           PRIM_FILE      .\pstchip.dat
+ U8.8                           PRIM_FILE      .\pstchip.dat
+|------------------------------------------------------------------------------|
+|   total ECO changes reported  338                                            |
+|------------------------------------------------------------------------------|

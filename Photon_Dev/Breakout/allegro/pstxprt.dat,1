@@ -1,0 +1,150 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 17.0.0 d001May-15-2016 at 21:34:28 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='BREAKOUT';
+ POST_TIME='Feb  9 2015 06:09:36';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ CN1 '3.5MM_5POS_3_5MMJACK_SJ1-3515N':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS263178@LIBRARY1.3.5MM_5POS.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins263178@library1.\3.5mm_5pos.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins263178@library1.\3.5mm_5pos.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'HEADER 40_HEADER40_HEADER 40':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS246944@CONNECTOR.HEADER 40.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins246944@connector.\header 40.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins246944@connector.\header 40.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'HEADER 40_HEADER40_HEADER 40':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS249403@CONNECTOR.HEADER 40.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins249403@connector.\header 40.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins249403@connector.\header 40.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J3 'HEADER 40_HEADER40_HEADER 40':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS256554@CONNECTOR.HEADER 40.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins256554@connector.\header 40.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins256554@connector.\header 40.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J4 'HEADER 40_HEADER40_HEADER 40':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS257682@CONNECTOR.HEADER 40.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins257682@connector.\header 40.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins257682@connector.\header 40.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ LS1 'SPEAKER_1_EC211_SDR08540M3-01':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS263230@PROTON_DEV.SPEAKER_1.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins263230@proton_dev.\speaker_1.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins263230@proton_dev.\speaker_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'PHOTON_HEADERLESS_P0_HEADERLESS':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS246562@LIBRARY1.PHOTON_HEADERLESS.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins246562@library1.\photon_headerless.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins246562@library1.\photon_headerless.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U2 'LM3914_PLCC_LM3914_PLCC_LM3914_':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS252490@LIBRARY1.LM3914_PLCC.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins252490@library1.\lm3914_plcc.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins252490@library1.\lm3914_plcc.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U3 'LSM9DS1_LGA-24L_LSM9DS1':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS253378@LIBRARY1.LSM9DS1.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins253378@library1.\lsm9ds1.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins253378@library1.\lsm9ds1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 'MCP73831_SOT235_MCP73831':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS262014@LIBRARY1.MCP73831.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins262014@library1.\mcp73831.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins262014@library1.\mcp73831.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U5 'BNO055_BNO055_BNO055':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS258351@LIBRARY1.BNO055.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins258351@library1.\bno055.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins258351@library1.\bno055.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'MAX17044_MAX17044_MAX17043':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS262492@LIBRARY1.MAX17044.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins262492@library1.\max17044.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins262492@library1.\max17044.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U7 'AD5220_SOIC8_AD5220':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS262857@LIBRARY1.AD5220.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins262857@library1.\ad5220.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins262857@library1.\ad5220.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U8 'TPA2005D1DRB_SON8_TPA2005D1DRB':;
+
+SECTION_NUMBER 1
+ '@BREAKOUT.SCHEMATIC1(SCH_1):INS263124@LIBRARY1.TPA2005D1DRB.NORMAL(CHIPS)':
+ C_PATH='@breakout.schematic1(sch_1):ins263124@library1.\tpa2005d1drb.normal\(chips)',
+ P_PATH='@breakout.schematic1(sch_1):page1_ins263124@library1.\tpa2005d1drb.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.

@@ -1,21 +1,19 @@
 (ExpressProject ""
   (ProjectVersion "19981106")
-  (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
-    (File ".\breakout.dsn"
-      (Type "Schematic Design"))
+    (File ".\library1.olb"
+      (Type "Schematic Library"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
     (NoModify))
   (Folder "Outputs")
   (Folder "Referenced Projects")
-  (PartMRUSelector)
   (MPSSessionName "Madison")
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Select "Design Resources" "Library"))
+      (Select "Design Resources" ".\library1.olb"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

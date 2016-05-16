@@ -1,0 +1,34 @@
+\t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Mon May 16 00:52:25 2016
+\t (00:00:01)         Host=MADISON-PC User=Madison Pid=10340 CPUs=4
+\t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Breakout\breakout_2_copy.brd
+\t (00:00:01) 
+\t (00:00:03) Opening existing design...
+\d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Breakout/breakout_2_copy.brd
+\i (00:00:03) trapsize 3003
+\i (00:00:03) trapsize 2945
+\i (00:00:03) trapsize 3010
+\i (00:00:03) trapsize 3071
+\i (00:00:03) trapsize 3071
+\i (00:00:03) generaledit 
+\i (00:00:07) pdf out 
+\i (00:00:09) setwindow form.pdf_out
+\i (00:00:09) FORM pdf_out selectall  
+\i (00:00:10) FORM pdf_out attrtree  Component 
+\i (00:00:10) FORM pdf_out property_parameters  
+\i (00:00:11) FORM pdf_out page_setup  
+\i (00:00:15) FORM pdf_out pdf_landscape NO 
+\i (00:00:16) FORM pdf_out pdf_export  
+\i (00:00:22) FORM pdf_out export  
+\t (00:00:22) Starting Exporting PDF File...
+\t (00:00:24) PDF output completed.
+\i (00:00:29) setwindow text
+\i (00:00:29) close 
+\i (00:00:33) setwindow form.pdf_out
+\i (00:00:33) FORM pdf_out cancel  
+\i (00:00:33) setwindow pcb
+\i (00:00:33) generaledit 
+\i (00:01:31) exit 
+\e (00:01:31) Do you want to save the changes you made to breakout_2_copy.brd?
+\i (00:01:33) fillin yes 
+\t (00:01:33)     Journal end - Mon May 16 00:53:58 2016

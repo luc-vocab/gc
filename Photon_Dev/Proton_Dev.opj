@@ -128,7 +128,8 @@
       (Path "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Outputs")
-      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1" "Audio"))
+      (Select "Design Resources" ".\proton_dev.dsn" "SCHEMATIC1"
+         "Connectors/ Push Buttons"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

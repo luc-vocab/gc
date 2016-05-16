@@ -1,0 +1,95 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\library1.olb"
+        (Type "Schematic Library")))
+    (File ".\breakout.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify)
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory" "allegro")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File"
+       "C:\Users\Madison\Desktop\gc\Photon_Dev\Breakout\breakout.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "NEITHER")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Output Warnings" "TRUE")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (Netlist_TAB "0"))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (GND
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 40"
+      (FullPartName "HEADER 40.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (LM3914_PLCC
+      (FullPartName "LM3914_PLCC.Normal")
+      (LibraryName
+         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\BREAKOUT\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (photon_headerless
+      (FullPartName "photon_headerless.Normal")
+      (LibraryName
+         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\BREAKOUT\LIBRARY1.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "Madison")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\breakout.dsn")
+      (Path "Design Resources" ".\breakout.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Select "Design Resources" ".\breakout.dsn" "SCHEMATIC1" "P01_Title "))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 476"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 100 1686 100 618")
+        (Scroll "-304 0")
+        (Zoom "46")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\BREAKOUT\BREAKOUT.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "P02_Particle"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 100 1783 100 618")
+        (Scroll "-178 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\BREAKOUT\BREAKOUT.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "P01_Title ")))
+  (ISPCBBASICLICENSE "false"))

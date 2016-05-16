@@ -1,0 +1,23 @@
+{ Using PSTWRITER 17.0.0 d001May-15-2016 at 22:45:22 }
+
+#1 WARNING(ORCAP-36038): "No_connect" property on Pin "U5.1" ignored for U5: SCHEMATIC1, P02_Particle (6.50, 5.50). Connecting pin to net "BNO055_PIN_1".
+#2 WARNING(ORCAP-36038): "No_connect" property on Pin "U5.7" ignored for U5: SCHEMATIC1, P02_Particle (6.50, 5.50). Connecting pin to net "BNO055_PIN_7".
+#3 WARNING(ORCAP-36038): "No_connect" property on Pin "U5.21" ignored for U5: SCHEMATIC1, P02_Particle (6.50, 5.50). Connecting pin to net "BNO055_PIN_21".
+#4 WARNING(ORCAP-36038): "No_connect" property on Pin "U5.22" ignored for U5: SCHEMATIC1, P02_Particle (6.50, 5.50). Connecting pin to net "BNO055_PIN_22".
+#5 WARNING(ORCAP-36038): "No_connect" property on Pin "U5.23" ignored for U5: SCHEMATIC1, P02_Particle (6.50, 5.50). Connecting pin to net "BNO055_PIN_23".
+#6 WARNING(ORCAP-36038): "No_connect" property on Pin "U5.24" ignored for U5: SCHEMATIC1, P02_Particle (6.50, 5.50). Connecting pin to net "BNO055_PIN_24".
+#7 WARNING(ORCAP-36038): "No_connect" property on Pin "U5.12" ignored for U5: SCHEMATIC1, P02_Particle (6.50, 5.50). Connecting pin to net "BNO055_PIN_12".
+#8 WARNING(ORCAP-36038): "No_connect" property on Pin "U5.13" ignored for U5: SCHEMATIC1, P02_Particle (6.50, 5.50). Connecting pin to net "BNO055_PIN_13".
+#9 WARNING(ORCAP-36038): "No_connect" property on Pin "U5.8" ignored for U5: SCHEMATIC1, P02_Particle (6.50, 5.50). Connecting pin to net "BNO055_PIN_8".
+#10 WARNING(ORCAP-36006): Part Name "PHOTON_HEADERLESS_P0_HEADERLESS_PHOTON_HEADERLESS" is renamed to "PHOTON_HEADERLESS_P0_HEADERLESS".
+#11 WARNING(ORCAP-36006): Part Name "LM3914_PLCC_LM3914_PLCC_LONG_LM3914_PLCC" is renamed to "LM3914_PLCC_LM3914_PLCC_LONG_LM".
+INFO(ORCAP-36080): Scanning netlist files ...
+
+Loading... C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\BREAKOUT\allegro/pstchip.dat
+
+Loading... C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\BREAKOUT\allegro/pstchip.dat
+
+Loading... C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\BREAKOUT\allegro/pstxprt.dat
+
+Loading... C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\BREAKOUT\allegro/pstxnet.dat
+packaging the design view...
