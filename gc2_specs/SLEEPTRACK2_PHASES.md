@@ -17,6 +17,8 @@ Connectors:
 
 Reference circuit:
 * https://cdn.sparkfun.com/datasheets/IoT/Photon_Battery_Shield_v10.pdf
+* In the above circuit, no need for the barrel connector,
+* No need for the alert pin
 
 Is it possible to have this board have the same footprint as the sleeptrack1 board ?
 
