@@ -3,7 +3,7 @@
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
-    (File ".\breakout.dsn"
+    (File ".\sleeptrack.dsn"
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
@@ -15,7 +15,8 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Select "Design Resources" "Library"))
+      (Path "Design Resources" ".\sleeptrack.dsn")
+      (Path "Design Resources" ".\sleeptrack.dsn" "SCHEMATIC1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

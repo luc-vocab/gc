@@ -1,0 +1,13 @@
+\t (00:00:00) padstack_editor 17.0 P003 (v17-0-118C) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Thu May 19 06:28:59 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=8504 CPUs=4
+\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaaaw02924.tmp -pname SMD99_99_PENT -data C:/Users/Madison/AppData/Local/Temp/#Taaaaay02924.tmp
+\t (00:00:00) 
+\d (00:00:02) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:00:07) QtSignal GuidedMaskLayersTab PadChamfer editingFinished 40.00
+\d (00:00:13) QtSignal GuidedMaskLayersTab PadChamfer editingFinished 49.00
+\d (00:00:16) QtSignal GuidedTabsParent GuidedTabs currentChanged "Design Layers"
+\d (00:00:18) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:00:25) QtSignal GuidedMaskLayersTab PadOffsetY editingFinished 10.24
+\d (00:00:27) QtSignal MainWindow UpdateToDesignExit triggered
+\t (00:00:27)     Journal end - Thu May 19 06:29:26 2016
