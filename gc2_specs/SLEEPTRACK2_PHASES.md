@@ -30,6 +30,9 @@ Chips:
 * BNO055 on the sleeptrack board
 * LSM9DS1 on a panneled small external board
 
+Reference circuit:
+* BNO055: https://ae-bst.resource.bosch.com/media/_tech/media/application_notes/BST-BNO055-AN007-00_Quick_Start_Guide.pdf
+
 Phase 3
 =======
 Everything from phase 2 + audio circuits
