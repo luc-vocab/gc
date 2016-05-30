@@ -31,7 +31,7 @@ Chips:
 * LSM9DS1 on a panneled small external board
 
 Reference circuit:
-* BNO055: https://ae-bst.resource.bosch.com/media/_tech/media/application_notes/BST-BNO055-AN007-00_Quick_Start_Guide.pdf
+* BNO055: https://cdn-learn.adafruit.com/assets/assets/000/024/546/original/sensors_BNO055_REV-C.png?1429569060
 
 Phase 3
 =======
