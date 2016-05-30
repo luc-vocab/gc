@@ -52,6 +52,9 @@ Everything from phase 3 + LED bar-chart
 Chips:
 * LM3914
 
+Datasheets:
+* LM3914: http://www.ti.com/lit/ds/symlink/lm3914.pdf
+
 Phase 5
 =======
 Everything from phase 4 + vibration motor driver
