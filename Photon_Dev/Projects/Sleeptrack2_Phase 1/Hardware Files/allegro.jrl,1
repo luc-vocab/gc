@@ -1,0 +1,14 @@
+\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Tue May 31 01:14:33 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=2800 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe
+\t (00:00:00) 
+\t (00:00:02) Opening existing design...
+\d (00:00:02) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1.brd
+\i (00:00:02) trapsize 94
+\i (00:00:02) trapsize 92
+\i (00:00:02) trapsize 94
+\i (00:00:02) trapsize 96
+\i (00:00:02) trapsize 96
+\i (00:00:02) exit 
+\t (00:00:02)     Journal end - Tue May 31 01:14:36 2016

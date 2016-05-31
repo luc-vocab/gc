@@ -7,10 +7,24 @@
     (File ".\sleeptrack2_phase1.dsn"
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
-    (CompileFileAddedOrDeleted "x"))
-  (Folder "Outputs")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "0"))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    ("12 HEADER"
+      (FullPartName "12 HEADER.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
     (GND
       (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0")))
@@ -18,11 +32,10 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 1\Hardware Files\sleeptrack2_phase1.dsn")
-      (Path "Design Resources"
-         "C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 1\Hardware Files\sleeptrack2_phase1.dsn"
-         "SCHEMATIC1"))
+      (Path "Design Resources" ".\sleeptrack2_phase1.dsn")
+      (Path "Design Resources" ".\sleeptrack2_phase1.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources" ".\sleeptrack2_phase1.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -33,8 +46,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 200 1883 200 718")
-        (Scroll "365 214")
-        (Zoom "144")
+        (Scroll "-270 0")
+        (Zoom "72")
         (Occurrence "/"))
       (Path
          "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 1\HARDWARE FILES\SLEEPTRACK2_PHASE1.DSN")
@@ -44,7 +57,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 50 1671 50 568")
-        (Scroll "59 101")
+        (Scroll "0 57")
         (Zoom "194")
         (Occurrence "/"))
       (Path
@@ -55,10 +68,22 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 125 1746 125 643")
-        (Scroll "-301 0")
+        (Scroll "55 278")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 1\HARDWARE FILES\SLEEPTRACK2_PHASE1.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "P03_Battery Circuit"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 100 1783 100 618")
+        (Scroll "-332 0")
         (Zoom "100")
         (Occurrence "/"))
       (Path
          "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 1\HARDWARE FILES\SLEEPTRACK2_PHASE1.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "P03_Battery Circuit"))))
+      (Page "P04_Connectors")))
+  (ISPCBBASICLICENSE "false"))
