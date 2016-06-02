@@ -1,42 +1,36 @@
-\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:00)     Journal start - Tue May 31 01:14:38 2016
-\t (00:00:00)         Host=MADISON-PC User=Madison Pid=7664 CPUs=4
-\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 1\Hardware Files\SLEEPTRACK2_PHASE1.brd
-\t (00:00:00) 
-\t (00:00:02) Opening existing design...
-\d (00:00:02) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1.brd
-\i (00:00:02) trapsize 94
-\i (00:00:02) trapsize 92
-\i (00:00:02) trapsize 94
-\i (00:00:02) trapsize 96
-\i (00:00:02) trapsize 96
-\i (00:00:02) placementedit 
-\i (00:00:18) pdf out 
-\i (00:00:20) setwindow form.pdf_out
-\i (00:00:20) FORM pdf_out selectall  
-\i (00:00:27) FORM pdf_out filename SLEEPTRACK2_PHASE1_PCB 
-\i (00:00:27) FORM pdf_out browse  
-\i (00:00:35) fillin "C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 1\Documents\PDF\SLEEPTRACK2_PHASE1_PCB.pdf"
-\i (00:00:46) FORM pdf_out data_pin YES 
-   (00:00:46) The overhead of creating property links for PINs is very high, PDF size will increase dramatically.
-\i (00:00:50) fillin confirm
-\i (00:00:51) FORM pdf_out data_via YES 
-   (00:00:51) The overhead of creating property links for VIAs is very high, PDF size will increase dramatically.
-\i (00:00:52) fillin confirm
-\i (00:00:53) FORM pdf_out data_cline YES 
-   (00:00:53) The overhead of creating property links for CLINEs is very high, PDF size will increase dramatically.
-\i (00:00:54) fillin confirm
-\i (00:00:55) FORM pdf_out data_shape YES 
-\i (00:01:00) FORM pdf_out pad_filled YES 
-\i (00:01:01) FORM pdf_out fill_shapes YES 
-\i (00:01:20) FORM pdf_out export  
-\t (00:01:20) Starting Exporting PDF File...
-\t (00:01:24) PDF output completed.
-\i (00:01:55) FORM pdf_out cancel  
-\i (00:01:55) setwindow pcb
-\i (00:01:55) placementedit 
-\i (00:01:57) save 
-\i (00:01:58) fillin yes 
-\i (00:01:58) placementedit 
-\i (00:02:00) exit 
-\t (00:02:00)     Journal end - Tue May 31 01:16:38 2016
+\t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Wed Jun 01 22:09:57 2016
+\t (00:00:01)         Host=MADISON-PC User=Madison Pid=6868 CPUs=4
+\t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 1\Hardware Files\SLEEPTRACK2_PHASE1.brd
+\t (00:00:01) 
+\t (00:00:03) Opening existing design...
+\d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1.brd
+\i (00:00:03) trapsize 390
+\i (00:00:03) trapsize 383
+\i (00:00:03) trapsize 391
+\i (00:00:03) trapsize 399
+\i (00:00:03) trapsize 399
+\i (00:00:04) placementedit 
+\i (00:00:09) pdf out 
+\i (00:00:11) setwindow form.pdf_out
+\i (00:00:11) FORM pdf_out selectall  
+\i (00:00:12) FORM pdf_out attrtree  Component 
+\i (00:00:12) FORM pdf_out property_parameters  
+\i (00:00:13) FORM pdf_out pdf_export  
+\i (00:00:14) FORM pdf_out page_setup  
+\i (00:00:18) FORM pdf_out pdf_export  
+\i (00:00:19) FORM pdf_out property_parameters  
+\i (00:00:21) FORM pdf_out page_setup  
+\i (00:00:24) FORM pdf_out pdf_export  
+\i (00:00:26) FORM pdf_out browse  
+\i (00:00:43) fillin "C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 1\Documents\PDF\SLEEPTRACK2_PHASE1_PCB.pdf"
+\i (00:00:46) FORM pdf_out export  
+\t (00:00:46) Starting Exporting PDF File...
+\t (00:00:49) PDF output completed.
+\i (00:01:04) FORM pdf_out cancel  
+\i (00:01:04) setwindow pcb
+\i (00:01:04) placementedit 
+\i (00:01:05) exit 
+\e (00:01:05) Do you want to save the changes you made to SLEEPTRACK2_PHASE1.brd?
+\i (00:01:07) fillin yes 
+\t (00:01:07)     Journal end - Wed Jun 01 22:11:02 2016

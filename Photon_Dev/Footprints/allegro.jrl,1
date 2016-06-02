@@ -1,15 +1,23 @@
 \t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:00)     Journal start - Sun Feb 07 17:40:52 2016
-\t (00:00:00)         Host=MADISON-PC User=Madison Pid=9644 CPUs=4
-\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Footprints\MRBA140.dra
+\t (00:00:00)     Journal start - Tue May 31 00:46:20 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=1128 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Footprints\jst-2POS.dra
 \t (00:00:00) 
 \t (00:00:00) Opening existing design...
-\d (00:00:00) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Footprints/MRBA140.dra
-\i (00:00:00) trapsize 81
-\i (00:00:00) trapsize 79
-\i (00:00:00) trapsize 81
-\i (00:00:00) trapsize 79
-\i (00:00:00) trapsize 79
-\i (00:00:00) generaledit 
-\i (00:00:02) exit 
-\t (00:00:02)     Journal end - Sun Feb 07 17:40:54 2016
+\d (00:00:00) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Footprints/jst-2POS.dra
+\i (00:00:00) trapsize 3
+\i (00:00:00) trapsize 3
+\i (00:00:01) zoom in 1 
+\i (00:00:01) setwindow pcb
+\i (00:00:01) zoom in -83 -9
+\i (00:00:01) trapsize 2
+\i (00:00:01) zoom out 1 
+\i (00:00:01) setwindow pcb
+\i (00:00:01) zoom out -83 -9
+\i (00:00:01) trapsize 3
+\i (00:00:06) save_as 
+\i (00:00:53) fillin "C:\Cadence\SPB_17.0\share\pcb\pcb_lib\symbols\jst.dra"
+\i (00:00:53) cd "C:\Cadence\SPB_17.0\share\pcb\pcb_lib\symbols"
+\t (00:00:53) Symbol 'jst.psm' created.
+\i (00:00:55) exit 
+\t (00:00:55)     Journal end - Tue May 31 00:47:15 2016

@@ -1,23 +1,70 @@
 \t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:00)     Journal start - Tue May 31 00:46:20 2016
-\t (00:00:00)         Host=MADISON-PC User=Madison Pid=1128 CPUs=4
-\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Footprints\jst-2POS.dra
+\t (00:00:00)     Journal start - Wed Jun 01 21:57:41 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=8988 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Footprints\MountingHole_4_40.dra
 \t (00:00:00) 
 \t (00:00:00) Opening existing design...
-\d (00:00:00) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Footprints/jst-2POS.dra
-\i (00:00:00) trapsize 3
-\i (00:00:00) trapsize 3
-\i (00:00:01) zoom in 1 
-\i (00:00:01) setwindow pcb
-\i (00:00:01) zoom in -83 -9
-\i (00:00:01) trapsize 2
-\i (00:00:01) zoom out 1 
-\i (00:00:01) setwindow pcb
-\i (00:00:01) zoom out -83 -9
-\i (00:00:01) trapsize 3
-\i (00:00:06) save_as 
-\i (00:00:53) fillin "C:\Cadence\SPB_17.0\share\pcb\pcb_lib\symbols\jst.dra"
-\i (00:00:53) cd "C:\Cadence\SPB_17.0\share\pcb\pcb_lib\symbols"
-\t (00:00:53) Symbol 'jst.psm' created.
-\i (00:00:55) exit 
-\t (00:00:55)     Journal end - Tue May 31 00:47:15 2016
+\d (00:00:00) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Footprints/MountingHole_4_40.dra
+\i (00:00:00) trapsize 616
+\i (00:00:00) trapsize 604
+\i (00:00:00) trapsize 618
+\i (00:00:00) trapsize 630
+\i (00:00:01) trapsize 630
+\i (00:00:01) trapsize 1631
+\i (00:00:01) trapsize 606
+\i (00:00:05) save_as 
+\i (00:00:42) fillin "menu_cancel"
+\i (00:00:43) zoom in 1 
+\i (00:00:43) setwindow pcb
+\i (00:00:43) zoom in 44.56 -72.00
+\i (00:00:43) trapsize 303
+\i (00:00:43) zoom in 1 
+\i (00:00:43) setwindow pcb
+\i (00:00:43) zoom in 44.56 -71.39
+\i (00:00:43) trapsize 151
+\i (00:00:43) zoom out 1 
+\i (00:00:43) setwindow pcb
+\i (00:00:43) zoom out 32.74 -65.63
+\i (00:00:43) trapsize 303
+\i (00:00:43) zoom out 1 
+\i (00:00:43) setwindow pcb
+\i (00:00:43) zoom out 24.26 -68.66
+\i (00:00:43) trapsize 606
+\i (00:00:43) zoom in 1 
+\i (00:00:43) setwindow pcb
+\i (00:00:43) zoom in -2.39 67.05
+\i (00:00:43) trapsize 303
+\i (00:00:44) zoom in 1 
+\i (00:00:44) setwindow pcb
+\i (00:00:44) zoom in -2.38 67.06
+\i (00:00:44) trapsize 151
+\i (00:00:44) zoom in 1 
+\i (00:00:44) setwindow pcb
+\i (00:00:44) zoom in -2.38 67.06
+\i (00:00:44) trapsize 76
+\i (00:00:44) zoom out 1 
+\i (00:00:44) setwindow pcb
+\i (00:00:44) zoom out 1.41 36.92
+\i (00:00:44) trapsize 151
+\i (00:00:44) zoom out 1 
+\i (00:00:44) setwindow pcb
+\i (00:00:44) zoom out -0.41 32.99
+\i (00:00:44) trapsize 303
+\i (00:00:45) zoom in 1 
+\i (00:00:45) setwindow pcb
+\i (00:00:45) zoom in 9.27 -43.35
+\i (00:00:45) trapsize 151
+\i (00:00:45) zoom in 1 
+\i (00:00:45) setwindow pcb
+\i (00:00:45) zoom in 9.27 -43.05
+\i (00:00:45) trapsize 76
+\i (00:00:45) zoom out 1 
+\i (00:00:45) setwindow pcb
+\i (00:00:45) zoom out 9.73 -42.90
+\i (00:00:45) trapsize 151
+\i (00:00:45) zoom out 1 
+\i (00:00:45) setwindow pcb
+\i (00:00:45) zoom out 9.72 -42.89
+\i (00:00:45) trapsize 303
+\i (00:11:54) exit 
+\t (00:11:54)     Journal end - Wed Jun 01 22:09:35 2016
