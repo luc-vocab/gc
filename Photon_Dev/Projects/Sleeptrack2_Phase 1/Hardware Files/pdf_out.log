@@ -3,12 +3,14 @@
 (    PDF Export                                                       )
 (                                                                     )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Wed Jun 01 22:10:42 2016                      )
+(    Date/Time        : Thu Jun 09 07:17:12 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 
-Output file: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 1/Documents/PDF/SLEEPTRACK2_PHASE1_PCB.pdf
+Warning: Scale factor 1.000 is too big and was adjusted to 0.000 to fit the page Silkscreen_Bottom.
+
+Output file: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 1/Documents/PDF/Sleeptrack2_Phase_1__SLEEPTRACK2_PHASE1_PCB__V1.pdf
 Design file: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1.brd
 pdf_out complete.

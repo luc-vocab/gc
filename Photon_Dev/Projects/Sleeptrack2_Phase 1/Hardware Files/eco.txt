@@ -2,38 +2,243 @@
 |                                 ECO   REPORT                                 |
 |                                                                    Page   1  |
 |------------------------------------------------------------------------------|
-|  C:.../Projects/Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1.brd    |
-|                                                    Tue May 31 00:47:58 2016  |
+|  C:.../Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1_rounded.brd     |
+|                                                    Wed Jun 08 23:53:13 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  3V3          pins ADDED TO this new net
+                                 C3.1           J2.1           J4.4           
+                                 J9.1           U2.3           U3.24          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  A0           pins ADDED TO this new net
+                                 J1.12          J9.3           U3.12          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  D0           pins ADDED TO this new net
+                                 J2.12          J4.3           U2.8           
+                                 U3.13          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  D1           pins ADDED TO this new net
+                                 J2.11          J4.2           U2.7           
+                                 U3.14          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  GND          pins ADDED TO this new net
+                                 C1.2           C2.2           C3.2           
+                                 J1.2           J2.4           J3.1           
+                                 J4.1           J9.2           R2.2           
+                                 R4.2           U1.2           U2.1           
+                                 U2.4           U3.2           U3.21          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N229570      pins ADDED TO this new net
+                                 R2.1           U1.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N229822      pins ADDED TO this new net
+                                 R4.1           U2.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N229826      pins ADDED TO this new net
+                                 R3.2           U2.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N254633      pins ADDED TO this new net
+                                 J3.2           SW1.2          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N2294880     pins ADDED TO this new net
+                                 D2.1           U1.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N2296021     pins ADDED TO this new net
+                                 D2.2           R1.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A1    pins ADDED TO this new net
+                                 J1.11          U3.11          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A2    pins ADDED TO this new net
+                                 J1.10          U3.10          
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   2  |
+|------------------------------------------------------------------------------|
+|  C:.../Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1_rounded.brd     |
+|                                                    Wed Jun 08 23:53:13 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  PHOTON_A3    pins ADDED TO this new net
+                                 J1.9           U3.9           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A4    pins ADDED TO this new net
+                                 J1.8           U3.8           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_A5    pins ADDED TO this new net
+                                 J1.7           U3.7           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D2    pins ADDED TO this new net
+                                 J2.10          U3.15          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D3    pins ADDED TO this new net
+                                 J2.9           U3.16          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D4    pins ADDED TO this new net
+                                 J2.8           U3.17          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D5    pins ADDED TO this new net
+                                 J2.7           U3.18          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D6    pins ADDED TO this new net
+                                 J2.6           U3.19          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_D7    pins ADDED TO this new net
+                                 J2.5           U3.20          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_DAC   pins ADDED TO this new net
+                                 J1.6           U3.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RGB_BLUE pins ADDED TO this new net
+                                 U3.29          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RGB_GREEN pins ADDED TO this new net
+                                 U3.28          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RGB_RED pins ADDED TO this new net
+                                 U3.27          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RST   pins ADDED TO this new net
+                                 J2.2           U3.23          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_RX    pins ADDED TO this new net
+                                 J1.4           U3.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   3  |
+|------------------------------------------------------------------------------|
+|  C:.../Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1_rounded.brd     |
+|                                                    Wed Jun 08 23:53:13 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  PHOTON_SETUP pins ADDED TO this new net
+                                 U3.26          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_SMPS  pins ADDED TO this new net
+                                 U3.25          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_TX    pins ADDED TO this new net
+                                 J1.3           U3.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_USB+  pins ADDED TO this new net
+                                 U3.30          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_USB-  pins ADDED TO this new net
+                                 U3.31          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_VBAT  pins ADDED TO this new net
+                                 J2.3           U3.22          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PHOTON_WKP   pins ADDED TO this new net
+                                 J1.5           U3.5           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  VBAT         pins ADDED TO this new net
+                                 C2.1           D4.1           R3.1           
+                                 SW1.1          TP2.1          U1.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  VIN          pins ADDED TO this new net
+                                 C1.1           D4.2           J1.1           
+                                 R1.1           TP5.1          U1.4           
+                                 U3.1           
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   4  |
+|------------------------------------------------------------------------------|
+|  C:.../Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1_rounded.brd     |
+|                                                    Wed Jun 08 23:53:13 2016  |
 |------------------------------------------------------------------------------|
 | COMPONENT DEFINITION added to design                                         |
 |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 |    device type                                                               |
 |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ 12 HEADER_JUMPER12_12 HEADER
+ 4 HEADER_JUMPER4_4 HEADER
+ CAP NP_0603RF_WV_12D_1UF
+ CAP NP_0603RF_WV_12D_4.7UF
+ DIODE SCHOTTKY_MRBA140_MBRA140
+ HEADER 3_JUMPER3_HEADER 3
  JST-2_JST_JST-2
+ LED_0603RF_WV_12D_RED
+ MAX17044_MAX17044_MAX17043
+ MCP73831_SOT235_MCP73831
+ PHOTON_HEADERLESS_P0_HEADERLESS
+ RESISTOR_0603RF_WV_12D_330
+ RESISTOR_0603RF_WV_12D_1K
+ RESISTOR_0603RF_WV_12D_2K
+ SW KEY-Y1011_0_NEW_SS12SDH2_SS1
+ T POINT R_TESTPOINT_SMD_T POINT
 |------------------------------------------------------------------------------|
 |                                 ECO   REPORT                                 |
-|                                                                    Page   2  |
+|                                                                    Page   5  |
 |------------------------------------------------------------------------------|
-|  C:.../Projects/Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1.brd    |
-|                                                    Tue May 31 00:47:58 2016  |
+|  C:.../Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1_rounded.brd     |
+|                                                    Wed Jun 08 23:53:13 2016  |
 |------------------------------------------------------------------------------|
-| COMPONENTS CHANGED from one device type to another in design                 |
+| COMPONENTS ADDED to design                                                   |
 |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-|    ref des        | new device type     |   x   |   y   |  old  device type  |
+|    ref des        |    device type                                           |
 |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
- J3                  JST-2_JST_JST-2                       JST-2_JST-2POS_JST-2
+ C1                  CAP NP_0603RF_WV_12D_4.7UF 
+ C2                  CAP NP_0603RF_WV_12D_4.7UF 
+ C3                  CAP NP_0603RF_WV_12D_1UF 
+ D2                  LED_0603RF_WV_12D_RED 
+ D4                  DIODE SCHOTTKY_MRBA140_MBRA140 
+ J1                  12 HEADER_JUMPER12_12 HEADER 
+ J2                  12 HEADER_JUMPER12_12 HEADER 
+ J3                  JST-2_JST_JST-2       
+ J4                  4 HEADER_JUMPER4_4 HEADER 
+ J9                  HEADER 3_JUMPER3_HEADER 3 
+ R1                  RESISTOR_0603RF_WV_12D_330 
+ R2                  RESISTOR_0603RF_WV_12D_2K 
+ R3                  RESISTOR_0603RF_WV_12D_1K 
+ R4                  RESISTOR_0603RF_WV_12D_1K 
+ SW1                 SW KEY-Y1011_0_NEW_SS12SDH2_SS1 
+ TP2                 T POINT R_TESTPOINT_SMD_T POINT 
+ TP5                 T POINT R_TESTPOINT_SMD_T POINT 
+ U1                  MCP73831_SOT235_MCP73831 
+ U2                  MAX17044_MAX17044_MAX17043 
+ U3                  PHOTON_HEADERLESS_P0_HEADERLESS 
 |------------------------------------------------------------------------------|
 |                                 ECO   REPORT                                 |
-|                                                                    Page   3  |
+|                                                                    Page   6  |
 |------------------------------------------------------------------------------|
-|  C:.../Projects/Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1.brd    |
-|                                                    Tue May 31 00:47:58 2016  |
+|  C:.../Sleeptrack2_Phase 1/Hardware Files/SLEEPTRACK2_PHASE1_rounded.brd     |
+|                                                    Wed Jun 08 23:53:13 2016  |
 |------------------------------------------------------------------------------|
 | SLOT PROPERTIES added to design                                              |
 |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 |   slot_id    |   x   |   y   |   property   |             value              |
 |- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ C1.2                           PRIM_FILE      .\pstchip.dat
+ C2.2                           PRIM_FILE      .\pstchip.dat
+ C3.2                           PRIM_FILE      .\pstchip.dat
+ D2.1                           PRIM_FILE      .\pstchip.dat
+ D4.2                           PRIM_FILE      .\pstchip.dat
+ J1.9                           PRIM_FILE      .\pstchip.dat
+ J2.9                           PRIM_FILE      .\pstchip.dat
  J3.2                           PRIM_FILE      .\pstchip.dat
+ J4.4                           PRIM_FILE      .\pstchip.dat
+ J9.3                           PRIM_FILE      .\pstchip.dat
+ R1.2                           PRIM_FILE      .\pstchip.dat
+ R2.2                           PRIM_FILE      .\pstchip.dat
+ R3.2                           PRIM_FILE      .\pstchip.dat
+ R4.2                           PRIM_FILE      .\pstchip.dat
+ SW1.3                          PRIM_FILE      .\pstchip.dat
+ TP2.1                          PRIM_FILE      .\pstchip.dat
+ TP5.1                          PRIM_FILE      .\pstchip.dat
+ U1.2                           PRIM_FILE      .\pstchip.dat
+ U2.3                           PRIM_FILE      .\pstchip.dat
+ U3.5                           PRIM_FILE      .\pstchip.dat
 |------------------------------------------------------------------------------|
-|   total ECO changes reported  3                                              |
+|   total ECO changes reported  154                                            |
 |------------------------------------------------------------------------------|
