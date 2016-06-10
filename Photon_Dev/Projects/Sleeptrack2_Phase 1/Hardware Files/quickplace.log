@@ -1,0 +1,39 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    QUICKPLACE LOG                                                   )
+(                                                                     )
+(    Drawing          : SLEEPTRACK2_PHASE1_rounded.brd                )
+(    Software Version : 17.0P011                                      )
+(    Date/Time        : Wed Jun 08 23:53:25 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+State: Placing on layer TOP
+
+         Placed symbol:  U3 / PHOTON_HEADERLESS_P0_HEADERLESS / P0_HEADERLESS at (-789.00 2016.00)
+         Placed symbol:  J2 / 12 HEADER_JUMPER12_12 HEADER / JUMPER12 at (-273.50 1883.00)
+         Placed symbol:  J1 / 12 HEADER_JUMPER12_12 HEADER / JUMPER12 at (-155.50 1883.00)
+         Placed symbol:  U2 / MAX17044_MAX17044_MAX17043 / MAX17044 at (-19.36 1317.06)
+         Placed symbol:  U1 / MCP73831_SOT235_MCP73831 / SOT235 at (136.77 1345.50)
+         Placed symbol:  J4 / 4 HEADER_JUMPER4_4 HEADER / JUMPER4 at (269.77 1318.00)
+         Placed symbol:  SW1 / SW KEY-Y1011_0_NEW_SS12SDH2_SS1 / NEW_SS12SDH2 at (804.94 1458.79)
+         Placed symbol:  J9 / HEADER 3_JUMPER3_HEADER 3 / JUMPER3 at (941.68 1308.00)
+         Placed symbol:  J3 / JST-2_JST_JST-2 / JST at (-1094.00 2876.00)
+         Placed symbol:  D4 / DIODE SCHOTTKY_MRBA140_MBRA140 / MRBA140 at (-832.48 2834.17)
+         Placed symbol:  D2 / LED_0603RF_WV_12D_RED / 0603RF_WV_12D at (-633.97 2827.00)
+         Placed symbol:  C3 / CAP NP_0603RF_WV_12D_1UF / 0603RF_WV_12D at (-455.97 2827.00)
+         Placed symbol:  R3 / RESISTOR_0603RF_WV_12D_1K / 0603RF_WV_12D at (-277.97 2827.00)
+         Placed symbol:  R4 / RESISTOR_0603RF_WV_12D_1K / 0603RF_WV_12D at (-99.97 2827.00)
+         Placed symbol:  R2 / RESISTOR_0603RF_WV_12D_2K / 0603RF_WV_12D at (78.03 2827.00)
+         Placed symbol:  C2 / CAP NP_0603RF_WV_12D_4.7UF / 0603RF_WV_12D at (256.03 2827.00)
+         Placed symbol:  R1 / RESISTOR_0603RF_WV_12D_330 / 0603RF_WV_12D at (434.03 2827.00)
+         Placed symbol:  C1 / CAP NP_0603RF_WV_12D_4.7UF / 0603RF_WV_12D at (612.03 2827.00)
+         Placed symbol:  TP5 / T POINT R_TESTPOINT_SMD_T POINT / TESTPOINT_SMD at (729.64 2806.61)
+         Placed symbol:  TP2 / T POINT R_TESTPOINT_SMD_T POINT / TESTPOINT_SMD at (786.86 2806.61)
+
+
+Placed 20 of 20 applicable (20 total) symbols.
+
+-----------------------------------------------------------------------
+

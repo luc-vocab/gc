@@ -1,101 +1,195 @@
-\t (00:00:06) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:06)     Journal start - Thu Jun 09 23:16:19 2016
-\t (00:00:06)         Host=MADISON-PC User=Madison Pid=10028 CPUs=4
-\t (00:00:06) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack1\Hardware Files\Sleep_Track_V3.brd
-\t (00:00:06) 
-\t (00:00:06) Opening existing design...
-\d (00:00:06) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack1/Hardware Files/Sleep_Track_V3.brd
-\i (00:00:06) trapsize 97
-\i (00:00:06) trapsize 95
-\i (00:00:06) trapsize 97
-\i (00:00:07) trapsize 99
-\i (00:00:07) trapsize 99
-\i (00:00:07) generaledit 
-\i (00:00:08) zoom out 1 
-\i (00:00:08) setwindow pcb
-\i (00:00:08) zoom out -1409.79 1702.89
-\i (00:00:08) trapsize 199
-\i (00:00:08) zoom out 1 
-\i (00:00:08) setwindow pcb
-\i (00:00:08) zoom out -1434.02 1702.50
-\i (00:00:08) trapsize 397
-\i (00:00:08) zoom out 1 
-\i (00:00:08) setwindow pcb
-\i (00:00:08) zoom out -1497.57 1702.50
-\i (00:00:08) trapsize 794
-\i (00:00:08) zoom out 1 
-\i (00:00:08) setwindow pcb
-\i (00:00:08) zoom out -1621.48 1707.26
-\i (00:00:08) trapsize 1589
-\i (00:00:09) zoom out 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom out -2504.80 1650.07
-\i (00:00:09) trapsize 3177
-\i (00:00:11) setwindow form.mini
-\i (00:00:11) FORM mini subcolor 0 
-\i (00:00:13) FORM mini subclass BOTTOM 
-\i (00:00:13) FORM mini subcolor 0 
-\i (00:00:14) FORM mini subclass GROUND 
-\i (00:00:15) FORM mini subcolor 1 
-\i (00:00:16) setwindow pcb
-\i (00:00:16) zoom in 1 
-\i (00:00:16) setwindow pcb
-\i (00:00:16) zoom in 416.24 -33.94
-\i (00:00:16) trapsize 1589
-\i (00:00:16) zoom in 1 
-\i (00:00:16) setwindow pcb
-\i (00:00:16) zoom in 374.93 -53.00
-\i (00:00:16) trapsize 794
-\i (00:00:16) zoom in 1 
-\i (00:00:16) setwindow pcb
-\i (00:00:16) zoom in -36.53 16.90
-\i (00:00:16) trapsize 397
-\i (00:00:16) zoom out 1 
-\i (00:00:16) setwindow pcb
-\i (00:00:16) zoom out -15.08 37.56
-\i (00:00:16) trapsize 794
-\i (00:00:17) prepopup -54.81 167.83
-\i (00:00:21) pop dyn_option_select 'Selection set@:@Select by Polygon' 
-\i (00:00:22) pick grid -89.76 163.06
-\t (00:00:22) last pick:  -89.70 163.02
-\i (00:00:23) prepopup -59.57 158.30
-\i (00:00:24) cancel 
-\i (00:00:25) generaledit 
-\i (00:00:27) prepopup -53.22 150.35
-\i (00:00:27) pick grid -64.34 137.64
-\t (00:00:27) last pick:  -64.35 137.67
-\i (00:00:28) zoom out 1 
-\i (00:00:28) setwindow pcb
-\i (00:00:28) zoom out 269.28 217.08
-\i (00:00:28) trapsize 1589
-\i (00:00:29) zoom in 1 
-\i (00:00:29) setwindow pcb
-\i (00:00:29) zoom in -966.71 499.86
-\i (00:00:29) trapsize 794
-\i (00:00:29) zoom in 1 
-\i (00:00:29) setwindow pcb
-\i (00:00:29) zoom in -977.83 506.22
-\i (00:00:29) trapsize 397
-\i (00:00:29) zoom in 1 
-\i (00:00:29) setwindow pcb
-\i (00:00:29) zoom in -977.83 506.22
-\i (00:00:29) trapsize 199
-\i (00:00:32) pick grid -993.71 504.24
-\t (00:00:32) last pick:  -993.72 504.27
-\i (00:00:33) zoom out 1 
-\i (00:00:33) setwindow pcb
-\i (00:00:33) zoom out -978.62 505.83
-\i (00:00:33) trapsize 397
-\i (00:00:33) zoom out 1 
-\i (00:00:33) setwindow pcb
-\i (00:00:33) zoom out -979.42 505.83
-\i (00:00:33) trapsize 794
-\i (00:00:34) prepopup -976.24 505.83
-\i (00:00:36) pop dyn_option_select '@:@Show element' 
-\i (00:00:36) show element 
-\i (00:00:36) generaledit 
-\i (00:00:50) setwindow text
-\i (00:00:50) close 
-\i (00:03:46) setwindow pcb
-\i (00:03:46) exit 
-\t (00:03:46)     Journal end - Thu Jun 09 23:19:59 2016
+\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Wed Jun 01 21:52:54 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=9720 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack1\Hardware Files\Sleep_Track_V3.brd
+\t (00:00:00) 
+\t (00:00:00) Opening existing design...
+\d (00:00:00) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack1/Hardware Files/Sleep_Track_V3.brd
+\i (00:00:00) trapsize 97
+\i (00:00:00) trapsize 95
+\i (00:00:00) trapsize 97
+\i (00:00:00) trapsize 99
+\i (00:00:00) trapsize 99
+\i (00:00:00) placementedit 
+\i (00:00:01) zoom out 1 
+\i (00:00:01) setwindow pcb
+\i (00:00:01) zoom out -1413.76 1643.12
+\i (00:00:01) trapsize 199
+\i (00:00:01) zoom out 1 
+\i (00:00:01) setwindow pcb
+\i (00:00:01) zoom out -1421.71 1644.71
+\i (00:00:01) trapsize 397
+\i (00:00:01) zoom out 1 
+\i (00:00:01) setwindow pcb
+\i (00:00:01) zoom out -1434.42 1653.44
+\i (00:00:01) trapsize 794
+\i (00:00:01) zoom out 1 
+\i (00:00:01) setwindow pcb
+\i (00:00:01) zoom out -1443.95 1664.56
+\i (00:00:01) trapsize 1589
+\i (00:00:01) zoom out 1 
+\i (00:00:01) setwindow pcb
+\i (00:00:01) zoom out -1450.31 1744.00
+\i (00:00:01) trapsize 3177
+\i (00:00:02) zoom in 1 
+\i (00:00:02) setwindow pcb
+\i (00:00:02) zoom in -943.67 570.62
+\i (00:00:02) trapsize 1589
+\i (00:00:02) zoom in 1 
+\i (00:00:02) setwindow pcb
+\i (00:00:02) zoom in -997.68 611.93
+\i (00:00:02) trapsize 794
+\i (00:00:02) zoom in 1 
+\i (00:00:02) setwindow pcb
+\i (00:00:02) zoom in -948.43 653.24
+\i (00:00:02) trapsize 397
+\i (00:00:06) prepopup -934.13 917.75
+\i (00:00:07) pop dyn_option_select '@:@Show element' 
+\i (00:00:07) show element 
+\i (00:00:08) placementedit 
+\i (00:00:23) pick grid -988.15 1027.37
+\t (00:00:23) last pick:  -988.13 1027.39
+\i (00:00:23) zoom in 1 
+\i (00:00:23) setwindow pcb
+\i (00:00:23) zoom in -949.22 972.56
+\i (00:00:23) trapsize 199
+\i (00:00:23) zoom in 1 
+\i (00:00:23) setwindow pcb
+\i (00:00:23) zoom in -949.22 972.56
+\i (00:00:23) trapsize 99
+\i (00:00:23) zoom in 1 
+\i (00:00:23) setwindow pcb
+\i (00:00:23) zoom in -949.21 972.57
+\i (00:00:23) trapsize 50
+\i (00:00:24) zoom out 1 
+\i (00:00:24) setwindow pcb
+\i (00:00:24) zoom out -931.83 950.53
+\i (00:00:24) trapsize 99
+\i (00:00:37) setwindow text
+\i (00:00:37) close 
+\i (00:00:40) setwindow pcb
+\i (00:00:40) prepopup -897.28 926.49
+\i (00:00:42) pop dyn_option_select '@:@Show element' 
+\i (00:00:42) show element 
+\i (00:00:42) placementedit 
+\i (00:02:31) trapsize 257
+\i (00:02:32) trapsize 95
+\i (00:02:33) prepopup -927.52 929.07
+\i (00:02:34) pop dyn_option_select @:@Copy 
+\i (00:02:34) copy 
+\t (00:02:34) Mirror Geometry is not available for symbols or stand alone pins.
+\i (00:02:35) zoom out 1 
+\i (00:02:35) setwindow pcb
+\i (00:02:35) zoom out -958.64 950.45
+\i (00:02:35) trapsize 191
+\i (00:02:35) zoom out 1 
+\i (00:02:35) setwindow pcb
+\i (00:02:35) zoom out -958.64 950.45
+\i (00:02:35) trapsize 382
+\i (00:02:42) pick grid -1397.71 963.43
+\t (00:02:42) last pick:  -1397.76 963.43
+\i (00:02:43) prepopup -1279.35 942.81
+\i (00:02:44) cancel 
+\i (00:02:44) placementedit 
+\i (00:02:45) zoom out 1 
+\i (00:02:45) setwindow pcb
+\i (00:02:45) zoom out -1177.79 862.64
+\i (00:02:45) trapsize 764
+\i (00:02:45) zoom out 1 
+\i (00:02:45) setwindow pcb
+\i (00:02:45) zoom out -1261.79 893.18
+\i (00:02:45) trapsize 1527
+\i (00:02:46) zoom in 1 
+\i (00:02:46) setwindow pcb
+\i (00:02:46) zoom in 100.48 688.53
+\i (00:02:46) trapsize 764
+\i (00:02:46) zoom in 1 
+\i (00:02:46) setwindow pcb
+\i (00:02:46) zoom in 100.48 688.54
+\i (00:02:46) trapsize 382
+\i (00:02:46) zoom out 1 
+\i (00:02:46) setwindow pcb
+\i (00:02:46) zoom out -160.67 741.99
+\i (00:02:46) trapsize 764
+\i (00:02:46) zoom out 1 
+\i (00:02:46) setwindow pcb
+\i (00:02:46) zoom out -221.75 766.43
+\i (00:02:46) trapsize 1527
+\i (00:02:47) zoom in 1 
+\i (00:02:47) setwindow pcb
+\i (00:02:47) zoom in -224.80 329.64
+\i (00:02:47) trapsize 764
+\i (00:02:47) zoom out 1 
+\i (00:02:47) setwindow pcb
+\i (00:02:47) zoom out -285.88 653.41
+\i (00:02:47) trapsize 1527
+\i (00:02:48) zoom out 1 
+\i (00:02:48) setwindow pcb
+\i (00:02:48) zoom out -200.36 460.99
+\i (00:02:48) trapsize 3054
+\i (00:02:48) zoom in 1 
+\i (00:02:48) setwindow pcb
+\i (00:02:48) zoom in -486.61 -339.26
+\i (00:02:48) trapsize 1527
+\i (00:02:48) zoom in 1 
+\i (00:02:48) setwindow pcb
+\i (00:02:48) zoom in -486.61 -339.26
+\i (00:02:48) trapsize 764
+\i (00:02:48) zoom in 1 
+\i (00:02:48) setwindow pcb
+\i (00:02:48) zoom in -486.60 -339.25
+\i (00:02:48) trapsize 382
+\i (00:02:49) zoom out 1 
+\i (00:02:49) setwindow pcb
+\i (00:02:49) zoom out -487.37 -335.43
+\i (00:02:49) trapsize 764
+\i (00:02:49) zoom out 1 
+\i (00:02:49) setwindow pcb
+\i (00:02:49) zoom out -488.89 -333.91
+\i (00:02:49) trapsize 1527
+\i (00:02:50) zoom out 1 
+\i (00:02:50) setwindow pcb
+\i (00:02:50) zoom out -892.07 -172.03
+\i (00:02:50) trapsize 3054
+\i (00:02:51) zoom in 1 
+\i (00:02:51) setwindow pcb
+\i (00:02:51) zoom in 1205.52 23.46
+\i (00:02:51) trapsize 1527
+\i (00:02:51) zoom in 1 
+\i (00:02:51) setwindow pcb
+\i (00:02:51) zoom in 1208.58 23.46
+\i (00:02:51) trapsize 764
+\i (00:02:52) zoom out 1 
+\i (00:02:52) setwindow pcb
+\i (00:02:52) zoom out 1207.05 26.52
+\i (00:02:52) trapsize 1527
+\i (00:02:52) zoom out 1 
+\i (00:02:52) setwindow pcb
+\i (00:02:52) zoom out 1207.05 26.51
+\i (00:02:52) trapsize 3054
+\i (00:02:53) zoom in 1 
+\i (00:02:53) setwindow pcb
+\i (00:02:53) zoom in 1205.52 26.51
+\i (00:02:53) trapsize 1527
+\i (00:03:05) setwindow text
+\i (00:03:05) close 
+\i (00:04:00) setwindow pcb
+\i (00:04:00) place manual 
+\t (00:04:00) last pick:  -900.00 900.00
+\i (00:04:01) prepopup -850.09 912.29
+\i (00:04:02) cancel 
+\i (00:04:02) placementedit 
+\i (00:04:03) pick grid 2619.71 921.45
+\t (00:04:03) last pick:  2619.76 921.44
+\i (00:04:05) place manual 
+\i (00:04:09) quickplace 
+\i (00:04:13) setwindow form.quickplc
+\i (00:04:13) FORM quickplc cancel  
+\i (00:04:13) setwindow pcb
+\i (00:04:13) placementedit 
+\i (00:04:14) pick grid 2057.70 842.03
+\t (00:04:14) last pick:  2057.64 842.01
+\i (00:04:32) exit 
+\e (00:04:32) Do you want to save the changes you made to Sleep_Track_V3.brd?
+\i (00:04:33) fillin no 
+\t (00:04:34)     Journal end - Wed Jun 01 21:57:28 2016
