@@ -31,6 +31,7 @@ Chips:
 
 Reference circuit:
 * BNO055: https://cdn-learn.adafruit.com/assets/assets/000/024/546/original/sensors_BNO055_REV-C.png?1429569060
+* No need for the 5V/3.3V level switching circuit as our board is 3.3V only
 
 Questions:
 * is it possible to put the chip and associated components on the back of the board ?
