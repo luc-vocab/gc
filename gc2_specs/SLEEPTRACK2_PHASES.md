@@ -24,18 +24,32 @@ Is it possible to have this board have the same footprint as the sleeptrack1 boa
 
 Phase 2
 =======
-Everything from phase 1 + IMU chips
+Everything from phase 1 + BNO055 chip
 
 Chips:
 * BNO055 on the sleeptrack board
-* LSM9DS1 on a panneled small external board
 
 Reference circuit:
 * BNO055: https://cdn-learn.adafruit.com/assets/assets/000/024/546/original/sensors_BNO055_REV-C.png?1429569060
 
+Questions:
+* is it possible to put the chip and associated components on the back of the board ?
+
 Phase 3
 =======
-Everything from phase 2 + audio circuits
+Everything from phase 3 + LSM9DS1 on panelized board
+
+Chips
+* LSM9DS1 on a panelized small external board
+
+This has the "chin sensor" board whose purpose is to detect movements of the lower jaw independently of the rest of the head. It contains the LSM9DS1 circuit along with chip and connects to the main board through a cable with 4 conductors (3V3, GND, SDA, SCL).
+
+Reference circuit:
+https://cdn.sparkfun.com/datasheets/IoT/Photon-IMU-Shield-v10.pdf
+
+Phase 4
+=======
+Everything from phase 3 + audio circuits
 
 Chips:
 * AD5220
@@ -45,9 +59,9 @@ Components
 * SJ1-3515N
 * SDR08540M3-01
 
-Phase 4
+Phase 5
 =======
-Everything from phase 3 + LED bar-chart
+Everything from phase 4 + LED bar-chart
 
 Chips:
 * LM3914
@@ -55,6 +69,6 @@ Chips:
 Datasheets:
 * LM3914: http://www.ti.com/lit/ds/symlink/lm3914.pdf
 
-Phase 5
+Phase 6
 =======
-Everything from phase 4 + vibration motor driver
+Everything from phase 5 + vibration motor driver
