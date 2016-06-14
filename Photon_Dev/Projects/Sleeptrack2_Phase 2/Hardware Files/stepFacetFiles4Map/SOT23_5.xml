@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<step-assembly root="id49">
+<product id="id49" name="SOT23_5" shape="id2411"/>
+<shape id="id2411" unit="cm 0.010000" shell="id2410"/>
+</step-assembly>

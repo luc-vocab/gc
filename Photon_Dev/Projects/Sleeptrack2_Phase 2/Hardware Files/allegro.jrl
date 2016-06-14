@@ -1,0 +1,143 @@
+\t (00:00:06) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:06)     Journal start - Mon Jun 13 23:46:46 2016
+\t (00:00:06)         Host=MADISON-PC User=Madison Pid=13140 CPUs=4
+\t (00:00:06) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 2\Hardware Files\SLEEPTRACK2_PHASE2.brd
+\t (00:00:06) 
+\t (00:00:08) Opening existing design...
+\d (00:00:08) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/SLEEPTRACK2_PHASE2.brd
+\i (00:00:09) trapsize 1501
+\i (00:00:09) trapsize 1472
+\i (00:00:09) trapsize 1505
+\i (00:00:09) trapsize 1535
+\i (00:00:09) trapsize 1535
+\i (00:00:09) generaledit 
+\i (00:04:56) xhilite 
+\i (00:04:56) xname_flush 
+\i (00:04:56) done 
+\i (00:04:56) generaledit 
+\i (00:05:00) xdehilite 
+\i (00:05:00) xname_flush 
+\i (00:05:00) done 
+\i (00:05:00) generaledit 
+\i (00:05:07) xdehilite 
+\i (00:05:07) xname_flush 
+\i (00:05:07) done 
+\i (00:05:07) generaledit 
+\i (00:08:26) xhilite 
+\i (00:08:26) xname_flush 
+\i (00:08:26) done 
+\i (00:08:26) generaledit 
+\i (00:08:29) xdehilite 
+\i (00:08:29) xname_flush 
+\i (00:08:29) done 
+\i (00:08:29) xhilite 
+\i (00:08:29) xname_flush 
+\i (00:08:29) done 
+\i (00:08:29) generaledit 
+\i (00:08:31) xdehilite 
+\i (00:08:31) xname_flush 
+\i (00:08:31) done 
+\i (00:08:31) xhilite 
+\i (00:08:31) xname_flush 
+\i (00:08:31) done 
+\i (00:08:31) generaledit 
+\i (00:08:33) xdehilite 
+\i (00:08:33) xname_flush 
+\i (00:08:33) done 
+\i (00:08:33) generaledit 
+\i (00:08:33) xhilite 
+\i (00:08:34) xname_flush 
+\i (00:08:34) done 
+\i (00:08:34) generaledit 
+\i (00:08:35) xdehilite 
+\i (00:08:35) xname_flush 
+\i (00:08:35) done 
+\i (00:08:35) xhilite 
+\i (00:08:35) xname_flush 
+\i (00:08:35) done 
+\i (00:08:35) generaledit 
+\i (00:08:36) xdehilite 
+\i (00:08:36) xname_flush 
+\i (00:08:36) done 
+\i (00:08:36) xhilite 
+\i (00:08:36) xname_flush 
+\i (00:08:36) done 
+\i (00:08:36) generaledit 
+\i (00:08:37) xdehilite 
+\i (00:08:37) xname_flush 
+\i (00:08:37) done 
+\i (00:08:37) generaledit 
+\i (00:08:42) xhilite 
+\i (00:08:42) xname_flush 
+\i (00:08:42) done 
+\i (00:08:42) generaledit 
+\i (00:08:46) xhilite 
+\i (00:08:46) xname_flush 
+\i (00:08:46) done 
+\i (00:08:46) generaledit 
+\i (00:08:46) xdehilite 
+\i (00:08:46) xname_flush 
+\i (00:08:46) done 
+\i (00:08:46) generaledit 
+\i (00:10:46) xhilite 
+\i (00:10:46) xname_flush 
+\i (00:10:46) done 
+\i (00:10:46) generaledit 
+\i (00:10:48) xdehilite 
+\i (00:10:48) xname_flush 
+\i (00:10:48) done 
+\i (00:10:48) generaledit 
+\i (00:10:50) xdehilite 
+\i (00:10:50) xname_flush 
+\i (00:10:50) done 
+\i (00:10:50) generaledit 
+\i (00:10:51) xdehilite 
+\i (00:10:52) xname_flush 
+\i (00:10:52) done 
+\i (00:10:52) generaledit 
+\i (00:10:54) xhilite 
+\i (00:10:54) xname_flush 
+\i (00:10:54) done 
+\i (00:10:54) generaledit 
+\i (00:10:56) xdehilite 
+\i (00:10:56) xname_flush 
+\i (00:10:56) done 
+\i (00:10:56) xhilite 
+\i (00:10:56) xname_flush 
+\i (00:10:56) done 
+\i (00:10:56) generaledit 
+\i (00:10:59) xdehilite 
+\i (00:10:59) xname_flush 
+\i (00:10:59) done 
+\i (00:10:59) xhilite 
+\i (00:10:59) xname_flush 
+\i (00:10:59) done 
+\i (00:10:59) generaledit 
+\i (00:11:26) xhilite 
+\i (00:11:26) xname_flush 
+\i (00:11:26) done 
+\i (00:11:26) generaledit 
+\i (00:11:26) xdehilite 
+\i (00:11:26) xname_flush 
+\i (00:11:26) done 
+\i (00:11:26) generaledit 
+\i (00:12:34) xhilite 
+\i (00:12:34) xname_flush 
+\i (00:12:34) done 
+\i (00:12:34) generaledit 
+\i (00:12:40) xdehilite 
+\i (00:12:40) xname_flush 
+\i (00:12:40) done 
+\i (00:12:40) generaledit 
+\i (00:12:43) xhilite 
+\i (00:12:43) xname_flush 
+\i (00:12:43) done 
+\i (00:12:43) generaledit 
+\i (00:12:47) xdehilite 
+\i (00:12:47) xname_flush 
+\i (00:12:47) done 
+\i (00:12:47) generaledit 
+\i (00:13:32) exit 
+\e (00:13:32) Do you want to save the changes you made to SLEEPTRACK2_PHASE2.brd?
+\i (00:13:34) fillin yes 
+\t (00:13:34)     Journal end - Tue Jun 14 00:00:13 2016

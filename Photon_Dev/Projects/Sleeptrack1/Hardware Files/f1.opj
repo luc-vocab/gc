@@ -17,7 +17,7 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\sleeptrack.dsn")
       (Path "Design Resources" ".\sleeptrack.dsn" "SCHEMATIC1")
-      (Select "Design Resources" ".\sleeptrack.dsn"))
+      (Select "Design Resources" ".\sleeptrack.dsn" "SCHEMATIC1" "BNO055"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
