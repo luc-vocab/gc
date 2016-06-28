@@ -34,6 +34,12 @@ Reference circuit:
 * BNO055 datasheet: https://cdn-shop.adafruit.com/datasheets/BST_BNO055_DS000_12.pdf
 * No need for the 5V/3.3V level switching circuit as our board is 3.3V only
 
+Fixes:
+* Add I2C (SDA, SCL) pull-up resistors.
+* Flip the pins on the EMG connector so that they mirror the layout on the EMG sensor when put face to face.
+* Put diode back in charging circuit.
+* See whether charging LED is behaving correctly.
+
 Questions:
 * is it possible to put the chip and associated components on the back of the board ?
 
