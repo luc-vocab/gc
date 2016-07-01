@@ -10,6 +10,8 @@
 #define BUTTON1_PIN D2
 #define BUTTON2_PIN D3
 
+#define USE_IMU false
+#define USE_BUTTONS false
 
 #define DEBUG_LOG(x) serial_log(__func__, __LINE__, x)
 

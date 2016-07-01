@@ -33,12 +33,16 @@ void setup(void)
   /* Initialise the sensor */
   if(!bno.begin())
   {
+    Particle.publish("status", "could not configure BNO055");
+
     /* There was a problem detecting the BNO055 ... check your connections */
     Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
     while(1);
   }
 
   delay(1000);
+
+  Particle.publish("status", "BNO055 setup OK");
 
   /* Display the current temperature */
   int8_t temp = bno.getTemp();
@@ -78,6 +82,10 @@ void loop(void)
   Serial.print(euler.z());
   Serial.print("\t\t");
 
+  Particle.publish("x", String(euler.x()));
+  Particle.publish("y", String(euler.y()));
+  Particle.publish("z", String(euler.z()));
+
   /*
   // Quaternion data
   imu::Quaternion quat = bno.getQuat();
@@ -104,5 +112,6 @@ void loop(void)
   Serial.print(" Mag=");
   Serial.println(mag, DEC);
 
-  delay(BNO055_SAMPLERATE_DELAY_MS);
+  // delay(BNO055_SAMPLERATE_DELAY_MS);
+  delay(4000);
 }
