@@ -1,3 +1,27 @@
+2016/03/18 Checklist for Rev3
+=============================
+
+Notes for Elecrow
+-----------------
+ * Ask if we can pay extra for rush service.
+ * Make sure they can do the tented vias under the photon.
+ * Ask them to source R1 as they don't have that part.
+ * Ask them to check whether there is a short between GND and 3V3 after assembly, and notify us if there is one.
+
+Changes to the board
+--------------------
+ * Fix USB footprint/schematic. GND and VCC should be the outermost pins.
+ * Fix IMU footprint
+ * Space out vias under photon package to reduce risk of short, or even move them outside if possible.
+ * Tent Vias to have soldermask cover open connections to other planes.
+ * Fix U9 so that NC pin is unconnected
+
+Verifications
+-------------
+ * Update schematics PDFs to reflect latest state
+ * Check that drill file / project matches elecrow's expectation in terms of format (current v2 should be a working reference)
+
+
 2016/02/08 Checklist for Rev2
 =============================
 
