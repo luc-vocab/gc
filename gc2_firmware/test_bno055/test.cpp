@@ -51,7 +51,7 @@ void setup(void)
   Serial.println(" C");
   Serial.println("");
 
-  bno.setExtCrystalUse(true);
+  bno.setExtCrystalUse(false);
 
   Serial.println("Calibration status values: 0=uncalibrated, 3=fully calibrated");
 }
@@ -82,9 +82,11 @@ void loop(void)
   Serial.print(euler.z());
   Serial.print("\t\t");
 
+  /*
   Particle.publish("x", String(euler.x()));
   Particle.publish("y", String(euler.y()));
   Particle.publish("z", String(euler.z()));
+  */
 
   /*
   // Quaternion data
@@ -113,5 +115,5 @@ void loop(void)
   Serial.println(mag, DEC);
 
   // delay(BNO055_SAMPLERATE_DELAY_MS);
-  delay(4000);
+  delay(500);
 }
