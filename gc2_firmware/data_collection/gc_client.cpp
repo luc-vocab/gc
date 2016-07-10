@@ -283,6 +283,7 @@ void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, 
 
   if (m_mode == GC_MODE_REALTIME) {
     // write at the beginning of the buffer
+    DEBUG_LOG("writing datapoint, emg_value: " + String(emg_value));
     m_data_buffer_offset = 0;
     write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
     // immediately send

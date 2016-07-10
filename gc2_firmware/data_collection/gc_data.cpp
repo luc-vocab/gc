@@ -55,12 +55,12 @@ float GcData::get_gyro_max() {
 }
 
 void GcData::get_accel(float *accel_values) {
-  m_imu.readAccel();
   if(! USE_IMU) {
     accel_values[0] = 0.0;
     accel_values[1] = 0.0;
     accel_values[2] = 0.0;
   } else {
+    m_imu.readAccel();
     accel_values[0] = m_imu.calcAccel(m_imu.ax);
     accel_values[1] = m_imu.calcAccel(m_imu.ay);
     accel_values[2] = m_imu.calcAccel(m_imu.az);
@@ -128,6 +128,7 @@ void GcData::queue_status_battery_charge() {
 }
 
 void GcData::collect_data(bool upload_requested) {
+
   uint16_t emg_value = read_emg();
   emg_beep(emg_value);
   float gyro_max = get_gyro_max();
