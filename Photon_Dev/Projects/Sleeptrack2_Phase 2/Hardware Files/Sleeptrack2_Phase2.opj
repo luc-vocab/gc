@@ -32,10 +32,9 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\sleeptrack2_phase1.dsn")
-      (Path "Design Resources" ".\sleeptrack2_phase1.dsn" "SCHEMATIC1")
       (Path "Outputs")
-      (Select "Design Resources" ".\sleeptrack2_phase1.dsn"))
+      (Select "Design Resources"
+         "C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 2\Hardware Files\sleeptrack2_phase1.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

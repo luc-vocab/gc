@@ -7,18 +7,53 @@
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
-    (NoModify))
-  (Folder "Outputs")
+    (NoModify)
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory"
+       "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 2\HARDWARE FILES\ALLEGRO")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" "allegro\SLEEPTRACK2_PHASE2.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Output Warnings" "TRUE")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (Netlist_TAB "0"))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
   (Folder "Referenced Projects")
-  (PartMRUSelector)
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (BNO055
+      (FullPartName "BNO055.Normal")
+      (LibraryName
+         "C:\USERS\MADISON\DOCUMENTS\GITHUB\GC\PHOTON_DEV\LIBRARY1.OLB")
+      (DeviceIndex "0")))
   (MPSSessionName "Madison")
   (GlobalState
     (FileView
       (Path "Design Resources")
       (Path "Design Resources" ".\sleeptrack2_phase2.dsn")
       (Path "Design Resources" ".\sleeptrack2_phase2.dsn" "SCHEMATIC1")
-      (Select "Design Resources" ".\sleeptrack2_phase2.dsn" "SCHEMATIC1"
-         "P05_BNO055"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -28,30 +63,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 50 1733 50 568")
-        (Scroll "-57 249")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path
-         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 2\HARDWARE FILES\SLEEPTRACK2_PHASE2.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "P01_Title "))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 175 1858 175 693")
-        (Scroll "-332 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path
-         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 2\HARDWARE FILES\SLEEPTRACK2_PHASE2.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "P02_Photon"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 200 1883 200 718")
-        (Scroll "-332 0")
+        (Placement "44 0 1 -1 -1 -8 -30 50 1636 50 568")
+        (Scroll "-284 0")
         (Zoom "100")
         (Occurrence "/"))
       (Path
@@ -61,22 +74,12 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 225 1908 225 743")
-        (Scroll "-332 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path
-         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 2\HARDWARE FILES\SLEEPTRACK2_PHASE2.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "P04_Connectors"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 1683 0 518")
-        (Scroll "0 354")
+        (Placement "44 0 1 -1 -1 -8 -30 75 1661 75 593")
+        (Scroll "0 674")
         (Zoom "200")
         (Occurrence "/"))
       (Path
          "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 2\HARDWARE FILES\SLEEPTRACK2_PHASE2.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "P05_BNO055"))))
+      (Page "P04_Connectors")))
+  (ISPCBBASICLICENSE "false"))
