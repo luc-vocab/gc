@@ -1,5 +1,5 @@
 FILE_TYPE = EXPANDEDPARTLIST;
-{ Using PSTWRITER 17.0.0 d001Jul-07-2016 at 23:14:26 }
+{ Using PSTWRITER 17.0.0 d001Jul-10-2016 at 22:07:57 }
 DIRECTIVES
  PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
  ROOT_DRAWING='SLEEPTRACK2_PHASE2';
@@ -54,16 +54,6 @@ SECTION_NUMBER 1
  '@SLEEPTRACK2_PHASE2.SCHEMATIC1(SCH_1):INS255777@DISCRETE.CAP NP.NORMAL(CHIPS)':
  C_PATH='@sleeptrack2_phase2.schematic1(sch_1):ins255777@discrete.\cap np.normal\(chips)',
  P_PATH='@sleeptrack2_phase2.schematic1(sch_1):page1_ins255777@discrete.\cap np.normal\(chips)',
- PRIM_FILE='.\pstchip.dat',
- SECTION='';
-
-PART_NAME
- D1 'DIODE SCHOTTKY_MRBA140_MBRA140':;
-
-SECTION_NUMBER 1
- '@SLEEPTRACK2_PHASE2.SCHEMATIC1(SCH_1):INS257971@DISCRETE.DIODE SCHOTTKY.NORMAL(CHIPS)':
- C_PATH='@sleeptrack2_phase2.schematic1(sch_1):ins257971@discrete.\diode schottky.normal\(chips)',
- P_PATH='@sleeptrack2_phase2.schematic1(sch_1):page3_ins257971@discrete.\diode schottky.normal\(chips)',
  PRIM_FILE='.\pstchip.dat',
  SECTION='';
 

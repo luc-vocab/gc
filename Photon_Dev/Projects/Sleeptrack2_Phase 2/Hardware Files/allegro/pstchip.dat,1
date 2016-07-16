@@ -1,5 +1,5 @@
 FILE_TYPE=LIBRARY_PARTS;
-{ Using PSTWRITER 17.0.0 d001Jul-07-2016 at 23:14:26}
+{ Using PSTWRITER 17.0.0 d001Jul-10-2016 at 22:07:57}
 primitive 'CAP NP_0603RF_WV_12D_4.7UF';
   pin
     '1':
@@ -45,21 +45,6 @@ primitive 'CAP NP_0603RF_WV_12D_0.1UF';
     VALUE='0.1uF';
   end_body;
 end_primitive;
-primitive 'DIODE SCHOTTKY_MRBA140_MBRA140';
-  pin
-    'ANODE':
-      PIN_NUMBER='(1)';
-      PINUSE='UNSPEC';
-    'CATHODE':
-      PIN_NUMBER='(2)';
-      PINUSE='UNSPEC';
-  end_pin;
-  body
-    PART_NAME='DIODE SCHOTTKY';
-    JEDEC_TYPE='mrba140';
-    VALUE='MBRA140';
-  end_body;
-end_primitive;
 primitive 'LED_0603RF_WV_12D_RED';
   pin
     'ANODE':
@@ -73,6 +58,21 @@ primitive 'LED_0603RF_WV_12D_RED';
     PART_NAME='LED';
     JEDEC_TYPE='0603RF_WV_12D';
     VALUE='RED';
+  end_body;
+end_primitive;
+primitive 'DIODE SCHOTTKY_MRBA140_MBRA140';
+  pin
+    'ANODE':
+      PIN_NUMBER='(1)';
+      PINUSE='UNSPEC';
+    'CATHODE':
+      PIN_NUMBER='(2)';
+      PINUSE='UNSPEC';
+  end_pin;
+  body
+    PART_NAME='DIODE SCHOTTKY';
+    JEDEC_TYPE='mrba140';
+    VALUE='MBRA140';
   end_body;
 end_primitive;
 primitive '12 HEADER_JUMPER12_12 HEADER';

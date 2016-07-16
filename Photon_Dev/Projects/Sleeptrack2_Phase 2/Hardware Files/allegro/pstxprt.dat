@@ -1,5 +1,5 @@
 FILE_TYPE = EXPANDEDPARTLIST;
-{ Using PSTWRITER 17.0.0 d001Jul-14-2016 at 23:06:47 }
+{ Using PSTWRITER 17.0.0 d001Jul-15-2016 at 23:47:43 }
 DIRECTIVES
  PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
  ROOT_DRAWING='SLEEPTRACK2_PHASE2';
@@ -134,6 +134,16 @@ SECTION_NUMBER 1
  '@SLEEPTRACK2_PHASE2.SCHEMATIC1(SCH_1):INS229592@DISCRETE.RESISTOR.NORMAL(CHIPS)':
  C_PATH='@sleeptrack2_phase2.schematic1(sch_1):ins229592@discrete.\resistor.normal\(chips)',
  P_PATH='@sleeptrack2_phase2.schematic1(sch_1):page3_ins229592@discrete.\resistor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'RESISTOR_0603RF_WV_12D_10K':;
+
+SECTION_NUMBER 1
+ '@SLEEPTRACK2_PHASE2.SCHEMATIC1(SCH_1):INS266445@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@sleeptrack2_phase2.schematic1(sch_1):ins266445@discrete.\resistor.normal\(chips)',
+ P_PATH='@sleeptrack2_phase2.schematic1(sch_1):page1_ins266445@discrete.\resistor.normal\(chips)',
  PRIM_FILE='.\pstchip.dat',
  SECTION='';
 

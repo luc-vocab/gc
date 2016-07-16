@@ -1,5 +1,5 @@
 FILE_TYPE=LIBRARY_PARTS;
-{ Using PSTWRITER 17.0.0 d001Jul-10-2016 at 22:07:57}
+{ Using PSTWRITER 17.0.0 d001Jul-14-2016 at 21:54:37}
 primitive 'CAP NP_0603RF_WV_12D_4.7UF';
   pin
     '1':
@@ -158,7 +158,7 @@ primitive '4 HEADER_JUMPER4_4 HEADER';
     VALUE='4 HEADER';
   end_body;
 end_primitive;
-primitive 'HEADER 3_JUMPER3_HEADER 3';
+primitive 'HEADER 3_3POSHEADER_HEADER 3';
   pin
     '1':
       PIN_NUMBER='(1)';
@@ -172,7 +172,7 @@ primitive 'HEADER 3_JUMPER3_HEADER 3';
   end_pin;
   body
     PART_NAME='HEADER 3';
-    JEDEC_TYPE='jumper3';
+    JEDEC_TYPE='3posheader';
     VALUE='HEADER 3';
   end_body;
 end_primitive;

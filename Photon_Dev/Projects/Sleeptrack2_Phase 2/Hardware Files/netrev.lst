@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : SLEEPTRACK2_PHASE2.brd                        )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Thu Jul 14 23:07:14 2016                      )
+(    Date/Time        : Fri Jul 15 23:48:18 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -22,12 +22,12 @@ Design Directory:            '.'
 Old design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/SLEEPTRACK2_PHASE2.brd'
 New design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/SLEEPTRACK2_PHASE2.brd'
 
-CmdLine: netrev -$ -i C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/allegro -y 1 -q netrev_constraint_report.xml C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/#Taaaabi07240.tmp
+CmdLine: netrev -$ -i C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/allegro -y 1 -q netrev_constraint_report.xml C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/#Taaaaab08360.tmp
 
 ------ Preparing to read pst files ------
 
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/allegro/pstchip.dat 
-   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/allegro/pstchip.dat (00:00:00.02)
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/allegro/pstchip.dat (00:00:00.04)
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/allegro/pstxprt.dat 
    Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/allegro/pstxprt.dat (00:00:00.00)
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/allegro/pstxnet.dat 
@@ -61,7 +61,7 @@ PADPATH =  .
 ------ Summary Statistics ------
 
 
-netrev run on Jul 14 23:07:14 2016
+netrev run on Jul 15 23:48:18 2016
    DESIGN NAME : 'SLEEPTRACK2_PHASE2'
    PACKAGING ON Feb  9 2015 06:09:36
 
@@ -86,6 +86,6 @@ netrev run on Jul 14 23:07:14 2016
  No oversight detected
  No warning detected
 
-cpu time      0:00:28
-elapsed time  0:00:00
+cpu time      0:01:50
+elapsed time  0:00:01
 

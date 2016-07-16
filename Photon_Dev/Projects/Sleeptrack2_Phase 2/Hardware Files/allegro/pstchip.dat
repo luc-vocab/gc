@@ -1,5 +1,5 @@
 FILE_TYPE=LIBRARY_PARTS;
-{ Using PSTWRITER 17.0.0 d001Jul-14-2016 at 23:06:47}
+{ Using PSTWRITER 17.0.0 d001Jul-15-2016 at 23:47:43}
 primitive 'CAP NP_0603RF_WV_12D_4.7UF';
   pin
     '1':
@@ -191,6 +191,21 @@ primitive 'RESISTOR_0603RF_WV_12D_330';
     VALUE='330';
   end_body;
 end_primitive;
+primitive 'RESISTOR_0603RF_WV_12D_10K';
+  pin
+    '1':
+      PIN_NUMBER='(1)';
+      PINUSE='UNSPEC';
+    '2':
+      PIN_NUMBER='(2)';
+      PINUSE='UNSPEC';
+  end_pin;
+  body
+    PART_NAME='RESISTOR';
+    JEDEC_TYPE='0603RF_WV_12D';
+    VALUE='10k';
+  end_body;
+end_primitive;
 primitive 'RESISTOR_0603RF_WV_12D_2K';
   pin
     '1':
@@ -219,21 +234,6 @@ primitive 'RESISTOR_0603RF_WV_12D_1K';
     PART_NAME='RESISTOR';
     JEDEC_TYPE='0603RF_WV_12D';
     VALUE='1k';
-  end_body;
-end_primitive;
-primitive 'RESISTOR_0603RF_WV_12D_10K';
-  pin
-    '1':
-      PIN_NUMBER='(1)';
-      PINUSE='UNSPEC';
-    '2':
-      PIN_NUMBER='(2)';
-      PINUSE='UNSPEC';
-  end_pin;
-  body
-    PART_NAME='RESISTOR';
-    JEDEC_TYPE='0603RF_WV_12D';
-    VALUE='10k';
   end_body;
 end_primitive;
 primitive 'R_0603RF_WV_12D_10K';
