@@ -45,15 +45,21 @@ Questions:
 
 Phase 3
 =======
-Everything from phase 3 + LSM9DS1 on panelized board
+Everything from phase 3 + BNO055 on panelized board
 
 Chips
-* LSM9DS1 on a panelized small external board
+* BNO055 on a panelized small external board
+Components
+* 2 push buttons
+* SDR08540M3-01 speaker
 
-This has the "chin sensor" board whose purpose is to detect movements of the lower jaw independently of the rest of the head. It contains the LSM9DS1 circuit along with chip and connects to the main board through a cable with 4 conductors (3V3, GND, SDA, SCL).
+This has the "chin sensor" board whose purpose is to detect movements of the lower jaw independently of the rest of the head. It contains the BNO055 circuit along with chip and connects to the main board through a cable with 4 conductors (3V3, GND, SDA, SCL). The circuit is the same as in phase 2, except **COM3** needs to be **high**.
+
+In this phase i'd also like to add 2 push buttons for controlling the device as well as the speaker to allow feedback to the user more easily. I think the speaker can be connected directly to the photon pins, but i'm testing that right now.
 
 Reference circuit:
-https://cdn.sparkfun.com/datasheets/IoT/Photon-IMU-Shield-v10.pdf
+* BNO055: https://cdn-learn.adafruit.com/assets/assets/000/024/546/original/sensors_BNO055_REV-C.png?1429569060
+* BNO055 datasheet: https://cdn-shop.adafruit.com/datasheets/BST_BNO055_DS000_12.pdf
 
 Phase 4
 =======
