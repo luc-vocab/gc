@@ -53,19 +53,18 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\sleeptrack2_phase2.dsn")
       (Path "Design Resources" ".\sleeptrack2_phase2.dsn" "SCHEMATIC1")
-      (Path "Outputs")
-      (Select "Design Resources" ".\sleeptrack2_phase2.dsn"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 476"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 476"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1636 50 568")
-        (Scroll "-435 0")
+        (Placement "44 0 1 -1 -1 -8 -30 50 1636 50 568")
+        (Scroll "-284 0")
         (Zoom "100")
         (Occurrence "/"))
       (Path

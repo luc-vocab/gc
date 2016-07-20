@@ -1,0 +1,28 @@
+\t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Sat Jul 16 00:30:00 2016
+\t (00:00:01)         Host=MADISON-PC User=Madison Pid=9056 CPUs=4
+\t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 2\Hardware Files\SLEEPTRACK2_PHASE2.brd
+\t (00:00:01) 
+\t (00:00:02) Opening existing design...
+\d (00:00:02) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 2/Hardware Files/SLEEPTRACK2_PHASE2.brd
+\i (00:00:02) trapsize 1501
+\i (00:00:02) trapsize 1472
+\i (00:00:02) trapsize 1505
+\i (00:00:02) trapsize 1535
+\i (00:00:02) trapsize 1535
+\i (00:00:03) etchedit 
+\i (00:00:42) trapsize 3974
+\i (00:00:43) trapsize 1476
+\i (00:00:45) xsection 
+\i (00:00:46) setwindow cmgr
+\i (00:00:46) cm setXSectionTrackingMode ( Design "SLEEPTRACK2_PHASE2" ) 0
+\i (00:00:46) cm startTransaction ( Design "SLEEPTRACK2_PHASE2" ) ( Design "SLEEPTRACK2_PHASE2" ) TS_REDS_ONLY
+\i (00:14:39) cm cancelTransaction ( Design "SLEEPTRACK2_PHASE2" ) ( Design "SLEEPTRACK2_PHASE2" ) TS_REDS_ONLY
+\i (00:14:39) cm setXSectionTrackingMode ( Design "SLEEPTRACK2_PHASE2" ) 2
+\i (00:14:39) cm exit
+\i (00:14:39) setwindow pcb
+\i (00:14:39) etchedit 
+\i (00:14:39) exit 
+\e (00:14:39) Do you want to save the changes you made to SLEEPTRACK2_PHASE2.brd?
+\i (00:14:41) fillin no 
+\t (00:14:41)     Journal end - Sat Jul 16 00:44:40 2016
