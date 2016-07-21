@@ -50,12 +50,13 @@ Everything from phase 3 + BNO055 on panelized board
 Chips
 * BNO055 on a panelized small external board
 Components
-* 2 push buttons
+* 2 "face mounted" push buttons
 * SDR08540M3-01 speaker
+  * POS directly connected to the Photon A4 pin, NEG directly connected to GND.
 
 This has the "chin sensor" board whose purpose is to detect movements of the lower jaw independently of the rest of the head. It contains the BNO055 circuit along with chip and connects to the main board through a cable with 4 conductors (3V3, GND, SDA, SCL). The circuit is the same as in phase 2, except **COM3** needs to be **high**.
 
-In this phase i'd also like to add 2 push buttons for controlling the device as well as the speaker to allow feedback to the user more easily. I think the speaker can be connected directly to the photon pins, but i'm testing that right now.
+In this phase i'd also like to add 2 push buttons for controlling the device as well as the speaker to allow feedback to the user more easily. The speaker can be connected directly to the photon A4 pin.
 
 Reference circuit:
 * BNO055: https://cdn-learn.adafruit.com/assets/assets/000/024/546/original/sensors_BNO055_REV-C.png?1429569060
