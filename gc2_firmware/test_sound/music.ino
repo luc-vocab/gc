@@ -1,5 +1,5 @@
 // EXAMPLE USAGE
-// Plays a melody - Connect small speaker to analog pin A0
+// Plays a melody - Connect small speaker to analog pin A4
 
 int speakerPin = A4;
 
