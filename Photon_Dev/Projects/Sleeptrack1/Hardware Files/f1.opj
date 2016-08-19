@@ -17,10 +17,43 @@
       (Path "Design Resources")
       (Path "Design Resources" ".\sleeptrack.dsn")
       (Path "Design Resources" ".\sleeptrack.dsn" "SCHEMATIC1")
-      (Select "Design Resources" ".\sleeptrack.dsn" "SCHEMATIC1" "BNO055"))
+      (Select "Design Resources" ".\sleeptrack.dsn" "SCHEMATIC1" "Photon P1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -8 -30 0 200 0 476"))
-      (Tab 0))))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 1586 0 518")
+        (Scroll "-9 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK1\HARDWARE FILES\SLEEPTRACK.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Audio"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 100 1393 100 618")
+        (Scroll "-137 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK1\HARDWARE FILES\SLEEPTRACK.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Connectors/ Push Buttons"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 125 1418 125 643")
+        (Scroll "-137 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK1\HARDWARE FILES\SLEEPTRACK.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Photon P1"))))

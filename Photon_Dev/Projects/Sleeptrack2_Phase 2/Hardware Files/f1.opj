@@ -51,9 +51,13 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\sleeptrack2_phase2.dsn")
-      (Path "Design Resources" ".\sleeptrack2_phase2.dsn" "SCHEMATIC1")
-      (Path "Outputs"))
+      (Path "Design Resources"
+         "C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 2\Hardware Files\sleeptrack2_phase2.dsn")
+      (Path "Design Resources"
+         "C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 2\Hardware Files\sleeptrack2_phase2.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -75,7 +79,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1661 75 593")
-        (Scroll "0 674")
+        (Scroll "0 294")
         (Zoom "200")
         (Occurrence "/"))
       (Path
@@ -86,11 +90,22 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 100 1686 100 618")
-        (Scroll "152 280")
+        (Scroll "90 280")
         (Zoom "200")
         (Occurrence "/"))
       (Path
          "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 2\HARDWARE FILES\SLEEPTRACK2_PHASE2.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "P05_BNO055")))
+      (Page "P05_BNO055"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 150 1798 150 668")
+        (Scroll "-315 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 2\HARDWARE FILES\SLEEPTRACK2_PHASE2.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "P02_Photon")))
   (ISPCBBASICLICENSE "false"))

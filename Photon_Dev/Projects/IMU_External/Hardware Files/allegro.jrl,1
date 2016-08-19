@@ -1,63 +1,48 @@
-\t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:01)     Journal start - Sun Apr 10 20:34:11 2016
-\t (00:00:01)         Host=MADISON-PC User=Madison Pid=13072 CPUs=4
-\t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\IMU_External\IMU_V2.brd
-\t (00:00:01) 
-\t (00:00:03) Opening existing design...
-\d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_V2.brd
-\i (00:00:03) trapsize 195
-\i (00:00:03) trapsize 191
-\i (00:00:03) trapsize 196
-\i (00:00:03) trapsize 200
-\i (00:00:03) trapsize 200
-\i (00:00:04) generaledit 
-\i (00:01:10) nctape_full 
-\i (00:01:19) setwindow form.nc_drill
-\i (00:01:19) FORM nc_drill scale 1.00 
-\i (00:02:08) FORM nc_drill parameters  
-\i (00:02:10) setwindow form.nc_parameters
-\i (00:02:10) FORM nc_parameters done  
-\i (00:02:28) setwindow form.nc_drill
-\i (00:02:28) FORM nc_drill browse  
-\i (00:02:37) fillin "C:\Users\Madison\Desktop\gc\Photon_Dev\IMU_External\Artwork\V2\Drill\IMU_Drill-1-4.drl"
-\i (00:02:45) FORM nc_drill execute  
-\t (00:02:45) Starting Generating NC Drill...
-\i (00:05:14) FORM nc_drill cancel  
-\i (00:05:15) setwindow pcb
-\i (00:05:15) generaledit 
-\i (00:05:15) zoom out 1 
-\i (00:05:15) setwindow pcb
-\i (00:05:15) zoom out -101.15 -64.43
-\i (00:05:15) trapsize 399
-\i (00:05:15) zoom out 1 
-\i (00:05:15) setwindow pcb
-\i (00:05:15) zoom out -129.89 -64.43
-\i (00:05:15) trapsize 799
-\i (00:05:19) pdf out 
-\i (00:05:20) setwindow form.pdf_out
-\i (00:05:20) FORM pdf_out selectall  
-\i (00:05:22) FORM pdf_out pdftree 'MULTISEL NO' 3V3 
-\i (00:05:22) FORM pdf_out pdftree  3V3 
-\i (00:05:23) FORM pdf_out pdftree 'MULTISEL NO' GND 
-\i (00:05:23) FORM pdf_out pdftree  GND 
-\i (00:05:51) FORM pdf_out filename _External_V2 
-\i (00:05:51) FORM pdf_out attrtree  Component 
-\i (00:05:51) FORM pdf_out property_parameters  
-\i (00:05:52) FORM pdf_out pdf_export  
-\i (00:05:53) FORM pdf_out page_setup  
-\i (00:05:54) FORM pdf_out pdf_export  
-\i (00:05:58) FORM pdf_out export  
-\t (00:05:58) Starting Exporting PDF File...
-\t (00:06:01) PDF output completed.
-\i (00:06:23) setwindow text
-\i (00:06:23) close 
-\i (00:09:00) setwindow form.pdf_out
-\i (00:09:00) FORM pdf_out cancel  
-\i (00:09:00) setwindow pcb
-\i (00:09:00) generaledit 
-\i (00:09:01) trapsize 2067
-\i (00:09:01) trapsize 768
-\i (00:18:27) exit 
-\e (00:18:27) Do you want to save the changes you made to IMU_V2.brd?
-\i (00:18:29) fillin yes 
-\t (00:18:29)     Journal end - Sun Apr 10 20:52:39 2016
+\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Tue May 10 22:08:19 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=12040 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe
+\t (00:00:00) 
+\t (00:00:02) Opening existing design...
+\d (00:00:02) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_V2.brd
+\i (00:00:02) trapsize 781
+\i (00:00:02) trapsize 766
+\i (00:00:02) trapsize 783
+\i (00:00:03) trapsize 799
+\i (00:00:03) trapsize 799
+\i (00:00:03) generaledit 
+\i (00:00:04) zoom in 1 
+\i (00:00:04) setwindow pcb
+\i (00:00:04) zoom in 266.20 -96.99
+\i (00:00:04) trapsize 399
+\i (00:00:04) zoom in 1 
+\i (00:00:04) setwindow pcb
+\i (00:00:04) zoom in 249.43 -101.78
+\i (00:00:04) trapsize 200
+\i (00:00:08) zoom out 1 
+\i (00:00:08) setwindow pcb
+\i (00:00:08) zoom out 148.02 -67.44
+\i (00:00:08) trapsize 399
+\i (00:00:08) zoom out 1 
+\i (00:00:08) setwindow pcb
+\i (00:00:08) zoom out 148.02 -68.24
+\i (00:00:08) trapsize 799
+\i (00:01:36) pick grid 1021.64 -398.85
+\t (00:01:36) last pick:  1021.75 -398.75
+\i (00:15:36) xhilite 
+\i (00:15:36) xname_flush 
+\i (00:15:36) done 
+\i (00:15:36) generaledit 
+\i (00:18:33) xhilite 
+\i (00:18:33) xname_flush 
+\i (00:18:33) done 
+\i (00:18:33) generaledit 
+\i (00:18:37) xhilite 
+\i (00:18:37) xname_flush 
+\i (00:18:37) done 
+\i (00:18:37) generaledit 
+\i (00:26:50) new 
+\e (00:26:50) Do you want to save the changes you made to IMU_V2.brd?
+\i (00:26:51) fillin no 
+\i (00:28:04) newdrawfillin "photon_headerless.dra" "Package Symbol (Wizard)"
+\t (00:28:04)     Journal end - Tue May 10 22:36:23 2016

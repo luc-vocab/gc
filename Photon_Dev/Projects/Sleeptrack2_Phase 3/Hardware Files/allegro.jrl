@@ -1,0 +1,35 @@
+\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Thu Jul 21 23:27:11 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=5172 CPUs=4
+\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 3\Hardware Files\SLEEPTRACK2_PHASE3.brd
+\t (00:00:00) 
+\t (00:00:02) Opening existing design...
+\d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3.brd
+\i (00:00:03) trapsize 1501
+\i (00:00:03) trapsize 1472
+\i (00:00:03) trapsize 1505
+\i (00:00:03) trapsize 1535
+\i (00:00:03) trapsize 1535
+\i (00:00:03) etchedit 
+\i (00:00:08) step pkg map 
+\i (00:00:27) setwindow form.pkgmap3d
+\i (00:00:27) FORM pkgmap3d stplist 5037630491.stp 
+\i (00:00:32) FORM pkgmap3d view_orientation Top 
+\i (00:00:38) FORM pkgmap3d view_orientation Bottom 
+\i (00:00:41) FORM pkgmap3d hide_board YES 
+\i (00:00:42) FORM pkgmap3d hide_board NO 
+\i (00:00:42) FORM pkgmap3d hide_board YES 
+\i (00:00:55) FORM pkgmap3d unmapped_pkg YES 
+\i (00:00:58) FORM pkgmap3d pkglist 3POSHEADER 
+\i (00:01:00) FORM pkgmap3d done  
+\i (00:01:00) setwindow pcb
+\i (00:01:00) etchedit 
+\i (00:01:03) 3d_viewer 
+\i (00:01:04) setwindow pcb3D
+\i (00:01:04) trapsize 1535
+\i (00:01:04) setwindow pcb
+\i (00:01:04) etchedit 
+\i (00:17:20) exit 
+\e (00:17:20) Do you want to save the changes you made to SLEEPTRACK2_PHASE3.brd?
+\i (00:17:21) fillin no 
+\t (00:17:21)     Journal end - Thu Jul 21 23:44:33 2016

@@ -1,48 +1,75 @@
-\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:00)     Journal start - Tue May 10 22:08:19 2016
-\t (00:00:00)         Host=MADISON-PC User=Madison Pid=12040 CPUs=4
-\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe
-\t (00:00:00) 
-\t (00:00:02) Opening existing design...
-\d (00:00:02) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/IMU_External/IMU_V2.brd
-\i (00:00:02) trapsize 781
-\i (00:00:02) trapsize 766
-\i (00:00:02) trapsize 783
-\i (00:00:03) trapsize 799
-\i (00:00:03) trapsize 799
-\i (00:00:03) generaledit 
-\i (00:00:04) zoom in 1 
-\i (00:00:04) setwindow pcb
-\i (00:00:04) zoom in 266.20 -96.99
-\i (00:00:04) trapsize 399
-\i (00:00:04) zoom in 1 
-\i (00:00:04) setwindow pcb
-\i (00:00:04) zoom in 249.43 -101.78
-\i (00:00:04) trapsize 200
+\t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Thu Jul 21 23:14:12 2016
+\t (00:00:01)         Host=MADISON-PC User=Madison Pid=8428 CPUs=4
+\t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\IMU_External\Hardware Files\IMU.brd
+\t (00:00:01) 
+\t (00:00:05) Opening existing design...
+\d (00:00:05) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/IMU_External/Hardware Files/IMU.brd
+\i (00:00:06) trapsize 390
+\i (00:00:06) trapsize 383
+\i (00:00:06) trapsize 391
+\i (00:00:06) trapsize 399
+\i (00:00:06) trapsize 399
+\i (00:00:07) etchedit 
 \i (00:00:08) zoom out 1 
 \i (00:00:08) setwindow pcb
-\i (00:00:08) zoom out 148.02 -67.44
-\i (00:00:08) trapsize 399
-\i (00:00:08) zoom out 1 
-\i (00:00:08) setwindow pcb
-\i (00:00:08) zoom out 148.02 -68.24
+\i (00:00:08) zoom out 279.75 -201.50
 \i (00:00:08) trapsize 799
-\i (00:01:36) pick grid 1021.64 -398.85
-\t (00:01:36) last pick:  1021.75 -398.75
-\i (00:15:36) xhilite 
-\i (00:15:36) xname_flush 
-\i (00:15:36) done 
-\i (00:15:36) generaledit 
-\i (00:18:33) xhilite 
-\i (00:18:33) xname_flush 
-\i (00:18:33) done 
-\i (00:18:33) generaledit 
-\i (00:18:37) xhilite 
-\i (00:18:37) xname_flush 
-\i (00:18:37) done 
-\i (00:18:37) generaledit 
-\i (00:26:50) new 
-\e (00:26:50) Do you want to save the changes you made to IMU_V2.brd?
-\i (00:26:51) fillin no 
-\i (00:28:04) newdrawfillin "photon_headerless.dra" "Package Symbol (Wizard)"
-\t (00:28:04)     Journal end - Tue May 10 22:36:23 2016
+\i (00:00:09) zoom out 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom out 268.57 -187.13
+\i (00:00:09) trapsize 1597
+\i (00:00:09) zoom out 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom out 268.57 -187.13
+\i (00:00:09) trapsize 3195
+\i (00:00:09) zoom in 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom in 89.67 -608.83
+\i (00:00:09) trapsize 1597
+\i (00:00:10) zoom in 1 
+\i (00:00:10) setwindow pcb
+\i (00:00:10) zoom in 86.47 -634.39
+\i (00:00:10) trapsize 799
+\i (00:00:30) zoom in 1 
+\i (00:00:30) setwindow pcb
+\i (00:00:30) zoom in -116.39 -191.92
+\i (00:00:30) trapsize 399
+\i (00:00:30) zoom in 1 
+\i (00:00:30) setwindow pcb
+\i (00:00:30) zoom in -116.39 -191.91
+\i (00:00:30) trapsize 200
+\i (00:00:30) zoom in 1 
+\i (00:00:30) setwindow pcb
+\i (00:00:30) zoom in -116.39 -191.91
+\i (00:00:30) trapsize 100
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -140.74 -185.72
+\i (00:00:31) trapsize 200
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -140.75 -185.72
+\i (00:00:31) trapsize 399
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -140.75 -185.72
+\i (00:00:31) trapsize 799
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -142.35 -190.50
+\i (00:00:31) trapsize 1597
+\i (00:00:32) zoom in 1 
+\i (00:00:32) setwindow pcb
+\i (00:00:32) zoom in 7.80 4.38
+\i (00:00:32) trapsize 799
+\i (00:00:32) zoom in 1 
+\i (00:00:32) setwindow pcb
+\i (00:00:32) zoom in 9.40 5.98
+\i (00:00:32) trapsize 399
+\i (00:00:33) zoom out 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom out 217.05 29.14
+\i (00:00:33) trapsize 799
+\i (00:09:15) exit 
+\t (00:09:15)     Journal end - Thu Jul 21 23:23:26 2016

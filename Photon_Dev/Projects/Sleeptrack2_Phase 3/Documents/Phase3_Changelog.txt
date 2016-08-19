@@ -1,0 +1,33 @@
+Sleeptrack Phase 3 Functions:
+
+1) Add speaker functionality connected to A4
+2) Add 2 pushbuttons to board
+3) Add panelized BNO055 Board with micro connector
+4) Keep all Phase 1 and 2 functionality.
+
+Changelog from Sleeptrack Phase 2:
+1)
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Sleeptrack Phase 2 Functions:
+
+1) Added the use of BNO055 IMU
+	-Locate BNO055 and related circuitry on backside of board
+2) Keep all Phase 1 Functionality
+
+
+Change Log from Sleeptrack Phase 1 Board:
+
+***1) Add Pull up resistors on SDA and SCL Lines (D0 & D1)
+***2) Increased width of Trace from J3 Positive pin to SW1 Pin
+***3) Increased padding between mounting holes and edge of board
+***4) Relocate Fuel guage closer to MCP73831
+***5) Fix J5 (push connector back, make outline correct size)
+***6) Exposed D4 Soldermask
+7) Flip the pins on the EMG connector so that they mirror the layout on the EMG sensor when put face to face.
+***8) Resize board to 2" X 2"
+-------------------------------------------------------------------------------------------------------------------------
