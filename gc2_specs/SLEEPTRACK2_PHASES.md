@@ -48,11 +48,13 @@ Phase 3
 Everything from phase 3 + BNO055 on panelized board
 
 Chips
-* BNO055 on a panelized small external board
+* BNO055 on a panelized small external board (each "device" will come with two BNO055 chips, one on the main sleeptrack board, one on the external IMU board which will snap away after assembly)
 Components
 * 2 "face mounted" push buttons
 * SDR08540M3-01 speaker
   * POS directly connected to the Photon A4 pin, NEG directly connected to GND.
+
+The footprint for the BNO055 should be modified to allow more easy debugging. The pads will be longer and will be completed by vias. Not all pins need to have that treatment, the ones that aren't connected inside the chip can be ignored.
 
 This has the "chin sensor" board whose purpose is to detect movements of the lower jaw independently of the rest of the head. It contains the BNO055 circuit along with chip and connects to the main board through a cable with 4 conductors (3V3, GND, SDA, SCL). The circuit is the same as in phase 2, except **COM3** needs to be **high**.
 
