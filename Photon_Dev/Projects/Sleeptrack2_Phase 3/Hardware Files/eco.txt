@@ -1,0 +1,142 @@
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   1  |
+|------------------------------------------------------------------------------|
+|  C:.../Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3.brd    |
+|                                                    Fri Aug 26 01:53:03 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |    pin_id     |   x   |   y   |   to  net    |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  BNO055_CAP   pins MOVED FROM this net (to net name listed on right)
+                                 J7.23            662.06 -1327.4
+                                                                  BNO055_PIN_23
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_COM0  pins MOVED FROM this net (to net name listed on right)
+                                 J7.10            406.16 -1292.0
+                                                                  BNO055_PIN_10
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_COM1  pins MOVED FROM this net (to net name listed on right)
+                                 J7.11            425.84 -1327.4
+                                                                  BNO055_NRESET
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_COM2  pins MOVED FROM this net (to net name listed on right)
+                                 J7.12            445.53 -1292.0
+                                                                  BNO055_PIN_12
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_COM3  pins MOVED FROM this net (to net name listed on right)
+                                 J7.13            465.21 -1327.4
+                                                                  BNO055_PIN_13
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_GND   pins MOVED FROM this net (to net name listed on right)
+                                 J7.24            681.75 -1292.0
+                                                                  BNO055_PIN_24
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+               pins ADDED TO this existing net (pins not previously on any net)
+                                 J7.2             248.68 -1292.0
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_NBOOT pins MOVED FROM this net (to net name listed on right)
+                                 J7.18            563.64 -1292.0
+                                                                    BNO055_COM2
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_NRESET pins MOVED FROM this net (to net name listed on right)
+                                 J7.15            504.58 -1327.4
+                                                                  BNO055_PIN_15
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_1 pins MOVED FROM this net (to net name listed on right)
+                                 J7.9             386.47 -1327.4
+                                                                     BNO055_CAP
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+               pins ADDED TO this existing net (pins not previously on any net)
+                                 J7.1             228.99 -1327.4
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_7 pins MOVED FROM this net (to net name listed on right)
+                                 J7.19            583.32 -1327.4
+                                                                    BNO055_COM1
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   2  |
+|------------------------------------------------------------------------------|
+|  C:.../Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3.brd    |
+|                                                    Fri Aug 26 01:53:03 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |    pin_id     |   x   |   y   |   to  net    |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  BNO055_PIN_8 pins MOVED FROM this net (to net name listed on right)
+                                 J7.20            603.01 -1292.0
+                                                                    BNO055_COM0
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_10 pins MOVED FROM this net (to net name listed on right)
+                                 J7.26            721.12 -1292.0
+                                                                  BNO055_XOUT32
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_12 pins MOVED FROM this net (to net name listed on right)
+                                 J7.8             366.79 -1292.0
+                                                                   BNO055_PIN_8
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_13 pins MOVED FROM this net (to net name listed on right)
+                                 J7.7             347.10 -1327.4
+                                                                   BNO055_PIN_7
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_15 pins MOVED FROM this net (to net name listed on right)
+                                 J7.27            740.80 -1327.4
+                                                                   BNO055_XIN32
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_16 pins MOVED FROM this net (to net name listed on right)
+                                 J7.28            760.49 -1292.0
+                                                                   BNO055_VDDIO
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_21 pins MOVED FROM this net (to net name listed on right)
+                                 J7.3             268.36 -1327.4
+                                                                     BNO055_VDD
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_22 pins MOVED FROM this net (to net name listed on right)
+                                 J7.4             288.05 -1292.0
+                                                                   BNO055_NBOOT
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_23 pins MOVED FROM this net (to net name listed on right)
+                                 J7.5             307.73 -1327.4
+                                                                     BNO055_PS1
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PIN_24 pins MOVED FROM this net (to net name listed on right)
+                                 J7.6             327.42 -1292.0
+                                                                     BNO055_PS0
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PS0   pins MOVED FROM this net (to net name listed on right)
+                                 J7.16            524.27 -1292.0
+                                                                  BNO055_PIN_16
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_PS1   pins MOVED FROM this net (to net name listed on right)
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   3  |
+|------------------------------------------------------------------------------|
+|  C:.../Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3.brd    |
+|                                                    Fri Aug 26 01:53:03 2016  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |    pin_id     |   x   |   y   |   to  net    |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+                                 J7.17            543.95 -1327.4
+                                                                    BNO055_COM3
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_VDD   pins MOVED FROM this net (to net name listed on right)
+                                 J7.21            622.69 -1327.4
+                                                                  BNO055_PIN_21
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_VDDIO pins MOVED FROM this net (to net name listed on right)
+                                 J7.22            642.38 -1292.0
+                                                                  BNO055_PIN_22
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_XIN32 pins DELETED FROM this net (pin now not on any net)
+                                 J7.30            799.86 -1292.0
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  BNO055_XOUT32 pins DELETED FROM this net (pin now not on any net)
+                                 J7.29            780.17 -1327.4
+|------------------------------------------------------------------------------|
+|   total ECO changes reported  28                                             |
+|------------------------------------------------------------------------------|

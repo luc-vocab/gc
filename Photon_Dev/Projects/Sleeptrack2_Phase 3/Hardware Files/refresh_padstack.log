@@ -1,0 +1,135 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Refresh Padstack                                                 )
+(                                                                     )
+(    Drawing          : SLEEPTRACK2_PHASE3.brd                        )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Fri Aug 26 02:09:43 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Fri Aug 26 02:09:43 2016				Page     1
+
+
+------ Pad Stack Refresh Options ------
+
+Input design  = 'C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3.brd'
+Output design = ''
+Reset symbol text and size locations   = 'NO'
+
+
+------ Library Paths ------
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.0/share/local/pcb/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/allegrolib/symbols 
+           C:/Users/Madison/Desktop/gc/Photon_Dev/Footprints/ 
+
+PADPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.0/share/local/pcb/padstacks 
+           C:/Cadence/SPB_17.0/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.0/share/pcb/allegrolib/symbols 
+
+
+------ Pad Stack Refresh Messages ------
+
+'SMD40_35'  pad stack refresh starting.
+
+     'SMD40_35'  pad stack refreshed successfully.
+     
+'SMD99_99_PENT'  pad stack refresh starting.
+
+     'SMD99_99_PENT'  pad stack refreshed successfully.
+     
+'HOLE20'  pad stack refresh starting.
+
+     'HOLE20'  pad stack refreshed successfully.
+     
+'SMD40_20'  pad stack refresh starting.
+
+     'SMD40_20'  pad stack refreshed successfully.
+     
+'SMD97_70'  pad stack refresh starting.
+
+     'SMD97_70'  pad stack refreshed successfully.
+     
+'SMD69_63'  pad stack refresh starting.
+
+     'SMD69_63'  pad stack refreshed successfully.
+     
+'SMD75_51'  pad stack refresh starting.
+
+     'SMD75_51'  pad stack refreshed successfully.
+     
+'PAD10REC19'  pad stack refresh starting.
+
+     'PAD10REC19'  pad stack refreshed successfully.
+     
+'SMD69_64'  pad stack refresh starting.
+
+     'SMD69_64'  pad stack refreshed successfully.
+     
+'VIA26'  pad stack refresh starting.
+
+     'VIA26'  pad stack refreshed successfully.
+     
+'40X30'  pad stack refresh starting.
+
+     '40X30'  pad stack refreshed successfully.
+     
+'PAD60CIR36D'  pad stack refresh starting.
+
+     'PAD60CIR36D'  pad stack refreshed successfully.
+     
+'PAD60CIR35D'  pad stack refresh starting.
+
+     'PAD60CIR35D'  pad stack refreshed successfully.
+     
+'25X40R'  pad stack refresh starting.
+
+     '25X40R'  pad stack refreshed successfully.
+     
+'SMD20_10'  pad stack refresh starting.
+
+     'SMD20_10'  pad stack refreshed successfully.
+     
+'SMD100REC80'  pad stack refresh starting.
+
+     'SMD100REC80'  pad stack refreshed successfully.
+     
+'SMD70REC70'  pad stack refresh starting.
+
+     'SMD70REC70'  pad stack refreshed successfully.
+     
+'SMD5_5'  pad stack refresh starting.
+
+     'SMD5_5'  pad stack refreshed successfully.
+     
+'SMD60REC70'  pad stack refresh starting.
+
+     'SMD60REC70'  pad stack refreshed successfully.
+     
+'VIA'  pad stack refresh starting.
+
+     'VIA'  pad stack refreshed successfully.
+     
+'SMD_TP_1MM'  pad stack refresh starting.
+
+     'SMD_TP_1MM'  pad stack refreshed successfully.
+     
+'MH_6-32'  pad stack refresh starting.
+
+     'MH_6-32'  pad stack refreshed successfully.
+     
+'MH2_4-40'  pad stack refresh starting.
+
+     'MH2_4-40'  pad stack refreshed successfully.
+     
+Completed refreshing all pad stacks successfully.

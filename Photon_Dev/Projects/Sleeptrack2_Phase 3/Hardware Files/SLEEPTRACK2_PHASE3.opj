@@ -9,7 +9,7 @@
     (NoModify)
     ("Create Allegro Netlist" "TRUE")
     ("Allegro Netlist Directory"
-       "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 2\HARDWARE FILES\ALLEGRO")
+       "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 3\HARDWARE FILES")
     ("View Allegro Netlist Files" "FALSE")
     ("Allegro Netlist Create DCF File" "FALSE")
     ("Update Allegro Board" "FALSE")
@@ -34,9 +34,22 @@
       (DisplayName "pstxprt.dat"))
     (File ".\allegro\pstchip.dat"
       (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File ".\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\pstchip.dat"
+      (Type "Report")
       (DisplayName "pstchip.dat")))
   (Folder "Referenced Projects")
   (PartMRUSelector
+    ("HEADER 30"
+      (FullPartName "HEADER 30.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
     ("HEADER 4/SM"
       (FullPartName "HEADER 4/SM.Normal")
       (LibraryName "C:\CADENCE\SPB_17.0\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
@@ -70,44 +83,33 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 50 1636 50 568")
-        (Scroll "-284 0")
+        (Scroll "-9 0")
         (Zoom "100")
         (Occurrence "/"))
       (Path
          "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 3\HARDWARE FILES\SLEEPTRACK2_PHASE3.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "P03_Battery Circuit"))
+      (Page "P01_Title "))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1661 75 593")
-        (Scroll "0 354")
-        (Zoom "200")
+        (Placement "44 0 1 -1 -1 -8 -30 25 1673 25 543")
+        (Scroll "32 277")
+        (Zoom "194")
         (Occurrence "/"))
       (Path
          "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 3\HARDWARE FILES\SLEEPTRACK2_PHASE3.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "P04_Connectors"))
+      (Page "P07_ BNO055 External"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1686 100 618")
-        (Scroll "152 270")
-        (Zoom "200")
+        (Placement "44 0 1 -1 -1 -8 -30 50 1698 50 568")
+        (Scroll "-329 0")
+        (Zoom "97")
         (Occurrence "/"))
       (Path
          "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 3\HARDWARE FILES\SLEEPTRACK2_PHASE3.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "P05_BNO055"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 200 1786 200 718")
-        (Scroll "0 384")
-        (Zoom "200")
-        (Occurrence "/"))
-      (Path
-         "C:\USERS\MADISON\DESKTOP\GC\PHOTON_DEV\PROJECTS\SLEEPTRACK2_PHASE 3\HARDWARE FILES\SLEEPTRACK2_PHASE3.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "P06_Audio ")))
+      (Page "P08_BNO055 TH")))
   (ISPCBBASICLICENSE "false"))
