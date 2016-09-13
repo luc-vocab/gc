@@ -52,6 +52,11 @@ bool Adafruit_BNO055::begin(adafruit_bno055_opmode_t mode)
   /* Enable I2C */
   Wire.begin();
 
+  // BNO055 clock stretches for 500us or more!
+#ifdef ESP8266
+  Wire.setClockStretchLimit(1000); // Allow for 1000us of clock stretching
+#endif
+
   /* Make sure we have the right device */
   uint8_t id = read8(BNO055_CHIP_ID_ADDR);
   if(id != BNO055_ID)
@@ -552,8 +557,13 @@ bool Adafruit_BNO055::isFullyCalibrated(void)
 bool Adafruit_BNO055::write8(adafruit_bno055_reg_t reg, byte value)
 {
   Wire.beginTransmission(_address);
-  Wire.write((uint8_t)reg);
-  Wire.write((uint8_t)value);
+  #if ARDUINO >= 100
+    Wire.write((uint8_t)reg);
+    Wire.write((uint8_t)value);
+  #else
+    Wire.send(reg);
+    Wire.send(value);
+  #endif
   Wire.endTransmission();
 
   /* ToDo: Check for error! */
@@ -570,10 +580,18 @@ byte Adafruit_BNO055::read8(adafruit_bno055_reg_t reg )
   byte value = 0;
 
   Wire.beginTransmission(_address);
-  Wire.write((uint8_t)reg);
+  #if ARDUINO >= 100
+    Wire.write((uint8_t)reg);
+  #else
+    Wire.send(reg);
+  #endif
   Wire.endTransmission();
   Wire.requestFrom(_address, (byte)1);
-  value = Wire.read();
+  #if ARDUINO >= 100
+    value = Wire.read();
+  #else
+    value = Wire.receive();
+  #endif
 
   return value;
 }
@@ -586,13 +604,21 @@ byte Adafruit_BNO055::read8(adafruit_bno055_reg_t reg )
 bool Adafruit_BNO055::readLen(adafruit_bno055_reg_t reg, byte * buffer, uint8_t len)
 {
   Wire.beginTransmission(_address);
-  Wire.write((uint8_t)reg);
+  #if ARDUINO >= 100
+    Wire.write((uint8_t)reg);
+  #else
+    Wire.send(reg);
+  #endif
   Wire.endTransmission();
   Wire.requestFrom(_address, (byte)len);
 
   for (uint8_t i = 0; i < len; i++)
   {
-    buffer[i] = Wire.read();
+    #if ARDUINO >= 100
+      buffer[i] = Wire.read();
+    #else
+      buffer[i] = Wire.receive();
+    #endif
   }
 
   /* ToDo: Check for errors! */
