@@ -34,7 +34,16 @@
 /* Set the delay between fresh samples */
 #define BNO055_SAMPLERATE_DELAY_MS (100)
 
-Adafruit_BNO055 bno = Adafruit_BNO055(55);
+// ************************************************************
+// SELECT CORRECT I2C ADDRESS HERE !!!!
+// ************************************************************
+
+// for default I2C address - on the main sleeptrack board
+Adafruit_BNO055 bno = Adafruit_BNO055(55, BNO055_ADDRESS_A);
+
+// for alternate I2C address - on the small IMU board
+// Adafruit_BNO055 bno = Adafruit_BNO055(55, BNO055_ADDRESS_B);
+
 
 /**************************************************************************/
 /*
@@ -163,17 +172,11 @@ void setup(void)
         while (1);
     }
 
-    // int eeAddress = 0;
     long bnoID;
     bool foundCalib = false;
 
-    // EEPROM.get(eeAddress, bnoID);
-
     adafruit_bno055_offsets_t calibrationData;
     sensor_t sensor;
-
-    Serial.println("\nNo Calibration Data for this sensor exists in EEPROM");
-    delay(500);
 
 
     delay(1000);
@@ -184,7 +187,7 @@ void setup(void)
     /* Optional: Display current status */
     displaySensorStatus();
 
-    bno.setExtCrystalUse(true);
+    bno.setExtCrystalUse(false);
 
     sensors_event_t event;
     bno.getEvent(&event);
