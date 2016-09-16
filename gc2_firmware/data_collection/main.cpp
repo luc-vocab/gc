@@ -135,6 +135,7 @@ void report_stats() {
 
 
 void loop() {
+  /*
   if(digitalRead(BUTTON1_PIN) == LOW) {
     gc_data.toggle_emg_beep();
     validation_tone();
@@ -144,11 +145,12 @@ void loop() {
     upload_requested = true;
     validation_tone();
   }
+  */
   gc_data.collect_data(upload_requested);
   upload_requested = false;
   delay(frequency);
   if (pending_night_mode) {
-    if(digitalRead(BUTTON2_PIN) == LOW) {
+    if(/*digitalRead(BUTTON2_PIN) == LOW*/ true) {
       DEBUG_LOG("button1 low, starting batch mode");
       // set mode to batch
       pending_night_mode = false;

@@ -81,5 +81,8 @@ void loop()
 	Serial.println(" %");
 	Serial.println();
 
-	delay(500);
+	Particle.publish("voltage", String(voltage));
+	Particle.publish("percent", String(soc));
+
+	delay(2000);
 }

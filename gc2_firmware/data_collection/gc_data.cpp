@@ -15,14 +15,16 @@ void GcData::init() {
 
   // initialize various sensors
 
-  // IMU setup
-  m_imu.settings.device.commInterface = IMU_MODE_I2C;
-  m_imu.settings.device.mAddress = LSM9DS1_M;
-  m_imu.settings.device.agAddress = LSM9DS1_AG;
+  if(USE_IMU) {
+    // IMU setup
+    m_imu.settings.device.commInterface = IMU_MODE_I2C;
+    m_imu.settings.device.mAddress = LSM9DS1_M;
+    m_imu.settings.device.agAddress = LSM9DS1_AG;
 
-  if (!m_imu.begin())
-  {
-    DEBUG_LOG("Failed to communicate with LSM9DS1.");
+    if (!m_imu.begin())
+    {
+      DEBUG_LOG("Failed to communicate with LSM9DS1.");
+    }
   }
 
   // setup battery gauge
@@ -40,6 +42,9 @@ void GcData::read_battery_charge() {
 }
 
 float GcData::get_gyro_max() {
+  if(! USE_IMU) {
+    return 0.0;
+  }
   // retrieve the highest gyro rate on 3 axes
   m_imu.readGyro();
   float gyro_x = m_imu.calcGyro(m_imu.gx);
@@ -50,10 +55,16 @@ float GcData::get_gyro_max() {
 }
 
 void GcData::get_accel(float *accel_values) {
-  m_imu.readAccel();
-  accel_values[0] = m_imu.calcAccel(m_imu.ax);
-  accel_values[1] = m_imu.calcAccel(m_imu.ay);
-  accel_values[2] = m_imu.calcAccel(m_imu.az);
+  if(! USE_IMU) {
+    accel_values[0] = 0.0;
+    accel_values[1] = 0.0;
+    accel_values[2] = 0.0;
+  } else {
+    m_imu.readAccel();
+    accel_values[0] = m_imu.calcAccel(m_imu.ax);
+    accel_values[1] = m_imu.calcAccel(m_imu.ay);
+    accel_values[2] = m_imu.calcAccel(m_imu.az);
+  }
 }
 
 uint16_t GcData::read_emg() {
@@ -83,9 +94,12 @@ void GcData::emg_beep(uint16_t emg_value) {
     return;
   }
 
-  if(emg_value > 150) {
-    DEBUG_LOG("emg_beep");
-    tone(BUZZER_PIN, 900, 80);
+  if(emg_value > 1000) {
+    tone(BUZZER_PIN, 2000, 80);
+  } else if(emg_value > 500) {
+    tone(BUZZER_PIN, 1200, 80);
+  } else if(emg_value > 300) {
+    tone(BUZZER_PIN, 800, 80);
   }
 
 }
@@ -114,6 +128,7 @@ void GcData::queue_status_battery_charge() {
 }
 
 void GcData::collect_data(bool upload_requested) {
+
   uint16_t emg_value = read_emg();
   emg_beep(emg_value);
   float gyro_max = get_gyro_max();

@@ -3,6 +3,8 @@
 #include "Adafruit_BNO055.h"
 #include "imumaths.h"
 
+bool setupdone = false;
+
 /* This driver reads raw data from the BNO055
    Connections
    ===========
@@ -27,29 +29,36 @@ Adafruit_BNO055 bno = Adafruit_BNO055();
 /**************************************************************************/
 void setup(void)
 {
+  delay(5000);
   Serial.begin(9600);
   Serial.println("Orientation Sensor Raw Data Test"); Serial.println("");
 
   /* Initialise the sensor */
   if(!bno.begin())
   {
+    Particle.publish("status", "could not configure BNO055");
+
     /* There was a problem detecting the BNO055 ... check your connections */
     Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
-    while(1);
+  } else {
+
+    delay(1000);
+
+    Particle.publish("status", "BNO055 setup OK");
+
+    /* Display the current temperature */
+    int8_t temp = bno.getTemp();
+    Serial.print("Current Temperature: ");
+    Serial.print(temp);
+    Serial.println(" C");
+    Serial.println("");
+
+    bno.setExtCrystalUse(false);
+
+    Serial.println("Calibration status values: 0=uncalibrated, 3=fully calibrated");
+
+    setupdone = true;
   }
-
-  delay(1000);
-
-  /* Display the current temperature */
-  int8_t temp = bno.getTemp();
-  Serial.print("Current Temperature: ");
-  Serial.print(temp);
-  Serial.println(" C");
-  Serial.println("");
-
-  bno.setExtCrystalUse(true);
-
-  Serial.println("Calibration status values: 0=uncalibrated, 3=fully calibrated");
 }
 
 /**************************************************************************/
@@ -60,6 +69,12 @@ void setup(void)
 /**************************************************************************/
 void loop(void)
 {
+  if (! setupdone)
+  {
+    Serial.println("bno055 setup not done");
+    delay(1000);
+    return;
+  }
   // Possible vector values can be:
   // - VECTOR_ACCELEROMETER - m/s^2
   // - VECTOR_MAGNETOMETER  - uT
@@ -77,6 +92,12 @@ void loop(void)
   Serial.print(" Z: ");
   Serial.print(euler.z());
   Serial.print("\t\t");
+
+
+  Particle.publish("x", String(euler.x()));
+  Particle.publish("y", String(euler.y()));
+  Particle.publish("z", String(euler.z()));
+
 
   /*
   // Quaternion data
@@ -104,5 +125,6 @@ void loop(void)
   Serial.print(" Mag=");
   Serial.println(mag, DEC);
 
-  delay(BNO055_SAMPLERATE_DELAY_MS);
+  // delay(BNO055_SAMPLERATE_DELAY_MS);
+  delay(2000);
 }
