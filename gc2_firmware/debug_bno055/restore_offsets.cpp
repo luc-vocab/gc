@@ -152,7 +152,7 @@ void displaySensorOffsets(const adafruit_bno055_offsets_t &calibData)
 void setup(void)
 {
     Serial.begin(115200);
-    delay(1000);
+    delay(5000);
     Serial.println("Orientation Sensor Test"); Serial.println("");
 
     /* Initialise the sensor */
@@ -163,39 +163,18 @@ void setup(void)
         while (1);
     }
 
-    int eeAddress = 0;
+    // int eeAddress = 0;
     long bnoID;
     bool foundCalib = false;
 
-    EEPROM.get(eeAddress, bnoID);
+    // EEPROM.get(eeAddress, bnoID);
 
     adafruit_bno055_offsets_t calibrationData;
     sensor_t sensor;
 
-    /*
-    *  Look for the sensor's unique ID at the beginning oF EEPROM.
-    *  This isn't foolproof, but it's better than nothing.
-    */
-    bno.getSensor(&sensor);
-    if (bnoID != sensor.sensor_id)
-    {
-        Serial.println("\nNo Calibration Data for this sensor exists in EEPROM");
-        delay(500);
-    }
-    else
-    {
-        Serial.println("\nFound Calibration for this sensor in EEPROM.");
-        eeAddress += sizeof(long);
-        EEPROM.get(eeAddress, calibrationData);
+    Serial.println("\nNo Calibration Data for this sensor exists in EEPROM");
+    delay(500);
 
-        displaySensorOffsets(calibrationData);
-
-        Serial.println("\n\nRestoring Calibration data to the BNO055...");
-        bno.setSensorOffsets(calibrationData);
-
-        Serial.println("\n\nCalibration data loaded into BNO055");
-        foundCalib = true;
-    }
 
     delay(1000);
 
@@ -249,17 +228,8 @@ void setup(void)
     bno.getSensorOffsets(newCalib);
     displaySensorOffsets(newCalib);
 
-    Serial.println("\n\nStoring calibration data to EEPROM...");
-
-    eeAddress = 0;
     bno.getSensor(&sensor);
     bnoID = sensor.sensor_id;
-
-    EEPROM.put(eeAddress, bnoID);
-
-    eeAddress += sizeof(long);
-    EEPROM.put(eeAddress, newCalib);
-    Serial.println("Data stored to EEPROM.");
 
     Serial.println("\n--------------------------------\n");
     delay(500);
