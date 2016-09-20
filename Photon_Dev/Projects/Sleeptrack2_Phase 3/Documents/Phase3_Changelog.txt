@@ -5,12 +5,6 @@ Sleeptrack Phase 3 Functions:
 3) Add panelized BNO055 Board with micro connector
 4) Keep all Phase 1 and 2 functionality.
 
-Changelog from Sleeptrack Phase 2:
-1)
-
-
-
-
 -------------------------------------------------------------------------------------------------------------------------
 
 Sleeptrack Phase 2 Functions:

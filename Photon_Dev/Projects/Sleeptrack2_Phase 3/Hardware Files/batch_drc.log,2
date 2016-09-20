@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : SLEEPTRACK2_PHASE3.brd                        )
 (    Software Version : 17.0P011                                      )
-(    Date/Time        : Mon Aug 29 21:45:24 2016                      )
+(    Date/Time        : Fri Aug 26 02:10:00 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -20,7 +20,7 @@
  ========= check standalone text              0:00:00
  ========= check standalone rectangles        0:00:00
 
- ..... Total number of DRC errors  0
+ ..... Total number of DRC errors  73
 
  ..... DRC update completed, total CPU time   0:00:00
  *************************************************************************

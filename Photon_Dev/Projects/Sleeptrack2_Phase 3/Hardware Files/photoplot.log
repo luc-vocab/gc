@@ -1,0 +1,72 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : SLEEPTRACK2_PHASE3.brd                        )
+(    Software Version : 17.0P009                                      )
+(    Date/Time        : Mon Aug 29 22:19:59 2016                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+ ---- Photoplot outline rectangle not found; using drawing extents.
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          INCHES
+    FILM-SIZE             2400000 1600000
+    FORMAT                2.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  YES
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+================================================================
+     PROCESSING FILM < Silkscreen_Top >
+     TO FILE < C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/Sleeptrack2_Phase_2_Silkscreen_Top_V2.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                10.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: text composed 0 width line found at (-1133.00 -1353.20)
+           ... using undefined line width of 10.00
+
+    WARNING: 0 width line found at (-1110.10 -1295.30)
+           ... using undefined line width of 10.00
+
+    WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 10.00
+
+    WARNING: Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 10.00
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.01000                                  DARK 
+
+     Sleeptrack2_Phase_2_Silkscreen_Top_V2 created with warnings
+
+
+------------------------------------------------------
+ SUMMARY:
+        Sleeptrack2_Phase_2_Silkscreen_Top_V2 created with warnings
+
+ ARTWORK had warnings
