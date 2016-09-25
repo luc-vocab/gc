@@ -4,6 +4,8 @@
 #include "Adafruit_BNO055.h"
 #include "imumaths.h"
 
+PRODUCT_ID(1523);
+PRODUCT_VERSION(1);
 
 /* Set the delay between fresh samples */
 #define BNO055_SAMPLERATE_DELAY_MS (100)
