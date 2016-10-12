@@ -66,26 +66,13 @@ Reference circuit:
 
 Phase 4
 =======
-Everything from phase 3 + audio circuits
+Everything from phase 3 + vibration motor circuit
 
-Chips:
-* AD5220
-* TPA2005D1DRB
+* Replace battery charging LED with a more appropriate one
+* Remove the test points for the IMU if we don't need them
+* Add vibrator motor circuit. We should discuss the exact circuit type.
 
-Components
-* SJ1-3515N
-* SDR08540M3-01
+We could use a simple transistor, or a transistor with additional shottky dioded and pull downresistor, or a motor driver like the DRV2605.
 
-Phase 5
-=======
-Everything from phase 4 + LED bar-chart
+https://www.precisionmicrodrives.com/tech-blog/2016/05/16/how-drive-vibration-motor-arduino-and-genuino
 
-Chips:
-* LM3914
-
-Datasheets:
-* LM3914: http://www.ti.com/lit/ds/symlink/lm3914.pdf
-
-Phase 6
-=======
-Everything from phase 5 + vibration motor driver
