@@ -70,9 +70,13 @@ Everything from phase 3 + vibration motor circuit
 
 * Replace battery charging LED with a more appropriate one
 * Remove the test points for the IMU if we don't need them
+* Remove through-holes for female headers
+* Move buttons closer to center of board, away from edges
 * Add vibrator motor circuit. We should discuss the exact circuit type.
 
 We could use a simple transistor, or a transistor with additional shottky dioded and pull downresistor, or a motor driver like the DRV2605.
+
+http://www.ti.com/product/DRV2605
 
 https://www.precisionmicrodrives.com/tech-blog/2016/05/16/how-drive-vibration-motor-arduino-and-genuino
 
