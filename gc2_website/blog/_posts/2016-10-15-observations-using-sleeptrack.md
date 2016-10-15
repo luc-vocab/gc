@@ -31,46 +31,28 @@ Overall setting up the muscle sensor in the right place is the biggest issue wit
 Grinding patterns
 -----------------
 
+This is the really interesting part. Ever since it became clear to me that my <a href="/2012/10/01/symptoms-and-diagnosis/">symptoms</a> were the result of unconscious night-time muscle activity, I've been looking for ways to analyze this mysterious behavior. It's not easy at all to observe your own sleeping behvior. Some people go as far as video-recording themselves with an infrared camera. Something i've considered doing, and that other people on the bruxhackers mailing list have done.
+
 {% include image.html scaling="c_fill,w_1024" image="observations_1/repeated_grinds.png" %}
+
+The above chart shows muscle activity over a 4.5mn period and is representative of the whole night's activity overall. Values around 140-150 show that muscles are at rest. Values above that, going from 180 to up to 600 indicate the muscles are contracted. Most of the activity happens in periods of 30 seconds to 60 seconds. There are dozens of these clusters of activity happening throughout the night.
+
 {% include image.html scaling="c_fill,w_1024" image="observations_1/30s_grind.png" %}
+
+Above chart shows a 30 second period of activity. The seesaw pattern indicates side-to-side grinding as facial muscles on either side of the face take turn in contracting and releasing. If we had a muscle sensor on the other side of the head, it would show opposite activity (contract while the other side is at rest).
+
 {% include image.html scaling="c_fill,w_1024" image="observations_1/1mn_grind.png" %}
 
+Above we have a 1mn grinding activity, with the same seesaw pattern. There is a short pause between the different periods of activity. All of this is happening unconscously during my sleep, so it's hard to say what I had in mind and why the muscle activity starts and stops this way.
 
 Necessary improvements
 ----------------------
 
-After facing difficulties in the previous months trying to design and manufacture the final version of the Sleeptrack Printed Circuit Board, we decided to take a step by step approach and build incremental versions to make more steady progress. The first version, **phase 1** is comprised of the bare minimum components required to measure night-time muscle activity.
+Having accumulated some experience with wearing the device, a couple of things are becoming clear to me.
 
-{% include image.html scaling="c_fill,w_1024" image="phase1_hardware/sleeptrack_phase1_components.jpg" %}
-
-On the picture above, you can see:
-
-* **Sleeptrack Phase 1 PCB** (Printed Circuit Board) with a Photon Headerless microcontroller, battery charging circuit and EMG connector. This version is a little larger than the final version.
-* **1000mah battery** the capacity is sufficient to last over a night.
-* **Myoware EMG sensor** with a 3d printed cover to prevent touching the sensitive EMG circuitry.
-
-It doesn't feature any of the other sensors that I wanted, IMU/Accelerometer and chin sensor. These will come in subsequent revisions.
-
-{% include image.html scaling="c_fill,w_1024" image="phase1_hardware/3d_printed_case_1.jpg" %}
-
-The 3d-printed case housing the PCB and battery. Infortunately the nylon screws I had were too short and couldn't close down the case, so I had to use black electrical tape.
-
-{% include image.html scaling="c_fill,w_1024" image="phase1_hardware/3d_printed_case_2.jpg" %}
-
-The case has a special grove to place the headband which secures the device to the head. The assembled case + PCB + battery unit is not heavy, but it's a little bit big considering it's worn on the side of the head. I'm studying ways to shrink down the whole assembly for future revisions. I may design a split case which houses the PCB and battery separately, which will allow me to design something really small and close-fitting.
-
-<div class="row">
-<img src="https://res.cloudinary.com/photozzap/image/upload/c_scale,h_1024/v1454745964/gc_website_blog/phase1_hardware/sleeptrack_phase1_headshot_1.jpg" class="col-lg-6 col-md-6 img-responsive">
-<img src="https://res.cloudinary.com/photozzap/image/upload/c_scale,h_1024/v1454745965/gc_website_blog/phase1_hardware/sleeptrack_phase1_headshot_2.jpg" class="col-lg-6 col-md-6 img-responsive">
-</div>
-
-And here is the assembled device, worn on the side of the head. First observation, yes it's a little bit bulky and not very aesthetic. This is the first fully working protoype, so there is a lot of room for improvement. Both the size and aesthetics will improve, however my priority for now is ensuring that the device is functional.
-
-I've used this version of the device in realtime mode to ensure EMG readings are correct, but haven't worn it for a full night yet. This testing will take place over the coming weeks, and I will share the results here. 
- 
-Having this version ready is a bit of a milestone for me as the last six months have had a lot of setbacks with manufacturing of the PCB, and it's nice to have a first version working, however basic.
- 
- 
+* The device needs **additional sensors** to gather more information about facial movements. This will come the form of the dual-IMU in the subsequent revisions of the device. One of the IMUs will be **attached to the chin** and provide very detailed information about the movement of the jaw, and allow distinguishing of grinding vs clenching patterns.
+* It generates a **lot of data**. Just the EMG values, which is the only data being captured right now, are sampled 10 times / second. This means 252,000 datapoints for a 7-hour night. Sorting through this data will required advanced techniques. I'm currently studying what tools in statistics, signal processing and machine learning can be used for that purpose.
+* Designing an effective **biofeedback** strategy will require careful thought. The number of bruxism events taking place every night is overwhelming. A naive biofeedback strategy which wakes up / signals the user every single time would be extremely tough to endure and damage sleep quality, though someone wanting to stop bruxism at any cost might still want exactly this. In my case, the main thing I care about is managing day-time symptoms. Hence I'll look to control the total accumulated bruxism time to under an acceptable level which doesn't cause day-time headaches or dizziness or muscle pain. 
  
 
 
