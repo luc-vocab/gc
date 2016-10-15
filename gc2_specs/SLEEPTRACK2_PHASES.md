@@ -73,6 +73,7 @@ Everything from phase 3 + vibration motor circuit
 * Remove through-holes for female headers
 * Move buttons closer to center of board, away from edges
 * Add vibrator motor circuit. We should discuss the exact circuit type.
+* See how small we can make the board. Ignore previous constraints about connector placement initially.
 
 We could use a simple transistor, or a transistor with additional shottky dioded and pull downresistor, or a motor driver like the DRV2605.
 
