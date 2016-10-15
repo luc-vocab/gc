@@ -7,11 +7,26 @@ thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north,h_40
 
 In my <a href="/2016/07/09/phase1-hardware/">previous post</a>, I showed the sleeptrack phase1 prototype, which I've been wearing on and off at night. Here are my observations about the device, and about my own night-time teeth grinding behavior. I have to say I was shocked at how much muscle activity is taking place in a single night.
 
+In its current state, the prototype is a passive device which only collects data about muscle activity. It samples the EMG sensor 10 times per second. I've worn the EMG (muscle sensor) on the temporal and masseter muscles. Both configurations work, however there is discussion on the bruxhackers mailing list suggesting the masseter muscle should give a cleaner output with less interference from other facial muscles.
+
 Comfort
 -------
 
+One of my biggest complains with the <a href="/2016/02/23/review-of-bruxism-devices/">Grindcare</a> or my 2013 <a href="/2013/06/01/experiences-with-grind-control-device/">Grind Control device</a> was the wire going from the device worn on the front of the body to the electrodes on the temporal muscle. The head and body move independently which causes a strain on that wire and restricts freedom of movement. Sometimes at night, the main device would shift around, pulling on the electrode cable which made me worry about damaging the cable.
+
+Sleeptrack on the other hand, consists of a main device worn on a headband on the side of the head, and of the muscle sensor, worn also on the head, on the temporal or masseter muscles. Because these two parts of the body don't move independently, there is no strain on the cable, and the head is free to move without interference from the device. On this aspect, the design of sleeptrack fulfills its goal.
+
+The phase1 prototype is a bit larger than what I expect the final version to be. When wearing the device on my right side, when leaning my head to the right slightly, I can feel it pressing against my pillow. Also, the flat shape of the device feels a bit unnatural against the curved head. These aspects should improve as the shape of the device changes in future revisions. Though nothing will ever be as comfortable as sleeping without electronics attached to the head unfortunately.
+
+
 Setup process before sleeping
 -----------------------------
+
+By far the biggest problem that I run into is achieving proper placement of the electrodes on the muscles. Incorrect placement or insufficient adherence causes the EMG readings to be completely off. I've found that surgical tape is necessary to keep the electrodes in place. Occasionally, I need several tries to find the right placement which gives me correct EMG readings.
+
+Once the device is installed, the <a href="/2016/04/14/first-look-sleeptrack-interface/">realtime mode</a> on the sleeptrack web interface allows checking of EMG readings in real time during rest as well as during muscle clenching. I'm planning on enhancing this some more, maybe with a semi-automatic EMG reading test to help the user ensure electrode placement is correct every time.
+
+Overall setting up the muscle sensor in the right place is the biggest issue with the device right now. I'm brainstorming to find an adequate solution to this problem.
 
 Grinding patterns
 -----------------
