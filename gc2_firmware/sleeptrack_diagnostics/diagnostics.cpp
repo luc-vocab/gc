@@ -25,19 +25,26 @@ bool s_report_battery_state = false;
 
 bool s_setup_bno055_1 = false;
 bool s_report_imu_state_1 = false;
+bool s_setup_bno055_2 = false;
+bool s_report_imu_state_2 = false;
+
 
 int start_batt(String input);
 int stop_batt(String input);
 int start_bno_1(String input);
 int stop_bno_1(String input);
+int start_bno_2(String input);
+int stop_bno_2(String input);
 int test_spkr(String input);
 void button1();
 void button2();
 void report_battery_state();
 void report_imu_state_1();
+void report_imu_state_2();
 
 Timer battery_timer(5000, report_battery_state);
 Timer imu_timer_1(2000, report_imu_state_1);
+Timer imu_timer_2(2000, report_imu_state_2);
 
 void setup() {
   pinMode(BUTTON1_PIN, INPUT_PULLUP);
@@ -52,6 +59,8 @@ void setup() {
   Particle.function("test_spkr", test_spkr);
   Particle.function("start_bno_1", start_bno_1);
   Particle.function("stop_bno_1", stop_bno_1);
+  Particle.function("start_bno_2", start_bno_2);
+  Particle.function("stop_bno_2", stop_bno_2);
 
 }
 
@@ -101,6 +110,9 @@ void report_battery_state()
   s_report_battery_state = true;
 }
 
+// BNO1 setup
+// ===========================
+
 int start_bno_1(String input)
 {
   s_setup_bno055_1  = true;
@@ -142,6 +154,51 @@ void setup_bno055_1()
   s_setup_bno055_1 = false;
 }
 
+// BNO2 setup
+// ===========================
+
+int start_bno_2(String input)
+{
+  s_setup_bno055_2  = true;
+  return 0;
+}
+
+int stop_bno_2(String input)
+{
+  imu_timer_2.stop();
+  return 0;
+}
+
+void report_imu_state_2()
+{
+  s_report_imu_state_2 = true;
+}
+
+void setup_bno055_2()
+{
+
+  Particle.publish("imu2", "Starting BNO055 setup");
+  /* Initialise the sensor */
+  if(!bno2.begin())
+  {
+    Particle.publish("imu2", "could not find BNO055 on I2C bus");
+
+  } else {
+
+    delay(1000);
+
+    Particle.publish("imu2", "BNO055 setup OK");
+
+    bno2.setExtCrystalUse(false);
+
+    // if setup is successful, start Timer
+    imu_timer_2.start();
+
+  }
+  s_setup_bno055_2 = false;
+}
+
+
 void loop() {
   if (s_report_button1_state)
   {
@@ -172,6 +229,8 @@ void loop() {
     s_report_battery_state = false;
   }
 
+  // bno1
+  // =====
   if(s_setup_bno055_1)
   {
       setup_bno055_1();
@@ -184,7 +243,7 @@ void loop() {
     bno1.getCalibration(&system, &gyro, &accel, &mag);
     imu::Vector<3> euler = bno1.getVector(Adafruit_BNO055::VECTOR_EULER);
 
-    String status = String::format("Orientation: x=%.1f y=%.1f z=%.1f Calib s:%d g:%d a:%d m:%d",
+    String status = String::format("Orient: x=%.0f y=%.0f z=%.0f Cal s:%d g:%d a:%d m:%d",
       euler.x(),
       euler.y(),
       euler.z(),
@@ -194,10 +253,40 @@ void loop() {
       mag
     );
 
-    Particle.publish("imu", status);
+    Particle.publish("imu1", status);
 
     s_report_imu_state_1 = false;
   }
+
+  // bno2
+  // =====
+  if(s_setup_bno055_2)
+  {
+      setup_bno055_2();
+  }
+
+  if(s_report_imu_state_2)
+  {
+
+    uint8_t system, gyro, accel, mag = 0;
+    bno2.getCalibration(&system, &gyro, &accel, &mag);
+    imu::Vector<3> euler = bno2.getVector(Adafruit_BNO055::VECTOR_EULER);
+
+    String status = String::format("Orient: x=%.0f y=%.0f z=%.0f Cal s:%d g:%d a:%d m:%d",
+      euler.x(),
+      euler.y(),
+      euler.z(),
+      system,
+      gyro,
+      accel,
+      mag
+    );
+
+    Particle.publish("imu2", status);
+
+    s_report_imu_state_2 = false;
+  }
+
 
   delay(250);
 }
