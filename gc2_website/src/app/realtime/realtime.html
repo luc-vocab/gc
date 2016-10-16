@@ -86,8 +86,11 @@
 
         <div ng-show="realtime.realtime_mode_on">
             <div class="row">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-8 col-sm-8">
                     <button class="btn" type="button" ng-click="realtime.standby()">Standby</button>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <label>lag:</label> {{realtime.current_lag}}
                 </div>
             </div>
             
