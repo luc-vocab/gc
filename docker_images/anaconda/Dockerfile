@@ -28,4 +28,4 @@ RUN apt-get install -y curl grep sed dpkg && \
 ENV PATH /opt/conda/bin:$PATH
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
-CMD [ "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser" ]
+CMD [ "/opt/conda/bin/jupyter", "notebook", "--notebook-dir=/opt/notebooks", "--ip='*'", "--port=8888", "--no-browser" ]
