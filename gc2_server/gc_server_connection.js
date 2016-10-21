@@ -94,6 +94,15 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                     
                     var mode = data.readUInt32LE(10);
                     
+                    var starting_timestamp = data.readUInt32LE(14);
+                    var starting_millis = data.readUInt32LE(18);
+                    
+                    self.starting_timestamp = starting_timestamp * 1000 + starting_millis % 1000;
+                    self.starting_millis = starting_millis;
+                    
+                    
+                    //self.log_info("initial_timestamp: ", initial_timestamp, " initial_millis: ", initial_millis);
+                    
                     if( mode == MODE.REALTIME ) {
                         self.state = CONNECTION_STATES.READY_REALTIME;
                         self.log_info("realtime mode");
@@ -107,7 +116,7 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                         self.log_info("datalogging mode");
                     } else if ( mode == MODE.CONNECTION_TEST ) {
                         self.log_info("connection test");
-                        var random_number = data.readUInt32LE(14);
+                        var random_number = data.readUInt32LE(22);
                         // write data on firebase to show we received data
                         self.firebaseDeviceRef.update({
                             "ping_test": random_number
@@ -334,7 +343,8 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                 "gyro_max": gyro_max,
                 "accel_x": accel_x,
                 "accel_y": accel_y,
-                "accel_z": accel_z
+                "accel_z": accel_z,
+                "datapoint_time": timestamp
             });
         
         }

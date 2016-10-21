@@ -16,3 +16,4 @@ Questions
 ---------
 * Any concerns with having wires 20cm long on the I2C bus ? 
 * Do we need pull up / pull down resistors on the board itself ?
+* Could it be that the connector will make the board bigger than it needs to be ? and we could use a smaller SMD connector instead ?
