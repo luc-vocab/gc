@@ -245,6 +245,9 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   write_int_to_buffer(m_handshake_buffer, PROTOCOL_VERSION, &offset);
   // write mode (batch or realtime)
   write_int_to_buffer(m_handshake_buffer, mode, &offset);
+  // write timestamp and millis
+  write_int_to_buffer(m_handshake_buffer, Time.now(), &offset);
+  write_int_to_buffer(m_handshake_buffer, millis(), &offset);
 
   if(mode == GC_MODE_CONNECTION_TEST) {
     // add random number used for connection test
