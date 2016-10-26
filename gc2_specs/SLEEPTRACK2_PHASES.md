@@ -69,7 +69,6 @@ Phase 4
 Everything from phase 3 + vibration motor circuit
 
 * Replace battery charging LED with a more appropriate one
-* Remove the test points for the IMU if we don't need them
 * Remove through-holes for female headers
 * Move buttons closer to center of board, away from edges
 * Add vibrator motor circuit using the DRV2605L (SSOP package)
@@ -77,7 +76,7 @@ Everything from phase 3 + vibration motor circuit
 * Keep the auxiliary IMU board as a detachable piece. Can that one be made smaller ?
 * Remove the bno055 breakout with all the test points.
 * Add a "host" board for this one, adding the pico connector, as well as an easy way to change the ADO level (I2C address selection). Maybe a resistor that can be soldered in one of two positions?: https://www.tindie.com/products/onehorse/wearable-bno055-nano-board/
-* See how small we can make the board. Ignore previous constraints about connector placement initially.
+* See how small we can make the main board. Ignore previous constraints about connector placement initially.
 * Does this need to stay a 4-layer board, or does moving to a 2-layer board provide any advantages ?
 
 Vibration circuit details:
