@@ -72,12 +72,18 @@ Everything from phase 3 + vibration motor circuit
 * Remove the test points for the IMU if we don't need them
 * Remove through-holes for female headers
 * Move buttons closer to center of board, away from edges
-* Add vibrator motor circuit. We should discuss the exact circuit type.
+* Add vibrator motor circuit using the DRV2605L (SSOP package)
+* remove the bno055 circuit. I thought the main board needed it, but I think it's only needed on the auxiliary IMU board.
 * See how small we can make the board. Ignore previous constraints about connector placement initially.
+* Does this need to stay a 4-layer board, or does moving to a 2-layer board provide any advantages ?
 
-We could use a simple transistor, or a transistor with additional shottky dioded and pull downresistor, or a motor driver like the DRV2605.
+Vibration circuit details:
+http://www.ti.com/lit/ds/symlink/drv2605l.pdf page 52 / 9.1 has a sample circuit (figure 58).
 
-http://www.ti.com/product/DRV2605
+* Connect IN/TRIG to the Photon's A1 pin
+* Connect EN to the Photon's D4 pin
+* add a 2-conductor connector for the motor, right-angle mounted. maybe the same JST connector used for the battery, though i'm interested in knowing whether there are smaller alternatives.
+
 
 https://www.precisionmicrodrives.com/tech-blog/2016/05/16/how-drive-vibration-motor-arduino-and-genuino
 
