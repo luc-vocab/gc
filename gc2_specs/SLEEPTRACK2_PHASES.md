@@ -74,6 +74,8 @@ The board will consist of 4 panneled boards:
 * **Host board for BNO055 Nano breakout**: allows us to solder the nano bno055 breakout
 * **T-shaped connector for molex Pico Connector**: allow us to connect two external I2C devices.
 
+**See below for description of the 4 parts:**
+
 * **Main Board**
  * Replace battery charging LED with a more appropriate one
  * Remove through-holes for female headers
