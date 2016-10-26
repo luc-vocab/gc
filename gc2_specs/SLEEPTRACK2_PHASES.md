@@ -66,22 +66,39 @@ Reference circuit:
 
 Phase 4
 =======
-Everything from phase 3 + vibration motor circuit
+Everything from phase 3 + vibration motor circuit + other improvements.
 
-* Replace battery charging LED with a more appropriate one
-* Remove through-holes for female headers
-* Move buttons closer to center of board, away from edges
-* Add vibrator motor circuit using the DRV2605L (SSOP package)
-* remove the bno055 circuit. I thought the main board needed it, but I think it's only needed on the auxiliary IMU board.
-* Keep the auxiliary IMU board as a detachable piece. Can that one be made smaller ?
-* Remove the bno055 breakout with all the test points.
-* Add a "host" board for this one, adding the pico connector, as well as an easy way to change the ADO level (I2C address selection). Maybe a resistor that can be soldered in one of two positions?: https://www.tindie.com/products/onehorse/wearable-bno055-nano-board/
-* See how small we can make the main board. Ignore previous constraints about connector placement initially.
-* Does this need to stay a 4-layer board, or does moving to a 2-layer board provide any advantages ?
+The board will consist of 4 panneled boards:
+* **Main Board**: contains the Photon and other components
+* **Auxiliary IMU board**: contains the bno055 and associated circuits
+* **Host board for BNO055 Nano breakout**: allows us to solder the nano bno055 breakout
+* **T-shaped connector for molex Pico Connector**: allow us to connect two external I2C devices.
+
+* **Main Board**
+ * Replace battery charging LED with a more appropriate one
+ * Remove through-holes for female headers
+ * Move buttons closer to center of board, away from edges
+ * Add vibrator motor circuit using the DRV2605L (SSOP package). Se below for sample circuit and pin assignments.
+ * remove the bno055 circuit. I thought the main board needed it, but I think it's only needed on the auxiliary IMU board.
+ * See how small we can make the main board. Ignore previous constraints about connector placement initially.
+* Does this need to stay a 4-layer board, or does moving to a 2-layer board provide any advantages ? 
+* **Auxiliary IMU board**
+ * Keep the auxiliary IMU board as a detachable piece. Can that one be made smaller ?
+ * Add an easy way to switch the I2C address, maybe a resistor which can be soldered in two positions ?
+* **BNO055 Breakout with test points**
+ * Remove this part. We don't need it.
+* **Host board for the BNO055 nano breakout**
+ * Add a "host" board for this one, adding the pico connector, as well as an easy way to change the ADO level (I2C address selection). Maybe a resistor that can be soldered in one of two positions?: https://www.tindie.com/products/onehorse/wearable-bno055-nano-board/
+* **T-shaped connector for Pico Connector**
+ * I would like an easy way to connect one sleeptrack main board to two of the auxiliary IMU boards / or the host board. I am thinking it'll be cleaner if I have a T-shaped connector with 3 Pico Connectors to help with this.
+
+
 
 Vibration circuit details:
 http://www.ti.com/lit/ds/symlink/drv2605l.pdf page 52 / 9.1 has a sample circuit (figure 58).
 
+* Connect SDA to D0
+* Connect SCL to D1
 * Connect IN/TRIG to the Photon's A1 pin
 * Connect EN to the Photon's D4 pin
 * add a 2-conductor connector for the motor, right-angle mounted. maybe the same JST connector used for the battery, though i'm interested in knowing whether there are smaller alternatives.
