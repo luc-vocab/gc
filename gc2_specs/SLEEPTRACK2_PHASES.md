@@ -83,7 +83,7 @@ The board will consist of 4 panneled boards:
  * Add vibrator motor circuit using the DRV2605L (SSOP package). Se below for sample circuit and pin assignments.
  * remove the bno055 circuit. I thought the main board needed it, but I think it's only needed on the auxiliary IMU board.
  * See how small we can make the main board. Ignore previous constraints about connector placement initially.
-* Does this need to stay a 4-layer board, or does moving to a 2-layer board provide any advantages ? 
+ * Does this need to stay a 4-layer board, or does moving to a 2-layer board provide any advantages ? 
 * **Auxiliary IMU board**
  * Keep the auxiliary IMU board as a detachable piece. Can that one be made smaller ?
  * Add an easy way to switch the I2C address, maybe a resistor which can be soldered in two positions ?
@@ -96,7 +96,8 @@ The board will consist of 4 panneled boards:
 
 
 
-Vibration circuit details:
+**Vibration circuit details:**
+
 http://www.ti.com/lit/ds/symlink/drv2605l.pdf page 52 / 9.1 has a sample circuit (figure 58).
 
 * Connect SDA to D0
