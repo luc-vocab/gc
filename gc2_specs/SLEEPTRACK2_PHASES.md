@@ -82,7 +82,7 @@ The board will consist of 4 panneled boards:
  * Move buttons closer to center of board, away from edges
  * Add vibrator motor circuit using the DRV2605L (SSOP package). Se below for sample circuit and pin assignments.
  * remove the bno055 circuit. I thought the main board needed it, but I think it's only needed on the auxiliary IMU board.
- * See how small we can make the main board. Ignore previous constraints about connector placement initially.
+ * See how small we can make the main board. Ignore previous constraints about connector placement initially. The battery's dimensions are *2.00 x 1.32 x 0.23" (50.8 x 33.5 x 5.9 mm)*. Can our board's dimensions approach this ?
  * Does this need to stay a 4-layer board, or does moving to a 2-layer board provide any advantages ? 
 * **Auxiliary IMU board**
  * Keep the auxiliary IMU board as a detachable piece. Can that one be made smaller ?
