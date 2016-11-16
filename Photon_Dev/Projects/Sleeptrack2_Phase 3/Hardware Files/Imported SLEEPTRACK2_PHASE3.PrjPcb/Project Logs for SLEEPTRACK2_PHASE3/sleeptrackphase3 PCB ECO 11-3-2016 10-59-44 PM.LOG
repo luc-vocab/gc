@@ -1,0 +1,43 @@
+Added Component: Designator=C?(RAD-0.3)
+Added Component: Designator=C?(RAD-0.3)
+Added Component: Designator=U3(SPARKFUN_WRL-13764)
+Added Pin To Net: NetName=3V3 Pin=C?-2
+Added Pin To Net: NetName=3V3 Pin=C?-2
+Added Pin To Net: NetName=PHOTON_VIN Pin=U3-1
+Added Pin To Net: NetName=3V3 Pin=U3-2
+Added Pin To Net: NetName=PHOTON_TX Pin=U3-3
+Added Pin To Net: NetName=PHOTON_RX Pin=U3-4
+Added Pin To Net: NetName=PHOTON_WKP Pin=U3-5
+Added Pin To Net: NetName=PHOTON_DAC Pin=U3-6
+Added Pin To Net: NetName=PHOTON_A5 Pin=U3-7
+Added Pin To Net: NetName=A4 Pin=U3-8
+Added Pin To Net: NetName=PHOTON_A3 Pin=U3-9
+Added Pin To Net: NetName=PHOTON_A2 Pin=U3-10
+Added Pin To Net: NetName=PHOTON_A1 Pin=U3-11
+Added Pin To Net: NetName=A0 Pin=U3-12
+Added Pin To Net: NetName=D0 Pin=U3-13
+Added Pin To Net: NetName=D1 Pin=U3-14
+Added Pin To Net: NetName=PHOTON_D2 Pin=U3-15
+Added Pin To Net: NetName=PHOTON_D3 Pin=U3-16
+Added Pin To Net: NetName=PHOTON_D4 Pin=U3-17
+Added Pin To Net: NetName=PHOTON_D5 Pin=U3-18
+Added Pin To Net: NetName=PHOTON_D6 Pin=U3-19
+Added Pin To Net: NetName=PHOTON_D7 Pin=U3-20
+Added Pin To Net: NetName=3V3 Pin=U3-21
+Added Pin To Net: NetName=PHOTON_VBAT Pin=U3-22
+Added Pin To Net: NetName=PHOTON_RST Pin=U3-23
+Added Pin To Net: NetName=3V3 Pin=U3-24
+Added Pin To Net: NetName=PHOTON_SMPS Pin=U3-25
+Added Pin To Net: NetName=PHOTON_SETUP Pin=U3-26
+Added Pin To Net: NetName=PHOTON_RGB_RED Pin=U3-27
+Added Pin To Net: NetName=PHOTON_RGB_GREEN Pin=U3-28
+Added Pin To Net: NetName=PHOTON_RGB_BLUE Pin=U3-29
+Added Pin To Net: NetName=PHOTON_USB+ Pin=U3-30
+Added Pin To Net: NetName=PHOTON_USB- Pin=U3-31
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Net: Name=NetC?_1
+Added Pin To Net: NetName=VCC Pin=C?-1
+Added Net: Name=VCC
+Added Class: Name=P09_DRV2605L
+Added Member To Class: ClassName=P02_Photon Member=Component U3 photon_headerless
+Added Room: Name=P09_DRV2605L

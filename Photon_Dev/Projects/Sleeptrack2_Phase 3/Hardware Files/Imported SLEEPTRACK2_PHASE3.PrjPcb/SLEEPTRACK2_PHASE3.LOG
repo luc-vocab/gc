@@ -1,0 +1,42 @@
+Importer Log Report
+Project : SLEEPTRACK2_PHASE3.PrjPcb
+
+Section : Import Document - C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 3\Hardware Files\SLEEPTRACK2_PHASE3.DSN
+
+    Section : Importing Sheet - P03_Battery Circuit.SchDoc
+        Warning : Junction at (2.4in,4.6in) has been removed. It will be automatically calculated.
+        Warning : Junction at (5.5in,5in) has been removed. It will be automatically calculated.
+        Warning : Junction at (5.7in,5in) has been removed. It will be automatically calculated.
+        Warning : Junction at (6.2in,5in) has been removed. It will be automatically calculated.
+        Warning : Junction at (2.6in,4.6in) has been removed. It will be automatically calculated.
+        Warning : Junction at (2.5in,4.6in) has been removed. It will be automatically calculated.
+        Warning : Junction at (5.6in,3.4in) has been removed. It will be automatically calculated.
+    EndSection
+
+    Section : Importing Sheet - P02_Photon.SchDoc
+        Warning : Junction at (6.3in,4.8in) has been removed. It will be automatically calculated.
+        Warning : Junction at (4.6in,2.6in) has been removed. It will be automatically calculated.
+        Warning : Junction at (6in,4.9in) has been removed. It will be automatically calculated.
+        Warning : Junction at (2.8in,2in) has been removed. It will be automatically calculated.
+        Warning : Junction at (1.7in,1.8in) has been removed. It will be automatically calculated.
+        Warning : Junction at (1.7in,1.1in) has been removed. It will be automatically calculated.
+        Warning : Junction at (2.8in,1.3in) has been removed. It will be automatically calculated.
+    EndSection
+
+    Section : Importing Sheet - P05_BNO055.SchDoc
+        Warning : Junction at (3.9in,4.6in) has been added.
+        Warning : Junction at (3.9in,4.1in) has been removed. It will be automatically calculated.
+        Warning : Junction at (3.9in,3.8in) has been removed. It will be automatically calculated.
+        Warning : Junction at (3.9in,3.7in) has been removed. It will be automatically calculated.
+        Warning : Junction at (7in,4.3in) has been removed. It will be automatically calculated.
+        Warning : Junction at (7in,3.6in) has been removed. It will be automatically calculated.
+    EndSection
+
+    Section : Importing Sheet - P07_ BNO055 External.SchDoc
+        Warning : Junction at (4in,4.8in) has been added.
+        Warning : Junction at (4in,4.3in) has been removed. It will be automatically calculated.
+        Warning : Junction at (4in,4in) has been removed. It will be automatically calculated.
+        Warning : Junction at (4in,3.9in) has been removed. It will be automatically calculated.
+        Warning : Junction at (7.1in,3.8in) has been removed. It will be automatically calculated.
+    EndSection
+EndSection

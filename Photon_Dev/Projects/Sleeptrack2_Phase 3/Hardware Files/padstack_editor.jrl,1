@@ -1,0 +1,36 @@
+\t (00:00:00) padstack_editor 17.0 P003 (v17-0-118C) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Wed Oct 26 19:59:13 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=25580 CPUs=4
+\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaabc10264.tmp -pname MH_6-32 -data C:/Users/Madison/AppData/Local/Temp/#Taaaabe10264.tmp
+\t (00:00:00) 
+\d (00:00:04) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 0 "Thermal Pad"
+\d (00:00:07) QtSignal GuidedDesignLayersTab PadShape CurrentIndexChanged None
+\d (00:00:07) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 4 "Thermal Pad"
+\d (00:00:09) QtSignal GuidedDesignLayersTab PadShape CurrentIndexChanged None
+\d (00:00:09) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 0 "Anti Pad"
+\d (00:00:12) QtSignal GuidedDesignLayersTab PadShape CurrentIndexChanged None
+\d (00:00:12) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 4 "Anti Pad"
+\d (00:00:14) QtSignal GuidedDesignLayersTab PadShape CurrentIndexChanged None
+\d (00:00:15) QtSignal GuidedTabsParent GuidedTabs currentChanged "Mask Layers"
+\d (00:00:16) QtSignal GuidedTabsParent GuidedTabs currentChanged Options
+\d (00:00:17) QtSignal GuidedTabsParent GuidedTabs currentChanged Summary
+\d (00:00:17) QtSignal GuidedTabsParent GuidedTabs currentChanged "Design Layers"
+\d (00:00:18) QtSignal GuidedTabsParent GuidedTabs currentChanged "Drill Offset"
+\d (00:00:19) QtSignal GuidedTabsParent GuidedTabs currentChanged "Drill Symbol"
+\d (00:00:21) QtSignal GuidedDrillSymbol FigureType CurrentIndexChanged None
+\d (00:00:22) QtSignal GuidedTabsParent GuidedTabs currentChanged "Secondary Drill"
+\d (00:00:23) QtSignal GuidedTabsParent GuidedTabs currentChanged Drill
+\d (00:00:27) QtSignal GuidedTabsParent GuidedTabs currentChanged Start
+\d (00:00:31) QtSignal MainWindow Save triggered
+\d (00:00:33) QtSignal GuidedDrillTab drillToolSizeEdit editingFinished 25
+\d (00:00:33) QtSignal pseCheckBrowser Close clicked
+\d (00:00:35) QtSignal MainWindow UpdateToDesignExit triggered
+\d (00:00:38) QtSignal pseCheckBrowser Close clicked
+\d (00:00:39) QtSignal GuidedTabsParent NewPads itemSelectionChanged Circle
+\d (00:00:39) QtSignal GuidedTabsParent NewPads itemClicked Circle
+\d (00:00:41) QtSignal GuidedTabsParent GuidedTabs currentChanged "Secondary Drill"
+\d (00:00:41) QtSignal GuidedTabsParent GuidedTabs currentChanged "Drill Offset"
+\d (00:00:42) QtSignal GuidedTabsParent GuidedTabs currentChanged "Design Layers"
+\d (00:00:43) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged 0 "Regular Pad"
+\d (00:00:45) QtFillin No
+\t (00:00:45)     Journal end - Wed Oct 26 19:59:59 2016

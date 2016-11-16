@@ -1,7 +1,2 @@
-INFO: Loaded existing interconnect file 'C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 3\Hardware Files\interconn.iml'
-INFO: Loaded existing interconnect file 'C:\Cadence\SPB_17.0\share\pcb\signal\cds_interconn.iml'
-INFO: Finished loading SigNoise interconnect libraries
-INFO: Field Solver bem2d for STL_1S_1R_1
-INFO: Executing command: bem2d 0 "C:/Users/Madison/AppData/Local/Temp/#Taaaaag15572.in" 0.00127
-INFO: Field Solver bem2d for STL_1S_1R_2
-INFO: Executing command: bem2d 0 "C:/Users/Madison/AppData/Local/Temp/#Taaaaah15572.in" 0.00127
+INFO: Loaded existing device file 'C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 3\Hardware Files\devices.dml'
+INFO: Finished loading SigNoise device libraries

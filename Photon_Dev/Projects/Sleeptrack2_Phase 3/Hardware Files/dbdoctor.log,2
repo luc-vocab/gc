@@ -2,14 +2,12 @@
 (                                                                     )
 (    DBDOCTOR                                                         )
 (                                                                     )
-(    Drawing          : SLEEPTRACK2_PHASE3.brd                        )
+(    Drawing          : SLEEPTRACK2_PHASE3_v2.brd                     )
 (    Software Version : 17.0P011                                      )
-(    Date/Time        : Sun Aug 28 20:15:53 2016                      )
+(    Date/Time        : Wed Oct 26 22:38:20 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 
-WARNING   WARNING(SPMHDB-42): Run batch DRC to regenerate DRC errs.
-
-1 warnings, 0 errors detected, 0 errors could be fixed.
+0 warnings, 0 errors detected, 0 errors could be fixed.

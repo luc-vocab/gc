@@ -1,6 +1,6 @@
 FILE_TYPE=LIBRARY_PARTS;
-{ Using PSTWRITER 17.0.0 d001Aug-26-2016 at 01:52:52}
-primitive 'CAP NP_0603RF_WV_12D_4.7UF';
+{ Using PSTWRITER 17.0.0 d001Oct-26-2016 at 20:09:01}
+primitive 'CAP NP_1206RF_WV_12D_4.7UF';
   pin
     '1':
       PIN_NUMBER='(1)';
@@ -11,7 +11,7 @@ primitive 'CAP NP_0603RF_WV_12D_4.7UF';
   end_pin;
   body
     PART_NAME='CAP NP';
-    JEDEC_TYPE='0603RF_WV_12D';
+    JEDEC_TYPE='1206RF_WV_12D';
     VALUE='4.7uF';
   end_body;
 end_primitive;

@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : SLEEPTRACK2_PHASE3.brd                        )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Fri Aug 26 01:53:03 2016                      )
+(    Date/Time        : Wed Oct 26 20:09:45 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -22,16 +22,16 @@ Design Directory:            '.'
 Old design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3.brd'
 New design name:             'C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3.brd'
 
-CmdLine: netrev -$ -i C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files -y 1 -q netrev_constraint_report.xml C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/#Taaaaax12564.tmp
+CmdLine: netrev -$ -i C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files -y 1 -q netrev_constraint_report.xml C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/#Taaaabg10264.tmp
 
 ------ Preparing to read pst files ------
 
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/pstchip.dat 
-   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/pstchip.dat (00:00:00.02)
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/pstchip.dat (00:00:00.06)
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/pstxprt.dat 
    Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/pstxprt.dat (00:00:00.00)
 Starting to read C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/pstxnet.dat 
-   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/pstxnet.dat (00:00:00.00)
+   Finished reading C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/pstxnet.dat (00:00:00.01)
 
 ------ Oversights/Warnings/Errors ------
 
@@ -61,7 +61,7 @@ PADPATH =  .
 ------ Summary Statistics ------
 
 
-netrev run on Aug 26 1:53:03 2016
+netrev run on Oct 26 20:09:45 2016
    DESIGN NAME : 'SLEEPTRACK2_PHASE3'
    PACKAGING ON Feb  9 2015 06:09:36
 
@@ -86,6 +86,6 @@ netrev run on Aug 26 1:53:03 2016
  No oversight detected
  No warning detected
 
-cpu time      0:00:27
-elapsed time  0:00:00
+cpu time      0:02:09
+elapsed time  0:00:01
 

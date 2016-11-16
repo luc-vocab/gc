@@ -1,0 +1,34 @@
+G04 ================== begin FILE IDENTIFICATION RECORD ==================*
+G04 Layout Name:  SLEEPTRACK2_PHASE3_v2.brd*
+G04 Film Name:    Sleeptrack2_Phase_3_Board_Outline_V2*
+G04 File Format:  Gerber RS274X*
+G04 File Origin:  Cadence Allegro 17.0-P009*
+G04 Origin Date:  Sat Oct 29 00:03:52 2016*
+G04 *
+G04 Layer:  BOARD GEOMETRY/OUTLINE*
+G04 *
+G04 Offset:    (0.00 0.00)*
+G04 Mirror:    No*
+G04 Mode:      Positive*
+G04 Rotation:  0*
+G04 FullContactRelief:  No*
+G04 UndefLineWidth:     10.00*
+G04 ================== end FILE IDENTIFICATION RECORD ====================*
+%FSLAX25Y25*MOIN*%
+%IR0*IPPOS*OFA0.00000B0.00000*MIA0B0*SFA1.00000B1.00000*%
+%ADD10C,.01*%
+G75*
+%LPD*%
+G75*
+G54D10*
+G01X-125000Y122500D02*
+Y-72500D01*
+G03X-122500Y-75000I2500J0D01*
+G01D02*
+X122500D01*
+G03X125000Y-72500I0J2500D01*
+G01Y122500D01*
+G03X122500Y125000I-2500J0D01*
+G01X-122500D01*
+G03X-125000Y122500I0J-2500D01*
+M02*

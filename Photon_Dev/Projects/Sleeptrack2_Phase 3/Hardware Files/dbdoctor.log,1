@@ -4,15 +4,10 @@
 (                                                                     )
 (    Drawing          : SLEEPTRACK2_PHASE3.brd                        )
 (    Software Version : 17.0P011                                      )
-(    Date/Time        : Fri Aug 26 02:10:00 2016                      )
+(    Date/Time        : Mon Aug 29 22:19:59 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 
-Regenerating DRC
-  Original DRC errors:   73
-  Updated DRC errors:    73
-  DRC elapsed time:      00:00:01
-
-0 warnings, 0 errors detected, 0 errors  fixed.
+0 warnings, 0 errors detected, 0 errors could be fixed.

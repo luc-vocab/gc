@@ -1,9 +1,9 @@
-Mon Aug 29 21:56:13 2016				Page     1
+Wed Oct 26 21:08:25 2016				Page     1
 
 
  
 Update Symbols/Modules Logfile
-	Mon Aug 29 21:56:13 2016
+	Wed Oct 26 21:08:25 2016
 
 ------ Module Refresh Messages ------
 
@@ -19,12 +19,12 @@ SUMMARY:    Updated 0 out of 0 modules
 (                                                                     )
 (    Drawing          : SLEEPTRACK2_PHASE3.brd                        )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Mon Aug 29 21:56:13 2016                      )
+(    Date/Time        : Wed Oct 26 21:08:25 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
-Mon Aug 29 21:56:13 2016				Page     1
+Wed Oct 26 21:08:25 2016				Page     1
 
 
 ------ Symbol Refresh Directives ------
@@ -42,7 +42,7 @@ Reset symbol text and size locations   = 'NO'
 Reset Pin Escapes (fanouts)            = 'NO'
 Ripup Etch                             = 'NO'
 Reset custom drill data                = 'NO'
-Symbol list file                       = 'C:/Users/Madison/AppData/Local/Temp/#Taaaabf13284.tmp'
+Symbol list file                       = 'C:/Users/Madison/AppData/Local/Temp/#Taaaabj10264.tmp'
 
 
 ------ Library Paths ------
@@ -66,9 +66,7 @@ PADPATH =  .
 
 ------ Symbol Refresh Messages ------
 
-
-'MH6-32'  symbol starting to refresh:
-     WARNING(SPMHNI-252): 'MH6-32' symbol unable to find in directory search path.
+'BNO055'  symbol refreshed successfully.
 
 
 ----- Symbol Update Summary ----
@@ -76,6 +74,3 @@ PADPATH =  .
 Updated symbols: 1 out 1
     Design updated.
 
-Completed refreshing symbols; some symbols may not have been updated due to warnings or errors.
-       0  errors detected.
-       1  warnings detected.
