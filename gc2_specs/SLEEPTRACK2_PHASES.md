@@ -77,6 +77,7 @@ The board will consist of 4 panneled boards:
 **See below for description of the 4 parts:**
 
 * **Main Board**
+ * See whehter the photon through-holes can be placed lined up exactly with holes in our board, to retain the ability to use female headers without sacrificing space.
  * Replace battery charging LED with a more appropriate one
  * Remove through-holes for female headers
  * Move buttons closer to center of board, away from edges
