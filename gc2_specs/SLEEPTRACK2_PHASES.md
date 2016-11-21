@@ -110,3 +110,8 @@ http://www.ti.com/lit/ds/symlink/drv2605l.pdf page 52 / 9.1 has a sample circuit
 
 https://www.precisionmicrodrives.com/tech-blog/2016/05/16/how-drive-vibration-motor-arduino-and-genuino
 
+**Pico-lock connector parts**
+
+* http://www.molex.com/molex/products/datasheet.jsp?part=active/5037650098_CRIMP_TERMINALS.xml
+* http://www.molex.com/molex/products/datasheet.jsp?part=active/5037640401_CRIMP_HOUSINGS.xml
+* http://www.molex.com/molex/products/datasheet.jsp?part=active/5037630491_PCB_HEADERS.xml
