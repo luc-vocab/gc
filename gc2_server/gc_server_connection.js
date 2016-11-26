@@ -326,6 +326,8 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         var accel_y = accel_y_adj / 1000.0;
         var accel_z = accel_z_adj / 1000.0;
         
+        var button_state = data.readUInt8(offset); offset += 1;
+        
         
         self.log_debug("time:", datetime,
                        "millisecond diff:", diff,
@@ -333,7 +335,8 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                        "gyro_max:", gyro_max,
                        "accel_x:", accel_x,
                        "accel_y:", accel_y,
-                       "accel_z:", accel_z);    
+                       "accel_z:", accel_z,
+                       "button_state:", button_state);    
 
         if(publish) {
         
@@ -344,6 +347,7 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                 "accel_x": accel_x,
                 "accel_y": accel_y,
                 "accel_z": accel_z,
+                "button_state": button_state,
                 "datapoint_time": timestamp
             });
         
