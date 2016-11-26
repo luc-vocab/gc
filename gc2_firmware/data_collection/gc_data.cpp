@@ -11,8 +11,6 @@ void GcData::init() {
   //  set pin modes
   pinMode(EMG_SENSOR_PIN, INPUT);
   pinMode(BUZZER_PIN, OUTPUT);
-  pinMode(BUTTON1_PIN, INPUT);
-  pinMode(BUTTON2_PIN, INPUT);
 
   // initialize various sensors
 
@@ -20,9 +18,10 @@ void GcData::init() {
 
     if(!m_bno_1.begin())
     {
-      DEBUG_LOG("could not find BNO055 on I2C bus");
+      DEBUG_LOG("could not find BNO055 1 on I2C bus");
       error_tone();
     } else {
+      DEBUG_LOG("BNO055 1 setup OK");
       m_bno_1.setExtCrystalUse(false);
     }
   }

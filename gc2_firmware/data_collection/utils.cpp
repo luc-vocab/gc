@@ -10,8 +10,8 @@ void validation_tone() {
 
 void error_tone() {
   tone(BUZZER_PIN, 300, 150);
-  delay(150);
+  delay(500);
   tone(BUZZER_PIN, 300, 150);
-  delay(150);
+  delay(500);
   tone(BUZZER_PIN, 300, 150);
 }

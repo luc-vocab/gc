@@ -25,6 +25,10 @@ bool pending_night_mode = false;
 bool upload_requested = false;
 int frequency = COLLECT_DATA_FREQUENCY;
 
+bool s_button1_pressed = false;
+bool s_button2_pressed = false;
+
+
 // declare functions
 int set_device_id(String command);
 int set_mode(String command);
@@ -76,6 +80,20 @@ int connection_test(String command) {
   return 0;
 }
 
+
+void button1_pressed()
+{
+  //s_report_button1_state = true;
+}
+
+void button2_pressed()
+{
+  //s_report_button2_state = true;
+  DEBUG_LOG("button 2 on");
+  s_button2_pressed = true;
+}
+
+
 void setup() {
 
   if (serial_debug) {
@@ -87,6 +105,14 @@ void setup() {
 
   gc_data.init();
   gc_config.init();
+
+  pinMode(BUTTON1_PIN, INPUT_PULLUP);
+  pinMode(BUTTON2_PIN, INPUT_PULLUP);
+
+  //attachInterrupt(BUTTON1_PIN, button1_on, FALLING);
+  //attachInterrupt(BUTTON2_PIN, button2_on, FALLING);
+  attachInterrupt(BUTTON1_PIN, button1_pressed, RISING);
+  attachInterrupt(BUTTON2_PIN, button2_pressed, RISING);
 
   Particle.function("device_util", device_util);
   Particle.function("set_mode", set_mode);
@@ -105,6 +131,8 @@ void setup() {
   validation_tone();
 
 }
+
+
 
 int set_mode(String command) {
   if(command == "batch") {
@@ -140,12 +168,16 @@ void loop() {
     gc_data.toggle_emg_beep();
     validation_tone();
   }
+  */
 
-  if(digitalRead(BUTTON2_PIN) == LOW) {
+  if(s_button2_pressed)
+  {
+    DEBUG_LOG("upload requested");
     upload_requested = true;
     validation_tone();
+    s_button2_pressed = false;
   }
-  */
+
   gc_data.collect_data(upload_requested);
   upload_requested = false;
   delay(frequency);
