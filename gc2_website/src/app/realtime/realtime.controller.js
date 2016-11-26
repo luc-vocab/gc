@@ -226,6 +226,7 @@
             // $log.info("received data: ", data);
             update_emg_value(data.emg_value);
             vm.update_lag(data.datapoint_time);
+            vm.button_state = data.button_state;
             
         });        
         
