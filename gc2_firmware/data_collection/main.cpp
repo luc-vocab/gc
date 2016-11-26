@@ -170,7 +170,7 @@ void loop() {
   }
   */
 
-  if(s_button2_pressed)
+  if(s_button2_pressed && gc_client.get_mode() == GC_MODE_BATCH)
   {
     DEBUG_LOG("upload requested");
     upload_requested = true;

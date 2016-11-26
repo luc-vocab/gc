@@ -134,7 +134,10 @@ void GcData::collect_data(bool upload_requested) {
   float accel_y = accel_values[1];
   float accel_z = accel_values[2];
 
-  m_gc_client.add_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
+  bool button1_state = false;
+  bool button2_state = ! digitalRead(BUTTON2_PIN);
+
+  m_gc_client.add_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z, button1_state, button2_state);
 
   if(need_report_battery_charge()){
     report_battery_charge();

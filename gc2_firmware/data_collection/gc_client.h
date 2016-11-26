@@ -53,15 +53,17 @@ void write_float_to_buffer(char *buffer, float number, size_t *offset);
 void write_uint16_to_buffer(char *buffer, uint16_t number, size_t *offset);
 void write_int16_to_buffer(char *buffer, int16_t number, size_t *offset);
 void write_long_to_buffer(char *buffer, unsigned long number, size_t *offset);
+void write_uint8_to_buffer(char *buffer, uint8_t data, size_t *offset);
 
 class GcClient {
 
 public:
   GcClient();
   void configure(String host, int port, uint32_t device_id);
-  void add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z);
+  void add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state);
   void battery_charge(float percent_charged);
   void set_mode(uint16_t mode);
+  uint16_t get_mode() { return m_mode; }
   void set_device_id(uint32_t device_id);
   String get_stats();
   // whether data needs to be uploaded
@@ -85,7 +87,7 @@ private:
   void reset_data_buffer();
 
   // write datapoint onto data buffer
-  void write_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z);
+  void write_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state);
 
   // send initial handshake, identifying the device and specifying what kind of data
   // we'll be sending

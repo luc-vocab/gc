@@ -273,7 +273,7 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   return rv;
 }
 
-void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z) {
+void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state) {
 
   if(m_mode == GC_MODE_STANDBY) {
     // discard the data
@@ -281,14 +281,14 @@ void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, 
   }
 
   if (m_mode == GC_MODE_BATCH) {
-    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
+    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z, button1_state, button2_state);
   }
 
   if (m_mode == GC_MODE_REALTIME) {
     // write at the beginning of the buffer
     DEBUG_LOG("writing datapoint, emg_value: " + String(emg_value));
     m_data_buffer_offset = 0;
-    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z);
+    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z, button1_state, button2_state);
     // immediately send
     m_tcp_client.write((const uint8_t *) m_data_buffer, m_data_buffer_offset);
   }
@@ -303,7 +303,7 @@ bool GcClient::need_upload() {
   return false;
 }
 
-void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z) {
+void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state) {
   size_t original_offset = m_data_buffer_offset;
 
   size_t *offset = &m_data_buffer_offset;
@@ -326,6 +326,13 @@ void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float accel_x
   write_int16_to_buffer(m_data_buffer, accel_x_value, offset);
   write_int16_to_buffer(m_data_buffer, accel_y_value, offset);
   write_int16_to_buffer(m_data_buffer, accel_z_value, offset);
+
+  // check values of button1_state and button2_state
+  uint8_t button_state = 0;
+  if(button2_state) {
+    button_state = 1;
+  }
+  write_uint8_to_buffer(m_data_buffer, button_state, offset);
 
   m_data_size = m_data_buffer_offset - original_offset;
 
@@ -368,4 +375,9 @@ void write_int16_to_buffer(char *buffer, int16_t number, size_t *offset) {
 void write_long_to_buffer(char *buffer, unsigned long number, size_t *offset) {
   memcpy(buffer + *offset, &number, sizeof(number));
   *offset += sizeof(number);
+}
+
+void write_uint8_to_buffer(char *buffer, uint8_t data, size_t *offset) {
+  memcpy(buffer + *offset, &data, sizeof(data));
+  *offset += sizeof(data);
 }
