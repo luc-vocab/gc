@@ -77,9 +77,11 @@
         var canvas = angular.element('#smoothie-chart')[0];
         
         vm.smoothie_series = new TimeSeries();
+        vm.button_series = new TimeSeries();
         
         smoothie_chart.addTimeSeries(vm.smoothie_series, {lineWidth:2.6,strokeStyle:'#5959f4',fillStyle:'#93a8ff'});
-        smoothie_chart.streamTo(canvas, 500);
+        smoothie_chart.addTimeSeries(vm.button_series, {lineWidth:2.6,strokeStyle:'#d83737',fillStyle:'#da3f3f'});
+        smoothie_chart.streamTo(canvas, 200);
 
     }
     
@@ -110,12 +112,20 @@
     }
 
 
-    function update_emg_value(emg_value) {
+    function update_emg_value(emg_value, button_state) {
 
         vm.emg_stat_process_value(emg_value);        
         vm.gauge_current_value.refresh(emg_value, vm.alltime_max);
         
-        vm.smoothie_series.append(new Date().getTime(), emg_value);
+        var currenttime = new Date().getTime();
+        
+        vm.smoothie_series.append(currenttime, emg_value);
+        if (button_state) {
+            vm.button_series.append(currenttime, emg_value);            
+        } else {
+            vm.button_series.append(currenttime, 0);            
+        }
+
 
     }
 
@@ -227,9 +237,11 @@
             var data = snapshot.val();
             vm.last_update_time = new Date().getTime();
             // $log.info("received data: ", data);
-            update_emg_value(data.emg_value);
-            vm.update_lag(data.datapoint_time);
+            
             vm.button_state = data.button_state;
+            update_emg_value(data.emg_value, data.button_state);
+            vm.update_lag(data.datapoint_time);
+
         });        
         
         vm.current_device.callFunction('set_mode', 'realtime', function(err,data) {
