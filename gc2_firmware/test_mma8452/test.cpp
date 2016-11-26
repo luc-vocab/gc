@@ -48,7 +48,7 @@ void setup()
   //  1. Default init. This will set the accelerometer up
   //     with a full-scale range of +/-2g, and an output data rate
   //     of 800 Hz (fastest).
-  accel.init(SCALE_2G, ODR_12);
+  accel.init(SCALE_2G, ODR_400);
   //  2. Initialize with FULL-SCALE setting. You can set the scale
   //     using either SCALE_2G, SCALE_4G, or SCALE_8G as the value.
   //     That'll set the scale to +/-2g, 4g, or 8g respectively.
@@ -141,7 +141,14 @@ void loop()
     // Check the two function declarations below for an example
     // of how to use these variables.
     printCalculatedAccels();
-    printAccels(); // Uncomment to print digital readings
+    //printAccels(); // Uncomment to print digital readings
+
+    uint8_t taps = accel.readTap();
+    if(taps > 0)
+    {
+      Serial.print("got a tap: ");
+      Serial.print(taps);
+    }
 
     // The library also supports the portrait/landscape detection
     //  of the MMA8452Q. Check out this function declaration for
