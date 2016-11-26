@@ -1,7 +1,8 @@
 #include "gc_data.h"
 #include "common.h"
+#include "utils.h"
 
-GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client),
+GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client), m_bno_1(-1, BNO055_ADDRESS_A),
 p_battery_charge(0), m_last_report_battery_time(-REPORT_BATTERY_INTERVAL), m_report_status_battery(false),
 m_simulation_mode(false), m_emg_beep(false){
 }
@@ -10,20 +11,18 @@ void GcData::init() {
   //  set pin modes
   pinMode(EMG_SENSOR_PIN, INPUT);
   pinMode(BUZZER_PIN, OUTPUT);
-  pinMode(BUTTON1_PIN, INPUT);
-  pinMode(BUTTON2_PIN, INPUT);
 
   // initialize various sensors
 
   if(USE_IMU) {
-    // IMU setup
-    m_imu.settings.device.commInterface = IMU_MODE_I2C;
-    m_imu.settings.device.mAddress = LSM9DS1_M;
-    m_imu.settings.device.agAddress = LSM9DS1_AG;
 
-    if (!m_imu.begin())
+    if(!m_bno_1.begin())
     {
-      DEBUG_LOG("Failed to communicate with LSM9DS1.");
+      DEBUG_LOG("could not find BNO055 1 on I2C bus");
+      error_tone();
+    } else {
+      DEBUG_LOG("BNO055 1 setup OK");
+      m_bno_1.setExtCrystalUse(false);
     }
   }
 
@@ -46,12 +45,8 @@ float GcData::get_gyro_max() {
     return 0.0;
   }
   // retrieve the highest gyro rate on 3 axes
-  m_imu.readGyro();
-  float gyro_x = m_imu.calcGyro(m_imu.gx);
-  float gyro_y = m_imu.calcGyro(m_imu.gy);
-  float gyro_z = m_imu.calcGyro(m_imu.gz);
-
-  return max(max(gyro_x, gyro_y), gyro_z);
+  imu::Vector<3> gyro = m_bno_1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+  return max(max(gyro.x(), gyro.y()), gyro.z());
 }
 
 void GcData::get_accel(float *accel_values) {
@@ -60,10 +55,10 @@ void GcData::get_accel(float *accel_values) {
     accel_values[1] = 0.0;
     accel_values[2] = 0.0;
   } else {
-    m_imu.readAccel();
-    accel_values[0] = m_imu.calcAccel(m_imu.ax);
-    accel_values[1] = m_imu.calcAccel(m_imu.ay);
-    accel_values[2] = m_imu.calcAccel(m_imu.az);
+    imu::Vector<3> accel = m_bno_1.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
+    accel_values[0] = accel.x();
+    accel_values[1] = accel.y();
+    accel_values[2] = accel.z();
   }
 }
 

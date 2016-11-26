@@ -3,11 +3,12 @@
 
 #include "gc_client.h"
 #include "SparkFunMAX17043.h" // Include the SparkFun MAX17043 library, battery gauge
-#include "SparkFunLSM9DS1.h" // include Sparkfun LSM9DS1 library, IMU
 #include "math.h"
 
-#define LSM9DS1_M	0x1E
-#define LSM9DS1_AG	0x6B
+// required includes for BNO055
+#include "Adafruit_Sensor.h"
+#include "Adafruit_BNO055.h"
+#include "imumaths.h"
 
 #define REPORT_BATTERY_INTERVAL 120000 // every 2mn
 
@@ -40,7 +41,7 @@ private:
   bool m_report_status_battery;
   uint32_t m_last_report_battery_time;
   GcClient &m_gc_client;
-  LSM9DS1 m_imu;
+  Adafruit_BNO055 m_bno_1;
 };
 
 

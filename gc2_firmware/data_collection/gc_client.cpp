@@ -245,6 +245,9 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   write_int_to_buffer(m_handshake_buffer, PROTOCOL_VERSION, &offset);
   // write mode (batch or realtime)
   write_int_to_buffer(m_handshake_buffer, mode, &offset);
+  // write timestamp and millis
+  write_int_to_buffer(m_handshake_buffer, Time.now(), &offset);
+  write_int_to_buffer(m_handshake_buffer, millis(), &offset);
 
   if(mode == GC_MODE_CONNECTION_TEST) {
     // add random number used for connection test
@@ -314,9 +317,11 @@ void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float accel_x
   int16_t gyro_value = gyro_max * 100.0;
   write_int16_to_buffer(m_data_buffer, gyro_value, offset);
 
-  int16_t accel_x_value = accel_x * 10000.0;
-  int16_t accel_y_value = accel_y * 10000.0;
-  int16_t accel_z_value = accel_z * 10000.0;
+  // values from the BNO055 with the adafruit library are in m/s^2 like 9.8
+  // can only multiply by 1000, otherwise overflows will happen
+  int16_t accel_x_value = accel_x * 1000.0;
+  int16_t accel_y_value = accel_y * 1000.0;
+  int16_t accel_z_value = accel_z * 1000.0;
 
   write_int16_to_buffer(m_data_buffer, accel_x_value, offset);
   write_int16_to_buffer(m_data_buffer, accel_y_value, offset);

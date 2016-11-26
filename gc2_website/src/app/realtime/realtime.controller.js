@@ -204,6 +204,17 @@
       vm.device_obj = $firebaseObject(device_ref);
     };
 
+    vm.update_lag = function(datapoint_time) {
+        $log.info("update_lag", datapoint_time);
+        
+        
+        // calculate lag
+        var current_timestamp = new Date().getTime();
+        var lag = current_timestamp - datapoint_time;
+        
+        vm.current_lag = lag;
+    };
+
     vm.enable_realtime =  function() {
         vm.show_enable_realtime_spinner = true;
         
@@ -214,6 +225,8 @@
             var data = snapshot.val();
             // $log.info("received data: ", data);
             update_emg_value(data.emg_value);
+            vm.update_lag(data.datapoint_time);
+            
         });        
         
         vm.current_device.callFunction('set_mode', 'realtime', function(err,data) {
