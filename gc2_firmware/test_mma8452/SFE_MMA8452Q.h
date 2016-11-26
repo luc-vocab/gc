@@ -97,11 +97,12 @@ public:
 	byte readTap();
 	byte readPL();
 
-    int x, y, z;
+  uint16_t x, y, z;
 	float cx, cy, cz;
 private:
 	byte address;
 	MMA8452Q_Scale scale;
+	float g_scale;
 
 	void standby();
 	void active();
@@ -110,9 +111,10 @@ private:
 	void setScale(MMA8452Q_Scale fsr);
 	void setODR(MMA8452Q_ODR odr);
 	void writeRegister(MMA8452Q_Register reg, byte data);
-    void writeRegisters(MMA8452Q_Register reg, byte *buffer, byte len);
+  void writeRegisters(MMA8452Q_Register reg, byte *buffer, byte len);
 	byte readRegister(MMA8452Q_Register reg);
-    void readRegisters(MMA8452Q_Register reg, byte *buffer, byte len);
+  void readRegisters(MMA8452Q_Register reg, byte *buffer, byte len);
+	float convertGCounts(uint16_t data);
 };
 
 #endif

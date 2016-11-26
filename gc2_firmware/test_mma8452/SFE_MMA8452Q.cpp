@@ -76,13 +76,33 @@ void MMA8452Q::read()
 
 	readRegisters(OUT_X_MSB, rawData, 6);  // Read the six raw data registers into data array
 
-	x = (rawData[0]<<8 | rawData[1]) >> 4;
-	y = (rawData[2]<<8 | rawData[3]) >> 4;
-	z = (rawData[4]<<8 | rawData[5]) >> 4;
-	cx = (float) x / (float)(1<<11) * (float)(scale);
-	cy = (float) y / (float)(1<<11) * (float)(scale);
-	cz = (float) z / (float)(1<<11) * (float)(scale);
+	x = (rawData[0] << 8) | rawData[1];
+	y = (rawData[2] << 8) | rawData[3];
+	z = (rawData[4] << 8) | rawData[5];
+
+	cx = convertGCounts(x);
+	cy = convertGCounts(y);
+	cz = convertGCounts(z);
 }
+
+float MMA8452Q::convertGCounts(uint16_t data)
+{
+	int16_t gCount = (data >> 4); // data is 12bit
+
+	// first bit is sign
+	if (gCount > 0x7FF)
+	{
+		gCount = (0xFFF & ~gCount) + 1;	// data is 2’s complement, flip and add one
+		gCount *= -1;					// we're negative so add sign
+	}
+
+	// todo: would be nice to do this without floating point math
+	float output = gCount;
+	output /= g_scale;
+
+	return output;
+}
+
 
 // CHECK IF NEW DATA IS AVAILABLE
 //	This function checks the status of the MMA8452Q to see if new data is availble.
@@ -102,6 +122,19 @@ void MMA8452Q::setScale(MMA8452Q_Scale fsr)
 	cfg &= 0xFC; // Mask out scale bits
 	cfg |= (fsr >> 2);  // Neat trick, see page 22. 00 = 2G, 01 = 4A, 10 = 8G
 	writeRegister(XYZ_DATA_CFG, cfg);
+
+	switch(fsr)
+	{
+		case SCALE_2G:
+			g_scale = 1024.0f;
+			break;
+		case SCALE_4G:
+			g_scale = 512.0f;
+			break;
+		case SCALE_8G:
+			g_scale = 256.0f;
+			break;
+	}
 }
 
 // SET THE OUTPUT DATA RATE

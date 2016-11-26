@@ -141,12 +141,12 @@ void loop()
     // Check the two function declarations below for an example
     // of how to use these variables.
     printCalculatedAccels();
-    //printAccels(); // Uncomment to print digital readings
+    printAccels(); // Uncomment to print digital readings
 
     // The library also supports the portrait/landscape detection
     //  of the MMA8452Q. Check out this function declaration for
     //  an example of how to use that.
-    printOrientation();
+    // printOrientation();
 
     Serial.println(); // Print new line every time.
   }
