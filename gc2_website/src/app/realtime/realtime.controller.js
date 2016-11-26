@@ -13,7 +13,7 @@
     .controller('RealtimeController', RealtimeController);
 
   /** @ngInject */
-  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, $document, $window, currentAuth, firebase_auth, device_manager) {
+  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, $document, $window, $interval, currentAuth, firebase_auth, device_manager) {
     var vm = this;
 
 
@@ -204,15 +204,12 @@
       vm.device_obj = $firebaseObject(device_ref);
     };
 
-    vm.update_lag = function(datapoint_time) {
-        $log.info("update_lag", datapoint_time);
+    vm.update_lag = function() {
         
+        var current_time = new Date().getTime();
+        var diff = current_time - vm.last_update_time;
         
-        // calculate lag
-        var current_timestamp = new Date().getTime();
-        var lag = current_timestamp - datapoint_time;
-        
-        vm.current_lag = lag;
+        vm.current_lag = diff;
     };
 
     vm.enable_realtime =  function() {
@@ -220,14 +217,19 @@
         
         vm.init_emg_stat_arrays();
         
+        // enable time which will show how long we haven't received a data point
+        vm.last_update_time = new Date().getTime();
+        
+        vm.stop_lag_check = $interval(vm.update_lag, 500);
+        
         var device_ref = device_manager.get_device_ref(vm.user_obj.device_id);
         device_ref.on("value", function(snapshot){
             var data = snapshot.val();
+            vm.last_update_time = new Date().getTime();
             // $log.info("received data: ", data);
             update_emg_value(data.emg_value);
             vm.update_lag(data.datapoint_time);
             vm.button_state = data.button_state;
-            
         });        
         
         vm.current_device.callFunction('set_mode', 'realtime', function(err,data) {
@@ -245,6 +247,7 @@
     vm.standby = function() {
         vm.current_device.callFunction('set_mode', 'standby');
         vm.realtime_mode_on = false;
+        vm.stop_lag_check();
     };
     
   
