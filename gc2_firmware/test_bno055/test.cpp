@@ -29,8 +29,11 @@ Adafruit_BNO055 bno = Adafruit_BNO055();
 /**************************************************************************/
 void setup(void)
 {
-  delay(5000);
   Serial.begin(9600);
+  Serial.println("startup");
+
+  delay(5000);
+
   Serial.println("Orientation Sensor Raw Data Test"); Serial.println("");
 
   /* Initialise the sensor */
@@ -94,9 +97,23 @@ void loop(void)
   Serial.print("\t\t");
 
 
+  imu::Vector<3> accel_vector = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
+
+  /* Display the floating point data */
+  Serial.print("X: ");
+  Serial.print(accel_vector.x());
+  Serial.print(" Y: ");
+  Serial.print(accel_vector.y());
+  Serial.print(" Z: ");
+  Serial.print(accel_vector.z());
+  Serial.print("\t\t");
+
+
+  /*
   Particle.publish("x", String(euler.x()));
   Particle.publish("y", String(euler.y()));
   Particle.publish("z", String(euler.z()));
+  */
 
 
   /*
@@ -126,5 +143,5 @@ void loop(void)
   Serial.println(mag, DEC);
 
   // delay(BNO055_SAMPLERATE_DELAY_MS);
-  delay(2000);
+  delay(500);
 }
