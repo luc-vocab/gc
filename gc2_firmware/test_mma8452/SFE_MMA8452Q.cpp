@@ -85,6 +85,7 @@ void MMA8452Q::read()
 	cz = convertGCounts(z);
 }
 
+// copied from https://github.com/akupila/Arduino-MMA8452
 float MMA8452Q::convertGCounts(uint16_t data)
 {
 	int16_t gCount = (data >> 4); // data is 12bit
