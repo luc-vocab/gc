@@ -2,19 +2,32 @@
 #include "common.h"
 #include "utils.h"
 
-GcData::GcData(GcClient &gc_client) : m_gc_client(gc_client), m_bno_1(-1, BNO055_ADDRESS_A),
-p_battery_charge(0), m_last_report_battery_time(-REPORT_BATTERY_INTERVAL), m_report_status_battery(false),
-m_simulation_mode(false), m_emg_beep(false){
+GcData::GcData(GcClient &gc_client) :
+    m_gc_client(gc_client),
+    #if USE_IMU_1_BNO055
+    m_bno_1(-1, BNO055_ADDRESS_A),
+    #endif
+    #if USE_IMU_2_MMA8452
+    m_mma_2(),
+    #endif
+    p_battery_charge(0),
+    m_last_report_battery_time(-REPORT_BATTERY_INTERVAL),
+    m_report_status_battery(false),
+    m_simulation_mode(false),
+    m_emg_beep(false){
 }
 
 void GcData::init() {
   //  set pin modes
-  pinMode(EMG_SENSOR_PIN, INPUT);
+
+  if(USE_EMG) {
+    pinMode(EMG_SENSOR_PIN, INPUT);
+  }
   pinMode(BUZZER_PIN, OUTPUT);
 
   // initialize various sensors
 
-  if(USE_IMU) {
+  if(USE_IMU_1_BNO055) {
 
     if(!m_bno_1.begin())
     {
@@ -24,6 +37,10 @@ void GcData::init() {
       DEBUG_LOG("BNO055 1 setup OK");
       m_bno_1.setExtCrystalUse(false);
     }
+  }
+
+  if (USE_IMU_2_MMA8452) {
+    m_mma_2.init(SCALE_2G, ODR_400);
   }
 
   // setup battery gauge
@@ -41,7 +58,7 @@ void GcData::read_battery_charge() {
 }
 
 float GcData::get_gyro_max() {
-  if(! USE_IMU) {
+  if(! USE_IMU_1_BNO055) {
     return 0.0;
   }
   // retrieve the highest gyro rate on 3 axes
@@ -49,8 +66,8 @@ float GcData::get_gyro_max() {
   return max(max(gyro.x(), gyro.y()), gyro.z());
 }
 
-void GcData::get_accel(float *accel_values) {
-  if(! USE_IMU) {
+void GcData::get_accel_1(float *accel_values) {
+  if(! USE_IMU_1_BNO055) {
     accel_values[0] = 0.0;
     accel_values[1] = 0.0;
     accel_values[2] = 0.0;
@@ -62,7 +79,26 @@ void GcData::get_accel(float *accel_values) {
   }
 }
 
+void GcData::get_accel_2(float *accel_values) {
+  if(! USE_IMU_2_MMA8452) {
+    accel_values[0] = 0.0;
+    accel_values[1] = 0.0;
+    accel_values[2] = 0.0;
+  } else {
+    m_mma_2.read();
+    accel_values[0] = m_mma_2.cx * 10.0;
+    accel_values[1] = m_mma_2.cy * 10.0;
+    accel_values[2] = m_mma_2.cz * 10.0;
+  }
+}
+
+
 uint16_t GcData::read_emg() {
+  if(! USE_EMG) {
+    // emg disabled
+    return 0;
+  }
+
   if(m_simulation_mode) {
     unsigned long milliseconds = millis();
     unsigned long seconds = milliseconds / 1000;
@@ -127,17 +163,16 @@ void GcData::collect_data(bool upload_requested) {
   uint16_t emg_value = read_emg();
   emg_beep(emg_value);
   float gyro_max = get_gyro_max();
-  float accel_values[3];
-  get_accel(accel_values);
+  float accel1_values[3];
+  float accel2_values[3];
 
-  float accel_x = accel_values[0];
-  float accel_y = accel_values[1];
-  float accel_z = accel_values[2];
+  get_accel_1(accel1_values);
+  get_accel_2(accel2_values);
 
   bool button1_state = false;
   bool button2_state = ! digitalRead(BUTTON2_PIN);
 
-  m_gc_client.add_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z, button1_state, button2_state);
+  m_gc_client.add_datapoint(emg_value, gyro_max, accel1_values, accel2_values, button1_state, button2_state);
 
   if(need_report_battery_charge()){
     report_battery_charge();

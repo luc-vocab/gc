@@ -273,7 +273,7 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   return rv;
 }
 
-void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state) {
+void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float *accel_1, float *accel_2, bool button1_state, bool button2_state) {
 
   if(m_mode == GC_MODE_STANDBY) {
     // discard the data
@@ -281,14 +281,14 @@ void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, 
   }
 
   if (m_mode == GC_MODE_BATCH) {
-    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z, button1_state, button2_state);
+    write_datapoint(emg_value, gyro_max, accel_1, accel_2, button1_state, button2_state);
   }
 
   if (m_mode == GC_MODE_REALTIME) {
     // write at the beginning of the buffer
     DEBUG_LOG("writing datapoint, emg_value: " + String(emg_value));
     m_data_buffer_offset = 0;
-    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z, button1_state, button2_state);
+    write_datapoint(emg_value, gyro_max, accel_1, accel_2, button1_state, button2_state);
     // immediately send
     m_tcp_client.write((const uint8_t *) m_data_buffer, m_data_buffer_offset);
   }
@@ -303,7 +303,7 @@ bool GcClient::need_upload() {
   return false;
 }
 
-void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state) {
+void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float *accel_1, float *accel_2, bool button1_state, bool button2_state) {
   size_t original_offset = m_data_buffer_offset;
 
   size_t *offset = &m_data_buffer_offset;
@@ -317,15 +317,25 @@ void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float accel_x
   int16_t gyro_value = gyro_max * 100.0;
   write_int16_to_buffer(m_data_buffer, gyro_value, offset);
 
-  // values from the BNO055 with the adafruit library are in m/s^2 like 9.8
+  // values from the accelerometers are in m/s^2 like 9.8
   // can only multiply by 1000, otherwise overflows will happen
-  int16_t accel_x_value = accel_x * 1000.0;
-  int16_t accel_y_value = accel_y * 1000.0;
-  int16_t accel_z_value = accel_z * 1000.0;
 
+  // IMU1
+  int16_t accel_x_value = accel_1[0] * 1000.0;
+  int16_t accel_y_value = accel_1[1] * 1000.0;
+  int16_t accel_z_value = accel_1[2] * 1000.0;
   write_int16_to_buffer(m_data_buffer, accel_x_value, offset);
   write_int16_to_buffer(m_data_buffer, accel_y_value, offset);
   write_int16_to_buffer(m_data_buffer, accel_z_value, offset);
+
+  // IMU2
+  accel_x_value = accel_2[0] * 1000.0;
+  accel_y_value = accel_2[1] * 1000.0;
+  accel_z_value = accel_2[2] * 1000.0;
+  write_int16_to_buffer(m_data_buffer, accel_x_value, offset);
+  write_int16_to_buffer(m_data_buffer, accel_y_value, offset);
+  write_int16_to_buffer(m_data_buffer, accel_z_value, offset);
+
 
   // check values of button1_state and button2_state
   uint8_t button_state = 0;
