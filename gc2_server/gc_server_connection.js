@@ -386,9 +386,13 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                 tags: tags,
                 fields: {
                     gyro: new influent.Value(gyro_max, influent.type.FLOAT64),
-                    accel_x: new influent.Value(accel_x, influent.type.FLOAT64),
-                    accel_y: new influent.Value(accel_y, influent.type.FLOAT64),
-                    accel_z: new influent.Value(accel_z, influent.type.FLOAT64),
+                    accel_1_x: new influent.Value(accel_1_x, influent.type.FLOAT64),
+                    accel_1_y: new influent.Value(accel_1_y, influent.type.FLOAT64),
+                    accel_1_z: new influent.Value(accel_1_z, influent.type.FLOAT64),
+                    accel_2_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
+                    accel_2_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
+                    accel_2_z: new influent.Value(accel_2_z, influent.type.FLOAT64),            
+                    
                 },
                 timestamp: timestamp_nanos
             });
