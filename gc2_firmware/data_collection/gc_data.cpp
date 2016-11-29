@@ -4,7 +4,12 @@
 
 GcData::GcData(GcClient &gc_client) :
     m_gc_client(gc_client),
+    #if USE_IMU_1_BNO055
     m_bno_1(-1, BNO055_ADDRESS_A),
+    #endif
+    #if USE_IMU_2_MMA8452
+    m_mma_2(),
+    #endif
     p_battery_charge(0),
     m_last_report_battery_time(-REPORT_BATTERY_INTERVAL),
     m_report_status_battery(false),
@@ -164,18 +169,10 @@ void GcData::collect_data(bool upload_requested) {
   get_accel_1(accel1_values);
   get_accel_2(accel2_values);
 
-  float accel_1_x = accel1_values[0];
-  float accel_1_y = accel1_values[1];
-  float accel_1_z = accel1_values[2];
-
-  float accel_2_x = accel2_values[0];
-  float accel_2_y = accel2_values[1];
-  float accel_2_z = accel2_values[2];
-
   bool button1_state = false;
   bool button2_state = ! digitalRead(BUTTON2_PIN);
 
-  m_gc_client.add_datapoint(emg_value, gyro_max, accel_1_x, accel_1_y, accel_1_z, button1_state, button2_state);
+  m_gc_client.add_datapoint(emg_value, gyro_max, accel1_values, accel2_values, button1_state, button2_state);
 
   if(need_report_battery_charge()){
     report_battery_charge();

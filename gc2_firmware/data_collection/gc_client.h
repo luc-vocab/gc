@@ -60,7 +60,7 @@ class GcClient {
 public:
   GcClient();
   void configure(String host, int port, uint32_t device_id);
-  void add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state);
+  void add_datapoint(uint16_t emg_value, float gyro_max, float *accel_1, float *accel_2, bool button1_state, bool button2_state);
   void battery_charge(float percent_charged);
   void set_mode(uint16_t mode);
   uint16_t get_mode() { return m_mode; }
@@ -87,7 +87,7 @@ private:
   void reset_data_buffer();
 
   // write datapoint onto data buffer
-  void write_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state);
+  void write_datapoint(uint16_t emg_value, float gyro_max, float *accel_1, float *accel_2, bool button1_state, bool button2_state);
 
   // send initial handshake, identifying the device and specifying what kind of data
   // we'll be sending
