@@ -316,15 +316,23 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         
         // read gyro max
         var gyro_max_adj = data.readInt16LE(offset); offset += 2;
-        // read accel values
-        var accel_x_adj = data.readInt16LE(offset); offset += 2;
-        var accel_y_adj = data.readInt16LE(offset); offset += 2;
-        var accel_z_adj = data.readInt16LE(offset); offset += 2;
         
         var gyro_max = gyro_max_adj / 100.0;
-        var accel_x = accel_x_adj / 1000.0;
-        var accel_y = accel_y_adj / 1000.0;
-        var accel_z = accel_z_adj / 1000.0;
+
+        // read accel values
+        var accel_1_x_adj = data.readInt16LE(offset); offset += 2;
+        var accel_1_y_adj = data.readInt16LE(offset); offset += 2;
+        var accel_1_z_adj = data.readInt16LE(offset); offset += 2;
+        var accel_1_x = accel_1_x_adj / 1000.0;
+        var accel_1_y = accel_1_y_adj / 1000.0;
+        var accel_1_z = accel_1_z_adj / 1000.0;
+        
+        var accel_2_x_adj = data.readInt16LE(offset); offset += 2;
+        var accel_2_y_adj = data.readInt16LE(offset); offset += 2;
+        var accel_2_z_adj = data.readInt16LE(offset); offset += 2;
+        var accel_2_x = accel_2_x_adj / 1000.0;
+        var accel_2_y = accel_2_y_adj / 1000.0;
+        var accel_2_z = accel_2_z_adj / 1000.0;        
         
         var button_state = data.readUInt8(offset); offset += 1;
         
@@ -333,9 +341,12 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                        "millisecond diff:", diff,
                        "emg_value:", emg_value,
                        "gyro_max:", gyro_max,
-                       "accel_x:", accel_x,
-                       "accel_y:", accel_y,
-                       "accel_z:", accel_z,
+                       "accel_1_x:", accel_1_x,
+                       "accel_1_y:", accel_1_y,
+                       "accel_1_z:", accel_1_z,
+                       "accel_2_x:", accel_2_x,
+                       "accel_2_y:", accel_2_y,
+                       "accel_2_z:", accel_2_z,                       
                        "button_state:", button_state);    
 
         if(publish) {
@@ -344,9 +355,12 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
             this.firebaseDeviceRef.update({
                 "emg_value": emg_value,
                 "gyro_max": gyro_max,
-                "accel_x": accel_x,
-                "accel_y": accel_y,
-                "accel_z": accel_z,
+                "accel_1_x": accel_1_x,
+                "accel_1_y": accel_1_y,
+                "accel_1_z": accel_1_z,
+                "accel_2_x": accel_2_x,
+                "accel_2_y": accel_2_y,
+                "accel_2_z": accel_2_z,                
                 "button_state": button_state,
                 "datapoint_time": timestamp
             });
