@@ -158,6 +158,28 @@ void GcData::queue_status_battery_charge() {
   m_report_status_battery = true;
 }
 
+bool GcData::tap_received() {
+  // check whether we've received a tap, indicating upload was requested
+  bool result = false;
+
+  if(USE_IMU_2_MMA8452)
+  {
+    byte tapStat = m_mma_2.readTap();
+    if(tapStat > 0)
+    {
+      if(m_mma_2.isSingleTap(tapStat)) {
+        DEBUG_LOG("received single tap");
+      }
+      if(m_mma_2.isDoubleTap(tapStat)) {
+        DEBUG_LOG("received double tap");
+        result = true;
+      }
+    }
+  }
+
+  return result;
+}
+
 void GcData::collect_data(bool upload_requested) {
 
   uint16_t emg_value = read_emg();
@@ -176,6 +198,12 @@ void GcData::collect_data(bool upload_requested) {
 
   if(need_report_battery_charge()){
     report_battery_charge();
+  }
+
+  bool tapReceived = tap_received();
+  if (tapReceived) {
+    validation_tone();
+    upload_requested = true;
   }
 
   if(m_gc_client.need_upload() || upload_requested){

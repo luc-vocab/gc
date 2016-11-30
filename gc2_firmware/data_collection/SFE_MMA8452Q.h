@@ -96,6 +96,8 @@ public:
 	byte available();
 	byte readTap();
 	byte readPL();
+	bool isSingleTap(byte tapStat);
+	bool isDoubleTap(byte tapStat);
 
   uint16_t x, y, z;
 	float cx, cy, cz;
