@@ -273,7 +273,7 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   return rv;
 }
 
-void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float *accel_1, float *accel_2, bool button1_state, bool button2_state) {
+void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, int16_t *accel_1, float *accel_2, bool button1_state, bool button2_state) {
 
   if(m_mode == GC_MODE_STANDBY) {
     // discard the data
@@ -303,7 +303,7 @@ bool GcClient::need_upload() {
   return false;
 }
 
-void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float *accel_1, float *accel_2, bool button1_state, bool button2_state) {
+void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, int16_t *accel_1, float *accel_2, bool button1_state, bool button2_state) {
   size_t original_offset = m_data_buffer_offset;
 
   size_t *offset = &m_data_buffer_offset;
@@ -321,17 +321,14 @@ void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float *accel_
   // can only multiply by 1000, otherwise overflows will happen
 
   // IMU1
-  int16_t accel_x_value = accel_1[0] * 1000.0;
-  int16_t accel_y_value = accel_1[1] * 1000.0;
-  int16_t accel_z_value = accel_1[2] * 1000.0;
-  write_int16_to_buffer(m_data_buffer, accel_x_value, offset);
-  write_int16_to_buffer(m_data_buffer, accel_y_value, offset);
-  write_int16_to_buffer(m_data_buffer, accel_z_value, offset);
+  write_int16_to_buffer(m_data_buffer, accel_1[0], offset);
+  write_int16_to_buffer(m_data_buffer, accel_1[1], offset);
+  write_int16_to_buffer(m_data_buffer, accel_1[2], offset);
 
   // IMU2
-  accel_x_value = accel_2[0] * 1000.0;
-  accel_y_value = accel_2[1] * 1000.0;
-  accel_z_value = accel_2[2] * 1000.0;
+  int16_t accel_x_value = accel_2[0] * 1000.0;
+  int16_t accel_y_value = accel_2[1] * 1000.0;
+  int16_t accel_z_value = accel_2[2] * 1000.0;
   write_int16_to_buffer(m_data_buffer, accel_x_value, offset);
   write_int16_to_buffer(m_data_buffer, accel_y_value, offset);
   write_int16_to_buffer(m_data_buffer, accel_z_value, offset);

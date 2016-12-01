@@ -66,22 +66,23 @@ float GcData::get_gyro_max() {
   return max(max(gyro.x(), gyro.y()), gyro.z());
 }
 
-void GcData::get_accel_1(float *accel_values) {
+void GcData::get_accel_1(int16_t *accel_values) {
   if(! USE_IMU_1_BNO055) {
     accel_values[0] = 0.0;
     accel_values[1] = 0.0;
     accel_values[2] = 0.0;
   } else {
-    imu::Vector<3> accel = m_bno_1.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
+    /*
+    imu::Vector<3> accel = m_bno_1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
     accel_values[0] = accel.x();
     accel_values[1] = accel.y();
     accel_values[2] = accel.z();
+    */
 
     // DEBUG_LOG("accel: x " + String(accel.x()) + " y: " + String(accel.y()) + " z: " + String(accel.z()));
 
-    int16_t raw_vector[3];
-    m_bno_1.getRawVector(Adafruit_BNO055::VECTOR_ACCELEROMETER, raw_vector);
-    DEBUG_LOG("accel: x " + String(raw_vector[0]) + " y: " + String(raw_vector[1]) + " z: " + String(raw_vector[2]));
+    m_bno_1.getRawVector(Adafruit_BNO055::VECTOR_LINEARACCEL, accel_values);
+    //DEBUG_LOG("accel: x " + String(raw_vector[0]) + " y: " + String(raw_vector[1]) + " z: " + String(raw_vector[2]));
   }
 }
 
@@ -191,7 +192,7 @@ void GcData::collect_data(bool upload_requested) {
   uint16_t emg_value = read_emg();
   emg_beep(emg_value);
   float gyro_max = get_gyro_max();
-  float accel1_values[3];
+  int16_t accel1_values[3];
   float accel2_values[3];
 
   get_accel_1(accel1_values);
