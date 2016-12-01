@@ -41,6 +41,7 @@ private:
   void get_accel_2(float *accel_values);
   uint16_t read_emg();
   void emg_beep(uint16_t emg_value);
+  bool tap_received();
 
   bool m_simulation_mode;
   bool m_emg_beep;

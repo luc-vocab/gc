@@ -206,6 +206,14 @@ byte MMA8452Q::readTap()
 		return 0;
 }
 
+bool MMA8452Q::isSingleTap(byte tapStat) {
+	return ((tapStat & 0x08) == 0);
+}
+
+bool MMA8452Q::isDoubleTap(byte tapStat) {
+	return ((tapStat & 0x08) > 0);
+}
+
 // SET UP PORTRAIT/LANDSCAPE DETECTION
 //	This function sets up portrait and landscape detection.
 void MMA8452Q::setupPL()
