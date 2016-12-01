@@ -76,6 +76,12 @@ void GcData::get_accel_1(float *accel_values) {
     accel_values[0] = accel.x();
     accel_values[1] = accel.y();
     accel_values[2] = accel.z();
+
+    // DEBUG_LOG("accel: x " + String(accel.x()) + " y: " + String(accel.y()) + " z: " + String(accel.z()));
+
+    int16_t raw_vector[3];
+    m_bno_1.getRawVector(Adafruit_BNO055::VECTOR_ACCELEROMETER, raw_vector);
+    DEBUG_LOG("accel: x " + String(raw_vector[0]) + " y: " + String(raw_vector[1]) + " z: " + String(raw_vector[2]));
   }
 }
 

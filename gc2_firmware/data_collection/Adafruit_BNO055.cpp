@@ -117,6 +117,22 @@ void Adafruit_BNO055::setMode(adafruit_bno055_opmode_t mode)
   _mode = mode;
   write8(BNO055_OPR_MODE_ADDR, _mode);
   delay(30);
+
+  // set accelerometer range
+  // go to page id 1 registers
+  write8(BNO055_PAGE_ID_ADDR, 1);
+
+  // read ACC_CONFIG
+  uint8_t acc_config = read8(ACC_CONFIG);
+  // configure range for 2g
+  uint8_t mask = acc_config & 0X03;
+  // now flip the bits in mask, as we want no bits set
+  acc_config = acc_config ^ mask;
+  write8(ACC_CONFIG, acc_config);
+
+  // go back to page id 0 registers
+  write8(BNO055_PAGE_ID_ADDR, 0);
+
 }
 
 /**************************************************************************/
@@ -260,6 +276,29 @@ int8_t Adafruit_BNO055::getTemp(void)
 {
   int8_t temp = (int8_t)(read8(BNO055_TEMP_ADDR));
   return temp;
+}
+
+
+void Adafruit_BNO055::getRawVector( adafruit_vector_type_t vector_type, int16_t *vector )
+{
+
+  uint8_t buffer[6];
+  memset (buffer, 0, 6);
+
+  int16_t x, y, z;
+  x = y = z = 0;
+
+  /* Read vector data (6 bytes) */
+  readLen((adafruit_bno055_reg_t)vector_type, buffer, 6);
+
+  x = ((int16_t)buffer[0]) | (((int16_t)buffer[1]) << 8);
+  y = ((int16_t)buffer[2]) | (((int16_t)buffer[3]) << 8);
+  z = ((int16_t)buffer[4]) | (((int16_t)buffer[5]) << 8);
+
+  vector[0] = x;
+  vector[1] = y;
+  vector[2] = z;
+
 }
 
 /**************************************************************************/
