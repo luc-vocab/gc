@@ -320,12 +320,10 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         var gyro_max = gyro_max_adj / 100.0;
 
         // read accel values
-        var accel_1_x_adj = data.readInt16LE(offset); offset += 2;
-        var accel_1_y_adj = data.readInt16LE(offset); offset += 2;
-        var accel_1_z_adj = data.readInt16LE(offset); offset += 2;
-        var accel_1_x = accel_1_x_adj / 1000.0;
-        var accel_1_y = accel_1_y_adj / 1000.0;
-        var accel_1_z = accel_1_z_adj / 1000.0;
+        var accel_1_x = data.readInt16LE(offset); offset += 2;
+        var accel_1_y = data.readInt16LE(offset); offset += 2;
+        var accel_1_z = data.readInt16LE(offset); offset += 2;
+        
         
         var accel_2_x_adj = data.readInt16LE(offset); offset += 2;
         var accel_2_y_adj = data.readInt16LE(offset); offset += 2;
