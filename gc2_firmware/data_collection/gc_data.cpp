@@ -215,24 +215,6 @@ void GcData::collect_data(bool upload_requested) {
 
   if(m_gc_client.need_upload() || upload_requested){
     DEBUG_LOG("need to upload batch");
-
-    // turn on WiFi
-    if(MANAGE_WIFI) {
-      DEBUG_LOG("enabling wifi");
-      WiFi.on();
-    }
-    DEBUG_LOG("wait for wifi to be available");
-    // wait for wifi to be available
-    waitFor(WiFi.ready, WIFI_MAX_WAIT);
-    DEBUG_LOG("wifi available");
-
     m_gc_client.upload_batch();
-
-    // turn off wifi
-    if(MANAGE_WIFI) {
-        DEBUG_LOG("disabling wifi");
-        WiFi.off();
-    }
-
   }
 }

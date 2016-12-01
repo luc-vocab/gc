@@ -26,7 +26,7 @@
 #define DATA_BUFFER_LENGTH 50000 + BUFFER_HEADER_LENGTH + END_MARKER_LENGTH // possibly longer
 #define CHUNK_SIZE 512
 #define CHUNK_DELAY 20 // amount of time to wait between chunks
-#define INITIAL_DELAY 3000 // amount of time to wait before sending full buffer of data
+#define INITIAL_DELAY 500 // amount of time to wait before sending full buffer of data
 
 #define WIFI_MAX_WAIT 5000
 #define TRANSFER_DELAY 250
@@ -46,6 +46,8 @@
 #define UINT16_MARKER_START 6713 // after header in batch mode
 #define UINT16_MARKER_END 21826  // after end of data in batch mode
 #define BYTE_HANDSHAKE_OK 42 // after we send the initial handshake
+
+#define DATAPOINT_HISTORY_SIZE 10
 
 // functions for serializing data
 void write_int_to_buffer(char *buffer, int number, size_t *offset);
@@ -68,6 +70,8 @@ public:
   String get_stats();
   // whether data needs to be uploaded
   bool need_upload();
+  // whether data needs to be uploaded soon (predict to turn wifi on early)
+  bool need_upload_soon();
   // upload batch when data buffer is full. Will repeat N times
   void upload_batch();
   // do a connection test to ensure the device can communicate end to end
@@ -76,6 +80,15 @@ public:
   void report_battery_charge();
 
 private:
+
+  // how many datapoints can still be stored
+  uint16_t datapoints_remaining();
+
+  // record the times at which we add datapoints
+  void update_upload_timestamps(uint32_t millis);
+
+  // how much "storage time" we have left based on the last 10 datapoints
+  uint32_t time_remaining();
 
   // try to upload batch once
   int upload_batch_iteration();
@@ -98,6 +111,17 @@ private:
 
   // disconnect from GC server
   void disconnect();
+
+  // turn wifi on
+  void wifi_on();
+
+  // turn wifi off
+  void wifi_off();
+
+  // wait for wifi to be available
+  void wifi_wait();
+
+  bool m_wifi_on_started;
 
   String m_host;
   int m_port;
@@ -138,6 +162,8 @@ private:
   uint16_t m_batch_upload_count;
   uint16_t m_error_count;
   uint16_t m_abandon_count;
+
+  uint32_t m_upload_timestamps[DATAPOINT_HISTORY_SIZE];
 };
 
 
