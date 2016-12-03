@@ -1,0 +1,109 @@
+Added Component: Designator=U5(LGA28R50P4X10_380X520X100)
+Added Pin To Net: NetName=3V3 Pin=U5-3
+Added Pin To Net: NetName=3V3 Pin=U5-4
+Added Pin To Net: NetName=3V3 Pin=U5-28
+Added Net: Name=3V3
+Added Net: Name=A0
+Added Net: Name=A4
+Added Net: Name=BNO055_CAP
+Added Net: Name=BNO055_COM0
+Added Net: Name=BNO055_COM1
+Added Net: Name=BNO055_COM2
+Added Net: Name=BNO055_COM3
+Added Net: Name=BNO055_GNDIO
+Added Net: Name=BNO055_GND
+Added Net: Name=BNO055_INT
+Added Net: Name=BNO055_NBOOT
+Added Net: Name=BNO055_NRESET
+Added Net: Name=BNO055_PIN_1
+Added Net: Name=BNO055_PIN_7
+Added Net: Name=BNO055_PIN_8
+Added Net: Name=BNO055_PIN_10
+Added Net: Name=BNO055_PIN_12
+Added Net: Name=BNO055_PIN_13
+Added Net: Name=BNO055_PIN_15
+Added Net: Name=BNO055_PIN_16
+Added Net: Name=BNO055_PIN_21
+Added Net: Name=BNO055_PIN_22
+Added Net: Name=BNO055_PIN_23
+Added Net: Name=BNO055_PIN_24
+Added Net: Name=BNO055_PS0
+Added Net: Name=BNO055_PS1
+Added Net: Name=BNO055_VDDIO
+Added Net: Name=BNO055_VDD
+Added Net: Name=BNO055_XIN32
+Added Net: Name=BNO055_XOUT32
+Added Pin To Net: NetName=D0 Pin=U5-20
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=U5-19
+Added Net: Name=D1
+Added Pin To Net: NetName=IMU_GND Pin=U5-2
+Added Pin To Net: NetName=IMU_GND Pin=U5-10
+Added Pin To Net: NetName=IMU_GND Pin=U5-15
+Added Pin To Net: NetName=IMU_GND Pin=U5-16
+Added Pin To Net: NetName=IMU_GND Pin=U5-18
+Added Pin To Net: NetName=IMU_GND Pin=U5-25
+Added Net: Name=IMU_GND
+Added Net: Name=NetC5_1
+Added Pin To Net: NetName=NetC7_1 Pin=U5-9
+Added Net: Name=NetC7_1
+Added Net: Name=NetD2_1
+Added Net: Name=NetD2_2
+Added Net: Name=NetJ3_2
+Added Net: Name=NetR2_1
+Added Net: Name=NetR3_2
+Added Net: Name=NetR4_1
+Added Net: Name=NetR5_1
+Added Pin To Net: NetName=NetR11_1 Pin=U5-17
+Added Net: Name=NetR11_1
+Added Net: Name=NetU4_26
+Added Net: Name=NetU4_27
+Added Pin To Net: NetName=NetU5_26 Pin=U5-26
+Added Net: Name=NetU5_26
+Added Pin To Net: NetName=NetU5_27 Pin=U5-27
+Added Net: Name=NetU5_27
+Added Pin To Net: NetName=NRESET Pin=U5-11
+Added Net: Name=NRESET
+Added Net: Name=PHOTON_A1
+Added Net: Name=PHOTON_A2
+Added Net: Name=PHOTON_A3
+Added Net: Name=PHOTON_A5
+Added Net: Name=PHOTON_D2
+Added Net: Name=PHOTON_D3
+Added Net: Name=PHOTON_D4
+Added Net: Name=PHOTON_D5
+Added Net: Name=PHOTON_D6
+Added Net: Name=PHOTON_D7
+Added Net: Name=PHOTON_DAC
+Added Net: Name=PHOTON_RGB_BLUE
+Added Net: Name=PHOTON_RGB_GREEN
+Added Net: Name=PHOTON_RGB_RED
+Added Net: Name=PHOTON_RST
+Added Net: Name=PHOTON_RX
+Added Net: Name=PHOTON_SETUP
+Added Net: Name=PHOTON_SMPS
+Added Net: Name=PHOTON_TX
+Added Net: Name=PHOTON_USB+
+Added Net: Name=PHOTON_USB-
+Added Net: Name=PHOTON_VBAT
+Added Net: Name=PHOTON_VIN
+Added Net: Name=PHOTON_WKP
+Added Pin To Net: NetName=PS0 Pin=U5-6
+Added Net: Name=PS0
+Added Pin To Net: NetName=PS1 Pin=U5-5
+Added Net: Name=PS1
+Added Net: Name=VBAT
+Added Class: Name=P02_Photon
+Added Class: Name=P03_Battery Circuit
+Added Class: Name=P04_Connectors
+Added Class: Name=P05_BNO055
+Added Class: Name=P06_Audio 
+Added Class: Name=P07_ BNO055 External
+Added Class: Name=P08_BNO055 TH
+Added Room: Name=P02_Photon
+Added Room: Name=P03_Battery Circuit
+Added Room: Name=P04_Connectors
+Added Room: Name=P05_BNO055
+Added Room: Name=P06_Audio 
+Added Room: Name=P07_ BNO055 External
+Added Room: Name=P08_BNO055 TH
