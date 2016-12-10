@@ -70,30 +70,21 @@ Everything from phase 3 + vibration motor circuit + other improvements.
 
 The board will consist of 4 panneled boards:
 * **Main Board**: contains the Photon and other components
-* **Auxiliary IMU board**: contains the bno055 and associated circuits
-* **Host board for BNO055 Nano breakout**: allows us to solder the nano bno055 breakout
-* **T-shaped connector for molex Pico Connector**: allow us to connect two external I2C devices.
+* **Host board for BNO055 Nano breakout (2x)**: allows us to solder the nano bno055 breakout
 
-**See below for description of the 4 parts:**
+**See below for description of the 3 parts:**
 
 * **Main Board**
- * See whehter the photon through-holes can be placed lined up exactly with holes in our board, to retain the ability to use female headers without sacrificing space.
+ * See whether the photon through-holes can be placed lined up exactly with holes in our board, to retain the ability to use female headers without sacrificing space.
  * Replace battery charging LED with a more appropriate one
- * Remove through-holes for female headers
- * Move buttons closer to center of board, away from edges
+ * Remove buttons
+ * Remove the 3x 0.1" pitch EMG connector, it's not needed
+ * Add 2 4x 0.1" pitch I2C connectors for connecting to both IMU boards.
  * Add vibrator motor circuit using the DRV2605L (SSOP package). Se below for sample circuit and pin assignments.
  * remove the bno055 circuit. I thought the main board needed it, but I think it's only needed on the auxiliary IMU board.
  * See how small we can make the main board. Ignore previous constraints about connector placement initially. The battery's dimensions are *2.00 x 1.32 x 0.23" (50.8 x 33.5 x 5.9 mm)*. Can our board's dimensions approach this ?
- * Does this need to stay a 4-layer board, or does moving to a 2-layer board provide any advantages ? 
-* **Auxiliary IMU board**
- * Keep the auxiliary IMU board as a detachable piece. Can that one be made smaller ?
- * Add an easy way to switch the I2C address, maybe a resistor which can be soldered in two positions ?
-* **BNO055 Breakout with test points**
- * Remove this part. We don't need it.
-* **Host board for the BNO055 nano breakout**
- * Add a "host" board for this one, adding the pico connector, as well as an easy way to change the ADO level (I2C address selection). Maybe a resistor that can be soldered in one of two positions?: https://www.tindie.com/products/onehorse/wearable-bno055-nano-board/
-* **T-shaped connector for Pico Connector**
- * I would like an easy way to connect one sleeptrack main board to two of the auxiliary IMU boards / or the host board. I am thinking it'll be cleaner if I have a T-shaped connector with 3 Pico Connectors to help with this.
+* **Host boards for the BNO055 nano breakout (2x)**
+ * Add a two "host" board fors this one, adding 4x 0.1" pitch connector (throughole), as well as an easy way to change the ADO level (I2C address selection). Each board should use a different I2C address.: https://www.tindie.com/products/onehorse/wearable-bno055-nano-board/
 
 
 
