@@ -192,14 +192,12 @@ bool GcData::tap_received() {
 
 bool GcData::fast_movement(const data_point &dp1, const data_point &dp2)
 {
-  /*
   if(abs(dp1.imu1_accel_x - dp2.imu1_accel_x) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
     return true;
   if(abs(dp1.imu1_accel_y - dp2.imu1_accel_y) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
       return true;
   if(abs(dp1.imu1_accel_z - dp2.imu1_accel_z) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
       return true;
-      */
 
   if(abs(dp1.imu2_accel_x - dp2.imu2_accel_x) > FAST_MOVEMENT_MMA8452_ACCEL )
     return true;
@@ -207,7 +205,6 @@ bool GcData::fast_movement(const data_point &dp1, const data_point &dp2)
       return true;
   if(abs(dp1.imu2_accel_z - dp2.imu2_accel_z) > FAST_MOVEMENT_MMA8452_ACCEL )
       return true;
-
 
   return false;
 }
