@@ -20,6 +20,7 @@
 
 
 #define FAST_MOVEMENT_BNO055_LINEAR_ACCEL 10
+#define FAST_MOVEMENT_MMA8452_ACCEL 1000
 
 
 class GcData {
@@ -33,6 +34,8 @@ public:
   void set_simulation_mode(bool simulation_mode) { m_simulation_mode = simulation_mode; }
   void set_emg_beep(bool emg_beep) { m_emg_beep = emg_beep; }
   void toggle_emg_beep() { if (!m_emg_beep) { m_emg_beep = true; } else { m_emg_beep = false;} }
+
+  void enable_tap_to_upload(bool enable);
 
   int p_battery_charge;
 
@@ -51,6 +54,7 @@ private:
   bool m_simulation_mode;
   bool m_emg_beep;
   bool m_report_status_battery;
+  bool m_tap_to_upload;
   uint32_t m_last_report_battery_time;
   GcClient &m_gc_client;
 

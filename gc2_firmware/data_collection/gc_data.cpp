@@ -14,7 +14,8 @@ GcData::GcData(GcClient &gc_client) :
     m_last_report_battery_time(-REPORT_BATTERY_INTERVAL),
     m_report_status_battery(false),
     m_simulation_mode(false),
-    m_emg_beep(false){
+    m_emg_beep(false),
+    m_tap_to_upload(false){
       memset(&m_last_data_point, 0, sizeof(data_point));
 }
 
@@ -191,11 +192,20 @@ bool GcData::tap_received() {
 
 bool GcData::fast_movement(const data_point &dp1, const data_point &dp2)
 {
+  /*
   if(abs(dp1.imu1_accel_x - dp2.imu1_accel_x) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
     return true;
   if(abs(dp1.imu1_accel_y - dp2.imu1_accel_y) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
       return true;
   if(abs(dp1.imu1_accel_z - dp2.imu1_accel_z) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
+      return true;
+      */
+
+  if(abs(dp1.imu2_accel_x - dp2.imu2_accel_x) > FAST_MOVEMENT_MMA8452_ACCEL )
+    return true;
+  if(abs(dp1.imu2_accel_y - dp2.imu2_accel_y) > FAST_MOVEMENT_MMA8452_ACCEL )
+      return true;
+  if(abs(dp1.imu2_accel_z - dp2.imu2_accel_z) > FAST_MOVEMENT_MMA8452_ACCEL )
       return true;
 
 
@@ -249,7 +259,7 @@ void GcData::collect_data(bool upload_requested) {
   }
 
   bool tapReceived = tap_received();
-  if (tapReceived) {
+  if (tapReceived && m_tap_to_upload) {
     validation_tone();
     upload_requested = true;
   }
@@ -258,4 +268,9 @@ void GcData::collect_data(bool upload_requested) {
     DEBUG_LOG("need to upload batch");
     m_gc_client.upload_batch();
   }
+}
+
+void GcData::enable_tap_to_upload(bool enable)
+{
+  m_tap_to_upload = enable;
 }
