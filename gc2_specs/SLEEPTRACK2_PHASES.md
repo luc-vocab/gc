@@ -85,8 +85,10 @@ Let's try to get our board design and BOM in the right format for assembly by te
  * Add vibrator motor circuit using the DRV2605L (SSOP package). Se below for sample circuit and pin assignments.
  * remove the bno055 circuit. I thought the main board needed it, but I think it's only needed on the auxiliary IMU board.
  * See how small we can make the main board. Ignore previous constraints about connector placement initially. The battery's dimensions are *2.00 x 1.32 x 0.23" (50.8 x 33.5 x 5.9 mm)*. Can our board's dimensions approach this ?
+ * Add rounded corners
 * **Host boards for the BNO055 nano breakout (2x)**
  * Add a two "host" board fors this one, adding 4x 0.1" pitch connector (throughole), as well as an easy way to change the ADO level (I2C address selection). Each board should use a different I2C address.: https://www.tindie.com/products/onehorse/wearable-bno055-nano-board/
+ * add rounded corners
 
 
 
