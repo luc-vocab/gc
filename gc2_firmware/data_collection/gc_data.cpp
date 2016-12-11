@@ -16,7 +16,8 @@ GcData::GcData(GcClient &gc_client) :
     m_simulation_mode(false),
     m_emg_beep(false),
     m_tap_to_upload(false),
-    m_fast_movement_start_millis(0){
+    m_fast_movement_start_millis(0),
+    m_last_datapoint_time(0){
       memset(&m_last_data_point, 0, sizeof(data_point));
 }
 
@@ -241,6 +242,13 @@ void GcData::collect_data(bool upload_requested) {
   dp.imu2_accel_y = accel2_values[1] * 1000.0;
   dp.imu2_accel_z = accel2_values[2] * 1000.0;
 
+  dp.flags1 = 0;
+  dp.flags2 = 0;
+  dp.flags3 = 0;
+  dp.flags4 = 0;
+
+  uint32_t current_millis = millis();
+  // check whether fast movement needs to be turned on or off
   if(fast_movement(dp, m_last_data_point))
   {
     if(m_fast_movement_start_millis == 0) {
@@ -252,7 +260,7 @@ void GcData::collect_data(bool upload_requested) {
   } else {
     // is fast movement on right now ?
     if (m_fast_movement_start_millis > 0) {
-      if(millis() - m_fast_movement_start_millis > FAST_MOVEMENT_DURATION) {
+      if(current_millis - m_fast_movement_start_millis > FAST_MOVEMENT_DURATION) {
         // turn it off
         digitalWrite(FAST_MODE_LED_PIN, LOW);
         m_fast_movement_start_millis = 0;
@@ -261,7 +269,12 @@ void GcData::collect_data(bool upload_requested) {
     }
   }
 
-  m_gc_client.add_datapoint(dp);
+  if (m_fast_movement_start_millis > 0 ||
+      current_millis - m_last_datapoint_time > 2000) {
+      m_gc_client.add_datapoint(dp);
+      m_last_datapoint_time = current_millis;
+  }
+
   m_last_data_point = dp;
 
   if(need_report_battery_charge()){

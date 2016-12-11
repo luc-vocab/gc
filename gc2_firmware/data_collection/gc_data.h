@@ -70,6 +70,7 @@ private:
 
   data_point m_last_data_point;
   uint32_t m_fast_movement_start_millis;
+  uint32_t m_last_datapoint_time;
 };
 
 
