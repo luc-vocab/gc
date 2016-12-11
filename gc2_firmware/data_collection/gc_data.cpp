@@ -15,6 +15,7 @@ GcData::GcData(GcClient &gc_client) :
     m_report_status_battery(false),
     m_simulation_mode(false),
     m_emg_beep(false){
+      memset(&m_last_data_point, 0, sizeof(data_point));
 }
 
 void GcData::init() {
@@ -26,6 +27,7 @@ void GcData::init() {
   pinMode(BUZZER_PIN, OUTPUT);
 
   // initialize various sensors
+  pinMode(FAST_MODE_LED_PIN, OUTPUT);
 
   if(USE_IMU_1_BNO055) {
 
@@ -187,6 +189,19 @@ bool GcData::tap_received() {
   return result;
 }
 
+bool GcData::fast_movement(const data_point &dp1, const data_point &dp2)
+{
+  if(abs(dp1.imu1_accel_x - dp2.imu1_accel_x) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
+    return true;
+  if(abs(dp1.imu1_accel_y - dp2.imu1_accel_y) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
+      return true;
+  if(abs(dp1.imu1_accel_z - dp2.imu1_accel_z) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
+      return true;
+
+
+  return false;
+}
+
 void GcData::collect_data(bool upload_requested) {
 
   data_point dp;
@@ -219,6 +234,15 @@ void GcData::collect_data(bool upload_requested) {
   dp.imu2_accel_z = accel2_values[2] * 1000.0;
 
   m_gc_client.add_datapoint(dp);
+
+  if(fast_movement(dp, m_last_data_point))
+  {
+    digitalWrite(FAST_MODE_LED_PIN, HIGH);
+  } else {
+    digitalWrite(FAST_MODE_LED_PIN, LOW);
+  }
+
+  m_last_data_point = dp;
 
   if(need_report_battery_charge()){
     report_battery_charge();

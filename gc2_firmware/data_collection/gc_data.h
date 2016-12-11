@@ -19,6 +19,9 @@
 #define REPORT_BATTERY_INTERVAL 120000 // every 2mn
 
 
+#define FAST_MOVEMENT_BNO055_LINEAR_ACCEL 10
+
+
 class GcData {
 public:
   GcData(GcClient &gc_client);
@@ -43,6 +46,7 @@ private:
   uint16_t read_emg();
   void emg_beep(uint16_t emg_value);
   bool tap_received();
+  bool fast_movement(const data_point &dp1, const data_point &dp2);
 
   bool m_simulation_mode;
   bool m_emg_beep;
@@ -57,6 +61,8 @@ private:
   #if USE_IMU_2_MMA8452
   MMA8452Q m_mma_2;
   #endif
+
+  data_point m_last_data_point;
 };
 
 

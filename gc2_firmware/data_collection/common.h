@@ -9,6 +9,7 @@
 #define BUZZER_PIN A4
 #define BUTTON1_PIN D2
 #define BUTTON2_PIN D3
+#define FAST_MODE_LED_PIN D7
 
 #define USE_EMG false
 

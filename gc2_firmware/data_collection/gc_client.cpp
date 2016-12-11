@@ -373,47 +373,8 @@ bool GcClient::need_upload_soon(){
 void GcClient::write_datapoint(const data_point &dp) {
   size_t original_offset = m_data_buffer_offset;
 
-  size_t *offset = &m_data_buffer_offset;
-
   memcpy(m_data_buffer + m_data_buffer_offset, &dp, sizeof(data_point));
   m_data_buffer_offset +=  sizeof(data_point);
-
-
-  /*
-  // write timestamp in two parts, program startup time and millis
-  uint32_t milliseconds = millis();
-  write_int_to_buffer(m_data_buffer, milliseconds, offset);
-
-  write_uint16_to_buffer(m_data_buffer, emg_value, offset);
-
-  int16_t gyro_value = gyro_max * 100.0;
-  write_int16_to_buffer(m_data_buffer, gyro_value, offset);
-
-  // values from the accelerometers are in m/s^2 like 9.8
-  // can only multiply by 1000, otherwise overflows will happen
-
-  // IMU1
-  write_int16_to_buffer(m_data_buffer, accel_1[0], offset);
-  write_int16_to_buffer(m_data_buffer, accel_1[1], offset);
-  write_int16_to_buffer(m_data_buffer, accel_1[2], offset);
-
-  // IMU2
-  int16_t accel_x_value = accel_2[0] * 1000.0;
-  int16_t accel_y_value = accel_2[1] * 1000.0;
-  int16_t accel_z_value = accel_2[2] * 1000.0;
-  write_int16_to_buffer(m_data_buffer, accel_x_value, offset);
-  write_int16_to_buffer(m_data_buffer, accel_y_value, offset);
-  write_int16_to_buffer(m_data_buffer, accel_z_value, offset);
-
-
-  // check values of button1_state and button2_state
-  uint8_t button_state = 0;
-  if(button2_state) {
-    button_state = 1;
-  }
-  write_uint8_to_buffer(m_data_buffer, button_state, offset);
-
-  */
 
   m_data_size = m_data_buffer_offset - original_offset;
 
