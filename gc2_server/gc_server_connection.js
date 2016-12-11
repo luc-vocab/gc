@@ -333,6 +333,9 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         var accel_2_z = accel_2_z_adj / 1000.0;        
         
         var button_state = data.readUInt8(offset); offset += 1;
+        var flags2 = data.readUInt8(offset); offset += 1;
+        var flags3 = data.readUInt8(offset); offset += 1;
+        var flags4 = data.readUInt8(offset); offset += 1;
         
         
         self.log_debug("time:", datetime,
