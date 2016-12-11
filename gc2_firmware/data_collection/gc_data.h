@@ -19,9 +19,11 @@
 #define REPORT_BATTERY_INTERVAL 120000 // every 2mn
 
 
-#define FAST_MOVEMENT_BNO055_LINEAR_ACCEL 20
-#define FAST_MOVEMENT_MMA8452_ACCEL 250
+#define FAST_MOVEMENT_BNO055_LINEAR_ACCEL 30
+#define FAST_MOVEMENT_MMA8452_ACCEL 300
 
+#define FAST_MOVEMENT_DURATION 4000
+#define SLOW_MOVEMENT_INTERVAL 2000
 
 class GcData {
 public:
@@ -67,6 +69,7 @@ private:
   #endif
 
   data_point m_last_data_point;
+  uint32_t m_fast_movement_start_millis;
 };
 
 

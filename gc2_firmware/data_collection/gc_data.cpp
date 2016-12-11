@@ -15,7 +15,8 @@ GcData::GcData(GcClient &gc_client) :
     m_report_status_battery(false),
     m_simulation_mode(false),
     m_emg_beep(false),
-    m_tap_to_upload(false){
+    m_tap_to_upload(false),
+    m_fast_movement_start_millis(0){
       memset(&m_last_data_point, 0, sizeof(data_point));
 }
 
@@ -240,15 +241,27 @@ void GcData::collect_data(bool upload_requested) {
   dp.imu2_accel_y = accel2_values[1] * 1000.0;
   dp.imu2_accel_z = accel2_values[2] * 1000.0;
 
-  m_gc_client.add_datapoint(dp);
-
   if(fast_movement(dp, m_last_data_point))
   {
-    digitalWrite(FAST_MODE_LED_PIN, HIGH);
+    if(m_fast_movement_start_millis == 0) {
+      // turning on fast movement
+      digitalWrite(FAST_MODE_LED_PIN, HIGH);
+      DEBUG_LOG("turning on fast movement");
+    }
+    m_fast_movement_start_millis = millis();
   } else {
-    digitalWrite(FAST_MODE_LED_PIN, LOW);
+    // is fast movement on right now ?
+    if (m_fast_movement_start_millis > 0) {
+      if(millis() - m_fast_movement_start_millis > FAST_MOVEMENT_DURATION) {
+        // turn it off
+        digitalWrite(FAST_MODE_LED_PIN, LOW);
+        m_fast_movement_start_millis = 0;
+        DEBUG_LOG("turning off fast movement");
+      }
+    }
   }
 
+  m_gc_client.add_datapoint(dp);
   m_last_data_point = dp;
 
   if(need_report_battery_charge()){
