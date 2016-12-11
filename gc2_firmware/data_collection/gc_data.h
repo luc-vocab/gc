@@ -3,6 +3,7 @@
 
 #include "gc_client.h"
 #include "common.h"
+#include "data_struct.h"
 
 #include "SparkFunMAX17043.h" // Include the SparkFun MAX17043 library, battery gauge
 #include "math.h"
@@ -18,6 +19,12 @@
 #define REPORT_BATTERY_INTERVAL 120000 // every 2mn
 
 
+#define FAST_MOVEMENT_BNO055_LINEAR_ACCEL 30
+#define FAST_MOVEMENT_MMA8452_ACCEL 300
+
+#define FAST_MOVEMENT_DURATION 4000
+#define SLOW_MOVEMENT_INTERVAL 2000
+
 class GcData {
 public:
   GcData(GcClient &gc_client);
@@ -29,6 +36,8 @@ public:
   void set_simulation_mode(bool simulation_mode) { m_simulation_mode = simulation_mode; }
   void set_emg_beep(bool emg_beep) { m_emg_beep = emg_beep; }
   void toggle_emg_beep() { if (!m_emg_beep) { m_emg_beep = true; } else { m_emg_beep = false;} }
+
+  void enable_tap_to_upload(bool enable);
 
   int p_battery_charge;
 
@@ -42,10 +51,12 @@ private:
   uint16_t read_emg();
   void emg_beep(uint16_t emg_value);
   bool tap_received();
+  bool fast_movement(const data_point &dp1, const data_point &dp2);
 
   bool m_simulation_mode;
   bool m_emg_beep;
   bool m_report_status_battery;
+  bool m_tap_to_upload;
   uint32_t m_last_report_battery_time;
   GcClient &m_gc_client;
 
@@ -56,6 +67,10 @@ private:
   #if USE_IMU_2_MMA8452
   MMA8452Q m_mma_2;
   #endif
+
+  data_point m_last_data_point;
+  uint32_t m_fast_movement_start_millis;
+  uint32_t m_last_datapoint_time;
 };
 
 

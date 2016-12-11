@@ -143,10 +143,12 @@ int set_mode(String command) {
       WiFi.off();
     }
     pending_night_mode = true;
+    gc_data.enable_tap_to_upload(true);
   } else if (command == "realtime" ) {
     DEBUG_LOG("enable realtime mode");
     frequency = REALTIME_FREQUENCY;
     gc_client.set_mode(GC_MODE_REALTIME);
+    gc_data.enable_tap_to_upload(false);
   } else if (command == "standby") {
     DEBUG_LOG("enable standby mode");
     gc_client.set_mode(GC_MODE_STANDBY);

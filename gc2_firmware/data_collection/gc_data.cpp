@@ -14,7 +14,11 @@ GcData::GcData(GcClient &gc_client) :
     m_last_report_battery_time(-REPORT_BATTERY_INTERVAL),
     m_report_status_battery(false),
     m_simulation_mode(false),
-    m_emg_beep(false){
+    m_emg_beep(false),
+    m_tap_to_upload(false),
+    m_fast_movement_start_millis(0),
+    m_last_datapoint_time(0){
+      memset(&m_last_data_point, 0, sizeof(data_point));
 }
 
 void GcData::init() {
@@ -26,6 +30,7 @@ void GcData::init() {
   pinMode(BUZZER_PIN, OUTPUT);
 
   // initialize various sensors
+  pinMode(FAST_MODE_LED_PIN, OUTPUT);
 
   if(USE_IMU_1_BNO055) {
 
@@ -187,28 +192,97 @@ bool GcData::tap_received() {
   return result;
 }
 
+bool GcData::fast_movement(const data_point &dp1, const data_point &dp2)
+{
+  if(abs(dp1.imu1_accel_x - dp2.imu1_accel_x) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
+    return true;
+  if(abs(dp1.imu1_accel_y - dp2.imu1_accel_y) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
+      return true;
+  if(abs(dp1.imu1_accel_z - dp2.imu1_accel_z) > FAST_MOVEMENT_BNO055_LINEAR_ACCEL )
+      return true;
+
+  if(abs(dp1.imu2_accel_x - dp2.imu2_accel_x) > FAST_MOVEMENT_MMA8452_ACCEL )
+    return true;
+  if(abs(dp1.imu2_accel_y - dp2.imu2_accel_y) > FAST_MOVEMENT_MMA8452_ACCEL )
+      return true;
+  if(abs(dp1.imu2_accel_z - dp2.imu2_accel_z) > FAST_MOVEMENT_MMA8452_ACCEL )
+      return true;
+
+  return false;
+}
+
 void GcData::collect_data(bool upload_requested) {
 
-  uint16_t emg_value = read_emg();
-  emg_beep(emg_value);
+  data_point dp;
+  memset(&dp, 0, sizeof(data_point));
+
+  // eventually this will overflow, but the device is only on for one night,
+  // so should be OK
+  dp.milliseconds = millis();
+
+  dp.emg_value = read_emg();
+  emg_beep(dp.emg_value);
+
   float gyro_max = get_gyro_max();
+  int16_t gyro_value = gyro_max * 100.0;
+  dp.gyro = gyro_value;
+
+
   int16_t accel1_values[3];
   float accel2_values[3];
 
   get_accel_1(accel1_values);
   get_accel_2(accel2_values);
 
-  bool button1_state = false;
-  bool button2_state = ! digitalRead(BUTTON2_PIN);
+  dp.imu1_accel_x = accel1_values[0];
+  dp.imu1_accel_y = accel1_values[1];
+  dp.imu1_accel_z = accel1_values[2];
 
-  m_gc_client.add_datapoint(emg_value, gyro_max, accel1_values, accel2_values, button1_state, button2_state);
+  dp.imu2_accel_x = accel2_values[0] * 1000.0;
+  dp.imu2_accel_y = accel2_values[1] * 1000.0;
+  dp.imu2_accel_z = accel2_values[2] * 1000.0;
+
+  dp.flags1 = 0;
+  dp.flags2 = 0;
+  dp.flags3 = 0;
+  dp.flags4 = 0;
+
+  uint32_t current_millis = millis();
+  // check whether fast movement needs to be turned on or off
+  if(fast_movement(dp, m_last_data_point))
+  {
+    if(m_fast_movement_start_millis == 0) {
+      // turning on fast movement
+      digitalWrite(FAST_MODE_LED_PIN, HIGH);
+      DEBUG_LOG("turning on fast movement");
+    }
+    m_fast_movement_start_millis = millis();
+  } else {
+    // is fast movement on right now ?
+    if (m_fast_movement_start_millis > 0) {
+      if(current_millis - m_fast_movement_start_millis > FAST_MOVEMENT_DURATION) {
+        // turn it off
+        digitalWrite(FAST_MODE_LED_PIN, LOW);
+        m_fast_movement_start_millis = 0;
+        DEBUG_LOG("turning off fast movement");
+      }
+    }
+  }
+
+  if (m_fast_movement_start_millis > 0 ||
+      current_millis - m_last_datapoint_time > 2000) {
+      m_gc_client.add_datapoint(dp);
+      m_last_datapoint_time = current_millis;
+  }
+
+  m_last_data_point = dp;
 
   if(need_report_battery_charge()){
     report_battery_charge();
   }
 
   bool tapReceived = tap_received();
-  if (tapReceived) {
+  if (tapReceived && m_tap_to_upload) {
     validation_tone();
     upload_requested = true;
   }
@@ -217,4 +291,9 @@ void GcData::collect_data(bool upload_requested) {
     DEBUG_LOG("need to upload batch");
     m_gc_client.upload_batch();
   }
+}
+
+void GcData::enable_tap_to_upload(bool enable)
+{
+  m_tap_to_upload = enable;
 }
