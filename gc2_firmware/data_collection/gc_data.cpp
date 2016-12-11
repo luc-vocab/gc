@@ -189,19 +189,36 @@ bool GcData::tap_received() {
 
 void GcData::collect_data(bool upload_requested) {
 
-  uint16_t emg_value = read_emg();
-  emg_beep(emg_value);
+  data_point dp;
+  memset(&dp, 0, sizeof(data_point));
+
+  // eventually this will overflow, but the device is only on for one night,
+  // so should be OK
+  dp.milliseconds = millis();
+
+  dp.emg_value = read_emg();
+  emg_beep(dp.emg_value);
+
   float gyro_max = get_gyro_max();
+  int16_t gyro_value = gyro_max * 100.0;
+  dp.gyro = gyro_value;
+
+
   int16_t accel1_values[3];
   float accel2_values[3];
 
   get_accel_1(accel1_values);
   get_accel_2(accel2_values);
 
-  bool button1_state = false;
-  bool button2_state = ! digitalRead(BUTTON2_PIN);
+  dp.imu1_accel_x = accel1_values[0];
+  dp.imu1_accel_y = accel1_values[1];
+  dp.imu1_accel_z = accel1_values[2];
 
-  m_gc_client.add_datapoint(emg_value, gyro_max, accel1_values, accel2_values, button1_state, button2_state);
+  dp.imu2_accel_x = accel2_values[0] * 1000.0;
+  dp.imu2_accel_y = accel2_values[1] * 1000.0;
+  dp.imu2_accel_z = accel2_values[2] * 1000.0;
+
+  m_gc_client.add_datapoint(dp);
 
   if(need_report_battery_charge()){
     report_battery_charge();

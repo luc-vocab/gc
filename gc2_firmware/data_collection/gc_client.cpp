@@ -316,7 +316,7 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   return rv;
 }
 
-void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, int16_t *accel_1, float *accel_2, bool button1_state, bool button2_state) {
+void GcClient::add_datapoint(const data_point &dp) {
 
   if(m_mode == GC_MODE_STANDBY) {
     // discard the data
@@ -324,14 +324,13 @@ void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, int16_t *accel_
   }
 
   if (m_mode == GC_MODE_BATCH) {
-    write_datapoint(emg_value, gyro_max, accel_1, accel_2, button1_state, button2_state);
+    write_datapoint(dp);
   }
 
   if (m_mode == GC_MODE_REALTIME) {
     // write at the beginning of the buffer
-    DEBUG_LOG("writing datapoint, emg_value: " + String(emg_value));
     m_data_buffer_offset = 0;
-    write_datapoint(emg_value, gyro_max, accel_1, accel_2, button1_state, button2_state);
+    write_datapoint(dp);
     // immediately send
     m_tcp_client.write((const uint8_t *) m_data_buffer, m_data_buffer_offset);
   }
@@ -371,11 +370,16 @@ bool GcClient::need_upload_soon(){
   return time_remaining() <= 15000;
 }
 
-void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, int16_t *accel_1, float *accel_2, bool button1_state, bool button2_state) {
+void GcClient::write_datapoint(const data_point &dp) {
   size_t original_offset = m_data_buffer_offset;
 
   size_t *offset = &m_data_buffer_offset;
 
+  memcpy(m_data_buffer + m_data_buffer_offset, &dp, sizeof(data_point));
+  m_data_buffer_offset +=  sizeof(data_point);
+
+
+  /*
   // write timestamp in two parts, program startup time and millis
   uint32_t milliseconds = millis();
   write_int_to_buffer(m_data_buffer, milliseconds, offset);
@@ -409,11 +413,13 @@ void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, int16_t *acce
   }
   write_uint8_to_buffer(m_data_buffer, button_state, offset);
 
+  */
+
   m_data_size = m_data_buffer_offset - original_offset;
 
   m_num_datapoints++;
 
-  update_upload_timestamps(milliseconds);
+  update_upload_timestamps(dp.milliseconds);
 
   if(m_num_datapoints % 10 == 0) {
     uint16_t remaining = datapoints_remaining();

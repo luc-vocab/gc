@@ -2,6 +2,7 @@
 #define _GC_CLIENT_H
 
 #include "application.h"
+#include "data_struct.h"
 
 #define PROTOCOL_VERSION 100
 
@@ -62,7 +63,7 @@ class GcClient {
 public:
   GcClient();
   void configure(String host, int port, uint32_t device_id);
-  void add_datapoint(uint16_t emg_value, float gyro_max, int16_t *accel_1, float *accel_2, bool button1_state, bool button2_state);
+  void add_datapoint(const data_point &dp);
   void battery_charge(float percent_charged);
   void set_mode(uint16_t mode);
   uint16_t get_mode() { return m_mode; }
@@ -100,7 +101,7 @@ private:
   void reset_data_buffer();
 
   // write datapoint onto data buffer
-  void write_datapoint(uint16_t emg_value, float gyro_max, int16_t *accel_1, float *accel_2, bool button1_state, bool button2_state);
+  void write_datapoint(const data_point &dp);
 
   // send initial handshake, identifying the device and specifying what kind of data
   // we'll be sending

@@ -3,6 +3,7 @@
 
 #include "gc_client.h"
 #include "common.h"
+#include "data_struct.h"
 
 #include "SparkFunMAX17043.h" // Include the SparkFun MAX17043 library, battery gauge
 #include "math.h"
