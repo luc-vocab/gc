@@ -1,0 +1,7 @@
+\t (00:00:00) padstack_editor 17.0 P003 (v17-0-118C) Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Sat Dec 03 14:45:41 2016
+\t (00:00:00)         Host=MADISON-PC User=Madison Pid=18300 CPUs=4
+\t (00:00:00) CmdLine= padstack_editor -mpssession Madison -file ./#Taaaaaa10168.tmp -pname PAD10REC19-1 -data C:/Users/Madison/AppData/Local/Temp/#Taaaaac10168.tmp
+\t (00:00:00) 
+\d (00:00:01) QtSignal GuidedDesignLayersTab LayersTable itemSelectionChanged
+\t (00:00:02)     Journal end - Sat Dec 03 14:45:44 2016

@@ -2,9 +2,9 @@
 (                                                                     )
 (    NC DRILL Log                                                     )
 (                                                                     )
-(    Drawing          : SLEEPTRACK2_PHASE3_v2.brd                     )
+(    Drawing          : SLEEPTRACK2_PHASE3_IMU.brd                    )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Sat Oct 29 00:35:14 2016                      )
+(    Date/Time        : Sat Dec 03 15:21:01 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -46,10 +46,9 @@
            Size  Plating  Tool        + Tolerance  - Tolerance
 
           13.00  P        T01            0.000000     0.000000
-          35.00  P        T02            0.000000     0.000000
-          36.00  P        T03            0.000000     0.000000
-         130.00  N        T04            0.000000     0.000000
-         149.50  N        T05            0.000000     0.000000
+          20.00  P        T02            0.000000     0.000000
+         130.00  N        T03            0.000000     0.000000
+         149.50  N        T04            0.000000     0.000000
 
 
  Drill files being output to directory 'C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Documents/Artwork/V2' ...
@@ -61,13 +60,12 @@
 
      Tool  Num     Size      +/- Tolerance     Plating   Quantity
 
-     T01    1.  13.0000    0.0000/  0.0000      PLATED         33
-     T02    2.  35.0000    0.0000/  0.0000      PLATED          5
-     T03    3.  36.0000    0.0000/  0.0000      PLATED         27
-     T04    4. 130.0000    0.0000/  0.0000  NON_PLATED          4
-     T05    5. 149.5000    0.0000/  0.0000  NON_PLATED          1
+     T01    1.  13.0000    0.0000/  0.0000      PLATED         18
+     T02    2.  20.0000    0.0000/  0.0000      PLATED         30
+     T03    3. 130.0000    0.0000/  0.0000  NON_PLATED          4
+     T04    4. 149.5000    0.0000/  0.0000  NON_PLATED          1
 
-     ---- Total holes:                                         70
+     ---- Total holes:                                         53
 
-     ---- Total head travel:              3.59 feet (1.09 meters)
+     ---- Total head travel:              1.87 feet (0.57 meters)
 

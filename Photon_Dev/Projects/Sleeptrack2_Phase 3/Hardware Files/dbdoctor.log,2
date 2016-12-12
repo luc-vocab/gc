@@ -2,12 +2,15 @@
 (                                                                     )
 (    DBDOCTOR                                                         )
 (                                                                     )
-(    Drawing          : SLEEPTRACK2_PHASE3_v2.brd                     )
+(    Drawing          : SLEEPTRACK2_PHASE3_IMU.brd                    )
 (    Software Version : 17.0P011                                      )
-(    Date/Time        : Wed Oct 26 22:38:20 2016                      )
+(    Date/Time        : Sat Dec 03 15:12:14 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 
-0 warnings, 0 errors detected, 0 errors could be fixed.
+ERROR IN SYMBOL DEFINITION name = RADIAL_DIMENSION
+  ERROR(SPMHDB-224): Symbol definition has no instances.
+
+0 warnings, 1 errors detected, 1 errors could be fixed.

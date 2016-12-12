@@ -4,10 +4,15 @@
 (                                                                     )
 (    Drawing          : SLEEPTRACK2_PHASE3_v2.brd                     )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Wed Oct 26 22:38:20 2016                      )
+(    Date/Time        : Sat Oct 29 00:03:51 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
+
+
+ ******************************************
+ WARNING: DRC OUT OF DATE on this layout.
+ ******************************************
 
  ---- Photoplot outline rectangle not found; using drawing extents.
 
@@ -49,8 +54,6 @@ Results from parameter file ...
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     0.00600                                  DARK 
-  CIRCLE     0.00800                                  DARK 
   CIRCLE     0.01000                                  DARK 
   CIRCLE     0.02400                                  DARK 
   CIRCLE     0.02500                                  DARK 
@@ -61,8 +64,6 @@ Results from parameter file ...
   SQUARE     0.04500                     0.000 NO     DARK 
   SQUARE     0.06000                     0.000 NO     DARK 
   SQUARE     0.07000                     0.000 NO     DARK 
-  RECTANGLE  0.00984     x 0.03000       0.000 NO     DARK 
-  RECTANGLE  0.00984     x 0.03000      90.000 NO     DARK 
   RECTANGLE  0.02165     x 0.03937       0.000 NO     DARK 
   RECTANGLE  0.02500     x 0.04000      90.000 NO     DARK 
   RECTANGLE  0.03201     x 0.01201      90.000 NO     DARK 
@@ -73,7 +74,6 @@ Results from parameter file ...
   RECTANGLE  0.06299     x 0.06890       0.000 NO     DARK 
   RECTANGLE  0.06890     x 0.06417      90.000 NO     DARK 
   RECTANGLE  0.06969     x 0.09724       0.000 NO     DARK 
-  RECTANGLE  0.07480     x 0.05118      90.000 NO     DARK 
   RECTANGLE  0.10000     x 0.08000       0.000 NO     DARK 
   PAD SHAPE  CHAMFERED_RECTANGLE ,4921  45.000 NO     DARK 
   PAD SHAPE  CHAMFERED_RECTANGLE ,4921 135.000 NO     DARK 
@@ -110,7 +110,7 @@ Results from parameter file ...
   CIRCLE     0.05500                                  DARK 
   CIRCLE     0.13500                                  DARK 
 
-     Sleeptrack2_Phase_3_GND_V2 created.
+     Sleeptrack2_Phase_3_GND_V2 created with warnings
 
 
 ================================================================
@@ -140,7 +140,7 @@ Results from parameter file ...
   CIRCLE     0.05500                                  DARK 
   CIRCLE     0.13500                                  DARK 
 
-     Sleeptrack2_Phase_3_VCC_V2 created.
+     Sleeptrack2_Phase_3_VCC_V2 created with warnings
 
 
 ================================================================
@@ -245,8 +245,6 @@ Results from parameter file ...
   SQUARE     0.05000                     0.000 NO     DARK 
   SQUARE     0.06600                     0.000 NO     DARK 
   SQUARE     0.07500                     0.000 NO     DARK 
-  RECTANGLE  0.01024     x 0.03000       0.000 NO     DARK 
-  RECTANGLE  0.01024     x 0.03000      90.000 NO     DARK 
   RECTANGLE  0.02362     x 0.04134       0.000 NO     DARK 
   RECTANGLE  0.03100     x 0.04600      90.000 NO     DARK 
   RECTANGLE  0.03209     x 0.01209      90.000 NO     DARK 
@@ -256,14 +254,13 @@ Results from parameter file ...
   RECTANGLE  0.06300     x 0.06900       0.000 NO     DARK 
   RECTANGLE  0.06500     x 0.07500       0.000 NO     DARK 
   RECTANGLE  0.07362     x 0.10118       0.000 NO     DARK 
-  RECTANGLE  0.07677     x 0.05315      90.000 NO     DARK 
   RECTANGLE  0.10500     x 0.08050       0.000 NO     DARK 
   PAD SHAPE  CHAMFERED_RECTANGLE ,4921  45.000 NO     DARK 
   PAD SHAPE  CHAMFERED_RECTANGLE ,4921 135.000 NO     DARK 
   PAD SHAPE  CHAMFERED_RECTANGLE ,4921 225.000 NO     DARK 
   PAD SHAPE  CHAMFERED_RECTANGLE ,4921 315.000 NO     DARK 
 
-     Sleeptrack2_Phase_3_Soldermask_Top_V2 created.
+     Sleeptrack2_Phase_3_Soldermask_Top_V2 created with warnings
 
 
 ================================================================
@@ -297,7 +294,7 @@ Results from parameter file ...
   RECTANGLE  0.04600     x 0.03600      90.000 NO     DARK 
   RECTANGLE  0.07677     x 0.05315      90.000 NO     DARK 
 
-     Sleeptrack2_Phase_3_Soldermask_Bottom_V2 created.
+     Sleeptrack2_Phase_3_Soldermask_Bottom_V2 created with warnings
 
 
 ================================================================
@@ -316,7 +313,7 @@ Results from parameter file ...
   Suppress unconnected internal pads  NO
   Draw holes only                     NO
 
-    WARNING: text composed 0 width line found at (-1133.00 -1353.20)
+    WARNING: text composed 0 width line found at (-1041.50 -121.50)
            ... using undefined line width of 10.00
 
     WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
@@ -357,7 +354,7 @@ Results from parameter file ...
   ---------------------------------------------------------
   CIRCLE     0.01000                                  DARK 
 
-     Sleeptrack2_Phase_3_Silkscreen_Bottom_V2 created.
+     Sleeptrack2_Phase_3_Silkscreen_Bottom_V2 created with warnings
 
 
 ================================================================
@@ -384,20 +381,20 @@ Results from parameter file ...
   ---------------------------------------------------------
   CIRCLE     0.01000                                  DARK 
 
-     Sleeptrack2_Phase_3_Manufacturing_V2 created.
+     Sleeptrack2_Phase_3_Manufacturing_V2 created with warnings
 
 
 ------------------------------------------------------
  SUMMARY:
         Sleeptrack2_Phase_3_TOP_V2 created with warnings
-        Sleeptrack2_Phase_3_GND_V2 created.
-        Sleeptrack2_Phase_3_VCC_V2 created.
+        Sleeptrack2_Phase_3_GND_V2 created with warnings
+        Sleeptrack2_Phase_3_VCC_V2 created with warnings
         Sleeptrack2_Phase_3_BOTTOM_V2 created with warnings
         Sleeptrack2_Phase_3_Board_Outline_V2 created with warnings
-        Sleeptrack2_Phase_3_Soldermask_Top_V2 created.
-        Sleeptrack2_Phase_3_Soldermask_Bottom_V2 created.
+        Sleeptrack2_Phase_3_Soldermask_Top_V2 created with warnings
+        Sleeptrack2_Phase_3_Soldermask_Bottom_V2 created with warnings
         Sleeptrack2_Phase_3_Silkscreen_Top_V2 created with warnings
-        Sleeptrack2_Phase_3_Silkscreen_Bottom_V2 created.
-        Sleeptrack2_Phase_3_Manufacturing_V2 created.
+        Sleeptrack2_Phase_3_Silkscreen_Bottom_V2 created with warnings
+        Sleeptrack2_Phase_3_Manufacturing_V2 created with warnings
 
  ARTWORK had warnings

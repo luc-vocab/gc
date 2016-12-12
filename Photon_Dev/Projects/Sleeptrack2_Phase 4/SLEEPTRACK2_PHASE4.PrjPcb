@@ -39,40 +39,6 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=..\..\..\..\..\Downloads\Imported BNO055.lia\BNO055.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=FOERGDQS
-
-[Document2]
-DocumentPath=..\..\..\..\..\Downloads\Imported BNO055.lia\BNO055.SchLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=PHIMBJLO
-
-[Document3]
 DocumentPath=..\Sleeptrack2_Phase 3\Hardware Files\Imported SLEEPTRACK2_PHASE3.PrjPcb\SLEEPTRACK2_PHASE3_Library.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -89,7 +55,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FSCRXBAN
 
-[Document4]
+[Document2]
 DocumentPath=..\Sleeptrack2_Phase 3\Hardware Files\Imported SLEEPTRACK2_PHASE3.PrjPcb\P03_Battery Circuit.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -106,7 +72,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XPMTSTIV
 
-[Document5]
+[Document3]
 DocumentPath=..\Sleeptrack2_Phase 3\Hardware Files\Imported SLEEPTRACK2_PHASE3.PrjPcb\P02_Photon.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -123,7 +89,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ESCWWPEN
 
-[Document6]
+[Document4]
 DocumentPath=..\Sleeptrack2_Phase 3\Hardware Files\Imported SLEEPTRACK2_PHASE3.PrjPcb\P04_Connectors.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -140,24 +106,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UYWSNWIM
 
-[Document7]
-DocumentPath=..\Sleeptrack2_Phase 3\Hardware Files\Imported SLEEPTRACK2_PHASE3.PrjPcb\P05_BNO055.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=3
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=TXLPFQJN
-
-[Document8]
+[Document5]
 DocumentPath=..\Sleeptrack2_Phase 3\Hardware Files\Imported SLEEPTRACK2_PHASE3.PrjPcb\P06_Audio .SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -174,24 +123,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YMSCYKGL
 
-[Document9]
-DocumentPath=..\Sleeptrack2_Phase 3\Hardware Files\Imported SLEEPTRACK2_PHASE3.PrjPcb\P07_ BNO055 External.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=5
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=CTUBVTWP
-
-[Document10]
+[Document6]
 DocumentPath=P09_DRV2605L Motor Driver.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -208,7 +140,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LDTLBUMF
 
-[Document11]
+[Document7]
 DocumentPath=SLEEPTRACK2_PHASE4.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -225,24 +157,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EOJLKMJA
 
-[Document12]
-DocumentPath=T Connector.PcbDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=CKUKERJS
-
-[Document13]
+[Document8]
 DocumentPath=Phase4.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -259,7 +174,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CKDVVJPX
 
-[Document14]
+[Document9]
 DocumentPath=BNO055 Host.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -276,7 +191,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CXOVQEIS
 
-[Document15]
+[Document10]
 DocumentPath=Aux_BNO055.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -292,6 +207,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TRJPXGFB
+
+[Document11]
+DocumentPath=IMU External.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=XBCUETQX
 
 [GeneratedDocument1]
 DocumentPath=..\Sleeptrack2_Phase 3\Hardware Files\Imported SLEEPTRACK2_PHASE3.PrjPcb\SLEEPTRACK2_PHASE3.LOG
@@ -309,7 +241,7 @@ OutputJobsCount=0
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=CadnetixNetlist
 OutputName1=Cadnetix Netlist
@@ -426,17 +358,47 @@ OutputName23=XSpice Netlist
 OutputDocumentPath23=
 OutputVariantName23=
 OutputDefault23=0
+OutputType24=SIMetrixNetlist
+OutputName24=SIMetrix
+OutputDocumentPath24=
+OutputVariantName24=
+OutputDefault24=0
+OutputType25=SIMPLISNetlist
+OutputName25=SIMPLIS
+OutputDocumentPath25=
+OutputVariantName25=
+OutputDefault25=0
+OutputType26=WBSENetlistGeneration
+OutputName26=WEBENCH Simulation Engine
+OutputDocumentPath26=
+OutputVariantName26=
+OutputDefault26=0
 
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=AdvSimNetlist
 OutputName1=Mixed Sim
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
+OutputType2=SIMetrixSimulation
+OutputName2=SIMetrix
+OutputDocumentPath2=
+OutputVariantName2=
+OutputDefault2=0
+OutputType3=SIMPLISSimulation
+OutputName3=SIMPLIS
+OutputDocumentPath3=
+OutputVariantName3=
+OutputDefault3=0
+OutputType4=WBSENetlist
+OutputName4=WEBENCH Simulation Engine
+OutputDocumentPath4=
+OutputVariantName4=
+OutputDefault4=0
 
 [OutputGroup3]
 Name=Documentation Outputs
@@ -563,11 +525,17 @@ OutputDocumentPath20=
 OutputVariantName20=
 OutputDefault20=0
 PageOptions20=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+OutputType21=Software Platform Print
+OutputName21=Software Platform Prints
+OutputDocumentPath21=
+OutputVariantName21=
+OutputDefault21=0
+PageOptions21=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 
 [OutputGroup4]
 Name=Assembly Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Assembly
 OutputName1=Assembly Drawings
@@ -589,7 +557,7 @@ OutputDefault3=0
 [OutputGroup5]
 Name=Fabrication Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Board Stack Report
 OutputName1=Report Board Stack
@@ -661,7 +629,7 @@ OutputDefault12=0
 [OutputGroup6]
 Name=Report Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=BOM_PartType
 OutputName1=Bill of Materials
@@ -698,7 +666,7 @@ OutputDefault6=0
 [OutputGroup7]
 Name=Other Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Text Print
 OutputName1=Text Print
@@ -878,7 +846,7 @@ PageOptions29=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 [OutputGroup8]
 Name=Validation Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Component states check
 OutputName1=Vault's components states check
@@ -917,7 +885,7 @@ OutputDefault6=0
 [OutputGroup9]
 Name=Export Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=AutoCAD dwg/dxf PCB
 OutputName1=AutoCAD dwg/dxf File PCB
@@ -1248,6 +1216,20 @@ UpdateCurrentModels=1
 SelectedOnly=0
 UpdateVariants=1
 PartTypes=0
+
+[ToDoManager]
+ProjectToDo1=Name=Remove EMG Connector~1|State=1|UID=UEJLKGAI
+ProjectToDo2=Name=Add 2nd onboard I2C IMU Connector|State=1|UID=BCNPCTML
+ProjectToDo3=Name=Cancel T Shape Board|State=1|UID=UDPMGAGE
+ProjectToDo4=Name=Shrink to 0402 where possible|State=1|UID=AEJMYBFB
+ProjectToDo5=Name=Remove buttons~1|State=1|UID=HKLKRFIA
+ProjectToDo6=Name=IMU Host Board (x2)|UID=MGVOTMNI
+ProjectToDo7=Name=Cleanup library|Priority=1|UID=GIFHFQKK
+ProjectToDo8=Name=3d models|Priority=1|UID=XGTCTIOX
+ProjectToDo9=Name=change IMU Connectors to 2.54mm header|State=1|UID=SECSVWVP
+ProjectToDo10=Name=Fix LED/Resistor circuit~1|UID=ONHFUOLA
+ProjectToDo11=Name=Update Generic resistors in schematic to proper symbol~1|State=1|UID=JYTKDGGS
+ProjectToDo12=Name=Check on backside placement of components|UID=QXJQNCHK
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|UseName=-1|InclAllRules=0

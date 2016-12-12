@@ -4,14 +4,11 @@
 (                                                                     )
 (    Drawing          : SLEEPTRACK2_PHASE3.brd                        )
 (    Software Version : 17.0P011                                      )
-(    Date/Time        : Mon Aug 29 21:40:46 2016                      )
+(    Date/Time        : Mon Aug 29 21:53:45 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 Begin processing of drill legend template file 'C:/Cadence/SPB_17.0/share/pcb/text/nclegend/default-mil.dlt' ...
 End of drill legend template file processing.
-
-Begin processing drill holes.
-No errors detected in processing holes.
-End processing drill holes.
+Drill Legend command cancelled.

@@ -1,0 +1,12 @@
+Added Component: Designator=U7(DGS0010A_N)
+Added Pin To Net: NetName=NetC8_1 Pin=U7-1
+Added Pin To Net: NetName=D1 Pin=U7-2
+Added Pin To Net: NetName=D0 Pin=U7-3
+Added Pin To Net: NetName=PHOTON_A1 Pin=U7-4
+Added Pin To Net: NetName=PHOTON_D4 Pin=U7-5
+Added Pin To Net: NetName=PHOTON_3V3 Pin=U7-6
+Added Pin To Net: NetName=NetP1_2 Pin=U7-7
+Added Pin To Net: NetName=PHOTON_GND Pin=U7-8
+Added Pin To Net: NetName=NetP1_1 Pin=U7-9
+Added Pin To Net: NetName=PHOTON_3V3 Pin=U7-10
+Added Member To Class: ClassName=P09_DRV2605L Motor Driver Member=Component U7 DRV2650L

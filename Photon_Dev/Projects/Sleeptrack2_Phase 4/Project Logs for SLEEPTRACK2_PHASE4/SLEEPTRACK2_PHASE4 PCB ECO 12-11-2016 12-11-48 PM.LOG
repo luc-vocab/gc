@@ -1,0 +1,73 @@
+Added Component: Designator=C1(CAPCP1206)
+Added Component: Designator=C2(CAPCP1206)
+Added Component: Designator=C3(0402)
+Added Component: Designator=C8(0603)
+Added Component: Designator=C9(0603)
+Added Component: Designator=J1(header4)
+Added Component: Designator=J3(S2B-PH-K-S)
+Added Component: Designator=J4(header4)
+Added Component: Designator=LS1(SDR08540M3-01)
+Added Component: Designator=U1(SOT95P270X145-5N)
+Added Component: Designator=U2(SON50P300X100_HS-9M)
+Added Pin To Net: NetName=A4 Pin=LS1-1
+Added Net: Name=A4
+Added Pin To Net: NetName=D0 Pin=J1-2
+Added Pin To Net: NetName=D0 Pin=J4-2
+Added Pin To Net: NetName=D0 Pin=U2-8
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=J1-3
+Added Pin To Net: NetName=D1 Pin=J4-3
+Added Pin To Net: NetName=D1 Pin=U2-7
+Added Net: Name=D1
+Added Pin To Net: NetName=NetC8_1 Pin=C8-1
+Added Net: Name=NetC8_1
+Added Pin To Net: NetName=NetD2_1 Pin=U1-1
+Added Net: Name=NetD2_1
+Added Net: Name=NetD2_2
+Added Pin To Net: NetName=NetJ3_2 Pin=J3-2
+Added Net: Name=NetJ3_2
+Added Net: Name=NetP1_1
+Added Net: Name=NetP1_2
+Added Pin To Net: NetName=NetR2_1 Pin=U1-5
+Added Net: Name=NetR2_1
+Added Pin To Net: NetName=NetR3_2 Pin=U2-2
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NetR4_1 Pin=U2-6
+Added Net: Name=NetR4_1
+Added Pin To Net: NetName=PHOTON_3V3 Pin=C3-1
+Added Pin To Net: NetName=PHOTON_3V3 Pin=C9-1
+Added Pin To Net: NetName=PHOTON_3V3 Pin=J1-1
+Added Pin To Net: NetName=PHOTON_3V3 Pin=J4-1
+Added Pin To Net: NetName=PHOTON_3V3 Pin=U2-3
+Added Net: Name=PHOTON_3V3
+Added Net: Name=PHOTON_A1
+Added Net: Name=PHOTON_D4
+Added Pin To Net: NetName=PHOTON_GND Pin=C1-2
+Added Pin To Net: NetName=PHOTON_GND Pin=C2-2
+Added Pin To Net: NetName=PHOTON_GND Pin=C3-2
+Added Pin To Net: NetName=PHOTON_GND Pin=C8-2
+Added Pin To Net: NetName=PHOTON_GND Pin=C9-2
+Added Pin To Net: NetName=PHOTON_GND Pin=J1-4
+Added Pin To Net: NetName=PHOTON_GND Pin=J3-1
+Added Pin To Net: NetName=PHOTON_GND Pin=J4-4
+Added Pin To Net: NetName=PHOTON_GND Pin=LS1-2
+Added Pin To Net: NetName=PHOTON_GND Pin=U1-2
+Added Pin To Net: NetName=PHOTON_GND Pin=U2-1
+Added Pin To Net: NetName=PHOTON_GND Pin=U2-4
+Added Net: Name=PHOTON_GND
+Added Pin To Net: NetName=PHOTON_VIN Pin=C1-1
+Added Pin To Net: NetName=PHOTON_VIN Pin=U1-4
+Added Net: Name=PHOTON_VIN
+Added Pin To Net: NetName=VBAT Pin=C2-1
+Added Pin To Net: NetName=VBAT Pin=U1-3
+Added Net: Name=VBAT
+Added Class: Name=P02_Photon
+Added Class: Name=P03_Battery Circuit
+Added Class: Name=P04_Connectors
+Added Class: Name=P06_Audio 
+Added Class: Name=P09_DRV2605L Motor Driver
+Added Room: Name=P02_Photon
+Added Room: Name=P03_Battery Circuit
+Added Room: Name=P04_Connectors
+Added Room: Name=P06_Audio 
+Added Room: Name=P09_DRV2605L Motor Driver

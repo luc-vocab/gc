@@ -1,0 +1,12 @@
+Removed Member From Class: ClassName=P03_Battery Circuit Member=R1
+Removed Member From Class: ClassName=P03_Battery Circuit Member=R2
+Added Component: Designator=D?(D0-214AC)
+Added Component: Designator=SW?(SS12DH2)
+Added Pin To Net: NetName=VBAT Pin=D?-1
+Added Pin To Net: NetName=PHOTON_VIN Pin=D?-2
+Added Pin To Net: NetName=VBAT Pin=SW?-1
+Added Pin To Net: NetName=NetJ3_2 Pin=SW?-2
+Change Class Name : Old Net Name=P06_Audio New Net Name=P06_Audio 
+Added Member To Class: ClassName=P03_Battery Circuit Member=Component D? VS-MBRA140TRPBF
+Added Member To Class: ClassName=P03_Battery Circuit Member=Component SW? 100mA, 30V
+Change Room Name: Old Name=P06_Audio New Name=P06_Audio 

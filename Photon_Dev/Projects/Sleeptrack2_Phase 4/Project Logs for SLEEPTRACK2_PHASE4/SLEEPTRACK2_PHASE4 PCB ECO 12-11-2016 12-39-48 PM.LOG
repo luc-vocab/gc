@@ -1,0 +1,30 @@
+Added Component: Designator=R1(RESC402N)
+Added Component: Designator=R2(RESC402N)
+Added Component: Designator=R3(RESC402N)
+Added Component: Designator=R4(RESC402N)
+Added Component: Designator=R5(RESC402N)
+Added Component: Designator=R6(RESC402N)
+Added Pin To Net: NetName=PHOTON_3V3 Pin=R1-1
+Added Pin To Net: NetName=D0 Pin=R1-2
+Added Pin To Net: NetName=PHOTON_3V3 Pin=R2-1
+Added Pin To Net: NetName=D1 Pin=R2-2
+Added Pin To Net: NetName=PHOTON_GND Pin=R3-2
+Added Pin To Net: NetName=PHOTON_VIN Pin=R4-1
+Added Pin To Net: NetName=NetD2_2 Pin=R4-2
+Added Pin To Net: NetName=VBAT Pin=R5-2
+Added Pin To Net: NetName=PHOTON_GND Pin=R6-2
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=U1-5
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=NetR5_1 Pin=U2-2
+Added Net: Name=NetR5_1
+Added Pin To Net: NetName=NetR6_1 Pin=R6-1
+Added Pin To Net: NetName=NetR6_1 Pin=U2-6
+Added Net: Name=NetR6_1
+Added Member To Class: ClassName=P02_Photon Member=Component R1 10k
+Added Member To Class: ClassName=P02_Photon Member=Component R2 10k
+Added Member To Class: ClassName=P03_Battery Circuit Member=Component R3 2k
+Added Member To Class: ClassName=P03_Battery Circuit Member=Component R4 330R
+Added Member To Class: ClassName=P03_Battery Circuit Member=Component R5 1k
+Added Member To Class: ClassName=P03_Battery Circuit Member=Component R6 1k

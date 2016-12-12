@@ -1,141 +1,3518 @@
-\t (00:00:00) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
-\t (00:00:00)     Journal start - Sat Oct 29 00:30:44 2016
-\t (00:00:00)         Host=MADISON-PC User=Madison Pid=25648 CPUs=4
-\t (00:00:00) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe
-\t (00:00:00) 
-\t (00:00:02) Opening existing design...
-\d (00:00:02) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3_v2.brd
-\i (00:00:02) trapsize 3003
-\i (00:00:02) trapsize 2945
-\i (00:00:02) trapsize 3010
-\i (00:00:02) trapsize 3071
-\i (00:00:03) trapsize 3071
-\i (00:00:03) trapsize 7948
-\i (00:00:03) generaledit 
-\i (00:00:04) trapsize 2952
-\i (00:00:12) artwork 
-\i (00:00:23) setwindow form.film_control
-\i (00:00:23) FORM film_control general_parameters  
-\i (00:00:52) FORM film_control format_int_places 5 
-\i (00:01:55) FORM film_control film_control  
-\i (00:02:12) FORM film_control filmtree  TOP 
-\i (00:02:17) FORM film_control filmtree  BOTTOM 
-\i (00:02:54) FORM film_control ok  
-\i (00:02:54) setwindow pcb
-\i (00:02:54) generaledit 
-\i (00:03:01) nctape_full 
-\w (00:03:01) WARNING(SPMHMF-272): NC Parameters file 'nc_param.txt' not found ... loading defaults.
-\i (00:03:08) setwindow form.nc_drill
-\i (00:03:08) FORM nc_drill parameters  
-\i (00:03:21) setwindow form.nc_parameters
-\i (00:03:21) FORM nc_parameters decimal_places 4 
-\i (00:03:21) FORM nc_parameters enhanced_format YES 
-\i (00:03:31) FORM nc_parameters done  
-\i (00:03:39) setwindow form.nc_drill
-\i (00:03:39) FORM nc_drill auto_tool_select YES 
-\i (00:03:43) FORM nc_drill scale 1.00 
-\i (00:03:43) FORM nc_drill browse  
-\i (00:04:00) fillin "C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 3\Documents\Artwork\V2\SLEEPTRACK2_PHASE3_v2.drl"
-\i (00:04:30) FORM nc_drill execute  
-\t (00:04:30) Starting Generating NC Drill...
-\i (00:04:35) FORM nc_drill close  
+\t (00:00:01) allegro 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Sat Dec 03 14:44:15 2016
+\t (00:00:01)         Host=MADISON-PC User=Madison Pid=22792 CPUs=4
+\t (00:00:01) CmdLine= C:\Cadence\SPB_17.0\tools\bin\allegro.exe C:\Users\Madison\Desktop\gc\Photon_Dev\Projects\Sleeptrack2_Phase 3\Hardware Files\SLEEPTRACK2_PHASE3.brd
+\t (00:00:01) 
+\t (00:00:03) Opening existing design...
+\d (00:00:03) Design opened: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3.brd
+\i (00:00:03) trapsize 1562
+\i (00:00:03) trapsize 1532
+\i (00:00:03) trapsize 1566
+\i (00:00:04) trapsize 1597
+\i (00:00:04) trapsize 1597
+\i (00:00:04) generaledit 
+\i (00:00:04) zoom out 1 
+\i (00:00:04) setwindow pcb
+\i (00:00:04) zoom out 2237.17 -368.38
+\i (00:00:04) trapsize 3194
+\i (00:00:04) zoom out 1 
+\i (00:00:04) setwindow pcb
+\i (00:00:04) zoom out 2563.00 -144.76
+\i (00:00:04) trapsize 6142
+\i (00:00:05) zoom in 1 
+\i (00:00:05) setwindow pcb
+\i (00:00:05) zoom in -992.05 -1375.72
+\i (00:00:05) trapsize 3071
+\i (00:00:06) zoom in 1 
+\i (00:00:06) setwindow pcb
+\i (00:00:06) zoom in -1704.12 -1375.72
+\i (00:00:06) trapsize 1535
+\i (00:00:06) zoom in 1 
+\i (00:00:06) setwindow pcb
+\i (00:00:06) zoom in -1526.01 -1357.30
+\i (00:00:06) trapsize 768
+\i (00:00:07) zoom in 1 
+\i (00:00:07) setwindow pcb
+\i (00:00:07) zoom in -776.73 -1254.42
+\i (00:00:07) trapsize 384
+\i (00:00:07) zoom in 1 
+\i (00:00:07) setwindow pcb
+\i (00:00:07) zoom in -775.96 -1254.42
+\i (00:00:07) trapsize 192
+\i (00:00:07) zoom in 1 
+\i (00:00:07) setwindow pcb
+\i (00:00:07) zoom in -775.96 -1254.42
+\i (00:00:07) trapsize 96
+\i (00:00:07) zoom out 1 
+\i (00:00:07) setwindow pcb
+\i (00:00:07) zoom out -776.35 -1256.53
+\i (00:00:07) trapsize 192
+\i (00:00:07) zoom out 1 
+\i (00:00:07) setwindow pcb
+\i (00:00:07) zoom out -776.34 -1256.92
+\i (00:00:07) trapsize 384
+\i (00:00:11) zoom in 1 
+\i (00:00:11) setwindow pcb
+\i (00:00:11) zoom in -858.49 -1328.31
+\i (00:00:11) trapsize 192
+\i (00:00:11) zoom in 1 
+\i (00:00:11) setwindow pcb
+\i (00:00:11) zoom in -858.49 -1328.30
+\i (00:00:11) trapsize 96
+\i (00:00:11) zoom in 1 
+\i (00:00:11) setwindow pcb
+\i (00:00:11) zoom in -858.48 -1328.30
+\i (00:00:11) trapsize 48
+\i (00:00:14) pick grid -873.46 -1330.31
+\t (00:00:14) last pick:  -873.50 -1330.30
+\i (00:00:14) pick grid -873.46 -1330.31
+\t (00:00:14) last pick:  -873.50 -1330.30
+\i (00:00:14) prepopup -873.36 -1330.21
+\i (00:00:17) pop dyn_option_select 'Modify design padstack@:@All instances' 
+\i (00:00:17) mod padstack 
+\i (00:00:24) generaledit 
+\i (00:00:26) zoom out 1 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom out -820.39 -1328.77
+\i (00:00:26) trapsize 96
+\i (00:00:26) zoom out 1 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom out -820.58 -1328.78
+\i (00:00:26) trapsize 192
+\i (00:00:26) zoom out 1 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom out -820.57 -1328.78
+\i (00:00:26) trapsize 384
+\i (00:00:26) zoom out 1 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom out -821.33 -1328.77
+\i (00:00:26) trapsize 768
+\i (00:00:26) zoom out 1 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom out -1754.92 -1282.71
+\i (00:00:26) trapsize 1535
+\i (00:00:27) zoom out 1 
+\i (00:00:27) setwindow pcb
+\i (00:00:27) zoom out -1847.05 -1344.14
+\i (00:00:27) trapsize 3071
+\i (00:00:27) zoom out 1 
+\i (00:00:27) setwindow pcb
+\i (00:00:27) zoom out -1877.76 -1374.84
+\i (00:00:27) trapsize 6142
+\i (00:00:27) zoom in 1 
+\i (00:00:27) setwindow pcb
+\i (00:00:27) zoom in -451.59 614.16
+\i (00:00:27) trapsize 3071
+\i (00:00:28) zoom in 1 
+\i (00:00:28) setwindow pcb
+\i (00:00:28) zoom in -1317.19 485.19
+\i (00:00:28) trapsize 1535
+\i (00:00:28) zoom in 1 
+\i (00:00:28) setwindow pcb
+\i (00:00:28) zoom in -1314.12 488.27
+\i (00:00:28) trapsize 768
+\i (00:00:29) zoom in 1 
+\i (00:00:29) setwindow pcb
+\i (00:00:29) zoom in -623.19 -46.05
+\i (00:00:29) trapsize 384
+\i (00:00:29) zoom in 1 
+\i (00:00:29) setwindow pcb
+\i (00:00:29) zoom in -627.02 -47.58
+\i (00:00:29) trapsize 192
+\i (00:00:29) zoom in 1 
+\i (00:00:29) setwindow pcb
+\i (00:00:29) zoom in -630.86 -47.96
+\i (00:00:29) trapsize 96
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -648.90 30.15
+\i (00:00:31) trapsize 192
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -648.89 31.30
+\i (00:00:31) trapsize 384
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -648.89 32.84
+\i (00:00:31) trapsize 768
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -648.90 38.98
+\i (00:00:31) trapsize 1535
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -645.83 54.34
+\i (00:00:31) trapsize 3071
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -645.83 60.47
+\i (00:00:31) trapsize 6142
+\i (00:00:32) zoom in 1 
+\i (00:00:32) setwindow pcb
+\i (00:00:32) zoom in 481.93 -1744.22
+\i (00:00:32) trapsize 3071
+\i (00:00:32) zoom in 1 
+\i (00:00:32) setwindow pcb
+\i (00:00:32) zoom in -967.12 -1744.22
+\i (00:00:32) trapsize 1535
+\i (00:00:32) zoom in 1 
+\i (00:00:32) setwindow pcb
+\i (00:00:32) zoom in -967.11 -1744.21
+\i (00:00:32) trapsize 768
+\i (00:00:32) zoom in 1 
+\i (00:00:32) setwindow pcb
+\i (00:00:32) zoom in -974.79 -1744.21
+\i (00:00:32) trapsize 384
+\i (00:00:33) zoom out 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom out -877.29 -1779.52
+\i (00:00:33) trapsize 768
+\i (00:00:33) zoom in 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom in -829.69 -1239.06
+\i (00:00:33) trapsize 384
+\i (00:00:33) zoom in 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom in -828.92 -1239.06
+\i (00:00:33) trapsize 192
+\i (00:00:33) zoom in 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom in -826.62 -1252.11
+\i (00:00:33) trapsize 96
+\i (00:00:36) zoom out 1 
+\i (00:00:36) setwindow pcb
+\i (00:00:36) zoom out -803.01 -1277.25
+\i (00:00:36) trapsize 192
+\i (00:00:36) zoom out 1 
+\i (00:00:36) setwindow pcb
+\i (00:00:36) zoom out -803.01 -1277.24
+\i (00:00:36) trapsize 384
+\i (00:00:36) zoom out 1 
+\i (00:00:36) setwindow pcb
+\i (00:00:36) zoom out -803.01 -1277.25
+\i (00:00:36) trapsize 768
+\i (00:00:36) zoom out 1 
+\i (00:00:36) setwindow pcb
+\i (00:00:36) zoom out -803.01 -1277.25
+\i (00:00:36) trapsize 1535
+\i (00:00:36) zoom out 1 
+\i (00:00:36) setwindow pcb
+\i (00:00:36) zoom out -803.01 -1277.24
+\i (00:00:36) trapsize 3071
+\i (00:02:03) zoom in 1 
+\i (00:02:03) setwindow pcb
+\i (00:02:03) zoom in -1937.93 -1958.95
+\i (00:02:03) trapsize 1535
+\i (00:02:03) zoom in 1 
+\i (00:02:03) setwindow pcb
+\i (00:02:03) zoom in -1937.92 -1958.94
+\i (00:02:03) trapsize 768
+\i (00:02:03) zoom out 1 
+\i (00:02:03) setwindow pcb
+\i (00:02:03) zoom out -1597.07 -2192.32
+\i (00:02:03) trapsize 1535
+\i (00:02:04) zoom out 1 
+\i (00:02:04) setwindow pcb
+\i (00:02:04) zoom out -1676.91 -2401.13
+\i (00:02:04) trapsize 3071
+\i (00:02:04) zoom in 1 
+\i (00:02:04) setwindow pcb
+\i (00:02:04) zoom in -1213.23 -2266.02
+\i (00:02:04) trapsize 1535
+\i (00:02:05) zoom in 1 
+\i (00:02:05) setwindow pcb
+\i (00:02:05) zoom in -1213.22 -2266.01
+\i (00:02:05) trapsize 768
+\i (00:02:05) zoom out 1 
+\i (00:02:05) setwindow pcb
+\i (00:02:05) zoom out -1170.23 -2296.71
+\i (00:02:05) trapsize 1535
+\i (00:02:06) zoom out 1 
+\i (00:02:06) setwindow pcb
+\i (00:02:06) zoom out -1157.94 -2213.81
+\i (00:02:06) trapsize 3071
+\i (00:02:07) zoom in 1 
+\i (00:02:07) setwindow pcb
+\i (00:02:07) zoom in -1403.62 -1679.49
+\i (00:02:07) trapsize 1535
+\i (00:02:07) zoom in 1 
+\i (00:02:07) setwindow pcb
+\i (00:02:07) zoom in -1345.27 -1639.57
+\i (00:02:07) trapsize 768
+\i (00:02:08) zoom in 1 
+\i (00:02:08) setwindow pcb
+\i (00:02:08) zoom in -1345.27 -1639.57
+\i (00:02:08) trapsize 384
+\i (00:02:08) zoom out 1 
+\i (00:02:08) setwindow pcb
+\i (00:02:08) zoom out -1343.73 -1675.65
+\i (00:02:08) trapsize 768
+\i (00:02:09) zoom in 1 
+\i (00:02:09) setwindow pcb
+\i (00:02:09) zoom in -1128.78 -1347.08
+\i (00:02:09) trapsize 384
+\i (00:02:10) zoom in 1 
+\i (00:02:10) setwindow pcb
+\i (00:02:10) zoom in -931.48 -1277.22
+\i (00:02:10) trapsize 192
+\i (00:02:10) zoom in 1 
+\i (00:02:10) setwindow pcb
+\i (00:02:10) zoom in -931.48 -1277.22
+\i (00:02:10) trapsize 96
+\i (00:02:11) zoom out 1 
+\i (00:02:11) setwindow pcb
+\i (00:02:11) zoom out -947.79 -1277.03
+\i (00:02:11) trapsize 192
+\i (00:02:13) zoom in 1 
+\i (00:02:13) setwindow pcb
+\i (00:02:13) zoom in -854.13 -1343.81
+\i (00:02:13) trapsize 96
+\i (00:02:13) zoom in 1 
+\i (00:02:13) setwindow pcb
+\i (00:02:13) zoom in -854.51 -1343.81
+\i (00:02:13) trapsize 48
+\i (00:02:13) zoom in 1 
+\i (00:02:13) setwindow pcb
+\i (00:02:13) zoom in -854.51 -1343.81
+\i (00:02:13) trapsize 24
+\i (00:02:14) zoom out 1 
+\i (00:02:14) setwindow pcb
+\i (00:02:14) zoom out -879.27 -1345.01
+\i (00:02:14) trapsize 48
+\i (00:02:14) zoom out 1 
+\i (00:02:14) setwindow pcb
+\i (00:02:14) zoom out -879.84 -1345.39
+\i (00:02:14) trapsize 96
+\i (00:02:15) zoom out 1 
+\i (00:02:15) setwindow pcb
+\i (00:02:15) zoom out -829.18 -1303.55
+\i (00:02:15) trapsize 192
+\i (00:02:16) zoom out 1 
+\i (00:02:16) setwindow pcb
+\i (00:02:16) zoom out -776.20 -1378.03
+\i (00:02:16) trapsize 384
+\i (00:02:17) zoom out 1 
+\i (00:02:17) setwindow pcb
+\i (00:02:17) zoom out -647.21 -1491.65
+\i (00:02:17) trapsize 768
+\i (00:02:17) zoom in 1 
+\i (00:02:17) setwindow pcb
+\i (00:02:17) zoom in -992.69 -1023.32
+\i (00:02:17) trapsize 384
+\i (00:02:17) zoom in 1 
+\i (00:02:17) setwindow pcb
+\i (00:02:17) zoom in -966.59 -1053.26
+\i (00:02:17) trapsize 192
+\i (00:02:17) zoom in 1 
+\i (00:02:17) setwindow pcb
+\i (00:02:17) zoom in -955.07 -1072.07
+\i (00:02:18) trapsize 96
+\i (00:02:18) zoom in 1 
+\i (00:02:18) setwindow pcb
+\i (00:02:18) zoom in -954.30 -1076.29
+\i (00:02:18) trapsize 48
+\i (00:02:18) zoom out 1 
+\i (00:02:18) setwindow pcb
+\i (00:02:18) zoom out -960.82 -1053.35
+\i (00:02:18) trapsize 96
+\i (00:02:18) zoom out 1 
+\i (00:02:18) setwindow pcb
+\i (00:02:18) zoom out -960.83 -1052.78
+\i (00:02:18) trapsize 192
+\i (00:02:19) zoom in 1 
+\i (00:02:19) setwindow pcb
+\i (00:02:19) zoom in -956.61 -1133.78
+\i (00:02:19) trapsize 96
+\i (00:02:20) zoom out 1 
+\i (00:02:20) setwindow pcb
+\i (00:02:20) zoom out -950.47 -1133.78
+\i (00:02:20) trapsize 192
+\i (00:02:20) zoom out 1 
+\i (00:02:20) setwindow pcb
+\i (00:02:20) zoom out -948.54 -1133.39
+\i (00:02:20) trapsize 384
+\i (00:02:23) save_as 
+\i (00:02:34) fillin "SLEEPTRACK2_PHASE3_IMU.brd"
+\i (00:02:34) generaledit 
+\i (00:02:35) zoom out 1 
+\i (00:02:35) setwindow pcb
+\i (00:02:35) zoom out -878.67 -1141.84
+\i (00:02:35) trapsize 768
+\i (00:02:36) zoom in 1 
+\i (00:02:36) setwindow pcb
+\i (00:02:36) zoom in -528.58 -1405.94
+\i (00:02:36) trapsize 384
+\i (00:02:36) zoom in 1 
+\i (00:02:36) setwindow pcb
+\i (00:02:36) zoom in -699.02 -1374.46
+\i (00:02:36) trapsize 192
+\i (00:02:37) pick grid -606.89 -1383.67
+\t (00:02:37) last pick:  -606.90 -1383.70
+\i (00:02:38) zoom out 1 
+\i (00:02:38) setwindow pcb
+\i (00:02:38) zoom out -845.66 -1302.68
+\i (00:02:38) trapsize 384
+\i (00:02:38) zoom out 1 
+\i (00:02:38) setwindow pcb
+\i (00:02:38) zoom out -836.43 -1294.23
+\i (00:02:38) trapsize 768
+\i (00:02:39) zoom in 1 
+\i (00:02:39) setwindow pcb
+\i (00:02:39) zoom in -841.04 -1412.46
+\i (00:02:39) trapsize 384
+\i (00:02:39) zoom in 1 
+\i (00:02:39) setwindow pcb
+\i (00:02:39) zoom in -841.04 -1412.45
+\i (00:02:39) trapsize 192
+\i (00:02:39) zoom in 1 
+\i (00:02:39) setwindow pcb
+\i (00:02:39) zoom in -841.04 -1412.45
+\i (00:02:39) trapsize 96
+\i (00:02:40) pick grid -774.82 -1445.27
+\t (00:02:40) last pick:  -774.80 -1445.30
+\e (00:02:42) Command not found: Del
+\i (00:02:43) delete 
+\i (00:02:43) generaledit 
+\i (00:02:44) pick grid -788.64 -1406.11
+\t (00:02:44) last pick:  -788.60 -1406.10
+\i (00:02:45) delete 
+\i (00:02:45) generaledit 
+\i (00:02:46) zoom out 1 
+\i (00:02:46) setwindow pcb
+\i (00:02:46) zoom out -795.17 -1453.52
+\i (00:02:46) trapsize 192
+\i (00:02:46) zoom out 1 
+\i (00:02:46) setwindow pcb
+\i (00:02:46) zoom out -791.33 -1458.51
+\i (00:02:46) trapsize 384
+\i (00:02:47) zoom in 1 
+\i (00:02:47) setwindow pcb
+\i (00:02:47) zoom in -746.02 -1370.99
+\i (00:02:47) trapsize 192
+\i (00:02:47) zoom in 1 
+\i (00:02:47) setwindow pcb
+\i (00:02:47) zoom in -746.02 -1370.99
+\i (00:02:47) trapsize 96
+\i (00:02:47) pick grid -793.61 -1364.27
+\t (00:02:47) last pick:  -793.60 -1364.30
+\i (00:02:49) delete 
+\i (00:02:49) generaledit 
+\i (00:02:50) generaledit 
+\i (00:02:51) pick grid -810.50 -1344.69
+\t (00:02:51) last pick:  -810.50 -1344.70
+\i (00:02:53) delete 
+\i (00:02:53) generaledit 
+\i (00:02:54) pick grid -810.12 -1314.56
+\t (00:02:54) last pick:  -810.10 -1314.60
+\i (00:02:55) delete 
+\i (00:02:55) generaledit 
+\i (00:02:56) zoom out 1 
+\i (00:02:56) setwindow pcb
+\i (00:02:56) zoom out -858.68 -1340.47
+\i (00:02:56) trapsize 192
+\i (00:02:56) zoom out 1 
+\i (00:02:56) setwindow pcb
+\i (00:02:56) zoom out -853.31 -1342.00
+\i (00:02:56) trapsize 384
+\i (00:03:04) zoom out 1 
+\i (00:03:04) setwindow pcb
+\i (00:03:04) zoom out -368.08 -1449.48
+\i (00:03:04) trapsize 768
+\i (00:03:05) zoom in 1 
+\i (00:03:05) setwindow pcb
+\i (00:03:05) zoom in -532.38 -1208.41
+\i (00:03:05) trapsize 384
+\i (00:03:05) zoom in 1 
+\i (00:03:05) setwindow pcb
+\i (00:03:05) zoom in -528.54 -1212.24
+\i (00:03:05) trapsize 192
+\i (00:03:05) zoom in 1 
+\i (00:03:05) setwindow pcb
+\i (00:03:05) zoom in -526.63 -1214.16
+\i (00:03:05) trapsize 96
+\i (00:03:05) zoom in 1 
+\i (00:03:05) setwindow pcb
+\i (00:03:05) zoom in -526.05 -1215.12
+\i (00:03:05) trapsize 48
+\i (00:03:05) zoom out 1 
+\i (00:03:05) setwindow pcb
+\i (00:03:05) zoom out -501.48 -1222.13
+\i (00:03:05) trapsize 96
+\i (00:03:05) zoom out 1 
+\i (00:03:05) setwindow pcb
+\i (00:03:05) zoom out -487.66 -1222.51
+\i (00:03:05) trapsize 192
+\i (00:03:05) zoom out 1 
+\i (00:03:05) setwindow pcb
+\i (00:03:05) zoom out -471.53 -1222.50
+\i (00:03:05) trapsize 384
+\i (00:03:06) zoom in 1 
+\i (00:03:06) setwindow pcb
+\i (00:03:06) zoom in -896.86 -1137.28
+\i (00:03:06) trapsize 192
+\i (00:03:06) zoom in 1 
+\i (00:03:06) setwindow pcb
+\i (00:03:06) zoom in -896.86 -1137.28
+\i (00:03:06) trapsize 96
+\i (00:03:06) zoom in 1 
+\i (00:03:06) setwindow pcb
+\i (00:03:06) zoom in -896.86 -1137.28
+\i (00:03:06) trapsize 48
+\i (00:03:06) zoom in 1 
+\i (00:03:06) setwindow pcb
+\i (00:03:06) zoom in -896.85 -1137.28
+\i (00:03:06) trapsize 24
+\i (00:03:06) zoom out 1 
+\i (00:03:06) setwindow pcb
+\i (00:03:06) zoom out -896.85 -1137.28
+\i (00:03:06) trapsize 48
+\i (00:03:06) zoom out 1 
+\i (00:03:06) setwindow pcb
+\i (00:03:06) zoom out -896.85 -1137.47
+\i (00:03:06) trapsize 96
+\i (00:03:06) zoom out 1 
+\i (00:03:06) setwindow pcb
+\i (00:03:06) zoom out -889.18 -1139.19
+\i (00:03:06) trapsize 192
+\i (00:03:07) zoom out 1 
+\i (00:03:07) setwindow pcb
+\i (00:03:07) zoom out -848.49 -1209.06
+\i (00:03:07) trapsize 384
+\i (00:03:09) zoom out 1 
+\i (00:03:09) setwindow pcb
+\i (00:03:09) zoom out -1196.27 -1108.48
+\i (00:03:09) trapsize 768
+\i (00:03:09) zoom out 1 
+\i (00:03:09) setwindow pcb
+\i (00:03:09) zoom out -1197.82 -1108.49
+\i (00:03:09) trapsize 1535
+\i (00:03:09) zoom in 1 
+\i (00:03:09) setwindow pcb
+\i (00:03:09) zoom in -875.36 -1151.48
+\i (00:03:09) trapsize 768
+\i (00:03:10) zoom in 1 
+\i (00:03:10) setwindow pcb
+\i (00:03:10) zoom in -548.30 -1157.62
+\i (00:03:10) trapsize 384
+\i (00:03:11) zoom out 1 
+\i (00:03:11) setwindow pcb
+\i (00:03:11) zoom out -177.48 -1168.36
+\i (00:03:11) trapsize 768
+\i (00:03:11) zoom in 1 
+\i (00:03:11) setwindow pcb
+\i (00:03:11) zoom in -651.94 -1196.00
+\i (00:03:11) trapsize 384
+\i (00:03:12) zoom in 1 
+\i (00:03:12) setwindow pcb
+\i (00:03:12) zoom in -651.17 -1196.00
+\i (00:03:12) trapsize 192
+\i (00:03:12) zoom in 1 
+\i (00:03:12) setwindow pcb
+\i (00:03:12) zoom in -646.95 -1194.08
+\i (00:03:12) trapsize 96
+\i (00:03:13) zoom out 1 
+\i (00:03:13) setwindow pcb
+\i (00:03:13) zoom out -596.28 -1186.78
+\i (00:03:13) trapsize 192
+\i (00:03:14) zoom out 1 
+\i (00:03:14) setwindow pcb
+\i (00:03:14) zoom out -677.27 -1147.64
+\i (00:03:14) trapsize 384
+\i (00:03:14) zoom in 1 
+\i (00:03:14) setwindow pcb
+\i (00:03:14) zoom in -690.32 -1288.89
+\i (00:03:14) trapsize 192
+\i (00:03:14) zoom in 1 
+\i (00:03:14) setwindow pcb
+\i (00:03:14) zoom in -690.32 -1288.89
+\i (00:03:14) trapsize 96
+\i (00:03:15) zoom out 1 
+\i (00:03:15) setwindow pcb
+\i (00:03:15) zoom out -679.38 -1218.64
+\i (00:03:15) trapsize 192
+\i (00:03:16) zoom in 1 
+\i (00:03:16) setwindow pcb
+\i (00:03:16) zoom in -731.20 -1349.91
+\i (00:03:16) trapsize 96
+\i (00:03:17) zoom in 1 
+\i (00:03:17) setwindow pcb
+\i (00:03:17) zoom in -731.20 -1349.91
+\i (00:03:17) trapsize 48
+\i (00:03:17) zoom out 1 
+\i (00:03:17) setwindow pcb
+\i (00:03:17) zoom out -731.20 -1349.90
+\i (00:03:17) trapsize 96
+\i (00:03:19) zoom out 1 
+\i (00:03:19) setwindow pcb
+\i (00:03:19) zoom out -725.82 -1341.46
+\i (00:03:19) trapsize 192
+\i (00:03:20) drag_start grid -635.99 -1431.29
+\i (00:03:21) drag_stop -765.35 -1365.65
+\i (00:03:24) delete 
+\i (00:03:24) generaledit 
+\i (00:03:24) zoom in 1 
+\i (00:03:24) setwindow pcb
+\i (00:03:24) zoom in -790.30 -1339.93
+\i (00:03:24) trapsize 96
+\i (00:03:25) zoom in 1 
+\i (00:03:25) setwindow pcb
+\i (00:03:25) zoom in -790.30 -1339.92
+\i (00:03:25) trapsize 48
+\i (00:03:25) pick grid -790.30 -1339.92
+\t (00:03:25) last pick:  -790.30 -1339.90
+\i (00:03:26) delete 
+\i (00:03:26) generaledit 
+\i (00:03:27) pick grid -789.05 -1319.48
+\t (00:03:27) last pick:  -789.00 -1319.50
+\i (00:03:28) delete 
+\i (00:03:28) generaledit 
+\i (00:03:29) pick grid -770.44 -1337.90
+\t (00:03:29) last pick:  -770.40 -1337.90
+\i (00:03:30) delete 
+\i (00:03:30) generaledit 
+\i (00:03:31) pick grid -771.97 -1314.77
+\t (00:03:31) last pick:  -772.00 -1314.80
+\i (00:03:32) delete 
+\i (00:03:32) generaledit 
+\i (00:03:32) zoom out 1 
+\i (00:03:32) setwindow pcb
+\i (00:03:32) zoom out -826.77 -1323.31
+\i (00:03:32) trapsize 96
+\i (00:03:32) zoom out 1 
+\i (00:03:32) setwindow pcb
+\i (00:03:32) zoom out -826.77 -1323.32
+\i (00:03:32) trapsize 192
+\i (00:03:33) zoom out 1 
+\i (00:03:33) setwindow pcb
+\i (00:03:33) zoom out -511.99 -1409.31
+\i (00:03:33) trapsize 384
+\i (00:03:34) zoom in 1 
+\i (00:03:34) setwindow pcb
+\i (00:03:34) zoom in -1118.50 -1389.34
+\i (00:03:34) trapsize 192
+\i (00:03:35) pick grid -942.68 -1348.26
+\t (00:03:35) last pick:  -942.70 -1348.30
+\i (00:03:36) zoom in 1 
+\i (00:03:36) setwindow pcb
+\i (00:03:36) zoom in -918.50 -1357.09
+\i (00:03:36) trapsize 96
+\i (00:03:36) zoom in 1 
+\i (00:03:36) setwindow pcb
+\i (00:03:36) zoom in -918.50 -1357.09
+\i (00:03:36) trapsize 48
+\i (00:03:37) zoom out 1 
+\i (00:03:37) setwindow pcb
+\i (00:03:37) zoom out -898.44 -1360.92
+\i (00:03:37) trapsize 96
+\i (00:03:37) zoom out 1 
+\i (00:03:37) setwindow pcb
+\i (00:03:37) zoom out -896.72 -1362.08
+\i (00:03:37) trapsize 192
+\i (00:03:38) delete 
+\i (00:03:38) generaledit 
+\i (00:03:39) zoom in 1 
+\i (00:03:39) setwindow pcb
+\i (00:03:39) zoom in -979.25 -1340.97
+\i (00:03:39) trapsize 96
+\i (00:03:39) zoom in 1 
+\i (00:03:39) setwindow pcb
+\i (00:03:39) zoom in -977.71 -1340.77
+\i (00:03:39) trapsize 48
+\i (00:03:39) zoom out 1 
+\i (00:03:39) setwindow pcb
+\i (00:03:39) zoom out -992.39 -1340.96
+\i (00:03:39) trapsize 96
+\i (00:03:39) zoom out 1 
+\i (00:03:39) setwindow pcb
+\i (00:03:39) zoom out -1012.35 -1341.34
+\i (00:03:39) trapsize 192
+\i (00:03:40) zoom in 1 
+\i (00:03:40) setwindow pcb
+\i (00:03:40) zoom in -889.50 -1349.01
+\i (00:03:40) trapsize 96
+\i (00:03:41) zoom out 1 
+\i (00:03:41) setwindow pcb
+\i (00:03:41) zoom out -873.37 -1356.88
+\i (00:03:41) trapsize 192
+\i (00:03:41) zoom out 1 
+\i (00:03:41) setwindow pcb
+\i (00:03:41) zoom out -853.03 -1356.87
+\i (00:03:41) trapsize 384
+\i (00:03:41) zoom in 1 
+\i (00:03:41) setwindow pcb
+\i (00:03:41) zoom in -851.49 -1356.87
+\i (00:03:41) trapsize 192
+\i (00:03:42) pick grid -1107.92 -1288.16
+\t (00:03:42) last pick:  -1107.90 -1288.20
+\i (00:03:43) delete 
+\i (00:03:43) generaledit 
+\i (00:03:43) pick grid -1071.45 -1286.24
+\t (00:03:43) last pick:  -1071.40 -1286.20
+\i (00:03:44) delete 
+\i (00:03:44) generaledit 
+\i (00:03:45) pick grid -1006.58 -1287.78
+\t (00:03:45) last pick:  -1006.60 -1287.80
+\i (00:03:46) delete 
+\i (00:03:46) generaledit 
+\i (00:03:47) pick grid -996.98 -1303.13
+\t (00:03:47) last pick:  -997.00 -1303.10
+\i (00:03:48) undo 
+\i (00:03:48) trapsize 192
+\i (00:03:48) generaledit 
+\i (00:03:49) delete 
+\i (00:03:49) generaledit 
+\i (00:03:50) pick grid -995.06 -1321.17
+\t (00:03:50) last pick:  -995.10 -1321.20
+\i (00:03:51) pick grid -970.88 -1358.41
+\t (00:03:51) last pick:  -970.90 -1358.40
+\i (00:03:53) delete 
+\i (00:03:53) generaledit 
+\i (00:03:54) pick grid -987.77 -1326.16
+\t (00:03:54) last pick:  -987.80 -1326.20
+\i (00:03:55) pick grid -963.97 -1347.66
+\t (00:03:55) last pick:  -964.00 -1347.70
+\i (00:03:57) pick grid -992.38 -1306.20
+\t (00:03:57) last pick:  -992.40 -1306.20
+\i (00:03:58) delete 
+\i (00:03:58) generaledit 
+\i (00:03:59) pick grid -942.09 -1334.22
+\t (00:03:59) last pick:  -942.10 -1334.20
+\i (00:04:00) delete 
+\i (00:04:00) generaledit 
+\i (00:04:00) zoom in 1 
+\i (00:04:00) setwindow pcb
+\i (00:04:00) zoom in -950.53 -1327.70
+\i (00:04:00) trapsize 96
+\i (00:04:00) zoom in 1 
+\i (00:04:00) setwindow pcb
+\i (00:04:00) zoom in -948.61 -1328.85
+\i (00:04:00) trapsize 48
+\i (00:04:01) zoom out 1 
+\i (00:04:01) setwindow pcb
+\i (00:04:01) zoom out -977.40 -1329.23
+\i (00:04:01) trapsize 96
+\i (00:04:02) pick grid -928.07 -1332.88
+\t (00:04:02) last pick:  -928.10 -1332.90
+\i (00:04:03) delete 
+\i (00:04:03) generaledit 
+\i (00:04:04) pick grid -916.94 -1329.04
+\t (00:04:04) last pick:  -916.90 -1329.00
+\i (00:04:05) delete 
+\i (00:04:05) generaledit 
+\i (00:04:06) pick grid -947.65 -1346.69
+\t (00:04:06) last pick:  -947.60 -1346.70
+\i (00:04:08) delete 
+\i (00:04:08) generaledit 
+\i (00:04:08) zoom out 1 
+\i (00:04:08) setwindow pcb
+\i (00:04:08) zoom out -989.68 -1311.76
+\i (00:04:08) trapsize 192
+\i (00:04:09) pick grid -956.67 -1367.81
+\t (00:04:09) last pick:  -956.70 -1367.80
+\i (00:04:10) delete 
+\i (00:04:10) generaledit 
+\i (00:04:10) zoom in 1 
+\i (00:04:10) setwindow pcb
+\i (00:04:10) zoom in -942.08 -1365.12
+\i (00:04:10) trapsize 96
+\i (00:04:11) pick grid -936.32 -1361.67
+\t (00:04:11) last pick:  -936.30 -1361.70
+\i (00:04:12) delete 
+\i (00:04:12) generaledit 
+\i (00:04:13) pick grid -932.68 -1351.69
+\t (00:04:13) last pick:  -932.70 -1351.70
+\i (00:04:14) delete 
+\i (00:04:14) generaledit 
+\i (00:04:15) pick grid -928.07 -1347.08
+\t (00:04:15) last pick:  -928.10 -1347.10
+\i (00:04:16) delete 
+\i (00:04:16) generaledit 
+\i (00:04:16) pick grid -913.48 -1341.90
+\t (00:04:16) last pick:  -913.50 -1341.90
+\i (00:04:17) delete 
+\i (00:04:17) generaledit 
+\i (00:04:18) pick grid -901.39 -1342.28
+\t (00:04:18) last pick:  -901.40 -1342.30
+\i (00:04:19) delete 
+\i (00:04:19) generaledit 
+\i (00:04:20) pick grid -912.14 -1315.41
+\t (00:04:20) last pick:  -912.10 -1315.40
+\i (00:04:22) pick grid -958.20 -1338.44
+\t (00:04:22) last pick:  -958.20 -1338.40
+\i (00:04:22) pick grid -908.30 -1314.45
+\t (00:04:22) last pick:  -908.30 -1314.40
+\i (00:04:23) delete 
+\i (00:04:23) generaledit 
+\i (00:04:24) pick grid -908.11 -1321.36
+\t (00:04:24) last pick:  -908.10 -1321.40
+\i (00:04:25) delete 
+\i (00:04:25) generaledit 
+\i (00:04:26) pick grid -885.85 -1321.74
+\t (00:04:26) last pick:  -885.80 -1321.70
+\i (00:04:28) pick grid -888.53 -1312.15
+\t (00:04:28) last pick:  -888.50 -1312.10
+\i (00:04:30) delete 
+\i (00:04:30) generaledit 
+\i (00:04:31) pick grid -888.15 -1325.20
+\t (00:04:31) last pick:  -888.10 -1325.20
+\i (00:04:32) delete 
+\i (00:04:32) generaledit 
+\i (00:04:33) zoom out 1 
+\i (00:04:33) setwindow pcb
+\i (00:04:33) zoom out -939.78 -1351.69
+\i (00:04:33) trapsize 192
+\i (00:04:34) zoom in 1 
+\i (00:04:34) setwindow pcb
+\i (00:04:34) zoom in -828.46 -1347.46
+\i (00:04:34) trapsize 96
+\i (00:04:34) zoom out 1 
+\i (00:04:34) setwindow pcb
+\i (00:04:34) zoom out -858.78 -1350.33
+\i (00:04:34) trapsize 192
+\i (00:04:34) zoom out 1 
+\i (00:04:34) setwindow pcb
+\i (00:04:34) zoom out -853.41 -1344.58
+\i (00:04:34) trapsize 384
+\i (00:04:36) zoom in 1 
 \i (00:04:36) setwindow pcb
-\i (00:04:36) generaledit 
-\i (00:04:44) ncdrill param 
-\i (00:04:44) generaledit 
-\i (00:04:45) setwindow form.nc_parameters
-\i (00:04:45) FORM nc_parameters cancel  
-\i (00:04:46) setwindow pcb
-\i (00:04:46) artwork 
-\i (00:04:49) setwindow form.film_control
-\i (00:04:49) FORM film_control filmtree  Board_Outline 
-\i (00:05:05) FORM film_control cancel  
-\i (00:05:05) setwindow pcb
-\i (00:05:05) generaledit 
-\i (00:05:21) prmed 
-\i (00:05:25) setwindow form.prmedit
-\i (00:05:25) FORM prmedit shapes  
-\i (00:05:27) FORM prmedit cancel  
-\i (00:05:27) setwindow pcb
-\i (00:05:27) generaledit 
-\i (00:05:27) pick grid -1209.46 -1439.73
-\t (00:05:27) last pick:  -1209.50 -1439.70
-\i (00:05:37) exit 
-\e (00:05:37) Do you want to save the changes you made to SLEEPTRACK2_PHASE3_v2.brd?
-\i (00:05:39) fillin menu_cancel 
-\i (00:05:39) generaledit 
-\i (00:05:43) artwork 
-\i (00:05:45) setwindow form.film_control
-\i (00:05:45) FORM film_control select_all  
-\i (00:05:49) FORM film_control apertures  
-\i (00:05:51) setwindow form.apt_wheels
-\i (00:05:51) FORM apt_wheels add_wheel  
-\i (00:05:52) FORM apt_wheels 2 delete  
-\i (00:05:52) FORM apt_wheels 1 edit  
-\i (00:05:55) setwindow form.apt_stations
-\i (00:05:55) FORM apt_stations auto 'Without Rotation' 
-\i (00:05:56) FORM apt_stations apt_done  
-\i (00:05:57) setwindow form.apt_wheels
-\i (00:05:57) FORM apt_wheels done  
-\t (00:05:57) Saving aperture: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/art_aper.txt
-\i (00:06:01) setwindow form.film_control
-\i (00:06:01) FORM film_control create  
-\t (00:06:01) Checking db records
-\t (00:06:01)     checking for orphans...
-\t (00:06:01)     Checked 100 percent
-\w (00:06:01) Run batch DRC to correctly regenerate DRC errs.
-
-\t (00:06:01) Done dbdoctor.
-\t (00:06:01) Starting Create artwork films...
-\w (00:06:01) WARNING(SPMHGE-269): artwork had warnings, use Viewlog to review the log file.
-\w (00:06:02) Artwork generated with warnings.
-\i (00:06:05) FORM film_control ok  
-\i (00:06:05) setwindow pcb
-\i (00:06:05) generaledit 
-\i (00:07:15) setwindow text
-\i (00:07:15) close 
-\i (12:14:30) setwindow pcb
-\i (12:14:30) zoom out 1 
-\i (12:14:30) setwindow pcb
-\i (12:14:30) zoom out -1522.36 -1410.21
-\i (12:14:30) trapsize 6142
-\i (12:14:30) zoom out 1 
-\i (12:14:30) setwindow pcb
-\i (12:14:30) zoom out 592.49 1596.82
-\i (12:14:30) trapsize 6142
-\i (12:14:30) zoom out 1 
-\i (12:14:30) setwindow pcb
-\i (12:14:30) zoom out 604.77 1572.26
-\i (12:14:30) trapsize 6142
-\i (12:14:31) zoom in 1 
-\i (12:14:31) setwindow pcb
-\i (12:14:31) zoom in 76.59 -2358.38
-\i (12:14:31) trapsize 3071
-\i (12:14:31) zoom in 1 
-\i (12:14:31) setwindow pcb
-\i (12:14:31) zoom in -1550.58 -2358.38
-\i (12:14:31) trapsize 1535
-\i (12:14:31) zoom out 1 
-\i (12:14:31) setwindow pcb
-\i (12:14:31) zoom out -1550.57 -2358.38
-\i (12:14:31) trapsize 3071
-\i (12:14:31) zoom out 1 
-\i (12:14:31) setwindow pcb
-\i (12:14:31) zoom out -1550.58 -2358.37
-\i (12:14:31) trapsize 6142
-\i (12:14:32) zoom in 1 
-\i (12:14:32) setwindow pcb
-\i (12:14:32) zoom in 1083.82 -700.14
-\i (12:14:32) trapsize 3071
-\i (12:14:32) zoom in 1 
-\i (12:14:32) setwindow pcb
-\i (12:14:32) zoom in -1046.96 -700.14
-\i (12:14:32) trapsize 1535
-\i (12:14:32) zoom out 1 
-\i (12:14:32) setwindow pcb
-\i (12:14:32) zoom out -1237.35 -773.83
-\i (12:14:32) trapsize 3071
-\i (12:14:56) exit 
-\e (12:14:56) Do you want to save the changes you made to SLEEPTRACK2_PHASE3_v2.brd?
-\i (12:14:58) fillin yes 
-\t (12:14:58)     Journal end - Sat Oct 29 12:45:42 2016
+\i (00:04:36) zoom in -899.47 -1425.96
+\i (00:04:36) trapsize 192
+\i (00:04:37) zoom out 1 
+\i (00:04:37) setwindow pcb
+\i (00:04:37) zoom out -744.01 -1493.91
+\i (00:04:37) trapsize 384
+\i (00:04:37) zoom in 1 
+\i (00:04:37) setwindow pcb
+\i (00:04:37) zoom in -965.11 -1281.23
+\i (00:04:37) trapsize 192
+\i (00:04:38) zoom in 1 
+\i (00:04:38) setwindow pcb
+\i (00:04:38) zoom in -965.11 -1281.23
+\i (00:04:38) trapsize 96
+\i (00:04:38) zoom in 1 
+\i (00:04:38) setwindow pcb
+\i (00:04:38) zoom in -965.11 -1281.23
+\i (00:04:38) trapsize 48
+\i (00:04:38) zoom out 1 
+\i (00:04:38) setwindow pcb
+\i (00:04:38) zoom out -965.11 -1281.23
+\i (00:04:38) trapsize 96
+\i (00:04:38) zoom out 1 
+\i (00:04:38) setwindow pcb
+\i (00:04:38) zoom out -967.60 -1303.49
+\i (00:04:38) trapsize 192
+\i (00:04:38) zoom out 1 
+\i (00:04:38) setwindow pcb
+\i (00:04:38) zoom out -966.07 -1340.73
+\i (00:04:38) trapsize 384
+\i (00:04:39) zoom in 1 
+\i (00:04:39) setwindow pcb
+\i (00:04:39) zoom in -923.83 -1151.09
+\i (00:04:39) trapsize 192
+\i (00:04:39) zoom in 1 
+\i (00:04:39) setwindow pcb
+\i (00:04:39) zoom in -915.39 -1157.62
+\i (00:04:39) trapsize 96
+\i (00:04:40) zoom out 1 
+\i (00:04:40) setwindow pcb
+\i (00:04:40) zoom out -903.48 -1189.67
+\i (00:04:40) trapsize 192
+\i (00:04:41) pick grid -965.29 -1054.16
+\t (00:04:41) last pick:  -965.30 -1054.20
+\i (00:04:50) delete 
+\i (00:04:50) generaledit 
+\i (00:04:51) pick grid -961.84 -1110.20
+\t (00:04:51) last pick:  -961.80 -1110.20
+\i (00:04:52) delete 
+\i (00:04:52) generaledit 
+\i (00:04:53) pick grid -950.71 -1147.05
+\t (00:04:53) last pick:  -950.70 -1147.00
+\i (00:04:54) delete 
+\i (00:04:54) generaledit 
+\i (00:11:27) zoom out 1 
+\i (00:11:27) setwindow pcb
+\i (00:11:27) zoom out -858.58 -1105.21
+\i (00:11:27) trapsize 384
+\i (00:11:27) zoom out 1 
+\i (00:11:27) setwindow pcb
+\i (00:11:27) zoom out -858.56 -1105.21
+\i (00:11:27) trapsize 768
+\i (00:11:27) zoom out 1 
+\i (00:11:27) setwindow pcb
+\i (00:11:27) zoom out -857.03 -1109.82
+\i (00:11:27) trapsize 1535
+\i (00:11:27) zoom out 1 
+\i (00:11:27) setwindow pcb
+\i (00:11:27) zoom out -810.97 -1131.32
+\i (00:11:27) trapsize 3071
+\i (00:11:28) zoom in 1 
+\i (00:11:28) setwindow pcb
+\i (00:11:28) zoom in -420.58 -1254.15
+\i (00:11:28) trapsize 1535
+\i (00:11:30) drag_start grid 1320.67 -1548.96
+\i (00:11:32) drag_stop -380.66 -775.07
+\i (00:11:35) delete 
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.5 (Bno055_Ps1)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.4 (Bno055_Nboot)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.3 (Bno055_Vdd)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.2 (Bno055_Gnd)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.1 (Bno055_Pin_1)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.10 (Bno055_Pin_10)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.9 (Bno055_Cap)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.8 (Bno055_Pin_8)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.7 (Bno055_Pin_7)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.6 (Bno055_Ps0)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.15 (Bno055_Pin_15)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.14 (Bno055_Int)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.13 (Bno055_Pin_13)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.12 (Bno055_Pin_12)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.11 (Bno055_Nreset)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.2 (Bno055_Gnd)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.3 (Bno055_Vdd)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.4 (Bno055_Nboot)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.5 (Bno055_Ps1)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.20 (Bno055_Com0)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.19 (Bno055_Com1)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.18 (Bno055_Com2)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.17 (Bno055_Com3)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.16 (Bno055_Pin_16)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_1, U6.1:J7.1"
+\t (00:11:35) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_15, U6.15:J7.15"
+\t (00:11:35) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps0, U6.6:J7.6"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.1 (Bno055_Pin_1)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.28 (Bno055_Vddio)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.27 (Bno055_Xin32)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.26 (Bno055_Xout32)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.25 (Bno055_Gndio)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.24 (Bno055_Pin_24)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.23 (Bno055_Pin_23)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.22 (Bno055_Pin_22)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.21 (Bno055_Pin_21)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.20 (Bno055_Com0)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.6 (Bno055_Ps0)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.7 (Bno055_Pin_7)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.8 (Bno055_Pin_8)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.9 (Bno055_Cap)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.10 (Bno055_Pin_10)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.11 (Bno055_Nreset)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.12 (Bno055_Pin_12)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.13 (Bno055_Pin_13)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.14 (Bno055_Int)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.15 (Bno055_Pin_15)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.19 (Bno055_Com1)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.18 (Bno055_Com2)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.17 (Bno055_Com3)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "U6.16 (Bno055_Pin_16)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Drc Error "Top, Minimum Neck Width"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.25 (Bno055_Gndio)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.24 (Bno055_Pin_24)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.23 (Bno055_Pin_23)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.22 (Bno055_Pin_22)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.21 (Bno055_Pin_21)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.29 (Dummy Net)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.28 (Bno055_Vddio)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.27 (Bno055_Xin32)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.26 (Bno055_Xout32)"
+\t (00:11:35) Selected item not valid for current operation, ignored: Pin "J7.30 (Dummy Net)"
+\i (00:11:35) generaledit 
+\i (00:11:36) drag_start grid 1299.17 -1548.96
+\i (00:11:37) drag_stop -319.24 -919.41
+\i (00:11:38) delete 
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gnd, U6.2:J7.2"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nboot, U6.4:J7.4"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_1, U6.1:J7.1"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps1, U6.5:J7.5"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vdd, U6.3:J7.3"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.5 (Bno055_Ps1)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.4 (Bno055_Nboot)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.3 (Bno055_Vdd)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.2 (Bno055_Gnd)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.1 (Bno055_Pin_1)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_10, U6.10:J7.10"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Cap, U6.9:J7.9"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_8, U6.8:J7.8"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_7, U6.7:J7.7"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps0, U6.6:J7.6"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.10 (Bno055_Pin_10)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.9 (Bno055_Cap)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.8 (Bno055_Pin_8)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.7 (Bno055_Pin_7)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Pin "J7.6 (Bno055_Ps0)"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nreset, U6.11:J7.11"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_13, U6.13:J7.13"
+\t (00:11:38) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Int, U6.14:J7.14"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_12, U6.12:J7.12"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.15 (Bno055_Pin_15)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.14 (Bno055_Int)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.13 (Bno055_Pin_13)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.12 (Bno055_Pin_12)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.11 (Bno055_Nreset)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.2 (Bno055_Gnd)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.3 (Bno055_Vdd)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.4 (Bno055_Nboot)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.5 (Bno055_Ps1)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com0, U6.20:J7.20"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_16, U6.16:J7.16"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com2, U6.18:J7.18"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com3, U6.17:J7.17"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_15, U6.15:J7.15"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com1, U6.19:J7.19"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.20 (Bno055_Com0)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.19 (Bno055_Com1)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.18 (Bno055_Com2)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.17 (Bno055_Com3)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.16 (Bno055_Pin_16)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_23, U6.23:J7.23"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xout32, U6.26:J7.26"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vddio, U6.28:J7.28"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_24, U6.24:J7.24"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_21, U6.21:J7.21"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_22, U6.22:J7.22"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gndio, U6.25:J7.25"
+\t (00:11:39) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xin32, U6.27:J7.27"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.1 (Bno055_Pin_1)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.28 (Bno055_Vddio)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.27 (Bno055_Xin32)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.26 (Bno055_Xout32)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.25 (Bno055_Gndio)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.24 (Bno055_Pin_24)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.23 (Bno055_Pin_23)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.22 (Bno055_Pin_22)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.21 (Bno055_Pin_21)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.20 (Bno055_Com0)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.6 (Bno055_Ps0)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.7 (Bno055_Pin_7)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.8 (Bno055_Pin_8)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.9 (Bno055_Cap)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.10 (Bno055_Pin_10)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.11 (Bno055_Nreset)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.12 (Bno055_Pin_12)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.13 (Bno055_Pin_13)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.14 (Bno055_Int)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.15 (Bno055_Pin_15)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.19 (Bno055_Com1)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.18 (Bno055_Com2)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.17 (Bno055_Com3)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "U6.16 (Bno055_Pin_16)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.25 (Bno055_Gndio)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.24 (Bno055_Pin_24)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.23 (Bno055_Pin_23)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.22 (Bno055_Pin_22)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.21 (Bno055_Pin_21)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.29 (Dummy Net)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.28 (Bno055_Vddio)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.27 (Bno055_Xin32)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.26 (Bno055_Xout32)"
+\t (00:11:39) Selected item not valid for current operation, ignored: Pin "J7.30 (Dummy Net)"
+\t (00:11:39) No valid items selected for the current operation, exiting.
+\i (00:11:39) generaledit 
+\i (00:11:39) pick grid 485.36 -1125.16
+\t (00:11:39) last pick:  485.40 -1125.20
+\i (00:11:40) prepopup 473.07 -1100.60
+\i (00:11:40) pick grid 347.16 -907.12
+\t (00:11:40) last pick:  347.20 -907.10
+\i (00:11:41) drag_start grid 251.96 -934.76
+\i (00:11:41) drag_stop 887.66 -1198.87
+\i (00:11:43) generaledit 
+\i (00:11:45) delete 
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gnd, U6.2:J7.2"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_10, U6.10:J7.10"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nboot, U6.4:J7.4"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Cap, U6.9:J7.9"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nreset, U6.11:J7.11"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_8, U6.8:J7.8"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_1, U6.1:J7.1"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_7, U6.7:J7.7"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps0, U6.6:J7.6"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_12, U6.12:J7.12"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps1, U6.5:J7.5"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vdd, U6.3:J7.3"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.2 (Bno055_Gnd)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.3 (Bno055_Vdd)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.4 (Bno055_Nboot)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.5 (Bno055_Ps1)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_23, U6.23:J7.23"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_13, U6.13:J7.13"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com0, U6.20:J7.20"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Int, U6.14:J7.14"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_16, U6.16:J7.16"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com2, U6.18:J7.18"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xout32, U6.26:J7.26"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vddio, U6.28:J7.28"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_24, U6.24:J7.24"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_21, U6.21:J7.21"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com3, U6.17:J7.17"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_15, U6.15:J7.15"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com1, U6.19:J7.19"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_22, U6.22:J7.22"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gndio, U6.25:J7.25"
+\t (00:11:45) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xin32, U6.27:J7.27"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.1 (Bno055_Pin_1)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.28 (Bno055_Vddio)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.27 (Bno055_Xin32)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.26 (Bno055_Xout32)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.25 (Bno055_Gndio)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.24 (Bno055_Pin_24)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.23 (Bno055_Pin_23)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.22 (Bno055_Pin_22)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.21 (Bno055_Pin_21)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.20 (Bno055_Com0)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.6 (Bno055_Ps0)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.7 (Bno055_Pin_7)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.8 (Bno055_Pin_8)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.9 (Bno055_Cap)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.10 (Bno055_Pin_10)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.11 (Bno055_Nreset)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.12 (Bno055_Pin_12)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.13 (Bno055_Pin_13)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.14 (Bno055_Int)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.15 (Bno055_Pin_15)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.19 (Bno055_Com1)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.18 (Bno055_Com2)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.17 (Bno055_Com3)"
+\t (00:11:45) Selected item not valid for current operation, ignored: Pin "U6.16 (Bno055_Pin_16)"
+\t (00:11:45) No valid items selected for the current operation, exiting.
+\i (00:11:46) generaledit 
+\i (00:11:46) prepopup 500.71 -1085.24
+\i (00:11:50) etchedit 
+\i (00:11:51) placementedit 
+\i (00:11:52) prepopup 509.93 -1094.46
+\i (00:11:53) pick grid 509.93 -1076.03
+\t (00:11:53) last pick:  509.90 -1076.00
+\i (00:11:54) pick grid 423.94 -1094.46
+\t (00:11:54) last pick:  423.90 -1094.50
+\i (00:11:55) zoom in 1 
+\i (00:11:55) setwindow pcb
+\i (00:11:55) zoom in 614.34 -1306.35
+\i (00:11:55) trapsize 768
+\i (00:11:56) zoom in 1 
+\i (00:11:56) setwindow pcb
+\i (00:11:56) zoom in 614.34 -1306.35
+\i (00:11:56) trapsize 384
+\i (00:11:56) zoom in 1 
+\i (00:11:56) setwindow pcb
+\i (00:11:56) zoom in 614.35 -1306.35
+\i (00:11:56) trapsize 192
+\i (00:11:56) zoom out 1 
+\i (00:11:56) setwindow pcb
+\i (00:11:56) zoom out 574.81 -1305.19
+\i (00:11:56) trapsize 384
+\i (00:11:56) zoom out 1 
+\i (00:11:56) setwindow pcb
+\i (00:11:56) zoom out 574.81 -1305.19
+\i (00:11:56) trapsize 768
+\i (00:11:56) zoom out 1 
+\i (00:11:56) setwindow pcb
+\i (00:11:56) zoom out 568.67 -1319.01
+\i (00:11:56) trapsize 1535
+\i (00:11:56) zoom in 1 
+\i (00:11:56) setwindow pcb
+\i (00:11:56) zoom in 547.17 -1070.27
+\i (00:11:56) trapsize 768
+\i (00:11:56) zoom in 1 
+\i (00:11:56) setwindow pcb
+\i (00:11:56) zoom in 547.17 -1070.27
+\i (00:11:56) trapsize 384
+\i (00:11:56) zoom in 1 
+\i (00:11:56) setwindow pcb
+\i (00:11:56) zoom in 547.17 -1070.26
+\i (00:11:56) trapsize 192
+\i (00:11:57) zoom in 1 
+\i (00:11:57) setwindow pcb
+\i (00:11:57) zoom in 547.17 -1075.25
+\i (00:11:57) trapsize 96
+\i (00:11:57) zoom out 1 
+\i (00:11:57) setwindow pcb
+\i (00:11:57) zoom out 454.85 -1092.72
+\i (00:11:57) trapsize 192
+\i (00:11:58) pick grid 439.11 -1101.93
+\t (00:11:58) last pick:  439.10 -1101.90
+\i (00:12:01) pick grid 432.20 -1098.47
+\t (00:12:01) last pick:  432.20 -1098.50
+\i (00:12:01) move 
+\t (00:12:01) last pick:  515.90 -1108.30
+\t (00:12:01) Moving U6 / BNO055_BNO055_BNO055 / BNO055.
+\t (00:12:01) Pick new location for the element(s).
+\i (00:12:02) prepopup 534.31 -1109.22
+\i (00:12:03) done 
+\i (00:12:03) placementedit 
+\i (00:12:04) prepopup 507.83 -1109.99
+\i (00:12:04) pick grid 508.98 -1100.01
+\t (00:12:04) last pick:  509.00 -1100.00
+\i (00:12:05) prepopup 410.71 -1106.15
+\i (00:12:06) pick grid 510.51 -1106.15
+\t (00:12:06) last pick:  510.50 -1106.10
+\i (00:12:07) zoom out 1 
+\i (00:12:07) setwindow pcb
+\i (00:12:07) zoom out 537.38 -1117.28
+\i (00:12:07) trapsize 384
+\i (00:12:07) zoom out 1 
+\i (00:12:07) setwindow pcb
+\i (00:12:07) zoom out 548.91 -1122.66
+\i (00:12:07) trapsize 768
+\i (00:12:07) drag_start grid 240.28 -930.72
+\i (00:12:08) drag_stop 832.98 -1250.11
+\i (00:12:09) prepopup 530.48 -1177.94
+\i (00:12:21) delete 
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_1, U6.1:J7.1"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps0, U6.6:J7.6"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_7, U6.7:J7.7"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_8, U6.8:J7.8"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Cap, U6.9:J7.9"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_10, U6.10:J7.10"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nreset, U6.11:J7.11"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_12, U6.12:J7.12"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.2 (Bno055_Gnd)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gnd, U6.2:J7.2"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.3 (Bno055_Vdd)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vdd, U6.3:J7.3"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.4 (Bno055_Nboot)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nboot, U6.4:J7.4"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.5 (Bno055_Ps1)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps1, U6.5:J7.5"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.1 (Bno055_Pin_1)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.28 (Bno055_Vddio)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vddio, U6.28:J7.28"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.27 (Bno055_Xin32)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xin32, U6.27:J7.27"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.26 (Bno055_Xout32)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xout32, U6.26:J7.26"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.25 (Bno055_Gndio)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gndio, U6.25:J7.25"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.24 (Bno055_Pin_24)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_24, U6.24:J7.24"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.23 (Bno055_Pin_23)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_23, U6.23:J7.23"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.22 (Bno055_Pin_22)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_22, U6.22:J7.22"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.21 (Bno055_Pin_21)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_21, U6.21:J7.21"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.20 (Bno055_Com0)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com0, U6.20:J7.20"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.6 (Bno055_Ps0)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.7 (Bno055_Pin_7)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.8 (Bno055_Pin_8)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.9 (Bno055_Cap)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.10 (Bno055_Pin_10)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.11 (Bno055_Nreset)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.12 (Bno055_Pin_12)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.13 (Bno055_Pin_13)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_13, U6.13:J7.13"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.14 (Bno055_Int)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Int, U6.14:J7.14"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.15 (Bno055_Pin_15)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_15, U6.15:J7.15"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.19 (Bno055_Com1)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com1, U6.19:J7.19"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.18 (Bno055_Com2)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com2, U6.18:J7.18"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.17 (Bno055_Com3)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com3, U6.17:J7.17"
+\t (00:12:21) Selected item not valid for current operation, ignored: Pin "U6.16 (Bno055_Pin_16)"
+\t (00:12:21) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_16, U6.16:J7.16"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) Selected item not valid for current operation, ignored: Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:21) No valid items selected for the current operation, exiting.
+\i (00:12:21) placementedit 
+\i (00:12:22) pick grid 484.42 -1116.52
+\t (00:12:22) last pick:  484.40 -1116.50
+\i (00:12:23) drag_start grid 284.80 -996.75
+\i (00:12:24) drag_stop 796.12 -1188.69
+\i (00:12:25) waive drc 
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_1, U6.1:J7.1"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps0, U6.6:J7.6"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_7, U6.7:J7.7"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_8, U6.8:J7.8"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Cap, U6.9:J7.9"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_10, U6.10:J7.10"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nreset, U6.11:J7.11"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_12, U6.12:J7.12"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.2 (Bno055_Gnd)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gnd, U6.2:J7.2"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.3 (Bno055_Vdd)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vdd, U6.3:J7.3"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.4 (Bno055_Nboot)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nboot, U6.4:J7.4"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.5 (Bno055_Ps1)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps1, U6.5:J7.5"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.1 (Bno055_Pin_1)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.28 (Bno055_Vddio)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vddio, U6.28:J7.28"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.27 (Bno055_Xin32)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xin32, U6.27:J7.27"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.26 (Bno055_Xout32)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xout32, U6.26:J7.26"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.25 (Bno055_Gndio)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gndio, U6.25:J7.25"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.24 (Bno055_Pin_24)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_24, U6.24:J7.24"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.23 (Bno055_Pin_23)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_23, U6.23:J7.23"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.22 (Bno055_Pin_22)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_22, U6.22:J7.22"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.21 (Bno055_Pin_21)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_21, U6.21:J7.21"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.20 (Bno055_Com0)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com0, U6.20:J7.20"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.6 (Bno055_Ps0)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.7 (Bno055_Pin_7)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.8 (Bno055_Pin_8)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.9 (Bno055_Cap)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.10 (Bno055_Pin_10)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.11 (Bno055_Nreset)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.12 (Bno055_Pin_12)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.13 (Bno055_Pin_13)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_13, U6.13:J7.13"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.14 (Bno055_Int)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Int, U6.14:J7.14"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.15 (Bno055_Pin_15)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_15, U6.15:J7.15"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.19 (Bno055_Com1)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com1, U6.19:J7.19"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.18 (Bno055_Com2)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com2, U6.18:J7.18"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.17 (Bno055_Com3)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com3, U6.17:J7.17"
+\t (00:12:25) Selected item not valid for current operation, ignored: Pin "U6.16 (Bno055_Pin_16)"
+\t (00:12:25) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_16, U6.16:J7.16"
+\i (00:12:28) setwindow form.waivedrc_comment
+\i (00:12:28) FORM waivedrc_comment done  
+\i (00:12:28) setwindow pcb
+\i (00:12:28) placementedit 
+\i (00:12:29) prepopup 548.91 -1090.42
+\i (00:12:32) delete 
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_1, U6.1:J7.1"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps0, U6.6:J7.6"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_7, U6.7:J7.7"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_8, U6.8:J7.8"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Cap, U6.9:J7.9"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_10, U6.10:J7.10"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nreset, U6.11:J7.11"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_12, U6.12:J7.12"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.2 (Bno055_Gnd)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gnd, U6.2:J7.2"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.3 (Bno055_Vdd)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vdd, U6.3:J7.3"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.4 (Bno055_Nboot)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nboot, U6.4:J7.4"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.5 (Bno055_Ps1)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps1, U6.5:J7.5"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.1 (Bno055_Pin_1)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.28 (Bno055_Vddio)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vddio, U6.28:J7.28"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.27 (Bno055_Xin32)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xin32, U6.27:J7.27"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.26 (Bno055_Xout32)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xout32, U6.26:J7.26"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.25 (Bno055_Gndio)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gndio, U6.25:J7.25"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.24 (Bno055_Pin_24)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_24, U6.24:J7.24"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.23 (Bno055_Pin_23)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_23, U6.23:J7.23"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.22 (Bno055_Pin_22)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_22, U6.22:J7.22"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.21 (Bno055_Pin_21)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_21, U6.21:J7.21"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.20 (Bno055_Com0)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com0, U6.20:J7.20"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.6 (Bno055_Ps0)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.7 (Bno055_Pin_7)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.8 (Bno055_Pin_8)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.9 (Bno055_Cap)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.10 (Bno055_Pin_10)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.11 (Bno055_Nreset)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.12 (Bno055_Pin_12)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.13 (Bno055_Pin_13)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_13, U6.13:J7.13"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.14 (Bno055_Int)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Int, U6.14:J7.14"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.15 (Bno055_Pin_15)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_15, U6.15:J7.15"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.19 (Bno055_Com1)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com1, U6.19:J7.19"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.18 (Bno055_Com2)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com2, U6.18:J7.18"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.17 (Bno055_Com3)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com3, U6.17:J7.17"
+\t (00:12:32) Selected item not valid for current operation, ignored: Pin "U6.16 (Bno055_Pin_16)"
+\t (00:12:32) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_16, U6.16:J7.16"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) Selected item not valid for current operation, ignored: Waived Drc Error "Top, Smd Pin To Smd Pin Spacing"
+\t (00:12:32) No valid items selected for the current operation, exiting.
+\i (00:12:32) placementedit 
+\i (00:12:33) pick grid 449.10 -1005.96
+\t (00:12:33) last pick:  449.10 -1006.00
+\i (00:12:34) pick grid 447.57 -1025.92
+\t (00:12:34) last pick:  447.60 -1025.90
+\i (00:12:34) move 
+\t (00:12:34) last pick:  515.90 -1108.30
+\t (00:12:34) Moving U6 / BNO055_BNO055_BNO055 / BNO055.
+\t (00:12:34) Pick new location for the element(s).
+\i (00:12:35) delete 
+\t (00:12:35) Selected item not valid for current operation, ignored: Symbol "U6"
+\t (00:12:35) No valid items selected for the current operation, exiting.
+\i (00:12:35) placementedit 
+\i (00:12:37) delete 
+\t (00:12:37) Selected item not valid for current operation, ignored: Symbol "U6"
+\t (00:12:37) No valid items selected for the current operation, exiting.
+\i (00:12:37) placementedit 
+\i (00:12:38) drag_start grid 218.78 -967.58
+\i (00:12:39) drag_stop 911.29 -1314.60
+\i (00:12:39) prepopup 450.64 -1113.45
+\i (00:12:41) pick grid 393.82 -1098.09
+\t (00:12:41) last pick:  393.80 -1098.10
+\i (00:12:42) drag_start grid 214.17 -947.61
+\i (00:12:43) drag_stop 931.25 -1248.57
+\i (00:12:44) placementedit 
+\i (00:12:45) prepopup 459.85 -1052.03
+\i (00:12:48) pick grid 971.17 -989.07
+\t (00:12:48) last pick:  971.20 -989.10
+\i (00:12:48) zoom out 1 
+\i (00:12:48) setwindow pcb
+\i (00:12:48) zoom out 1101.69 -1082.74
+\i (00:12:48) trapsize 1535
+\i (00:12:48) zoom out 1 
+\i (00:12:48) setwindow pcb
+\i (00:12:48) zoom out 1144.68 -1110.38
+\i (00:12:48) trapsize 3071
+\i (00:12:49) zoom out 1 
+\i (00:12:49) setwindow pcb
+\i (00:12:49) zoom out 1845.81 -1153.36
+\i (00:12:49) trapsize 6142
+\i (00:12:50) zoom in 1 
+\i (00:12:50) setwindow pcb
+\i (00:12:50) zoom in -1286.85 -1731.94
+\i (00:12:50) trapsize 3071
+\i (00:12:50) zoom in 1 
+\i (00:12:50) setwindow pcb
+\i (00:12:50) zoom in -1679.55 -1701.23
+\i (00:12:50) trapsize 1535
+\i (00:12:51) zoom in 1 
+\i (00:12:51) setwindow pcb
+\i (00:12:51) zoom in -1673.41 -1701.23
+\i (00:12:51) trapsize 768
+\i (00:12:51) zoom out 1 
+\i (00:12:51) setwindow pcb
+\i (00:12:51) zoom out -1295.70 -1799.49
+\i (00:12:51) trapsize 1535
+\i (00:12:52) zoom in 1 
+\i (00:12:52) setwindow pcb
+\i (00:12:52) zoom in -960.97 -1262.10
+\i (00:12:52) trapsize 768
+\i (00:12:52) zoom in 1 
+\i (00:12:52) setwindow pcb
+\i (00:12:52) zoom in -916.44 -1260.56
+\i (00:12:52) trapsize 384
+\i (00:12:53) zoom out 1 
+\i (00:12:53) setwindow pcb
+\i (00:12:53) zoom out -939.47 -1378.79
+\i (00:12:53) trapsize 768
+\i (00:12:53) zoom out 1 
+\i (00:12:53) setwindow pcb
+\i (00:12:53) zoom out -947.15 -1432.52
+\i (00:12:53) trapsize 1535
+\i (00:12:53) zoom out 1 
+\i (00:12:53) setwindow pcb
+\i (00:12:53) zoom out -950.21 -1469.37
+\i (00:12:53) trapsize 3071
+\i (00:12:54) zoom in 1 
+\i (00:12:54) setwindow pcb
+\i (00:12:54) zoom in -673.85 -1358.82
+\i (00:12:54) trapsize 1535
+\i (00:12:54) zoom in 1 
+\i (00:12:54) setwindow pcb
+\i (00:12:54) zoom in -673.85 -1358.82
+\i (00:12:54) trapsize 768
+\i (00:12:54) zoom in 1 
+\i (00:12:54) setwindow pcb
+\i (00:12:54) zoom in -673.85 -1358.82
+\i (00:12:54) trapsize 384
+\i (00:12:54) zoom in 1 
+\i (00:12:54) setwindow pcb
+\i (00:12:54) zoom in -699.95 -1331.95
+\i (00:12:54) trapsize 192
+\i (00:12:55) zoom in 1 
+\i (00:12:55) setwindow pcb
+\i (00:12:55) zoom in -699.95 -1331.57
+\i (00:12:55) trapsize 96
+\i (00:12:55) zoom in 1 
+\i (00:12:55) setwindow pcb
+\i (00:12:55) zoom in -696.69 -1331.76
+\i (00:12:55) trapsize 48
+\i (00:12:55) zoom out 1 
+\i (00:12:55) setwindow pcb
+\i (00:12:55) zoom out -687.38 -1333.00
+\i (00:12:55) trapsize 96
+\i (00:12:55) zoom out 1 
+\i (00:12:55) setwindow pcb
+\i (00:12:55) zoom out -680.28 -1336.26
+\i (00:12:55) trapsize 192
+\i (00:12:55) zoom out 1 
+\i (00:12:55) setwindow pcb
+\i (00:12:55) zoom out -668.77 -1344.32
+\i (00:12:55) trapsize 384
+\i (00:12:56) zoom in 1 
+\i (00:12:56) setwindow pcb
+\i (00:12:56) zoom in -701.00 -1176.19
+\i (00:12:56) trapsize 192
+\i (00:12:57) zoom in 1 
+\i (00:12:57) setwindow pcb
+\i (00:12:57) zoom in -760.88 -1143.94
+\i (00:12:57) trapsize 96
+\i (00:12:57) zoom out 1 
+\i (00:12:57) setwindow pcb
+\i (00:12:57) zoom out -720.57 -1183.09
+\i (00:12:57) trapsize 192
+\i (00:12:58) generaledit 
+\i (00:13:00) pick grid -824.60 -1143.55
+\t (00:13:00) last pick:  -824.60 -1143.50
+\i (00:13:01) pick grid -829.59 -1154.30
+\t (00:13:01) last pick:  -829.60 -1154.30
+\i (00:13:03) delete 
+\i (00:13:03) generaledit 
+\i (00:13:04) pick grid -826.90 -1143.94
+\t (00:13:04) last pick:  -826.90 -1143.90
+\i (00:13:05) zoom in 1 
+\i (00:13:05) setwindow pcb
+\i (00:13:05) zoom in -823.45 -1190.00
+\i (00:13:05) trapsize 96
+\i (00:13:05) zoom in 1 
+\i (00:13:05) setwindow pcb
+\i (00:13:05) zoom in -823.45 -1190.00
+\i (00:13:05) trapsize 48
+\i (00:13:07) pick grid -829.59 -1150.45
+\t (00:13:07) last pick:  -829.60 -1150.40
+\i (00:13:08) zoom out 1 
+\i (00:13:08) setwindow pcb
+\i (00:13:08) zoom out -813.85 -1180.49
+\i (00:13:08) trapsize 96
+\i (00:13:08) zoom out 1 
+\i (00:13:08) setwindow pcb
+\i (00:13:08) zoom out -815.58 -1181.26
+\i (00:13:08) trapsize 192
+\i (00:13:09) zoom out 1 
+\i (00:13:09) setwindow pcb
+\i (00:13:09) zoom out -827.87 -1112.55
+\i (00:13:09) trapsize 384
+\i (00:13:10) drag_start grid -855.50 -994.31
+\i (00:13:11) drag_stop -800.22 -1054.97
+\i (00:13:12) delete 
+\i (00:13:12) generaledit 
+\i (00:13:13) pick grid -811.74 -1063.41
+\t (00:13:13) last pick:  -811.70 -1063.40
+\i (00:13:15) delete 
+\i (00:13:15) generaledit 
+\i (00:13:15) zoom in 1 
+\i (00:13:15) setwindow pcb
+\i (00:13:15) zoom in -829.40 -1117.92
+\i (00:13:15) trapsize 192
+\i (00:13:15) zoom in 1 
+\i (00:13:15) setwindow pcb
+\i (00:13:15) zoom in -824.79 -1123.68
+\i (00:13:15) trapsize 96
+\i (00:13:16) pick grid -819.22 -1130.40
+\t (00:13:16) last pick:  -819.20 -1130.40
+\i (00:13:17) delete 
+\i (00:13:17) generaledit 
+\i (00:13:17) pick grid -830.35 -1140.38
+\t (00:13:17) last pick:  -830.30 -1140.40
+\i (00:13:18) delete 
+\i (00:13:18) generaledit 
+\i (00:13:19) pick grid -829.20 -1148.82
+\t (00:13:19) last pick:  -829.20 -1148.80
+\i (00:13:20) pick grid -825.74 -1143.45
+\t (00:13:20) last pick:  -825.70 -1143.40
+\i (00:13:21) delete 
+\i (00:13:21) generaledit 
+\i (00:13:22) zoom out 1 
+\i (00:13:22) setwindow pcb
+\i (00:13:22) zoom out -811.93 -1148.05
+\i (00:13:22) trapsize 192
+\i (00:13:23) zoom in 1 
+\i (00:13:23) setwindow pcb
+\i (00:13:23) zoom in -926.70 -1143.83
+\i (00:13:23) trapsize 96
+\i (00:13:24) zoom out 1 
+\i (00:13:24) setwindow pcb
+\i (00:13:24) zoom out -911.92 -1139.80
+\i (00:13:24) trapsize 192
+\i (00:13:25) drag_start grid -805.19 -1051.51
+\i (00:13:26) drag_stop -769.88 -1101.42
+\i (00:13:27) pick grid -820.93 -1044.22
+\t (00:13:27) last pick:  -820.90 -1044.20
+\i (00:13:28) pick grid -785.62 -1080.30
+\t (00:13:28) last pick:  -785.60 -1080.30
+\i (00:13:29) delete 
+\i (00:13:29) generaledit 
+\i (00:13:30) drag_start grid -802.89 -1074.16
+\i (00:13:31) drag_stop -773.33 -1122.91
+\i (00:13:32) delete 
+\i (00:13:32) generaledit 
+\i (00:13:33) zoom in 1 
+\i (00:13:33) setwindow pcb
+\i (00:13:33) zoom in -820.17 -1153.62
+\i (00:13:33) trapsize 96
+\i (00:13:35) pick grid -808.84 -1160.91
+\t (00:13:35) last pick:  -808.80 -1160.90
+\i (00:13:36) pick grid -805.77 -1129.63
+\t (00:13:36) last pick:  -805.80 -1129.60
+\i (00:13:37) pick grid -809.41 -1149.97
+\t (00:13:37) last pick:  -809.40 -1150.00
+\i (00:13:38) delete 
+\i (00:13:38) generaledit 
+\i (00:13:39) pick grid -807.69 -1155.54
+\t (00:13:39) last pick:  -807.70 -1155.50
+\i (00:13:40) delete 
+\i (00:13:41) generaledit 
+\i (00:13:41) zoom out 1 
+\i (00:13:41) setwindow pcb
+\i (00:13:41) zoom out -909.99 -1139.61
+\i (00:13:41) trapsize 192
+\i (00:13:41) zoom in 1 
+\i (00:13:41) setwindow pcb
+\i (00:13:41) zoom in -799.05 -1189.51
+\i (00:13:41) trapsize 96
+\i (00:13:43) pick grid -807.11 -1178.76
+\t (00:13:43) last pick:  -807.10 -1178.80
+\i (00:13:44) pick grid -816.90 -1133.85
+\t (00:13:44) last pick:  -816.90 -1133.80
+\i (00:13:47) pick grid -848.57 -1190.28
+\t (00:13:47) last pick:  -848.60 -1190.30
+\i (00:13:48) delete 
+\i (00:13:48) generaledit 
+\i (00:13:52) pick grid -869.49 -1190.09
+\t (00:13:52) last pick:  -869.50 -1190.10
+\i (00:13:53) delete 
+\i (00:13:53) generaledit 
+\i (00:13:55) pick grid -886.57 -1189.70
+\t (00:13:55) last pick:  -886.60 -1189.70
+\i (00:13:57) delete 
+\i (00:13:57) generaledit 
+\i (00:13:58) pick grid -907.88 -1190.47
+\t (00:13:58) last pick:  -907.90 -1190.50
+\i (00:13:59) delete 
+\i (00:13:59) generaledit 
+\i (00:14:02) pick grid -888.49 -1188.94
+\t (00:14:02) last pick:  -888.50 -1188.90
+\i (00:14:04) delete 
+\i (00:14:04) generaledit 
+\i (00:14:05) pick grid -887.91 -1157.84
+\t (00:14:05) last pick:  -887.90 -1157.80
+\i (00:14:06) delete 
+\i (00:14:06) generaledit 
+\i (00:14:07) pick grid -889.26 -1153.62
+\t (00:14:07) last pick:  -889.30 -1153.60
+\i (00:14:10) etchedit 
+\i (00:14:10) pick grid -888.49 -1148.44
+\t (00:14:10) last pick:  -888.50 -1148.40
+\i (00:14:10) slide 
+\t (00:14:11) Waiting for the destination pick.
+\t (00:14:11) Start slide location has pre-existing DRC errors.
+\i (00:14:12) pick grid -889.83 -1153.04
+\t (00:14:12) last pick:  -889.80 -1153.00
+\t (00:14:12) DRC errors detected.
+\i (00:14:12) etchedit 
+\i (00:14:16) pick grid -819.01 -1133.47
+\t (00:14:16) last pick:  -819.00 -1133.50
+\i (00:14:18) prepopup -812.48 -1117.15
+\i (00:14:20) undo 
+\i (00:14:20) trapsize 96
+\i (00:14:20) etchedit 
+\i (00:14:21) undo 
+\i (00:14:21) trapsize 96
+\i (00:14:21) etchedit 
+\i (00:14:23) undo 
+\i (00:14:23) trapsize 96
+\i (00:14:23) etchedit 
+\i (00:14:24) pick grid -801.74 -1131.93
+\t (00:14:24) last pick:  -801.70 -1131.90
+\i (00:14:27) pick grid -826.11 -1200.84
+\t (00:14:27) last pick:  -826.10 -1200.80
+\i (00:14:27) move 
+\t (00:14:27) last pick:  -839.20 -1247.00
+\t (00:14:27) Moving U5 / BNO055_BNO055_BNO055 / BNO055.
+\t (00:14:27) Pick new location for the element(s).
+\i (00:14:28) prepopup -821.12 -1203.52
+\i (00:14:29) cancel 
+\i (00:14:29) etchedit 
+\i (00:14:29) pick grid -814.21 -1137.50
+\t (00:14:29) last pick:  -814.20 -1137.50
+\i (00:14:30) zoom out 1 
+\i (00:14:30) setwindow pcb
+\i (00:14:30) zoom out -834.56 -1190.85
+\i (00:14:30) trapsize 192
+\i (00:14:31) zoom in 1 
+\i (00:14:31) setwindow pcb
+\i (00:14:31) zoom in -709.80 -1187.79
+\i (00:14:31) trapsize 96
+\i (00:14:32) zoom out 1 
+\i (00:14:32) setwindow pcb
+\i (00:14:32) zoom out -771.79 -1171.47
+\i (00:14:32) trapsize 192
+\i (00:14:33) zoom out 1 
+\i (00:14:33) setwindow pcb
+\i (00:14:33) zoom out -752.60 -1119.66
+\i (00:14:33) trapsize 384
+\i (00:14:33) zoom out 1 
+\i (00:14:33) setwindow pcb
+\i (00:14:33) zoom out -554.52 -1356.12
+\i (00:14:33) trapsize 768
+\i (00:14:34) zoom in 1 
+\i (00:14:34) setwindow pcb
+\i (00:14:34) zoom in -783.32 -1027.52
+\i (00:14:34) trapsize 384
+\i (00:14:34) zoom in 1 
+\i (00:14:34) setwindow pcb
+\i (00:14:34) zoom in -784.09 -1025.98
+\i (00:14:34) trapsize 192
+\i (00:14:35) drag_start grid -819.78 -945.75
+\i (00:14:35) drag_stop -796.37 -1011.78
+\i (00:14:37) delete 
+\i (00:14:37) etchedit 
+\i (00:14:38) drag_start grid -723.82 -1145.37
+\i (00:14:38) drag_stop -789.84 -1105.83
+\i (00:14:40) delete 
+\i (00:14:40) etchedit 
+\i (00:14:40) zoom out 1 
+\i (00:14:40) setwindow pcb
+\i (00:14:40) zoom out -749.54 -973.78
+\i (00:14:40) trapsize 384
+\i (00:14:41) zoom out 1 
+\i (00:14:41) setwindow pcb
+\i (00:14:41) zoom out -645.11 -1303.90
+\i (00:14:41) trapsize 768
+\i (00:14:42) zoom in 1 
+\i (00:14:42) setwindow pcb
+\i (00:14:42) zoom in -821.70 -901.60
+\i (00:14:42) trapsize 384
+\i (00:14:42) zoom in 1 
+\i (00:14:42) setwindow pcb
+\i (00:14:42) zoom in -821.70 -901.60
+\i (00:14:42) trapsize 192
+\i (00:14:42) zoom in 1 
+\i (00:14:42) setwindow pcb
+\i (00:14:42) zoom in -824.00 -901.98
+\i (00:14:42) trapsize 96
+\i (00:14:42) drag_start grid -810.37 -875.10
+\i (00:14:43) drag_stop -844.34 -933.84
+\i (00:14:44) delete 
+\i (00:14:44) etchedit 
+\i (00:14:45) zoom out 1 
+\i (00:14:45) setwindow pcb
+\i (00:14:45) zoom out -875.24 -900.63
+\i (00:14:45) trapsize 192
+\i (00:14:45) zoom out 1 
+\i (00:14:45) setwindow pcb
+\i (00:14:45) zoom out -874.09 -897.56
+\i (00:14:45) trapsize 384
+\i (00:14:46) zoom in 1 
+\i (00:14:46) setwindow pcb
+\i (00:14:46) zoom in -768.14 -976.64
+\i (00:14:46) trapsize 192
+\i (00:14:46) zoom in 1 
+\i (00:14:46) setwindow pcb
+\i (00:14:46) zoom in -768.14 -976.26
+\i (00:14:46) trapsize 96
+\i (00:14:47) pick grid -759.88 -946.12
+\t (00:14:47) last pick:  -759.90 -946.10
+\i (00:14:47) slide 
+\t (00:14:47) Waiting for the destination pick.
+\i (00:14:48) delete 
+\i (00:14:48) etchedit 
+\i (00:14:49) pick grid -760.65 -977.02
+\t (00:14:49) last pick:  -760.60 -977.00
+\i (00:14:49) slide 
+\t (00:14:49) Waiting for the destination pick.
+\i (00:14:50) delete 
+\i (00:14:50) etchedit 
+\i (00:14:51) pick grid -789.44 -971.84
+\t (00:14:51) last pick:  -789.40 -971.80
+\i (00:14:51) slide 
+\t (00:14:51) Waiting for the destination pick.
+\i (00:14:52) delete 
+\i (00:14:52) etchedit 
+\i (00:14:53) zoom out 1 
+\i (00:14:53) setwindow pcb
+\i (00:14:53) zoom out -809.21 -932.88
+\i (00:14:53) trapsize 192
+\i (00:14:53) zoom out 1 
+\i (00:14:53) setwindow pcb
+\i (00:14:53) zoom out -808.06 -922.89
+\i (00:14:53) trapsize 384
+\i (00:14:53) zoom out 1 
+\i (00:14:53) setwindow pcb
+\i (00:14:53) zoom out -801.92 -907.54
+\i (00:14:53) trapsize 768
+\i (00:14:53) zoom in 1 
+\i (00:14:53) setwindow pcb
+\i (00:14:53) zoom in -769.68 -1219.24
+\i (00:14:53) trapsize 384
+\i (00:14:54) zoom in 1 
+\i (00:14:54) setwindow pcb
+\i (00:14:54) zoom in -771.21 -1151.68
+\i (00:14:54) trapsize 192
+\i (00:14:54) zoom in 1 
+\i (00:14:54) setwindow pcb
+\i (00:14:54) zoom in -766.22 -1163.20
+\i (00:14:54) trapsize 96
+\i (00:14:54) zoom in 1 
+\i (00:14:54) setwindow pcb
+\i (00:14:54) zoom in -766.22 -1163.20
+\i (00:14:54) trapsize 48
+\i (00:14:54) zoom in 1 
+\i (00:14:54) setwindow pcb
+\i (00:14:54) zoom in -766.22 -1163.20
+\i (00:14:54) trapsize 24
+\i (00:14:56) pick grid -766.89 -1152.78
+\t (00:14:56) last pick:  -766.90 -1152.80
+\i (00:14:56) slide 
+\t (00:14:56) Waiting for the destination pick.
+\t (00:14:56) New cline would result in DRC error(s); retaining old cline.
+\i (00:14:56) zoom out 1 
+\i (00:14:56) setwindow pcb
+\i (00:14:56) zoom out -752.21 -1162.43
+\i (00:14:56) trapsize 48
+\i (00:14:56) zoom out 1 
+\i (00:14:56) setwindow pcb
+\i (00:14:56) zoom out -751.06 -1163.00
+\i (00:14:56) trapsize 96
+\i (00:14:59) delete 
+\i (00:14:59) etchedit 
+\i (00:15:01) pick grid -789.05 -1149.95
+\t (00:15:01) last pick:  -789.00 -1149.90
+\i (00:15:01) slide 
+\t (00:15:01) Waiting for the destination pick.
+\i (00:15:02) delete 
+\i (00:15:02) etchedit 
+\i (00:15:04) zoom in 1 
+\i (00:15:04) setwindow pcb
+\i (00:15:04) zoom in -789.44 -1158.20
+\i (00:15:04) trapsize 48
+\i (00:15:04) zoom in 1 
+\i (00:15:04) setwindow pcb
+\i (00:15:04) zoom in -789.44 -1158.20
+\i (00:15:04) trapsize 24
+\i (00:15:04) zoom in 1 
+\i (00:15:04) setwindow pcb
+\i (00:15:04) zoom in -789.44 -1158.15
+\i (00:15:04) trapsize 12
+\i (00:15:04) zoom in 1 
+\i (00:15:04) setwindow pcb
+\i (00:15:04) zoom in -789.43 -1158.15
+\i (00:15:04) trapsize 6
+\i (00:15:04) zoom in 1 
+\i (00:15:04) setwindow pcb
+\i (00:15:04) zoom in -789.43 -1158.14
+\i (00:15:04) trapsize 3
+\i (00:15:04) zoom in 1 
+\i (00:15:04) setwindow pcb
+\i (00:15:04) zoom in -789.42 -1158.14
+\i (00:15:04) trapsize 2
+\i (00:15:05) zoom out 1 
+\i (00:15:05) setwindow pcb
+\i (00:15:05) zoom out -788.67 -1158.09
+\i (00:15:05) trapsize 3
+\i (00:15:05) zoom out 1 
+\i (00:15:05) setwindow pcb
+\i (00:15:05) zoom out -788.65 -1158.16
+\i (00:15:05) trapsize 6
+\i (00:15:05) zoom out 1 
+\i (00:15:05) setwindow pcb
+\i (00:15:05) zoom out -788.57 -1158.35
+\i (00:15:05) trapsize 12
+\i (00:15:05) zoom out 1 
+\i (00:15:05) setwindow pcb
+\i (00:15:05) zoom out -788.55 -1158.60
+\i (00:15:05) trapsize 24
+\i (00:15:06) prepopup -791.20 -1157.58
+\i (00:15:16) pop dyn_option_select 'Selection set@:@Select@:@Vertical Line Segment Dummy Net, Etch/Top' 
+\i (00:15:17) delete 
+\i (00:15:17) etchedit 
+\i (00:15:19) zoom out 1 
+\i (00:15:19) setwindow pcb
+\i (00:15:19) zoom out -792.50 -1154.41
+\i (00:15:19) trapsize 48
+\i (00:15:19) zoom out 1 
+\i (00:15:19) setwindow pcb
+\i (00:15:19) zoom out -791.92 -1154.69
+\i (00:15:19) trapsize 96
+\i (00:15:21) pick grid -789.42 -1150.65
+\t (00:15:21) last pick:  -789.40 -1150.60
+\i (00:15:22) prepopup -788.65 -1157.77
+\i (00:15:26) pop dyn_option_select 'Selection set@:@Toggle select@:@Odd-angle Line Segment Not On A Net, Etch/Top  :(+)' 
+\i (00:15:27) delete 
+\t (00:15:27) Selected item not valid for current operation, ignored: Drc Error "Top, Line To Smd Pin Spacing"
+\i (00:15:27) etchedit 
+\i (00:15:28) prepopup -808.09 -1176.82
+\i (00:15:34) pop dyn_option_select 'Selection set@:@Toggle select@:@Vertical Line Segment Dummy Net, Etch/Top  :(+)' 
+\i (00:15:36) delete 
+\i (00:15:36) etchedit 
+\i (00:15:36) prepopup -832.53 -1181.82
+\i (00:15:41) pop dyn_option_select 'Selection set@:@Toggle select@:@Vertical Line Segment Dummy Net, Etch/Top  :(+)' 
+\i (00:15:42) delete 
+\i (00:15:42) etchedit 
+\i (00:15:43) prepopup -790.19 -1177.01
+\i (00:15:47) pop dyn_option_select 'Selection set@:@Toggle select@:@Vertical Line Segment Dummy Net, Etch/Top  :(+)' 
+\i (00:15:49) delete 
+\i (00:15:49) etchedit 
+\i (00:15:49) prepopup -771.14 -1172.59
+\i (00:15:53) pop dyn_option_select 'Selection set@:@Toggle select@:@Odd-angle Line Segment Dummy Net, Etch/Top  :(+)' 
+\i (00:15:55) delete 
+\i (00:15:56) etchedit 
+\i (00:15:56) zoom out 1 
+\i (00:15:56) setwindow pcb
+\i (00:15:56) zoom out -880.63 -1139.49
+\i (00:15:56) trapsize 192
+\i (00:15:56) zoom out 1 
+\i (00:15:56) setwindow pcb
+\i (00:15:56) zoom out -862.16 -1136.79
+\i (00:15:56) trapsize 385
+\i (00:15:57) zoom in 1 
+\i (00:15:57) setwindow pcb
+\i (00:15:57) zoom in -745.94 -1273.04
+\i (00:15:57) trapsize 192
+\i (00:15:58) zoom in 1 
+\i (00:15:58) setwindow pcb
+\i (00:15:58) zoom in -759.02 -1226.85
+\i (00:15:58) trapsize 96
+\i (00:15:58) zoom out 1 
+\i (00:15:58) setwindow pcb
+\i (00:15:58) zoom out -661.46 -1251.10
+\i (00:15:58) trapsize 192
+\i (00:15:59) zoom in 1 
+\i (00:15:59) setwindow pcb
+\i (00:15:59) zoom in -705.33 -1283.42
+\i (00:15:59) trapsize 96
+\i (00:15:59) zoom in 1 
+\i (00:15:59) setwindow pcb
+\i (00:15:59) zoom in -709.37 -1283.42
+\i (00:15:59) trapsize 48
+\i (00:16:04) zoom out 1 
+\i (00:16:04) setwindow pcb
+\i (00:16:04) zoom out -665.30 -1290.34
+\i (00:16:04) trapsize 96
+\i (00:16:05) zoom out 1 
+\i (00:16:05) setwindow pcb
+\i (00:16:05) zoom out -665.31 -1290.35
+\i (00:16:05) trapsize 192
+\i (00:16:08) zoom in 1 
+\i (00:16:08) setwindow pcb
+\i (00:16:08) zoom in -940.86 -1171.03
+\i (00:16:08) trapsize 96
+\i (00:16:09) prepopup -929.31 -1167.57
+\i (00:16:14) pop dyn_option_select 'Selection set@:@Toggle select@:@Net Dummy Net  :(+)' 
+\i (00:16:15) delete 
+\t (00:16:15) Selected item not valid for current operation, ignored: Net "Dummy Net"
+\t (00:16:15) No valid items selected for the current operation, exiting.
+\i (00:16:15) etchedit 
+\i (00:16:17) pick grid -925.08 -1169.30
+\t (00:16:17) last pick:  -925.10 -1169.30
+\i (00:16:18) pick grid -947.78 -1162.37
+\t (00:16:18) last pick:  -947.80 -1162.40
+\i (00:16:19) prepopup -922.19 -1168.53
+\i (00:16:24) pop dyn_option_select 'Selection set@:@Toggle select@:@Vertical Line Segment Dummy Net, Etch/Top  :(+)' 
+\i (00:16:25) delete 
+\i (00:16:25) etchedit 
+\i (00:16:26) prepopup -923.15 -1175.65
+\i (00:16:30) pop dyn_option_select 'Selection set@:@Toggle select@:@Vertical Line Segment Dummy Net, Etch/Top  :(+)' 
+\i (00:16:32) delete 
+\i (00:16:32) etchedit 
+\i (00:16:32) zoom out 1 
+\i (00:16:32) setwindow pcb
+\i (00:16:32) zoom out -972.61 -1185.27
+\i (00:16:32) trapsize 192
+\i (00:16:34) zoom in 1 
+\i (00:16:34) setwindow pcb
+\i (00:16:34) zoom in -891.78 -1173.34
+\i (00:16:34) trapsize 96
+\i (00:16:34) zoom in 1 
+\i (00:16:34) setwindow pcb
+\i (00:16:34) zoom in -891.78 -1173.34
+\i (00:16:34) trapsize 48
+\i (00:16:34) zoom in 1 
+\i (00:16:34) setwindow pcb
+\i (00:16:34) zoom in -891.77 -1173.33
+\i (00:16:34) trapsize 24
+\i (00:16:34) prepopup -888.55 -1169.29
+\i (00:16:38) pop dyn_option_select 'Selection set@:@Toggle select@:@Vertical Line Segment N268898, Etch/Top  :(+)' 
+\i (00:16:39) zoom out 1 
+\i (00:16:39) setwindow pcb
+\i (00:16:39) zoom out -882.63 -1166.83
+\i (00:16:39) trapsize 48
+\i (00:16:40) zoom out 1 
+\i (00:16:40) setwindow pcb
+\i (00:16:40) zoom out -879.17 -1215.42
+\i (00:16:40) trapsize 96
+\i (00:16:42) delete 
+\i (00:16:42) etchedit 
+\i (00:16:50) undo 
+\i (00:16:50) trapsize 96
+\i (00:16:50) etchedit 
+\i (00:16:51) pick grid -802.00 -1139.03
+\t (00:16:51) last pick:  -802.00 -1139.00
+\i (00:16:52) zoom out 1 
+\i (00:16:52) setwindow pcb
+\i (00:16:52) zoom out -814.13 -1136.14
+\i (00:16:52) trapsize 192
+\i (00:16:54) zoom in 1 
+\i (00:16:54) setwindow pcb
+\i (00:16:54) zoom in -880.32 -1181.95
+\i (00:16:54) trapsize 96
+\i (00:16:54) zoom in 1 
+\i (00:16:54) setwindow pcb
+\i (00:16:54) zoom in -879.35 -1181.75
+\i (00:16:54) trapsize 48
+\i (00:16:55) zoom out 1 
+\i (00:16:55) setwindow pcb
+\i (00:16:55) zoom out -882.81 -1181.94
+\i (00:16:55) trapsize 96
+\i (00:16:55) zoom out 1 
+\i (00:16:55) setwindow pcb
+\i (00:16:55) zoom out -906.67 -1180.97
+\i (00:16:55) trapsize 192
+\i (00:16:55) zoom out 1 
+\i (00:16:55) setwindow pcb
+\i (00:16:55) zoom out -940.54 -1179.05
+\i (00:16:55) trapsize 385
+\i (00:16:56) zoom in 1 
+\i (00:16:56) setwindow pcb
+\i (00:16:56) zoom in -864.33 -1097.47
+\i (00:16:56) trapsize 192
+\i (00:16:57) zoom in 1 
+\i (00:16:57) setwindow pcb
+\i (00:16:57) zoom in -823.92 -1095.16
+\i (00:16:57) trapsize 96
+\i (00:16:58) zoom out 1 
+\i (00:16:58) setwindow pcb
+\i (00:16:58) zoom out -795.82 -1152.70
+\i (00:16:58) trapsize 192
+\i (00:16:58) zoom out 1 
+\i (00:16:58) setwindow pcb
+\i (00:16:58) zoom out -795.44 -1176.94
+\i (00:16:58) trapsize 385
+\i (00:16:59) zoom in 1 
+\i (00:16:59) setwindow pcb
+\i (00:16:59) zoom in -786.21 -1165.39
+\i (00:16:59) trapsize 192
+\i (00:16:59) zoom in 1 
+\i (00:16:59) setwindow pcb
+\i (00:16:59) zoom in -789.67 -1165.77
+\i (00:16:59) trapsize 96
+\i (00:17:00) zoom out 1 
+\i (00:17:00) setwindow pcb
+\i (00:17:00) zoom out -873.95 -1142.10
+\i (00:17:00) trapsize 192
+\i (00:17:01) zoom in 1 
+\i (00:17:01) setwindow pcb
+\i (00:17:01) zoom in -714.23 -1202.52
+\i (00:17:01) trapsize 96
+\i (00:17:02) zoom out 1 
+\i (00:17:02) setwindow pcb
+\i (00:17:02) zoom out -772.15 -1147.10
+\i (00:17:02) trapsize 192
+\i (00:17:02) zoom out 1 
+\i (00:17:02) setwindow pcb
+\i (00:17:02) zoom out -740.59 -1120.93
+\i (00:17:02) trapsize 385
+\i (00:17:03) zoom in 1 
+\i (00:17:03) setwindow pcb
+\i (00:17:03) zoom in -640.53 -1308.73
+\i (00:17:03) trapsize 192
+\i (00:17:05) zoom out 1 
+\i (00:17:05) setwindow pcb
+\i (00:17:05) zoom out -449.26 -1266.01
+\i (00:17:05) trapsize 385
+\i (00:17:07) zoom out 1 
+\i (00:17:07) setwindow pcb
+\i (00:17:07) zoom out -987.29 -1475.38
+\i (00:17:07) trapsize 770
+\i (00:17:08) zoom in 1 
+\i (00:17:08) setwindow pcb
+\i (00:17:08) zoom in -1093.50 -964.28
+\i (00:17:08) trapsize 385
+\i (00:17:08) zoom out 1 
+\i (00:17:08) setwindow pcb
+\i (00:17:08) zoom out -1076.56 -984.29
+\i (00:17:08) trapsize 770
+\i (00:17:10) zoom out 1 
+\i (00:17:10) setwindow pcb
+\i (00:17:10) zoom out -910.31 -1282.95
+\i (00:17:10) trapsize 1539
+\i (00:17:11) drag_start grid -269.90 -1295.26
+\i (00:17:11) drag_stop 675.31 -1553.88
+\i (00:17:15) delete 
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_1, U6.1:J7.1"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gnd, U6.2:J7.2"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vdd, U6.3:J7.3"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nboot, U6.4:J7.4"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps1, U6.5:J7.5"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.5 (Bno055_Ps1)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.4 (Bno055_Nboot)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.3 (Bno055_Vdd)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.2 (Bno055_Gnd)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps0, U6.6:J7.6"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_7, U6.7:J7.7"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_8, U6.8:J7.8"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Cap, U6.9:J7.9"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_10, U6.10:J7.10"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.10 (Bno055_Pin_10)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.9 (Bno055_Cap)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.8 (Bno055_Pin_8)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.7 (Bno055_Pin_7)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.6 (Bno055_Ps0)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nreset, U6.11:J7.11"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_12, U6.12:J7.12"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_13, U6.13:J7.13"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Int, U6.14:J7.14"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.15 (Bno055_Pin_15)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.14 (Bno055_Int)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.13 (Bno055_Pin_13)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.12 (Bno055_Pin_12)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.11 (Bno055_Nreset)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com0, U6.20:J7.20"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_15, U6.15:J7.15"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com1, U6.19:J7.19"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com2, U6.18:J7.18"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com3, U6.17:J7.17"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_16, U6.16:J7.16"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.20 (Bno055_Com0)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.19 (Bno055_Com1)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.18 (Bno055_Com2)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.17 (Bno055_Com3)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Pin "J7.16 (Bno055_Pin_16)"
+\t (00:17:16) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_21, U6.21:J7.21"
+\t (00:17:16) No valid items selected for the current operation, exiting.
+\i (00:17:16) etchedit 
+\i (00:17:17) pick grid 293.53 -1233.68
+\t (00:17:17) last pick:  293.50 -1233.70
+\i (00:17:17) add connect 
+\t (00:17:17) Pick first element.
+\t (00:17:17) last pick:  427.32 -1181.61
+\i (00:17:18) prepopup -45.14 -1082.82
+\i (00:17:20) cancel 
+\i (00:17:20) etchedit 
+\i (00:17:21) drag_start grid 1220.27 -1544.65
+\i (00:17:22) drag_stop -285.29 -913.48
+\i (00:17:32) prepopup 539.84 -1061.27
+\i (00:17:43) pop dyn_option_select 'Selection set@:@Toggle select@:@Pin U6.24 (Bno055_Pin_24)  :(-)' 
+\i (00:17:44) zoom in 1 
+\i (00:17:44) setwindow pcb
+\i (00:17:44) zoom in 632.20 -1110.53
+\i (00:17:44) trapsize 770
+\i (00:17:44) zoom in 1 
+\i (00:17:44) setwindow pcb
+\i (00:17:44) zoom in 632.21 -1110.53
+\i (00:17:44) trapsize 385
+\i (00:17:44) zoom in 1 
+\i (00:17:44) setwindow pcb
+\i (00:17:44) zoom in 632.21 -1110.52
+\i (00:17:44) trapsize 192
+\i (00:17:44) zoom in 1 
+\i (00:17:44) setwindow pcb
+\i (00:17:44) zoom in 631.06 -1110.90
+\i (00:17:44) trapsize 96
+\i (00:17:44) zoom out 1 
+\i (00:17:44) setwindow pcb
+\i (00:17:44) zoom out 613.17 -1101.28
+\i (00:17:44) trapsize 192
+\i (00:17:46) delete 
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_1, U6.1:J7.1"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gnd, U6.2:J7.2"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vdd, U6.3:J7.3"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nboot, U6.4:J7.4"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps1, U6.5:J7.5"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.5 (Bno055_Ps1)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.4 (Bno055_Nboot)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.3 (Bno055_Vdd)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.2 (Bno055_Gnd)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.1 (Bno055_Pin_1)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps0, U6.6:J7.6"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_7, U6.7:J7.7"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_8, U6.8:J7.8"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Cap, U6.9:J7.9"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_10, U6.10:J7.10"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.10 (Bno055_Pin_10)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.9 (Bno055_Cap)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.8 (Bno055_Pin_8)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.7 (Bno055_Pin_7)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.6 (Bno055_Ps0)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nreset, U6.11:J7.11"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_12, U6.12:J7.12"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_13, U6.13:J7.13"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Int, U6.14:J7.14"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.15 (Bno055_Pin_15)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.14 (Bno055_Int)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.13 (Bno055_Pin_13)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.12 (Bno055_Pin_12)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.11 (Bno055_Nreset)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.2 (Bno055_Gnd)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.3 (Bno055_Vdd)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.4 (Bno055_Nboot)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.5 (Bno055_Ps1)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com0, U6.20:J7.20"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_15, U6.15:J7.15"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com1, U6.19:J7.19"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com2, U6.18:J7.18"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com3, U6.17:J7.17"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_16, U6.16:J7.16"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.20 (Bno055_Com0)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.19 (Bno055_Com1)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.18 (Bno055_Com2)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.17 (Bno055_Com3)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.16 (Bno055_Pin_16)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.1 (Bno055_Pin_1)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.28 (Bno055_Vddio)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vddio, U6.28:J7.28"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.27 (Bno055_Xin32)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xin32, U6.27:J7.27"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.26 (Bno055_Xout32)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xout32, U6.26:J7.26"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.25 (Bno055_Gndio)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gndio, U6.25:J7.25"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_24, U6.24:J7.24"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.23 (Bno055_Pin_23)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_23, U6.23:J7.23"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.22 (Bno055_Pin_22)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_22, U6.22:J7.22"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.21 (Bno055_Pin_21)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_21, U6.21:J7.21"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.20 (Bno055_Com0)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.6 (Bno055_Ps0)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.7 (Bno055_Pin_7)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.8 (Bno055_Pin_8)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.9 (Bno055_Cap)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.10 (Bno055_Pin_10)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.11 (Bno055_Nreset)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.12 (Bno055_Pin_12)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.13 (Bno055_Pin_13)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.14 (Bno055_Int)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.15 (Bno055_Pin_15)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.19 (Bno055_Com1)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.18 (Bno055_Com2)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.17 (Bno055_Com3)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "U6.16 (Bno055_Pin_16)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.25 (Bno055_Gndio)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.24 (Bno055_Pin_24)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.23 (Bno055_Pin_23)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.22 (Bno055_Pin_22)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.21 (Bno055_Pin_21)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.30 (Dummy Net)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.29 (Dummy Net)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.28 (Bno055_Vddio)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.27 (Bno055_Xin32)"
+\t (00:17:46) Selected item not valid for current operation, ignored: Pin "J7.26 (Bno055_Xout32)"
+\t (00:17:46) No valid items selected for the current operation, exiting.
+\i (00:17:46) etchedit 
+\i (00:17:48) pick grid 344.92 -1044.32
+\t (00:17:48) last pick:  344.90 -1044.30
+\i (00:17:48) zoom out 1 
+\i (00:17:48) setwindow pcb
+\i (00:17:48) zoom out 336.06 -1011.61
+\i (00:17:48) trapsize 385
+\i (00:17:48) zoom out 1 
+\i (00:17:48) setwindow pcb
+\i (00:17:48) zoom out 350.69 -1027.00
+\i (00:17:48) trapsize 770
+\i (00:17:48) zoom out 1 
+\i (00:17:48) setwindow pcb
+\i (00:17:48) zoom out 356.85 -1043.93
+\i (00:17:48) trapsize 1539
+\i (00:17:48) zoom out 1 
+\i (00:17:48) setwindow pcb
+\i (00:17:48) zoom out 369.17 -1062.41
+\i (00:17:48) trapsize 3079
+\i (00:17:49) zoom out 1 
+\i (00:17:49) setwindow pcb
+\i (00:17:49) zoom out 1873.11 -2642.84
+\i (00:17:49) trapsize 6142
+\i (00:17:49) zoom in 1 
+\i (00:17:49) setwindow pcb
+\i (00:17:49) zoom in -549.86 651.01
+\i (00:17:49) trapsize 3071
+\i (00:17:51) drag_start grid -2220.01 1486.28
+\i (00:17:52) drag_stop 1802.75 -773.84
+\i (00:17:54) delete 
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "Radial_Dimension"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:17:54) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "J5"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "J3"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "Sw1"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:17:54) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "C4"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R7"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R6"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "C2"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "J4"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "U4"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "C5"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "D3"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "U1"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "D2"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R2"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "C3"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R3"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "Y1"
+\t (00:17:54) Selected item not valid for current operation, ignored: Drc Error "Bottom, Minimum Neck Width"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R10"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "Ls1"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "C1"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R1"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "U2"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "J1"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R5"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R4"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "U3"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "Logo"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:17:54) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "J2"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R8"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "R9"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "Sw2"
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "Sw3"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:17:54) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom". It has the FIXED property.
+\t (00:17:54) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:17:54) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:17:54) Selected item not valid for current operation, ignored: Symbol "Linear_Dimension"
+\i (00:17:54) etchedit 
+\i (00:17:55) zoom in 1 
+\i (00:17:55) setwindow pcb
+\i (00:17:55) zoom in 549.86 -417.63
+\i (00:17:55) trapsize 1535
+\i (00:17:56) zoom out 1 
+\i (00:17:56) setwindow pcb
+\i (00:17:56) zoom out 1114.90 -620.30
+\i (00:17:56) trapsize 3071
+\i (00:17:56) zoom out 1 
+\i (00:17:56) setwindow pcb
+\i (00:17:56) zoom out 1151.74 -644.87
+\i (00:17:56) trapsize 6142
+\i (00:17:59) prepopup 359.10 528.18
+\i (00:18:01) pop dyn_option_select '@:@Unplace component' 
+\i (00:18:01) unplace component 
+\w (00:18:01) WARNING(SPMHGE-623): Non associative dimensions in selection set ignored.  Use the
+Dimension Environment to edit dimensions.
+\t (00:18:01) Selected item not valid for current operation, ignored: Symbol "Radial_Dimension"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:18:01) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:18:01) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:18:01) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:18:01) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:18:01) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\w (00:18:01) WARNING(SPMHGE-623): Non associative dimensions in selection set ignored.  Use the
+Dimension Environment to edit dimensions.
+\t (00:18:01) Selected item not valid for current operation, ignored: Symbol "Linear_Dimension"
+\i (00:18:01) etchedit 
+\i (00:18:02) drag_start grid 1882.22 -1953.04
+\i (00:18:03) drag_stop -279.63 -712.43
+\i (00:18:04) prepopup 432.80 -1044.08
+\i (00:18:09) pick grid 3331.65 -2395.23
+\t (00:18:09) last pick:  3331.70 -2395.20
+\i (00:18:09) zoom in 1 
+\i (00:18:09) setwindow pcb
+\i (00:18:09) zoom in 15.17 -319.37
+\i (00:18:09) trapsize 3071
+\i (00:18:09) zoom out 1 
+\i (00:18:09) setwindow pcb
+\i (00:18:09) zoom out 273.48 -1486.27
+\i (00:18:09) trapsize 6142
+\i (00:18:10) drag_start grid 1980.49 -810.69
+\i (00:18:12) drag_stop 1747.11 -786.13
+\i (00:18:13) drag_start grid 1771.67 -663.30
+\i (00:18:15) drag_stop -2109.83 1449.42
+\i (00:18:16) delete 
+\t (00:18:16) Selected item not valid for current operation, ignored: Symbol "Radial_Dimension"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:18:16) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:18:16) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:18:16) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Top"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Gnd"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Vcc"
+\t (00:18:16) Cannot edit Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom". It has the FIXED property.
+\t (00:18:16) Selected item not valid for current operation, ignored: Shape "Same Layer Route Keepout Associated With A Pin/Via, Route Keepout/Bottom"
+\t (00:18:16) Selected item not valid for current operation, ignored: Mechanical Pin "Mountinghole_4_40."
+\t (00:18:16) Selected item not valid for current operation, ignored: Symbol "Linear_Dimension"
+\t (00:18:16) No valid items selected for the current operation, exiting.
+\i (00:18:16) etchedit 
+\i (00:18:16) pick grid -21.68 1228.32
+\t (00:18:16) last pick:  -21.70 1228.30
+\i (00:18:17) pick grid -169.08 1252.89
+\t (00:18:17) last pick:  -169.10 1252.90
+\i (00:18:19) zoom in 1 
+\i (00:18:19) setwindow pcb
+\i (00:18:19) zoom in -770.95 -737.00
+\i (00:18:19) trapsize 3071
+\i (00:18:19) zoom in 1 
+\i (00:18:19) setwindow pcb
+\i (00:18:19) zoom in -1593.57 -737.00
+\i (00:18:19) trapsize 1535
+\i (00:18:20) zoom out 1 
+\i (00:18:20) setwindow pcb
+\i (00:18:20) zoom out -1694.90 -779.99
+\i (00:18:20) trapsize 3071
+\i (00:18:20) drag_start grid 1292.99 -1645.96
+\i (00:18:21) drag_stop -328.40 -902.82
+\i (00:18:23) delete 
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_1, U6.1:J7.1"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gnd, U6.2:J7.2"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vdd, U6.3:J7.3"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nboot, U6.4:J7.4"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps1, U6.5:J7.5"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.5 (Bno055_Ps1)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.4 (Bno055_Nboot)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.3 (Bno055_Vdd)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.2 (Bno055_Gnd)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.1 (Bno055_Pin_1)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Ps0, U6.6:J7.6"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_7, U6.7:J7.7"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_8, U6.8:J7.8"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Cap, U6.9:J7.9"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_10, U6.10:J7.10"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.10 (Bno055_Pin_10)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.9 (Bno055_Cap)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.8 (Bno055_Pin_8)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.7 (Bno055_Pin_7)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.6 (Bno055_Ps0)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Nreset, U6.11:J7.11"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_12, U6.12:J7.12"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_13, U6.13:J7.13"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Int, U6.14:J7.14"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.15 (Bno055_Pin_15)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.14 (Bno055_Int)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.13 (Bno055_Pin_13)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.12 (Bno055_Pin_12)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.11 (Bno055_Nreset)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.2 (Bno055_Gnd)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.3 (Bno055_Vdd)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.4 (Bno055_Nboot)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.5 (Bno055_Ps1)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com0, U6.20:J7.20"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_15, U6.15:J7.15"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com1, U6.19:J7.19"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com2, U6.18:J7.18"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Com3, U6.17:J7.17"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_16, U6.16:J7.16"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.20 (Bno055_Com0)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.19 (Bno055_Com1)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.18 (Bno055_Com2)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.17 (Bno055_Com3)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.16 (Bno055_Pin_16)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.1 (Bno055_Pin_1)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.28 (Bno055_Vddio)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Vddio, U6.28:J7.28"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.27 (Bno055_Xin32)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xin32, U6.27:J7.27"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.26 (Bno055_Xout32)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Xout32, U6.26:J7.26"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.25 (Bno055_Gndio)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Gndio, U6.25:J7.25"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.24 (Bno055_Pin_24)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_24, U6.24:J7.24"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.23 (Bno055_Pin_23)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_23, U6.23:J7.23"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.22 (Bno055_Pin_22)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_22, U6.22:J7.22"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.21 (Bno055_Pin_21)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Ratsnest "Bno055_Pin_21, U6.21:J7.21"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.20 (Bno055_Com0)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.6 (Bno055_Ps0)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.7 (Bno055_Pin_7)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.8 (Bno055_Pin_8)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.9 (Bno055_Cap)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.10 (Bno055_Pin_10)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.11 (Bno055_Nreset)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.12 (Bno055_Pin_12)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.13 (Bno055_Pin_13)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.14 (Bno055_Int)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.15 (Bno055_Pin_15)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.19 (Bno055_Com1)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.18 (Bno055_Com2)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.17 (Bno055_Com3)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "U6.16 (Bno055_Pin_16)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.25 (Bno055_Gndio)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.24 (Bno055_Pin_24)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.23 (Bno055_Pin_23)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.22 (Bno055_Pin_22)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.21 (Bno055_Pin_21)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.30 (Dummy Net)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.29 (Dummy Net)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.28 (Bno055_Vddio)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.27 (Bno055_Xin32)"
+\t (00:18:23) Selected item not valid for current operation, ignored: Pin "J7.26 (Bno055_Xout32)"
+\t (00:18:23) No valid items selected for the current operation, exiting.
+\i (00:18:23) etchedit 
+\i (00:18:24) pick grid 40.10 -749.28
+\t (00:18:24) last pick:  40.10 -749.30
+\i (00:18:24) drag_start grid 1428.10 -761.56
+\i (00:18:24) move 
+\w (00:18:24) WARNING(SPMHGE-623): Non associative dimensions in selection set ignored.  Use the
+Dimension Environment to edit dimensions.
+\t (00:18:24) No valid items selected for the current operation, exiting.
+\i (00:18:24) etchedit 
+\i (00:18:25) drag_stop grid 635.83 -362.36
+\i (00:18:26) delete 
+\t (00:18:26) Selected item not valid for current operation, ignored: Symbol "Linear_Dimension"
+\t (00:18:26) No valid items selected for the current operation, exiting.
+\i (00:18:26) etchedit 
+\i (00:18:26) prepopup 1581.64 245.66
+\i (00:18:31) dimension edit 
+\i (00:18:32) prepopup 1557.08 221.10
+\i (00:18:37) pop dyn_option_select '@:@Delete dimensions' 
+\i (00:18:37) pick grid 1520.23 479.04
+\t (00:18:37) last pick:  1520.20 479.00
+\i (00:18:40) pick grid -1722.55 1424.85
+\t (00:18:40) last pick:  -1722.50 1424.90
+\i (00:18:41) pick grid -1114.53 1056.36
+\t (00:18:41) last pick:  -1114.50 1056.40
+\w (00:18:41) WARNING(SPMHDI-55): No dimension found.
+\i (00:18:42) pick grid -776.74 1148.48
+\t (00:18:42) last pick:  -776.70 1148.50
+\w (00:18:42) WARNING(SPMHDI-55): No dimension found.
+\i (00:18:43) pick grid 1919.43 1498.55
+\t (00:18:43) last pick:  1919.40 1498.60
+\w (00:18:43) WARNING(SPMHDI-55): No dimension found.
+\i (00:18:43) zoom out 1 
+\i (00:18:43) setwindow pcb
+\i (00:18:43) zoom out 2146.67 294.80
+\i (00:18:43) trapsize 6142
+\i (00:18:43) zoom out 1 
+\i (00:18:43) setwindow pcb
+\i (00:18:43) zoom out 6721.82 1007.22
+\i (00:18:43) trapsize 6142
+\i (00:21:47) zoom in 1 
+\i (00:21:47) setwindow pcb
+\i (00:21:47) zoom in -1421.97 -810.69
+\i (00:21:47) trapsize 3071
+\i (00:21:47) zoom in 1 
+\i (00:21:47) setwindow pcb
+\i (00:21:47) zoom in -1925.21 -767.70
+\i (00:21:47) trapsize 1535
+\i (00:21:47) zoom out 1 
+\i (00:21:47) setwindow pcb
+\i (00:21:47) zoom out -1215.85 -875.18
+\i (00:21:47) trapsize 3071
+\i (00:21:48) zoom out 1 
+\i (00:21:48) setwindow pcb
+\i (00:21:48) zoom out -724.53 138.20
+\i (00:21:48) trapsize 6142
+\i (00:21:48) zoom in 1 
+\i (00:21:48) setwindow pcb
+\i (00:21:48) zoom in -390.17 -1424.86
+\i (00:21:48) trapsize 3071
+\i (00:21:48) zoom in 1 
+\i (00:21:48) setwindow pcb
+\i (00:21:48) zoom in -1605.85 -1633.67
+\i (00:21:48) trapsize 1535
+\i (00:22:06) dimension edit 
+\i (00:22:07) prepopup -1443.10 -1139.27
+\i (00:22:09) pop dyn_option_select '@:@Linear dimension' 
+\t (00:22:09) Pick an element or point to dimension ...
+\i (00:22:11) pick grid -1255.78 -945.81
+\t (00:22:11) last pick:  -1255.80 -945.80
+\t (00:22:11) First point found ... pick the second point.
+\i (00:22:13) pick grid -1249.63 -1467.85
+\t (00:22:13) last pick:  -1249.60 -1467.80
+\t (00:22:13) Pick location for the dimension value.
+\i (00:22:15) prepopup -1636.56 -1302.02
+\i (00:22:16) cancel 
+\i (00:22:16) etchedit 
+\i (00:22:17) prepopup -1504.51 -850.61
+\i (00:22:40) dimension edit 
+\t (00:22:40) Pick an element or point to dimension ...
+\i (00:22:41) prepopup -1630.42 -647.94
+\i (00:22:44) pop dyn_option_select '@:@Linear dimension' 
+\i (00:22:46) zoom in 1 
+\i (00:22:46) setwindow pcb
+\i (00:22:46) zoom in -1228.14 -779.99
+\i (00:22:46) trapsize 768
+\i (00:22:46) zoom in 1 
+\i (00:22:46) setwindow pcb
+\i (00:22:46) zoom in -1226.60 -778.45
+\i (00:22:46) trapsize 384
+\i (00:22:46) zoom in 1 
+\i (00:22:46) setwindow pcb
+\i (00:22:46) zoom in -1226.60 -778.45
+\i (00:22:46) trapsize 192
+\i (00:22:46) zoom in 1 
+\i (00:22:46) setwindow pcb
+\i (00:22:46) zoom in -1226.60 -778.45
+\i (00:22:46) trapsize 96
+\i (00:22:46) zoom in 1 
+\i (00:22:46) setwindow pcb
+\i (00:22:46) zoom in -1246.75 -808.19
+\i (00:22:46) trapsize 48
+\i (00:22:46) zoom in 1 
+\i (00:22:46) setwindow pcb
+\i (00:22:46) zoom in -1246.94 -808.29
+\i (00:22:46) trapsize 24
+\i (00:22:46) zoom in 1 
+\i (00:22:46) setwindow pcb
+\i (00:22:46) zoom in -1246.99 -808.28
+\i (00:22:46) trapsize 12
+\i (00:22:46) zoom in 1 
+\i (00:22:46) setwindow pcb
+\i (00:22:46) zoom in -1246.99 -808.28
+\i (00:22:46) trapsize 6
+\i (00:22:47) zoom out 1 
+\i (00:22:47) setwindow pcb
+\i (00:22:47) zoom out -1247.68 -807.23
+\i (00:22:47) trapsize 12
+\i (00:22:47) zoom out 1 
+\i (00:22:47) setwindow pcb
+\i (00:22:47) zoom out -1247.58 -807.85
+\i (00:22:47) trapsize 24
+\i (00:22:49) pick grid -1248.02 -801.05
+\t (00:22:49) last pick:  -1248.00 -801.00
+\t (00:22:49) First point found ... pick the second point.
+\i (00:22:50) zoom out 1 
+\i (00:22:50) setwindow pcb
+\i (00:22:50) zoom out -1242.12 -798.36
+\i (00:22:50) trapsize 48
+\i (00:22:50) zoom out 1 
+\i (00:22:50) setwindow pcb
+\i (00:22:50) zoom out -1241.73 -797.88
+\i (00:22:50) trapsize 96
+\i (00:22:50) zoom out 1 
+\i (00:22:50) setwindow pcb
+\i (00:22:50) zoom out -1241.54 -797.11
+\i (00:22:50) trapsize 192
+\i (00:22:50) zoom out 1 
+\i (00:22:50) setwindow pcb
+\i (00:22:50) zoom out -1240.40 -796.34
+\i (00:22:50) trapsize 384
+\i (00:22:50) zoom out 1 
+\i (00:22:50) setwindow pcb
+\i (00:22:50) zoom out -1235.79 -792.50
+\i (00:22:50) trapsize 768
+\i (00:22:51) zoom in 1 
+\i (00:22:51) setwindow pcb
+\i (00:22:51) zoom in -1249.60 -1454.21
+\i (00:22:51) trapsize 384
+\i (00:22:51) zoom in 1 
+\i (00:22:51) setwindow pcb
+\i (00:22:51) zoom in -1249.60 -1483.38
+\i (00:22:51) trapsize 192
+\i (00:22:51) zoom in 1 
+\i (00:22:51) setwindow pcb
+\i (00:22:51) zoom in -1249.60 -1489.90
+\i (00:22:51) trapsize 96
+\i (00:22:51) zoom in 1 
+\i (00:22:51) setwindow pcb
+\i (00:22:51) zoom in -1249.59 -1489.89
+\i (00:22:51) trapsize 48
+\i (00:22:51) zoom in 1 
+\i (00:22:51) setwindow pcb
+\i (00:22:51) zoom in -1249.49 -1489.89
+\i (00:22:51) trapsize 24
+\i (00:22:51) zoom in 1 
+\i (00:22:51) setwindow pcb
+\i (00:22:51) zoom in -1249.35 -1489.94
+\i (00:22:51) trapsize 12
+\i (00:22:51) zoom in 1 
+\i (00:22:51) setwindow pcb
+\i (00:22:51) zoom in -1248.43 -1483.53
+\i (00:22:51) trapsize 6
+\i (00:22:52) zoom in 1 
+\i (00:22:52) setwindow pcb
+\i (00:22:52) zoom in -1248.46 -1483.31
+\i (00:22:52) trapsize 3
+\i (00:22:52) zoom in 1 
+\i (00:22:52) setwindow pcb
+\i (00:22:52) zoom in -1248.41 -1483.10
+\i (00:22:52) trapsize 2
+\i (00:22:52) zoom out 1 
+\i (00:22:52) setwindow pcb
+\i (00:22:52) zoom out -1247.97 -1482.98
+\i (00:22:52) trapsize 3
+\i (00:22:53) zoom in 1 
+\i (00:22:53) setwindow pcb
+\i (00:22:53) zoom in -1247.80 -1482.03
+\i (00:22:53) trapsize 2
+\i (00:22:53) zoom in 1 
+\i (00:22:53) setwindow pcb
+\i (00:22:53) zoom in -1247.80 -1482.02
+\i (00:22:53) trapsize 1
+\i (00:22:53) zoom in 1 
+\i (00:22:53) setwindow pcb
+\i (00:22:53) zoom in -1247.82 -1482.06
+\i (00:22:53) trapsize 1
+\i (00:22:53) zoom in 1 
+\i (00:22:53) setwindow pcb
+\i (00:22:53) zoom in -1247.83 -1482.08
+\i (00:22:53) trapsize 1
+\i (00:22:55) pick grid -1247.90 -1482.20
+\t (00:22:55) last pick:  -1247.90 -1482.20
+\t (00:22:55) Pick location for the dimension value.
+\i (00:22:56) zoom out 1 
+\i (00:22:56) setwindow pcb
+\i (00:22:56) zoom out -1247.88 -1482.23
+\i (00:22:56) trapsize 1
+\i (00:22:56) zoom out 1 
+\i (00:22:56) setwindow pcb
+\i (00:22:56) zoom out -1247.89 -1482.24
+\i (00:22:56) trapsize 1
+\i (00:22:56) zoom out 1 
+\i (00:22:56) setwindow pcb
+\i (00:22:56) zoom out -1247.88 -1482.23
+\i (00:22:56) trapsize 2
+\i (00:22:56) zoom out 1 
+\i (00:22:56) setwindow pcb
+\i (00:22:56) zoom out -1247.89 -1482.23
+\i (00:22:56) trapsize 3
+\i (00:22:56) zoom out 1 
+\i (00:22:56) setwindow pcb
+\i (00:22:56) zoom out -1247.88 -1482.23
+\i (00:22:56) trapsize 6
+\i (00:22:57) zoom out 1 
+\i (00:22:57) setwindow pcb
+\i (00:22:57) zoom out -1247.85 -1482.26
+\i (00:22:57) trapsize 12
+\i (00:22:57) zoom out 1 
+\i (00:22:57) setwindow pcb
+\i (00:22:57) zoom out -1247.84 -1482.31
+\i (00:22:57) trapsize 24
+\i (00:22:57) zoom out 1 
+\i (00:22:57) setwindow pcb
+\i (00:22:57) zoom out -1247.80 -1482.36
+\i (00:22:57) trapsize 48
+\i (00:22:57) zoom out 1 
+\i (00:22:57) setwindow pcb
+\i (00:22:57) zoom out -1247.79 -1482.46
+\i (00:22:57) trapsize 96
+\i (00:22:57) zoom out 1 
+\i (00:22:57) setwindow pcb
+\i (00:22:57) zoom out -1247.79 -1482.47
+\i (00:22:57) trapsize 193
+\i (00:22:58) zoom out 1 
+\i (00:22:58) setwindow pcb
+\i (00:22:58) zoom out -1228.90 -1495.58
+\i (00:22:58) trapsize 386
+\i (00:22:58) zoom out 1 
+\i (00:22:58) setwindow pcb
+\i (00:22:58) zoom out -1190.33 -1497.11
+\i (00:22:58) trapsize 771
+\i (00:22:58) zoom out 1 
+\i (00:22:58) setwindow pcb
+\i (00:22:58) zoom out -1156.40 -1500.20
+\i (00:22:58) trapsize 1543
+\i (00:22:58) zoom out 1 
+\i (00:22:58) setwindow pcb
+\i (00:22:58) zoom out -1131.71 -1503.29
+\i (00:22:58) trapsize 3085
+\i (00:23:01) pick grid -1464.93 -1157.73
+\t (00:23:01) last pick:  -1464.90 -1157.70
+\t (00:23:01) Pick an element or point to dimension ...
+\i (00:23:04) pick grid 269.03 -1830.33
+\t (00:23:04) last pick:  269.00 -1830.30
+\t (00:23:04) Pick an element or point to dimension ...
+\t (00:23:04) First point found ... pick the second point.
+\w (00:23:04) WARNING(SPMHDI-89): Dimension point at (269.00, -1830.30) is not being associated with an object.
+\i (00:23:05) prepopup 614.58 -1867.36
+\i (00:23:06) pick grid 336.90 -1929.07
+\t (00:23:06) last pick:  336.90 -1929.10
+\t (00:23:06) Indicate the X or Y direction first.
+\w (00:23:06) WARNING(SPMHDI-89): Dimension point at (336.90, -1929.10) is not being associated with an object.
+\i (00:23:07) pick grid 830.55 -1867.36
+\t (00:23:07) last pick:  830.60 -1867.40
+\t (00:23:07) Pick location for the dimension value.
+\i (00:23:08) prepopup 793.53 -1873.53
+\i (00:23:10) cancel 
+\i (00:23:10) etchedit 
+\i (00:23:11) zoom in 1 
+\i (00:23:11) setwindow pcb
+\i (00:23:11) zoom in -1613.02 -1682.24
+\i (00:23:11) trapsize 1543
+\i (00:23:11) zoom in 1 
+\i (00:23:11) setwindow pcb
+\i (00:23:11) zoom in -1591.42 -1676.06
+\i (00:23:11) trapsize 771
+\i (00:23:11) prepopup -1393.95 -1501.74
+\i (00:23:16) dimension edit 
+\t (00:23:16) Pick an element or point to dimension ...
+\i (00:23:17) prepopup -1668.55 -1569.61
+\i (00:23:19) pop dyn_option_select '@:@Radial leader' 
+\t (00:23:19) Pick an element or point to dimension ...
+\i (00:23:22) zoom out 1 
+\i (00:23:22) setwindow pcb
+\i (00:23:22) zoom out -1521.99 -1742.39
+\i (00:23:22) trapsize 1543
+\i (00:23:22) zoom out 1 
+\i (00:23:22) setwindow pcb
+\i (00:23:22) zoom out -1525.08 -1745.48
+\i (00:23:22) trapsize 3085
+\i (00:23:23) prepopup -2796.24 -1054.36
+\i (00:23:24) cancel 
+\i (00:23:24) etchedit 
+\i (00:23:25) zoom in 1 
+\i (00:23:25) setwindow pcb
+\i (00:23:25) zoom in -488.42 161.25
+\i (00:23:25) trapsize 1543
+\i (00:23:25) zoom in 1 
+\i (00:23:25) setwindow pcb
+\i (00:23:25) zoom in -488.42 161.26
+\i (00:23:25) trapsize 771
+\i (00:23:25) zoom out 1 
+\i (00:23:25) setwindow pcb
+\i (00:23:25) zoom out -1077.72 -184.30
+\i (00:23:25) trapsize 1543
+\i (00:23:25) zoom out 1 
+\i (00:23:25) setwindow pcb
+\i (00:23:25) zoom out -1099.31 -82.48
+\i (00:23:25) trapsize 3085
+\i (00:23:26) zoom out 1 
+\i (00:23:26) setwindow pcb
+\i (00:23:26) zoom out -954.50 639.49
+\i (00:23:26) trapsize 6142
+\i (00:23:26) zoom out 1 
+\i (00:23:26) setwindow pcb
+\i (00:23:26) zoom out 3356.21 -417.63
+\i (00:23:26) trapsize 6142
+\i (00:23:27) pick grid -3129.34 -2604.05
+\t (00:23:27) last pick:  -3129.30 -2604.00
+\t (00:23:30) last pick:  6746.38 -1252.89
+\w (00:23:30) WARNING(SPMHUT-40): Pick is outside the extent of the drawing ... pick again.
+\i (00:23:30) drag_start grid 6169.07 -2911.13
+\i (00:23:31) drag_stop 4842.48 -1609.10
+\i (00:23:32) delete 
+\t (00:23:32) Selected item not valid for current operation, ignored: Mechanical Pin "Mh6-32."
+\t (00:23:32) No valid items selected for the current operation, exiting.
+\i (00:23:33) etchedit 
+\i (00:23:34) zoom out 1 
+\i (00:23:34) setwindow pcb
+\i (00:23:34) zoom out 8343.20 -2198.70
+\i (00:23:34) trapsize 6142
+\i (00:23:34) zoom out 1 
+\i (00:23:34) setwindow pcb
+\i (00:23:34) zoom out 8846.82 -2014.45
+\i (00:23:34) trapsize 6142
+\i (00:23:34) drag_start grid 2398.12 -1953.04
+\i (00:23:34) drag_stop 2717.48 -1977.60
+\i (00:23:35) zoom out 1 
+\i (00:23:35) setwindow pcb
+\i (00:23:35) zoom out 7950.14 -1781.07
+\i (00:23:35) trapsize 6142
+\i (00:23:35) zoom out 1 
+\i (00:23:35) setwindow pcb
+\i (00:23:35) zoom out 8416.90 -1731.94
+\i (00:23:35) trapsize 6142
+\i (00:23:36) prepopup 2938.58 1965.32
+\i (00:23:37) pick grid 5088.15 2309.25
+\t (00:23:37) last pick:  5088.20 2309.30
+\i (00:23:37) drag_start grid 4535.40 1486.27
+\i (00:23:38) drag_stop -4075.14 4237.71
+\i (00:23:39) delete 
+\i (00:23:39) etchedit 
+\i (00:23:41) drag_start grid 4658.23 1252.89
+\i (00:23:42) drag_stop -4443.64 4127.17
+\i (00:23:42) pick grid 3307.08 2149.56
+\t (00:23:42) last pick:  3307.10 2149.60
+\i (00:23:43) drag_start grid 5039.01 1621.39
+\i (00:23:44) drag_stop -4394.51 4176.30
+\i (00:23:48) pick grid 3307.08 1375.72
+\t (00:23:48) last pick:  3307.10 1375.70
+\i (00:23:49) zoom in 1 
+\i (00:23:49) setwindow pcb
+\i (00:23:49) zoom in 2864.88 -319.37
+\i (00:23:49) trapsize 3071
+\i (00:23:49) zoom in 1 
+\i (00:23:49) setwindow pcb
+\i (00:23:49) zoom in 224.35 -319.36
+\i (00:23:49) trapsize 1535
+\i (00:23:49) zoom out 1 
+\i (00:23:49) setwindow pcb
+\i (00:23:49) zoom out 399.39 -205.74
+\i (00:23:49) trapsize 3071
+\i (00:23:49) zoom out 1 
+\i (00:23:49) setwindow pcb
+\i (00:23:49) zoom out -822.79 -402.27
+\i (00:23:49) trapsize 6142
+\i (00:23:50) zoom in 1 
+\i (00:23:50) setwindow pcb
+\i (00:23:50) zoom in 4756.50 921.24
+\i (00:23:50) trapsize 3071
+\i (00:23:51) zoom in 1 
+\i (00:23:51) setwindow pcb
+\i (00:23:51) zoom in 3559.25 663.29
+\i (00:23:51) trapsize 1535
+\i (00:24:05) zoom out 1 
+\i (00:24:05) setwindow pcb
+\i (00:24:05) zoom out 4133.50 905.89
+\i (00:24:05) trapsize 3071
+\i (00:24:05) zoom out 1 
+\i (00:24:05) setwindow pcb
+\i (00:24:05) zoom out 4145.77 905.89
+\i (00:24:05) trapsize 6142
+\i (00:24:11) refresh symbol 
+\i (00:24:13) setwindow form.upd_element
+\i (00:24:13) FORM upd_element refresh  
+\i (00:24:13) FORM upd_element close  
+\i (00:24:13) setwindow pcb
+\i (00:24:13) etchedit 
+\i (00:24:14) zoom in 1 
+\i (00:24:14) setwindow pcb
+\i (00:24:14) zoom in 936.41 -1953.04
+\i (00:24:14) trapsize 3071
+\i (00:24:15) drag_start grid 1170.16 -1621.39
+\i (00:24:16) drag_stop -279.26 -865.97
+\i (00:24:16) prepopup 445.45 -1117.78
+\i (00:24:25) pick grid 4523.48 -1897.76
+\t (00:24:25) last pick:  4523.50 -1897.80
+\i (00:24:28) zoom out 1 
+\i (00:24:28) setwindow pcb
+\i (00:24:28) zoom out 1520.23 -1584.54
+\i (00:24:28) trapsize 6142
+\i (00:24:33) dimension edit 
+\t (00:24:33) Pick an element or point to dimension ...
+\i (00:24:34) prepopup -4210.26 3304.19
+\i (00:24:39) pick grid 4879.33 1584.54
+\t (00:24:39) last pick:  4879.30 1584.50
+\i (00:24:40) pick grid -3055.64 3328.76
+\t (00:24:40) last pick:  -3055.60 3328.80
+\i (00:24:41) pick grid -3792.63 4078.03
+\t (00:24:41) last pick:  -3792.60 4078.00
+\i (00:24:43) pick grid 4523.12 1338.87
+\t (00:24:43) last pick:  4523.10 1338.90
+\i (00:24:44) zoom out 1 
+\i (00:24:44) setwindow pcb
+\i (00:24:44) zoom out 6783.23 1584.54
+\i (00:24:44) trapsize 6142
+\i (00:24:44) zoom out 1 
+\i (00:24:44) setwindow pcb
+\i (00:24:44) zoom out 8122.11 1068.64
+\i (00:24:44) trapsize 6142
+\i (00:24:45) pick grid 2508.67 1977.60
+\t (00:24:45) last pick:  2508.70 1977.60
+\i (00:24:45) zoom out 1 
+\i (00:24:45) setwindow pcb
+\i (00:24:45) zoom out 5235.55 1609.10
+\i (00:24:45) trapsize 6142
+\i (00:24:45) zoom out 1 
+\i (00:24:45) setwindow pcb
+\i (00:24:45) zoom out 5763.73 1473.99
+\i (00:24:45) trapsize 6142
+\i (00:24:46) dimension edit 
+\t (00:24:46) Pick an element or point to dimension ...
+\i (00:24:47) prepopup -3989.16 2432.08
+\i (00:24:56) pop dyn_option_select '@:@Move text' 
+\i (00:24:56) zoom out 1 
+\i (00:24:56) setwindow pcb
+\i (00:24:56) zoom out 1071.53 3488.44
+\i (00:24:56) trapsize 6142
+\i (00:24:57) pick grid 4277.45 1400.29
+\t (00:24:57) last pick:  4277.50 1400.30
+\i (00:24:57) pick grid 457.37 2604.04
+\t (00:24:57) last pick:  457.40 2604.00
+\i (00:24:58) pick grid -1286.85 2628.61
+\t (00:24:58) last pick:  -1286.80 2628.60
+\i (00:24:59) pick grid -1286.85 2628.61
+\t (00:24:59) last pick:  -1286.80 2628.60
+\i (00:24:59) pick grid -2748.56 3463.87
+\t (00:24:59) last pick:  -2748.60 3463.90
+\i (00:24:59) prepopup -2748.56 3463.87
+\i (00:25:07) pop dyn_option_select '@:@Edit leaders' 
+\i (00:25:09) pick grid -1262.28 3377.89
+\t (00:25:09) last pick:  -1262.30 3377.90
+\i (00:25:20) ncdrill legend 
+   (00:25:20) Loading mfg.cxt 
+\i (00:25:22) setwindow form.nc_drilllegend
+\i (00:25:22) FORM nc_drilllegend cancel  
+   (00:25:22) Loading axlcore.cxt 
+\i (00:25:22) setwindow pcb
+\i (00:25:22) etchedit 
+\i (00:25:23) zoom out 1 
+\i (00:25:23) setwindow pcb
+\i (00:25:23) zoom out 5198.70 1388.00
+\i (00:25:23) trapsize 6142
+\i (00:25:23) pick grid 4056.36 1584.54
+\t (00:25:23) last pick:  4056.40 1584.50
+\i (00:25:24) zoom in 1 
+\i (00:25:24) setwindow pcb
+\i (00:25:24) zoom in -463.87 1719.65
+\i (00:25:24) trapsize 3071
+\i (00:25:24) zoom in 1 
+\i (00:25:24) setwindow pcb
+\i (00:25:24) zoom in -1329.48 1645.96
+\i (00:25:24) trapsize 1535
+\i (00:25:24) zoom in 1 
+\i (00:25:24) setwindow pcb
+\i (00:25:24) zoom in -1249.63 1593.76
+\i (00:25:24) trapsize 768
+\i (00:25:24) zoom in 1 
+\i (00:25:24) setwindow pcb
+\i (00:25:24) zoom in -1189.75 1573.80
+\i (00:25:24) trapsize 384
+\i (00:25:24) zoom out 1 
+\i (00:25:24) setwindow pcb
+\i (00:25:24) zoom out -1155.20 1573.03
+\i (00:25:24) trapsize 768
+\i (00:25:24) zoom out 1 
+\i (00:25:24) setwindow pcb
+\i (00:25:24) zoom out -1104.53 1592.99
+\i (00:25:24) trapsize 1535
+\i (00:25:24) zoom out 1 
+\i (00:25:24) setwindow pcb
+\i (00:25:24) zoom out -1027.75 1632.92
+\i (00:25:24) trapsize 3071
+\i (00:25:24) zoom out 1 
+\i (00:25:24) setwindow pcb
+\i (00:25:24) zoom out -585.55 1743.47
+\i (00:25:24) trapsize 6142
+\i (00:25:26) setwindow form.mini
+\i (00:25:26) FORM mini subcolor 0 
+\i (00:25:27) FORM mini subcolor 1 
+\i (00:25:27) FORM mini subcolor 0 
+\i (00:25:28) FORM mini subcolor 1 
+\i (00:25:28) setwindow pcb
+\i (00:25:28) pick grid 2766.62 3083.09
+\t (00:25:28) last pick:  2766.60 3083.10
+\i (00:25:31) setwindow form.mini
+\i (00:25:31) FORM mini subclass ASSEMBLY_DETAIL 
+\i (00:25:37) FORM mini subclass TOOLING_CORNERS 
+\i (00:25:38) FORM mini subcolor 0 
+\i (00:25:38) FORM mini subcolor 1 
+\i (00:25:39) FORM mini subcolor 0 
+\i (00:25:39) FORM mini subcolor 1 
+\i (00:25:40) FORM mini subcolor 0 
+\i (00:25:41) setwindow pcb
+\i (00:25:41) pick grid 2496.39 2898.84
+\t (00:25:41) last pick:  2496.40 2898.80
+\i (00:25:41) prepopup 2496.39 2898.84
+\t (00:25:49) last pick:  7864.16 2604.04
+\w (00:25:49) WARNING(SPMHUT-40): Pick is outside the extent of the drawing ... pick again.
+\i (00:25:49) drag_start grid 5579.48 2100.43
+\i (00:25:50) drag_stop -598.99 3684.97
+\i (00:25:58) setwindow form.mini
+\i (00:25:58) FORM mini class MANUFACTURING 
+\i (00:26:00) FORM mini subclass NCDRILL_FIGURE 
+\i (00:26:01) FORM mini subcolor 0 
+\i (00:26:01) FORM mini subcolor 1 
+\i (00:26:03) FORM mini subcolor 0 
+\i (00:26:04) FORM mini subcolor 1 
+\i (00:26:04) FORM mini subcolor 0 
+\i (00:26:05) FORM mini subcolor 1 
+\i (00:26:05) FORM mini subcolor 0 
+\i (00:26:05) FORM mini subcolor 1 
+\i (00:26:07) FORM mini subclass NCDRILL_LEGEND 
+\i (00:26:08) FORM mini subcolor 0 
+\i (00:26:10) FORM mini subcolor 1 
+\i (00:26:10) FORM mini subcolor 0 
+\i (00:26:14) FORM mini subclass XSECTION_CHART 
+\i (00:26:15) FORM mini subcolor 0 
+\i (00:26:19) FORM mini subclass NCDRILL_FIGURE 
+\i (00:26:20) FORM mini subcolor 0 
+\i (00:26:21) FORM mini subcolor 1 
+\i (00:26:21) FORM mini subcolor 0 
+\i (00:26:22) FORM mini subcolor 1 
+\i (00:26:22) FORM mini subcolor 0 
+\i (00:26:23) FORM mini subcolor 1 
+\i (00:26:23) setwindow pcb
+\i (00:26:23) zoom in 1 
+\i (00:26:23) setwindow pcb
+\i (00:26:23) zoom in -132.23 -1928.47
+\i (00:26:23) trapsize 3071
+\i (00:26:24) zoom in 1 
+\i (00:26:24) setwindow pcb
+\i (00:26:24) zoom in -1378.61 -1953.03
+\i (00:26:24) trapsize 1535
+\i (00:26:24) zoom in 1 
+\i (00:26:24) setwindow pcb
+\i (00:26:24) zoom in -801.30 -1160.76
+\i (00:26:24) trapsize 768
+\i (00:26:24) zoom in 1 
+\i (00:26:24) setwindow pcb
+\i (00:26:24) zoom in -787.48 -1146.94
+\i (00:26:24) trapsize 384
+\i (00:26:24) zoom in 1 
+\i (00:26:24) setwindow pcb
+\i (00:26:24) zoom in -781.34 -1144.64
+\i (00:26:24) trapsize 192
+\i (00:26:24) zoom out 1 
+\i (00:26:24) setwindow pcb
+\i (00:26:24) zoom out -766.36 -1143.49
+\i (00:26:24) trapsize 384
+\i (00:26:26) setwindow form.mini
+\i (00:26:26) FORM mini subcolor 0 
+\i (00:26:26) FORM mini subcolor 1 
+\i (00:26:28) FORM mini subcolor 0 
+\i (00:26:28) FORM mini subcolor 1 
+\i (00:26:29) FORM mini subcolor 0 
+\i (00:26:30) FORM mini subcolor 1 
+\i (00:26:33) FORM mini subclass NCDRILL_LEGEND 
+\i (00:26:34) FORM mini subcolor 1 
+\i (00:26:35) FORM mini subcolor 0 
+\i (00:26:35) FORM mini subcolor 1 
+\i (00:26:36) FORM mini subcolor 0 
+\i (00:26:36) FORM mini subcolor 1 
+\i (00:26:36) FORM mini subcolor 0 
+\i (00:26:37) FORM mini subcolor 1 
+\i (00:26:38) FORM mini subclass NCLEGEND-1-4 
+\i (00:26:39) FORM mini subcolor 0 
+\i (00:26:40) setwindow pcb
+\i (00:26:40) zoom out 1 
+\i (00:26:40) setwindow pcb
+\i (00:26:40) zoom out -258.92 -1213.34
+\i (00:26:40) trapsize 768
+\i (00:26:40) zoom out 1 
+\i (00:26:40) setwindow pcb
+\i (00:26:40) zoom out -261.98 -1221.02
+\i (00:26:40) trapsize 1535
+\i (00:26:40) zoom out 1 
+\i (00:26:40) setwindow pcb
+\i (00:26:40) zoom out -265.05 -1224.10
+\i (00:26:40) trapsize 3071
+\i (00:26:40) zoom out 1 
+\i (00:26:40) setwindow pcb
+\i (00:26:40) zoom out 2619.23 -1224.09
+\i (00:26:40) trapsize 6142
+\i (00:26:41) zoom in 1 
+\i (00:26:41) setwindow pcb
+\i (00:26:41) zoom in -1679.91 -835.26
+\i (00:26:41) trapsize 3071
+\i (00:26:41) zoom in 1 
+\i (00:26:41) setwindow pcb
+\i (00:26:41) zoom in -1894.51 -749.28
+\i (00:26:41) trapsize 1535
+\i (00:26:44) pick grid 196.72 -985.73
+\t (00:26:44) last pick:  196.70 -985.70
+\i (00:26:44) zoom out 1 
+\i (00:26:44) setwindow pcb
+\i (00:26:44) zoom out 494.58 -654.08
+\i (00:26:44) trapsize 3071
+\i (00:26:46) zoom in 1 
+\i (00:26:46) setwindow pcb
+\i (00:26:46) zoom in -248.91 -9.21
+\i (00:26:46) trapsize 1535
+\i (00:26:47) zoom out 1 
+\i (00:26:47) setwindow pcb
+\i (00:26:47) zoom out 270.06 -178.10
+\i (00:26:47) trapsize 3071
+\i (00:26:47) zoom in 1 
+\i (00:26:47) setwindow pcb
+\i (00:26:47) zoom in -721.82 1240.62
+\i (00:26:47) trapsize 1535
+\i (00:26:48) zoom in 1 
+\i (00:26:48) setwindow pcb
+\i (00:26:48) zoom in -721.82 1243.69
+\i (00:26:48) trapsize 768
+\i (00:26:48) zoom in 1 
+\i (00:26:48) setwindow pcb
+\i (00:26:48) zoom in -721.82 1243.69
+\i (00:26:48) trapsize 384
+\i (00:26:48) zoom out 1 
+\i (00:26:48) setwindow pcb
+\i (00:26:48) zoom out -722.59 1232.94
+\i (00:26:48) trapsize 768
+\i (00:26:48) zoom out 1 
+\i (00:26:48) setwindow pcb
+\i (00:26:48) zoom out -722.58 1232.94
+\i (00:26:48) trapsize 1535
+\i (00:26:49) zoom in 1 
+\i (00:26:49) setwindow pcb
+\i (00:26:49) zoom in 131.11 -182.69
+\i (00:26:49) trapsize 768
+\i (00:26:49) zoom in 1 
+\i (00:26:49) setwindow pcb
+\i (00:26:49) zoom in 131.11 -182.69
+\i (00:26:49) trapsize 384
+\i (00:26:50) zoom in 1 
+\i (00:26:50) setwindow pcb
+\i (00:26:50) zoom in 23.64 -44.50
+\i (00:26:50) trapsize 192
+\i (00:26:50) zoom in 1 
+\i (00:26:50) setwindow pcb
+\i (00:26:50) zoom in 23.64 -44.50
+\i (00:26:50) trapsize 96
+\i (00:26:50) zoom out 1 
+\i (00:26:50) setwindow pcb
+\i (00:26:50) zoom out 23.64 -44.49
+\i (00:26:50) trapsize 192
+\i (00:26:50) zoom out 1 
+\i (00:26:50) setwindow pcb
+\i (00:26:50) zoom out 26.71 -44.50
+\i (00:26:50) trapsize 384
+\i (00:26:50) zoom out 1 
+\i (00:26:50) setwindow pcb
+\i (00:26:50) zoom out 52.04 -46.03
+\i (00:26:50) trapsize 768
+\i (00:26:50) zoom out 1 
+\i (00:26:50) setwindow pcb
+\i (00:26:50) zoom out 121.13 -49.10
+\i (00:26:50) trapsize 1535
+\i (00:26:55) 3d_viewer 
+\i (00:26:55) setwindow pcb3D
+\i (00:26:55) trapsize 1535
+\i (00:26:55) setwindow pcb
+\i (00:26:55) etchedit 
+\i (00:27:11) zoom out 1 
+\i (00:27:11) setwindow pcb
+\i (00:27:11) zoom out -1358.97 -291.70
+\i (00:27:11) trapsize 3071
+\i (00:27:13) save 
+\i (00:27:15) fillin yes 
+\i (00:27:15) etchedit 
+\i (00:27:20) artwork 
+\i (00:27:21) setwindow form.film_control
+\i (00:27:21) FORM film_control select_all  
+\i (00:27:24) FORM film_control general_parameters  
+\i (00:27:29) FORM film_control filename_suffix _ 
+\i (00:27:32) FORM film_control filename_prefix Sleeptrack2_Phase_3 
+\i (00:27:37) FORM film_control filename_suffix _IMUEXT 
+\i (00:27:37) FORM film_control film_control  
+\i (00:27:40) FORM film_control general_parameters  
+\i (00:27:42) FORM film_control film_control  
+\i (00:27:42) FORM film_control domain_setting  
+\i (00:27:46) setwindow form.film_domain
+\i (00:27:46) FORM film_domain close  
+\i (00:27:48) setwindow form.film_control
+\i (00:27:48) FORM film_control select_all  
+\i (00:27:51) FORM film_control apertures  
+\i (00:27:53) setwindow form.apt_wheels
+\i (00:27:53) FORM apt_wheels 1 edit  
+\i (00:27:55) setwindow form.apt_stations
+\i (00:27:55) FORM apt_stations auto 'Without Rotation' 
+\i (00:27:56) FORM apt_stations apt_done  
+\i (00:27:57) setwindow form.apt_wheels
+\i (00:27:57) FORM apt_wheels done  
+\t (00:27:57) Saving aperture: C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/art_aper.txt
+\i (00:28:00) setwindow form.film_control
+\i (00:28:00) FORM film_control create  
+\t (00:28:00) Checking db records
+\t (00:28:00)     checking for orphans...
+\t (00:28:01)     Checked 100 percent
+\t (00:28:01) Done dbdoctor.
+\e (00:28:01) Database has errors; artwork generation canceled.  Please run dbdoctor.
+\i (00:28:03) fillin confirm
+\i (00:28:07) setwindow pcb
+\i (00:28:07) db diary 
+\i (00:28:09) setwindow form.db_diary
+\i (00:28:09) FORM db_diary close  
+   (00:28:09) Loading signal.cxt 
+   (00:28:09) Loading apt.cxt 
+\i (00:28:10) setwindow pcb
+\i (00:28:10) etchedit 
+\i (00:28:12) dbdoctor 
+\i (00:28:13) setwindow form.dbdoctor_allegro
+\i (00:28:13) FORM dbdoctor_allegro drc YES 
+\i (00:28:14) FORM dbdoctor_allegro shapes YES 
+\i (00:28:15) FORM dbdoctor_allegro execute  
+\t (00:28:15) Dbdoctor in progress - wait...
+\t (00:28:15) Checking db records
+\t (00:28:15)     checking for orphans...
+\t (00:28:15)     Checked 100 percent
+\t (00:28:15) Regenerating DRC
+\t (00:28:15)   Original DRC errors: 0
+\t (00:28:15) Performing DRC...
+\t (00:28:15) Multithreaded DRC update (4 threads).
+\t (00:28:16) No DRC errors detected.
+\t (00:28:16)   Updated DRC errors:  0
+\t (00:28:16) Done dbdoctor.
+\t (00:28:16) Dbdoctor completed.
+\i (00:28:19) FORM dbdoctor_allegro close  
+\i (00:28:19) setwindow pcb
+\i (00:28:19) etchedit 
+\i (00:28:22) artwork 
+\i (00:28:24) setwindow form.film_control
+\i (00:28:24) FORM film_control select_all  
+\i (00:28:25) FORM film_control create  
+\t (00:28:25) Checking db records
+\t (00:28:25)     checking for orphans...
+\t (00:28:25)     Checked 100 percent
+\t (00:28:25) Done dbdoctor.
+\t (00:28:25) Starting Create artwork films...
+\w (00:28:28) WARNING(SPMHGE-269): artwork had warnings, use Viewlog to review the log file.
+\w (00:28:29) Artwork generated with warnings.
+\i (00:28:37) setwindow text
+\i (00:28:37) close 
+\i (00:28:40) setwindow pcb
+\i (00:28:40) pick grid 1318.73 1520.05
+\t (00:28:40) last pick:  1318.70 1520.10
+\i (00:28:48) trapsize 7948
+\i (00:35:41) trapsize 3071
+\i (00:35:42) zoom out 1 
+\i (00:35:42) setwindow pcb
+\i (00:35:42) zoom out 3720.06 -3052.41
+\i (00:35:42) trapsize 6142
+\i (00:35:44) zoom in 1 
+\i (00:35:44) setwindow pcb
+\i (00:35:44) zoom in -4333.09 -2481.21
+\i (00:35:44) trapsize 3071
+\i (00:35:44) zoom in 1 
+\i (00:35:44) setwindow pcb
+\i (00:35:44) zoom in -4333.09 -2481.21
+\i (00:35:44) trapsize 1535
+\i (00:35:45) zoom out 1 
+\i (00:35:45) setwindow pcb
+\i (00:35:45) zoom out -3887.82 -2530.34
+\i (00:35:45) trapsize 3071
+\i (00:35:52) ncdrill param 
+\i (00:35:58) setwindow form.nc_parameters
+\i (00:35:58) FORM nc_parameters browse  
+\i (00:36:04) fillin "menu_cancel"
+\i (00:36:05) FORM nc_parameters cancel  
+\i (00:36:15) setwindow pcb
+\i (00:36:15) nctape_full 
+\i (00:36:24) setwindow form.nc_drill
+\i (00:36:24) FORM nc_drill scale 1.00 
+\i (00:36:24) FORM nc_drill parameters  
+\i (00:36:29) setwindow form.nc_parameters
+\i (00:36:29) FORM nc_parameters browse  
+\i (00:36:43) fillin "menu_cancel"
+\i (00:36:46) FORM nc_parameters done  
+\i (00:36:47) setwindow form.nc_drill
+\i (00:36:47) FORM nc_drill execute  
+\t (00:36:47) Starting Generating NC Drill...
+\i (00:36:52) FORM nc_drill browse  
+\i (00:36:57) fillin "menu_cancel"
+\i (00:39:57) setwindow pcb
+\i (00:39:57) exit 
+\e (00:39:57) Do you want to save the changes you made to C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Hardware Files/SLEEPTRACK2_PHASE3_IMU.brd?
+\i (00:39:58) fillin yes 
+\t (00:39:59)     Journal end - Sat Dec 03 15:24:13 2016

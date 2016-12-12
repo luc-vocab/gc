@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : SLEEPTRACK2_PHASE3_v2.brd                     )
 (    Software Version : 17.0P009                                      )
-(    Date/Time        : Sat Oct 29 00:06:56 2016                      )
+(    Date/Time        : Sat Oct 29 00:35:14 2016                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -15,7 +15,7 @@
  NC PARAMETERS
  -------------
 
- FORMAT   		2.5
+ FORMAT   		2.4
  MACHINE-OFFSET		x:0.000000	y:0.000000
  FEEDRATE		1
  COORDINATES		ABSOLUTE
@@ -35,8 +35,8 @@
  ENHANCED_EXCELLON	YES
  SCALE			1.000000
 
- WARNING(SPMHMF-358): Design precision is the same as that of the drill output file data.
- WARNING(SPMHMF-359): Data rounding errors may still be possible.
+ WARNING(SPMHMF-360): Design precision is greater than that of the drill output file data.
+ WARNING(SPMHMF-361): Data rounding errors are very possible.
  WARNING(SPMHMF-368): Cannot find NC Drill tool file 'nc_tools.txt'
  WARNING(SPMHMF-369): ... will auto-generate tool file 'nc_tools_auto.txt'.
 
@@ -52,12 +52,12 @@
          149.50  N        T05            0.000000     0.000000
 
 
- Drill files being output to directory 'C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Documents/Artwork/V1 - Copy/Drill' ...
+ Drill files being output to directory 'C:/Users/Madison/Desktop/gc/Photon_Dev/Projects/Sleeptrack2_Phase 3/Documents/Artwork/V2' ...
 
 
 
-     'SLEEPTRACK2_PHASE3-1-4.drl' created for holes connecting TOP and BOTTOM
-     ------------------------------------------------------------------------
+     'SLEEPTRACK2_PHASE3_v2-1-4.drl' created for holes connecting TOP and BOTTOM
+     ---------------------------------------------------------------------------
 
      Tool  Num     Size      +/- Tolerance     Plating   Quantity
 
