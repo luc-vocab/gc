@@ -1,0 +1,5 @@
+Removed Member From Class: ClassName=P02_Photon Member=R8
+Added Component: Designator=P1(S2B-PH-K-S)
+Added Pin To Net: NetName=NetP1_1 Pin=P1-1
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Member To Class: ClassName=P09_DRV2605L Motor Driver Member=Component P1 S2B-PH-K-S

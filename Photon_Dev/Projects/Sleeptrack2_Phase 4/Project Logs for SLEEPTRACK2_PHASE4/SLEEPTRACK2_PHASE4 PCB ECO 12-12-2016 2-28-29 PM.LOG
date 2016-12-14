@@ -1,0 +1,17 @@
+Change Component Designator: OldDesignator=D? NewDesignator=D1
+Change Component Designator: OldDesignator=SW? NewDesignator=SW1
+Added Component: Designator=J2(header4)
+Added Component: Designator=R7(RESC402N)
+Added Component: Designator=R8(RESC402N)
+Added Pin To Net: NetName=PHOTON_3V3 Pin=J2-1
+Added Pin To Net: NetName=D0 Pin=J2-2
+Added Pin To Net: NetName=D1 Pin=J2-3
+Added Pin To Net: NetName=PHOTON_GND Pin=J2-4
+Added Pin To Net: NetName=PHOTON_3V3 Pin=R7-1
+Added Pin To Net: NetName=D0 Pin=R7-2
+Added Pin To Net: NetName=PHOTON_3V3 Pin=R8-1
+Added Pin To Net: NetName=D1 Pin=R8-2
+Change Class Name : Old Net Name=P06_Audio New Net Name=P06_Audio 
+Added Class: Name=IMU External
+Change Room Name: Old Name=P06_Audio New Name=P06_Audio 
+Added Room: Name=IMU External

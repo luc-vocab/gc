@@ -1,0 +1,12 @@
+Added Component: Designator=U?(Photon P0)
+Added Pin To Net: NetName=PHOTON_VIN Pin=U?-1
+Added Pin To Net: NetName=PHOTON_GND Pin=U?-2
+Added Pin To Net: NetName=A4 Pin=U?-8
+Added Pin To Net: NetName=PHOTON_A1 Pin=U?-11
+Added Pin To Net: NetName=D0 Pin=U?-13
+Added Pin To Net: NetName=D1 Pin=U?-14
+Added Pin To Net: NetName=PHOTON_D4 Pin=U?-17
+Added Pin To Net: NetName=PHOTON_GND Pin=U?-21
+Added Pin To Net: NetName=PHOTON_3V3 Pin=U?-22
+Added Pin To Net: NetName=PHOTON_3V3 Pin=U?-24
+Added Member To Class: ClassName=P02_Photon Member=Component U? photon_headerless

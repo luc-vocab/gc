@@ -1,0 +1,24 @@
+Change Component Designator: OldDesignator=P1 NewDesignator=J5
+Change Component Designator: OldDesignator=U? NewDesignator=U3
+Added Component: Designator=D2(CAPC0402N)
+Added Component: Designator=J6(header4)
+Added Component: Designator=R9(RESC402N)
+Added Component: Designator=R10(RESC402N)
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=NetD2_2 Pin=D2-2
+Added Pin To Net: NetName=PHOTON_3V3 Pin=J6-1
+Added Pin To Net: NetName=D0 Pin=J6-2
+Added Pin To Net: NetName=D1 Pin=J6-3
+Added Pin To Net: NetName=PHOTON_GND Pin=J6-4
+Added Pin To Net: NetName=PHOTON_3V3 Pin=R9-1
+Added Pin To Net: NetName=D0 Pin=R9-2
+Added Pin To Net: NetName=PHOTON_3V3 Pin=R10-1
+Added Pin To Net: NetName=D1 Pin=R10-2
+Change Net Name : Old Net Name=NetP1_1 New Net Name=NetJ5_1
+Change Net Name : Old Net Name=NetP1_2 New Net Name=NetJ5_2
+Change Class Name : Old Net Name=P06_Audio New Net Name=P06_Audio 
+Added Member To Class: ClassName=P03_Battery Circuit Member=Component D2 RED LED
+Added Member To Class: ClassName=IMU External Member=Component J6 HEADER 4/SM
+Added Member To Class: ClassName=IMU External Member=Component R9 10k
+Added Member To Class: ClassName=IMU External Member=Component R10 10k
+Change Room Name: Old Name=P06_Audio New Name=P06_Audio 
