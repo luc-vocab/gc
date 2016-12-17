@@ -62,13 +62,12 @@ void GcData::read_battery_charge() {
     m_gc_client.battery_charge(battery_charge);
 }
 
-float GcData::get_gyro_max() {
-  if(! USE_IMU_1_BNO055) {
-    return 0.0;
-  }
-  // retrieve the highest gyro rate on 3 axes
-  imu::Vector<3> gyro = m_bno_1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-  return max(max(gyro.x(), gyro.y()), gyro.z());
+void GcData::get_gyro_1(data_point *dp) {
+  int16_t gyro_values[3];
+  m_bno_1.getRawVector(Adafruit_BNO055::VECTOR_GYROSCOPE, gyro_values);
+  dp->gyro1_x = gyro_values[0];
+  dp->gyro1_y = gyro_values[1];
+  dp->gyro1_z = gyro_values[2];
 }
 
 void GcData::get_accel_1(int16_t *accel_values) {
@@ -102,49 +101,6 @@ void GcData::get_accel_2(float *accel_values) {
     accel_values[1] = m_mma_2.cy * 10.0;
     accel_values[2] = m_mma_2.cz * 10.0;
   }
-}
-
-
-uint16_t GcData::read_emg() {
-  if(! USE_EMG) {
-    // emg disabled
-    return 0;
-  }
-
-  if(m_simulation_mode) {
-    unsigned long milliseconds = millis();
-    unsigned long seconds = milliseconds / 1000;
-    uint16_t minRand;
-    uint16_t maxRand;
-    if(seconds % 60 == 0 || seconds % 61 == 0 || seconds % 62 == 0 || seconds % 63 == 0
-       || seconds % 64 == 0 || seconds % 65 == 0
-    ) {
-      // every N seconds
-      minRand = 350;
-      maxRand = 600;
-    }  else {
-      minRand = 85;
-      maxRand = 125;
-    }
-    return rand() % (maxRand-minRand+1) + minRand;
-  } else {
-    return analogRead(A0);
-  }
-}
-
-void GcData::emg_beep(uint16_t emg_value) {
-  if(! m_emg_beep) {
-    return;
-  }
-
-  if(emg_value > 1000) {
-    tone(BUZZER_PIN, 2000, 80);
-  } else if(emg_value > 500) {
-    tone(BUZZER_PIN, 1200, 80);
-  } else if(emg_value > 300) {
-    tone(BUZZER_PIN, 800, 80);
-  }
-
 }
 
 void GcData::report_battery_charge() {
@@ -220,13 +176,7 @@ void GcData::collect_data(bool upload_requested) {
   // so should be OK
   dp.milliseconds = millis();
 
-  dp.emg_value = read_emg();
-  emg_beep(dp.emg_value);
-
-  float gyro_max = get_gyro_max();
-  int16_t gyro_value = gyro_max * 100.0;
-  dp.gyro = gyro_value;
-
+  get_gyro_1(&dp);
 
   int16_t accel1_values[3];
   float accel2_values[3];

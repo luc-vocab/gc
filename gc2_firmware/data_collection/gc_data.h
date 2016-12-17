@@ -45,11 +45,9 @@ private:
   void report_battery_charge();
   void read_battery_charge();
   bool need_report_battery_charge();
-  float get_gyro_max();
+  void get_gyro_1(data_point *dp);
   void get_accel_1(int16_t *accel_values);
   void get_accel_2(float *accel_values);
-  uint16_t read_emg();
-  void emg_beep(uint16_t emg_value);
   bool tap_received();
   bool fast_movement(const data_point &dp1, const data_point &dp2);
 
