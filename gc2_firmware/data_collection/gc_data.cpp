@@ -194,8 +194,6 @@ void GcData::collect_data(bool upload_requested) {
 
   dp.flags1 = 0;
   dp.flags2 = 0;
-  dp.flags3 = 0;
-  dp.flags4 = 0;
 
   uint32_t current_millis = millis();
   // check whether fast movement needs to be turned on or off

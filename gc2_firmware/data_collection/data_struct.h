@@ -5,7 +5,7 @@
 struct data_point {
   // eventually this will overflow, but the device is only supposed to stay on for one night, so OK
   uint32_t milliseconds;
-  
+
   int16_t gyro1_x;
   int16_t gyro1_y;
   int16_t gyro1_z;
@@ -20,8 +20,6 @@ struct data_point {
 
   uint8_t flags1;
   uint8_t flags2;
-  uint8_t flags3;
-  uint8_t flags4;
 };
 
 
