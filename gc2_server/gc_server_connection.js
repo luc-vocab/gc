@@ -355,7 +355,7 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         var flags2 = data.readUInt8(offset); offset += 1;
 
         
-        self.log_info("datapoint: ",
+        self.log_debug("datapoint: ",
                        "time:", datetime,
                        "millisecond diff:", diff,
                        "gyro_1_x", gyro1_x,
@@ -472,9 +472,9 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                 key: "imu1_sd",
                 tags: tags,
                 fields: {
-                    gyro_1_x: new influent.Value(gyro1_x, influent.type.FLOAT64),
-                    gyro_1_y: new influent.Value(gyro1_y, influent.type.FLOAT64),
-                    gyro_1_z: new influent.Value(gyro1_z, influent.type.FLOAT64),
+                    gyro_x: new influent.Value(gyro1_x, influent.type.FLOAT64),
+                    gyro_y: new influent.Value(gyro1_y, influent.type.FLOAT64),
+                    gyro_z: new influent.Value(gyro1_z, influent.type.FLOAT64),
                 },                
                 timestamp: timestamp_nanos
             });
@@ -482,9 +482,9 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                 key: "imu2_sd",
                 tags: tags,
                 fields: {
-                    accel_2_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
-                    accel_2_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
-                    accel_2_z: new influent.Value(accel_2_z, influent.type.FLOAT64),            
+                    accel_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
+                    accel_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
+                    accel_z: new influent.Value(accel_2_z, influent.type.FLOAT64),            
                 },                
                 timestamp: timestamp_nanos
             });            
