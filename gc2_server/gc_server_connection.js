@@ -385,6 +385,40 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
             });
         
         }
+        
+
+        var tags = {username: self.user_name,
+                    env:  self.config.env};
+        
+        if(push_to_influxdb) {
+            var timestamp_nanos = datetime.getTime().toString() + "000000";
+            self.measurements.push({
+                key: "imu1",
+                tags: tags,
+                fields: {
+                    gyro_x: new influent.Value(gyro1_x, influent.type.INT64),
+                    gyro_y: new influent.Value(gyro1_y, influent.type.INT64),
+                    gyro_z: new influent.Value(gyro1_z, influent.type.INT64),                    
+                    accel_x: new influent.Value(accel_1_x, influent.type.INT64),
+                    accel_y: new influent.Value(accel_1_y, influent.type.INT64),
+                    accel_z: new influent.Value(accel_1_z, influent.type.INT64),
+                },
+                timestamp: timestamp_nanos
+            });
+            
+            self.measurements.push({
+                key: "imu2",
+                tags: tags,
+                fields: {
+                    accel_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
+                    accel_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
+                    accel_z: new influent.Value(accel_2_z, influent.type.FLOAT64),            
+                    
+                },
+                timestamp: timestamp_nanos
+            });            
+        }        
+        
         return offset;
     };
 
