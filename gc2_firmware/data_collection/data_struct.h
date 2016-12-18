@@ -22,5 +22,17 @@ struct data_point {
   uint8_t flags2;
 };
 
+struct std_dev {
+    uint32_t milliseconds;
+
+    float gyro1_x;
+    float gyro1_y;
+    float gyro1_z;
+
+    float imu2_accel_x;
+    float imu2_accel_y;
+    float imu2_accel_z;
+};
+
 
 #endif /* _GC_DATA_STRUCT_H */

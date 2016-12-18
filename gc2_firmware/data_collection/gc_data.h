@@ -18,6 +18,7 @@
 
 #define REPORT_BATTERY_INTERVAL 120000 // every 2mn
 
+#define STD_DEV_SAMPLES 20
 
 #define FAST_MOVEMENT_BNO055_LINEAR_ACCEL 30
 #define FAST_MOVEMENT_MMA8452_ACCEL 300
@@ -50,6 +51,7 @@ private:
   void get_accel_2(float *accel_values);
   bool tap_received();
   bool fast_movement(const data_point &dp1, const data_point &dp2);
+  void process_stddev(const data_point &dp);
 
   bool m_simulation_mode;
   bool m_emg_beep;
@@ -69,6 +71,9 @@ private:
   data_point m_last_data_point;
   uint32_t m_fast_movement_start_millis;
   uint32_t m_last_datapoint_time;
+
+  char m_num_data_points;
+  data_point m_data_points[STD_DEV_SAMPLES];
 };
 
 

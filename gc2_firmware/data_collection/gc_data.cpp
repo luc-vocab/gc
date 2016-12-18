@@ -17,8 +17,10 @@ GcData::GcData(GcClient &gc_client) :
     m_emg_beep(false),
     m_tap_to_upload(false),
     m_fast_movement_start_millis(0),
-    m_last_datapoint_time(0){
+    m_last_datapoint_time(0),
+    m_num_data_points(0){
       memset(&m_last_data_point, 0, sizeof(data_point));
+      memset(m_data_points, 0, sizeof(data_point) * STD_DEV_SAMPLES);
 }
 
 void GcData::init() {
@@ -167,6 +169,76 @@ bool GcData::fast_movement(const data_point &dp1, const data_point &dp2)
   return false;
 }
 
+void GcData::process_stddev(const data_point &dp)
+{
+  if(m_num_data_points < STD_DEV_SAMPLES)
+  {
+    m_data_points[m_num_data_points] = dp; // copy
+    m_num_data_points++;
+  } else {
+    // time to compute stddev
+
+    // 1. sum
+    std_dev sums;
+    memset(&sums, 0, sizeof(std_dev));
+    for(int i = 0; i < STD_DEV_SAMPLES;  i++)
+    {
+      sums.gyro1_x += m_data_points[i].gyro1_x;
+      sums.gyro1_y += m_data_points[i].gyro1_y;
+      sums.gyro1_z += m_data_points[i].gyro1_z;
+
+      sums.imu2_accel_x += m_data_points[i].imu2_accel_x;
+      sums.imu2_accel_y += m_data_points[i].imu2_accel_y;
+      sums.imu2_accel_z += m_data_points[i].imu2_accel_z;
+    }
+    // 2. means
+    std_dev means;
+    memset(&means, 0, sizeof(std_dev));
+    means.gyro1_x = sums.gyro1_x / STD_DEV_SAMPLES;
+    means.gyro1_y = sums.gyro1_y / STD_DEV_SAMPLES;
+    means.gyro1_z = sums.gyro1_z / STD_DEV_SAMPLES;
+    means.imu2_accel_x = sums.imu2_accel_x / STD_DEV_SAMPLES;
+    means.imu2_accel_y = sums.imu2_accel_y / STD_DEV_SAMPLES;
+    means.imu2_accel_z = sums.imu2_accel_z / STD_DEV_SAMPLES;
+
+    // 3. deviations
+    std_dev deviations;
+    memset(&deviations, 0, sizeof(std_dev));
+    for(int i = 0; i < STD_DEV_SAMPLES;  i++)
+    {
+      deviations.gyro1_x = pow(m_data_points[i].gyro1_x - means.gyro1_x, 2);
+      deviations.gyro1_y = pow(m_data_points[i].gyro1_y - means.gyro1_y, 2);
+      deviations.gyro1_z = pow(m_data_points[i].gyro1_z - means.gyro1_z, 2);
+
+      deviations.imu2_accel_x = pow(m_data_points[i].imu2_accel_x - means.imu2_accel_x, 2);
+      deviations.imu2_accel_y = pow(m_data_points[i].imu2_accel_y - means.imu2_accel_y, 2);
+      deviations.imu2_accel_z = pow(m_data_points[i].imu2_accel_z - means.imu2_accel_z, 2);
+
+    }
+
+    // 4. std deviation
+    std_dev std_devs;
+    memset(&std_devs, 0, sizeof(std_dev));
+    std_devs.gyro1_x = sqrt(deviations.gyro1_x / STD_DEV_SAMPLES);
+    std_devs.gyro1_y = sqrt(deviations.gyro1_y / STD_DEV_SAMPLES);
+    std_devs.gyro1_z = sqrt(deviations.gyro1_z / STD_DEV_SAMPLES);
+    std_devs.imu2_accel_x = sqrt(deviations.imu2_accel_x / STD_DEV_SAMPLES);
+    std_devs.imu2_accel_y = sqrt(deviations.imu2_accel_y / STD_DEV_SAMPLES);
+    std_devs.imu2_accel_z = sqrt(deviations.imu2_accel_z / STD_DEV_SAMPLES);
+
+    DEBUG_LOG(String("stddev: ") +
+              " gyro1_x: " + String(std_devs.gyro1_x) +
+              " gyro1_y: " + String(std_devs.gyro1_y) +
+              " gyro1_z: " + String(std_devs.gyro1_z) +
+              " imu2_accel_x: " + String(std_devs.imu2_accel_x) +
+              " imu2_accel_y: " + String(std_devs.imu2_accel_y) +
+              " imu2_accel_z: " + String(std_devs.imu2_accel_z)
+            );
+
+    m_num_data_points = 0;
+  }
+}
+
 void GcData::collect_data(bool upload_requested) {
 
   data_point dp;
@@ -194,6 +266,8 @@ void GcData::collect_data(bool upload_requested) {
 
   dp.flags1 = 0;
   dp.flags2 = 0;
+
+  process_stddev(dp);
 
   uint32_t current_millis = millis();
   // check whether fast movement needs to be turned on or off
