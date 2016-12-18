@@ -10,6 +10,9 @@ var q = require('promised-io/promise');
 /* global UINT16_MARKER_END: true */
 /* global BYTE_HANDSHAKE_OK: true */
 /* global WRITE_INFLUXDB: true */
+/* global DATATYPE_DATAPOINT: true */
+/* global DATATYPE_STDDEV: true */
+
 
 
 MODE = {
@@ -31,6 +34,10 @@ UINT16_MARKER_HANDSHAKE = 39780;
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
 BYTE_HANDSHAKE_OK = 42;
+
+DATATYPE_DATAPOINT = 53;
+DATATYPE_STDDEV = 84;
+
 
 WRITE_INFLUXDB = true;
 
@@ -305,6 +312,21 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
     }
     
     this.read_data_packet = function(data, offset, print_data, publish, push_to_influxdb) {
+        var data_type = data.readUInt8(offset); offset += 1;
+        
+        if(data_type == DATATYPE_DATAPOINT)
+        {
+            return self.read_data_point(data, offset, print_data, publish, push_to_influxdb);
+        } else if (data_type == DATATYPE_STDDEV)
+        {
+            return self.read_stddev(data, offset, print_data, publish, push_to_influxdb);
+        } else {
+            self.log_error("unknown data_type");
+            return 0;
+        }
+    };
+    
+    this.read_data_point = function(data, offset, print_data, publish, push_to_influxdb) {
         var milliseconds = data.readUInt32LE(offset); offset += 4;
         
         var diff = milliseconds - self.starting_millis;
@@ -329,11 +351,12 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         var accel_2_y = accel_2_y_adj / 1000.0;
         var accel_2_z = accel_2_z_adj / 1000.0;        
         
-        var button_state = data.readUInt8(offset); offset += 1;
+        var flags1 = data.readUInt8(offset); offset += 1;
         var flags2 = data.readUInt8(offset); offset += 1;
 
         
-        self.log_debug("time:", datetime,
+        self.log_info("datapoint: ",
+                       "time:", datetime,
                        "millisecond diff:", diff,
                        "gyro_1_x", gyro1_x,
                        "gyro_1_y", gyro1_y,
@@ -343,8 +366,7 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                        "accel_1_z:", accel_1_z,
                        "accel_2_x:", accel_2_x,
                        "accel_2_y:", accel_2_y,
-                       "accel_2_z:", accel_2_z,                       
-                       "button_state:", button_state);    
+                       "accel_2_z:", accel_2_z);    
 
         if(publish) {
         
@@ -359,8 +381,50 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
                 "accel_2_x": accel_2_x,
                 "accel_2_y": accel_2_y,
                 "accel_2_z": accel_2_z,                
-                "button_state": button_state,
                 "datapoint_time": timestamp
+            });
+        
+        }
+        return offset;
+    };
+
+    this.read_stddev = function(data, offset, print_data, publish, push_to_influxdb) {
+        var milliseconds = data.readUInt32LE(offset); offset += 4;
+        
+        var diff = milliseconds - self.starting_millis;
+        var timestamp = self.starting_timestamp + diff;
+        var datetime = new Date(timestamp);
+        
+        // read gyro values
+        var gyro1_x = data.readFloatLE(offset); offset += 4;
+        var gyro1_y = data.readFloatLE(offset); offset += 4;
+        var gyro1_z = data.readFloatLE(offset); offset += 4;
+
+        // read accel values
+        var accel_2_x = data.readFloatLE(offset); offset += 4;
+        var accel_2_y = data.readFloatLE(offset); offset += 4;
+        var accel_2_z = data.readFloatLE(offset); offset += 4;
+
+        self.log_info("stddev: ",
+                       "time:", datetime,
+                       "millisecond diff:", diff,
+                       "gyro_1_x", gyro1_x,
+                       "gyro_1_y", gyro1_y,
+                       "gyro_1_z", gyro1_z,
+                       "accel_2_x:", accel_2_x,
+                       "accel_2_y:", accel_2_y,
+                       "accel_2_z:", accel_2_z);    
+
+        if(publish) {
+        
+            // publish to firebase
+            this.firebaseDeviceRef.update({
+                "gyro_1_x_sd": gyro1_x,
+                "gyro_1_y_sd": gyro1_y,
+                "gyro_1_z_sd": gyro1_z,                
+                "accel_2_x_sd": accel_2_x,
+                "accel_2_y_sd": accel_2_y,
+                "accel_2_z_sd": accel_2_z
             });
         
         }
@@ -371,21 +435,17 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         if(push_to_influxdb) {
             var timestamp_nanos = datetime.getTime().toString() + "000000";
             self.measurements.push({
-                key: "imu1",
+                key: "imu1_sd",
                 tags: tags,
                 fields: {
-                    gyro_1_x: new influent.Value(gyro1_x, influent.type.INT64),
-                    gyro_1_y: new influent.Value(gyro1_y, influent.type.INT64),
-                    gyro_1_z: new influent.Value(gyro1_z, influent.type.INT64),
-                    accel_1_x: new influent.Value(accel_1_x, influent.type.INT64),
-                    accel_1_y: new influent.Value(accel_1_y, influent.type.INT64),
-                    accel_1_z: new influent.Value(accel_1_z, influent.type.INT64),
-
+                    gyro_1_x: new influent.Value(gyro1_x, influent.type.FLOAT64),
+                    gyro_1_y: new influent.Value(gyro1_y, influent.type.FLOAT64),
+                    gyro_1_z: new influent.Value(gyro1_z, influent.type.FLOAT64),
                 },                
                 timestamp: timestamp_nanos
             });
             self.measurements.push({
-                key: "imu2",
+                key: "imu2_sd",
                 tags: tags,
                 fields: {
                     accel_2_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
@@ -398,6 +458,8 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
 
         return offset;
     };
+    
+    
     
     this.socket.on('close', function(data) {
         self.log_info("connection closed");
