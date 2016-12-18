@@ -106,12 +106,6 @@ void setup() {
   gc_data.init();
   gc_config.init();
 
-  if(TURN_OFF_LED)
-  {
-    RGB.control(true);
-    RGB.color(0, 0, 0);
-  }
-
   pinMode(BUTTON1_PIN, INPUT_PULLUP);
   pinMode(BUTTON2_PIN, INPUT_PULLUP);
 
@@ -148,6 +142,13 @@ int set_mode(String command) {
       DEBUG_LOG("turning off wifi");
       WiFi.off();
     }
+
+    if(TURN_OFF_LED)
+    {
+      RGB.control(true);
+      RGB.color(0, 0, 0);
+    }
+    
     pending_night_mode = true;
     gc_data.enable_tap_to_upload(true);
   } else if (command == "realtime" ) {
