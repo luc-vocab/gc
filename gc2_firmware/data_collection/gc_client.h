@@ -48,6 +48,9 @@
 #define UINT16_MARKER_END 21826  // after end of data in batch mode
 #define BYTE_HANDSHAKE_OK 42 // after we send the initial handshake
 
+#define DATATYPE_DATAPOINT 53
+#define DATATYPE_STDDEV 84
+
 #define DATAPOINT_HISTORY_SIZE 10
 
 // functions for serializing data
@@ -63,7 +66,8 @@ class GcClient {
 public:
   GcClient();
   void configure(String host, int port, uint32_t device_id);
-  void add_datapoint(const data_point &dp);
+  void add_datapoint(data_point &dp);
+  void add_stddev(std_dev &sd);
   void battery_charge(float percent_charged);
   void set_mode(uint16_t mode);
   uint16_t get_mode() { return m_mode; }
@@ -102,6 +106,9 @@ private:
 
   // write datapoint onto data buffer
   void write_datapoint(const data_point &dp);
+
+  // write datapoint onto data buffer
+  void write_stddev(const std_dev &sd);
 
   // send initial handshake, identifying the device and specifying what kind of data
   // we'll be sending

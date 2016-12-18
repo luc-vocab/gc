@@ -70,6 +70,10 @@ void GcData::get_gyro_1(data_point *dp) {
   dp->gyro1_x = gyro_values[0];
   dp->gyro1_y = gyro_values[1];
   dp->gyro1_z = gyro_values[2];
+
+  DEBUG_LOG("gyro: x:" + String(dp->gyro1_x) +
+            " y:" + String(dp->gyro1_y) +
+            " z:" + String(dp->gyro1_z));
 }
 
 void GcData::get_accel_1(int16_t *accel_values) {
@@ -236,6 +240,8 @@ void GcData::process_stddev(const data_point &dp)
             );
 
     m_num_data_points = 0;
+
+    m_gc_client.add_stddev(std_devs);
   }
 }
 
@@ -267,8 +273,6 @@ void GcData::collect_data(bool upload_requested) {
   dp.flags1 = 0;
   dp.flags2 = 0;
 
-  process_stddev(dp);
-
   uint32_t current_millis = millis();
   // check whether fast movement needs to be turned on or off
   if(fast_movement(dp, m_last_data_point))
@@ -298,6 +302,8 @@ void GcData::collect_data(bool upload_requested) {
   }
 
   m_last_data_point = dp;
+
+  process_stddev(dp);
 
   if(need_report_battery_charge()){
     report_battery_charge();

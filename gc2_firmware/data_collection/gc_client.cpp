@@ -316,7 +316,7 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   return rv;
 }
 
-void GcClient::add_datapoint(const data_point &dp) {
+void GcClient::add_datapoint(data_point &dp) {
 
   if(m_mode == GC_MODE_STANDBY) {
     // discard the data
@@ -335,6 +335,27 @@ void GcClient::add_datapoint(const data_point &dp) {
     m_tcp_client.write((const uint8_t *) m_data_buffer, m_data_buffer_offset);
   }
 
+}
+
+void GcClient::add_stddev(std_dev &sd)
+{
+
+  if(m_mode == GC_MODE_STANDBY) {
+    // discard the data
+    return;
+  }
+
+  if (m_mode == GC_MODE_BATCH) {
+    write_stddev(sd);
+  }
+
+  if (m_mode == GC_MODE_REALTIME) {
+    // write at the beginning of the buffer
+    m_data_buffer_offset = 0;
+    write_stddev(sd);
+    // immediately send
+    m_tcp_client.write((const uint8_t *) m_data_buffer, m_data_buffer_offset);
+  }
 
 }
 
@@ -360,7 +381,8 @@ uint16_t GcClient::datapoints_remaining()
 }
 
 bool GcClient::need_upload() {
-  if(m_data_buffer_offset + m_data_size + END_MARKER_LENGTH > DATA_BUFFER_LENGTH) {
+  // assume we need to add both a datapoint and an stddev
+  if(m_data_buffer_offset + sizeof(data_point) + sizeof(std_dev) + END_MARKER_LENGTH > DATA_BUFFER_LENGTH) {
     return true;
   }
   return false;
@@ -370,8 +392,23 @@ bool GcClient::need_upload_soon(){
   return time_remaining() <= 15000;
 }
 
+void GcClient::write_stddev(const std_dev &sd)
+{
+  size_t original_offset = m_data_buffer_offset;
+
+  write_uint8_to_buffer(m_data_buffer + m_data_buffer_offset, DATATYPE_STDDEV, &m_data_buffer_offset);
+
+  memcpy(m_data_buffer + m_data_buffer_offset, &sd, sizeof(std_dev));
+  m_data_buffer_offset +=  sizeof(std_dev);
+
+  m_data_size = m_data_buffer_offset - original_offset;
+  m_num_datapoints++;
+}
+
 void GcClient::write_datapoint(const data_point &dp) {
   size_t original_offset = m_data_buffer_offset;
+
+  write_uint8_to_buffer(m_data_buffer + m_data_buffer_offset, DATATYPE_DATAPOINT, &m_data_buffer_offset);
 
   memcpy(m_data_buffer + m_data_buffer_offset, &dp, sizeof(data_point));
   m_data_buffer_offset +=  sizeof(data_point);
