@@ -11,9 +11,11 @@
 #define BUTTON2_PIN D3
 #define FAST_MODE_LED_PIN D7
 
-#define USE_EMG false
-
 #define USE_BUTTONS false
+
+#define USE_FAST_MODE_LED false
+
+#define TURN_OFF_LED true
 
 #define USE_IMU_1_BNO055 true
 #define USE_IMU_2_MMA8452 true

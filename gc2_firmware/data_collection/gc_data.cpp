@@ -26,13 +26,13 @@ GcData::GcData(GcClient &gc_client) :
 void GcData::init() {
   //  set pin modes
 
-  if(USE_EMG) {
-    pinMode(EMG_SENSOR_PIN, INPUT);
-  }
   pinMode(BUZZER_PIN, OUTPUT);
 
   // initialize various sensors
-  pinMode(FAST_MODE_LED_PIN, OUTPUT);
+  if(USE_FAST_MODE_LED)
+  {
+    pinMode(FAST_MODE_LED_PIN, OUTPUT);
+  }
 
   if(USE_IMU_1_BNO055) {
 
@@ -282,7 +282,8 @@ void GcData::collect_data(bool upload_requested) {
   {
     if(m_fast_movement_start_millis == 0) {
       // turning on fast movement
-      digitalWrite(FAST_MODE_LED_PIN, HIGH);
+      if(USE_FAST_MODE_LED)
+        digitalWrite(FAST_MODE_LED_PIN, HIGH);
       DEBUG_LOG("turning on fast movement");
     }
     m_fast_movement_start_millis = millis();
@@ -291,7 +292,8 @@ void GcData::collect_data(bool upload_requested) {
     if (m_fast_movement_start_millis > 0) {
       if(current_millis - m_fast_movement_start_millis > FAST_MOVEMENT_DURATION) {
         // turn it off
-        digitalWrite(FAST_MODE_LED_PIN, LOW);
+        if(USE_FAST_MODE_LED)
+          digitalWrite(FAST_MODE_LED_PIN, LOW);
         m_fast_movement_start_millis = 0;
         DEBUG_LOG("turning off fast movement");
       }
