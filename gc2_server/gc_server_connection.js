@@ -439,7 +439,7 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         var accel_2_y = data.readFloatLE(offset); offset += 4;
         var accel_2_z = data.readFloatLE(offset); offset += 4;
 
-        self.log_info("stddev: ",
+        self.log_debug("stddev: ",
                        "time:", datetime,
                        "millisecond diff:", diff,
                        "gyro_1_x", gyro1_x,
