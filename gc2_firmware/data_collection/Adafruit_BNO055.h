@@ -196,7 +196,11 @@ class Adafruit_BNO055 : public Adafruit_Sensor
       ACCEL_RADIUS_LSB_ADDR                                   = 0X67,
       ACCEL_RADIUS_MSB_ADDR                                   = 0X68,
       MAG_RADIUS_LSB_ADDR                                     = 0X69,
-      MAG_RADIUS_MSB_ADDR                                     = 0X6A
+      MAG_RADIUS_MSB_ADDR                                     = 0X6A,
+
+      // Page ID 1 - configuration
+      ACC_CONFIG                                              = 0X08
+
     } adafruit_bno055_reg_t;
 
     typedef enum
@@ -285,6 +289,7 @@ class Adafruit_BNO055 : public Adafruit_Sensor
     void  getCalibration      ( uint8_t* system, uint8_t* gyro, uint8_t* accel, uint8_t* mag);
 
     imu::Vector<3>  getVector ( adafruit_vector_type_t vector_type );
+    void getRawVector( adafruit_vector_type_t vector_type, int16_t *vector );
     imu::Quaternion getQuat   ( void );
     int8_t          getTemp   ( void );
 

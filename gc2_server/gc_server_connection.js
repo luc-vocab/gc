@@ -10,6 +10,9 @@ var q = require('promised-io/promise');
 /* global UINT16_MARKER_END: true */
 /* global BYTE_HANDSHAKE_OK: true */
 /* global WRITE_INFLUXDB: true */
+/* global DATATYPE_DATAPOINT: true */
+/* global DATATYPE_STDDEV: true */
+
 
 
 MODE = {
@@ -31,6 +34,10 @@ UINT16_MARKER_HANDSHAKE = 39780;
 UINT16_MARKER_START = 6713;
 UINT16_MARKER_END = 21826;
 BYTE_HANDSHAKE_OK = 42;
+
+DATATYPE_DATAPOINT = 53;
+DATATYPE_STDDEV = 84;
+
 
 WRITE_INFLUXDB = true;
 
@@ -305,50 +312,153 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
     }
     
     this.read_data_packet = function(data, offset, print_data, publish, push_to_influxdb) {
+        var data_type = data.readUInt8(offset); offset += 1;
+        
+        if(data_type == DATATYPE_DATAPOINT)
+        {
+            return self.read_data_point(data, offset, print_data, publish, push_to_influxdb);
+        } else if (data_type == DATATYPE_STDDEV)
+        {
+            return self.read_stddev(data, offset, print_data, publish, push_to_influxdb);
+        } else {
+            self.log_error("unknown data_type");
+            return 0;
+        }
+    };
+    
+    this.read_data_point = function(data, offset, print_data, publish, push_to_influxdb) {
         var milliseconds = data.readUInt32LE(offset); offset += 4;
         
         var diff = milliseconds - self.starting_millis;
         var timestamp = self.starting_timestamp + diff;
         var datetime = new Date(timestamp);
         
-        // read EMG value
-        var emg_value = data.readUInt16LE(offset); ; offset += 2;
+        // read gyro values
+        var gyro1_x = data.readInt16LE(offset); offset += 2;
+        var gyro1_y = data.readInt16LE(offset); offset += 2;
+        var gyro1_z = data.readInt16LE(offset); offset += 2;
         
-        // read gyro max
-        var gyro_max_adj = data.readInt16LE(offset); offset += 2;
         // read accel values
-        var accel_x_adj = data.readInt16LE(offset); offset += 2;
-        var accel_y_adj = data.readInt16LE(offset); offset += 2;
-        var accel_z_adj = data.readInt16LE(offset); offset += 2;
-        
-        var gyro_max = gyro_max_adj / 100.0;
-        var accel_x = accel_x_adj / 1000.0;
-        var accel_y = accel_y_adj / 1000.0;
-        var accel_z = accel_z_adj / 1000.0;
-        
-        var button_state = data.readUInt8(offset); offset += 1;
+        var accel_1_x = data.readInt16LE(offset); offset += 2;
+        var accel_1_y = data.readInt16LE(offset); offset += 2;
+        var accel_1_z = data.readInt16LE(offset); offset += 2;
         
         
-        self.log_debug("time:", datetime,
+        var accel_2_x_adj = data.readInt16LE(offset); offset += 2;
+        var accel_2_y_adj = data.readInt16LE(offset); offset += 2;
+        var accel_2_z_adj = data.readInt16LE(offset); offset += 2;
+        var accel_2_x = accel_2_x_adj / 1000.0;
+        var accel_2_y = accel_2_y_adj / 1000.0;
+        var accel_2_z = accel_2_z_adj / 1000.0;        
+        
+        var flags1 = data.readUInt8(offset); offset += 1;
+        var flags2 = data.readUInt8(offset); offset += 1;
+
+        
+        self.log_debug("datapoint: ",
+                       "time:", datetime,
                        "millisecond diff:", diff,
-                       "emg_value:", emg_value,
-                       "gyro_max:", gyro_max,
-                       "accel_x:", accel_x,
-                       "accel_y:", accel_y,
-                       "accel_z:", accel_z,
-                       "button_state:", button_state);    
+                       "gyro_1_x", gyro1_x,
+                       "gyro_1_y", gyro1_y,
+                       "gyro_1_z", gyro1_z,
+                       "accel_1_x:", accel_1_x,
+                       "accel_1_y:", accel_1_y,
+                       "accel_1_z:", accel_1_z,
+                       "accel_2_x:", accel_2_x,
+                       "accel_2_y:", accel_2_y,
+                       "accel_2_z:", accel_2_z);    
 
         if(publish) {
         
             // publish to firebase
             this.firebaseDeviceRef.update({
-                "emg_value": emg_value,
-                "gyro_max": gyro_max,
-                "accel_x": accel_x,
-                "accel_y": accel_y,
-                "accel_z": accel_z,
-                "button_state": button_state,
+                "gyro_1_x": gyro1_x,
+                "gyro_1_y": gyro1_y,
+                "gyro_1_z": gyro1_z,                
+                "accel_1_x": accel_1_x,
+                "accel_1_y": accel_1_y,
+                "accel_1_z": accel_1_z,
+                "accel_2_x": accel_2_x,
+                "accel_2_y": accel_2_y,
+                "accel_2_z": accel_2_z,                
                 "datapoint_time": timestamp
+            });
+        
+        }
+        
+
+        var tags = {username: self.user_name,
+                    env:  self.config.env};
+        
+        if(push_to_influxdb) {
+            var timestamp_nanos = datetime.getTime().toString() + "000000";
+            self.measurements.push({
+                key: "imu1",
+                tags: tags,
+                fields: {
+                    gyro_x: new influent.Value(gyro1_x, influent.type.INT64),
+                    gyro_y: new influent.Value(gyro1_y, influent.type.INT64),
+                    gyro_z: new influent.Value(gyro1_z, influent.type.INT64),                    
+                    accel_x: new influent.Value(accel_1_x, influent.type.INT64),
+                    accel_y: new influent.Value(accel_1_y, influent.type.INT64),
+                    accel_z: new influent.Value(accel_1_z, influent.type.INT64),
+                },
+                timestamp: timestamp_nanos
+            });
+            
+            self.measurements.push({
+                key: "imu2",
+                tags: tags,
+                fields: {
+                    accel_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
+                    accel_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
+                    accel_z: new influent.Value(accel_2_z, influent.type.FLOAT64),            
+                    
+                },
+                timestamp: timestamp_nanos
+            });            
+        }        
+        
+        return offset;
+    };
+
+    this.read_stddev = function(data, offset, print_data, publish, push_to_influxdb) {
+        var milliseconds = data.readUInt32LE(offset); offset += 4;
+        
+        var diff = milliseconds - self.starting_millis;
+        var timestamp = self.starting_timestamp + diff;
+        var datetime = new Date(timestamp);
+        
+        // read gyro values
+        var gyro1_x = data.readFloatLE(offset); offset += 4;
+        var gyro1_y = data.readFloatLE(offset); offset += 4;
+        var gyro1_z = data.readFloatLE(offset); offset += 4;
+
+        // read accel values
+        var accel_2_x = data.readFloatLE(offset); offset += 4;
+        var accel_2_y = data.readFloatLE(offset); offset += 4;
+        var accel_2_z = data.readFloatLE(offset); offset += 4;
+
+        self.log_debug("stddev: ",
+                       "time:", datetime,
+                       "millisecond diff:", diff,
+                       "gyro_1_x", gyro1_x,
+                       "gyro_1_y", gyro1_y,
+                       "gyro_1_z", gyro1_z,
+                       "accel_2_x:", accel_2_x,
+                       "accel_2_y:", accel_2_y,
+                       "accel_2_z:", accel_2_z);    
+
+        if(publish) {
+        
+            // publish to firebase
+            this.firebaseDeviceRef.update({
+                "gyro_1_x_sd": gyro1_x,
+                "gyro_1_y_sd": gyro1_y,
+                "gyro_1_z_sd": gyro1_z,                
+                "accel_2_x_sd": accel_2_x,
+                "accel_2_y_sd": accel_2_y,
+                "accel_2_z_sd": accel_2_z
             });
         
         }
@@ -358,30 +468,32 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         
         if(push_to_influxdb) {
             var timestamp_nanos = datetime.getTime().toString() + "000000";
-            // EMG sensor value
             self.measurements.push({
-                key: "emg",
+                key: "imu1_sd",
                 tags: tags,
                 fields: {
-                    emg_value: new influent.Value(emg_value, influent.type.INT64),
-                },
+                    gyro_x: new influent.Value(gyro1_x, influent.type.FLOAT64),
+                    gyro_y: new influent.Value(gyro1_y, influent.type.FLOAT64),
+                    gyro_z: new influent.Value(gyro1_z, influent.type.FLOAT64),
+                },                
                 timestamp: timestamp_nanos
             });
             self.measurements.push({
-                key: "imu",
+                key: "imu2_sd",
                 tags: tags,
                 fields: {
-                    gyro: new influent.Value(gyro_max, influent.type.FLOAT64),
-                    accel_x: new influent.Value(accel_x, influent.type.FLOAT64),
-                    accel_y: new influent.Value(accel_y, influent.type.FLOAT64),
-                    accel_z: new influent.Value(accel_z, influent.type.FLOAT64),
-                },
+                    accel_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
+                    accel_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
+                    accel_z: new influent.Value(accel_2_z, influent.type.FLOAT64),            
+                },                
                 timestamp: timestamp_nanos
-            });
+            });            
         }
 
         return offset;
     };
+    
+    
     
     this.socket.on('close', function(data) {
         self.log_info("connection closed");

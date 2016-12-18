@@ -13,8 +13,13 @@ GcClient::GcClient() : m_mode(GC_MODE_STANDBY),
                        m_num_datapoints(0),
                        m_start_timestamp(0),
                        m_start_millis(0),
-                       m_data_collection_start_timestamp(0){
+                       m_data_collection_start_timestamp(0),
+                       m_wifi_on_started(false){
 
+                         for(int i = 0; i<DATAPOINT_HISTORY_SIZE; i++)
+                         {
+                           m_upload_timestamps[i] = 0;
+                         }
 }
 
 int GcClient::connect() {
@@ -63,8 +68,44 @@ String GcClient::get_stats() {
   return "batches: " + String(m_batch_upload_count) + " errors: " + String(m_error_count) + " abandon: " + String(m_abandon_count);
 }
 
+void GcClient::wifi_on(){
+  // turn on WiFi
+  if(MANAGE_WIFI && ! m_wifi_on_started) {
+    DEBUG_LOG("enabling wifi");
+    WiFi.on();
+    m_wifi_on_started = true;
+  }
+
+}
+
+void GcClient::wifi_off(){
+  // turn off wifi
+  if(MANAGE_WIFI) {
+      DEBUG_LOG("disabling wifi");
+      WiFi.off();
+      m_wifi_on_started = false;
+  }
+
+}
+
+void GcClient::wifi_wait(){
+
+  DEBUG_LOG("wait for wifi to be available");
+  // wait for wifi to be available
+  waitFor(WiFi.ready, WIFI_MAX_WAIT);
+  DEBUG_LOG("wifi available");
+
+
+
+}
+
+
+
 void GcClient::upload_batch() {
   // try calling upload_batch_iteration up to 3 times
+
+  wifi_on();
+  wifi_wait();
 
   int i;
 
@@ -83,6 +124,8 @@ void GcClient::upload_batch() {
   }
 
   DEBUG_LOG(String::format("errors: %d abandonned: %d", m_error_count, m_abandon_count));
+  wifi_off();
+
 }
 
 int GcClient::upload_batch_iteration() {
@@ -273,7 +316,7 @@ int GcClient::initial_handshake(uint32_t mode, int random_number) {
   return rv;
 }
 
-void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state) {
+void GcClient::add_datapoint(data_point &dp) {
 
   if(m_mode == GC_MODE_STANDBY) {
     // discard the data
@@ -281,66 +324,121 @@ void GcClient::add_datapoint(uint16_t emg_value, float gyro_max, float accel_x, 
   }
 
   if (m_mode == GC_MODE_BATCH) {
-    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z, button1_state, button2_state);
+    write_datapoint(dp);
   }
 
   if (m_mode == GC_MODE_REALTIME) {
     // write at the beginning of the buffer
-    DEBUG_LOG("writing datapoint, emg_value: " + String(emg_value));
     m_data_buffer_offset = 0;
-    write_datapoint(emg_value, gyro_max, accel_x, accel_y, accel_z, button1_state, button2_state);
+    write_datapoint(dp);
     // immediately send
     m_tcp_client.write((const uint8_t *) m_data_buffer, m_data_buffer_offset);
   }
 
+}
+
+void GcClient::add_stddev(std_dev &sd)
+{
+
+  if(m_mode == GC_MODE_STANDBY) {
+    // discard the data
+    return;
+  }
+
+  if (m_mode == GC_MODE_BATCH) {
+    write_stddev(sd);
+  }
+
+  if (m_mode == GC_MODE_REALTIME) {
+    // write at the beginning of the buffer
+    m_data_buffer_offset = 0;
+    write_stddev(sd);
+    // immediately send
+    m_tcp_client.write((const uint8_t *) m_data_buffer, m_data_buffer_offset);
+  }
 
 }
 
+uint32_t GcClient::time_remaining()
+{
+  uint32_t lower = m_upload_timestamps[DATAPOINT_HISTORY_SIZE-1];
+  uint32_t upper = millis();
+  uint32_t diff = upper - lower;
+
+  uint32_t remaining_dp = datapoints_remaining();
+  uint32_t size = DATAPOINT_HISTORY_SIZE;
+
+  uint32_t result = (remaining_dp * diff) / size;
+
+  return result;
+}
+
+uint16_t GcClient::datapoints_remaining()
+{
+  uint16_t space_remaining = DATA_BUFFER_LENGTH - END_MARKER_LENGTH - m_data_buffer_offset;
+  uint16_t datapoints_remaining = space_remaining / m_data_size;
+  return datapoints_remaining;
+}
+
 bool GcClient::need_upload() {
-  if(m_data_buffer_offset + m_data_size + END_MARKER_LENGTH > DATA_BUFFER_LENGTH) {
+  // assume we need to add both a datapoint and an stddev
+  if(m_data_buffer_offset + sizeof(data_point) + sizeof(std_dev) + END_MARKER_LENGTH > DATA_BUFFER_LENGTH) {
     return true;
   }
   return false;
 }
 
-void GcClient::write_datapoint(uint16_t emg_value, float gyro_max, float accel_x, float accel_y, float accel_z, bool button1_state, bool button2_state) {
+bool GcClient::need_upload_soon(){
+  return time_remaining() <= 15000;
+}
+
+void GcClient::write_stddev(const std_dev &sd)
+{
+  write_uint8_to_buffer(m_data_buffer, (uint8_t) DATATYPE_STDDEV, &m_data_buffer_offset);
+
+  memcpy(m_data_buffer + m_data_buffer_offset, &sd, sizeof(std_dev));
+  m_data_buffer_offset +=  sizeof(std_dev);
+
+  m_num_datapoints++;
+}
+
+void GcClient::write_datapoint(const data_point &dp) {
   size_t original_offset = m_data_buffer_offset;
 
-  size_t *offset = &m_data_buffer_offset;
+  write_uint8_to_buffer(m_data_buffer, (uint8_t) DATATYPE_DATAPOINT, &m_data_buffer_offset);
 
-  // write timestamp in two parts, program startup time and millis
-  uint32_t milliseconds = millis();
-  write_int_to_buffer(m_data_buffer, milliseconds, offset);
-
-  write_uint16_to_buffer(m_data_buffer, emg_value, offset);
-
-  int16_t gyro_value = gyro_max * 100.0;
-  write_int16_to_buffer(m_data_buffer, gyro_value, offset);
-
-  // values from the BNO055 with the adafruit library are in m/s^2 like 9.8
-  // can only multiply by 1000, otherwise overflows will happen
-  int16_t accel_x_value = accel_x * 1000.0;
-  int16_t accel_y_value = accel_y * 1000.0;
-  int16_t accel_z_value = accel_z * 1000.0;
-
-  write_int16_to_buffer(m_data_buffer, accel_x_value, offset);
-  write_int16_to_buffer(m_data_buffer, accel_y_value, offset);
-  write_int16_to_buffer(m_data_buffer, accel_z_value, offset);
-
-  // check values of button1_state and button2_state
-  uint8_t button_state = 0;
-  if(button2_state) {
-    button_state = 1;
-  }
-  write_uint8_to_buffer(m_data_buffer, button_state, offset);
+  memcpy(m_data_buffer + m_data_buffer_offset, &dp, sizeof(data_point));
+  m_data_buffer_offset +=  sizeof(data_point);
 
   m_data_size = m_data_buffer_offset - original_offset;
 
   m_num_datapoints++;
+
+  update_upload_timestamps(dp.milliseconds);
+
   if(m_num_datapoints % 10 == 0) {
+    uint16_t remaining = datapoints_remaining();
+    uint32_t remaining_time =  time_remaining();
     DEBUG_LOG("num datapoints: " + String(m_num_datapoints) +
-              " offset: " + String(m_data_buffer_offset) + " datasize: " + String(m_data_size));
+              " offset: " + String(m_data_buffer_offset) + " datasize: " + String(m_data_size) +
+              " datapoints_remaining: " + String(remaining) +
+              " time_remaining: " + String(remaining_time));
   }
+
+  if (need_upload_soon()) {
+    wifi_on();
+  }
+
+}
+
+void GcClient::update_upload_timestamps(uint32_t millis)
+{
+  // move everything back
+  for(int i = DATAPOINT_HISTORY_SIZE - 1; i>=1; i--)
+  {
+    m_upload_timestamps[i] = m_upload_timestamps[i-1];
+  }
+  m_upload_timestamps[0] = millis;
 }
 
 void GcClient::reset_data_buffer() {
