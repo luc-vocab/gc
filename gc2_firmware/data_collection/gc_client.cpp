@@ -394,21 +394,18 @@ bool GcClient::need_upload_soon(){
 
 void GcClient::write_stddev(const std_dev &sd)
 {
-  size_t original_offset = m_data_buffer_offset;
-
-  write_uint8_to_buffer(m_data_buffer + m_data_buffer_offset, DATATYPE_STDDEV, &m_data_buffer_offset);
+  write_uint8_to_buffer(m_data_buffer, (uint8_t) DATATYPE_STDDEV, &m_data_buffer_offset);
 
   memcpy(m_data_buffer + m_data_buffer_offset, &sd, sizeof(std_dev));
   m_data_buffer_offset +=  sizeof(std_dev);
 
-  m_data_size = m_data_buffer_offset - original_offset;
   m_num_datapoints++;
 }
 
 void GcClient::write_datapoint(const data_point &dp) {
   size_t original_offset = m_data_buffer_offset;
 
-  write_uint8_to_buffer(m_data_buffer + m_data_buffer_offset, DATATYPE_DATAPOINT, &m_data_buffer_offset);
+  write_uint8_to_buffer(m_data_buffer, (uint8_t) DATATYPE_DATAPOINT, &m_data_buffer_offset);
 
   memcpy(m_data_buffer + m_data_buffer_offset, &dp, sizeof(data_point));
   m_data_buffer_offset +=  sizeof(data_point);
