@@ -243,6 +243,7 @@ void GcData::process_stddev(const data_point &dp)
 
     m_num_data_points = 0;
 
+    std_devs.milliseconds = millis();
     m_gc_client.add_stddev(std_devs);
   }
 }
