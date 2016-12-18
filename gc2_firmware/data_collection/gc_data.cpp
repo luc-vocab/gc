@@ -71,9 +71,11 @@ void GcData::get_gyro_1(data_point *dp) {
   dp->gyro1_y = gyro_values[1];
   dp->gyro1_z = gyro_values[2];
 
+  /*
   DEBUG_LOG("gyro: x:" + String(dp->gyro1_x) +
             " y:" + String(dp->gyro1_y) +
             " z:" + String(dp->gyro1_z));
+  */
 }
 
 void GcData::get_accel_1(int16_t *accel_values) {
