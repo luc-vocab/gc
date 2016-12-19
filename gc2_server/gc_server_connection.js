@@ -393,30 +393,21 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         if(push_to_influxdb) {
             var timestamp_nanos = datetime.getTime().toString() + "000000";
             self.measurements.push({
-                key: "imu1",
+                key: "imu",
                 tags: tags,
                 fields: {
-                    gyro_x: new influent.Value(gyro1_x, influent.type.INT64),
-                    gyro_y: new influent.Value(gyro1_y, influent.type.INT64),
-                    gyro_z: new influent.Value(gyro1_z, influent.type.INT64),                    
-                    accel_x: new influent.Value(accel_1_x, influent.type.INT64),
-                    accel_y: new influent.Value(accel_1_y, influent.type.INT64),
-                    accel_z: new influent.Value(accel_1_z, influent.type.INT64),
+                    gyro1_x: new influent.Value(gyro1_x, influent.type.INT64),
+                    gyro1_y: new influent.Value(gyro1_y, influent.type.INT64),
+                    gyro1_z: new influent.Value(gyro1_z, influent.type.INT64),                    
+                    accel1_x: new influent.Value(accel_1_x, influent.type.INT64),
+                    accel1_y: new influent.Value(accel_1_y, influent.type.INT64),
+                    accel1_z: new influent.Value(accel_1_z, influent.type.INT64),
+                    accel2_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
+                    accel2_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
+                    accel2_z: new influent.Value(accel_2_z, influent.type.FLOAT64),                                
                 },
                 timestamp: timestamp_nanos
             });
-            
-            self.measurements.push({
-                key: "imu2",
-                tags: tags,
-                fields: {
-                    accel_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
-                    accel_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
-                    accel_z: new influent.Value(accel_2_z, influent.type.FLOAT64),            
-                    
-                },
-                timestamp: timestamp_nanos
-            });            
         }        
         
         return offset;
@@ -469,25 +460,18 @@ function GcClient(socket, influx_client, config, firebase_root, logger) {
         if(push_to_influxdb) {
             var timestamp_nanos = datetime.getTime().toString() + "000000";
             self.measurements.push({
-                key: "imu1_sd",
+                key: "imu_sd",
                 tags: tags,
                 fields: {
-                    gyro_x: new influent.Value(gyro1_x, influent.type.FLOAT64),
-                    gyro_y: new influent.Value(gyro1_y, influent.type.FLOAT64),
-                    gyro_z: new influent.Value(gyro1_z, influent.type.FLOAT64),
+                    gyro1_x: new influent.Value(gyro1_x, influent.type.FLOAT64),
+                    gyro1_y: new influent.Value(gyro1_y, influent.type.FLOAT64),
+                    gyro1_z: new influent.Value(gyro1_z, influent.type.FLOAT64),
+                    accel2_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
+                    accel2_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
+                    accel2_z: new influent.Value(accel_2_z, influent.type.FLOAT64),                                
                 },                
                 timestamp: timestamp_nanos
             });
-            self.measurements.push({
-                key: "imu2_sd",
-                tags: tags,
-                fields: {
-                    accel_x: new influent.Value(accel_2_x, influent.type.FLOAT64),
-                    accel_y: new influent.Value(accel_2_y, influent.type.FLOAT64),
-                    accel_z: new influent.Value(accel_2_z, influent.type.FLOAT64),            
-                },                
-                timestamp: timestamp_nanos
-            });            
         }
 
         return offset;
