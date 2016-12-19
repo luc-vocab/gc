@@ -2,7 +2,7 @@
 layout: post
 title: "Accelerometer-only Bruxism Detection Solution"
 section: blog
-thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north,h_400,w_400/v1468048450/gc_website_blog/observations_1/article_header.png
+thumbnail: https://res.cloudinary.com/photozzap/image/upload/c_fill,g_north,h_400,w_400/v1468048450/gc_website_blog/accelerometer/P1050250.jpg
 ---
 
 When I set out to work on this project, the Myoware muscle sensor was deemed to be an essential component, necessary to sense muscle activity and gauge the level of night-time bruxism activity. My 2013 project also used an EMG sensor, the Muscle Sensor v3. A lot of people who attempt to build bruxism devices (as is the case for a few members on the bruxhackers mailing list) independently come to the same conclusion, that an EMG sensor is ideal for a bruxism device.
@@ -31,12 +31,16 @@ Accelerometer-only solution
 
 Bruxism involves movement of the lower jaw. In principle, by sensing movement of the chin, we should be able to detect repetitive motion indicating bruxism. Detecting a static clenching position would be more difficult, in the absence of movement.
 
+{% include image.html scaling="c_fill,w_1024" image="accelerometer/P1050254.jpg" %}
+
 I'm currently experimenting with a device with two sets of accerometers:
 
 * **A BNO055 integrated with the main PCB, attached to the headband.** This is a really advanced chip with 3 axis accelerometer, gyroscope, and magnetometer, capable of sensor fusion to calculate absolute orientation. The accelerometer uses a 14bit ADC and the gyroscope is 16bit, so this chip at least on paper seems more precise than others.
 * **A MMA8452 fixed on the user's chin.**. This is a simple 3-axis accelerometer with 12bit ADC.
 
 The way I currently place them, their axes are not completely aligned, so I can't directly compare their output. They are also different chips which will give slightly different readings. However in the future I'm planning on having the two IMUs be exactly on the same plane, with one on the forehead and one on the chin.
+
+{% include image.html scaling="c_fill,w_1024" image="accelerometer/P1050250.jpg" %}
 
 Eventually I'd like to use two BNO055's, as they are more functional and more precise. The gyroscope in particular, is remarkably low-noise. The gyro values read very very close to zero in absence of movement. 
 
