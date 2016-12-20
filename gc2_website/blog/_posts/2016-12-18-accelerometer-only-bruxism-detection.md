@@ -55,6 +55,9 @@ With accelerometers, it should be expected to accomodate for varying base levels
 
 However i'm currently not using the BNO055 on the chin sensor, but the MMA8452, which is a simpler accelerometer, not capable of outputting linear acceleration. That's OK, I can still work with the signal which includes gravity. I've found that calculating a running standard deviation over the last 20 samples or last 2 seconds gives me a good idea about true movement, and is easy to spot in a whole night's chart.
 
+{% include image.html scaling="c_fill,w_1024" image="accelerometer/accel_bruxism_movements.png" %}
+*Above: potential bruxism movements. The accelerometer registers movement on X and Y axes. The headband IMU (not shown) registers very little movement which indicates jaw-only movement*
+
 Another way of detecting motion is using a gyroscope. This is a sensor which detects change in angular velocity, but i've found it's quite good at detecting movement. In theory, a perfectly linear translation movement would be imperceptible by a gyroscope, but in practice, the 16bit gyroscope within the BNO055 detects movement quite nicely. It is able to detect the slight jaw movement of bruxism even though it is currently placed near my temple. I expect that once the chin sensor with BNO055 is ready, it'll show a very clear signal in case of lower jaw movement.
 
 Once I have the exact same chip on the forehead and chin, aligned along the same axis, it'll become extremely easy to determine whether the jaw is moving independently of the head.
