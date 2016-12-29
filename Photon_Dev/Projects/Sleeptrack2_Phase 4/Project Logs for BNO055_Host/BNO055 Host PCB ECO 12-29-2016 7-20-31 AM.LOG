@@ -1,0 +1,32 @@
+Added Component: Designator=J1(header4)
+Added Component: Designator=J2(SolderJumper)
+Added Component: Designator=R1(RESC402N)
+Added Component: Designator=R2(RESC402N)
+Added Component: Designator=R3(RESC402N)
+Added Component: Designator=U1(BNO055)
+Added Pin To Net: NetName=VCC Pin=J1-1
+Added Pin To Net: NetName=D0 Pin=J1-2
+Added Pin To Net: NetName=D1 Pin=J1-3
+Added Pin To Net: NetName=GND Pin=J1-4
+Added Pin To Net: NetName=VCC Pin=J2-1
+Added Pin To Net: NetName=NetP1_2 Pin=J2-2
+Added Pin To Net: NetName=GND Pin=J2-3
+Added Pin To Net: NetName=NetP1_2 Pin=R1-1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=3V3 Pin=R2-1
+Added Pin To Net: NetName=D0 Pin=R2-2
+Added Pin To Net: NetName=3V3 Pin=R3-1
+Added Pin To Net: NetName=D1 Pin=R3-2
+Added Pin To Net: NetName=NetR1_2 Pin=U1-2
+Added Pin To Net: NetName=D1 Pin=U1-3
+Added Pin To Net: NetName=D0 Pin=U1-4
+Added Pin To Net: NetName=VCC Pin=U1-5
+Added Pin To Net: NetName=GND Pin=U1-6
+Change Net Name : Old Net Name=NetP1_2 New Net Name=NetJ2_2
+Added Member To Class: ClassName=BNO055 Host Member=Component J1 HEADER 4/SM
+Added Member To Class: ClassName=BNO055 Host Member=Component J2 Header 3H
+Added Member To Class: ClassName=BNO055 Host Member=Component R1 10k
+Added Member To Class: ClassName=BNO055 Host Member=Component R2 10k
+Added Member To Class: ClassName=BNO055 Host Member=Component R3 10k
+Added Member To Class: ClassName=BNO055 Host Member=Component U1 BNO055
+Added Room: Name=BNO055 Host

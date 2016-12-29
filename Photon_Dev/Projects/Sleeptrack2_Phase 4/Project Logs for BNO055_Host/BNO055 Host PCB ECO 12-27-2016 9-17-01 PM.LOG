@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=3V3 Pin=J6-1
+Removed Pin From Net: NetName=D0 Pin=J6-2
+Removed Pin From Net: NetName=D1 Pin=J6-3
+Removed Pin From Net: NetName=GND Pin=J6-4
+Removed Pin From Net: NetName=3V3 Pin=P2-1
+Removed Pin From Net: NetName=GND Pin=P2-3
+Removed Pin From Net: NetName=3V3 Pin=R9-1
+Removed Pin From Net: NetName=D0 Pin=R9-2
+Removed Pin From Net: NetName=3V3 Pin=R10-1
+Removed Pin From Net: NetName=D1 Pin=R10-2
+Removed Member From Class: ClassName=IMU External Member=J6
+Removed Member From Class: ClassName=IMU External Member=P2
+Removed Member From Class: ClassName=IMU External Member=R2
+Removed Member From Class: ClassName=IMU External Member=R9
+Removed Member From Class: ClassName=IMU External Member=R10
+Removed Member From Class: ClassName=IMU External Member=U5

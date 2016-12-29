@@ -1,0 +1,15 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 11:00:11 PM On 12/22/2016
+
+Output: Simple BOM
+Type  : SimpleBOM
+From  : Variant [[No Variations]] of Project [SLEEPTRACK2_PHASE4.PrjPcb]
+   Generated File[SLEEPTRACK2_PHASE4.BOM]
+   Generated File[SLEEPTRACK2_PHASE4.CSV]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 11:00:11 PM On 12/22/2016

@@ -1,0 +1,170 @@
+*************************************************************
+FileName = BNO055 Host.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : BNO055 Host.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+*************************************************************
+
+*************************************************************
+Generating : GND
+      File : BNO055 Host.GP1
+
+    Adding Layer      : GND
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D19
+    D20
+    D21
+*************************************************************
+
+*************************************************************
+Generating : VCC
+      File : BNO055 Host.GP2
+
+    Adding Layer      : VCC
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D19
+    D20
+    D21
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : BNO055 Host.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D13
+    D14
+    D15
+    D16
+    D22
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : BNO055 Host.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D13
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : BNO055 Host.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D27
+    D28
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : BNO055 Host.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D27
+    D28
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : BNO055 Host.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D13
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : BNO055 Host.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : BNO055 Host.GD1
+
+    Adding Drill Pair : Bottom Layer-Top Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D30
+    D31
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : BNO055 Host.GG1
+
+    Adding Drill Pair : Bottom Layer-Top Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D30
+*************************************************************
+

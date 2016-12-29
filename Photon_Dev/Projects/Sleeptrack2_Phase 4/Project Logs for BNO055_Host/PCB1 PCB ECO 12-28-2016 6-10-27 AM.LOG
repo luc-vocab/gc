@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=P1 Old Footprint=BNO055 New Footprint=SolderJumper
+Added Component: Designator=U1(BNO055)
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Net: Name=NetR1_2
+Added Member To Class: ClassName=BNO055 Host Member=Component U1 BNO055 Nano

@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [BNO055_Host.PrjPcb]
+   Generated File[BNO055 Host.TXT]
+   Generated File[BNO055 Host.LDP]
+   Generated File[BNO055 Host.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 9:36:21 AM On 12/29/2016

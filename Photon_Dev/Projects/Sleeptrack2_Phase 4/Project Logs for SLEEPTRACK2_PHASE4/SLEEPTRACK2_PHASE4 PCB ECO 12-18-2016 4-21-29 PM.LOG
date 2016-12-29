@@ -1,0 +1,4 @@
+Removed Member From Class: ClassName=P02_Photon Member=R9
+Change Component Footprint: Designator=U3 Old Footprint=Photon P0 - duplicate New Footprint=Photon P0
+Change Class Name : Old Net Name=P06_Audio New Net Name=P06_Audio 
+Change Room Name: Old Name=P06_Audio New Name=P06_Audio 

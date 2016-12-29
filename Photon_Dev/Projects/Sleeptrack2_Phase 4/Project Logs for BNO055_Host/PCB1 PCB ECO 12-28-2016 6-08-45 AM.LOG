@@ -1,0 +1,28 @@
+Added Component: Designator=J1(header4)
+Added Component: Designator=P1(BNO055)
+Added Component: Designator=R1(RESC402N)
+Added Component: Designator=R2(RESC402N)
+Added Component: Designator=R3(RESC402N)
+Added Component: Designator=U1(BNO055)
+Added Pin To Net: NetName=3V3 Pin=R2-1
+Added Pin To Net: NetName=3V3 Pin=R3-1
+Added Net: Name=3V3
+Added Pin To Net: NetName=D0 Pin=J1-2
+Added Pin To Net: NetName=D0 Pin=R2-2
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=J1-3
+Added Pin To Net: NetName=D1 Pin=R3-2
+Added Net: Name=D1
+Added Pin To Net: NetName=GND Pin=J1-4
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Net: Name=GND
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=NetP1_2 Pin=R1-1
+Added Net: Name=NetP1_2
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=VCC Pin=J1-1
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Net: Name=VCC
+Added Class: Name=BNO055 Host
+Added Room: Name=BNO055 Host

@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=D2 Old Footprint=CAPC0402N New Footprint=LED0402N
+Change Class Name : Old Net Name=P06_Audio New Net Name=P06_Audio 
+Change Room Name: Old Name=P06_Audio New Name=P06_Audio 

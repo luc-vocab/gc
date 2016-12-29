@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=P1 Old Footprint=SolderJumper New Footprint=HDR1X3H
+Change Component Comment : Designator=P1 Old Comment=Address Select New Comment=Header 3H
+Change Component Designator: OldDesignator=U4 NewDesignator=U1

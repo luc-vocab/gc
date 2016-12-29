@@ -1,0 +1,45 @@
+Added Component: Designator=J2(header4)
+Added Component: Designator=J6(header4)
+Added Component: Designator=P1(SolderJumper)
+Added Component: Designator=P2(SolderJumper)
+Added Component: Designator=R1(RESC402N)
+Added Component: Designator=R2(RESC402N)
+Added Component: Designator=R7(RESC402N)
+Added Component: Designator=R8(RESC402N)
+Added Component: Designator=R9(RESC402N)
+Added Component: Designator=R10(RESC402N)
+Added Component: Designator=U4(BNO055)
+Added Component: Designator=U5(BNO055)
+Added Pin To Net: NetName=3V3 Pin=J2-1
+Added Pin To Net: NetName=3V3 Pin=J6-1
+Added Pin To Net: NetName=3V3 Pin=P1-1
+Added Pin To Net: NetName=3V3 Pin=P2-1
+Added Pin To Net: NetName=3V3 Pin=R7-1
+Added Pin To Net: NetName=3V3 Pin=R8-1
+Added Pin To Net: NetName=3V3 Pin=R9-1
+Added Pin To Net: NetName=3V3 Pin=R10-1
+Added Net: Name=3V3
+Added Pin To Net: NetName=D0 Pin=J2-2
+Added Pin To Net: NetName=D0 Pin=J6-2
+Added Pin To Net: NetName=D0 Pin=R7-2
+Added Pin To Net: NetName=D0 Pin=R9-2
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=J2-3
+Added Pin To Net: NetName=D1 Pin=J6-3
+Added Pin To Net: NetName=D1 Pin=R8-2
+Added Pin To Net: NetName=D1 Pin=R10-2
+Added Net: Name=D1
+Added Pin To Net: NetName=GND Pin=J2-4
+Added Pin To Net: NetName=GND Pin=J6-4
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Net: Name=GND
+Added Pin To Net: NetName=NetP2_2 Pin=P2-2
+Added Pin To Net: NetName=NetP2_2 Pin=R2-1
+Added Net: Name=NetP2_2
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Net: Name=NetR2_2
+Added Class: Name=IMU External
+Added Room: Name=IMU External

@@ -1,0 +1,12 @@
+#
+#Component attribute names
+#
+@0 .comp_mount_type
+@1 .comp_height
+
+# CMP 0
+CMP 3 0.25 0 90 N SJ1 Header_3H ;0=1,1=0.0000
+TOP 0 0.25 0.0501969 90 N 1 0 SJ1-1
+TOP 1 0.25 0 90 N 2 1 SJ1-2
+TOP 2 0.25 -0.0501969 90 N 4 0 SJ1-3
+#

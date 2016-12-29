@@ -124,23 +124,6 @@ GenerateClassCluster=0
 DocumentUniqueId=YMSCYKGL
 
 [Document6]
-DocumentPath=IMU External.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=8
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=XBCUETQX
-
-[Document7]
 DocumentPath=P09_DRV2605L Motor Driver.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -157,7 +140,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LDTLBUMF
 
-[Document8]
+[Document7]
 DocumentPath=SLEEPTRACK2_PHASE4.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -174,7 +157,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EOJLKMJA
 
-[Document9]
+[Document8]
 DocumentPath=Phase4.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -191,8 +174,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CKDVVJPX
 
-[Document10]
-DocumentPath=BNO055 Host.PcbDoc
+[Document9]
+DocumentPath=SLEEPTRACK2_PHASE4 Fabrication.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -206,10 +189,27 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=CXOVQEIS
+DocumentUniqueId=
+
+[Document10]
+DocumentPath=SLEEPTRACK2_PHASE4.cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
 
 [Document11]
-DocumentPath=Aux_BNO055.PcbDoc
+DocumentPath=SLEEPTRACK2_PHASE4_Drill.cam
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -223,14 +223,230 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=TRJPXGFB
+DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\Design Rule Check - SLEEPTRACK2_PHASE4.html
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\comp_+_bot\components
 DItemRevisionGUID=
 
 [GeneratedDocument2]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\comp_+_top\components
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\eda\data
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\Design Rule Check - SLEEPTRACK2_PHASE4.html
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\bottom\features
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\bottomoverlay\features
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\bottompaste\features
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\bottomsolder\features
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\comp_+_bot\features
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\comp_+_top\features
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\drill\features
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\keepout\features
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\plane1\features
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\plane2\features
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\top\features
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\topoverlay\features
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\toppaste\features
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\topsolder\features
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\symbols\rect150x80_180_offset25x0\features
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\symbols\rect150x80_offset25x0\features
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\symbols\rect158x88_180_offset25x0\features
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\symbols\rect158x88_offset25x0\features
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\matrix\matrix
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\netlists\cadnet\netlist
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\profile
+DItemRevisionGUID=
+
+[GeneratedDocument26]
 DocumentPath=..\Sleeptrack2_Phase 3\Hardware Files\Imported SLEEPTRACK2_PHASE3.PrjPcb\SLEEPTRACK2_PHASE3.LOG
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=SimpleBOM\SLEEPTRACK2_PHASE4.BOM
+DItemRevisionGUID=
+
+[GeneratedDocument28]
+DocumentPath=SimpleBOM\SLEEPTRACK2_PHASE4.CSV
+DItemRevisionGUID=
+
+[GeneratedDocument29]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.DRL
+DItemRevisionGUID=
+
+[GeneratedDocument30]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument31]
+DocumentPath=Project Outputs for Free Documents\Gerber\SLEEPTRACK2_PHASE4.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument32]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\Gerber\SLEEPTRACK2_PHASE4.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument33]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument34]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument35]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument36]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument37]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GD1
+DItemRevisionGUID=
+
+[GeneratedDocument38]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GG1
+DItemRevisionGUID=
+
+[GeneratedDocument39]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument40]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GP2
+DItemRevisionGUID=
+
+[GeneratedDocument41]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument42]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument43]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument44]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument45]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument46]
+DocumentPath=Project Outputs for Free Documents\Gerber\SLEEPTRACK2_PHASE4.REP
+DItemRevisionGUID=
+
+[GeneratedDocument47]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\Gerber\SLEEPTRACK2_PHASE4.REP
+DItemRevisionGUID=
+
+[GeneratedDocument48]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\SLEEPTRACK2_PHASE4.REP
+DItemRevisionGUID=
+
+[GeneratedDocument49]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.REP
+DItemRevisionGUID=
+
+[GeneratedDocument50]
+DocumentPath=Project Outputs for Free Documents\Gerber\SLEEPTRACK2_PHASE4.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument51]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\Gerber\SLEEPTRACK2_PHASE4.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument52]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument53]
+DocumentPath=Project Outputs for Free Documents\ExportSTEP\SLEEPTRACK2_PHASE4.step
+DItemRevisionGUID=
+
+[GeneratedDocument54]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\SLEEPTRACK2_PHASE4.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument55]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\stephdr
+DItemRevisionGUID=
+
+[GeneratedDocument56]
+DocumentPath=Project Outputs for SLEEPTRACK2_PHASE4\ODB\odb\steps\pcb\layers\drill\tools
 DItemRevisionGUID=
 
 [Configuration1]
@@ -245,7 +461,7 @@ OutputJobsCount=0
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
-TargetPrinter=Foxit Reader PDF Printer
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=CadnetixNetlist
 OutputName1=Cadnetix Netlist
@@ -362,17 +578,47 @@ OutputName23=XSpice Netlist
 OutputDocumentPath23=
 OutputVariantName23=
 OutputDefault23=0
+OutputType24=SIMetrixNetlist
+OutputName24=SIMetrix
+OutputDocumentPath24=
+OutputVariantName24=
+OutputDefault24=0
+OutputType25=SIMPLISNetlist
+OutputName25=SIMPLIS
+OutputDocumentPath25=
+OutputVariantName25=
+OutputDefault25=0
+OutputType26=WBSENetlistGeneration
+OutputName26=WEBENCH Simulation Engine
+OutputDocumentPath26=
+OutputVariantName26=
+OutputDefault26=0
 
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Foxit Reader PDF Printer
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=AdvSimNetlist
 OutputName1=Mixed Sim
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
+OutputType2=SIMetrixSimulation
+OutputName2=SIMetrix
+OutputDocumentPath2=
+OutputVariantName2=
+OutputDefault2=0
+OutputType3=SIMPLISSimulation
+OutputName3=SIMPLIS
+OutputDocumentPath3=
+OutputVariantName3=
+OutputDefault3=0
+OutputType4=WBSENetlist
+OutputName4=WEBENCH Simulation Engine
+OutputDocumentPath4=
+OutputVariantName4=
+OutputDefault4=0
 
 [OutputGroup3]
 Name=Documentation Outputs
@@ -499,11 +745,17 @@ OutputDocumentPath20=
 OutputVariantName20=
 OutputDefault20=0
 PageOptions20=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+OutputType21=Software Platform Print
+OutputName21=Software Platform Prints
+OutputDocumentPath21=
+OutputVariantName21=
+OutputDefault21=0
+PageOptions21=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 
 [OutputGroup4]
 Name=Assembly Outputs
 Description=
-TargetPrinter=Foxit Reader PDF Printer
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Assembly
 OutputName1=Assembly Drawings
@@ -525,22 +777,22 @@ OutputDefault3=0
 [OutputGroup5]
 Name=Fabrication Outputs
 Description=
-TargetPrinter=Foxit Reader PDF Printer
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
-OutputType1=Board Stack Report
-OutputName1=Report Board Stack
+OutputType1=CompositeDrill
+OutputName1=Composite Drill Drawing
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
 PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType2=CompositeDrill
-OutputName2=Composite Drill Drawing
+OutputType2=Drill
+OutputName2=Drill Drawing/Guides
 OutputDocumentPath2=
 OutputVariantName2=
 OutputDefault2=0
 PageOptions2=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType3=Drill
-OutputName3=Drill Drawing/Guides
+OutputType3=Board Stack Report
+OutputName3=Report Board Stack
 OutputDocumentPath3=
 OutputVariantName3=
 OutputDefault3=0
@@ -551,53 +803,57 @@ OutputDocumentPath4=
 OutputVariantName4=[No Variations]
 OutputDefault4=0
 PageOptions4=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType5=Gerber
-OutputName5=Gerber Files
+OutputType5=Gerber X2
+OutputName5=Gerber X2 Files
 OutputDocumentPath5=
-OutputVariantName5=[No Variations]
+OutputVariantName5=
 OutputDefault5=0
-OutputType6=Gerber X2
-OutputName6=Gerber X2 Files
+OutputType6=ODB
+OutputName6=ODB++ Files
 OutputDocumentPath6=
-OutputVariantName6=
+OutputVariantName6=[No Variations]
 OutputDefault6=0
-OutputType7=IPC2581
-OutputName7=IPC-2581 Files
+OutputType7=Mask
+OutputName7=Solder/Paste Mask Prints
 OutputDocumentPath7=
 OutputVariantName7=
 OutputDefault7=0
-OutputType8=Mask
-OutputName8=Solder/Paste Mask Prints
+PageOptions7=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+OutputType8=NC Drill
+OutputName8=NC Drill Files
 OutputDocumentPath8=
 OutputVariantName8=
 OutputDefault8=0
-PageOptions8=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType9=NC Drill
-OutputName9=NC Drill Files
+Configuration8_Name1=OutputConfigurationParameter1
+Configuration8_Item1=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=True|GenerateSeparatePlatedNonPlatedFiles=False|NumberOfDecimals=5|NumberOfUnits=2|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Imperial|ZeroesMode=SuppressTrailingZeroes
+OutputType9=IPC2581
+OutputName9=IPC-2581 Files
 OutputDocumentPath9=
 OutputVariantName9=
 OutputDefault9=0
-OutputType10=ODB
-OutputName10=ODB++ Files
+OutputType10=Plane
+OutputName10=Power-Plane Prints
 OutputDocumentPath10=
-OutputVariantName10=[No Variations]
+OutputVariantName10=
 OutputDefault10=0
-OutputType11=Plane
-OutputName11=Power-Plane Prints
+PageOptions10=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+OutputType11=Test Points
+OutputName11=Test Point Report
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
-PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType12=Test Points
-OutputName12=Test Point Report
+OutputType12=Gerber
+OutputName12=Gerber Files
 OutputDocumentPath12=
-OutputVariantName12=
+OutputVariantName12=[No Variations]
 OutputDefault12=0
+Configuration12_Name1=OutputConfigurationParameter1
+Configuration12_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16908289~1|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=True|GenerateDRCRulesFile=True|GenerateReliefShapes=True|GerberUnit=Imperial|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=50|MinusApertureTolerance=50|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973831~1|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=5|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973832~1,16973834~1,16777217~1,16842753~1,16842754~1,16842751~1,16973835~1,16973831~1|PlotDrillDrawingLayerPair0_HighLayer=Top Layer|PlotDrillDrawingLayerPair0_LowLayer=Bottom Layer|PlotDrillGuideLayerPair0_HighLayer=Top Layer|PlotDrillGuideLayerPair0_LowLayer=Bottom Layer|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=50|PlusApertureTolerance=50|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
 
 [OutputGroup6]
 Name=Report Outputs
 Description=
-TargetPrinter=Foxit Reader PDF Printer
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=BOM_PartType
 OutputName1=Bill of Materials
@@ -634,7 +890,7 @@ OutputDefault6=0
 [OutputGroup7]
 Name=Other Outputs
 Description=
-TargetPrinter=Foxit Reader PDF Printer
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Text Print
 OutputName1=Text Print
@@ -814,7 +1070,7 @@ PageOptions29=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 [OutputGroup8]
 Name=Validation Outputs
 Description=
-TargetPrinter=Foxit Reader PDF Printer
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Component states check
 OutputName1=Vault's components states check
@@ -853,7 +1109,7 @@ OutputDefault6=0
 [OutputGroup9]
 Name=Export Outputs
 Description=
-TargetPrinter=Foxit Reader PDF Printer
+TargetPrinter=Samsung C410 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=AutoCAD dwg/dxf PCB
 OutputName1=AutoCAD dwg/dxf File PCB

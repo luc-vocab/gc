@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: SLEEPTRACK2_PHASE4.PcbDoc   12/29/2016  9:37:24 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : SLEEPTRACK2_PHASE4.TXT
+EIA File   : SLEEPTRACK2_PHASE4.DRL
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      15mil (0.381mm)                                           Round             26        PTH        4.28inch (108.74mm)
+T2      28mil (0.7mm)                                             Round             3         PTH        0.20inch (5.08mm)
+T3      32mil (0.8mm)                                             Round             4         PTH        1.03inch (26.23mm)
+T4      40mil (1.016mm)                                           Round             24        PTH        3.60inch (91.48mm)
+T5      40mil (1.02mm)                                            Round             8         PTH        0.81inch (20.58mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              65
+
+Total Processing Time (hh:mm:ss) : 00:00:00

@@ -1,0 +1,24 @@
+Added Component: Designator=J2(header4)
+Added Component: Designator=P1(SolderJumper)
+Added Component: Designator=R1(RESC402N)
+Added Component: Designator=R2(RESC402N)
+Added Component: Designator=R3(RESC402N)
+Added Component: Designator=U4(BNO055)
+Added Pin To Net: NetName=3V3 Pin=J2-1
+Added Pin To Net: NetName=3V3 Pin=P1-1
+Added Pin To Net: NetName=3V3 Pin=R2-1
+Added Pin To Net: NetName=3V3 Pin=R3-1
+Added Net: Name=3V3
+Added Pin To Net: NetName=D0 Pin=J2-2
+Added Pin To Net: NetName=D0 Pin=R2-2
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=J2-3
+Added Pin To Net: NetName=D1 Pin=R3-2
+Added Net: Name=D1
+Added Pin To Net: NetName=GND Pin=J2-4
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Net: Name=GND
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Net: Name=NetR1_2
+Added Class: Name=IMU External
+Added Room: Name=IMU External

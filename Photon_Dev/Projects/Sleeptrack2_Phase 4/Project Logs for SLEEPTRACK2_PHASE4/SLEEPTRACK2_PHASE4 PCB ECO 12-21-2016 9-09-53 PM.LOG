@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=PHOTON_3V3 Pin=J2-1
+Removed Pin From Net: NetName=D0 Pin=J2-2
+Removed Pin From Net: NetName=D1 Pin=J2-3
+Removed Pin From Net: NetName=PHOTON_GND Pin=J2-4
+Removed Pin From Net: NetName=PHOTON_3V3 Pin=J6-1
+Removed Pin From Net: NetName=D0 Pin=J6-2
+Removed Pin From Net: NetName=D1 Pin=J6-3
+Removed Pin From Net: NetName=PHOTON_GND Pin=J6-4
+Removed Pin From Net: NetName=PHOTON_3V3 Pin=R7-1
+Removed Pin From Net: NetName=D0 Pin=R7-2
+Removed Pin From Net: NetName=PHOTON_3V3 Pin=R8-1
+Removed Pin From Net: NetName=D1 Pin=R8-2
+Removed Pin From Net: NetName=PHOTON_3V3 Pin=R9-1
+Removed Pin From Net: NetName=D0 Pin=R9-2
+Removed Pin From Net: NetName=PHOTON_3V3 Pin=R10-1
+Removed Pin From Net: NetName=D1 Pin=R10-2

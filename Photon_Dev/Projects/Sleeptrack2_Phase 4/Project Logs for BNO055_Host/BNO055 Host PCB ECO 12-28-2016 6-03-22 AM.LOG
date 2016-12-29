@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=P1 Old Footprint=HDR1X3H New Footprint=BNO055
+Added Component: Designator=U1(BNO055)
+Added Member To Class: ClassName=IMU External Member=Component U1 BNO055 Nano
