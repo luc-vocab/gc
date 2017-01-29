@@ -3,6 +3,7 @@
 #include "Adafruit_Sensor.h"
 #include "Adafruit_BNO055.h"
 #include "imumaths.h"
+#include "Adafruit_DRV2605.h"
 
 PRODUCT_ID(1523);
 PRODUCT_VERSION(2);
@@ -12,6 +13,8 @@ PRODUCT_VERSION(2);
 
 Adafruit_BNO055 bno1 = Adafruit_BNO055(-1, BNO055_ADDRESS_A);
 Adafruit_BNO055 bno2 = Adafruit_BNO055(-1, BNO055_ADDRESS_B);
+
+Adafruit_DRV2605 drv;
 
 #define BUZZER_PIN A4
 #define BUTTON1_PIN D2
@@ -41,6 +44,7 @@ void button2();
 void report_battery_state();
 void report_imu_state_1();
 void report_imu_state_2();
+int test_motor(String input);
 
 Timer battery_timer(5000, report_battery_state);
 Timer imu_timer_1(2000, report_imu_state_1);
@@ -61,6 +65,7 @@ void setup() {
   Particle.function("stop_bno_1", stop_bno_1);
   Particle.function("start_bno_2", start_bno_2);
   Particle.function("stop_bno_2", stop_bno_2);
+  Particle.function("test_motor", test_motor);
 
 }
 
@@ -196,6 +201,22 @@ void setup_bno055_2()
 
   }
   s_setup_bno055_2 = false;
+}
+
+int test_motor(String input)
+{
+  // setup DRV2605
+  drv.begin();
+  drv.selectLibrary(1);
+  drv.setMode(DRV2605_MODE_INTTRIG);
+
+  drv.setWaveform(0, 47);  // play effect
+  drv.setWaveform(1, 0);       // end waveform
+
+  // play the effect!
+  drv.go();
+
+  return 0;
 }
 
 
