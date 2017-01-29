@@ -6,7 +6,7 @@
 #include "Adafruit_DRV2605.h"
 
 PRODUCT_ID(1523);
-PRODUCT_VERSION(2);
+PRODUCT_VERSION(3);
 
 /* Set the delay between fresh samples */
 #define BNO055_SAMPLERATE_DELAY_MS (100)
