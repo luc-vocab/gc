@@ -13,7 +13,7 @@
     .controller('RealtimeController', RealtimeController);
 
   /** @ngInject */
-  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, $document, $window, currentAuth, firebase_auth, device_manager) {
+  function RealtimeController($timeout, $log, $scope, $rootScope, $firebaseObject, $document, $window, $interval, currentAuth, firebase_auth, device_manager) {
     var vm = this;
 
 
@@ -77,9 +77,11 @@
         var canvas = angular.element('#smoothie-chart')[0];
         
         vm.smoothie_series = new TimeSeries();
+        vm.button_series = new TimeSeries();
         
         smoothie_chart.addTimeSeries(vm.smoothie_series, {lineWidth:2.6,strokeStyle:'#5959f4',fillStyle:'#93a8ff'});
-        smoothie_chart.streamTo(canvas, 500);
+        smoothie_chart.addTimeSeries(vm.button_series, {lineWidth:2.6,strokeStyle:'#d83737',fillStyle:'#da3f3f'});
+        smoothie_chart.streamTo(canvas, 200);
 
     }
     
@@ -110,12 +112,20 @@
     }
 
 
-    function update_emg_value(emg_value) {
+    function update_emg_value(emg_value, button_state) {
 
         vm.emg_stat_process_value(emg_value);        
         vm.gauge_current_value.refresh(emg_value, vm.alltime_max);
         
-        vm.smoothie_series.append(new Date().getTime(), emg_value);
+        var currenttime = new Date().getTime();
+        
+        vm.smoothie_series.append(currenttime, emg_value);
+        if (button_state) {
+            vm.button_series.append(currenttime, emg_value);            
+        } else {
+            vm.button_series.append(currenttime, 0);            
+        }
+
 
     }
 
@@ -204,15 +214,12 @@
       vm.device_obj = $firebaseObject(device_ref);
     };
 
-    vm.update_lag = function(datapoint_time) {
-        $log.info("update_lag", datapoint_time);
+    vm.update_lag = function() {
         
+        var current_time = new Date().getTime();
+        var diff = current_time - vm.last_update_time;
         
-        // calculate lag
-        var current_timestamp = new Date().getTime();
-        var lag = current_timestamp - datapoint_time;
-        
-        vm.current_lag = lag;
+        vm.current_lag = diff;
     };
 
     vm.enable_realtime =  function() {
@@ -220,13 +227,21 @@
         
         vm.init_emg_stat_arrays();
         
+        // enable time which will show how long we haven't received a data point
+        vm.last_update_time = new Date().getTime();
+        
+        vm.stop_lag_check = $interval(vm.update_lag, 500);
+        
         var device_ref = device_manager.get_device_ref(vm.user_obj.device_id);
         device_ref.on("value", function(snapshot){
             var data = snapshot.val();
+            vm.last_update_time = new Date().getTime();
             // $log.info("received data: ", data);
-            update_emg_value(data.emg_value);
-            vm.update_lag(data.datapoint_time);
             
+            vm.button_state = data.button_state;
+            update_emg_value(data.emg_value, data.button_state);
+            vm.update_lag(data.datapoint_time);
+
         });        
         
         vm.current_device.callFunction('set_mode', 'realtime', function(err,data) {
@@ -244,6 +259,7 @@
     vm.standby = function() {
         vm.current_device.callFunction('set_mode', 'standby');
         vm.realtime_mode_on = false;
+        vm.stop_lag_check();
     };
     
   
