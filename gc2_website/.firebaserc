@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "sleeptrack-dev"
+    "dev": "sleeptrack-dev",
+    "prod": "gcwww-prod"
   }
 }
