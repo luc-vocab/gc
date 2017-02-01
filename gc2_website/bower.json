@@ -29,7 +29,8 @@
     "angular-timeago": "~0.2.4",
     "influent": "~0.5.0",
     "smoothie": "~1.27.0",
-    "justgage-toorshia": "~1.2.2"
+    "justgage-toorshia": "~1.2.2",
+    "firebase": "~3.6.8"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"
