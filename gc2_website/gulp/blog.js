@@ -13,9 +13,9 @@ gulp.task('copy_blog_files', function() {
 
 
 gulp.task('build_blog', function(callback) {
-  var blog_env = process.env.ENV;
+  var blog_env = process.env.GC_ENV;
   if(!blog_env) {
-    throw "ENV not set [ENV=dev]";
+    throw "GC_ENV not set [GC_ENV=dev]";
   }  
   
   if(blog_env == "dev") {

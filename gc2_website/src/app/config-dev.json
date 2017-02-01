@@ -1,10 +1,7 @@
- { 
-    "firebase_root": "https://gcserver-dev.firebaseio.com/",
-    "influx_config": {
-     "host": "influxdb.dev.sleeptrack.io",
-     "port": 8086,
-     "username": "dev",
-     "password": "dev",
-     "db": "gc_dev"
-    }
-  }
+{
+ apiKey: "AIzaSyDq5GGL-vcBiZQ_PbG-awpytE40OEpOdiE",
+ authDomain: "sleeptrack-dev.firebaseapp.com",
+ databaseURL: "https://sleeptrack-dev.firebaseio.com",
+ storageBucket: "sleeptrack-dev.appspot.com",
+ messagingSenderId: "21692881941"
+}
