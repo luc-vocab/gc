@@ -28,14 +28,12 @@
     
     this.login = function(username, password, defer){
         $log.info("logging in with username: ", username);
-        auth.$authWithPassword({
-            email: username,
-            password: password
-        }).then(function(authData) {
+        auth.$signInWithEmailAndPassword(username, password).
+        then(function(authData) {
             $log.info("Logged in as:", authData.uid);
             var user_ref = users_ref.child(authData.uid);
             user_ref.update({
-                last_login: Firebase.ServerValue.TIMESTAMP
+                last_login: firebase.database.ServerValue.TIMESTAMP
             });
             defer.resolve();
         }).catch(function(error) {
