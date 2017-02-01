@@ -5,5 +5,12 @@
          "databaseURL": "https://sleeptrack-dev.firebaseio.com",
          "storageBucket": "sleeptrack-dev.appspot.com",
          "messagingSenderId": "21692881941"
+    },
+    "prod": {
+        apiKey: "AIzaSyDAUO7ovix8IngOCuossx80TDInqLqs1tU",
+        authDomain: "gcwww-prod.firebaseapp.com",
+        databaseURL: "https://gcwww-prod.firebaseio.com",
+        storageBucket: "gcwww-prod.appspot.com",
+        messagingSenderId: "49763310065"
     }
 }
