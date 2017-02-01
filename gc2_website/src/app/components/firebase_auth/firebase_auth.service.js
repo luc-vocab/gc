@@ -1,4 +1,5 @@
 /* globals Firebase: false */
+/* globals firebase: false */
 /* globals angular */
 
 (function() {
@@ -9,12 +10,18 @@
       .service('firebase_auth', firebase_auth);
 
   /** @ngInject */
-  function firebase_auth(firebase_root, $log, $firebaseAuth) {
+  function firebase_auth(firebase_config, $log, $firebaseAuth) {
+    /*
     var root_ref = new Firebase(firebase_root);
     var users_ref = root_ref.child('users');
     var auth = $firebaseAuth(root_ref);
+    */
     
-    
+    firebase.initializeApp(firebase_config);
+    var root_ref = firebase.database().ref();
+    var users_ref = root_ref.child('users');
+    var auth = $firebaseAuth();
+
     this.getAuth = function() {
         return auth;
     };
