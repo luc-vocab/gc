@@ -23,7 +23,7 @@ if(!server_type) {
 
 
 GcConfig(server_type).then(function(config_data) {
-    console.log("config_data:", config_data);
+    // console.log("config_data:", config_data);
 
     var config = config_data.config;
     var client = config_data.influx_client;
@@ -33,11 +33,12 @@ GcConfig(server_type).then(function(config_data) {
     if(server_type == "gc_server") {
 
         var server_config = config_data.server_config;
+        var firebase_db = config_data.firebase_db;
     
         var server = net.createServer(function(socket) {
     
             logger.info(socket.remoteAddress, ':', socket.remotePort, "received connection");
-            var gcClient = new GcClient(socket, client, config, config_data.firebase_root, logger);
+            var gcClient = new GcClient(socket, client, config, firebase_db, logger);
         });
     
         var server_key = config_data.server_key;
@@ -46,11 +47,11 @@ GcConfig(server_type).then(function(config_data) {
         server.listen(server_config.port, '0.0.0.0');
     
         // mark server online
-        var server_ref = new Firebase(config_data.firebase_root).child('servers').child(server_key);
+        var server_ref = firebase_db.ref('servers').child(server_key);
         var presenceRef = server_ref.child("online");
         presenceRef.onDisconnect().set(false);
         
-        var connectedRef = new Firebase(config_data.firebase_root).child('.info').child('connected');
+        var connectedRef = firebase_db.ref('.info').child('connected');
         connectedRef.on("value", function(snap) {
           if (snap.val() === true) {
             presenceRef.set(true);
@@ -63,9 +64,8 @@ GcConfig(server_type).then(function(config_data) {
     } else if (server_type == "gc_data_server") {
         
         // subscribe to all clients that exist
-        var firebase_root = config_data.firebase_root;
-        var firebase_root_ref = new Firebase(firebase_root);
-        var devices_ref = firebase_root_ref.child('devices');
+        var firebase_db = config_data.firebase_db;
+        var devices_ref = firebase_db.ref('devices');
         
         
         devices_ref.on('child_added', function(childSnapshot, prevChildKey) {

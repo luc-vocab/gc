@@ -103,20 +103,22 @@ var GcConfig = function(server_type) {
                     server_ref.once('value', function(snapshot) {
                         var server_config = snapshot.val();
                         defer.resolve({
-                            firebase_root: firebase_root,
+                            firebase_db: db,
                             influx_client: client,
                             config: config,
                             server_config: server_config,
                             server_key: server_key,
                             logger: logger
                         });
+                    }, function(err) {
+                        console.err("error getting server config", err);
                     });
 
                 }
                 else {
 
                     defer.resolve({
-                        firebase_root: firebase_root,
+                        firebase_db: db,
                         config: config,
                         influx_client: client,
                         logger: logger

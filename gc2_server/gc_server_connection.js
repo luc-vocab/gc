@@ -42,16 +42,14 @@ DATATYPE_STDDEV = 84;
 WRITE_INFLUXDB = true;
 
 
-function GcClient(socket, influx_client, config, firebase_root, logger) {
+function GcClient(socket, influx_client, config, firebase_db, logger) {
     this.socket = socket;
     this.influx_client = influx_client;
     this.config = config;
     this.logger = logger;
     
     // firebase setup
-    var firebase_root_ref = new Firebase(firebase_root);
-    this.firebaseRoot = firebase_root_ref;
-    this.firebaseDevicesRoot = this.firebaseRoot.child('devices');
+    this.firebaseDevicesRoot = firebase_db.ref('devices');
 
     this.state = CONNECTION_STATES.CONNECTED;
     
