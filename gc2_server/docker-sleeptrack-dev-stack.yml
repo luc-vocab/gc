@@ -1,4 +1,4 @@
-influxdb:
+sleeptrack-dev-influxdb:
   environment:
     - LETSENCRYPT_EMAIL=luc.wastiaux@xsmail.com
     - LETSENCRYPT_HOST=db.dev.sleeptrack.io
@@ -14,7 +14,7 @@ influxdb:
     - sleeptrack
   volumes:
     - '/data:/influxdata'
-letsencrypt-nginx-proxy:
+sleeptrack-dev-letsencrypt:
   image: 'jrcs/letsencrypt-nginx-proxy-companion:latest'
   restart: always
   tags:
@@ -24,8 +24,8 @@ letsencrypt-nginx-proxy:
     - '/etc/nginx/certs:/etc/nginx/certs'
     - '/var/run/docker.sock:/var/run/docker.sock:ro'
   volumes_from:
-    - nginx-proxy
-nginx-proxy:
+    - sleeptrack-dev-nginx-proxy
+sleeptrack-dev-nginx-proxy:
   environment:
     - 'DOCKER_HOST=unix:///var/run/docker.sock'
   image: 'jwilder/nginx-proxy:latest'
@@ -41,7 +41,7 @@ nginx-proxy:
     - '/etc/nginx/certs:/etc/nginx/certs:ro'
     - /etc/nginx/vhost.d
     - /usr/share/nginx/html
-sleeptrack-anaconda:
+sleeptrack-dev-anaconda:
   environment:
     - LETSENCRYPT_EMAIL=luc.wastiaux@xsmail.com
     - LETSENCRYPT_HOST=notebook.dev.sleeptrack.io
