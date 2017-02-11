@@ -1,0 +1,68 @@
+influxdb:
+  environment:
+    - LETSENCRYPT_EMAIL=luc.wastiaux@xsmail.com
+    - LETSENCRYPT_HOST=db.dev.sleeptrack.io
+    - VIRTUAL_HOST=db.dev.sleeptrack.io
+    - VIRTUAL_PORT=8086
+  image: 'tutum/influxdb:latest'
+  ports:
+    - '8083:8083'
+    - '8086:8086'
+  restart: always
+  tags:
+    - dev
+    - sleeptrack
+  volumes:
+    - '/data:/influxdata'
+letsencrypt-nginx-proxy:
+  image: 'jrcs/letsencrypt-nginx-proxy-companion:latest'
+  restart: always
+  tags:
+    - dev
+    - sleeptrack
+  volumes:
+    - '/etc/nginx/certs:/etc/nginx/certs'
+    - '/var/run/docker.sock:/var/run/docker.sock:ro'
+  volumes_from:
+    - nginx-proxy
+nginx-proxy:
+  environment:
+    - 'DOCKER_HOST=unix:///var/run/docker.sock'
+  image: 'jwilder/nginx-proxy:latest'
+  ports:
+    - '80:80'
+    - '443:443'
+  restart: always
+  tags:
+    - dev
+    - sleeptrack
+  volumes:
+    - '/var/run/docker.sock:/var/run/docker.sock:ro'
+    - '/etc/nginx/certs:/etc/nginx/certs:ro'
+    - /etc/nginx/vhost.d
+    - /usr/share/nginx/html
+sleeptrack-anaconda:
+  environment:
+    - LETSENCRYPT_EMAIL=luc.wastiaux@xsmail.com
+    - LETSENCRYPT_HOST=notebook.dev.sleeptrack.io
+    - VIRTUAL_HOST=notebook.dev.sleeptrack.io
+  image: 'lucwastiaux/sleeptrack-anaconda:dev'
+  ports:
+    - '8888:8888'
+  restart: always
+  tags:
+    - dev
+    - sleeptrack
+sleeptrack-dev-grafana:
+  environment:
+    - LETSENCRYPT_EMAIL=luc.wastiaux@xsmail.com
+    - LETSENCRYPT_HOST=data.dev.sleeptrack.io
+    - VIRTUAL_HOST=data.dev.sleeptrack.io
+    - VIRTUAL_PORT=VIRTUAL_PORT
+  image: 'grafana/grafana:latest'
+  ports:
+    - '3000:3000'
+  restart: always
+  tags:
+    - dev
+    - sleeptrack
