@@ -75,6 +75,8 @@ var GcConfig = function(server_type) {
         });
 
 
+        console.log("connecting to influxdb: ", config.influxdb.host, ":", config.influxdb.port);
+
         // create influxdb client
         influent
             .createClient({
