@@ -1,4 +1,4 @@
-/* globals Firebase: false */
+/* globals firebase: false */
 /* globals spark: false */
 /* globals angular */
 
@@ -10,8 +10,9 @@
         .service('device_manager', device_manager);
 
     /** @ngInject */
-    function device_manager(firebase_root, firebase_auth, $log, $q, $timeout) {
-        var root_ref = new Firebase(firebase_root);
+    function device_manager(firebase_auth, $log, $q, $timeout) {
+        
+        var root_ref = firebase.database().ref();
         var devices_ref = root_ref.child('devices');
         var servers_ref = root_ref.child('servers');
         var spark_login_done = false;

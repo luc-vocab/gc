@@ -33,12 +33,12 @@
         controller: 'RealtimeController',
         controllerAs: 'realtime',
         resolve: {
-          // controller will not be loaded until $requireAuth resolves
+          // controller will not be loaded until $requireSignIn resolves
           // Auth refers to our $firebaseAuth wrapper in the example above
           "currentAuth": ["firebase_auth", function(firebase_auth) {
-            // $requireAuth returns a promise so the resolve waits for it to complete
+            // $requireSignIn returns a promise so the resolve waits for it to complete
             // If the promise is rejected, it will throw a $stateChangeError (see above)
-            return firebase_auth.getAuth().$requireAuth();
+            return firebase_auth.getAuth().$requireSignIn();
           }]
         }        
       })
@@ -48,12 +48,12 @@
         controller: 'NightmodeController',
         controllerAs: 'nightmode',
         resolve: {
-          // controller will not be loaded until $requireAuth resolves
+          // controller will not be loaded until $requireSignIn resolves
           // Auth refers to our $firebaseAuth wrapper in the example above
           "currentAuth": ["firebase_auth", function(firebase_auth) {
-            // $requireAuth returns a promise so the resolve waits for it to complete
+            // $requireSignIn returns a promise so the resolve waits for it to complete
             // If the promise is rejected, it will throw a $stateChangeError (see above)
-            return firebase_auth.getAuth().$requireAuth();
+            return firebase_auth.getAuth().$requireSignIn();
           }]
         }        
       })      
@@ -67,12 +67,12 @@
         controller: 'LatestController',
         controllerAs: 'latest',
         resolve: {
-          // controller will not be loaded until $requireAuth resolves
+          // controller will not be loaded until $requireSignIn resolves
           // Auth refers to our $firebaseAuth wrapper in the example above
           "currentAuth": ["firebase_auth", function(firebase_auth) {
-            // $requireAuth returns a promise so the resolve waits for it to complete
+            // $requireSignIn returns a promise so the resolve waits for it to complete
             // If the promise is rejected, it will throw a $stateChangeError (see above)
-            return firebase_auth.getAuth().$requireAuth();
+            return firebase_auth.getAuth().$requireSignIn();
           }]
         }        
       })
@@ -82,12 +82,12 @@
         controller: 'SettingsController',
         controllerAs: 'settings',
         resolve: {
-          // controller will not be loaded until $requireAuth resolves
+          // controller will not be loaded until $requireSignIn resolves
           // Auth refers to our $firebaseAuth wrapper in the example above
           "currentAuth": ["firebase_auth", function(firebase_auth) {
-            // $requireAuth returns a promise so the resolve waits for it to complete
+            // $requireSignIn returns a promise so the resolve waits for it to complete
             // If the promise is rejected, it will throw a $stateChangeError (see above)
-            return firebase_auth.getAuth().$requireAuth();
+            return firebase_auth.getAuth().$requireSignIn();
           }]
         }        
       })

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "sleeptrack-dev",
+    "prod": "gcwww-prod"
+  }
+}

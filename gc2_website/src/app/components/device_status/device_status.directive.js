@@ -29,7 +29,7 @@
       vm.init = function() {
         // get authentication status
         var auth = firebase_auth.getAuth();
-        auth.$onAuth(vm.auth_change);
+        auth.$onAuthStateChanged(vm.auth_change);
       };
       
       vm.auth_change = function(authData) {

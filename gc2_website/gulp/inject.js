@@ -12,11 +12,19 @@ var _ = require('lodash');
 
 
 gulp.task('config', function () {
-  var fb_root = process.env.FB_ROOT;
-  if(!fb_root) {
-    throw "FB_ROOT not set [FB_ROOT=gcserver-dev.firebaseio.com]";
+  var gc_env = process.env.GC_ENV;
+  if(!gc_env)
+  {
+    throw "GC_ENV not set [GC_ENV=dev]";
   }
-  var constants = {"firebase_root": 'https://' + fb_root + '/'};
+
+  // load the firebase config file
+  //var firebase_config = require(path.join(conf.paths.src, '/app/firebase-conf.json'));
+  var firebase_config = require('../src/app/firebase-conf');
+  var firebase_env_config = firebase_config[gc_env];
+  
+  
+  var constants = {"firebase_config": firebase_env_config};
   $.ngConstant({
       name: 'gc2Website',
       templatePath: path.join(conf.paths.src, '/app/config-template.ejs'),
