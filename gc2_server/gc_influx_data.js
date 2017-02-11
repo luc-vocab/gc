@@ -1,10 +1,10 @@
-var Firebase = require('firebase');
+var firebase = require('firebase');
 var util = require('util');
 var q = require('promised-io/promise');
 
-var GcInfluxData = function(logger, influx_client, firebase_root, username, uid, device_id) {
+var GcInfluxData = function(logger, influx_client, firebase_db, username, uid, device_id) {
     
-    var firebase_root_ref = new Firebase(firebase_root);
+    var firebase_root_ref = firebase_db.ref();
     this.firebase_data_latest_ref = firebase_root_ref.child('data').child(uid).child('latest');
     this.firebase_data_historical_ref = firebase_root_ref.child('data').child(uid).child('historical');
     this.device_ref = firebase_root_ref.child('devices').child(device_id);
@@ -61,7 +61,7 @@ var GcInfluxData = function(logger, influx_client, firebase_root, username, uid,
                   end_timestamp: intervals.end_timestamp,
                   total_score: total_score,
                   collected_duration: intervals.collected_duration,
-                  last_update_time: Firebase.ServerValue.TIMESTAMP
+                  last_update_time: firebase.database.ServerValue.TIMESTAMP
                };
                
                // update firebase "latest" data

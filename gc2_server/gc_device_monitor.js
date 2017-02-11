@@ -2,9 +2,9 @@ var Firebase = require('firebase');
 var util = require('util');
 var q = require('promised-io/promise');
 
-var GcDeviceMonitor = function(logger, firebase_root, username, uid, device_id) {
+var GcDeviceMonitor = function(logger, firebase_db, username, uid, device_id) {
     
-    var firebase_root_ref = new Firebase(firebase_root);
+    var firebase_root_ref = firebase_db.ref();
     this.firebase_data_latest_ref = firebase_root_ref.child('data').child(uid).child('latest');
     this.firebase_data_historical_ref = firebase_root_ref.child('data').child(uid).child('historical');
     this.device_ref = firebase_root_ref.child('devices').child(device_id);
