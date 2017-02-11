@@ -66,3 +66,32 @@ sleeptrack-dev-grafana:
   tags:
     - dev
     - sleeptrack
+sleeptrack-dev-gcdataserver:
+  autoredeploy: true
+  environment:
+    - FB_CONFIG_FILE=/firebase_keys/sleeptrack-dev.json
+    - FB_ROOT=sleeptrack-dev
+    - SERVER_TYPE=gc_data_server
+  image: 'lucwastiaux/sleeptrack-dev:dev'
+  nickname: sleeptrack-dev-gcdataserver
+  tags:
+    - dev
+    - sleeptrack
+  volumes:
+    - '/firebase_keys:/firebase_keys:ro'
+sleeptrack-dev-gcserver:
+  autoredeploy: true
+  environment:
+    - FB_CONFIG_FILE=/firebase_keys/sleeptrack-dev.json
+    - FB_ROOT=sleeptrack-dev
+    - SERVER_KEY=sg_dev
+    - SERVER_TYPE=gc_server
+  image: 'lucwastiaux/sleeptrack-dev:dev'
+  nickname: sleeptrack-dev-gcserver
+  ports:
+    - '7001:7001'
+  tags:
+    - dev
+    - sleeptrack
+  volumes:
+    - '/firebase_keys:/firebase_keys:ro'
