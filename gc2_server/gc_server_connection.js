@@ -1,5 +1,5 @@
 var influent = require('influent');
-var Firebase = require('firebase');
+var firebase = require('firebase');
 var q = require('promised-io/promise');
 
 /* global pubnub_client: true */
@@ -112,7 +112,7 @@ function GcClient(socket, influx_client, config, firebase_db, logger) {
                         self.state = CONNECTION_STATES.READY_REALTIME;
                         self.log_info("realtime mode");
                         self.firebaseDeviceRef.update({
-                            "last_device_update": Firebase.ServerValue.TIMESTAMP,
+                            "last_device_update": firebase.database.ServerValue.TIMESTAMP,
                             "mode": "realtime"
                         });
                         
@@ -178,10 +178,10 @@ function GcClient(socket, influx_client, config, firebase_db, logger) {
                 "batches_uploaded": batches_uploaded,
                 "error_count": error_count,
                 "abandon_count": abandon_count,
-                "last_upload_time": Firebase.ServerValue.TIMESTAMP,
+                "last_upload_time": firebase.database.ServerValue.TIMESTAMP,
                 "collected_duration": collected_duration,
                 "collection_start": data_collection_start_timestamp,
-                "last_device_update": Firebase.ServerValue.TIMESTAMP,
+                "last_device_update": firebase.database.ServerValue.TIMESTAMP,
                 "mode": "night"
             };
             
@@ -259,7 +259,7 @@ function GcClient(socket, influx_client, config, firebase_db, logger) {
         
         self.firebaseDeviceRef.update({
             "battery_charge": charged_percent,
-            "last_device_update": Firebase.ServerValue.TIMESTAMP,
+            "last_device_update": firebase.database.ServerValue.TIMESTAMP,
             "mode": "online"       
         });
     }
