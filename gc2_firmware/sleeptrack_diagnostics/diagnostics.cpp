@@ -6,7 +6,7 @@
 #include "Adafruit_DRV2605.h"
 
 PRODUCT_ID(1523);
-PRODUCT_VERSION(3);
+PRODUCT_VERSION(4);
 
 /* Set the delay between fresh samples */
 #define BNO055_SAMPLERATE_DELAY_MS (100)
@@ -19,6 +19,7 @@ Adafruit_DRV2605 drv;
 #define BUZZER_PIN A4
 #define BUTTON1_PIN D2
 #define BUTTON2_PIN D3
+#define MOTOR_ENABLE_PIN D4
 
 bool s_report_button1_state = false;
 bool s_report_button2_state = false;
@@ -53,6 +54,10 @@ Timer imu_timer_2(2000, report_imu_state_2);
 void setup() {
   pinMode(BUTTON1_PIN, INPUT_PULLUP);
   pinMode(BUTTON2_PIN, INPUT_PULLUP);
+  pinMode(MOTOR_ENABLE_PIN, OUTPUT);
+
+  // make sure the DRV2605 is enabled
+  digitalWrite(MOTOR_ENABLE_PIN, HIGH);
 
   attachInterrupt(BUTTON1_PIN, button1, CHANGE);
   attachInterrupt(BUTTON2_PIN, button2, CHANGE);
@@ -205,6 +210,8 @@ void setup_bno055_2()
 
 int test_motor(String input)
 {
+  digitalWrite(MOTOR_ENABLE_PIN, HIGH);
+
   // setup DRV2605
   drv.begin();
   drv.selectLibrary(1);
