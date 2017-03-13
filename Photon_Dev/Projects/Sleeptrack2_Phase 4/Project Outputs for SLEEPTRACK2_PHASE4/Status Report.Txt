@@ -1,13 +1,25 @@
-Output: NC Drill Files
-Type  : NC Drill
-From  : Project [SLEEPTRACK2_PHASE4.PrjPcb]
-   Generated File[SLEEPTRACK2_PHASE4.TXT]
-   Generated File[SLEEPTRACK2_PHASE4.DRL]
-   Generated File[SLEEPTRACK2_PHASE4.LDP]
-   Generated File[SLEEPTRACK2_PHASE4.DRR]
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [SLEEPTRACK2_PHASE4.PrjPcb]
+   Generated File[SLEEPTRACK2_PHASE4.GTL]
+   Generated File[SLEEPTRACK2_PHASE4.GP1]
+   Generated File[SLEEPTRACK2_PHASE4.GP2]
+   Generated File[SLEEPTRACK2_PHASE4.GBL]
+   Generated File[SLEEPTRACK2_PHASE4.GPB]
+   Generated File[SLEEPTRACK2_PHASE4.GPT]
+   Generated File[SLEEPTRACK2_PHASE4.GTO]
+   Generated File[SLEEPTRACK2_PHASE4.GTS]
+   Generated File[SLEEPTRACK2_PHASE4.GBS]
+   Generated File[SLEEPTRACK2_PHASE4.GBO]
+   Generated File[SLEEPTRACK2_PHASE4.GM1]
+   Generated File[SLEEPTRACK2_PHASE4.GD1]
+   Generated File[SLEEPTRACK2_PHASE4.GG1]
+   Generated File[SLEEPTRACK2_PHASE4.RUL]
+   Generated File[SLEEPTRACK2_PHASE4.EXTREP]
+   Generated File[SLEEPTRACK2_PHASE4.REP]
 
 
-Files Generated   : 4
+Files Generated   : 16
 Documents Printed : 0
 
-Finished Output Generation At 9:37:25 AM On 12/29/2016
+Finished Output Generation At 1:24:55 AM On 1/10/2017

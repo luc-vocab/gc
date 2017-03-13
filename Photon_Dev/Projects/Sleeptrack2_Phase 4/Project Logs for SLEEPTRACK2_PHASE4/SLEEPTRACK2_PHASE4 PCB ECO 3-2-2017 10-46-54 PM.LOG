@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=NetJ3_2 Pin=SW1-2
+Change Component Footprint: Designator=J1 Old Footprint=HEADER4 New Footprint=61900411021
+Change Component Footprint: Designator=J4 Old Footprint=HEADER4 New Footprint=61900411021
+Change Component Comment : Designator=C1 Old Comment=4.7µF ±10% Molded Tantalum Capacitors 6.3V 1206 (3216 Metric) 6 Ohm New Comment=4.7µF ±10%
+Change Component Comment : Designator=C2 Old Comment=4.7µF ±10% Molded Tantalum Capacitors 6.3V 1206 (3216 Metric) 6 Ohm New Comment=4.7µF ±10%
+Added Pin To Net: NetName=NetJ3_2 Pin=SW1-3
+Change Class Name : Old Net Name=P06_Audio New Net Name=P06_Audio 
+Change Room Name: Old Name=P06_Audio New Name=P06_Audio 

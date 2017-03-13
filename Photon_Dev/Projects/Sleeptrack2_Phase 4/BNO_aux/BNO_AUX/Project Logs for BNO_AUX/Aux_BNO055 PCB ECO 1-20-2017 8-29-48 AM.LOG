@@ -1,0 +1,51 @@
+Added Component: Designator=J1(header4)
+Added Component: Designator=J2(SolderJumper)
+Added Component: Designator=R1(RESC402N)
+Added Component: Designator=R2(RESC402N)
+Added Component: Designator=R3(RESC402N)
+Added Component: Designator=R4(RESC402N)
+Added Component: Designator=R5(RESC402N)
+Added Component: Designator=U1(LCCS50P520X380X118-28N)
+Added Pin To Net: NetName=D0 Pin=J1-2
+Added Pin To Net: NetName=D0 Pin=R1-2
+Added Pin To Net: NetName=D0 Pin=U1-20
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=J1-3
+Added Pin To Net: NetName=D1 Pin=R2-2
+Added Pin To Net: NetName=D1 Pin=U1-19
+Added Net: Name=D1
+Added Pin To Net: NetName=GND Pin=J1-4
+Added Pin To Net: NetName=GND Pin=J2-3
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=GND Pin=R5-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Pin To Net: NetName=GND Pin=U1-10
+Added Pin To Net: NetName=GND Pin=U1-18
+Added Pin To Net: NetName=GND Pin=U1-25
+Added Net: Name=GND
+Added Pin To Net: NetName=NetC2_1 Pin=U1-9
+Added Net: Name=NetC2_1
+Added Pin To Net: NetName=NetJ2_2 Pin=J2-2
+Added Pin To Net: NetName=NetJ2_2 Pin=R3-2
+Added Net: Name=NetJ2_2
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=U1-17
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetR4_2 Pin=R4-2
+Added Pin To Net: NetName=NetR4_2 Pin=U1-5
+Added Net: Name=NetR4_2
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetR5_2 Pin=U1-6
+Added Net: Name=NetR5_2
+Added Pin To Net: NetName=NetU1_15 Pin=U1-15
+Added Pin To Net: NetName=NetU1_15 Pin=U1-16
+Added Net: Name=NetU1_15
+Added Pin To Net: NetName=VCC Pin=J1-1
+Added Pin To Net: NetName=VCC Pin=J2-1
+Added Pin To Net: NetName=VCC Pin=R1-1
+Added Pin To Net: NetName=VCC Pin=R2-1
+Added Pin To Net: NetName=VCC Pin=U1-3
+Added Pin To Net: NetName=VCC Pin=U1-28
+Added Net: Name=VCC
+Added Class: Name=bno_aux
+Added Room: Name=bno_aux

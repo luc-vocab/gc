@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=J1 Old Footprint=header4 New Footprint=61900411021
+Change Component Designator: OldDesignator=SJ1 NewDesignator=J2
+Added Member To Class: ClassName=BNO055 Host Member=Component U1 BNO055

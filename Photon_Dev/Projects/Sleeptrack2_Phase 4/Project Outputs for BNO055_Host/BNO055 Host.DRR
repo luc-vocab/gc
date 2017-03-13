@@ -1,9 +1,10 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: BNO055 Host.PcbDoc   12/29/2016  9:36:21 AM
+NCDrill File Report For: BNO055 Host.PcbDoc   1/5/2017  2:50:57 AM
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
 ASCII RoundHoles File : BNO055 Host.TXT
+EIA File   : BNO055 Host.DRL
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------

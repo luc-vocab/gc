@@ -1,0 +1,11 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+J1         61900411021           1.778mm       5.588mm       1.778mm       1.778mm       1.778mm       1.778mm  T         90.00 HEADER 4/SM    
+J2         SolderJumper          9.017mm       6.985mm       9.017mm       6.985mm       9.017mm        5.71mm  B         90.00 Header 3H      
+R1         RESC402N               3.81mm        6.35mm        3.81mm        6.35mm        3.81mm         5.9mm  T         90.00 10k            
+R2         RESC402N               3.81mm       9.144mm        3.81mm       9.144mm        3.81mm       9.594mm  T        270.00 10k            
+R3         RESC402N             10.922mm       7.112mm      10.922mm       7.112mm      10.922mm       7.562mm  T        270.00 10k            
+R4         RESC402N              7.366mm       1.905mm       7.366mm       1.905mm       6.916mm       1.905mm  T        360.00 10k            
+R5         RESC402N             10.922mm       4.064mm      10.922mm       4.064mm      10.922mm       3.614mm  T         90.00 10k            
+U1         LCCS50P520X380X118-28N       7.167mm       6.243mm       7.167mm       6.243mm       6.417mm       3.693mm  T         90.00 BNO055         
+
