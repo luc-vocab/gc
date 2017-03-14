@@ -1,10 +1,13 @@
-Output: Generates pick and place files
-Type  : Pick Place
-From  : Variant [[No Variations]] of Project [BNO_AUX.PrjPcb]
-   Generated File[Pick Place for Aux_BNO055.txt]
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [BNO_AUX.PrjPcb]
+   Generated File[Aux_BNO055.TXT]
+   Generated File[Aux_BNO055.DRL]
+   Generated File[Aux_BNO055.LDP]
+   Generated File[Aux_BNO055.DRR]
 
 
-Files Generated   : 1
+Files Generated   : 4
 Documents Printed : 0
 
-Finished Output Generation At 7:26:31 AM On 2/12/2017
+Finished Output Generation At 9:00:56 PM On 3/13/2017
