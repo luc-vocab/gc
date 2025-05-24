@@ -1,6 +1,8 @@
 Grind Control Device
 ====================
 
+**2025/05/25 update: please see this new project https://github.com/LollosoSi/bruxism-detector**
+
 **2015/10/01 update: I've started a new project, a wearable device focused on tracking sleep bruxism: 
  <a href="https://sleeptrack.io">SleepTrack</a>**
 
